@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · About</title>
+  <meta name="description" content="What Moto Zero is, who it is for, what is inside and how to use it. An open educational programme created by Transitions Lab.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261101b">
+  <style>
+.ute-hero { padding: 64px 40px 52px; border-bottom: 1px solid var(--line); }
+.ute-hero h1 { max-width: 880px; }
+.ute-hero p { max-width: 720px; line-height: 1.55; }
+.ute-chapter { padding: 60px 40px; border-bottom: 1px solid var(--line); }
+.ute-chapter h2 { font-size: 28px; margin-bottom: 12px; max-width: 880px; }
+.ute-chapter .lead { font-size: 17px; line-height: 1.6; max-width: 720px; }
+.ute-chapter .prose { font-size: 16px; line-height: 1.65; max-width: 720px; }
+.ute-chapter h3 { font-size: 19px; font-weight: 600; margin: 36px 0 10px; }
+.ute-chapter-kicker { margin-bottom: 14px; }
+.ute-callbox { border-left-width: 2px; padding: 14px 18px; font-size: 15px; }
+.ute-chapter-foot { margin-top: 28px; }
+.ute-keys { margin: 24px 0; max-width: 1160px; }
+.ute-keys .k { padding: 18px 18px 16px; }
+.ute-keys .k .v { font-family: var(--sans); font-size: 26px; font-weight: 600; margin: 6px 0 4px; }
+.ute-keys .k p { font-size: 14px; color: var(--ink-soft); }
+.ute-table { font-size: 14.5px; }
+.ute-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); }
+.ute-table th { padding: 10px 12px; }
+.mz-skip { position: absolute; left: -9999px; }
+@media (max-width: 720px) {
+  .ute-hero { padding: 40px 16px 32px; }
+  .ute-hero h1 { font-size: 31px; }
+  .ute-hero p { font-size: 16px; }
+  .ute-chapter { padding: 44px 16px; }
+  .ute-chapter h2 { font-size: 24px; }
+  .ute-chapter .lead { font-size: 16px; }
+}
+
+.mz-about-hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.mz-brand-box { border: 1px solid var(--line); padding: 40px 32px; display: flex; align-items: center; justify-content: center; }
+.mz-lockup { width: 100%; max-width: 420px; height: auto; display: block; }
+.mz-who { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 24px; max-width: 1240px; }
+.mz-who div { background: #FFFFFF; padding: 20px 18px; }
+.mz-who b { display: block; font: 600 17px/1.3 var(--sans); color: var(--ink); margin-bottom: 8px; }
+.mz-who p { margin: 0; font-size: 14.5px; }
+.mz-nums { grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 1240px; }
+.mz-nums .k .v { font-size: 34px; }
+.mz-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 1240px; }
+.mz-links a { border: 1px solid var(--line); padding: 16px 18px; text-decoration: none; color: var(--ink); }
+.mz-links a:hover { border-color: var(--ink); }
+.mz-links b { display: block; font: 600 16px/1.3 var(--sans); }
+.mz-links span { display: block; font-size: 14px; color: var(--mute); margin-top: 3px; }
+.ute-steps { max-width: 760px; margin-top: 24px; }
+.ute-step { padding: 16px 18px; }
+.ute-step p { font-size: 15px; }
+.mz-note { font-size: 15px; max-width: 720px; margin-top: 18px; }
+.mz-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 56px; align-items: start; max-width: 1240px; }
+.mz-plate { margin: 0; border: 1px solid var(--line); padding: 14px; }
+.mz-plate img { display: block; width: 100%; height: auto; }
+.mz-plate figcaption { font-size: 13.5px; color: var(--mute); margin-top: 10px; }
+.mz-maker { display: grid; grid-template-columns: 120px minmax(0, 720px); gap: 36px; align-items: start; margin-top: 12px; }
+.mz-mark { display: block; width: 120px; height: 120px; }
+@media (max-width: 1100px) { .mz-who, .mz-nums { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 960px) {
+  .mz-about-hero, .mz-split { grid-template-columns: 1fr; gap: 28px; }
+  .mz-brand-box { max-width: 480px; padding: 28px 20px; }
+  .mz-links { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .mz-who { grid-template-columns: 1fr; }
+  .mz-nums { grid-template-columns: 1fr 1fr; }
+  .mz-links { grid-template-columns: 1fr; }
+  .mz-maker { grid-template-columns: 1fr; gap: 20px; }
+  .mz-mark { width: 80px; height: 80px; }
+}
+</style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero mz-about-hero">
+    <div>
+      <span class="ute-label">About</span>
+      <h1>An open technical course on how motorcycles work</h1>
+      <p>Moto Zero follows the motorcycle from the first combustion stroke to the battery management system of an electric bike. It explains every system well enough for you to describe it, specify it and repair it, and it is free to use, adapt and share.</p>
+    </div>
+    <div class="mz-brand-box"><svg class="mz-lockup" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120"><title>Moto Zero, Transitions Lab</title><circle cx="60" cy="60" r="38" fill="none" stroke="#1E2B5E" stroke-width="14"/><circle cx="60" cy="60" r="9" fill="#C8502A"/><text x="122" y="70" font-family="IBM Plex Sans" font-weight="600" font-size="46" letter-spacing="-0.5" fill="#1E2B5E">moto zero</text><text x="124" y="96" font-family="IBM Plex Sans" font-weight="400" font-size="15" fill="#5D6270">by Transitions Lab</text></svg></div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">A</span><span class="ute-label">What it is</span></div>
+    <h2>A course, a set of tools and an open library</h2>
+    <div class="prose">
+      <p>The course runs from the motorcycle’s anatomy and physics through the four-stroke and two-stroke engine, fuel, ignition and electrics, and drivetrain and chassis, to electric drive. Every chapter closes with review questions and worked answers, and every module contains workshop job sheets with tools, reference values and pass criteria.</p>
+      <p>Around the text sit interactive tools: a 3D Overview of the whole machine, a working cockpit, a Wiring Lab and a bike builder. The plates and 3D models were made for the course and can be reused in your own teaching.</p>
+    </div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">B</span><span class="ute-label">Who it is for</span></div>
+    <h2>Written for people who work with the machine</h2>
+    <div class="mz-who">
+      <div><b>Technician trainees</b><p>Job sheets, service limits and fault diagnosis, step by step.</p></div>
+      <div><b>Engineering and transitions students</b><p>The physics, efficiency and energy flow of combustion and electric drive.</p></div>
+      <div><b>Researchers</b><p>A consistent technical reference with sources and regulations cited.</p></div>
+      <div><b>Fleet operators</b><p>Service schedules, battery care, swapping and high-voltage safety.</p></div>
+      <div><b>Riders</b><p>What the controls do, how the machine works and what to check.</p></div>
+    </div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">C</span><span class="ute-label">What is inside</span></div>
+    <h2>What is inside</h2>
+    <div class="ute-keys mz-nums">
+      <div class="k"><div class="l">Modules</div><div class="v">5</div><p>From foundations to electric motorcycles</p></div>
+      <div class="k"><div class="l">Chapters</div><div class="v">32</div><p>Each with objectives and review questions</p></div>
+      <div class="k"><div class="l">Quiz questions</div><div class="v">148</div><p>Easy and hard, with explanations</p></div>
+      <div class="k"><div class="l">3D models</div><div class="v">56</div><p>Three motorcycles and 53 components</p></div>
+      <div class="k"><div class="l">Course plates</div><div class="v">38</div><p>Blueprint-style technical drawings</p></div>
+    </div>
+    <div class="mz-links">
+      <a href="../learn/"><b>Learn</b><span>The five modules, one chapter at a time</span></a>
+      <a href="../cockpit/"><b>Cockpit</b><span>Every control of a 125 cc road motorcycle</span></a>
+      <a href="../wiring/"><b>Wiring Lab</b><span>Harness, starting, charging and ignition</span></a>
+      <a href="../build/"><b>Bike builder</b><span>Assemble a bike and change its specification</span></a>
+      <a href="../models/"><b>3D models</b><span>Rotate and inspect all 56 models</span></a>
+      <a href="../downloads/"><b>Downloads</b><span>PDF modules, plates and tools</span></a>
+    </div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">D</span><span class="ute-label">How to use it</span></div>
+    <h2>A suggested learning path</h2>
+    <div class="ute-steps">
+      <div class="ute-step"><b>1</b><div><strong>Module 01 for everyone</strong><p>Then find each of the 30 numbered assemblies on the <a href="../">Overview</a>.</p></div></div>
+      <div class="ute-step"><b>2</b><div><strong>Modules 02 and 03 for combustion machines</strong><p>In that order: the engine first, then fuel, ignition and electrics.</p></div></div>
+      <div class="ute-step"><b>3</b><div><strong>Module 04 for every machine</strong><p>Clutch to brakes applies to combustion and electric motorcycles alike.</p></div></div>
+      <div class="ute-step"><b>4</b><div><strong>Module 05 after chapters 3.4 and 3.6</strong><p>Read battery, charging and starting, and electrical diagnosis, before electric drive.</p></div></div>
+    </div>
+    <p class="mz-note">Mark chapters as done as you go and take the quiz at the end of each module. <a href="../progress/">My progress</a> keeps track in your browser.</p>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">E</span><span class="ute-label">Reference machine</span></div>
+    <h2>One real motorcycle behind the numbers</h2>
+    <div class="mz-split">
+      <div class="prose">
+        <p>Reference values come from a current fuel-injected 125 cc single, the K-Light 125, so that every calculation and service limit maps onto a real machine. It is the kind of motorcycle that carries most of the world’s riders: an air-cooled single with fuel injection, an oxygen sensor and a catalytic converter, combined braking and a chain final drive.</p>
+        <p>Specifications differ between machines. Always confirm values and torque settings in the service manual for the motorcycle in front of you.</p>
+      </div>
+      <figure class="mz-plate"><img src="../assets/illustrations/overview/F01.png" alt="Blueprint plate of a four-stroke road motorcycle with its principal parts labelled" loading="lazy"><figcaption>Course plate F01: four-stroke road motorcycle, principal parts.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">F</span><span class="ute-label">Who made it</span></div>
+    <h2>Created by Transitions Lab</h2>
+    <div class="mz-maker">
+      <img class="mz-mark" src="../assets/brand/mark.svg" alt="The round Moto Zero mark" width="120" height="120">
+      <div class="prose">
+        <p>Moto Zero was created by Marcel Kempers through <a href="https://www.transitionslab.org" target="_blank" rel="noopener">Transitions Lab</a> as an open educational programme. Marcel has a background in aerospace engineering and currently works for a motorcycle manufacturer. The course brings that experience together with the conviction that technical knowledge about motorcycles, combustion and electric, should be open to anyone who needs it.</p>
+        <p>You can contact me anytime at <a href="mailto:marcel@transitionslab.org">marcel@transitionslab.org</a>, or through the <a href="../contact/">contact page</a>. Corrections, translations and teaching adaptations are welcome.</p>
+      </div>
+    </div>
+    <h3>Licence</h3>
+    <div class="prose">
+      <p>Text, plates and 3D models are released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. You may copy, translate, adapt and share them, including in paid training, if you credit “Moto Zero, Transitions Lab” and share adaptations under the same licence. Photographs from the Transitions Lab collection are excluded. Edition 1.0, November 2026.</p>
+    </div>
+    <div class="ute-chapter-foot">
+      <a class="ute-linkbtn is-warm" href="../contact/">Contact</a>
+      <a class="ute-linkbtn" href="../downloads/">Downloads</a>
+      <a class="ute-linkbtn" href="../sources/">Sources and credits</a>
+      <a class="ute-linkbtn" href="../terms/">Terms of use</a>
+    </div>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+</body>
+</html>

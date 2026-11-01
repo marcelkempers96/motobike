@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · Downloads</title>
+  <meta name="description" content="Download the five Moto Zero PDF modules, the 3D models, all 38 course plates, the Wiring Lab data and the standalone interactive tools. CC BY-SA 4.0.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261101b">
+  <style>
+.ute-hero { padding: 64px 40px 52px; border-bottom: 1px solid var(--line); }
+.ute-hero h1 { max-width: 880px; }
+.ute-hero p { max-width: 720px; line-height: 1.55; }
+.ute-chapter { padding: 60px 40px; border-bottom: 1px solid var(--line); }
+.ute-chapter h2 { font-size: 28px; margin-bottom: 12px; max-width: 880px; }
+.ute-chapter .lead { font-size: 17px; line-height: 1.6; max-width: 720px; }
+.ute-chapter .prose { font-size: 16px; line-height: 1.65; max-width: 720px; }
+.ute-chapter h3 { font-size: 19px; font-weight: 600; margin: 36px 0 10px; }
+.ute-chapter-kicker { margin-bottom: 14px; }
+.ute-callbox { border-left-width: 2px; padding: 14px 18px; font-size: 15px; }
+.ute-chapter-foot { margin-top: 28px; }
+.ute-keys { margin: 24px 0; max-width: 1160px; }
+.ute-keys .k { padding: 18px 18px 16px; }
+.ute-keys .k .v { font-family: var(--sans); font-size: 26px; font-weight: 600; margin: 6px 0 4px; }
+.ute-keys .k p { font-size: 14px; color: var(--ink-soft); }
+.ute-table { font-size: 14.5px; }
+.ute-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); }
+.ute-table th { padding: 10px 12px; }
+.mz-skip { position: absolute; left: -9999px; }
+@media (max-width: 720px) {
+  .ute-hero { padding: 40px 16px 32px; }
+  .ute-hero h1 { font-size: 31px; }
+  .ute-hero p { font-size: 16px; }
+  .ute-chapter { padding: 44px 16px; }
+  .ute-chapter h2 { font-size: 24px; }
+  .ute-chapter .lead { font-size: 16px; }
+}
+
+.mz-dl-jump { display: flex; flex-wrap: wrap; gap: 0; margin-top: 32px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); max-width: 980px; }
+.mz-dl-jump a { flex: 1 1 160px; padding: 14px 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); font: 600 15px/1.3 var(--sans); }
+.mz-dl-jump a span { display: block; font: 500 13px/1.3 var(--sans); color: var(--mute); margin-top: 2px; }
+.mz-dl-jump a:hover { background: #F6F6F6; }
+.mz-dl-table { min-width: 640px; }
+.mz-dl-table td { vertical-align: middle; }
+.mz-dl-table td.num { font: 600 15px/1 var(--mono); color: var(--warm); width: 52px; }
+.mz-dl-table b { display: block; color: var(--ink); font-size: 16px; font-weight: 600; }
+.mz-dl-table .sub { display: block; color: var(--mute); font-size: 14px; margin-top: 2px; }
+.mz-dl-table .nowrap { white-space: nowrap; color: var(--ink-soft); }
+.mz-dl { display: inline-block; white-space: nowrap; padding: 9px 14px; border: 1.5px solid var(--ink); color: var(--ink); text-decoration: none; font: 600 13px/1 var(--sans); }
+.mz-dl:hover { background: var(--ink); color: #FFFFFF; }
+.ute-table-wrap { max-width: 1160px; }
+.mz-note { font-size: 15px; color: var(--ink-soft); max-width: 720px; margin-top: 14px; }
+.mz-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 56px; align-items: center; max-width: 1160px; }
+.mz-split-img { display: block; border: 1px solid var(--line); padding: 16px; }
+.mz-split-img img { display: block; width: 100%; height: auto; }
+.mz-plate-group { margin-top: 40px; max-width: 1240px; }
+.mz-plate-group h3 { margin: 0 0 14px; display: flex; align-items: baseline; gap: 10px; }
+.mz-plate-group h3 span { font: 600 13px/1 var(--mono); color: var(--mute); }
+.mz-plate-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.mz-plate-card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink-soft); border: 1px solid var(--line); padding: 12px 12px 14px; min-width: 0; }
+.mz-plate-card:hover { border-color: var(--ink); }
+.mz-plate-card img { width: 100%; height: auto; aspect-ratio: 640 / 432; object-fit: contain; background: #FFFFFF; margin-bottom: 12px; }
+.mz-plate-card .id { font: 600 12px/1 var(--mono); letter-spacing: .06em; color: var(--warm); }
+.mz-plate-card b { font: 600 15px/1.35 var(--sans); color: var(--ink); margin: 6px 0 6px; }
+.mz-plate-card .meta { font-size: 13px; color: var(--mute); margin-top: auto; }
+.mz-tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; max-width: 1240px; }
+.mz-tool { border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; }
+.mz-tool h3 { margin: 8px 0 8px; }
+.mz-tool p { font-size: 15px; flex: 1; }
+.mz-tool-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; }
+.mz-tool-links a { font: 600 14px/1.3 var(--sans); color: var(--ink); }
+.mz-tool-links a:first-child { color: var(--warm); }
+.mz-attr { display: flex; align-items: stretch; max-width: 560px; border: 1.5px solid var(--ink); margin-top: 6px; }
+.mz-attr code { flex: 1; padding: 12px 14px; font: 500 15px/1.4 "IBM Plex Mono", monospace; color: var(--ink); min-width: 0; }
+.mz-attr .ute-btn { border: 0; border-left: 1.5px solid var(--ink); }
+@media (max-width: 960px) {
+  .mz-split { grid-template-columns: 1fr; gap: 24px; }
+  .mz-split-img { max-width: 460px; }
+  .mz-tools { grid-template-columns: 1fr; max-width: 560px; }
+}
+@media (max-width: 540px) {
+  .mz-plate-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mz-plate-card { padding: 8px 8px 10px; }
+  .mz-plate-card b { font-size: 14px; }
+  .mz-dl-jump a { flex-basis: 50%; }
+  .mz-attr code { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero">
+    <span class="ute-label">Downloads</span>
+    <h1>Everything you can download</h1>
+    <p>The five course modules as PDF, the 3D models, all 38 course plates, the Wiring Lab data and the standalone interactive tools. Everything here is free to use in teaching, study and your own projects under CC BY-SA 4.0.</p>
+    <nav class="mz-dl-jump" aria-label="On this page">
+      <a href="#modules">Course modules <span>5 PDF</span></a>
+      <a href="#models">3D models <span>56 models</span></a>
+      <a href="#plates">Course plates <span>38 PNG</span></a>
+      <a href="#tools">Tools and data <span>3 files</span></a>
+      <a href="#licence">Licence <span>CC BY-SA 4.0</span></a>
+    </nav>
+  </section>
+
+  <section class="ute-chapter" id="modules">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">A</span><span class="ute-label">Course modules</span></div>
+    <h2>The five modules as PDF</h2>
+    <p class="lead">Print-ready A4 documents with learning objectives, review questions with worked answers and workshop job sheets. Together they run to 248 pages and 41.1 MB.</p>
+    <div class="ute-table-wrap"><table class="ute-table mz-dl-table">
+      <thead><tr><th>No.</th><th>Module</th><th>Length</th><th>Size</th><th><span class="mz-skip">Link</span></th></tr></thead>
+      <tbody>
+        <tr><td class="num">01</td><td><b>Foundations</b><span class="sub">History, types, anatomy, controls, physics of riding, workshop safety, tools and measurement</span></td><td class="nowrap">35 pages</td><td class="nowrap">10.2 MB</td><td><a class="mz-dl" href="../assets/pdf/moto-zero-module-1-foundations.pdf" download>Download PDF</a></td></tr>
+        <tr><td class="num">02</td><td><b>The engine</b><span class="sub">Four- and two-stroke cycles, top and bottom end, lubrication and cooling, compression and leak-down testing</span></td><td class="nowrap">43 pages</td><td class="nowrap">7.5 MB</td><td><a class="mz-dl" href="../assets/pdf/moto-zero-module-2-engine.pdf" download>Download PDF</a></td></tr>
+        <tr><td class="num">03</td><td><b>Fuel, ignition and electrical systems</b><span class="sub">Mixture, carburettors, fuel injection, emissions, ignition, battery, charging, starting and wiring</span></td><td class="nowrap">51 pages</td><td class="nowrap">6.6 MB</td><td><a class="mz-dl" href="../assets/pdf/moto-zero-module-3-fuel-ignition-electrical.pdf" download>Download PDF</a></td></tr>
+        <tr><td class="num">04</td><td><b>Drivetrain and chassis</b><span class="sub">Clutch, gearbox, final drive, frame and steering, suspension, wheels and tyres, brakes, service schedule</span></td><td class="nowrap">61 pages</td><td class="nowrap">10.9 MB</td><td><a class="mz-dl" href="../assets/pdf/moto-zero-module-4-drivetrain-chassis.pdf" download>Download PDF</a></td></tr>
+        <tr><td class="num">05</td><td><b>Electric motorcycles</b><span class="sub">Motors, controllers and regeneration, cells, packs and the BMS, charging, battery swapping, high-voltage safety</span></td><td class="nowrap">58 pages</td><td class="nowrap">5.9 MB</td><td><a class="mz-dl" href="../assets/pdf/moto-zero-module-5-electric.pdf" download>Download PDF</a></td></tr>
+      </tbody>
+    </table></div>
+    <p class="mz-note">Prefer to read on screen? The same text is on the <a href="../learn/">Learn pages</a>, one chapter at a time, with the 3D models and plates built in.</p>
+  </section>
+
+  <section class="ute-chapter" id="models">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">B</span><span class="ute-label">3D models</span></div>
+    <h2>3D models on Sketchfab</h2>
+    <div class="mz-split">
+      <div>
+        <p class="lead">Three complete motorcycles (an air-cooled four-stroke roadster, a two-stroke motocross bike and an electric scrambler) and 53 components, from the crankshaft and valves to the PMSM motor and the wiring harness. The models are published in the Moto Zero collection on Sketchfab, where you can download them in the formats Sketchfab offers.</p>
+        <p class="mz-note">You can also rotate and inspect every model on this site first, in the <a href="../models/">3D models library</a>.</p>
+        <div class="ute-chapter-foot">
+          <a class="ute-linkbtn is-warm" href="https://sketchfab.com/motorbikemodel" target="_blank" rel="noopener">Open the collection on Sketchfab ↗</a>
+          <a class="ute-linkbtn" href="../models/">Browse the 3D models here</a>
+        </div>
+      </div>
+      <a class="mz-split-img" href="../models/"><img src="../assets/renders/bike_electric_threeq.webp" alt="Electric scrambler model, three-quarter view" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="ute-chapter" id="plates">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">C</span><span class="ute-label">Course plates</span></div>
+    <h2>All 38 course plates</h2>
+    <p class="lead">Blueprint-style technical drawings made for the course, grouped by system. Select a plate to download the full-resolution PNG.</p>
+    
+      <div class="mz-plate-group">
+        <h3>Whole motorcycles <span>5</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/overview/F01.png" download="moto-zero-F01.png"><img src="thumbs/F01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F01</span><b>Four-stroke road motorcycle, principal parts</b><span class="meta">PNG · 1.2 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/overview/F02.png" download="moto-zero-F02.png"><img src="thumbs/F02.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F02</span><b>Two-stroke motocross motorcycle</b><span class="meta">PNG · 1.0 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/overview/F03.png" download="moto-zero-F03.png"><img src="thumbs/F03.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F03</span><b>Electric motorcycle, battery pack cut away</b><span class="meta">PNG · 0.9 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/overview/F04.png" download="moto-zero-F04.png"><img src="thumbs/F04.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F04</span><b>Automatic scooter, CVT cover cut away</b><span class="meta">PNG · 0.7 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/overview/F06.png" download="moto-zero-F06.png"><img src="thumbs/F06.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F06</span><b>Exploded four-stroke motorcycle, 30 assemblies</b><span class="meta">PNG · 1.1 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Controls <span>1</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/controls/F05.png" download="moto-zero-F05.png"><img src="thumbs/F05.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F05</span><b>Handlebar and controls from the rider’s seat</b><span class="meta">PNG · 0.7 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Powertrain <span>9</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/F07.png" download="moto-zero-F07.png"><img src="thumbs/F07.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F07</span><b>Four-stroke cycle</b><span class="meta">PNG · 0.8 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/F08.png" download="moto-zero-F08.png"><img src="thumbs/F08.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F08</span><b>Two-stroke cycle</b><span class="meta">PNG · 0.6 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/F09.png" download="moto-zero-F09.png"><img src="thumbs/F09.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F09</span><b>Single-cylinder four-stroke engine, section</b><span class="meta">PNG · 1.0 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/F10.png" download="moto-zero-F10.png"><img src="thumbs/F10.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F10</span><b>Valvetrain and valve clearance</b><span class="meta">PNG · 0.6 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/F11.png" download="moto-zero-F11.png"><img src="thumbs/F11.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F11</span><b>Wet-sump lubrication circuit</b><span class="meta">PNG · 0.6 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/F12.png" download="moto-zero-F12.png"><img src="thumbs/F12.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F12</span><b>Electronic fuel injection system</b><span class="meta">PNG · 0.4 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/PT01.png" download="moto-zero-PT01.png"><img src="thumbs/PT01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">PT01</span><b>Slide carburettor in section</b><span class="meta">PNG · 0.5 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/PT02.png" download="moto-zero-PT02.png"><img src="thumbs/PT02.webp" alt="" loading="lazy" width="640" height="432"><span class="id">PT02</span><b>Exhaust systems in section</b><span class="meta">PNG · 0.5 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/powertrain/PT03.png" download="moto-zero-PT03.png"><img src="thumbs/PT03.webp" alt="" loading="lazy" width="640" height="432"><span class="id">PT03</span><b>Two-stroke cylinder ports</b><span class="meta">PNG · 0.5 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Transmission <span>6</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/transmission/F13.png" download="moto-zero-F13.png"><img src="thumbs/F13.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F13</span><b>Wet multiplate clutch, exploded</b><span class="meta">PNG · 0.6 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/transmission/F14.png" download="moto-zero-F14.png"><img src="thumbs/F14.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F14</span><b>Constant-mesh gearbox</b><span class="meta">PNG · 0.4 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/transmission/F15.png" download="moto-zero-F15.png"><img src="thumbs/F15.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F15</span><b>Chain final drive and wear measurement</b><span class="meta">PNG · 0.8 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/transmission/F16.png" download="moto-zero-F16.png"><img src="thumbs/F16.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F16</span><b>Scooter CVT at low and high ratio</b><span class="meta">PNG · 0.7 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/transmission/TR01.png" download="moto-zero-TR01.png"><img src="thumbs/TR01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">TR01</span><b>Gear shift mechanism</b><span class="meta">PNG · 0.4 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/transmission/TR02.png" download="moto-zero-TR02.png"><img src="thumbs/TR02.webp" alt="" loading="lazy" width="640" height="432"><span class="id">TR02</span><b>Final drive types</b><span class="meta">PNG · 0.9 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Chassis <span>3</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/chassis/F17.png" download="moto-zero-F17.png"><img src="thumbs/F17.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F17</span><b>Steering geometry: rake, trail, offset, wheelbase</b><span class="meta">PNG · 0.9 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/chassis/F18.png" download="moto-zero-F18.png"><img src="thumbs/F18.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F18</span><b>Fork, rear shock and sag measurement</b><span class="meta">PNG · 0.8 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/chassis/F19.png" download="moto-zero-F19.png"><img src="thumbs/F19.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F19</span><b>Hydraulic disc brake and drum brake</b><span class="meta">PNG · 0.8 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Wheels and tyres <span>3</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/wheels/F20.png" download="moto-zero-F20.png"><img src="thumbs/F20.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F20</span><b>Tyre sidewall markings and section</b><span class="meta">PNG · 0.7 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/wheels/W01.png" download="moto-zero-W01.png"><img src="thumbs/W01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">W01</span><b>Motorcycle wheel types</b><span class="meta">PNG · 1.3 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/wheels/W02.png" download="moto-zero-W02.png"><img src="thumbs/W02.webp" alt="" loading="lazy" width="640" height="432"><span class="id">W02</span><b>Wheel hubs and bearings</b><span class="meta">PNG · 0.7 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Frame and body <span>2</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/frame_body/FB01.png" download="moto-zero-FB01.png"><img src="thumbs/FB01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">FB01</span><b>Motorcycle frame types</b><span class="meta">PNG · 0.9 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/frame_body/FB02.png" download="moto-zero-FB02.png"><img src="thumbs/FB02.webp" alt="" loading="lazy" width="640" height="432"><span class="id">FB02</span><b>Motorcycle body parts</b><span class="meta">PNG · 0.8 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Electrical and electric drive <span>5</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/electrical/F24.png" download="moto-zero-F24.png"><img src="thumbs/F24.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F24</span><b>Electric motor sections: hub BLDC and IPM PMSM</b><span class="meta">PNG · 1.0 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/electrical/F25.png" download="moto-zero-F25.png"><img src="thumbs/F25.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F25</span><b>Electric powertrain: battery, BMS, inverter, VCU, DC-DC</b><span class="meta">PNG · 0.3 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/electrical/F26.png" download="moto-zero-F26.png"><img src="thumbs/F26.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F26</span><b>Battery pack construction, 20S10P module</b><span class="meta">PNG · 0.5 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/electrical/EL01.png" download="moto-zero-EL01.png"><img src="thumbs/EL01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">EL01</span><b>Instruments and switchgear</b><span class="meta">PNG · 0.8 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/electrical/EL02.png" download="moto-zero-EL02.png"><img src="thumbs/EL02.webp" alt="" loading="lazy" width="640" height="432"><span class="id">EL02</span><b>Electrical component map</b><span class="meta">PNG · 0.6 MB</span></a>
+        </div>
+      </div>
+      <div class="mz-plate-group">
+        <h3>Wiring and circuits <span>4</span></h3>
+        <div class="mz-plate-grid">
+          <a class="mz-plate-card" href="../assets/illustrations/wiring/F21.png" download="moto-zero-F21.png"><img src="thumbs/F21.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F21</span><b>Charging circuit</b><span class="meta">PNG · 0.5 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/wiring/F22.png" download="moto-zero-F22.png"><img src="thumbs/F22.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F22</span><b>Ignition circuits: CDI and TCI/ECU</b><span class="meta">PNG · 0.5 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/wiring/F23.png" download="moto-zero-F23.png"><img src="thumbs/F23.webp" alt="" loading="lazy" width="640" height="432"><span class="id">F23</span><b>Electric starting circuit</b><span class="meta">PNG · 0.4 MB</span></a>
+          <a class="mz-plate-card" href="../assets/illustrations/wiring/WR01.png" download="moto-zero-WR01.png"><img src="thumbs/WR01.webp" alt="" loading="lazy" width="640" height="432"><span class="id">WR01</span><b>Main wiring harness laid flat</b><span class="meta">PNG · 0.4 MB</span></a>
+        </div>
+      </div>
+  </section>
+
+  <section class="ute-chapter" id="tools">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">D</span><span class="ute-label">Tools and data</span></div>
+    <h2>Interactive tools and data</h2>
+    <p class="lead">The cockpit and the Wiring Lab each run as a single HTML file with no server. Save them to use offline or to embed in your own learning platform.</p>
+    <div class="mz-tools">
+      <div class="mz-tool">
+        <span class="ute-label">HTML · 85 KB</span>
+        <h3>Controls cockpit</h3>
+        <p>A rider’s-eye cockpit of a 125 cc road motorcycle in which every control works, with live instruments and engine sound.</p>
+        <div class="mz-tool-links"><a href="../assets/interactive/controls.html" download="moto-zero-cockpit.html">Download</a><a href="../assets/interactive/controls.html" target="_blank" rel="noopener">Open standalone ↗</a><a href="../cockpit/">Use on this site</a></div>
+      </div>
+      <div class="mz-tool">
+        <span class="ute-label">HTML · 185 KB</span>
+        <h3>Wiring Lab</h3>
+        <p>The main harness, starting, charging and ignition circuits, with fault simulation and colour codes.</p>
+        <div class="mz-tool-links"><a href="../assets/interactive/wiring/wiring.html" download="moto-zero-wiring-lab.html">Download</a><a href="../assets/interactive/wiring/wiring.html" target="_blank" rel="noopener">Open standalone ↗</a><a href="../wiring/">Use on this site</a></div>
+      </div>
+      <div class="mz-tool">
+        <span class="ute-label">JSON · 33 KB</span>
+        <h3>Wiring Lab data</h3>
+        <p>The data behind the Wiring Lab: systems, wire colour codes, the harness and the starting, charging and ignition circuits. Useful for building your own exercises.</p>
+        <div class="mz-tool-links"><a href="../assets/interactive/wiring/wiring-data.json" download="moto-zero-wiring-data.json">Download</a><a href="../assets/interactive/wiring/wiring-data.json" target="_blank" rel="noopener">View ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ute-chapter" id="licence">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">E</span><span class="ute-label">Licence</span></div>
+    <h2>How you may use these files</h2>
+    <div class="prose">
+      <p>Text, course plates, 3D models, renders and the interactive tools are released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 licence (CC BY-SA 4.0)</a>. You may copy, print, translate, adapt and redistribute them, including in paid training, as long as you credit the source and release adaptations under the same licence.</p>
+      <p><strong>Photographs are excluded.</strong> Photographs from the Transitions Lab collection, used for module covers and in chapters, are included for illustration only and are not covered by the licence.</p>
+    </div>
+    <h3>How to attribute</h3>
+    <p class="mz-note">Place this line next to the material, with a link to the site where possible:</p>
+    <div class="mz-attr">
+      <code id="mz-attr-text">Moto Zero, Transitions Lab, CC BY-SA 4.0</code>
+      <button type="button" class="ute-btn" id="mz-attr-copy">Copy</button>
+    </div>
+    <p class="mz-note">For an adapted plate, add “adapted from” in front, for example: “Adapted from Moto Zero, Transitions Lab, CC BY-SA 4.0”.</p>
+    <div class="ute-chapter-foot">
+      <a class="ute-linkbtn" href="../terms/">Terms of use</a>
+      <a class="ute-linkbtn" href="../sources/">Sources and credits</a>
+      <a class="ute-linkbtn" href="../contact/">Ask for a model or plate</a>
+    </div>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+<script>
+document.getElementById('mz-attr-copy').addEventListener('click', function () {
+  var b = this, t = document.getElementById('mz-attr-text').textContent;
+  var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+  if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () {});
+});
+</script>
+</body>
+</html>

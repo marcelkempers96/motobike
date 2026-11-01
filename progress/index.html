@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · My progress</title>
+  <meta name="description" content="Your Moto Zero progress: chapters done, quiz best scores and tools used. Stored only in this browser, no login.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261101b">
+  <style>
+.ute-hero { padding: 64px 40px 52px; border-bottom: 1px solid var(--line); }
+.ute-hero h1 { max-width: 880px; }
+.ute-hero p { max-width: 720px; line-height: 1.55; }
+.ute-chapter { padding: 60px 40px; border-bottom: 1px solid var(--line); }
+.ute-chapter h2 { font-size: 28px; margin-bottom: 12px; max-width: 880px; }
+.ute-chapter .lead { font-size: 17px; line-height: 1.6; max-width: 720px; }
+.ute-chapter .prose { font-size: 16px; line-height: 1.65; max-width: 720px; }
+.ute-chapter h3 { font-size: 19px; font-weight: 600; margin: 36px 0 10px; }
+.ute-chapter-kicker { margin-bottom: 14px; }
+.ute-callbox { border-left-width: 2px; padding: 14px 18px; font-size: 15px; }
+.ute-chapter-foot { margin-top: 28px; }
+.ute-keys { margin: 24px 0; max-width: 1160px; }
+.ute-keys .k { padding: 18px 18px 16px; }
+.ute-keys .k .v { font-family: var(--sans); font-size: 26px; font-weight: 600; margin: 6px 0 4px; }
+.ute-keys .k p { font-size: 14px; color: var(--ink-soft); }
+.ute-table { font-size: 14.5px; }
+.ute-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); }
+.ute-table th { padding: 10px 12px; }
+.mz-skip { position: absolute; left: -9999px; }
+@media (max-width: 720px) {
+  .ute-hero { padding: 40px 16px 32px; }
+  .ute-hero h1 { font-size: 31px; }
+  .ute-hero p { font-size: 16px; }
+  .ute-chapter { padding: 44px 16px; }
+  .ute-chapter h2 { font-size: 24px; }
+  .ute-chapter .lead { font-size: 16px; }
+}
+
+.mz-pr-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 56px; align-items: end; }
+.mz-pr-total { border: 1px solid var(--line); padding: 22px 24px; }
+.mz-pr-total .big { font: 600 56px/1 var(--sans); color: var(--ink); letter-spacing: -0.02em; }
+.mz-pr-total .big small { font-size: 24px; margin-left: 2px; }
+.mz-pr-total .cap { font-size: 15px; color: var(--ink-soft); margin: 6px 0 14px; }
+.mz-pr-total dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 16px 0 0; border-top: 1px solid var(--line-soft); padding-top: 14px; }
+.mz-pr-total dt { font-size: 13px; color: var(--mute); }
+.mz-pr-total dd { margin: 2px 0 0; font: 600 20px/1.2 var(--sans); color: var(--ink); }
+.mz-bar { height: 8px; background: #EDEDED; position: relative; }
+.mz-bar i { position: absolute; inset: 0 auto 0 0; background: var(--warm); }
+#pr-continue-wrap { padding-top: 32px; padding-bottom: 32px; }
+.mz-cont { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; max-width: 1160px; }
+.mz-cont h2 { margin: 4px 0 0; font-size: 22px; }
+.mz-cont .ute-label { color: var(--warm); }
+.mz-cont p { margin: 4px 0 0; color: var(--mute); }
+.mz-go { display: inline-block; padding: 13px 20px; background: var(--ink); color: #FFFFFF; text-decoration: none; font: 600 15px/1 var(--sans); white-space: nowrap; }
+.mz-go:hover { background: var(--warm); }
+.mz-legend { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; color: var(--mute); margin: 4px 0 8px; }
+.mz-legend span { display: inline-flex; align-items: center; gap: 8px; }
+.mz-st { display: inline-block; flex: none; width: 18px; height: 18px; border: 1.5px solid var(--line); position: relative; background: #FFFFFF; }
+.mz-st.is-seen { border-color: var(--ink); }
+.mz-st.is-seen::after { content: ""; position: absolute; left: 4px; top: 4px; width: 7px; height: 7px; background: var(--ink); }
+.mz-st.is-done { border-color: var(--warm); background: var(--warm); }
+.mz-st.is-done::after { content: ""; position: absolute; left: 5px; top: 1px; width: 4px; height: 9px; border: solid #FFFFFF; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.mz-pr-mods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 1240px; margin-top: 20px; }
+.mz-mod { border: 1px solid var(--line); padding: 20px 22px 12px; min-width: 0; }
+.mz-mod-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: baseline; }
+.mz-mod-head .ute-chapter-num { align-self: center; }
+.mz-mod-head h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.mz-mod-head h3 a { color: var(--ink); text-decoration: none; }
+.mz-mod-head h3 a:hover { text-decoration: underline; }
+.mz-mod-head .cnt { font: 600 14px/1 var(--mono); color: var(--ink-soft); white-space: nowrap; }
+.mz-mod .mz-bar { margin: 14px 0 6px; }
+.mz-mod ol { list-style: none; margin: 0; padding: 0; }
+.mz-mod li a { display: grid; grid-template-columns: 18px 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line-soft); text-decoration: none; color: var(--ink); font-size: 15px; line-height: 1.35; }
+.mz-mod li:first-child a { border-top: 0; }
+.mz-mod li a:hover .t { text-decoration: underline; }
+.mz-mod .n { font: 600 13px/1 var(--mono); color: var(--mute); }
+.mz-mod .when { font-size: 13px; color: var(--mute); white-space: nowrap; }
+.mz-pr-quiz { max-width: 860px; }
+.mz-pr-quiz td { vertical-align: middle; }
+.mz-pr-quiz td b { font: 600 18px/1 var(--sans); color: var(--ink); margin-right: 6px; }
+.mz-pr-quiz .sub { font-size: 13px; color: var(--mute); }
+.mz-pr-quiz a { white-space: nowrap; font-weight: 600; color: var(--ink); font-size: 14px; }
+.mz-qcell { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.mz-tools-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; max-width: 1160px; margin-top: 16px; }
+.mz-tools-list a { border: 1px solid var(--line); padding: 14px 16px; text-decoration: none; color: var(--ink); }
+.mz-tools-list a b { display: block; font: 600 16px/1.3 var(--sans); }
+.mz-tools-list a span { font-size: 13.5px; color: var(--mute); }
+.mz-tools-list a.is-used { border-color: var(--ink); }
+.mz-tools-list a.is-used span { color: var(--warm); }
+.mz-pr-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.mz-pr-actions .ute-btn { padding: 12px 18px; font-size: 14px; }
+.mz-danger { border-color: #B8322A !important; color: #B8322A !important; }
+.mz-danger:hover { background: #B8322A !important; color: #FFFFFF !important; }
+.mz-pr-panel { margin-top: 20px; max-width: 720px; }
+.mz-pr-panel label { display: block; font: 600 14px/1.4 var(--sans); color: var(--ink); margin-bottom: 6px; }
+.mz-pr-panel textarea { width: 100%; font: 400 13px/1.45 "IBM Plex Mono", monospace; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 0; word-break: break-all; }
+.mz-pr-panel textarea:focus { outline: none; border-color: var(--ink); }
+.mz-pr-panel .mz-pr-actions { margin-top: 10px; }
+.mz-msg { min-height: 1.5em; margin-top: 14px; font-size: 15px; color: var(--ink); }
+.mz-msg.is-err { color: #B8322A; }
+.mz-note { font-size: 14px; color: var(--mute); }
+.mz-empty { font-size: 15px; color: var(--mute); }
+@media (max-width: 960px) {
+  .mz-pr-hero { grid-template-columns: 1fr; gap: 28px; align-items: start; }
+  .mz-pr-mods { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  .mz-mod { padding: 16px 14px 8px; }
+  .mz-mod li a { grid-template-columns: 18px 30px minmax(0, 1fr); }
+  .mz-mod .when { display: none; }
+  .mz-pr-total .big { font-size: 48px; }
+  .mz-cont .mz-go { width: 100%; text-align: center; }
+  .mz-pr-quiz td, .mz-pr-quiz th { padding: 10px 8px; }
+  .mz-pr-quiz td:first-child { width: 42%; }
+  .mz-qcell { flex-direction: column; gap: 3px; }
+  .mz-tools-list { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .mz-tools-list a { padding: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero mz-pr-hero">
+    <div>
+      <span class="ute-label">Course · my progress</span>
+      <h1>My progress</h1>
+      <p>Your progress is stored only in this browser. There is no login and nothing is sent anywhere.</p>
+    </div>
+    <div class="mz-pr-total" id="pr-total" aria-live="polite"></div>
+  </section>
+
+  <section class="ute-chapter" id="pr-continue-wrap">
+    <div id="pr-continue"></div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">A</span><span class="ute-label">Chapters</span></div>
+    <h2>Modules and chapters</h2>
+    <p class="mz-legend"><span><i class="mz-st is-done"></i>Done</span><span><i class="mz-st is-seen"></i>Opened</span><span><i class="mz-st"></i>Not started</span></p>
+    <div id="pr-modules" class="mz-pr-mods"></div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">B</span><span class="ute-label">Quiz</span></div>
+    <h2>Best quiz scores</h2>
+    <div class="ute-table-wrap"><table class="ute-table mz-pr-quiz">
+      <thead><tr><th>Topic</th><th>Easy</th><th>Hard</th></tr></thead>
+      <tbody id="pr-quiz"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">C</span><span class="ute-label">Tools</span></div>
+    <h2>Tools used</h2>
+    <div id="pr-tools"></div>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">D</span><span class="ute-label">Your data</span></div>
+    <h2>Move or reset your progress</h2>
+    <p class="lead">To continue on another device or browser, export your progress as a code and import it there.</p>
+    <div class="mz-pr-actions">
+      <button type="button" class="ute-btn is-primary" id="pr-export">Export progress</button>
+      <button type="button" class="ute-btn" id="pr-import">Import progress</button>
+      <button type="button" class="ute-btn mz-danger" id="pr-reset">Reset progress</button>
+    </div>
+    <div class="mz-pr-panel" id="pr-panel" hidden>
+      <label for="pr-code" id="pr-code-label"></label>
+      <textarea id="pr-code" rows="4" spellcheck="false"></textarea>
+      <div class="mz-pr-actions"><button type="button" class="ute-btn is-primary" id="pr-apply"></button><button type="button" class="ute-btn" id="pr-close">Close</button></div>
+    </div>
+    <p class="mz-msg" id="pr-msg" role="status"></p>
+    <p class="mz-note">Clearing your browser’s site data also deletes your progress. See <a href="../cookies/">Cookies and local storage</a>.</p>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+<script type="module">
+import { load, summary, reset, exportText, importText } from '../assets/progress.js';
+import { MODULES, QUESTIONS } from '../assets/content/index.js';
+
+const $ = (s) => document.getElementById(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const day = (t) => new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const bar = (p) => `<div class="mz-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${p}"><i style="width:${p}%"></i></div>`;
+const TOOLS = [
+  ['overview', 'Overview', '../'], ['cockpit', 'Cockpit', '../cockpit/'], ['wiring', 'Wiring Lab', '../wiring/'],
+  ['models', '3D models', '../models/'], ['build', 'Bike builder', '../build/'], ['kids', 'Kids: build a bike', '../kids/'],
+];
+const CH = {};
+MODULES.forEach((m, mi) => m.chapters.forEach((c, ci) => { CH[c.id] = { m, c, num: `${mi + 1}.${ci + 1}` }; }));
+
+function render() {
+  const d = load();
+  const sum = summary(MODULES);
+  const total = sum.reduce((a, s) => a + s.total, 0);
+  const done = sum.reduce((a, s) => a + s.done, 0);
+  const seen = sum.reduce((a, s) => a + s.seen, 0);
+  const pct = total ? Math.round(done / total * 100) : 0;
+  const quizzes = Object.keys(d.quiz || {}).length;
+
+  $('pr-total').innerHTML = `<div class="big">${pct}<small>%</small></div><p class="cap">of chapters completed: ${done} of ${total}</p>${bar(pct)}
+    <dl><div><dt>Opened</dt><dd>${seen}</dd></div><div><dt>Quizzes taken</dt><dd>${quizzes}</dd></div><div><dt>Tools used</dt><dd>${Object.keys(d.tools || {}).length}</dd></div></dl>`;
+
+  // Continue where you left off: the chapter opened most recently
+  let last = null;
+  for (const [id, c] of Object.entries(d.chapters || {})) {
+    if (!CH[id]) continue;
+    const t = c.last || c.seen || 0;
+    if (!last || t > last.t) last = { id, t };
+  }
+  if (last) {
+    const x = CH[last.id];
+    $('pr-continue').innerHTML = `<div class="mz-cont"><div><span class="ute-label">Continue where you left off</span><h2>${x.num} ${esc(x.c.title)}</h2><p>Module ${x.m.num} · last opened ${day(last.t)}</p></div><a class="mz-go" href="../learn/#${last.id}">Continue reading</a></div>`;
+  } else {
+    const first = MODULES[0].chapters[0];
+    $('pr-continue').innerHTML = `<div class="mz-cont"><div><span class="ute-label">Start here</span><h2>1.1 ${esc(first.title)}</h2><p>You have not opened a chapter yet. Module 01 is the place to begin.</p></div><a class="mz-go" href="../learn/#${first.id}">Start the course</a></div>`;
+  }
+
+  $('pr-modules').innerHTML = MODULES.map((m, mi) => {
+    const s = sum[mi];
+    const p = s.total ? Math.round(s.done / s.total * 100) : 0;
+    const rows = m.chapters.map((c, ci) => {
+      const r = d.chapters[c.id];
+      const st = r && r.done ? 'is-done' : r ? 'is-seen' : '';
+      const label = r && r.done ? 'Done' : r ? 'Opened' : 'Not started';
+      const when = r && r.done ? `Done ${day(r.done)}` : r ? `Opened ${day(r.last || r.seen)}` : '';
+      return `<li><a href="../learn/#${c.id}"><i class="mz-st ${st}" role="img" aria-label="${label}"></i><span class="n">${mi + 1}.${ci + 1}</span><span class="t">${esc(c.title)}</span><span class="when">${when}</span></a></li>`;
+    }).join('');
+    return `<div class="mz-mod"><div class="mz-mod-head"><span class="ute-chapter-num">${m.num}</span><h3><a href="../learn/#${m.id}">${esc(m.title.split(':')[0])}</a></h3><span class="cnt">${s.done}/${s.total}</span></div>${bar(p)}<ol>${rows}</ol></div>`;
+  }).join('');
+
+  const cell = (topic, level) => {
+    const q = d.quiz[`${topic}|${level}`];
+    const href = `../quiz/?topic=${topic}&level=${level}`;
+    if (!q) return `<div class="mz-qcell"><span class="sub">Not taken</span><a href="${href}">Start</a></div>`;
+    const n = q.attempts === 1 ? '1 attempt' : `${q.attempts} attempts`;
+    return `<div class="mz-qcell"><b>${q.best}%</b><span class="sub">${q.bestRight}/${q.total} · ${n}</span><a href="${href}">Retry</a></div>`;
+  };
+  const rows = [['all', 'All modules', QUESTIONS.length], ...MODULES.map((m) => [m.id, `${m.num} ${m.title.split(':')[0]}`, QUESTIONS.filter((q) => q.module === m.id).length])];
+  $('pr-quiz').innerHTML = rows.map(([id, t, n]) => `<tr><td><strong>${esc(t)}</strong><br><span class="sub">${n} questions</span></td><td>${cell(id, 'easy')}</td><td>${cell(id, 'hard')}</td></tr>`).join('');
+
+  const tools = d.tools || {};
+  const known = TOOLS.map(([k, t, h]) => {
+    const u = tools[k];
+    return `<a href="${h}" class="${u ? 'is-used' : ''}"><b>${t}</b><span>${u ? 'Last used ' + day(u.at) : 'Not used yet'}</span></a>`;
+  });
+  const other = Object.keys(tools).filter((k) => !TOOLS.some(([x]) => x === k)).map((k) => `<a class="is-used" href="../"><b>${esc(k)}</b><span>Last used ${day(tools[k].at)}</span></a>`);
+  $('pr-tools').innerHTML = `<div class="mz-tools-list">${known.concat(other).join('')}</div>`;
+}
+
+let mode = null;
+const msg = (t, err) => { $('pr-msg').textContent = t; $('pr-msg').classList.toggle('is-err', !!err); };
+function open(m) {
+  mode = m; $('pr-panel').hidden = false; msg('');
+  const ta = $('pr-code');
+  if (m === 'export') {
+    $('pr-code-label').textContent = 'Your progress code. Copy it and keep it somewhere safe.';
+    ta.value = exportText(); ta.readOnly = true; $('pr-apply').textContent = 'Copy code';
+    ta.focus(); ta.select();
+  } else {
+    $('pr-code-label').textContent = 'Paste a progress code exported from Moto Zero. It replaces the progress in this browser.';
+    ta.value = ''; ta.readOnly = false; $('pr-apply').textContent = 'Import';
+    ta.focus();
+  }
+}
+$('pr-export').addEventListener('click', () => open('export'));
+$('pr-import').addEventListener('click', () => open('import'));
+$('pr-close').addEventListener('click', () => { $('pr-panel').hidden = true; msg(''); });
+$('pr-apply').addEventListener('click', async () => {
+  const ta = $('pr-code');
+  if (mode === 'export') {
+    try { await navigator.clipboard.writeText(ta.value); msg('Code copied.'); }
+    catch (e) { ta.select(); msg('Select the code and copy it.'); }
+    return;
+  }
+  if (!ta.value.trim()) { msg('Paste a code first.', true); return; }
+  try { importText(ta.value); $('pr-panel').hidden = true; msg('Progress imported.'); }
+  catch (e) { msg('That code could not be read. Check that you copied all of it.', true); }
+});
+$('pr-reset').addEventListener('click', () => {
+  if (confirm('Reset all progress in this browser? Chapters, quiz scores and tools used will be cleared. This cannot be undone.')) { reset(); msg('Progress reset.'); }
+});
+
+window.addEventListener('mz-progress', render);
+window.addEventListener('storage', (e) => { if (!e.key || e.key === 'mz-progress-v1') render(); });
+render();
+</script>
+</body>
+</html>

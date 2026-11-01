@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · Updates</title>
+  <meta name="description" content="What changed on the Moto Zero site and when: new tools, pages and improvements, newest first.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261101b">
+  <style>
+.ute-hero { padding: 64px 40px 52px; border-bottom: 1px solid var(--line); }
+.ute-hero h1 { max-width: 880px; }
+.ute-hero p { max-width: 720px; line-height: 1.55; }
+.ute-chapter { padding: 60px 40px; border-bottom: 1px solid var(--line); }
+.ute-chapter h2 { font-size: 28px; margin-bottom: 12px; max-width: 880px; }
+.ute-chapter .lead { font-size: 17px; line-height: 1.6; max-width: 720px; }
+.ute-chapter .prose { font-size: 16px; line-height: 1.65; max-width: 720px; }
+.ute-chapter h3 { font-size: 19px; font-weight: 600; margin: 36px 0 10px; }
+.ute-chapter-kicker { margin-bottom: 14px; }
+.ute-callbox { border-left-width: 2px; padding: 14px 18px; font-size: 15px; }
+.ute-chapter-foot { margin-top: 28px; }
+.ute-keys { margin: 24px 0; max-width: 1160px; }
+.ute-keys .k { padding: 18px 18px 16px; }
+.ute-keys .k .v { font-family: var(--sans); font-size: 26px; font-weight: 600; margin: 6px 0 4px; }
+.ute-keys .k p { font-size: 14px; color: var(--ink-soft); }
+.ute-table { font-size: 14.5px; }
+.ute-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); }
+.ute-table th { padding: 10px 12px; }
+.mz-skip { position: absolute; left: -9999px; }
+@media (max-width: 720px) {
+  .ute-hero { padding: 40px 16px 32px; }
+  .ute-hero h1 { font-size: 31px; }
+  .ute-hero p { font-size: 16px; }
+  .ute-chapter { padding: 44px 16px; }
+  .ute-chapter h2 { font-size: 24px; }
+  .ute-chapter .lead { font-size: 16px; }
+}
+
+.mz-day { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1.5px solid var(--ink); max-width: 960px; }
+.mz-day h2 { margin: 0; }
+.mz-day p { margin: 0; color: var(--mute); }
+.mz-rels { max-width: 960px; }
+.mz-rel { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.mz-rel-meta { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.mz-rel-no { font: 600 14px/1 var(--mono); color: var(--mute); letter-spacing: .06em; }
+.mz-tag { font: 600 12px/1 var(--sans); padding: 6px 9px; border: 1.5px solid var(--ink); color: var(--ink); }
+.mz-tag.is-new { border-color: var(--warm); color: var(--warm); }
+.mz-tag.is-first { background: var(--ink); color: #FFFFFF; }
+.mz-rel h3 { font-size: 20px; font-weight: 600; margin: 0 0 10px; }
+.mz-rel ul { margin: 0; padding-left: 18px; font-size: 16px; line-height: 1.6; }
+.mz-rel li { margin-bottom: 6px; }
+@media (max-width: 720px) {
+  .mz-rel { grid-template-columns: 1fr; gap: 12px; padding: 22px 0; }
+  .mz-rel-meta { flex-direction: row; align-items: center; }
+  .mz-rel h3 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero">
+    <span class="ute-label">Updates</span>
+    <h1>What is new</h1>
+    <p>Changes to the Moto Zero site, newest first. The course text follows the PDF modules, edition 1.0, November 2026.</p>
+  </section>
+
+  <section class="ute-chapter">
+    <div class="mz-day"><span class="ute-label">Released</span><h2>1 November 2026</h2><p>The first public build and the releases that followed on the same day.</p></div>
+    <div class="mz-rels">
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">10</span><span class="mz-tag is-new">New</span></div>
+        <div><h3>My progress, new menu and new pages</h3><ul><li>A new menu in three groups (Explore, Course, More) and a full footer on every page.</li><li><a href="../progress/">My progress</a>: chapters done, quiz bests and where you left off, saved in your browser with no login.</li><li>The quiz now has easy and hard levels for every module.</li><li>New pages: <a href="../history/">History</a>, <a href="../downloads/">Downloads</a>, <a href="../about/">About</a>, <a href="../contact/">Contact</a>, and privacy, cookies and terms of use.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">09</span><span class="mz-tag is-new">New</span></div>
+        <div><h3>Engine sound in the cockpit</h3><ul><li>The cockpit now has sound: engine note, starter, horn, indicator relay, gear clunks and switch clicks.</li><li>The Overview reads engine size from a link, so a lesson can open it with a given bore, stroke and compression ratio.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">08</span><span class="mz-tag is-improved">Improved</span></div>
+        <div><h3>Separate Overview and Cockpit, cleaner phones</h3><ul><li>The Overview and the Cockpit are now separate pages.</li><li>A plain white theme throughout, with no beige surfaces.</li><li>On phones the header is compact and no longer follows you down the page.</li><li>Sources and 3D models now link to the downloadable models on Sketchfab, with a contact for collaborations.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">07</span><span class="mz-tag is-improved">Improved</span></div>
+        <div><h3>Clearer 3D components and course pages</h3><ul><li>3D component models move with the simulation, and an x-ray highlight shows the part you selected.</li><li>Component views show the model and its working side by side.</li><li>Learn has smaller images, white surfaces and the contents on top on phones.</li><li>A new typeface (Barlow) and a simple bike-building game for younger learners.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">06</span><span class="mz-tag is-new">New</span></div>
+        <div><h3>Cockpit, Wiring Lab and 3D model library</h3><ul><li>A Cockpit page where every control of a 125 cc road motorcycle works.</li><li>The Wiring Lab: the main harness and the starting, charging and ignition circuits, with its original blue-and-orange design.</li><li>A 3D models gallery with all 56 models to rotate and inspect.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">05</span><span class="mz-tag is-improved">Improved</span></div>
+        <div><h3>One chapter per page</h3><ul><li>Learn now shows one chapter at a time, with breadcrumbs, a progress bar and previous and next links.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">04</span><span class="mz-tag is-new">New</span></div>
+        <div><h3>Bike builder and course photographs</h3><ul><li>Build a bike: drag the parts onto the course plates to assemble a motorcycle.</li><li>Course photographs appear in chapters and on the module covers, with credits.</li><li>A full style and content check across the course text.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">03</span><span class="mz-tag is-new">New</span></div>
+        <div><h3>Real 3D models and course plates</h3><ul><li>The site was rebuilt on the real course assets: 56 3D models, the 38 course plates and the controls cockpit.</li><li>Renders load as light still images until you open the 3D view.</li><li>Photo blocks, a glossary and further reading in every module.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">02</span><span class="mz-tag is-new">New</span></div>
+        <div><h3>Sources and credits</h3><ul><li>A <a href="../sources/">Sources and credits</a> page with the bibliography and licences.</li></ul></div>
+      </article>
+      <article class="mz-rel">
+        <div class="mz-rel-meta"><span class="mz-rel-no">01</span><span class="mz-tag is-first">First release</span></div>
+        <div><h3>Moto Zero goes online</h3><ul><li>The interactive Lab (now the Overview): a 3D motorcycle with every component explained.</li><li>Learn: the five course modules as web pages.</li><li>Quiz: questions on every module, with explanations.</li></ul></div>
+      </article>
+    </div>
+    <div class="ute-chapter-foot"><a class="ute-linkbtn" href="../contact/">Report a problem or suggest a change</a></div>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+</body>
+</html>
