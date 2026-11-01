@@ -751,3 +751,9 @@ p { margin: 0 0 10px; }
   .mz-chaplist a > span { display: none; }
   .ute-hero { padding: 26px 16px; }
 }
+
+/* Phones: the section nav wraps to its own row and scrolls sideways instead of widening the page */
+@media (max-width: 540px) {
+  .ute-top { flex-wrap: wrap; }
+  .ute-nav { order: 10; width: 100%; overflow-x: auto; scrollbar-width: none; }
+}
