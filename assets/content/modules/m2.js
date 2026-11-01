@@ -1033,6 +1033,11 @@ export default {
           "html": "Wet clutch = <strong>JASO MA/MA2</strong>. Never put JASO MB or an energy-conserving car oil in a bike with a wet clutch."
         },
         {
+          "type": "photo",
+          "src": "honda-air-cooled.jpg",
+          "caption": "An air-cooled single with deep horizontal fins on the cylinder and head, a radiator mounted ahead of it for the oil or coolant circuit, and the round generator and clutch covers on the crankcase below."
+        },
+        {
           "type": "check",
           "q": "m2-24"
         },

@@ -139,6 +139,11 @@ export default {
           "html": "So the electric machine needs about <strong>4 kWh</strong> from the grid where the petrol machine burns about <strong>22 kWh</strong> of fuel, a factor of five to six. A Nairobi boda boda covering 120 km a day burns about 3 L of petrol; the electric equivalent needs 4–5 kWh. The catch is storage: petrol holds about <strong>12,000 Wh/kg</strong>, a lithium-ion pack <strong>120–180 Wh/kg</strong>. That is why electric bikes carry less energy and are designed around swapping or fast charging."
         },
         {
+          "type": "photo",
+          "src": "hybrid-power-unit.jpg",
+          "caption": "High-voltage cabling on a hybrid racing power unit: the orange sheathing is the industry convention for conductors above 60 V DC, and the cables run in short, clamped, separately routed bundles to the motor-generator and energy store. The same colour code marks the traction circuit on every electric motorcycle."
+        },
+        {
           "type": "check",
           "q": "m5-03"
         },

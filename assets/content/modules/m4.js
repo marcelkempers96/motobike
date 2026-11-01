@@ -566,6 +566,11 @@ export default {
           ]
         },
         {
+          "type": "photo",
+          "src": "scooter-cvt-workshop.jpg",
+          "caption": "A scooter unit-swing engine on the centre stand with the CVT cover removed: the finned fan of the drive pulley, the cogged V-belt and the driven pulley with its clutch bell sit directly in front of the rear wheel, and the swingarm pivot is visible at the front of the crankcase."
+        },
+        {
           "type": "check",
           "q": "m4-09"
         },

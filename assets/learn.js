@@ -9,6 +9,7 @@ const $ = (s, r = document) => r.querySelector(s);
 const main = $('#learn-main');
 const toc = $('#learn-toc');
 const ROOT = '../';
+const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', 'fuel-ignition': 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'hybrid-power-unit-portrait.jpg' };
 
 function moduleOf(hash) {
   const h = decodeURIComponent(hash.replace(/^#/, ''));
@@ -43,6 +44,7 @@ function home() {
       <h2>Modules</h2>
       <div class="ute-modcards">${MODULES.map((m) => `
         <a class="ute-modcard" href="#${m.id}">
+          <img class="mz-modcard-img" src="${ROOT}assets/photos/${COVER[m.id]}" alt="" loading="lazy">
           <span class="ute-chapter-num">${m.num}</span>
           <h3>${m.title}</h3>
           <p>${m.intro}</p>
@@ -85,7 +87,7 @@ function block(b, mod) {
       const files = (b.files || [b.file]).filter((f) => MODELS[f]);
       return files.length ? `<figure class="ute-figure mz-learn-model" data-models="${files.join(',')}"><div class="mz-variants">${files.length > 1 ? `<div class="ute-seg" role="group" aria-label="Models">${files.map((f) => `<button type="button" data-model="${f}">${MODELS[f][1].split(/[,(]/)[0].trim()}</button>`).join('')}</div>` : ''}</div><div class="ute-figure-stage"><div class="mz3d mz3d-part"><p class="mz3d-status">3D model · ${MODELS[files[0]][1]}</p></div></div><p class="mz3d-cap"></p><div class="mz-subparts"></div><figcaption class="ute-figure-cap"><span class="ute-label">3D · drag to rotate</span> ${b.caption || ''}</figcaption></figure>` : '';
     }
-    case 'photo': return `<figure class="ute-figure mz-learn-photo"><div class="ute-figure-stage"><img src="${ROOT}assets/renders/photo/${b.src}" alt="${(b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"></div>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Render</span> ${b.caption}</figcaption>` : ''}</figure>`;
+    case 'photo': return `<figure class="ute-figure mz-learn-photo"><div class="ute-figure-stage"><img src="${ROOT}assets/${b.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${b.src}" alt="${(b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"></div>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">${b.src.startsWith('render-') ? 'Render' : 'Photograph'}</span> ${b.caption}</figcaption>` : ''}</figure>`;
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
     default: void mod; return '';
   }
@@ -97,13 +99,16 @@ function renderModule(mod, chap) {
   const i = MODULES.indexOf(mod);
   const prev = MODULES[i - 1], next = MODULES[i + 1];
   main.innerHTML = `
-    <section class="ute-hero">
+    <section class="ute-hero mz-hero-cover">
+      <img class="mz-cover" src="${ROOT}assets/photos/${COVER[mod.id]}" alt="" loading="eager">
+      <div>
       <span class="ute-label">Module ${mod.num}</span>
       <h1>${mod.title}</h1>
       <p>${mod.intro}</p>
       <div class="ute-chapter-foot">
         <a class="ute-linkbtn" href="${ROOT}assets/pdf/${mod.pdf}" target="_blank" rel="noopener">Download PDF</a>
         <a class="ute-linkbtn is-warm" href="${ROOT}quiz/?topic=${mod.id}">Quiz this module →</a>
+      </div>
       </div>
     </section>
     ${mod.chapters.map((c, ci) => `

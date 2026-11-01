@@ -82,6 +82,11 @@ export default {
           "caption": "The layout that won: engine low and central, tank above it, chain to the rear wheel."
         },
         {
+          "type": "photo",
+          "src": "curtiss-1907.jpg",
+          "caption": "An early Curtiss racing motorcycle with an air-cooled multi-cylinder engine slung low in a bicycle-derived diamond frame, belt-free direct drive and a sprung saddle: the layout that the first decade of motorcycling inherited from the safety bicycle."
+        },
+        {
           "type": "check",
           "q": "m1-01"
         },

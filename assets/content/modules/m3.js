@@ -144,6 +144,11 @@ export default {
           "caption": "The slide carburettor modelled in half section."
         },
         {
+          "type": "photo",
+          "src": "carburettor-fitting.jpg",
+          "caption": "Refitting a constant-velocity carburettor between the intake rubber and the airbox on an air-cooled twin: the round diaphragm chamber sits on top, the pilot mixture screw and idle stop screw are on the side, and the float bowl is below."
+        },
+        {
           "type": "plate",
           "id": "PT01",
           "caption": "Slide carburettor in section: venturi, slide and needle, needle jet, main jet, pilot circuit and float bowl."
