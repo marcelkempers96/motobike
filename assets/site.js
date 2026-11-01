@@ -14,7 +14,7 @@ const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
 
 export const MAIN = [['overview/', 'Overview'], ['cockpit/', 'Cockpit']];
 export const NAV = [
-  { key: 'course', title: 'Course', blurb: 'Learn: five modules, quiz, history and types', items: [
+  { key: 'course', title: 'Course', blurb: 'Five modules, quizzes and your progress', items: [
     ['learn/', 'Course overview', 'How the course works, where to start'],
     ['learn/#foundations', '01 Foundations', 'Anatomy, physics, workshop'],
     ['learn/#engine', '02 The engine', 'Four-stroke and two-stroke'],
@@ -22,9 +22,6 @@ export const NAV = [
     ['learn/#drivetrain-chassis', '04 Drivetrain and chassis', 'Clutch to brakes'],
     ['learn/#electric', '05 Electric motorcycles', 'Motors, packs, BMS'],
     ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
-    ['history/', 'History', 'From steam velocipede to battery swapping'],
-    ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
-    ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
     ['progress/', 'My progress', 'Saved in this browser, no login'],
   ] },
   { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it step by step', items: [
@@ -37,6 +34,11 @@ export const NAV = [
     ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
     ['models/', '3D models', 'All 56 models, rotate and inspect'],
     ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
+  ] },
+  { key: 'library', title: 'Library', blurb: 'Read: history, types and guides', items: [
+    ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
+    ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
+    ['history/', 'History', 'From steam velocipede to battery swapping'],
   ] },
   { key: 'more', title: 'More', blurb: 'Files, sources and the project', items: [
     ['downloads/', 'Downloads', 'PDF modules, models, plates'],
@@ -90,7 +92,7 @@ export function footerHTML() {
         <p>An open technical course on how motorcycles work, from the first combustion stroke to the battery management system of an electric bike. Built for technician trainees, students, researchers, fleet operators and riders.</p>
         <p>Created by <a href="https://www.transitionslab.org" target="_blank" rel="noopener">Transitions Lab</a> as an open educational programme. Text, plates and 3D models are CC BY-SA 4.0.</p>
       </div>
-      ${[explore, G('course'), G('more')].map(col).join('')}
+      ${[explore, G('course'), G('library'), G('more')].map(col).join('')}
     </div>
     <div class="mz-foot-bottom">
       <span>© ${new Date().getFullYear()} Transitions Lab · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></span>
