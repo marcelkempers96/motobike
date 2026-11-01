@@ -1087,3 +1087,14 @@ a.ute-btn { text-decoration: none; display: inline-flex; align-items: center; }
 .mz-gal-item .mz-gal-card { flex: 1; }
 .mz-gal-dl { display: block; padding: 8px 10px; border: 1px solid var(--line); border-top: 0; font: 700 13px/1.2 var(--sans); color: var(--ink); text-decoration: none; background: #FAFAFA; }
 .mz-gal-dl:hover { background: var(--ink); color: #FFF; }
+/* Phones: Course / Tools / More are tap-to-open dropdowns inside the menu */
+@media (max-width: 960px) {
+  .mz-menu-group { border-bottom: 1px solid var(--line-soft); }
+  .mz-menu-top { pointer-events: auto; width: 100%; justify-content: space-between; padding: 16px 0; font: 700 17px/1 var(--sans); color: var(--ink); text-transform: none; letter-spacing: 0; cursor: pointer; }
+  .mz-menu-top i { display: inline-block; width: 9px; height: 9px; }
+  .mz-menu-group .mz-menu-panel { display: none; padding: 0 0 10px 12px; }
+  .mz-menu-group.is-open .mz-menu-panel { display: block; }
+  .mz-menu-group.is-open .mz-menu-top { color: var(--warm); }
+  .mz-menu-panel a { padding: 9px 0; }
+  .mz-menu-panel a:last-child { border-bottom: 0; }
+}
