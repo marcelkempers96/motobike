@@ -979,3 +979,62 @@ h1, h2, h3, .ute-hero h1 { font-family: var(--sans); font-weight: 700; letter-sp
   .mz-menu-main { height: auto; padding: 14px 0; border-bottom: 1px solid var(--line-soft); font-size: 17px; }
   .mz-menu-main[aria-current="page"] { color: var(--warm); border-bottom-color: var(--line-soft); }
 }
+
+/* ==========================================================================
+   Overview: one screen. Bike on the left, component panel on the right.
+   ========================================================================== */
+.mz-split { display: grid; grid-template-columns: minmax(0, 1fr); height: calc(100vh - 61px); min-height: 560px; border-bottom: 1px solid var(--line); }
+.mz-split[data-open="1"] { grid-template-columns: minmax(0, 1fr) 10px var(--mz-right, 40%); }
+.mz-split-left { display: flex; flex-direction: column; min-height: 0; min-width: 0; padding: 14px 20px 12px; border-bottom: 0; }
+.mz-split-left .ute-section-head { margin-bottom: 8px; }
+.mz-split-left .ute-section-head h2 { font-size: 22px; }
+.mz-split-left .ute-chips { margin-bottom: 8px; }
+.mz-split-left .ute-moto-wrap { flex: 1; min-height: 0; display: flex; }
+.mz-split-left .ute-moto-stage { flex: 1; min-height: 0; position: relative; }
+.mz-split-left .mz3d-bike { height: 100%; }
+.mz-split-left .mz-part-index { max-height: 76px; overflow: auto; margin-top: 8px; }
+.mz-split-handle { display: none; cursor: col-resize; background: #F2F2F2; border-left: 1px solid var(--line); border-right: 1px solid var(--line); position: relative; touch-action: none; }
+.mz-split-handle::after { content: ""; position: absolute; left: 3px; right: 3px; top: 50%; height: 44px; margin-top: -22px; border-left: 2px dotted #9A9A9A; border-right: 2px dotted #9A9A9A; }
+.mz-split-handle:hover, .mz-split-handle:focus-visible, .mz-split.is-dragging .mz-split-handle { background: #FBE7DE; outline: none; }
+.mz-split[data-open="1"] .mz-split-handle { display: block; }
+.mz-split.is-dragging { user-select: none; cursor: col-resize; }
+.mz-panel { display: none; min-width: 0; min-height: 0; flex-direction: column; background: #FFFFFF; padding: 14px 16px 12px; overflow: hidden; }
+.mz-split[data-open="1"] .mz-panel { display: flex; }
+.mz-panel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.mz-panel-head h2 { font-size: 22px; margin: 2px 0 0; }
+.mz-panel-actions { display: flex; gap: 6px; align-items: center; }
+.mz-anim-btn { padding: 8px 12px; border: 1.5px solid var(--warm); background: #FFFFFF; color: var(--warm); font: 700 13px/1 var(--sans); cursor: pointer; white-space: nowrap; }
+.mz-anim-btn[aria-expanded="true"] { background: var(--warm); color: #FFFFFF; }
+.mz-panel .ute-cview-close { padding: 7px 10px; }
+.mz-anim { flex: 0 1 auto; max-height: 58%; overflow: auto; border: 1px solid var(--line); margin-bottom: 10px; background: #FFFFFF; }
+.mz-anim[hidden] { display: none; }
+.mz-anim .ute-cview-stage { min-height: 0; padding: 70px 10px 92px; border: 0; }
+.mz-anim .ute-cview-stage svg.ute-cv-svg { max-height: 300px; }
+.mz-anim .ute-status { top: 8px; left: 8px; right: 8px; padding: 8px 10px; }
+.mz-anim .ute-hold-wrap { bottom: 10px; }
+.mz-anim .ute-hold { width: 160px; height: 48px; font-size: 14px; }
+.mz-anim .ute-cview-side { grid-template-columns: 1fr; gap: 10px; margin: 10px; }
+.mz-anim .ute-under { padding: 0 10px 10px; }
+.mz-panel-model { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.mz-panel-model .mz3d-part { flex: 1; min-height: 200px; height: auto; border: 1px solid var(--line); }
+.mz-panel-model .mz-subparts { max-height: 92px; overflow: auto; margin-top: 6px; }
+.mz-panel-model .mz3d-cap { margin: 6px 0 4px; }
+.mz-panel-lead { margin: 8px 0 0; font-size: 15px; }
+.ute-cview { padding: 0 24px; border-bottom: 0; }
+.ute-cview:empty { display: none; }
+.mz-cv-below { padding: 20px 0 32px; }
+.mz-cv-banner { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr) minmax(0, 0.9fr); background: #FFFFFF; border: 1px solid var(--line); }
+.mz-wide-stage { margin-top: 20px; min-height: 0; padding: 70px 16px 20px; }
+.mz-cv-graphs { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 16px; }
+@media (max-width: 960px) {
+  .mz-split, .mz-split[data-open="1"] { grid-template-columns: 1fr; height: auto; min-height: 0; }
+  .mz-split-left .ute-moto-wrap { flex: none; }
+  .mz-split-left .mz3d-bike { height: clamp(300px, 70vw, 460px); }
+  .mz-split-left .mz-part-index { max-height: none; }
+  .mz-split-handle { display: none !important; }
+  .mz-panel { border-top: 1px solid var(--line); overflow: visible; }
+  .mz-panel-model .mz3d-part { height: 340px; flex: none; }
+  .mz-anim { max-height: none; }
+  .mz-cv-banner { grid-template-columns: 1fr; }
+  .ute-cview { padding: 0 14px; }
+}

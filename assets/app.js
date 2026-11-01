@@ -89,7 +89,8 @@ function render() {
     </header>
 
 ${PAGE === 'overview' ? `
-    <section class="ute-section ute-overview" aria-labelledby="ov-h">
+    <div class="mz-split" id="mz-split" data-open="0">
+    <section class="ute-section ute-overview mz-split-left" aria-labelledby="ov-h">
       <div class="ute-section-head">
         <div>
           <h2 id="ov-h">${info.name}</h2>
@@ -108,8 +109,11 @@ ${PAGE === 'overview' ? `
       </div>
       <div class="mz-part-index" id="ute-part-index"></div>
     </section>
+    <div class="mz-split-handle" id="mz-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize the component panel" tabindex="0"></div>
+    <aside class="mz-panel" id="mz-panel" aria-live="polite"></aside>
+    </div>
 
-    <section class="ute-cview" id="ute-cview-slot" aria-live="polite"></section>
+    <section class="ute-cview" id="ute-cview-slot"></section>
 
 ` : ''}
 ${PAGE === 'cockpit' ? `
@@ -190,7 +194,30 @@ ${PAGE === 'cockpit' ? `
   mountDyno();
 }
 
+/* Draggable divider between the overview and the component panel */
+function wireSplit() {
+  const split = $('#mz-split'), h = $('#mz-split-handle');
+  if (!split || !h) return;
+  let pct = 40;
+  try { pct = +localStorage.getItem('mz-split') || 40; } catch (e) { /* noop */ }
+  const apply = (v) => { pct = Math.min(65, Math.max(25, v)); split.style.setProperty('--mz-right', pct + '%'); };
+  apply(pct);
+  const move = (e) => { const r = split.getBoundingClientRect(); apply((r.right - e.clientX) / r.width * 100); };
+  h.addEventListener('pointerdown', (e) => {
+    e.preventDefault(); h.setPointerCapture(e.pointerId); split.classList.add('is-dragging');
+    h.addEventListener('pointermove', move);
+    const up = () => { h.removeEventListener('pointermove', move); split.classList.remove('is-dragging'); try { localStorage.setItem('mz-split', String(Math.round(pct))); } catch (err) { /* noop */ } };
+    h.addEventListener('pointerup', up, { once: true });
+    h.addEventListener('pointercancel', up, { once: true });
+  });
+  h.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { apply(pct + 3); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { apply(pct - 3); e.preventDefault(); }
+  });
+}
+
 function wireChrome() {
+  wireSplit();
   $$('.ute-mode-switch button').forEach((b) => b.addEventListener('click', () => switchMode(b.dataset.mode)));
   $$('.ute-chips [data-cat]').forEach((b) => b.addEventListener('click', () => {
     S.category = b.dataset.cat;
@@ -350,13 +377,10 @@ function selectPart(key, force, fromModel) {
   applyMotoHighlight();
   renderComponentView();
   syncURL();
-  // Bring the close-up into view; on a wide screen, only when it is off-screen and the pick came from the model.
-  const slot = $('#ute-cview-slot');
-  if (S.selected_part && slot) {
-    const r = slot.getBoundingClientRect();
-    const narrow = window.matchMedia('(max-width: 960px)').matches;
-    if (narrow || (fromModel && r.top > innerHeight - 120)) slot.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  // Desktop: the panel opens beside the bike, no scrolling. Phones: scroll to the panel.
+  const panel = $('#mz-panel');
+  if (S.selected_part && panel && window.matchMedia('(max-width: 960px)').matches) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  void fromModel;
 }
 
 function emptyCViewHTML() {
@@ -364,42 +388,67 @@ function emptyCViewHTML() {
 }
 
 let CV3 = null;
+let animOpen = false;
+try { animOpen = localStorage.getItem('mz-anim-open') === '1'; } catch (e) { /* noop */ }
 function renderComponentView() {
   const slot = $('#ute-cview-slot');
-  if (!slot) return;
+  const panel = $('#mz-panel');
+  const split = $('#mz-split');
+  if (!slot || !panel) return;
   if (CV3) { CV3.dispose(); CV3 = null; }
   CV3_MODEL = null; S._brakeSpin = null;
-  // Reset local holds so nothing sticks when switching views
   Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false, throttle_hold: false, particles: [] });
-  if (!S.selected_part) { slot.innerHTML = emptyCViewHTML(); return; }
-  const cfg = COMPONENT_VIEWS[S.selected_part] || basicCard(S.selected_part);
-  const P = PARTS[S.selected_part] || {};
-  slot.innerHTML = `
-    <div class="ute-cview-head">
+  if (!S.selected_part) {
+    panel.innerHTML = ''; slot.innerHTML = '';
+    split.dataset.open = '0';
+    return;
+  }
+  split.dataset.open = '1';
+  const key = S.selected_part;
+  const cfg = COMPONENT_VIEWS[key] || basicCard(key);
+  const P = PARTS[key] || {};
+  const hasAnim = !cfg.basic && !cfg.wide;
+  panel.innerHTML = `
+    <div class="mz-panel-head">
       <div><span class="ute-label">${cfg.kind || 'Component'}</span><h2>${cfg.title}</h2></div>
-      <button class="ute-cview-close" type="button" data-cv-close>Close ✕</button>
+      <div class="mz-panel-actions">
+        ${hasAnim ? `<button type="button" class="mz-anim-btn" data-anim aria-expanded="${animOpen}">${animOpen ? 'Hide animation' : '▶ See animation'}</button>` : ''}
+        <button class="ute-cview-close" type="button" data-cv-close aria-label="Close the component panel">✕</button>
+      </div>
     </div>
-    <div class="mz-cv-duo ${cfg.basic ? 'is-basic' : ''}">
-      ${cfg.basic ? '' : `<div class="mz-cv-model"><div class="mz-cv-tag">3D model · drag to rotate, tap a part to see inside</div>${viewer3dHTML(false)}</div>`}
+    ${hasAnim ? `<div class="mz-anim" id="mz-anim" ${animOpen ? '' : 'hidden'}>
       <div class="ute-cview-stage ${cfg.hold ? '' : 'no-action'}" id="ute-cview-stage">${cfg.html()}${cfg.hold ? holdHTML(cfg.hold) : ''}</div>
-      ${cfg.basic ? `<div class="mz-cv-model mz-cv-info"><div class="mz-cv-tag">What it does</div><p class="mz-cv-lead">${P.desc || ''}</p>${P.notes ? `<p><b>Workshop note.</b> ${P.notes}</p>` : ''}<div class="mz-cv-tag" style="margin-top:18px">Course plates</div>${platesHTML(S.selected_part)}</div>` : ''}
-    </div>
-    ${cfg.under ? cfg.under() : ''}
-    ${!cfg.basic && cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
-    <div class="mz-cv-banner">
-      ${cfg.basic ? '' : `<div class="mz-cv-banner-plates"><span class="mz-cv-tag">Course plates</span>${platesHTML(S.selected_part)}</div>`}
-      <div class="mz-cv-banner-links"><span class="mz-cv-tag">Go deeper</span>${deeperHTML(S.selected_part)}</div>
+      ${cfg.under ? cfg.under() : ''}
+      ${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
+    </div>` : ''}
+    <div class="mz-panel-model">${cfg.basic ? '' : ''}${viewer3dHTML(false)}</div>
+    ${cfg.basic ? `<p class="mz-panel-lead">${P.desc || ''}</p>` : ''}
+  `;
+  slot.innerHTML = `
+    ${cfg.wide ? `<div class="ute-cview-stage no-action mz-wide-stage" id="ute-cview-stage">${cfg.html()}</div>${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}` : ''}
+    <div class="mz-cv-below">
+      ${cfg.graphs ? `<div class="mz-cv-graphs">${cfg.graphs()}</div>` : ''}
+      <div class="mz-cv-banner">
+        <div class="mz-cv-banner-info"><span class="mz-cv-tag">About this part</span><p>${P.desc || ''}</p>${P.notes ? `<p><b>Workshop note.</b> ${P.notes}</p>` : ''}</div>
+        <div class="mz-cv-banner-plates"><span class="mz-cv-tag">Related diagrams</span>${platesHTML(key)}</div>
+        <div class="mz-cv-banner-links"><span class="mz-cv-tag">Learn more</span>${deeperHTML(key)}</div>
+      </div>
     </div>
   `;
   S._activeCfg = cfg;
   if (cfg.mount) cfg.mount();
-  mountAssetsPanel(S.selected_part);
-  if (cfg.hold) wireHold($('.ute-hold', slot), cfg.hold.flag);
-  slot.querySelector('[data-cv-close]').addEventListener('click', () => {
-    selectPart(null);
-    const ov = $('.ute-overview');
-    if (ov && ov.getBoundingClientRect().bottom < 80) ov.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (cfg.graphsMount) cfg.graphsMount();
+  mountAssetsPanel(key);
+  if (cfg.hold) wireHold($('.ute-hold', panel), cfg.hold.flag);
+  const ab = panel.querySelector('[data-anim]');
+  if (ab) ab.addEventListener('click', () => {
+    animOpen = !animOpen;
+    try { localStorage.setItem('mz-anim-open', animOpen ? '1' : '0'); } catch (e) { /* noop */ }
+    $('#mz-anim').hidden = !animOpen;
+    ab.setAttribute('aria-expanded', String(animOpen));
+    ab.textContent = animOpen ? 'Hide animation' : '▶ See animation';
   });
+  panel.querySelector('[data-cv-close]').addEventListener('click', () => selectPart(null));
 }
 
 function holdHTML(h) {
@@ -1319,10 +1368,11 @@ COMPONENT_VIEWS.wiring = {
 };
 
 /* ---------- Wiring Lab (petrol bikes): the course's interactive harness and circuits ---------- */
-const WIRING_HV = COMPONENT_VIEWS.wiring;
+const WIRING_HV = Object.assign(COMPONENT_VIEWS.wiring, { wide: true });
 const WL_TABS = [['harness', 'WR01 Main harness'], ['starting', 'F23 Starting'], ['charging', 'F21 Charging'], ['ignition', 'F22 Ignition']];
 function wiringLab(title, tab) {
   return {
+    wide: true,
     title,
     kind: 'Electrical · Wiring Lab',
     html: () => `${statusHTML('Wiring Lab', 'Trace the harness, work the switches and trigger faults to see exactly which wire goes dead.', tab.toUpperCase())}

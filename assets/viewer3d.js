@@ -222,7 +222,8 @@ export function createViewer(el, opts = {}) {
     const box = new THREE.Box3();
     ms.forEach((m) => box.expandByObject(m));
     const c = box.getCenter(new THREE.Vector3());
-    const d = Math.max(box.getSize(new THREE.Vector3()).length() * 2.6, 0.18);
+    const whole = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()).length();
+    const d = Math.max(box.getSize(new THREE.Vector3()).length() * 3.2, whole * 0.55);
     const dir = camera.position.clone().sub(controls.target).normalize();
     const toT = c, toP = c.clone().add(dir.multiplyScalar(d));
     if (!smooth) { controls.target.copy(toT); camera.position.copy(toP); controls.update(); dirty = true; loop(); return; }

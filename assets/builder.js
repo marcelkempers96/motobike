@@ -785,9 +785,16 @@ function setView(v, instant) {
   const dir = new THREE.Vector3(...dirs[v]).normalize();
   const r = size.length() / 2;
   const fov = THREE.MathUtils.degToRad(camera.fov);
-  const fitH = r / Math.sin(fov / 2);
-  const fitW = r / Math.sin(Math.atan(Math.tan(fov / 2) * camera.aspect));
-  const d = Math.max(fitH, fitW) * (v === 'side' ? 0.74 : v === 'top' ? 0.8 : 0.76);
+  const tv = Math.tan(fov / 2), th = tv * camera.aspect;
+  let d;
+  if (v === 'side' || v === 'front') {
+    // exact fit of the box face seen from that side, with a margin
+    const w = (v === 'side' ? size.x : size.z) / 2, h = size.y / 2, depth = (v === 'side' ? size.z : size.x) / 2;
+    d = Math.max(h / tv, w / th) * 1.12 + depth;
+  } else {
+    const fitH = r / Math.sin(fov / 2), fitW = r / Math.sin(Math.atan(th));
+    d = Math.max(fitH, fitW) * (camera.aspect < 1 ? 0.86 : v === 'top' ? 0.8 : 0.76);
+  }
   const toPos = c.clone().add(dir.multiplyScalar(d));
   const fromPos = camera.position.clone(), fromT = controls.target.clone();
   key.target.position.copy(c); key.position.copy(c).add(new THREE.Vector3(1.4, 4.2, 2.4));
