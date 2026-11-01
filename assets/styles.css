@@ -811,3 +811,34 @@ body { font-size: 14px; font-variant-numeric: tabular-nums; }
 .mz-asset-grid .ute-figure-cap { flex: 1; }
 .mz-inline-logo { width: 100%; height: 100%; max-height: 120px; }
 .ute-brand-word { font-family: "IBM Plex Sans", var(--sans); }
+
+/* ---------- Course images: fit comfortably on the page ---------- */
+.mz-chapter .prose > .ute-figure, .mz-chapter .prose > figure { max-width: 760px; margin-left: auto; margin-right: auto; }
+.mz-chapter .mz-learn-plate .ute-figure-stage, .mz-chapter .mz-learn-photo .ute-figure-stage { padding: 12px; display: flex; justify-content: center; background: #FFFFFF; }
+.mz-chapter .mz-learn-plate img, .mz-chapter .ute-figure-img { max-height: 380px; width: auto; max-width: 100%; object-fit: contain; }
+.mz-chapter .mz-learn-photo img { max-height: 380px; width: auto; max-width: 100%; margin: 0 auto; }
+.mz-chapter .mz-learn-photo .ute-figure-stage { background: #FFFFFF; }
+.mz-chapter .mz-learn-model .mz3d-part { height: 320px; }
+.mz-chapter .ute-figure[data-fig] .ute-figure-stage svg { max-height: 340px; }
+.mz-chapter .mz-wiring-card img { max-height: 340px; }
+.mz-learn-plate { cursor: zoom-in; }
+
+/* ---------- No beige: plain white surfaces ---------- */
+.ute-hero, .ute-footer, .mz-cv-banner, .ute-figure-cap, .ute-q-explain, .ute-findings .cell, .ute-dash .cell, .ute-score > div { background: #FFFFFF; }
+.ute-figure-cap { border-top: 1px solid #EBEBE8; }
+.ute-opt { background: #FFFFFF; }
+.ute-toc a:hover, .mz-lib-list button:hover { background: #F5F5F4; }
+
+/* ---------- Learn on phones: contents on top, page below ---------- */
+@media (max-width: 960px) {
+  .ute-doc { display: flex; flex-direction: column; }
+  .ute-toc { position: static; max-height: 46vh; overflow: auto; padding: 14px 16px; border-bottom: 1px solid #DADAD6; }
+  .ute-toc > ol { display: block; }
+  .ute-toc > ol > li > a { border: 0; border-left: 2px solid transparent; padding: 6px 6px; }
+  .ute-toc > ol > li > a.is-on { border-left-color: var(--warm); }
+  .ute-toc-sub { display: block !important; margin: 0 0 6px 18px !important; }
+  .ute-toc-sub a { border: 0 !important; padding: 5px 8px !important; }
+  .ute-toc-sub a.is-on { color: var(--warm); font-weight: 600; }
+  .ute-toc-foot { display: none; }
+  .mz-chapter .mz-learn-plate img, .mz-chapter .ute-figure-img, .mz-chapter .mz-learn-photo img { max-height: 260px; }
+}

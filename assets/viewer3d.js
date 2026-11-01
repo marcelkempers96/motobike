@@ -27,7 +27,7 @@ export function webglOK() {
 /* Rendered stills (assets/renders/*.webp) — bikes use their side view */
 export const renderFor = (base, name) => `${base}${name.startsWith('bike_') ? name + '_side' : name}.webp`;
 
-export const humanize = (s) => s.replace(/_/g, ' ').replace(/\b12v\b/i, '12 V').replace(/\bhv\b/i, 'HV').replace(/\bdc dc\b/i, 'DC-DC').replace(/\btft\b/i, 'TFT').replace(/\bcdi\b/i, 'CDI').replace(/\blv\b/i, 'LV').replace(/^./, (c) => c.toUpperCase());
+export const humanize = (s) => s.replace(/(\d{2,}|\.\d+)(?=$|\s|_)/g, '').replace(/_/g, ' ').replace(/\s+/g, ' ').trim().replace(/\b12v\b/i, '12 V').replace(/\bhv\b/i, 'HV').replace(/\bdc dc\b/i, 'DC-DC').replace(/\btft\b/i, 'TFT').replace(/\bcdi\b/i, 'CDI').replace(/\blv\b/i, 'LV').replace(/^./, (c) => c.toUpperCase());
 
 function loadGLB(url) {
   if (!cache.has(url)) {

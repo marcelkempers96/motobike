@@ -51,7 +51,7 @@ function home() {
 function glossaryHTML(mod) {
   const g = GLOSSARY['m' + (MODULES.indexOf(mod) + 1)];
   if (!g) return '';
-  return `<article class="ute-chapter mz-chapter" id="${mod.id}-glossary">
+  return `<article class="ute-chapter mz-chapter" data-chapter="${mod.id}-glossary">
     <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}</span><span class="ute-label">Reference</span></div>
     <h2>Glossary</h2>
     <input class="mz-gloss-filter" type="search" placeholder="Filter ${g.terms.length} terms…" aria-label="Filter glossary terms">
@@ -148,6 +148,10 @@ function renderModuleIndex(mod) {
   window.scrollTo(0, 0);
 }
 
+function tocToCurrent() {
+  requestAnimationFrame(() => { const a = toc.querySelector('.ute-toc-sub a.is-on') || toc.querySelector('a.is-on'); if (a) toc.scrollTop = Math.max(0, a.offsetTop - toc.offsetTop - 40); });
+}
+
 function renderPage(p) {
   const { mod, chap } = p;
   const i = FLAT.indexOf(p);
@@ -167,7 +171,7 @@ function renderPage(p) {
       <div class="mz-page">
         ${crumbs(mod, `Chapter ${mod.num}.${ci + 1}`)}
         ${progress}
-        <article class="ute-chapter mz-chapter" id="${chap.id}">
+        <article class="ute-chapter mz-chapter" data-chapter="${chap.id}">
           <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}.${ci + 1}</span><span class="ute-label">${mod.title} · chapter ${ci + 1} of ${mod.chapters.length}</span></div>
           <h2>${chap.title}</h2>
           ${chap.lead ? `<p class="lead">${chap.lead}</p>` : ''}
@@ -178,6 +182,7 @@ function renderPage(p) {
       </div>`;
   }
   wireContent();
+  tocToCurrent();
   window.scrollTo(0, 0);
 }
 
