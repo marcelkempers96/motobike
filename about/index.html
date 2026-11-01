@@ -85,6 +85,11 @@
   .mz-story-main img { aspect-ratio: 4 / 3; object-position: center 60%; }
   .mz-story-credit { font-size: 13px; color: var(--mute); margin-top: 10px; }
   @media (max-width: 860px) { .mz-story-grid { grid-template-columns: 1fr; } }
+  .mz-fundi-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+  .mz-fundi .prose p { font-size: 16.5px; line-height: 1.7; }
+  .mz-fundi-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mz-fundi-imgs img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #F6F6F6; border: 1px solid var(--line); display: block; }
+  @media (max-width: 860px) { .mz-fundi-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -119,6 +124,25 @@
       </div>
     </div>
     <p class="mz-story-credit">Photographs: Transitions Lab collection, Kenya.</p>
+  </section>
+
+  <section class="ute-chapter mz-fundi" id="fundi">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">◆</span><span class="ute-label">Programme · coming soon</span></div>
+    <h2>Training for fundis: the electrics of the electric motorcycle</h2>
+    <div class="mz-fundi-grid">
+      <div class="prose">
+        <p>In much of East Africa the people who keep motorcycles running are <strong>fundis</strong>: informal mechanics who learned the trade by hand, at the roadside and in small workshops. They are highly skilled with engines, clutches, chains and brakes, but electric motorcycles bring something new: motors, controllers, battery packs, chargers and the electronics that tie them together. Few fundis have had any way to train on these.</p>
+        <p>Moto Zero is the first step towards that training. The course, the 3D models and the <a href="../wiring/">Wiring Lab</a> are free to use today. Next come practical modules on electrical components, starting with the motor, the controller and the battery: how they work, how to test them safely and how to repair what can be repaired.</p>
+        <p>The idea behind the programme, and the people it is for, are described in the Transitions Lab article <a href="https://www.transitionslab.org/insight-hands-never-still" target="_blank" rel="noopener"><em>Hands never still</em></a>.</p>
+        <div class="ute-btnrow"><a class="ute-btn is-primary" href="https://www.transitionslab.org/insight-hands-never-still" target="_blank" rel="noopener">Read the article ↗</a><a class="ute-btn" href="../wiring/">Try the Wiring Lab</a><a class="ute-btn" href="../contact/">Work with us on it</a></div>
+      </div>
+      <div class="mz-fundi-imgs">
+        <img src="../assets/renders/motor.webp" alt="Electric motor, 3D render" loading="lazy">
+        <img src="../assets/renders/controller.webp" alt="Motor controller, 3D render" loading="lazy">
+        <img src="../assets/renders/battery_hv.webp" alt="High-voltage battery pack, 3D render" loading="lazy">
+        <img src="../assets/renders/wiring_harness.webp" alt="Wiring harness, 3D render" loading="lazy">
+      </div>
+    </div>
   </section>
 
   <section class="ute-chapter mz-about-video">
