@@ -1028,7 +1028,7 @@ function syncEngine() {
   $('bb-stroke-o').innerHTML = `${fmt(cfg.stroke, 1)} mm <small>${fmt(cc)} cc</small>`;
   $('bb-cr-o').innerHTML = `${fmt(cfg.cr, 1)} : 1${cfg.cr === B.cr ? ' <small>stock</small>' : ''}`;
   $('bb-pre').querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.b === cfg.bore && +b.dataset.s === cfg.stroke)));
-  $('bb-ov').href = `../?mode=${bikeId}&part=engine&bore=${cfg.bore}&stroke=${cfg.stroke}&cr=${cfg.cr}`;
+  $('bb-ov').href = `../overview/?mode=${bikeId}&part=engine&bore=${cfg.bore}&stroke=${cfg.stroke}&cr=${cfg.cr}`;
 }
 let recorded = false;
 function userChange() {
