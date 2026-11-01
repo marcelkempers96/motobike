@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>if(/[?&]embed=1/.test(location.search))document.documentElement.classList.add('embed');</script>
+<script>if(/[?&]embed=1/.test(location.search))document.documentElement.classList.add('embed');if(/[?&]mode=elec/.test(location.search))document.documentElement.classList.add('elec');</script>
 <style>
 html.embed header.top,html.embed .mz-site{display:none}
 html.embed body{background:transparent}
@@ -84,6 +84,17 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 .waves.on path:nth-child(3){animation-delay:.4s}
 @keyframes wave{0%{opacity:.95}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.waves.on path{animation:none;opacity:.8}}
+/* mouse-wheel throttle badge */
+.wheelbadge{position:absolute;right:3%;top:58%;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity .25s ease;background:rgba(30,43,94,.92);color:#fff;border-radius:10px;padding:8px 12px;font:600 13px/1.25 var(--mono);text-align:center;min-width:120px}
+.wheelbadge.on{opacity:1}
+.wheelbadge b{display:block;font-size:24px}
+.wheelbadge i{display:block;height:5px;margin-top:6px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden}
+.wheelbadge i span{display:block;height:100%;background:var(--accent);width:0}
+.wheelhint{position:absolute;right:12px;bottom:10px;pointer-events:none;font:500 11px/1.2 var(--mono);letter-spacing:.04em;color:var(--muted);background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:6px;padding:4px 7px}
+@media (hover:none){.wheelhint{display:none}}
+/* electric mode: no starter, choke, clutch or gearbox */
+html.elec .deck button.na{opacity:.4;cursor:not-allowed}
+html.elec .deck button.na:hover{background:#F3F2EE}
 @media (max-width:1100px){
   .layout{grid-template-columns:minmax(0,1fr)}
   .panel{position:static;max-height:none}
@@ -100,7 +111,7 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 </style>
 </head>
 <body>
-<nav class="mz-site" aria-label="Moto Zero"><a href="../../"><img src="../brand-mark.svg" alt="">Moto Zero</a><a href="../../">Lab</a><a href="../../learn/">Learn</a><a href="../../quiz/">Quiz</a><a href="../../models/">Models</a></nav>
+<nav class="mz-site" aria-label="Moto Zero"><a href="../../"><img src="../brand-mark.svg" alt="">Moto Zero</a><a href="../../">Lab</a><a href="../../learn/">Learn</a><a href="../../quiz/">Quiz</a><a href="../../build/">Build</a><a href="../../models/">Models</a></nav>
 <header class="top wrap">
   <p class="eyebrow">Moto Zero &middot; Module 01 &middot; Controls</p>
   <h1>Motorcycle controls</h1>
@@ -147,9 +158,9 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 
   <aside class="panel" aria-label="What each control does">
     <h2>The controls</h2>
-    <p class="hint">Hover or focus an entry to find the control, or hover a control to find its entry.</p>
+    <p class="hint" id="panelHint">Hover or focus an entry to find the control, or hover a control to find its entry.</p>
     <ol id="entries"></ol>
-    <p class="keys">Keyboard: <kbd>K</kbd> key, <kbd>X</kbd> stop switch, <kbd>S</kbd> starter, <kbd>C</kbd> clutch (hold), <kbd>T</kbd> throttle (hold), <kbd>F</kbd> front brake, <kbd>R</kbd> rear brake, <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> gear, <kbd>Q</kbd>/<kbd>E</kbd> indicators, <kbd>H</kbd> horn, <kbd>B</kbd> beam, <kbd>V</kbd> choke.</p>
+    <p class="keys">Keyboard: <kbd>K</kbd> key, <kbd>X</kbd> stop switch, <kbd>S</kbd> starter, <kbd>C</kbd> clutch (hold), <kbd>T</kbd> throttle (hold), <kbd>F</kbd> front brake, <kbd>R</kbd> rear brake, <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> gear, <kbd>Q</kbd>/<kbd>E</kbd> indicators, <kbd>H</kbd> horn, <kbd>B</kbd> beam, <kbd>V</kbd> choke. Mouse wheel over the cockpit: throttle.</p>
     <div class="panel-foot"><span class="foot">125 cc single, 5-speed. Transitions Lab, CC BY-SA 4.0</span><button type="button" class="reset" id="reset">Reset</button></div>
   </aside>
 </main>
@@ -633,6 +644,9 @@ const GEARS=['1','N','2','3','4','5'];
 const RATIO={'1':2.77,'2':1.88,'3':1.40,'4':1.13,'5':0.96};
 const PRIMARY=3.35, FINAL=2.93, CIRC=1.95, RW=CIRC/(2*Math.PI), MASS=150, REDLINE=10000;
 const ODO0=12483.6;
+/* Electric mode (?mode=elec): single-speed drive, no starter, choke, clutch or gearbox. */
+const ELEC=document.documentElement.classList.contains('elec');
+const GE=6.5, TMOT=60, PMOT=30000;   // reduction, peak motor torque (N m), peak power (W)
 function overall(g){ return g==='N'?0:RATIO[g]*PRIMARY*FINAL; }
 
 let S;
@@ -640,7 +654,8 @@ function freshState(){
   return { key:false, kill:true, running:false, cranking:false, crankT:0, crankNeed:.6, grace:0,
     rpm:0, v:0, gi:0, clutchIn:false, clutchLatched:false, clutchP:0, frontIn:false, frontP:0, rearIn:false, rearP:0,
     gripThr:0, holdThr:0, keyThr:false, thr:0, cut:false, ind:0, beam:false, horn:false, choke:false, temp:20,
-    dist:ODO0, dispRpm:0, dispV:0, gearAnim:0, warmTold:false, stalledMsgT:0 };
+    dist:ODO0, dispRpm:0, dispV:0, gearAnim:0, warmTold:false, stalledMsgT:0,
+    extThr:0, Te:0, Pw:0, elec:ELEC };
 }
 S=freshState();
 
@@ -654,6 +669,11 @@ let msgTimer=0;
 function say(t,warn){ if(!t) return; msgEl.textContent=t; msgBar.classList.toggle('warn',!!warn); clearTimeout(msgTimer); msgTimer=setTimeout(()=>{msgBar.classList.remove('warn'); msgEl.textContent=statusLine();},warn?4200:5500); }
 function statusLine(){
   if(!S.key) return 'Ignition OFF. Turn the key ON to begin.';
+  if(ELEC){
+    if(!S.kill) return 'Stop switch at OFF: set it to RUN and the motor is ready.';
+    if(S.v<.3) return 'READY. Twist the throttle (hold T or scroll up over the cockpit) to ride off. No clutch, no gears.';
+    return 'Riding on the electric motor, single-speed. Close the throttle for regenerative braking.';
+  }
   if(S.cranking) return 'Cranking on the starter motor...';
   if(!S.running) return S.kill? (GEARS[S.gi]==='N'||S.clutchP>.7?'Ready: press the starter button.':'Select neutral or pull the clutch, then press the starter.') : 'Stop switch at OFF: set it to RUN to start.';
   if(GEARS[S.gi]==='N') return 'Engine idling in neutral. Pull the clutch and shift down for first gear.';
@@ -704,7 +724,7 @@ ol.addEventListener('click',e=>{
 function setKey(on){
   S.key=on;
   if(!on){ if(S.running) say('Key OFF: the ignition is cut and the engine stops.'); S.running=false; S.cranking=false; }
-  else say(S.running?'':'Ignition ON: the oil and neutral lamps show the system is live.');
+  else say(S.running?'':ELEC?'Ignition ON: the dash is live and the motor is READY while the stop switch is at RUN.':'Ignition ON: the oil and neutral lamps show the system is live.');
   if(on && !S.running) setTimeout(()=>{ if(!msgBar.classList.contains('warn')) msgEl.textContent=statusLine(); },1800);
 }
 function setKill(run){
@@ -714,6 +734,7 @@ function setKill(run){
   else say(statusLine());
 }
 function startPress(){
+  if(ELEC) return say(S.key&&S.kill?'No starter needed: with the key ON and the stop switch at RUN the motor is already READY.':'An electric bike has no starter: turn the key ON and set the stop switch to RUN.',true);
   if(!S.key) return say("Nothing happens: the ignition key is OFF.",true);
   if(!S.kill) return say('Starter disabled: the engine stop switch is at OFF. Set it to RUN.',true);
   if(GEARS[S.gi]!=='N' && S.clutchP<.7) return say('Starter interlock: select neutral (green N) or pull the clutch lever first.',true);
@@ -724,6 +745,7 @@ function startPress(){
   say(S.temp<50 && !S.choke ? 'Cranking a cold engine without the choke takes longer and it will idle roughly.' : 'Cranking...');
 }
 function shift(dir){
+  if(ELEC) return say('This electric bike is single-speed: the motor pulls from 0 r/min, so there is no gearbox to shift.',true);
   const ni=Math.max(0,Math.min(5,S.gi+dir));
   if(ni===S.gi) return say(dir>0?'Already in top gear (5th).':'Already in first gear: there is nothing below 1st.',true);
   if(S.running && S.clutchP<.7) { kickLever(dir); return say('Pull the clutch lever in before changing gear.',true); }
@@ -735,11 +757,12 @@ function shift(dir){
 }
 function kickLever(dir){ S.gearAnim = dir>0? -1 : 1; }
 function clutchClick(){ // toggle
+  if(ELEC){ say('No clutch on this electric bike: the motor is always connected to the rear wheel.',true); return; }
   if(S.clutchIn){ S.clutchIn=false; S.clutchLatched=false; } else { S.clutchIn=true; S.clutchLatched=true; }
 }
 function setInd(side){ S.ind = (S.ind===side)?0:side; if(!S.key && S.ind) say('Indicators need the ignition ON.',true); }
 function setBeam(){ S.beam=!S.beam; if(!S.key) say('Headlamp needs the ignition ON.',true); }
-function setChoke(){ S.choke=!S.choke; if(S.choke && S.temp>=50) say('The engine is already warm: the choke will only raise the idle and waste fuel.',true); }
+function setChoke(){ if(ELEC) return say('No choke: an electric motor needs no rich mixture to start.',true); S.choke=!S.choke; if(S.choke && S.temp>=50) say('The engine is already warm: the choke will only raise the idle and waste fuel.',true); }
 function setHorn(on){ S.horn=on; if(on && !S.key) say('The horn needs the ignition ON.',true); }
 
 function act(a){
@@ -761,7 +784,7 @@ function hold(name,on){
   else if(name==='rear') S.rearIn=on;
   else if(name==='horn') setHorn(on);
   else if(name==='starter'){ if(on) startPress(); }
-  else if(name==='clutchHold'){ if(on){ S.clutchIn=true; } else if(!S.clutchLatched) S.clutchIn=false; }
+  else if(name==='clutchHold'){ if(ELEC){ if(on) clutchClick(); } else if(on){ S.clutchIn=true; } else if(!S.clutchLatched) S.clutchIn=false; }
   render(true);
 }
 
@@ -785,7 +808,7 @@ bindHold($('starter'),'starter'); bindHold($('horn'),'horn'); bindHold($('frontH
 // clutch on the artwork: press and hold pulls in; a quick click latches it in until the next click
 (function(){
   const el=$('clutchHit'); let t0=0, down=false, wasLatched=false;
-  el.addEventListener('pointerdown',e=>{ if(e.button>0) return; e.preventDefault(); down=true; t0=performance.now(); try{el.setPointerCapture(e.pointerId);}catch(_){}
+  el.addEventListener('pointerdown',e=>{ if(e.button>0) return; e.preventDefault(); if(ELEC){ clutchClick(); return; } down=true; t0=performance.now(); try{el.setPointerCapture(e.pointerId);}catch(_){}
     wasLatched=S.clutchLatched; if(wasLatched){ S.clutchLatched=false; S.clutchIn=false; } else S.clutchIn=true; render(true); });
   const up=()=>{ if(!down) return; down=false; if(wasLatched) return; if(performance.now()-t0<350){ S.clutchLatched=true; } else { S.clutchIn=false; } render(true); };
   el.addEventListener('pointerup',up); el.addEventListener('pointercancel',up); el.addEventListener('lostpointercapture',up);
@@ -849,8 +872,9 @@ function step(dt){
   S.rearP  += ((S.rearIn?1:0)-S.rearP)*Math.min(1,dt/0.06);
   // throttle
   const kt = S.keyThr ? Math.min(1,(S.thrKeyT=(S.thrKeyT||0)+dt)/0.8) : (S.thrKeyT=0);
-  const target=Math.max(S.gripThr,S.holdThr,kt);
+  const target=Math.max(S.gripThr,S.holdThr,kt,S.extThr||0);
   S.thr += (target-S.thr)*Math.min(1,dt/0.05);
+  if(ELEC){ stepElec(dt); return; }
   const e=Math.max(0,Math.min(1,(0.78-S.clutchP)/0.58));   // clutch engagement
   const g=GEARS[S.gi], G=overall(g);
   // engine torque
@@ -885,6 +909,7 @@ function step(dt){
   if(S.v>0.02){ S.v += (Fdrive-roll-drag-Fb*Math.min(1,S.v/0.3+0.2))/MASS*dt; if(S.v<0) S.v=0; }
   else { const net=Fdrive-roll-Fb; S.v = net>0 ? S.v+net/MASS*dt : 0; }
   S.dist += S.v*dt/1000;
+  S.Te=Te; S.Pw=Math.max(0,Tcl*S.rpm*2*Math.PI/60);
   // stall
   if(S.running && S.grace<=0 && S.rpm<560){
     S.running=false; S.cut=false;
@@ -892,6 +917,26 @@ function step(dt){
       say(G>0&&e>0 ? 'Stalled: the engine was dragged below idle in gear. Pull the clutch before stopping, and give more throttle while letting it out.' : 'Stalled: the idle was too low. Use the choke on a cold engine.',true); }
   }
   if(S.running && S.choke && S.temp>=58 && !S.warmTold){ S.warmTold=true; say('The engine is warm: switch the choke off to bring the idle down to about 1,400 r/min.'); }
+}
+
+function stepElec(dt){
+  const ready=S.key&&S.kill;
+  if(ready!==S.running){ S.running=ready; if(ready) say(statusLine()); }
+  S.cranking=false;
+  const w=S.v/RW*GE;                                  // motor shaft, rad/s
+  let T=0;
+  if(ready) T=S.thr*Math.min(TMOT, PMOT/Math.max(1,w));
+  const regen = ready && S.thr<0.02 && S.v>1.5 ? 0.06*MASS*9.81 : 0;
+  const g9=9.81;
+  const Fdrive=T*GE*0.94/RW;
+  const Fb = S.frontP*0.78*MASS*g9 + S.rearP*0.36*MASS*g9 + regen;
+  const roll = 0.015*MASS*g9, drag=0.5*1.2*0.55*S.v*S.v;
+  if(S.v>0.02){ S.v += (Fdrive-roll-drag-Fb*Math.min(1,S.v/0.3+0.2))/MASS*dt; if(S.v<0) S.v=0; }
+  else { const net=Fdrive-roll-Fb; S.v = net>0 ? S.v+net/MASS*dt : 0; }
+  S.rpm=S.v/RW*GE*60/(2*Math.PI);
+  S.dist += S.v*dt/1000;
+  S.Te=T; S.Pw=Math.max(0,T*w);
+  S.temp += ((20+45*S.Pw/PMOT)-S.temp)*0.05*dt;
 }
 
 /* ---------- render ---------- */
@@ -940,17 +985,18 @@ function render(force){
   const blink = (now % 667) < 333;
   setLamp('lampL',S.key&&S.ind===-1&&blink);
   setLamp('lampR',S.key&&S.ind===1&&blink);
-  setLamp('lampN',S.key&&GEARS[S.gi]==='N');
+  setLamp('lampN',!ELEC&&S.key&&GEARS[S.gi]==='N');
   setLamp('lampHB',S.key&&S.beam);
-  setLamp('lampOil',S.key&&!(S.running&&S.rpm>700));
+  setLamp('lampOil',!ELEC&&S.key&&!(S.running&&S.rpm>700));
   setLamp('lampBrk',S.key&&(S.frontIn||S.rearIn));
   // aria + deck state
-  const g=GEARS[S.gi];
+  const g=ELEC?'D':GEARS[S.gi];
   $('gearTxt').textContent=g;
   setAttr($('ignition'),'aria-checked',S.key); setAttr($('kill'),'aria-checked',S.kill); setAttr($('beam'),'aria-checked',S.beam); setAttr($('choke'),'aria-checked',S.choke);
   setAttr($('indL'),'aria-pressed',S.ind===-1); setAttr($('indR'),'aria-pressed',S.ind===1); setAttr($('clutchHit'),'aria-pressed',S.clutchIn);
   const pct=Math.round(S.thr*100);
-  if(String(pct)!==lastAria){ lastAria=String(pct); setAttr($('throttleHit'),'aria-valuenow',pct); setAttr($('throttleHit'),'aria-valuetext',pct+' percent open'); thrOut.textContent=Math.round(Math.max(S.thr,S.holdThr)*100)+'%'; }
+  if(String(pct)!==lastAria){ lastAria=String(pct); setAttr($('throttleHit'),'aria-valuenow',pct); setAttr($('throttleHit'),'aria-valuetext',pct+' percent open'); }
+  const shown=Math.round(Math.max(S.thr,S.holdThr)*100)+'%'; if(thrOut.textContent!==shown) thrOut.textContent=shown;
   document.querySelectorAll('#deck [data-act]').forEach(b=>{
     const a=b.dataset.act;
     if(a==='ignition'){ setAttr(b,'aria-checked',S.key); b.textContent=S.key?'Key ON':'Key OFF'; }
@@ -962,11 +1008,11 @@ function render(force){
     else if(a==='clutch'){ setAttr(b,'aria-pressed',S.clutchIn); b.textContent=S.clutchIn?'Clutch IN':'Clutch'; }
   });
   // readouts
-  $('roEng').textContent = S.cranking?'CRANK':S.running?'RUN':'OFF';
+  $('roEng').textContent = ELEC?(S.running?'READY':'OFF'):S.cranking?'CRANK':S.running?'RUN':'OFF';
   $('roRpm').textContent = Math.round(S.key?Math.max(0,S.rpm):0).toLocaleString('en-US');
   $('roSpd').textContent = (S.v*3.6).toFixed(0);
   $('roGear').textContent = g;
-  $('roClu').textContent = S.clutchP>.75?'IN':S.clutchP>.2?'SLIP':'OUT';
+  $('roClu').textContent = ELEC?'NONE':S.clutchP>.75?'IN':S.clutchP>.2?'SLIP':'OUT';
   $('roTmp').textContent = Math.round(S.temp)+' °C';
   msgBar.classList.toggle('run',S.running);
 }
@@ -980,12 +1026,58 @@ function frame(t){
 render(true);
 requestAnimationFrame(t=>{ lastT=t; requestAnimationFrame(frame); });
 
-/* embedded in the Lab: hand Esc and ? back to the page */
-if(document.documentElement.classList.contains('embed')){
-  document.addEventListener('keydown',e=>{ if((e.key==='Escape'||e.key==='?')&&window.parent!==window) window.parent.postMessage({mz:'key',key:e.key},'*'); });
+/* electric mode: grey out what an electric bike does not have */
+if(ELEC){
+  document.querySelectorAll('#deck [data-hold="starter"],#deck [data-act="choke"],#deck [data-act="clutch"],#deck [data-act="up"],#deck [data-act="down"]').forEach(b=>{ b.classList.add('na'); b.setAttribute('aria-disabled','true'); b.title='Not on an electric bike'; });
+  $('roTmp').previousElementSibling.textContent='Motor temp';
+  $('roEng').previousElementSibling.textContent='Motor';
+  $('panelHint').textContent='Electric mode: key ON and stop switch at RUN make the bike READY. There is no starter, choke, clutch or gearbox; the throttle alone drives the motor. Hover an entry to find the control.';
+  say(statusLine());
 }
-/* test hook */
-window.__moto = { state:()=>S, buildSVG };
+
+/* mouse wheel over the cockpit art = throttle (wheel up opens, down closes) */
+(function(){
+  const badge=document.createElement('div'); badge.className='wheelbadge'; badge.setAttribute('aria-hidden','true');
+  badge.innerHTML='Throttle<b>0%</b><i><span></span></i>';
+  const hint=document.createElement('div'); hint.className='wheelhint'; hint.textContent='Scroll here: throttle';
+  art.appendChild(badge); art.appendChild(hint);
+  const bv=badge.querySelector('b'), bar=badge.querySelector('span');
+  let hideT=0;
+  function show(){ const p=Math.round(S.holdThr*100); bv.textContent=p+'%'; bar.style.width=p+'%'; badge.classList.add('on'); clearTimeout(hideT); hideT=setTimeout(()=>badge.classList.remove('on'),1400); }
+  art.addEventListener('wheel',e=>{
+    if(e.ctrlKey) return;                       // let pinch-zoom through
+    e.preventDefault();
+    let d=e.deltaY; if(e.deltaMode===1) d*=33; else if(e.deltaMode===2) d*=400;
+    d=Math.max(-120,Math.min(120,d));
+    setHoldThr(S.holdThr - d/600);
+    show();
+  },{passive:false});
+  window.__mzWheelShow=show;
+})();
+
+/* embedded in the Lab: hand page shortcuts back to the page */
+const EMBED=document.documentElement.classList.contains('embed');
+const COCKPIT=new Set(['k','x','s','c','t','f','r','h','v','b','q','e','ArrowUp','ArrowDown']);
+function post(m){ if(EMBED&&window.parent!==window) try{ window.parent.postMessage(Object.assign({mz:'key'},m),location.origin); }catch(_){} }
+if(EMBED){
+  document.addEventListener('keydown',e=>{
+    if(e.ctrlKey||e.metaKey||e.altKey||!e.isTrusted) return;
+    const k=e.key.length===1?e.key.toLowerCase():e.key;
+    if(COCKPIT.has(k)) { post({key:k,type:'down',held:true}); return; }
+    const tag=(e.target.tagName||'').toLowerCase();
+    if(e.key===' '&&(tag==='button'||tag==='input'||(e.target.closest&&e.target.closest('.ctl')))) return;
+    if(['Escape','?','/',' ','1','2','3','g'].includes(k)){ if(k===' '||k==='/') e.preventDefault(); post({key:e.key,type:'down',repeat:e.repeat}); }
+  });
+  document.addEventListener('keyup',e=>{ if(!e.isTrusted) return; const k=e.key.length===1?e.key.toLowerCase():e.key; if(COCKPIT.has(k)) post({key:k,type:'up'}); });
+}
+
+/* hooks for the Lab (same origin) */
+window.__moto = {
+  state:()=>S, buildSVG,
+  setExtThr:(v)=>{ S.extThr=Math.max(0,Math.min(1,+v||0)); },
+  releaseAll:()=>{ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; S.extThr=0; render(true); },
+  wheel:(dy)=>{ setHoldThr(S.holdThr - Math.max(-120,Math.min(120,dy))/600); if(window.__mzWheelShow) window.__mzWheelShow(); }
+};
 })();
 </script>
 </body>

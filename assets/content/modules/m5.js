@@ -211,6 +211,12 @@ export default {
           ]
         },
         {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Compare the <a href=\"../?mode=4t&view=diagram\">four-stroke</a> and <a href=\"../?mode=elec&view=diagram\">electric</a> course plates. Using plate F06 (Module 01), list every assembly from Engine (14) to Drive chain (22) and from Battery (27) to Regulator/rectifier (29), and write for each whether an electric component replaces it, it remains unchanged, or it disappears. For example, the throttle body and injector have no electric equivalent, the battery becomes the auxiliary 12 V battery, and the regulator/rectifier is replaced by the <a href=\"../?mode=elec&part=dc_dc\">DC-DC converter</a>."
+        },
+        {
           "type": "h3",
           "text": "Why pre-charge?"
         },
@@ -1428,6 +1434,12 @@ export default {
           "html": "One bike is a small load, but a swap station charging 40 packs at 1 kW draws 40 kW and needs a three-phase supply. Solar is easy because daily needs are small: <strong>E_PV = P_peak × H_peak × PR</strong>. A boda boda doing 120 km at 3.5 kWh/100 km needs about 4.2 kWh at the battery (4.8 kWh from the panels); 1.5 kWp × 5.0 h × 0.75 ≈ <strong>5.6 kWh/day</strong>, from four to five modules on 7–8 m²."
         },
         {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Set the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> to bore 52 mm and stroke 58 mm (close to a 52.4 × 57.8 mm 125 cc single) and confirm a displacement of about 123 cm³, then move the RPM slider to 7500 rpm. If this engine delivers 8 kW at 30 % thermal efficiency, it consumes fuel energy at about 27 kW. Compare that with the 1.2 kW drawn by the charger in the worked example above, and with a petrol pump delivering 30 L/min, which transfers fuel energy at about 16 MW (30 × 8.9 kWh per minute). Then open the <a href=\"../?mode=elec&part=charge_port\">charge port</a> and <a href=\"../?mode=elec&part=battery\">battery</a> in the Lab."
+        },
+        {
           "type": "check",
           "q": "m5-24"
         }
@@ -1605,6 +1617,113 @@ export default {
         {
           "type": "check",
           "q": "m5-30"
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 5.6.2: Testing motor phases and Hall sensors"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Isolate",
+              "html": "Follow the safe isolation steps above, then disconnect the three phase connectors and the Hall connector at the controller; record any heat discolouration or loose crimps."
+            },
+            {
+              "title": "Phase resistance",
+              "html": "Measure U-V, V-W and W-U with a milliohm meter or 10 A injection. Typical 20–200 mΩ (hub) or 5–30 mΩ (mid-drive); imbalance above <strong>5 %</strong> means a poor joint or winding damage, open means a broken phase."
+            },
+            {
+              "title": "Insulation",
+              "html": "Each phase to casing at 500 V with the Hall wires kept clear: below <strong>1 MΩ</strong> means moisture or failed winding insulation."
+            },
+            {
+              "title": "Hall states",
+              "html": "Supply 5 V and ground (with 1 kΩ pull-ups), turn the wheel slowly forward and record one electrical cycle: six valid states, one bit changing per step, never 000 or 111. If one is missing, check supply, wire continuity through the axle cable and water in the connector before condemning the sensor."
+            },
+            {
+              "title": "Back-EMF (optional)",
+              "html": "Spin the wheel steadily with phases open: three equal waveforms 120° apart on the oscilloscope."
+            },
+            {
+              "title": "Reconnect",
+              "html": "Run the controller’s Hall self-learning routine if a sensor or motor was replaced, then test on the stand."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Phases balanced within 5 %, none open, insulation above 1 MΩ, six valid Hall states in sequence, equal back-EMF."
+            }
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 5.6.3: Battery pack inspection and cell balance check"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Read the BMS",
+              "html": "After at least 30 minutes at rest, record SOC, SOH, pack and group voltages, temperatures, cycle count and stored faults."
+            },
+            {
+              "title": "Spread and sum",
+              "html": "Group spread at rest should be below <strong>20 mV</strong> (NMC) with no group below <strong>3.0 V</strong>. The sum of groups should match pack voltage within about 0.5 %; a mismatch points to a faulty channel or balance lead."
+            },
+            {
+              "title": "Inspect the enclosure",
+              "html": "Isolate, remove the pack as the maker specifies and look for cracks, dents, swelling, corrosion, water marks, damaged seals, burnt pins and a blocked vent."
+            },
+            {
+              "title": "Measure",
+              "html": "Terminal voltage against the BMS reading; insulation from each terminal to the enclosure above <strong>1 MΩ</strong>. Never open a sealed pack unless trained, authorised and permitted by the manufacturer."
+            },
+            {
+              "title": "Balance and recheck",
+              "html": "If the spread exceeds 20 mV, fully charge and leave on the charger for the balancing period, rest and recheck. A group that falls again within 48–72 hours, or any group below 3.0 V, condemns the pack."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "No damage or ingress, BMS and terminal voltages agree, spread below 20 mV after balancing, no group below 3.0 V, insulation above 1 MΩ, no critical stored faults."
+            }
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 5.6.4: Controller and throttle fault diagnosis"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Codes and live data first",
+              "html": "Record fault codes, throttle voltage, brake and side-stand switch states and Hall state before any physical test."
+            },
+            {
+              "title": "Throttle",
+              "html": "Back-probe with the wheel raised: 5.0 ± 0.25 V supply, ground within 0.1 V of controller B−, signal rising smoothly from about 0.8 V to 4.2 V."
+            },
+            {
+              "title": "Interlocks",
+              "html": "Each brake switch must change state with its lever, and the side-stand switch must allow drive only with the stand up."
+            },
+            {
+              "title": "Pre-charge",
+              "html": "At key-on the DC-link voltage must reach <strong>90–95 %</strong> of pack voltage before the contactor clicks."
+            },
+            {
+              "title": "Power stage",
+              "html": "Isolate, disconnect phases and battery, then diode-test each phase to B+ and B− in both directions: about 0.3–0.6 V one way and open the other. Near 0 V both ways is a shorted switch. Look for swollen capacitors, burnt odour, water at the glands and loose terminals."
+            },
+            {
+              "title": "Parameters and road test",
+              "html": "If the hardware tests good, check programmed limits, cut-off voltage and pole pairs against the maker’s values, repeat Hall learning, then road test while logging currents and temperatures."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Throttle in range and smooth, interlocks working, pre-charge within limits, no shorted or open switches, correct parameters, no codes after the road test."
+            }
+          ]
         },
         {
           "type": "h3",

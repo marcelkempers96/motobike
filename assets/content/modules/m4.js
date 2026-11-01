@@ -233,6 +233,12 @@ export default {
           "html": "The <strong>kickstart</strong> ratchet rides a helical spline: pressing the lever lets it engage the kick gear; at the end of the stroke the return spring turns the shaft back and a tab on the ratchet rides up the fixed stopper plate, pulling it clear."
         },
         {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and click the clutch cover hotspot: the clutch sits behind the right-hand crankcase cover, on the gearbox input shaft. Then open the <a href=\"../?mode=4t&part=engine\">engine</a>, set the RPM slider to 3000, 6000 and 9000 rpm and work out the clutch basket speed behind a 3.4:1 primary reduction (about 880, 1760 and 2650 rpm)."
+        },
+        {
           "type": "check",
           "q": "m4-04"
         }
@@ -425,6 +431,12 @@ export default {
           "tone": "warm",
           "title": "Order of diagnosis",
           "html": "Many shifting complaints are clutch complaints. Before splitting the crankcase, confirm the clutch fully releases, the oil is the right grade and level, and the external linkage moves freely."
+        },
+        {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Set the <a href=\"../?mode=4t&part=engine\">engine</a> to 7500 and then 9000 rpm and calculate the mean piston speed for the K-Light 125 stroke of 49.5 mm (12.4 and 14.9 m/s). Then open the <a href=\"../?mode=4t&part=chain\">chain and final drive</a>, hold REV and read engine speed, wheel speed and road speed together, and compare them with the road speeds in the table above to see how much of the speed range each gear covers."
         },
         {
           "type": "check",
@@ -636,6 +648,43 @@ export default {
         {
           "type": "check",
           "q": "m4-12"
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.3.2: CVT belt and roller inspection"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Open the case cold",
+              "html": "Remove the CVT cover, noting any intake duct, and vacuum out the belt dust (never compressed air)."
+            },
+            {
+              "title": "Strip the drive pulley",
+              "html": "Hold the variator with the holding tool, remove the nut and fixed half, slip the belt off and withdraw the movable half with boss, rollers and ramp plate kept together."
+            },
+            {
+              "title": "Measure the belt",
+              "html": "Measure the width across the top face at several points; a belt below the limit (typically about 1 mm under new) rides low in the drive pulley and costs top speed. Replace it if cracked across the cogs, glazed, frayed or oily."
+            },
+            {
+              "title": "Rollers, ramps and boss",
+              "html": "Measure each roller diameter and look for flat spots; replace rollers only as a set. Check the ramp faces for grooving and that the movable half slides on the boss without rocking; grease the boss bore only."
+            },
+            {
+              "title": "Driven pulley and clutch",
+              "html": "Check guide pins and torque cam slots, contra spring free length, clutch lining (replace below about 1.5–2 mm or the manual limit) and the bell for scoring or ovality."
+            },
+            {
+              "title": "Reassemble and test",
+              "html": "Clean both pulley faces with brake cleaner, fit the belt with its arrow forward, press the driven pulley open so the belt sits deep, torque the variator nut, turn the engine over to seat the belt and road test, noting acceleration rpm and top speed."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Belt above the width limit with no cracks or glazing, rollers round and equal, variator free, clutch lining and bell within limits, no slip or judder on take-off."
+            }
+          ]
         }
       ]
     },
@@ -955,6 +1004,47 @@ export default {
         {
           "type": "check",
           "q": "m4-18"
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.5.2: Fork oil change and seal replacement"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Strip the front end",
+              "html": "Raise the front wheel, remove the wheel, caliper (hang it on a tie, never by the hose) and mudguard. Crack the fork cap while the top clamp still holds the tube, then release the pinch bolts and remove the leg."
+            },
+            {
+              "title": "Drain and read the oil",
+              "html": "Remove the cap (it is under spring preload), spacer and spring, then pump the inverted leg over a tray. Milky oil means water past the seals; metallic grey oil means bush wear."
+            },
+            {
+              "title": "Separate tube and slider",
+              "html": "Remove dust seal and clip, hold the damper rod with the T-handle tool and remove the bottom damper rod bolt, then pull the tube out sharply so the upper bush drives the old seal out."
+            },
+            {
+              "title": "Inspect",
+              "html": "Inner tube for pitting, scoring or bend (V-blocks and dial gauge); bushes worn through to copper; damper rod straight (never straighten one); spring free length 300 mm, limit <strong>295 mm</strong> (K-Light 125 manual)."
+            },
+            {
+              "title": "Rebuild",
+              "html": "Damper rod bolt <strong>15–20 N·m</strong> with thread lock and a new washer. Oil the new seal lip, protect it with film over the tube end and drive it square until the clip groove shows; fit clip and dust seal."
+            },
+            {
+              "title": "Fill and close",
+              "html": "With the spring out and the leg compressed, add <strong>285 ± 2 ml</strong> of 46# oil from a measuring cylinder and pump slowly to purge air. Refit spring, spacer and cap with a new O-ring, started by hand, at <strong>12–18 N·m</strong>."
+            },
+            {
+              "title": "Refit",
+              "html": "Set both tubes flush with the top clamp, torque the pinch bolts, refit wheel, caliper and mudguard, and pump the brake before riding."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Equal oil in both legs, no leaks after repeated compression, smooth travel, legs at equal height, fasteners at torque and a firm brake lever."
+            }
+          ]
         }
       ]
     },
@@ -1107,6 +1197,80 @@ export default {
         {
           "type": "p",
           "html": "<strong>Balancing:</strong> on a stand the heavy spot settles at the bottom; add weight opposite until the wheel stays wherever it is placed. An unbalanced wheel is often felt as a shake in the bars at 80–110 km/h."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.6.1: Removing and fitting a tubeless tyre and balancing"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Remove and deflate",
+              "html": "Support the bike securely, remove the wheel, note the rotation arrow and never lay the wheel on its disc. Remove the valve core and break both beads, keeping the breaker clear of the rim flange and disc."
+            },
+            {
+              "title": "Lever off in small bites",
+              "html": "Push the bead opposite the valve into the rim well, lubricate and lever over near the valve with rim protectors; repeat for the second bead."
+            },
+            {
+              "title": "Inspect",
+              "html": "Check the rim bead seat for dents, cracks and corrosion, fit a new rubber valve and find the cause of any puncture inside the old tyre."
+            },
+            {
+              "title": "Fit the new tyre",
+              "html": "Lubricate both beads, check the rotation arrow and align the balance dot with the valve. Fit the lower then the upper bead using the well."
+            },
+            {
+              "title": "Seat and inflate",
+              "html": "Inflate without the core until both beads pop on with the moulded rim line concentric, never above the maker’s seating pressure; fit the core and set <strong>190 kPa front, 210 kPa rear</strong> (K-Light 125, cold, solo)."
+            },
+            {
+              "title": "Balance",
+              "html": "On the stand mark the lowest point, add trial weight opposite and repeat until the wheel stays in any position; clean the rim before bonding the final weights."
+            },
+            {
+              "title": "Refit",
+              "html": "Axle nuts to <strong>75–88 N·m front, 100–113 N·m rear</strong> (K-Light 125) and check the brakes."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Beads evenly seated, no leaks at bead or valve (soap test), wheel balanced, correct rotation, pressures and axle torques correct."
+            }
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.6.2: Checking wheel runout and bearings"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Spin and look",
+              "html": "With the wheel raised and axle tight, spin it slowly past a fixed pointer; check the tyre separately, as tyre runout is not rim runout."
+            },
+            {
+              "title": "Measure the rim",
+              "html": "Dial gauge on the bead seat (radial) and then the rim side face (axial), one full turn. K-Light 125: within <strong>1.0 mm</strong> standard, replace the rim above <strong>2.0 mm</strong>."
+            },
+            {
+              "title": "Feel the bearings",
+              "html": "Rock the wheel at top and bottom; play with the axle tight means worn bearings. Off the bike, turn each inner race by finger and feel for roughness."
+            },
+            {
+              "title": "Check the axle",
+              "html": "Roll it on V-blocks with the gauge at its centre; replace above <strong>0.2 mm</strong> and never straighten it."
+            },
+            {
+              "title": "Replace bearings",
+              "html": "Pull seals and bearings, inspect the hub bores, drive new bearings in on the outer race only, sealed side out, with the spacer fitted (K-Light 125: 6202-2RS front, 6303-2RS rear), and fit greased new seals."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Runout within limits, axle straight within 0.2 mm, bearings smooth with no play, seals fitted and axle nut at torque."
+            }
+          ]
         }
       ]
     },
@@ -1307,6 +1471,105 @@ export default {
         {
           "type": "check",
           "q": "m4-25"
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.7.1: Replacing pads and measuring disc thickness and runout"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Remove the caliper",
+              "html": "Cover paintwork, loosen the pad pin while the caliper is still bolted on, then remove the mounting bolts and lift the caliper off."
+            },
+            {
+              "title": "Measure the pads",
+              "html": "At the thinnest point; at or below <strong>3 mm</strong> replace both pads in the caliper together. Uneven wear points to seized slide pins or a sticking piston."
+            },
+            {
+              "title": "Service the caliper",
+              "html": "Clean with brake cleaner (no compressed air on brake dust), check dust seals and leaks, regrease slide pins with silicone grease and renew torn boots. Push the piston back squarely, watching the reservoir (both reservoirs on CBS)."
+            },
+            {
+              "title": "Measure the disc",
+              "html": "Micrometer round the swept area: front limit <strong>3.0 mm</strong>, rear <strong>4.0 mm</strong>. Dial gauge 5–10 mm inside the outer edge with the wheel fitted: runout limit <strong>0.15 mm</strong>, after confirming good wheel bearings and clean disc seats. Disc bolts 10–12 N·m with thread lock, in a diagonal pattern."
+            },
+            {
+              "title": "Refit",
+              "html": "New pads and spring, pad pin, caliper bolts <strong>22–29 N·m</strong>. Pump the lever or pedal firm <em>before</em> moving the machine, set the fluid level and bed the pads in with moderate stops from 50 km/h."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Pads above limit and evenly worn, discs within thickness and runout limits, slide pins free, bolts at torque, firm lever, no drag, brake light working."
+            }
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.7.2: Bleeding a hydraulic brake"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Prepare",
+              "html": "Reservoir level, paintwork covered, cap and diaphragm off. Clear tube from the bleed nipple into a bottle holding a little fresh fluid so air cannot be drawn back."
+            },
+            {
+              "title": "Lever method",
+              "html": "Squeeze and hold, open the nipple a quarter turn, close it before the lever reaches the bar, release. Top up so the reservoir never falls below one-third."
+            },
+            {
+              "title": "Vacuum method",
+              "html": "Draw fluid through with the vacuum bleeder while topping up, until clear, bubble-free new DOT 4 flows (K-Light 125 manual). On CBS bleed each circuit in the order the manual gives."
+            },
+            {
+              "title": "Stubborn air",
+              "html": "Tie the lever back overnight or tap hose and caliper to free bubbles; on ABS models use the diagnostic tool’s bleed routine if specified."
+            },
+            {
+              "title": "Close up and test",
+              "html": "Tighten the nipple, fit its cap, set fluid to the upper mark and refit diaphragm and cap. The lever must be firm and must not sink under steady pressure; a spongy lever almost always means air."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Firm lever and pedal, no leaks at nipple or banjos (30 N·m, new washers), correct level, waste fluid kept for approved disposal, brake and ABS lamps normal."
+            }
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 4.7.3: Drum brake shoe inspection and adjustment"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Wear indicator first",
+              "html": "With the brake applied, a pointer beyond the mark on the cam lever means worn shoes or drum."
+            },
+            {
+              "title": "Strip safely",
+              "html": "Remove the wheel and backplate, wear a dust mask and wet-clean the dust; never blow it out with compressed air."
+            },
+            {
+              "title": "Measure",
+              "html": "Lining at the thinnest point (typical limit 1.5–2.0 mm) and drum diameter in several directions. Replace shoes in pairs if worn, oily or cracked; replace the hub if the drum is oversize, oval or heat-cracked; remove light glazing with emery cloth."
+            },
+            {
+              "title": "Cam and springs",
+              "html": "Clean the cam and anchor pin, grease them lightly with high-temperature grease, and check the cam bush and return springs."
+            },
+            {
+              "title": "Refit and adjust",
+              "html": "Cam lever close to 90° to the rod or cable with the brake applied, torque arm secure, pedal free play <strong>20–30 mm</strong> on many commuters. Recheck after any chain adjustment."
+            },
+            {
+              "title": "Pass criteria",
+              "html": "Linings and drum within limits, no contamination, free cam, correct free play, no drag, brake light on before the brake bites, and a confident stop on the road test."
+            }
+          ]
         }
       ]
     },
@@ -1443,6 +1706,12 @@ export default {
           "tone": "safety",
           "title": "Torque and road tests",
           "html": "A PDI is complete only when every fastener the dealer touched has been torqued to the manual’s figure and the bike has been road-tested in a safe place. Record the values: they are evidence if a fault is later disputed."
+        },
+        {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and work through its hotspots from the front tyre to the tail light, using plate F06 (Module 01) for the full list of 30 assemblies from Fuel tank to Tail light and indicators. For each, name the inspection from this chapter that applies, for example Drive chain: slack, wear length, lubrication; Front fork: leaks, oil level, clamp bolt torque."
         },
         {
           "type": "check",

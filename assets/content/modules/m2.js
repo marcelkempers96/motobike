@@ -167,6 +167,12 @@ export default {
           ]
         },
         {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Open the <a href=\"../?mode=4t&part=engine\">engine in the Lab</a>. Its sliders move in whole millimetres, so set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125's 56.5 × 49.5 mm), calculate the displacement (π/4 × 5.7² × 5.0 ≈ 128 cm³) and compare it with the Outputs panel; the true K-Light figure is 124 cm³. Raise the bore to 62 mm with the stroke unchanged and recalculate (about 151 cm³). Move the compression ratio from 9:1 to 11:1 and work out the change in ideal Otto efficiency at γ = 1.3 (48.3 % to 51.3 %), then set a short and a long stroke at 9000 rpm and compare the mean piston speeds."
+        },
+        {
           "type": "check",
           "q": "m2-02"
         },
@@ -186,6 +192,12 @@ export default {
           "type": "figure",
           "fig": "power-torque",
           "caption": "Enter 8.9 N·m at 7,500 rpm and confirm about 7.0 kW; then try 8.28 N·m at 9,000 rpm for the quoted 7.8 kW peak."
+        },
+        {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "With the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> selected, set the RPM slider to 3000, 6000 and 9000 rpm in turn and calculate the mean piston speed (2 × stroke × rpm ÷ 60) and the number of power strokes per second (rpm ÷ 120). Switch to the <a href=\"../?mode=2t&part=engine\">two-stroke engine</a> at the same speeds and confirm that the power-stroke frequency doubles (rpm ÷ 60). Use these numbers to explain why a 125 cm³ two-stroke can produce two to three times the power of a 125 cm³ commuter four-stroke."
         },
         {
           "type": "h3",
@@ -380,6 +392,12 @@ export default {
               "Inertial torque cancels (Yamaha R1)"
             ]
           ]
+        },
+        {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Run the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> at a low RPM setting and pause it with the Space key where the inlet valve begins to lift and where the exhaust valve closes. Read the crank angle (θ) from the status line and calculate the overlap; the Lab's valve events are simplified, so compare your figure with the real timing given in this chapter. Then step through a full 720° cycle and explain why the camshaft, driven at half crankshaft speed, has turned through only 360°."
         },
         {
           "type": "check",
@@ -580,6 +598,12 @@ export default {
         {
           "type": "p",
           "html": "Firing every revolution with no valve train, a two-stroke gives <strong>1.5 to 2 times</strong> the power of an equal-size four-stroke. The price: short-circuited fuel, burnt oil, unstable part-load combustion and hot pistons. Injecting fuel late, after the exhaust is nearly closed, means mostly <em>air</em> short-circuits. KTM introduced <strong>Transfer Port Injection (TPI)</strong> on its 250 and 300 EXC for 2018, and moved to Throttle Body Injection (TBI) from the 2023–2024 model years."
+        },
+        {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Switch to the <a href=\"../?mode=2t&part=engine\">two-stroke engine</a> and run the animation slowly. Pause when the exhaust port starts to open and when the transfer ports start to open, read both crank angles from the status line and calculate the blowdown period. Then raise the RPM slider and compare the number of power strokes per second with the <a href=\"../?mode=4t&part=engine\">four-stroke</a> at the same speed."
         }
       ]
     },

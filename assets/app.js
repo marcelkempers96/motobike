@@ -15,7 +15,6 @@ import {
 /* ---------- 1. State ---------- */
 const S = {
   mode: '4t',
-  view: '3d',
   category: 'all',
   selected_part: null,
 
@@ -79,6 +78,7 @@ function render() {
         <a href="./" aria-current="page">Lab</a>
         <a href="learn/">Learn</a>
         <a href="quiz/">Quiz</a>
+        <a href="build/">Build</a>
         <a href="models/">Models</a>
         <a href="sources/">Sources</a>
       </nav>
@@ -99,19 +99,15 @@ function render() {
           <p class="ute-sub">${info.blurb}</p>
         </div>
         <div class="ute-head-tools">
-          <div class="ute-seg ute-view-toggle" role="group" aria-label="View">
-            <button type="button" data-view="3d" class="${S.view === '3d' ? 'is-on' : ''}">3D model</button>
-            <button type="button" data-view="diagram" class="${S.view === 'diagram' ? 'is-on' : ''}">Course plate</button>
-          </div>
-          <span class="ute-legend"><i></i>= interactive</span>
+          <span class="ute-legend"><i></i>= interactive close-up</span>
         </div>
       </div>
       <div class="ute-chips" role="group" aria-label="System categories">
         ${CATEGORIES.map((c) => `<button type="button" class="ute-chip ${S.category === c.k ? 'is-on' : ''}" data-cat="${c.k}">${c.label}</button>`).join('')}
-        <button type="button" class="ute-chip is-action" data-open-cv="wiring">Wiring →</button>
+        <button type="button" class="ute-chip is-action" data-open-cv="wiring">Wiring diagram →</button>
       </div>
-      <div class="ute-moto-wrap ${S.view === '3d' ? 'is-3d' : ''}">
-        <div id="ute-moto-stage" class="ute-moto-stage" aria-label="${info.name} overview — click a part"></div>
+      <div class="ute-moto-wrap is-3d">
+        <div id="ute-moto-stage" class="ute-moto-stage" aria-label="${info.name}: 3D model, select a part"></div>
       </div>
       <div class="mz-part-index" id="ute-part-index"></div>
     </section>
@@ -191,14 +187,6 @@ function render() {
 
 function wireChrome() {
   $$('.ute-mode-switch button').forEach((b) => b.addEventListener('click', () => switchMode(b.dataset.mode)));
-  $$('.ute-view-toggle button').forEach((b) => b.addEventListener('click', () => {
-    const v = b.dataset.view;
-    if (v === S.view) return;
-    S.view = v;
-    $$('.ute-view-toggle button').forEach((x) => x.classList.toggle('is-on', x.dataset.view === v));
-    mountOverview();
-    syncURL();
-  }));
   $$('.ute-chips [data-cat]').forEach((b) => b.addEventListener('click', () => {
     S.category = b.dataset.cat;
     $$('.ute-chips [data-cat]').forEach((x) => x.classList.toggle('is-on', x.dataset.cat === S.category));
@@ -238,7 +226,7 @@ function syncURL() {
   try {
     const u = new URL(location.href);
     u.searchParams.set('mode', S.mode);
-    if (S.view !== '3d') u.searchParams.set('view', S.view); else u.searchParams.delete('view');
+    u.searchParams.delete('view');
     if (S.selected_part) u.searchParams.set('part', S.selected_part); else u.searchParams.delete('part');
     history.replaceState(null, '', u);
   } catch (e) { /* file:// or sandboxed */ }
@@ -264,20 +252,14 @@ function mountOverview() {
   const token = ++mountToken;
   if (V3) { V3.dispose(); V3 = null; }
   wrap.innerHTML = '';
-  $('.ute-moto-wrap').classList.toggle('is-3d', S.view === '3d');
-  if (S.view === '3d') mount3D(wrap, token); else mountDiagram(wrap);
+  mount3D(wrap, token);
   renderPartIndex();
 }
 
-function mountDiagram(wrap) {
-  wrap.innerHTML = `
-    <div class="mz-plate" style="aspect-ratio:${PLATE_RATIO[S.mode]}">
-      <img src="assets/illustrations/${OVERVIEW_PLATE[S.mode]}" alt="${MODE_INFO[S.mode].name}: course plate with principal parts labelled" draggable="false">
-      ${HOTSPOTS[S.mode].map(([k, x, y, l]) => `<button type="button" class="mz-hot ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''}" style="left:${x}%;top:${y}%" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}" aria-label="${l}: open ${partName(k)}"><span class="mz-hot-tip">${l}</span></button>`).join('')}
-    </div>`;
-  wrap.querySelectorAll('.mz-hot').forEach((b) => b.addEventListener('click', () => selectPart(b.dataset.part)));
-  applyMotoHighlight();
-  applyMotoCategory();
+/* No WebGL: show the bike's side render; the parts list below stays the way in. */
+function mountStill(wrap) {
+  const name = BIKE_MODEL[S.mode];
+  wrap.innerHTML = `<div class="mz3d mz3d-bike mz3d-still"><img src="assets/renders/${name}_side.webp" alt="${MODE_INFO[S.mode].name}, side view" draggable="false"><p class="mz3d-note">3D needs WebGL, which this browser has turned off. Pick a part from the list below.</p></div>`;
 }
 
 async function mount3D(wrap, token) {
@@ -285,7 +267,7 @@ async function mount3D(wrap, token) {
     <div class="mz3d mz3d-bike" id="mz3d-bike"></div>
     <div class="mz3d-tip" id="mz3d-tip" hidden></div>
     <div class="mz3d-bar">
-      <span class="mz3d-hint">Drag to orbit · scroll to zoom · click a part</span>
+      <span class="mz3d-hint">Drag to orbit · scroll or pinch to zoom · tap a part</span>
       <div class="ute-seg ute-cam" role="group" aria-label="Camera">
         <button type="button" data-cam="side" class="is-on">Side</button><button type="button" data-cam="threeq">3/4</button><button type="button" data-cam="front">Front</button>
       </div>
@@ -293,23 +275,19 @@ async function mount3D(wrap, token) {
   let mod;
   try { mod = await load3D(); } catch (e) { mod = null; }
   if (token !== mountToken) return;
-  if (!mod || !mod.webglOK()) {
-    S.view = 'diagram'; // no WebGL: fall back to the course plate
-    $$('.ute-view-toggle button').forEach((x) => x.classList.toggle('is-on', x.dataset.view === 'diagram'));
-    mountOverview();
-    return;
-  }
+  if (!mod || !mod.webglOK()) { mountStill(wrap); return; }
   const tip = $('#mz3d-tip');
   V3 = mod.createViewer($('#mz3d-bike'), {
     view: 'side',
     poster: (n) => mod.renderFor('assets/renders/', n),
-    onPick: (m, name) => { const k = partForMesh(name); if (k) selectPart(k, true); },
+    onPick: (m, name) => { const k = partForMesh(name); if (k) selectPart(k, false, true); },
     onHover: (m, name, e) => {
       const k = partForMesh(name);
       if (!k || !e) { tip.hidden = true; return; }
       const r = wrap.getBoundingClientRect();
       tip.hidden = false;
-      tip.innerHTML = `${partName(k)}${INTERACTIVE_PARTS.has(k) ? ' <i>interactive</i>' : ''}<small>${mod.humanize(name.split('__').slice(1).join(' · '))}</small>`;
+      const sub = mod.humanize(name.split('__').slice(1).join(' · '));
+      tip.innerHTML = `${partName(k)}${INTERACTIVE_PARTS.has(k) ? ' <i>interactive</i>' : ''}${sub.toLowerCase() !== partName(k).toLowerCase() ? `<small>${sub}</small>` : ''}`;
       tip.style.left = Math.min(r.width - 180, e.clientX - r.left + 14) + 'px';
       tip.style.top = (e.clientY - r.top + 16) + 'px';
     },
@@ -336,22 +314,20 @@ function renderPartIndex() {
 
 function applyMotoHighlight() {
   const k = S.selected_part;
-  $$('.mz-hot, .mz-part').forEach((el) => el.classList.toggle('is-hl', !!k && el.dataset.part === k));
+  $$('.mz-part').forEach((el) => { el.classList.toggle('is-hl', !!k && el.dataset.part === k); el.setAttribute('aria-pressed', String(!!k && el.dataset.part === k)); });
   if (V3) V3.setHighlight(k ? (n) => partForMesh(n) === k : null);
 }
 
 function applyMotoCategory() {
   const c = S.category;
-  const plate = $('.mz-plate');
-  if (plate) plate.dataset.cat = c;
-  $$('.mz-hot, .mz-part').forEach((el) => el.classList.toggle('in-cat', c !== 'all' && el.dataset.cat === c));
+  $$('.mz-part').forEach((el) => el.classList.toggle('in-cat', c !== 'all' && el.dataset.cat === c));
   const idx = $('#ute-part-index');
   if (idx) idx.dataset.cat = c;
   if (V3) V3.setCategory(c);
 }
 
 function updateOverviewTick(dt) {
-  if (!V3 || S.view !== '3d' || S.speed < 0.3) return;
+  if (!V3 || S.speed < 0.3) return;
   const wheelRPM = S.speed / 3.6 / (2 * Math.PI * GEAR.wheel_r_m) * 60;
   V3.spin(wheelRPM / 60 * 360 * dt / 10); // 10x slow-motion so the spokes stay readable
 }
@@ -360,14 +336,20 @@ function updateOverviewTick(dt) {
 /* ==========================================================================
    5. Component view
    ========================================================================== */
-function selectPart(key, force) {
+function selectPart(key, force, fromModel) {
+  const was = S.selected_part;
   S.selected_part = (!force && (S.selected_part === key || key == null)) ? null : key;
   if (key == null) S.selected_part = null;
+  if (S.selected_part === was && force) return;
   applyMotoHighlight();
   renderComponentView();
   syncURL();
-  if (S.selected_part && window.matchMedia('(max-width: 960px)').matches) {
-    $('#ute-cview-slot').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Bring the close-up into view; on a wide screen, only when it is off-screen and the pick came from the model.
+  const slot = $('#ute-cview-slot');
+  if (S.selected_part && slot) {
+    const r = slot.getBoundingClientRect();
+    const narrow = window.matchMedia('(max-width: 960px)').matches;
+    if (narrow || (fromModel && r.top > innerHeight - 120)) slot.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
@@ -398,7 +380,11 @@ function renderComponentView() {
   if (cfg.mount) cfg.mount();
   mountAssetsPanel(S.selected_part);
   if (cfg.hold) wireHold($('.ute-hold', slot), cfg.hold.flag);
-  slot.querySelector('[data-cv-close]').addEventListener('click', () => selectPart(null));
+  slot.querySelector('[data-cv-close]').addEventListener('click', () => {
+    selectPart(null);
+    const ov = $('.ute-overview');
+    if (ov && ov.getBoundingClientRect().bottom < 80) ov.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 }
 
 function holdHTML(h) {
@@ -1525,7 +1511,6 @@ function wireChromeGlobal() {
       e.preventDefault(); toggleRun(); return;
     }
     if (!e.repeat && ['1', '2', '3'].includes(e.key)) { switchMode(['4t', '2t', 'elec'][+e.key - 1]); return; }
-    if (!e.repeat && (e.key === 'd' || e.key === 'D')) { $(`.ute-view-toggle [data-view="${S.view === '3d' ? 'diagram' : '3d'}"]`).click(); return; }
     if (forwardKey('keydown', e)) e.preventDefault();
   });
   document.addEventListener('keyup', (e) => { forwardKey('keyup', e); });
@@ -1542,7 +1527,6 @@ if (document.getElementById('ute-root')) {
   try {
     const q = new URLSearchParams(location.search);
     if (['4t', '2t', 'elec'].includes(q.get('mode'))) S.mode = q.get('mode');
-    if (q.get('view') === 'diagram' || q.get('view') === 'plate') S.view = 'diagram';
     if (q.get('part') && (PARTS[q.get('part')] || COMPONENT_VIEWS[q.get('part')])) S.selected_part = q.get('part');
   } catch (e) { /* noop */ }
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) S.base_rpm = S.rpm = 1200;

@@ -852,6 +852,12 @@ export default {
           "caption": "A steel teardrop fuel tank: filler cap on top, tap or pump outlet underneath, rubber mounts at front and rear."
         },
         {
+          "type": "callout",
+          "tone": "try",
+          "title": "Try it in the Lab",
+          "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and click, in order, the drive chain, rear sprocket, swingarm and rear tyre hotspots, and write down the order in which drive torque passes through them from the gearbox output to the road. Then find the throttle body, the side cover over the battery and the instrument cluster, and sketch the connections you expect between throttle body and injector, ECU, battery and regulator/rectifier before checking against Module 03. Plate F06 above numbers all 30 assemblies by name."
+        },
+        {
           "type": "h3",
           "text": "The primary controls"
         },
