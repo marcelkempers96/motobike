@@ -1038,3 +1038,8 @@ h1, h2, h3, .ute-hero h1 { font-family: var(--sans); font-weight: 700; letter-sp
   .mz-cv-banner { grid-template-columns: 1fr; }
   .ute-cview { padding: 0 14px; }
 }
+.mz-graph svg { width: 100%; height: auto; display: block; }
+.mz-graph h4 { text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--ink); }
+.mz-graph-note { font-size: 13px; color: var(--mute); margin: 6px 0 0; }
+.mz-cv-graphs { grid-template-columns: repeat(auto-fill, minmax(300px, 440px)); }
+.mz-graph svg { max-width: 420px; }

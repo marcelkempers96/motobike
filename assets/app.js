@@ -437,7 +437,7 @@ function renderComponentView() {
   `;
   S._activeCfg = cfg;
   if (cfg.mount) cfg.mount();
-  if (cfg.graphsMount) cfg.graphsMount();
+  if (cfg.graphsUpdate) cfg.graphsUpdate();
   mountAssetsPanel(key);
   if (cfg.hold) wireHold($('.ute-hold', panel), cfg.hold.flag);
   const ab = panel.querySelector('[data-anim]');
@@ -1079,7 +1079,7 @@ COMPONENT_VIEWS.brake = {
   kind: 'Chassis · Interactive',
   hold: { label: 'Brake', flag: 'brake_hold', hint: 'Press and hold' },
   html: () => `${statusHTML('Rolling', 'Disc spins with the wheel. Hold BRAKE to squeeze the pads.', '0 bar')}<svg class="ute-cv-svg" id="cv-brake" viewBox="0 0 660 400" role="img" aria-label="Disc brake and caliper section"></svg>`,
-  sideHTML: () => card('Live state', statsHTML([['b_bar', 'Line pressure', 'bar'], ['b_sq', 'Pad squeeze', '%'], ['b_t', 'Disc temp', '°C']])) +
+  sideHTML: () => card('Live state', statsHTML([['b_bar', 'Line pressure', 'bar'], ['b_sq', 'Pad squeeze', '%'], ['b_t', 'Disc temp', '°C'], ['b_pad', 'Pad left', 'mm']])) +
     card('Parts', list(['Lever + master cylinder: your hand makes pressure', 'Brake line: carries incompressible fluid', 'Caliper pistons: push pads onto the disc', 'Disc: turns motion into heat'])) +
     card('How', '<p>Hydraulics multiply force: a small master piston pushes fluid into bigger caliper pistons, so a 2-finger pull becomes a clamp of over <b>10 kN</b>. Friction converts the bike\'s kinetic energy into heat in the disc.</p>'),
   mount: () => {
@@ -1148,11 +1148,15 @@ COMPONENT_VIEWS.brake = {
     b.Rr.setAttribute('transform', `translate(${-pct * 10} 0)`);
     S.cv.disc_temp += (pct * (S.speed > 0.5 ? S.speed * 6 : spin * 1.4) - (S.cv.disc_temp - 40) * 0.15) * dt;
     S.cv.disc_temp = clamp(S.cv.disc_temp, 40, 650);
+    S.cv.brakeT += dt;
+    const tr = S.cv.brakeTrace; if (!tr.length || S.cv.brakeT - tr[tr.length - 1][0] > 0.2) { tr.push([S.cv.brakeT, S.cv.disc_temp]); while (tr.length && tr[0][0] < S.cv.brakeT - 30) tr.shift(); }
+    S.cv.pad_mm = Math.max(1, S.cv.pad_mm - pct * spin * 0.00002 * dt);
     b.heat.setAttribute('opacity', clamp((S.cv.disc_temp - 80) / 500, 0, 0.45).toFixed(2));
     setStatus(pct > 0.05 ? 'Braking' : 'Rolling', pct > 0.05 ? 'Pistons squeeze the pads; friction turns speed into heat.' : 'Disc spins with the wheel. Hold BRAKE to squeeze the pads.', `${fmt(pct * 25, 1)} bar`);
     setStat('b_bar', fmt(pct * 25, 1));
     setStat('b_sq', Math.round(pct * 100));
     setStat('b_t', Math.round(S.cv.disc_temp));
+    setStat('b_pad', fmt(S.cv.pad_mm, 2));
   },
 };
 
@@ -1366,6 +1370,162 @@ COMPONENT_VIEWS.wiring = {
     });
   },
 };
+
+
+/* ==========================================================================
+   Output graphs for the interactive views. Each graph shows a reference
+   curve (what you should get with the default settings) and the live value.
+   ========================================================================== */
+const GW = 360, GH = 210, GP = { l: 44, r: 12, t: 14, b: 34 };
+function graphCard(id, title, note) {
+  return `<div class="ute-card mz-graph"><h4>${title}</h4><svg viewBox="0 0 ${GW} ${GH}" id="${id}" role="img" aria-label="${title}"></svg>${note ? `<p class="mz-graph-note">${note}</p>` : ''}</div>`;
+}
+/* opts: { xMax, yMax, xLabel, yLabel, series:[{pts,color,dash,label,width}], dots:[{x,y,color}], hlines:[{y,label,color}], vlines:[{x,label}] } */
+function drawGraph(id, o) {
+  const svg = document.getElementById(id);
+  if (!svg) return;
+  const X = (x) => GP.l + (x / o.xMax) * (GW - GP.l - GP.r);
+  const Y = (y) => GH - GP.b - (Math.min(y, o.yMax) / o.yMax) * (GH - GP.t - GP.b);
+  let h = '';
+  for (let i = 0; i <= 4; i++) {
+    const y = o.yMax * i / 4;
+    h += `<line x1="${GP.l}" x2="${GW - GP.r}" y1="${Y(y)}" y2="${Y(y)}" stroke="#EDEDED"/><text x="${GP.l - 6}" y="${Y(y) + 3.5}" text-anchor="end" font-size="9.5" fill="#6B6B6B" font-family="Lato, sans-serif">${+y.toFixed(y < 10 ? 1 : 0)}</text>`;
+  }
+  for (let i = 0; i <= 4; i++) {
+    const x = o.xMax * i / 4;
+    h += `<text x="${X(x)}" y="${GH - GP.b + 13}" text-anchor="middle" font-size="9.5" fill="#6B6B6B" font-family="Lato, sans-serif">${+x.toFixed(0)}</text>`;
+  }
+  h += `<line x1="${GP.l}" x2="${GP.l}" y1="${GP.t}" y2="${GH - GP.b}" stroke="#BDBDBD"/><line x1="${GP.l}" x2="${GW - GP.r}" y1="${GH - GP.b}" y2="${GH - GP.b}" stroke="#BDBDBD"/>`;
+  h += `<text x="${(GP.l + GW - GP.r) / 2}" y="${GH - 4}" text-anchor="middle" font-size="10" fill="#444" font-family="Lato, sans-serif">${o.xLabel}</text>`;
+  h += `<text x="10" y="${GP.t + 2}" font-size="10" fill="#444" font-family="Lato, sans-serif" transform="rotate(-90 10 ${GP.t + 2})" text-anchor="end">${o.yLabel}</text>`;
+  (o.hlines || []).forEach((l) => { h += `<line x1="${GP.l}" x2="${GW - GP.r}" y1="${Y(l.y)}" y2="${Y(l.y)}" stroke="${l.color || '#C2502A'}" stroke-dasharray="4 3"/><text x="${GW - GP.r - 2}" y="${Y(l.y) - 4}" text-anchor="end" font-size="9.5" fill="${l.color || '#C2502A'}" font-family="Lato, sans-serif">${l.label}</text>`; });
+  (o.vlines || []).forEach((l) => { h += `<line x1="${X(l.x)}" x2="${X(l.x)}" y1="${GP.t}" y2="${GH - GP.b}" stroke="#9A9A9A" stroke-dasharray="3 3"/><text x="${X(l.x) + 3}" y="${GP.t + 9}" font-size="9.5" fill="#6B6B6B" font-family="Lato, sans-serif">${l.label}</text>`; });
+  (o.series || []).forEach((s) => {
+    if (!s.pts.length) return;
+    h += `<polyline fill="none" stroke="${s.color}" stroke-width="${s.width || 2}" ${s.dash ? `stroke-dasharray="${s.dash}"` : ''} points="${s.pts.map(([x, y]) => `${X(x).toFixed(1)},${Y(y).toFixed(1)}`).join(' ')}"/>`;
+  });
+  let ly = GP.t + 4;
+  (o.series || []).filter((s) => s.label).forEach((s) => { h += `<line x1="${GP.l + 8}" x2="${GP.l + 24}" y1="${ly + 4}" y2="${ly + 4}" stroke="${s.color}" stroke-width="2" ${s.dash ? `stroke-dasharray="${s.dash}"` : ''}/><text x="${GP.l + 28}" y="${ly + 7.5}" font-size="9.5" fill="#333" font-family="Lato, sans-serif">${s.label}</text>`; ly += 13; });
+  (o.dots || []).forEach((d) => { if (d.x == null || d.y == null) return; h += `<circle cx="${X(Math.min(d.x, o.xMax))}" cy="${Y(d.y)}" r="5" fill="${d.color || '#C2502A'}" stroke="#FFF" stroke-width="1.5"/>`; });
+  svg.innerHTML = h;
+}
+const range = (a, b, n) => Array.from({ length: n + 1 }, (_, i) => a + (b - a) * i / n);
+
+/* ---------- Engine: torque/power curves and piston motion ---------- */
+const STOCK = { bore: 57, stroke: 48.8, cr: 10.5 }; // K-Light-like 124.5 cc single
+function engineCurves(bore, stroke, cr, mode) {
+  const Tpk = approxTorqueNm(displacementCC(bore, stroke), mode === '2t' ? '2t' : '4t', cr);
+  const shape = (r) => 0.55 + 0.45 * Math.exp(-(((r - 7000) / 3800) ** 2));
+  const T = range(1000, 10000, 45).map((r) => [r, Tpk * shape(r)]);
+  return { T, P: T.map(([r, t]) => [r, t * r / 9549]), shape, Tpk };
+}
+function engineGraphs() {
+  return graphCard('g-eng-tp', 'Torque and power against engine speed', 'Solid: your bore, stroke and compression. Dashed: the 125 cc reference engine. The dot is the engine now.')
+    + graphCard('g-eng-pist', 'Piston position and speed over one turn', 'Position from top dead centre (mm) and speed (m/s) against crank angle. Peak speed comes before 90°, because the con-rod is angled.');
+}
+function engineGraphsUpdate() {
+  const cur = engineCurves(S.bore_mm, S.stroke_mm, S.compression, S.mode);
+  const ref = engineCurves(STOCK.bore, STOCK.stroke, STOCK.cr, S.mode);
+  const yMax = Math.max(12, Math.ceil(Math.max(...cur.P.map((p) => p[1]), ...cur.T.map((t) => t[1])) / 5) * 5);
+  const r = clamp(S.rpm, 0, 10000);
+  drawGraph('g-eng-tp', { xMax: 10000, yMax, xLabel: 'Engine speed (rpm)', yLabel: 'Nm · kW', series: [
+    { pts: ref.T, color: '#3E6FB7', dash: '5 4', width: 1.5 }, { pts: ref.P, color: '#C2502A', dash: '5 4', width: 1.5 },
+    { pts: cur.T, color: '#3E6FB7', label: 'Torque (Nm)' }, { pts: cur.P, color: '#C2502A', label: 'Power (kW)' }],
+    dots: [{ x: r, y: cur.Tpk * cur.shape(r), color: '#3E6FB7' }, { x: r, y: cur.Tpk * cur.shape(r) * r / 9549 }] });
+  // slider-crank kinematics
+  const R = S.stroke_mm / 2, Lr = 1.75 * S.stroke_mm, w = 2 * Math.PI * Math.max(S.rpm, 1) / 60;
+  const pos = (a) => { const t = a * Math.PI / 180; return R + Lr - (R * Math.cos(t) + Math.sqrt(Lr * Lr - (R * Math.sin(t)) ** 2)); };
+  const vel = (a) => { const t = a * Math.PI / 180; return Math.abs(R * w * (Math.sin(t) + R * Math.sin(2 * t) / (2 * Math.sqrt(Lr * Lr - (R * Math.sin(t)) ** 2)))) / 1000; };
+  const ang = range(0, 360, 72);
+  const vMax = Math.max(...ang.map(vel));
+  const yM = Math.max(S.stroke_mm, Math.ceil(vMax / 5) * 5, 10);
+  const a = S.crank_deg % 360;
+  drawGraph('g-eng-pist', { xMax: 360, yMax: yM, xLabel: 'Crank angle (°)', yLabel: 'mm · m/s', vlines: [{ x: 180, label: 'BDC' }], series: [
+    { pts: ang.map((x) => [x, pos(x)]), color: '#111111', label: 'Position (mm)' }, { pts: ang.map((x) => [x, vel(x)]), color: '#1D6B55', label: `Speed (m/s) at ${Math.round(S.rpm)} rpm` }],
+    dots: [{ x: a, y: pos(a), color: '#111111' }, { x: a, y: vel(a), color: '#1D6B55' }] });
+}
+
+/* ---------- Brake: temperature trace and pad wear ---------- */
+S.cv.pad_mm = 6.0; S.cv.brakeTrace = []; S.cv.brakeT = 0;
+function brakeGraphs() {
+  return graphCard('g-brk-temp', 'Disc temperature over the last 30 s', 'Each stop heats the disc; it cools between stops. Organic pads begin to fade above about 300 °C.')
+    + graphCard('g-brk-pad', 'Pad friction material', 'New pads have 6.0 mm of material; replace them at 3 mm (K-Light 125 manual). Wear here is speeded up so you can see it.');
+}
+function brakeGraphsUpdate() {
+  const tr = S.cv.brakeTrace;
+  drawGraph('g-brk-temp', { xMax: 30, yMax: 500, xLabel: 'Time (s)', yLabel: 'Disc °C', hlines: [{ y: 300, label: 'Fade risk (organic pads)' }],
+    series: [{ pts: tr.map(([t, v]) => [t - Math.max(0, S.cv.brakeT - 30), v]), color: '#C2502A', label: 'Disc temperature' }],
+    dots: tr.length ? [{ x: Math.min(30, S.cv.brakeT), y: tr[tr.length - 1][1] }] : [] });
+  const used = 6 - S.cv.pad_mm;
+  drawGraph('g-brk-pad', { xMax: 6, yMax: 6, xLabel: 'Material worn away (mm)', yLabel: 'Pad left (mm)', hlines: [{ y: 3, label: 'Service limit 3 mm' }],
+    series: [{ pts: [[0, 6], [6, 0]], color: '#BDBDBD', dash: '4 4' }], dots: [{ x: used, y: S.cv.pad_mm, color: S.cv.pad_mm <= 3 ? '#C2502A' : '#1D6B55' }] });
+}
+
+/* ---------- Chain: road speed per gear ---------- */
+const CK_RATIO = { 1: 2.77, 2: 1.88, 3: 1.40, 4: 1.13, 5: 0.96 }, CK_PRIMARY = 3.35, CK_CIRC = 1.95;
+function chainGraphs() {
+  return graphCard('g-chain', 'Road speed against engine speed, gears 1 to 5', 'Each line is one gear with 15/39 sprockets. A bigger rear sprocket would tilt every line down: more pull, less top speed.');
+}
+function chainGraphsUpdate() {
+  const fin = 39 / 15, kmh = (rpm, g) => rpm / (CK_PRIMARY * CK_RATIO[g] * fin) * CK_CIRC * 60 / 1000;
+  const cols = ['#111111', '#3E6FB7', '#1D6B55', '#E2A93B', '#C2502A'];
+  const eng = Math.max(S.cv.gear_rpm || 0, S.rider.throttle > 0.05 ? S.rpm : 0);
+  drawGraph('g-chain', { xMax: 10000, yMax: 140, xLabel: 'Engine speed (rpm)', yLabel: 'Road speed (km/h)',
+    series: [1, 2, 3, 4, 5].map((g, i) => ({ pts: [[0, 0], [10000, kmh(10000, g)]], color: cols[i], label: `Gear ${g}` })),
+    dots: [{ x: eng, y: kmh(eng, 3), color: '#E2A93B' }] });
+}
+
+/* ---------- Carburettor: airflow, fuel and mixture ---------- */
+function carbGraphs() {
+  return graphCard('g-carb', 'Air and fuel flow against throttle', 'Fuel follows air so the ratio stays near 14.7 : 1. The dot is your throttle now.');
+}
+function carbGraphsUpdate() {
+  const pct = Math.max(S.cv.carb_pct || 0, S.rider.throttle);
+  const air = (p) => 0.4 + p * 11.6;
+  const th = range(0, 100, 20);
+  drawGraph('g-carb', { xMax: 100, yMax: 12, xLabel: 'Throttle (%)', yLabel: 'g/s', series: [
+    { pts: th.map((t) => [t, air(t / 100)]), color: '#3E6FB7', label: 'Air (g/s)' }, { pts: th.map((t) => [t, air(t / 100) / 14.7 * 5]), color: '#E2A93B', label: 'Fuel (g/s × 5)' }],
+    dots: [{ x: pct * 100, y: air(pct), color: '#3E6FB7' }, { x: pct * 100, y: air(pct) / 14.7 * 5, color: '#E2A93B' }] });
+}
+
+/* ---------- Spark: voltage needed against gap ---------- */
+function sparkGraphs() {
+  return graphCard('g-spark', 'Voltage needed to jump the plug gap', 'A wider or worn gap needs more voltage. The coil can supply up to about 35 kV; the margin is the ignition reserve.');
+}
+function sparkGraphsUpdate() {
+  drawGraph('g-spark', { xMax: 1.4, yMax: 40, xLabel: 'Plug gap (mm)', yLabel: 'kV', hlines: [{ y: 35, label: 'Coil maximum ~35 kV' }], vlines: [{ x: 0.7, label: '0.7 mm spec' }],
+    series: [{ pts: range(0.3, 1.4, 22).map((g) => [g, 3 + 12 * g]), color: '#111111', label: 'Needed at idle' }, { pts: range(0.3, 1.4, 22).map((g) => [g, 6 + 18 * g]), color: '#C2502A', dash: '5 4', label: 'Needed at full load' }],
+    dots: S.cv.fire_kv ? [{ x: 0.7, y: S.cv.fire_kv }] : [] });
+}
+
+/* ---------- Electric motor: torque and power against speed ---------- */
+function motorGraphs() {
+  return graphCard('g-motor', 'Motor torque and power against speed', 'Flat torque up to the base speed, then constant power as the battery voltage limits it. The dot is the motor now.');
+}
+function motorGraphsUpdate() {
+  const BASE = 4500, Tm = 95, T = (r) => (r <= BASE ? Tm : Tm * BASE / r);
+  const rr = range(0, 10000, 50);
+  const r = Math.max(S.elec.rpm, 0);
+  drawGraph('g-motor', { xMax: 10000, yMax: 100, xLabel: 'Motor speed (rpm)', yLabel: 'Nm · kW', vlines: [{ x: BASE, label: 'Base speed' }], series: [
+    { pts: rr.map((x) => [x, T(x)]), color: '#3E6FB7', label: 'Torque (Nm)' }, { pts: rr.map((x) => [x, T(x) * x / 9549]), color: '#1D6B55', label: 'Power (kW)' }],
+    dots: [{ x: r, y: T(r) * S.rider.throttle, color: '#3E6FB7' }, { x: r, y: T(r) * S.rider.throttle * r / 9549, color: '#1D6B55' }] });
+}
+
+function attachGraphs(keys, graphs, update) { keys.forEach((k) => { const v = COMPONENT_VIEWS[k]; if (v) { v.graphs = graphs; v.graphsUpdate = update; } }); }
+attachGraphs(['engine', 'cylinder', 'piston', 'conrod', 'crankshaft'], engineGraphs, engineGraphsUpdate);
+attachGraphs(['brake'], brakeGraphs, brakeGraphsUpdate);
+attachGraphs(['chain', 'rear_sprocket'], chainGraphs, chainGraphsUpdate);
+attachGraphs(['carb'], carbGraphs, carbGraphsUpdate);
+attachGraphs(['spark_plug'], sparkGraphs, sparkGraphsUpdate);
+attachGraphs(['motor', 'controller'], motorGraphs, motorGraphsUpdate);
+let graphClock = 0;
+function updateGraphsTick(dt) {
+  graphClock += dt;
+  if (graphClock < 0.12) return;
+  graphClock = 0;
+  const cfg = S.selected_part && COMPONENT_VIEWS[S.selected_part];
+  if (cfg && cfg.graphsUpdate && document.querySelector('.mz-graph')) cfg.graphsUpdate();
+}
 
 /* ---------- Wiring Lab (petrol bikes): the course's interactive harness and circuits ---------- */
 const WIRING_HV = Object.assign(COMPONENT_VIEWS.wiring, { wide: true });
@@ -1858,6 +2018,7 @@ function tick(now) {
 
   updateOverviewTick(dt);
   updateComponentModelTick(dt);
+  updateGraphsTick(dt);
   const cfg = S.selected_part && (COMPONENT_VIEWS[S.selected_part]);
   if (cfg && cfg.update) cfg.update(dt);
 
