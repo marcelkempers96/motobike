@@ -103,21 +103,30 @@ export function createViewer(el, opts = {}) {
   controls.addEventListener('change', () => { dirty = true; loop(); });
   controls.addEventListener('start', () => loop());
 
+  /* Highlight model: a picked part or highlighted set glows orange and everything
+     else turns to faint glass (x-ray), so hidden inner parts such as brake pads,
+     pistons or valves can be seen. A category fades all other systems. */
   function paint() {
+    const focus = !!(picked || highlightFn);
     for (const m of meshes) {
       const n = m.name;
       const isPick = picked && (picked === m);
       const isHl = highlightFn ? highlightFn(n, m) : false;
+      const on = isPick || isHl;
       const inCat = category ? n.startsWith(category + '__') : true;
       const mat = m.material;
       if (mat.emissive) {
-        mat.emissive.copy(isPick || isHl ? HL : (category && inCat ? CAT : BLACK));
-        mat.emissiveIntensity = isPick || isHl ? 0.6 : (category && inCat ? 0.25 : 0);
+        mat.emissive.copy(on ? HL : (category && inCat ? CAT : BLACK));
+        mat.emissiveIntensity = on ? 0.75 : (category && inCat ? 0.25 : 0);
       }
-      const fade = category && !inCat && !isHl;
-      mat.transparent = fade || m.userData.origTransparent;
-      mat.opacity = fade ? 0.16 : m.userData.origOpacity;
-      mat.depthWrite = !fade && m.userData.origDepthWrite;
+      let fade = 1;
+      if (focus && !on) fade = 0.1;
+      else if (category && !inCat && !on) fade = 0.14;
+      const faded = fade < 1;
+      mat.transparent = faded || m.userData.origTransparent;
+      mat.opacity = faded ? fade : m.userData.origOpacity;
+      mat.depthWrite = !faded && m.userData.origDepthWrite;
+      m.renderOrder = on ? 2 : 0;
     }
     dirty = true; loop();
   }

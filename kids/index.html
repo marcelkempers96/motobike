@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · Kids: Build a bike</title>
+  <meta name="description" content="A drag-and-drop game: pick up each motorcycle part and put it in the right place to build a whole bike.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .bg-wrap { max-width: 1400px; width: 100%; margin: 0 auto; padding: 20px 24px 32px; }
+    .bg-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+    .bg-head h1 { font-size: 30px; letter-spacing: -0.02em; margin: 4px 0; }
+    .bg-head p { margin: 0; font-size: 15px; max-width: 640px; }
+    .bg-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .bg-score { display: flex; gap: 1px; background: var(--ink); border: 1px solid var(--ink); margin-bottom: 12px; }
+    .bg-score > div { flex: 1; background: var(--paper-2); padding: 8px 12px; }
+    .bg-score .l { font: 500 10px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+    .bg-score .v { font: 700 20px/1.2 var(--mono); color: var(--ink); }
+    .bg-game { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; align-items: start; }
+    .bg-board { position: relative; background: #FFFFFF; border: 1px solid var(--ink); user-select: none; touch-action: none; }
+    .bg-board img.bg-plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: .16; transition: opacity .6s ease; pointer-events: none; }
+    .bg-board.is-done img.bg-plate { opacity: 1; }
+    .bg-slot { position: absolute; width: 64px; height: 64px; margin: -32px 0 0 -32px; border: 2px dashed var(--brand); border-radius: 50%; background: rgba(220,228,242,.55); display: grid; place-items: center; cursor: pointer; padding: 0; transition: transform .15s ease, background .15s ease, border-color .15s ease; }
+    .bg-slot span { position: absolute; top: calc(100% + 4px); left: 50%; transform: translateX(-50%); white-space: nowrap; font: 600 11px/1 var(--sans); color: var(--brand); background: rgba(255,255,255,.9); padding: 2px 5px; pointer-events: none; }
+    .bg-board.is-expert .bg-slot:not(.is-filled) span { display: none; }
+    .bg-slot.is-hot { transform: scale(1.18); background: rgba(43,183,110,.25); border-color: var(--go); }
+    .bg-slot.is-filled { border: 2px solid var(--go); background: #FFFFFF; cursor: default; }
+    .bg-slot.is-filled img { width: 56px; height: 56px; object-fit: contain; }
+    .bg-slot.is-wrong { animation: bg-shake .35s; border-color: var(--warm); }
+    .bg-board.is-done .bg-slot { opacity: 0; pointer-events: none; transition: opacity .6s ease .3s; }
+    @keyframes bg-shake { 0%,100% { translate: 0; } 25% { translate: -6px; } 75% { translate: 6px; } }
+    .bg-tray { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-content: start; }
+    .bg-tray h2 { grid-column: 1 / -1; font-size: 15px; margin: 0; }
+    .bg-card { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 6px; background: var(--surface); border: 1px solid var(--ink); cursor: grab; touch-action: none; font: 600 12.5px/1.2 var(--sans); color: var(--ink); text-align: center; }
+    .bg-card img { width: 100%; height: 76px; object-fit: contain; pointer-events: none; }
+    .bg-card:hover, .bg-card:focus-visible { border-color: var(--warm); outline: none; box-shadow: 0 0 0 2px var(--warm); }
+    .bg-card.is-picked { box-shadow: 0 0 0 3px var(--go); border-color: var(--go); }
+    .bg-card.is-used { display: none; }
+    .bg-drag { position: fixed; z-index: 200; width: 120px; pointer-events: none; transform: translate(-50%, -50%) rotate(-4deg); background: var(--surface); border: 2px solid var(--warm); padding: 6px; font: 600 12px/1.2 var(--sans); text-align: center; box-shadow: 0 10px 24px rgba(10,10,10,.25); }
+    .bg-drag img { width: 100%; height: 70px; object-fit: contain; }
+    .bg-msg { margin-top: 12px; min-height: 52px; padding: 10px 14px; background: var(--surface); border: 2px solid var(--brand); font-size: 15px; }
+    .bg-msg b { color: var(--brand); }
+    .bg-msg.is-good { border-color: var(--go); }
+    .bg-msg.is-good b { color: #1E7A4A; }
+    .bg-msg.is-bad { border-color: var(--warm); }
+    .bg-msg.is-bad b { color: var(--warm); }
+    .bg-win { display: none; margin-top: 16px; border: 2px solid var(--go); background: var(--surface); padding: 18px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: center; }
+    .bg-win.is-on { display: grid; }
+    .bg-win img { width: 100%; height: auto; display: block; }
+    .bg-win h2 { font-size: 28px; margin: 0 0 8px; }
+    .bg-confetti { position: fixed; inset: 0; pointer-events: none; z-index: 150; overflow: hidden; }
+    .bg-confetti i { position: absolute; top: -20px; width: 10px; height: 14px; animation: bg-fall linear forwards; }
+    @keyframes bg-fall { to { transform: translateY(110vh) rotate(720deg); } }
+    @media (max-width: 960px) { .bg-game { grid-template-columns: 1fr; } .bg-tray { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); } .bg-win { grid-template-columns: 1fr; } }
+    @media (max-width: 540px) { .bg-wrap { padding: 14px; } .bg-slot { width: 44px; height: 44px; margin: -22px 0 0 -22px; } .bg-slot span { font-size: 9.5px; } .bg-slot.is-filled img { width: 38px; height: 38px; } }
+    @media (prefers-reduced-motion: reduce) { .bg-confetti { display: none; } }
+  </style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../cockpit/">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-kids" href="../build/">Bike builder</a><a class="ute-nav-kids" href="../kids/" aria-current="page">Kids: Build a bike</a></nav>
+  </header>
+  <main class="bg-wrap" id="bg"></main>
+  <footer class="ute-footer"><span>Moto Zero · Transitions Lab · CC BY-SA 4.0</span><span>Drag with the mouse or a finger, or tap a part and then tap its place.</span></footer>
+</div>
+<script type="module" src="../assets/game.js"></script>
+</body>
+</html>

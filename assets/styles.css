@@ -5,15 +5,15 @@
 
 :root {
   /* Surfaces */
-  --paper:   #F6F5F2;
-  --paper-2: #EFEAE0;
+  --paper:   #FFFFFF;
+  --paper-2: #F4F4F2;
   --surface: #FFFFFF;
   /* Ink */
   --ink:       #0A0A0A;
-  --ink-soft:  #2A2A26;
-  --line:      #B9B3A4;
-  --line-soft: #DDD9CF;
-  --mute:      #6B6963;
+  --ink-soft:  #26282C;
+  --line:      #CFCFCB;
+  --line-soft: #ECECEA;
+  --mute:      #5F6166;
   /* Signal */
   --accent:  #1D6B55;
   --warm:    #C2502A;
@@ -25,8 +25,8 @@
   --go:      #2BB76E;
   --go-press:#1E9B59;
 
-  --sans: "IBM Plex Sans", system-ui, -apple-system, Arial, sans-serif;
-  --mono: "B612 Mono", "IBM Plex Mono", "Courier New", monospace;
+  --sans: "Barlow", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --mono: "Barlow Semi Condensed", "Barlow", system-ui, sans-serif;
   color-scheme: light;
 }
 
@@ -770,3 +770,44 @@ p { margin: 0 0 10px; }
 .ute-nav .ute-nav-kids:hover { color: var(--ink); }
 .mz-wl-tabs { margin-bottom: 10px; }
 .mz-wl { display: block; width: 100%; min-height: 900px; border: 0; background: transparent; }
+
+/* ---------- Light theme refinements ---------- */
+body { font-size: 14px; font-variant-numeric: tabular-nums; }
+.ute-top { background: #FFFFFF; border-bottom: 1px solid #E2E2DF; box-shadow: 0 1px 0 rgba(0,0,0,.02); }
+.ute-label, .ute-chip, .ute-seg button, .ute-btn, .ute-linkbtn, .ute-nav a, .ute-cview-close { letter-spacing: 0.05em; }
+.ute-nav a { font-size: 13px; font-weight: 600; }
+.ute-section, .ute-cview { border-bottom: 1px solid #E6E6E3; }
+.ute-hero { background: #FAFAF8; border-bottom: 1px solid #E6E6E3; }
+.ute-card, .ute-dyno-cell, .ute-q, .ute-modcard, .mz-chaplist a, .mz-pager a, .mz-gal-card, .ute-figure, .ute-stats { border-color: #DADAD6; }
+.ute-cview-stage, .ute-moto-wrap, .ute-figure-stage { background: #FFFFFF; }
+.ute-moto-wrap.is-3d, .mz3d-part { background: #FFFFFF; }
+.ute-stats .stat-v, .ute-dash .cell .v, .ute-findings .cell .v, .ute-status-num { font-family: var(--sans); font-weight: 700; }
+.ute-footer { background: #FAFAF8; border-top: 1px solid #E6E6E3; }
+.ute-toc { background: #FFFFFF; }
+
+/* ---------- Component view: model and working side by side ---------- */
+.mz-cv-duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.mz-cv-duo.is-basic { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.mz-cv-model { border: 1px solid #DADAD6; background: #FFFFFF; padding: 12px; display: flex; flex-direction: column; min-width: 0; }
+.mz-cv-model .mz3d-part { flex: 1; min-height: 420px; height: auto; border: 0; background: #FFFFFF; }
+.mz-cv-tag { font: 600 12px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+.mz-cv-info { padding: 18px; }
+.mz-cv-lead { font-size: 16px; line-height: 1.6; color: var(--ink); }
+.mz-cv-duo .ute-cview-stage { min-width: 0; }
+.mz-cv-banner { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 16px; margin-top: 16px; padding: 14px 16px; background: #FAFAF8; border: 1px solid #E6E6E3; }
+.mz-cv-banner .mz-plate-thumbs { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.mz-cv-banner-links p { margin: 0 0 8px; }
+.mz-cv-banner:has(> :only-child) { grid-template-columns: 1fr; }
+@media (max-width: 960px) {
+  .mz-cv-duo, .mz-cv-duo.is-basic, .mz-cv-banner { grid-template-columns: 1fr; }
+  .mz-cv-model .mz3d-part { min-height: 320px; }
+}
+/* Sources: asset package grid, all cards the same size */
+.mz-asset-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: stretch; }
+.mz-asset-grid .ute-figure { display: flex; flex-direction: column; }
+.mz-asset-grid .ute-figure-stage { aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 12px !important; }
+.mz-asset-grid .ute-figure-stage > a { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; }
+.mz-asset-grid .ute-figure-img { width: 100%; height: 100%; max-height: 100%; object-fit: contain; }
+.mz-asset-grid .ute-figure-cap { flex: 1; }
+.mz-inline-logo { width: 100%; height: 100%; max-height: 120px; }
+.ute-brand-word { font-family: "IBM Plex Sans", var(--sans); }

@@ -74,7 +74,7 @@ function render() {
         <span class="ute-brand-word">moto zero</span>
         <span class="ute-brand-sub">Transitions Lab</span>
       </a>
-      <nav class="ute-nav" aria-label="Sections"><a href="" aria-current="page">Lab</a><a href="cockpit/">Cockpit</a><a href="learn/">Learn</a><a href="wiring/">Wiring</a><a href="models/">Models</a><a href="quiz/">Quiz</a><a href="sources/">Sources</a><a class="ute-nav-kids" href="build/">Kids: Build a bike</a></nav>
+      <nav class="ute-nav" aria-label="Sections"><a href="" aria-current="page">Lab</a><a href="cockpit/">Cockpit</a><a href="learn/">Learn</a><a href="wiring/">Wiring</a><a href="models/">Models</a><a href="quiz/">Quiz</a><a href="sources/">Sources</a><a class="ute-nav-kids" href="build/">Bike builder</a><a class="ute-nav-kids" href="kids/">Kids: Build a bike</a></nav>
       <span class="ute-top-spacer"></span>
       <div class="ute-seg ute-mode-switch" role="group" aria-label="Mode">
         ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}">${MODE_INFO[m].short}</button>`).join('')}
@@ -367,15 +367,23 @@ function renderComponentView() {
   Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false, throttle_hold: false, particles: [] });
   if (!S.selected_part) { slot.innerHTML = emptyCViewHTML(); return; }
   const cfg = COMPONENT_VIEWS[S.selected_part] || basicCard(S.selected_part);
+  const P = PARTS[S.selected_part] || {};
   slot.innerHTML = `
     <div class="ute-cview-head">
       <div><span class="ute-label">${cfg.kind || 'Component'}</span><h2>${cfg.title}</h2></div>
       <button class="ute-cview-close" type="button" data-cv-close>Close ✕</button>
     </div>
-    <div class="ute-cview-stage ${cfg.hold ? '' : 'no-action'}" id="ute-cview-stage">${cfg.html()}${cfg.hold ? holdHTML(cfg.hold) : ''}</div>
+    <div class="mz-cv-duo ${cfg.basic ? 'is-basic' : ''}">
+      ${cfg.basic ? '' : `<div class="mz-cv-model"><div class="mz-cv-tag">3D model · drag to rotate, tap a part to see inside</div>${viewer3dHTML(false)}</div>`}
+      <div class="ute-cview-stage ${cfg.hold ? '' : 'no-action'}" id="ute-cview-stage">${cfg.html()}${cfg.hold ? holdHTML(cfg.hold) : ''}</div>
+      ${cfg.basic ? `<div class="mz-cv-model mz-cv-info"><div class="mz-cv-tag">What it does</div><p class="mz-cv-lead">${P.desc || ''}</p>${P.notes ? `<p><b>Workshop note.</b> ${P.notes}</p>` : ''}<div class="mz-cv-tag" style="margin-top:18px">Course plates</div>${platesHTML(S.selected_part)}</div>` : ''}
+    </div>
     ${cfg.under ? cfg.under() : ''}
-    ${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
-    ${cfg.basic ? '' : assetsPanelHTML(S.selected_part)}
+    ${!cfg.basic && cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
+    <div class="mz-cv-banner">
+      ${cfg.basic ? '' : `<div class="mz-cv-banner-plates"><span class="mz-cv-tag">Course plates</span>${platesHTML(S.selected_part)}</div>`}
+      <div class="mz-cv-banner-links"><span class="mz-cv-tag">Go deeper</span>${deeperHTML(S.selected_part)}</div>
+    </div>
   `;
   S._activeCfg = cfg;
   if (cfg.mount) cfg.mount();
@@ -530,7 +538,7 @@ function basicCard(key) {
     title: P.name,
     kind: `${P.tag || 'Component'} · 3D model`,
     html: () => `${statusHTML(P.name, P.desc ? P.desc.split('. ')[0] + '.' : '', (CATEGORIES.find((c) => c.k === PART_CATEGORY[key]) || { label: '' }).label.toUpperCase())}${viewer3dHTML(true)}`,
-    sideHTML: () => card('Role', `<p>${P.desc || '–'}</p><p><b>Note.</b> ${P.notes || '–'}</p>`) + card('Course plates', platesHTML(key)) + card('Go deeper', deeperHTML(key)),
+
   };
 }
 
@@ -1255,7 +1263,7 @@ COMPONENT_VIEWS.wiring = {
     data.nodes.forEach((n) => {
       const g = ns('g', { class: 'ute-wire-node', tabindex: 0, role: 'button', 'aria-label': `${n.t}, ${n.s}` });
       g.appendChild(ns('rect', { x: n.x, y: n.y, width: W, height: H, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5, rx: 3 }));
-      const t = ns('text', { x: n.x + 10, y: n.y + 19, 'font-family': 'IBM Plex Sans, sans-serif', 'font-size': 12.5, 'font-weight': 700, fill: '#0A0A0A' });
+      const t = ns('text', { x: n.x + 10, y: n.y + 19, 'font-family': 'Barlow, sans-serif', 'font-size': 12.5, 'font-weight': 700, fill: '#0A0A0A' });
       t.textContent = n.t;
       g.appendChild(t);
       g.appendChild(txt(n.x + 10, n.y + 36, n.s.toUpperCase(), 'start', 10));

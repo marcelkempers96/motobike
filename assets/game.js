@@ -88,7 +88,7 @@ function render() {
   root.innerHTML = `
     <div class="bg-head">
       <div>
-        <span class="ute-label">Game · for all ages</span>
+        <span class="ute-label">Kids game · ages 6 and up</span>
         <h1>Build a bike</h1>
         <p>Pick up a part and drop it where it belongs on the motorcycle. Get them all to finish the bike. Not sure? The dashed circles show where parts go.</p>
       </div>
