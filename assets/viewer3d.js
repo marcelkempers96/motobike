@@ -126,7 +126,10 @@ export function createViewer(el, opts = {}) {
       mat.transparent = faded || m.userData.origTransparent;
       mat.opacity = faded ? fade : m.userData.origOpacity;
       mat.depthWrite = !faded && m.userData.origDepthWrite;
-      m.renderOrder = on ? 2 : 0;
+      // A highlighted part is drawn on top of everything, so parts hidden inside
+      // (an R clip in a caliper, a piston in a cylinder) always show through.
+      mat.depthTest = !(on && focus);
+      m.renderOrder = on ? 10 : 0;
     }
     dirty = true; loop();
   }
@@ -213,19 +216,25 @@ export function createViewer(el, opts = {}) {
   api.setHighlight = (fn) => { highlightFn = fn; paint(); };
   api.pick = (mesh) => { picked = mesh; paint(); };
   api.view = (v) => { if (root) frame(null, v); };
-  api.focus = (pred) => {
+  api.focus = (pred, smooth = true) => {
     const ms = meshes.filter((m) => pred(m.name));
     if (!ms.length) return;
     const box = new THREE.Box3();
     ms.forEach((m) => box.expandByObject(m));
     const c = box.getCenter(new THREE.Vector3());
-    const d = Math.max(box.getSize(new THREE.Vector3()).length() * 2.2, 0.35);
+    const d = Math.max(box.getSize(new THREE.Vector3()).length() * 2.6, 0.18);
     const dir = camera.position.clone().sub(controls.target).normalize();
-    controls.target.copy(c);
-    camera.position.copy(c).add(dir.multiplyScalar(d));
-    controls.update();
-    dirty = true; loop();
+    const toT = c, toP = c.clone().add(dir.multiplyScalar(d));
+    if (!smooth) { controls.target.copy(toT); camera.position.copy(toP); controls.update(); dirty = true; loop(); return; }
+    const fromT = controls.target.clone(), fromP = camera.position.clone(), t0 = performance.now();
+    const step = () => {
+      const k = Math.min(1, (performance.now() - t0) / 600), e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      controls.target.lerpVectors(fromT, toT, e); camera.position.lerpVectors(fromP, toP, e); controls.update(); dirty = true;
+      if (k < 1) requestAnimationFrame(step); else loop();
+    };
+    step(); loop();
   };
+  api.reframe = (view) => { if (root) frame(null, view || opts.view); };
   api.spin = (deg) => {
     if (!wheels.length || !deg) return;
     for (const w of wheels) w.pivot.rotation[w.axis] -= deg * w.rate * Math.PI / 180;

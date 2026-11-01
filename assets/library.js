@@ -2,6 +2,8 @@
    only starts when a model is opened, and is released when you go back. */
 import { MODELS } from './content/assets-map.js';
 import { createViewer, webglOK, humanize, renderFor } from './viewer3d.js';
+import { recordTool } from './progress.js';
+recordTool('models', { visited: true });
 
 const $ = (s) => document.querySelector(s);
 const root = $('#lib');
@@ -70,7 +72,7 @@ async function detail(key) {
   $('#lib-subs').querySelectorAll('.mz-sub').forEach((b) => {
     const names = new Set(groups.get(b.textContent));
     const on = () => { $('#lib-subs').querySelectorAll('.is-on').forEach((x) => x.classList.remove('is-on')); b.classList.add('is-on'); v.setHighlight((n) => names.has(n)); $('#lib-cap').textContent = b.textContent; };
-    b.addEventListener('mouseenter', on); b.addEventListener('focus', on); b.addEventListener('click', on);
+    b.addEventListener('mouseenter', on); b.addEventListener('focus', on); b.addEventListener('click', () => { on(); v.focus((n) => names.has(n)); });
   });
 }
 

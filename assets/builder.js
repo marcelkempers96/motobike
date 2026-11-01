@@ -1087,7 +1087,7 @@ function engineOf(c) {
   const cc = ccOf(c.bore, c.stroke), cc0 = ccOf(B.bore, B.stroke);
   const crf = (1 - Math.pow(c.cr, -0.3)) / (1 - Math.pow(B.cr, -0.3));      // Otto efficiency relative to stock
   const tpk = B.bmep * cc * 1e-6 / (B.strokes === 4 ? 4 * Math.PI : 2 * Math.PI) * crf;
-  const rs = Math.min(1.15, Math.max(0.75, B.stroke / c.stroke));             // same mean piston speed at the redline
+  const rs = Math.min(1.12, Math.max(0.82, B.stroke / c.stroke));             // same mean piston speed at the redline
   return { elec: false, cc, tpk, crf, rpk: B.rpk * rs, maxRpm: Math.round(B.redline * rs / 100) * 100, mass: B.mass + (cc - cc0) * 0.08, eta: B.eta * crf };
 }
 function engineT(rpm, e) {

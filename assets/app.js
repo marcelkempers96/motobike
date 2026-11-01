@@ -7,6 +7,7 @@ import {
   wheelRPMFromEngine, kmhFromWheelRPM, clamp, fmt, buildEngine, buildTimingStrip, strokeAt,
 } from './core.js';
 import { mountSite } from './site.js';
+import { recordTool } from './progress.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
 import {
   BIKE_MODEL, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
@@ -511,7 +512,7 @@ async function mountAssetsPanel(key) {
     view: 'threeq',
     spin: (n) => (MOVING[n] ? MOVING[n].groups : null),
     poster: (n) => mod.renderFor('assets/renders/', n),
-    onPick: (m, name) => { if (!m) return; viewer.setHighlight((n) => n === name); cap.textContent = mod.humanize(name.split('__').slice(-1)[0]); },
+    onPick: (m, name) => { if (!m) { viewer.setHighlight(null); return; } viewer.setHighlight((n) => n === name); viewer.focus((n) => n === name); cap.textContent = mod.humanize(name.split('__').slice(-1)[0]); },
   });
   CV3 = viewer;
   const listSubs = (filter, strip) => {
@@ -524,7 +525,7 @@ async function mountAssetsPanel(key) {
     subs.innerHTML = [...groups.keys()].map((l) => `<button type="button" class="mz-sub" data-sub="${l}">${l}</button>`).join('');
     subs.querySelectorAll('[data-sub]').forEach((b) => {
       const names = new Set(groups.get(b.dataset.sub));
-      const on = () => { subs.querySelectorAll('.is-on').forEach((x) => x.classList.remove('is-on')); b.classList.add('is-on'); viewer.setHighlight((n) => names.has(n)); };
+      const on = (e) => { subs.querySelectorAll('.is-on').forEach((x) => x.classList.remove('is-on')); b.classList.add('is-on'); viewer.setHighlight((n) => names.has(n)); if (e && e.type === 'click') viewer.focus((n) => names.has(n)); };
       b.addEventListener('mouseenter', on); b.addEventListener('focus', on); b.addEventListener('click', on);
     });
   };
@@ -1897,6 +1898,7 @@ if (document.getElementById('ute-root')) {
   S.dyno = freshDyno();
   defsPackMetals();
   render();
+  recordTool(($('#ute-root').dataset.page || 'overview'), { visited: true });
   wireChromeGlobal();
   startLoop();
   if (S.selected_part) requestAnimationFrame(() => { applyMotoHighlight(); });
