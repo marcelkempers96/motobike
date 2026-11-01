@@ -66,6 +66,27 @@ const ICON = {
 /* ==========================================================================
    2. Shell render
    ========================================================================== */
+function homeIntroHTML() {
+  const cards = [
+    ['assets/photos/engine-closeup.jpg', 'The engine', 'How fuel, air and a spark turn into torque: four-stroke, two-stroke and the parts that make them work.', 'learn/#engine'],
+    ['assets/photos/carburettor-work.jpg', 'Fuel, ignition and electrics', 'Carburettors and injection, coils and plugs, charging and wiring, and how to find faults with a meter.', 'learn/#fuel-ignition'],
+    ['assets/photos/workshop-garage.jpg', 'In the workshop', 'Job sheets with tools, reference values and pass criteria, from measuring a piston pin to bleeding a brake.', 'learn/#foundations'],
+  ];
+  return `
+    <section class="mz-home" aria-labelledby="home-h">
+      <div class="mz-home-hero">
+        <video class="mz-home-video" src="assets/video/workshop.mp4" poster="assets/video/workshop-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+        <div class="mz-home-hero-text">
+          <span class="ute-label">Open course · free · no login</span>
+          <h2 id="home-h">Learn how motorcycles work, and how to work on them</h2>
+          <p>Five modules from the first combustion stroke to the battery management system of an electric bike, with every part in 3D, a cockpit you can ride and a quiz at every level.</p>
+          <div class="ute-btnrow"><a class="ute-btn is-primary" href="learn/">Start the course</a><a class="ute-btn mz-btn-light" href="cockpit/">Ride in the Cockpit</a><a class="ute-btn mz-btn-light" href="quiz/">Take a quiz</a></div>
+        </div>
+      </div>
+      <div class="mz-home-cards">${cards.map(([img, t, d, h]) => `<a class="mz-home-card" href="${h}"><img src="${img}" alt="" loading="lazy"><div><h3>${t}</h3><p>${d}</p><span>Open the module →</span></div></a>`).join('')}</div>
+    </section>`;
+}
+
 function render() {
   const root = $('#ute-root');
   const PAGE = root.dataset.page || 'overview';
@@ -114,6 +135,7 @@ ${PAGE === 'overview' ? `
     </div>
 
     <section class="ute-cview" id="ute-cview-slot"></section>
+    ${PAGE === 'overview' && !EMBED ? homeIntroHTML() : ''}
 
 ` : ''}
 ${PAGE === 'cockpit' ? `
@@ -190,6 +212,10 @@ ${PAGE === 'cockpit' ? `
   mountSite(root);
   if (!EMBED) mountOverview();
   renderComponentView();
+  const hv = $('.mz-home-video');
+  if (hv && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    new IntersectionObserver((e) => { if (e[0].isIntersecting) hv.play().catch(() => {}); else hv.pause(); }, { threshold: 0.2 }).observe(hv);
+  }
   mountRider();
   mountDyno();
 }
