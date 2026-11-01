@@ -1,7 +1,7 @@
 /* ==========================================================================
    Under the Engine — shared core
    SVG helpers, metal gradients, physics formulas and the engine cross-section
-   builder. Used by the Lab (app.js) and the Learn page (learn.js).
+   builder. Used by the Overview (app.js) and the Learn page (learn.js).
    ========================================================================== */
 
 export const SVGNS = 'http://www.w3.org/2000/svg';
@@ -43,7 +43,7 @@ export function hexBolt(cx, cy, size) {
     pts.push(`${cx + Math.cos(a) * size},${cy + Math.sin(a) * size}`);
   }
   g.appendChild(ns('polygon', { points: pts.join(' '), fill: '#8E867A', stroke: '#0A0A0A', 'stroke-width': 0.7 }));
-  g.appendChild(ns('circle', { cx: cx - size * 0.25, cy: cy - size * 0.25, r: size * 0.4, fill: '#F2EEE4', opacity: 0.4 }));
+  g.appendChild(ns('circle', { cx: cx - size * 0.25, cy: cy - size * 0.25, r: size * 0.4, fill: '#F2F2F2', opacity: 0.4 }));
   g.appendChild(ns('circle', { cx, cy, r: size * 0.3, fill: '#1A1816' }));
   return g;
 }
@@ -71,12 +71,12 @@ export function defsPackMetals() {
   lin('m-alu',      [[0, '#F1F1EE'], [0.5, '#C8C6BF'], [1, '#9C998F']]);
   lin('m-copper',   [[0, '#F0B488'], [0.5, '#C2703F'], [1, '#8A4520']]);
   lin('m-steel',    [[0, '#9AA0A6'], [0.5, '#5E646A'], [1, '#3A3E43']]);
-  lin('m-case',     [[0, '#B8B2A6'], [1, '#7E776B']]);
-  lin('m-cover',    [[0, '#E9E5DC'], [1, '#B9B3A4']]);
+  lin('m-case',     [[0, '#BDBDBD'], [1, '#7A7A7A']]);
+  lin('m-cover',    [[0, '#E8E8E8'], [1, '#C9C9C9']]);
   lin('m-piston',   [[0, '#E4E1DA'], [0.5, '#BDB8AD'], [1, '#8E887C']], 1, 0);
   lin('m-rod',      [[0, '#7D838A'], [0.5, '#C5C9CE'], [1, '#6A7076']], 1, 0);
   lin('m-tank-4t',  [[0, '#E0785A'], [0.5, '#C2502A'], [1, '#7E2F15']]);
-  lin('m-tank-2t',  [[0, '#F6F5F2'], [0.6, '#DDD9CF'], [1, '#9F998B']]);
+  lin('m-tank-2t',  [[0, '#FFFFFF'], [0.6, '#E6E6E6'], [1, '#9F998B']]);
   lin('m-tank-el',  [[0, '#4BA88A'], [0.5, '#1D6B55'], [1, '#0E3A2E']]);
   lin('m-rubber',   [[0, '#3A3835'], [1, '#141312']]);
   lin('m-seat',     [[0, '#4A4642'], [1, '#1E1C1A']]);
@@ -219,7 +219,7 @@ export function buildEngine(svg, opts = {}) {
       L.liner.appendChild(ns('rect', { x: xr + wallT, y, width: 26, height: 7, fill: 'url(#m-alu)', stroke: '#0A0A0A', 'stroke-width': 1 }));
     }
     // Cylinder interior background
-    L.liner.insertBefore(ns('rect', { x: xl, y: top, width: w, height: linerBottom - top, fill: '#FBFAF7' }), L.liner.firstChild);
+    L.liner.insertBefore(ns('rect', { x: xl, y: top, width: w, height: linerBottom - top, fill: '#FFFFFF' }), L.liner.firstChild);
 
     // Ports (2T)
     L.port_left.innerHTML = ''; L.port_right.innerHTML = '';
@@ -294,7 +294,7 @@ export function buildEngine(svg, opts = {}) {
     // Spark plug
     L.plug.innerHTML = '';
     const px = CX + (p.mode === '4t' ? 0 : 0);
-    L.plug.appendChild(ns('rect', { x: px - 7, y: hTop - 62, width: 14, height: 40, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5, rx: 3 }));
+    L.plug.appendChild(ns('rect', { x: px - 7, y: hTop - 62, width: 14, height: 40, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5, rx: 3 }));
     L.plug.appendChild(ns('rect', { x: px - 10, y: hTop - 24, width: 20, height: 12, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 1.2 }));
     L.plug.appendChild(ns('rect', { x: px - 4, y: hTop - 12, width: 8, height: headY - hTop + 8, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 1 }));
     L.plug.appendChild(ns('rect', { x: px - 3, y: hTop - 72, width: 6, height: 12, fill: '#6B6963' }));
@@ -315,7 +315,7 @@ export function buildEngine(svg, opts = {}) {
     L.rod.innerHTML = '';
     refs.rodBody = ns('path', { fill: 'url(#m-rod)', stroke: '#0A0A0A', 'stroke-width': 1.5 });
     refs.rodBig = ns('circle', { r: 15, fill: 'none', stroke: '#0A0A0A', 'stroke-width': 2 });
-    refs.rodSmall = ns('circle', { r: 8, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5 });
+    refs.rodSmall = ns('circle', { r: 8, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5 });
     L.rod.append(refs.rodBody, refs.rodBig, refs.rodSmall);
 
     L.piston.innerHTML = '';

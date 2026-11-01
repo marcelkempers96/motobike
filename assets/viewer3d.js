@@ -134,7 +134,7 @@ export function createViewer(el, opts = {}) {
   function frame(dist, view) {
     const box = new THREE.Box3().setFromObject(root);
     const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
-    const d = dist || size.length() * 1.45;
+    const d = dist || size.length() * (view === 'side' ? 1.02 : 1.45);
     // Bikes are modelled along X; side view looks along Z.
     const dir = view === 'side' ? new THREE.Vector3(0, 0.12, 1) : view === 'front' ? new THREE.Vector3(1, 0.25, 0.2) : new THREE.Vector3(-0.62, 0.34, 0.85);
     camera.position.copy(c).add(dir.normalize().multiplyScalar(d));

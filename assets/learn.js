@@ -26,7 +26,7 @@ function home() {
       <span class="ute-label">Open course · CC BY-SA 4.0</span>
       <h1>How motorcycles work, from the first combustion stroke to the BMS of an electric bike.</h1>
       <p>Five modules, re-told for the screen: short explanations, live figures you can drive, and a quick check at the end of every chapter. Reference values come from a fuel-injected 125 cc single, the K-Light 125.</p>
-      <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="#${MODULES[0].id}">Start with Module ${MODULES[0].num} →</a><a class="ute-linkbtn" href="${ROOT}">Open the Lab</a><a class="ute-linkbtn" href="${ROOT}quiz/">Quiz</a><a class="ute-linkbtn" href="${ROOT}build/">Bike builder</a><a class="ute-linkbtn" href="${ROOT}kids/">Kids: Build a bike</a></div>
+      <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="#${MODULES[0].id}">Start with Module ${MODULES[0].num} →</a><a class="ute-linkbtn" href="${ROOT}">Open the Overview</a><a class="ute-linkbtn" href="${ROOT}quiz/">Quiz</a><a class="ute-linkbtn" href="${ROOT}build/">Bike builder</a><a class="ute-linkbtn" href="${ROOT}kids/">Kids: Build a bike</a></div>
     </section>
     <section class="ute-chapter">
       <h2>Modules</h2>
@@ -40,7 +40,7 @@ function home() {
         </a>`).join('')}</div>
       <h3>Suggested path</h3>
       <div class="ute-steps">${[
-        ['Module 01', 'For everyone. Then explore the bike in the Lab.'],
+        ['Module 01', 'For everyone. Then explore the bike in the Overview.'],
         ['Modules 02 and 03', 'For combustion machines, in that order.'],
         ['Module 04', 'For every machine, combustion or electric.'],
         ['Module 05', 'After the battery, charging and electrical-diagnosis chapters of Module 03.'],
@@ -176,7 +176,7 @@ function renderPage(p) {
           <h2>${chap.title}</h2>
           ${chap.lead ? `<p class="lead">${chap.lead}</p>` : ''}
           <div class="prose">${chap.blocks.map((b) => block(b, mod)).join('')}</div>
-          ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab}">Try it in the Lab →</a></div>` : ''}
+          ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab}">Try it in the Overview →</a></div>` : ''}
         </article>
         ${pager}
       </div>`;

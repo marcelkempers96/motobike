@@ -116,7 +116,7 @@ function render() {
             <span class="ute-label">Well done</span>
             <h2>You built the bike!</h2>
             <p id="bg-win-text"></p>
-            <div class="ute-btnrow"><a class="ute-linkbtn is-warm" href="${BIKES[st.bike].ride}">Ride it in the Lab →</a><button type="button" class="ute-btn" data-next>Build another</button><a class="ute-linkbtn" href="../learn/#m1-anatomy">Learn the parts</a></div>
+            <div class="ute-btnrow"><a class="ute-linkbtn is-warm" href="${BIKES[st.bike].ride}">Ride it in the Cockpit →</a><button type="button" class="ute-btn" data-next>Build another</button><a class="ute-linkbtn" href="../learn/#m1-anatomy">Learn the parts</a></div>
           </div>
         </div>
       </div>
@@ -159,7 +159,7 @@ function win() {
   $('#bg-board').classList.add('is-done');
   $('#bg-win').classList.add('is-on');
   const perfect = st.tries === parts().length;
-  $('#bg-win-text').textContent = `${parts().length} parts in ${secs} seconds with ${st.tries} tries${perfect ? ': perfect, not a single mistake!' : '.'} Now see it move: start the engine in the Lab.`;
+  $('#bg-win-text').textContent = `${parts().length} parts in ${secs} seconds with ${st.tries} tries${perfect ? ': perfect, not a single mistake!' : '.'} Now see it move: start the engine in the Overview.`;
   say('<b>Finished!</b> Every part is in its place.', 'good');
   try { const best = JSON.parse(localStorage.getItem('mz-build') || '{}'); const key = st.bike + '-' + st.level; if (!best[key] || secs < best[key]) { best[key] = secs; localStorage.setItem('mz-build', JSON.stringify(best)); } } catch (e) { /* private mode */ }
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {

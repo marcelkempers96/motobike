@@ -14,7 +14,7 @@ export const MODULES = [m1, m2, m3, m4, m5];
 export const QUESTIONS = [...q1, ...q2, ...q3, ...q4, ...q5];
 export const QBYID = Object.fromEntries(QUESTIONS.map((q) => [q.id, q]));
 
-/* Old/short topic names used by the Lab → module slug */
+/* Old/short topic names used by the Overview → module slug */
 export const TOPIC_ALIAS = {
   anatomy: 'foundations', foundations: 'foundations',
   engine: 'engine',

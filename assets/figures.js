@@ -171,7 +171,7 @@ function ignitionCoil(el) {
   svg.appendChild(txt(150, 250, 'PRIMARY', 'middle', 10, '#C2703F'));
   svg.appendChild(txt(330, 250, 'SECONDARY', 'middle', 10, '#8A4520'));
   const arc = ns('path', { fill: 'none', stroke: '#E2A93B', 'stroke-width': 3 });
-  svg.appendChild(ns('rect', { x: 500, y: 60, width: 14, height: 70, fill: '#F6F5F2', stroke: '#0A0A0A' }));
+  svg.appendChild(ns('rect', { x: 500, y: 60, width: 14, height: 70, fill: '#FFFFFF', stroke: '#0A0A0A' }));
   svg.appendChild(ns('rect', { x: 504, y: 130, width: 6, height: 30, fill: '#8F959C', stroke: '#0A0A0A' }));
   const ground = ns('path', { fill: 'none', stroke: '#5E646A', 'stroke-width': 5 });
   svg.append(ground, arc);
@@ -240,7 +240,7 @@ function gearing(el) {
     const F = [130, 130], R = [400, 130];
     g.appendChild(ns('path', { d: `M ${F[0]} ${F[1] - rf} L ${R[0]} ${R[1] - rr} A ${rr} ${rr} 0 0 1 ${R[0]} ${R[1] + rr} L ${F[0]} ${F[1] + rf} A ${rf} ${rf} 0 0 1 ${F[0]} ${F[1] - rf}`, fill: 'none', stroke: '#0A0A0A', 'stroke-width': 6 }));
     const fg = ns('g', { 'data-g': 'f' }); fg.appendChild(ns('path', { d: gearPath(F[0], F[1], rf, v.f, 4), fill: '#8F959C', stroke: '#0A0A0A' })); fg.appendChild(ns('rect', { x: F[0] - 2, y: F[1] - rf + 6, width: 4, height: 10, fill: '#C2502A' }));
-    const rg = ns('g', { 'data-g': 'r' }); rg.appendChild(ns('path', { d: gearPath(R[0], R[1], rr, v.r, 4), fill: '#E9E5DC', stroke: '#0A0A0A' })); rg.appendChild(ns('rect', { x: R[0] - 2, y: R[1] - rr + 6, width: 4, height: 14, fill: '#C2502A' }));
+    const rg = ns('g', { 'data-g': 'r' }); rg.appendChild(ns('path', { d: gearPath(R[0], R[1], rr, v.r, 4), fill: '#E8E8E8', stroke: '#0A0A0A' })); rg.appendChild(ns('rect', { x: R[0] - 2, y: R[1] - rr + 6, width: 4, height: 14, fill: '#C2502A' }));
     g.append(fg, rg);
     g.appendChild(txt(F[0], 250, `${v.f}T`, 'middle', 11));
     g.appendChild(txt(R[0], 250, `${v.r}T`, 'middle', 11));
@@ -375,8 +375,8 @@ function torqueCurves(el) {
   const ice = (r) => r < 1500 ? 0 : 38 * Math.exp(-(((r - 6500) / 3800) ** 2));
   const BASE = 4500, EVT = 50;
   const ev = (r) => r <= BASE ? EVT : EVT * BASE / r;
-  svg.appendChild(ns('path', { d: 'M 50 40 L 50 260 L 570 260', fill: 'none', stroke: '#B9B3A4' }));
-  [10, 20, 30, 40, 50].forEach((t) => { svg.appendChild(ns('line', { x1: 50, x2: 570, y1: Y(t), y2: Y(t), stroke: '#DDD9CF' })); svg.appendChild(txt(44, Y(t) + 3, t, 'end', 9)); });
+  svg.appendChild(ns('path', { d: 'M 50 40 L 50 260 L 570 260', fill: 'none', stroke: '#C9C9C9' }));
+  [10, 20, 30, 40, 50].forEach((t) => { svg.appendChild(ns('line', { x1: 50, x2: 570, y1: Y(t), y2: Y(t), stroke: '#E6E6E6' })); svg.appendChild(txt(44, Y(t) + 3, t, 'end', 9)); });
   [0, 2500, 5000, 7500, 10000].forEach((r) => svg.appendChild(txt(X(r), 276, r, 'middle', 9)));
   svg.appendChild(txt(50, 30, 'TORQUE NM', 'start', 9));
   const path = (f, from = 0) => { let d = ''; for (let r = from; r <= 10000; r += 100) d += `${d ? 'L' : 'M'} ${X(r).toFixed(1)} ${Y(f(r)).toFixed(1)} `; return d; };

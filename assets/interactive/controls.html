@@ -18,8 +18,8 @@ html.embed .layout{padding-bottom:4px}
 .mz-site a{color:var(--ink);text-decoration:none}.mz-site a:hover{color:var(--accent)}
 .mz-site img{width:22px;height:22px;vertical-align:middle;margin-right:6px}
 :root{
-  --bg:#F7F6F2; --card:#FFFFFF; --ink:#1E2B5E; --text:#232733; --muted:#5D6270;
-  --line:#E2E0D8; --line2:#CFCCC2; --accent:#C8502A; --accent-soft:#F6E3DA;
+  --bg:#FFFFFF; --card:#FFFFFF; --ink:#1E2B5E; --text:#232733; --muted:#5D6270;
+  --line:#E3E3E3; --line2:#CFCCC2; --accent:#C8502A; --accent-soft:#F6E3DA;
   --ok:#1F7A3A; --warn:#A8361A;
   --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
@@ -49,7 +49,7 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 .deck{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .grp h3{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
 .btns{display:flex;flex-wrap:wrap;gap:6px}
-.deck button,.reset{font:500 13px/1 var(--sans);color:var(--ink);background:#F3F2EE;border:1px solid var(--line2);border-radius:8px;padding:9px 11px;min-height:38px;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.deck button,.reset{font:500 13px/1 var(--sans);color:var(--ink);background:#F4F4F4;border:1px solid var(--line2);border-radius:8px;padding:9px 11px;min-height:38px;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none}
 .deck button:hover{background:#ECEAE3}
 .deck button[aria-pressed="true"],.deck button[aria-checked="true"],.deck button.down{background:var(--ink);color:#fff;border-color:var(--ink)}
 .deck button:focus-visible,.reset:focus-visible,.entry:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -68,7 +68,7 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 .entry .nm i{font:500 11px/1 var(--mono);font-style:normal;color:var(--accent);min-width:18px}
 .entry .ds{display:block;font-size:13px;line-height:1.45;color:var(--muted);margin-top:2px;padding-left:26px}
 .keys{margin:12px 4px 0;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-.keys kbd{font:500 11px/1 var(--mono);background:#F1F0EB;border:1px solid var(--line2);border-bottom-width:2px;border-radius:4px;padding:2px 5px;color:var(--ink)}
+.keys kbd{font:500 11px/1 var(--mono);background:#F3F3F3;border:1px solid var(--line2);border-bottom-width:2px;border-radius:4px;padding:2px 5px;color:var(--ink)}
 .panel-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 4px 0}
 .reset{background:var(--ink);color:#fff;border-color:var(--ink)}
 .reset:hover{background:#2A3A78}
@@ -94,7 +94,7 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 @media (hover:none){.wheelhint{display:none}}
 /* electric mode: no starter, choke, clutch or gearbox */
 html.elec .deck button.na{opacity:.4;cursor:not-allowed}
-html.elec .deck button.na:hover{background:#F3F2EE}
+html.elec .deck button.na:hover{background:#F4F4F4}
 @media (max-width:1100px){
   .layout{grid-template-columns:minmax(0,1fr)}
   .panel{position:static;max-height:none}
@@ -111,7 +111,7 @@ html.elec .deck button.na:hover{background:#F3F2EE}
 </style>
 </head>
 <body>
-<nav class="mz-site" aria-label="Moto Zero"><a href="../../"><img src="../brand-mark.svg" alt="">Moto Zero</a><a href="../../">Lab</a><a href="../../cockpit/">Cockpit</a><a href="../../learn/">Learn</a><a href="../../wiring/">Wiring</a><a href="../../models/">Models</a><a href="../../quiz/">Quiz</a><a href="../../build/">Bike builder</a><a href="../../kids/">Kids: Build a bike</a></nav>
+<nav class="mz-site" aria-label="Moto Zero"><a href="../../"><img src="../brand-mark.svg" alt="">Moto Zero</a><a href="../../">Overview</a><a href="../../cockpit/">Cockpit</a><a href="../../learn/">Learn</a><a href="../../wiring/">Wiring</a><a href="../../models/">Models</a><a href="../../quiz/">Quiz</a><a href="../../build/">Bike builder</a><a href="../../kids/">Kids: Build a bike</a></nav>
 <header class="top wrap">
   <p class="eyebrow">Moto Zero &middot; Module 01 &middot; Controls</p>
   <h1>Motorcycle controls</h1>
@@ -260,7 +260,7 @@ function dial(id,o){
     const wx=cx-39, wy=cy+66;
     s+=`<rect x="${wx-3}" y="${wy-3}" width="84" height="24" rx="3" fill="#2a2d31"/>`;
     s+=`<rect x="${wx}" y="${wy}" width="78" height="18" rx="1.5" fill="#050505"/>`;
-    for(let i=0;i<6;i++){ const last=i===5; s+=`<rect x="${wx+i*13+.5}" y="${wy+.5}" width="12" height="17" fill="${last?'#e9e7e0':'#111'}"/>`+
+    for(let i=0;i<6;i++){ const last=i===5; s+=`<rect x="${wx+i*13+.5}" y="${wy+.5}" width="12" height="17" fill="${last?'#EAEAEA':'#111'}"/>`+
       `<text id="odo${i}" x="${wx+i*13+6.5}" y="${wy+13.4}" text-anchor="middle" font-family="${MONO}" font-size="12.5" font-weight="500" fill="${last?'#111':'#eeeeea'}">${'124836'[i]}</text>`; }
     s+=`<rect x="${wx}" y="${wy}" width="78" height="9" fill="#fff" opacity=".07"/>`;
     
@@ -853,7 +853,7 @@ document.addEventListener('keyup',e=>{
 });
 function releaseKeys(){ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; }
 window.addEventListener('blur',()=>{
-  // Embedded: if focus only moved out to the Lab page, the page forwards the keyups, so keep holding.
+  // Embedded: if focus only moved out to the Overview page, the page forwards the keyups, so keep holding.
   setTimeout(()=>{ try{ if(window.parent!==window && window.parent.document.hasFocus()) return; }catch(_){} releaseKeys(); },0);
 });
 
@@ -1059,7 +1059,7 @@ if(ELEC){
   window.__mzWheelShow=show;
 })();
 
-/* embedded in the Lab: hand page shortcuts back to the page */
+/* embedded in the Overview: hand page shortcuts back to the page */
 const EMBED=document.documentElement.classList.contains('embed');
 const COCKPIT=new Set(['k','x','s','c','t','f','r','h','v','b','q','e','ArrowUp','ArrowDown']);
 function post(m){ if(EMBED&&window.parent!==window) try{ window.parent.postMessage(Object.assign({mz:'key'},m),location.origin); }catch(_){} }
@@ -1075,7 +1075,7 @@ if(EMBED){
   document.addEventListener('keyup',e=>{ if(!e.isTrusted) return; const k=e.key.length===1?e.key.toLowerCase():e.key; if(COCKPIT.has(k)) post({key:k,type:'up'}); });
 }
 
-/* hooks for the Lab (same origin) */
+/* hooks for the Overview (same origin) */
 window.__moto = {
   state:()=>S, buildSVG,
   setExtThr:(v)=>{ S.extThr=Math.max(0,Math.min(1,+v||0)); },

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: the Lab
+   Moto Zero: Overview and components (index.html) and Cockpit (cockpit/index.html)
    One page, one app. See moto-spec/01-SPEC.md, 02-DESIGN.md, 03-FUNCTIONS.md.
    ========================================================================== */
 import {
@@ -66,6 +66,7 @@ const ICON = {
    ========================================================================== */
 function render() {
   const root = $('#ute-root');
+  const PAGE = root.dataset.page || 'overview';
   const info = MODE_INFO[S.mode];
   root.innerHTML = `
     <header class="ute-top">
@@ -74,7 +75,7 @@ function render() {
         <span class="ute-brand-word">moto zero</span>
         <span class="ute-brand-sub">Transitions Lab</span>
       </a>
-      <nav class="ute-nav" aria-label="Sections"><a href="" aria-current="page">Lab</a><a href="cockpit/">Cockpit</a><a href="learn/">Learn</a><a href="wiring/">Wiring</a><a href="models/">Models</a><a href="quiz/">Quiz</a><a href="sources/">Sources</a><a class="ute-nav-kids" href="build/">Bike builder</a><a class="ute-nav-kids" href="kids/">Kids: Build a bike</a></nav>
+      <nav class="ute-nav" aria-label="Sections"><a href="./"${PAGE === 'overview' ? ' aria-current="page"' : ''}>Overview</a><a href="cockpit/"${PAGE === 'cockpit' ? ' aria-current="page"' : ''}>Cockpit</a><a href="learn/">Learn</a><a href="wiring/">Wiring</a><a href="models/">Models</a><a href="quiz/">Quiz</a><a href="sources/">Sources</a><a class="ute-nav-kids" href="build/">Bike builder</a><a class="ute-nav-kids" href="kids/">Kids: Build a bike</a></nav>
       <span class="ute-top-spacer"></span>
       <div class="ute-seg ute-mode-switch" role="group" aria-label="Mode">
         ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}">${MODE_INFO[m].short}</button>`).join('')}
@@ -85,6 +86,7 @@ function render() {
       </div>
     </header>
 
+${PAGE === 'overview' ? `
     <section class="ute-section ute-overview" aria-labelledby="ov-h">
       <div class="ute-section-head">
         <div>
@@ -107,10 +109,12 @@ function render() {
 
     <section class="ute-cview" id="ute-cview-slot" aria-live="polite"></section>
 
+` : ''}
+${PAGE === 'cockpit' ? `
     <section class="ute-section ute-rider" aria-labelledby="ride-h">
       <div class="ute-section-head">
         <div>
-          <h2 id="ride-h">Ride</h2>
+          <h2 id="ride-h">Cockpit</h2>
           <p class="ute-sub">The rider’s-eye cockpit: every control works and it drives the 3D bike, the close-ups and the dyno.${S.mode === 'elec' ? ' Electric mode: no starter, clutch or gears.' : ''}</p>
         </div>
         <a class="ute-linkbtn" href="${cockpitSrc().replace('embed=1&', '').replace('?embed=1', '')}" target="_blank" rel="noopener">Open full screen ↗</a>
@@ -140,6 +144,7 @@ function render() {
       </div>
     </section>
 
+` : ''}
     <footer class="ute-footer">
       <span>Moto Zero · Transitions Lab · CC BY-SA 4.0 · numbers are illustrative</span>
       <span><a href="learn/">Learn the theory →</a> · <a href="quiz/">Test yourself →</a> · <a href="sources/">Sources &amp; credits</a></span>
@@ -147,7 +152,7 @@ function render() {
 
     <div class="ute-modal" id="ute-help" role="dialog" aria-modal="true" aria-labelledby="help-h">
       <div class="ute-modal-box">
-        <h3 id="help-h">How to use the Lab</h3>
+        <h3 id="help-h">How to use this page</h3>
         <p>Pick a bike at the top. Drag the 3D model to look around (one finger on a phone, pinch to zoom) and click or tap any part: it lights up orange and its close-up opens below with a working animation, the part’s own 3D model and its course plates. Tap it again or press Esc to clear. A system chip (Powertrain, Wheels…) fades everything else. Parts marked <b style="color:var(--warm)">●</b> are interactive: hold the big green button to drive them.</p>
         <div class="ute-kbd">
           <kbd>Space</kbd><span>Pause / resume the engine animation</span>
@@ -169,7 +174,7 @@ function render() {
           <kbd>Q / E</kbd><span>Indicate left / right</span>
           <kbd>B · V</kbd><span>High beam · choke</span>
         </div>
-        <p>Use <b>Ride</b> to feel the bike and <b>Dyno</b> to record a run. Want the theory first? Head to <a href="learn/">Learn</a>, then try the <a href="quiz/">Quiz</a>.</p>
+        <p>Ride the bike and record runs on the dyno in the <a href="cockpit/">Cockpit</a>. Want the theory first? Head to <a href="learn/">Learn</a>, then try the <a href="quiz/">Quiz</a>.</p>
         <div class="ute-btnrow" style="justify-content:flex-end"><button class="ute-btn is-primary" type="button" data-help-close>Got it</button></div>
       </div>
     </div>
@@ -192,14 +197,14 @@ function wireChrome() {
     $$('.ute-chips [data-cat]').forEach((x) => x.classList.toggle('is-on', x.dataset.cat === S.category));
     applyMotoCategory();
   }));
-  $('[data-open-cv="wiring"]').addEventListener('click', () => selectPart('wiring', true));
+  $('[data-open-cv="wiring"]')?.addEventListener('click', () => selectPart('wiring', true));
   $('[data-run]').addEventListener('click', toggleRun);
   $('[data-help]').addEventListener('click', openHelp);
   $('[data-help-close]').addEventListener('click', closeHelp);
   $('#ute-help').addEventListener('click', (e) => { if (e.target.id === 'ute-help') closeHelp(); });
-  $('[data-dyno="start"]').addEventListener('click', toggleDyno);
-  $('[data-dyno="reset"]').addEventListener('click', resetDyno);
-  $('[data-dyno="csv"]').addEventListener('click', exportDynoCSV);
+  $('[data-dyno="start"]')?.addEventListener('click', toggleDyno);
+  $('[data-dyno="reset"]')?.addEventListener('click', resetDyno);
+  $('[data-dyno="csv"]')?.addEventListener('click', exportDynoCSV);
   $('#mz-lightbox').addEventListener('click', (e) => { if (e.target.id === 'mz-lightbox' || e.target.closest('[data-lb-close]')) closePlate(); });
 }
 
@@ -586,7 +591,7 @@ function engineView(title, focus) {
       <svg class="ute-cv-svg" id="cv-engine" role="img" aria-label="Engine cross-section"></svg>
       <div class="ute-under" id="cv-engine-under"><span class="ute-stroke-badge" id="cv-badge"><i></i><span>Intake</span></span></div>`,
     sideHTML: () => card('Parameters', `<div class="ute-sliders">
-        ${slider('base_rpm', 'Demo RPM (engine off in Ride)', 600, 10000, 100, S.base_rpm)}
+        ${slider('base_rpm', 'Demo RPM (cockpit engine off)', 600, 10000, 100, S.base_rpm)}
         ${slider('bore_mm', 'Bore', 50, 100, 1, S.bore_mm, 'mm')}
         ${slider('stroke_mm', 'Stroke', 40, 90, 1, S.stroke_mm, 'mm')}
         ${slider('compression', 'Compression ratio', 7, 14, 0.1, S.compression, ':1')}
@@ -629,7 +634,7 @@ function engineView(title, focus) {
       }
       setStatus(r.spark ? 'Spark!' : s.label, STROKE_DESC[S.mode][s.k], `θ ${Math.round(S.crank_deg)}° · ${Math.round(S.rpm)} rpm${S.live ? '' : ' (demo)'}`);
       const lv = $('#cv-live');
-      if (lv) { const t = S.live ? 'Live from Ride: the cockpit engine is running.' : 'Demo idle. Start the engine in Ride below and this follows its rpm.'; if (lv.textContent !== t) { lv.textContent = t; lv.classList.toggle('is-live', !!S.live); } }
+      if (lv) { const t = S.live ? 'Live from the Cockpit: the engine is running.' : 'Demo idle. Start the engine in the Cockpit and this follows its rpm.'; if (lv.textContent !== t) { lv.textContent = t; lv.classList.toggle('is-live', !!S.live); } }
     },
   };
 }
@@ -711,7 +716,7 @@ COMPONENT_VIEWS.motor = {
       svg.appendChild(g);
     }
     // Air gap
-    svg.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 114, fill: '#FBFAF7', stroke: '#B9B3A4', 'stroke-width': 1, 'stroke-dasharray': '3 3' }));
+    svg.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 114, fill: '#FFFFFF', stroke: '#C9C9C9', 'stroke-width': 1, 'stroke-dasharray': '3 3' }));
     // Rotor
     const rotor = ns('g');
     rotor.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 110, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 2 }));
@@ -724,7 +729,7 @@ COMPONENT_VIEWS.motor = {
     }
     for (let i = 0; i < 6; i++) {
       const a = i / 6 * Math.PI * 2;
-      rotor.appendChild(ns('circle', { cx: C[0] + Math.cos(a) * 55, cy: C[1] + Math.sin(a) * 55, r: 12, fill: '#FBFAF7', stroke: '#0A0A0A', 'stroke-width': 1 }));
+      rotor.appendChild(ns('circle', { cx: C[0] + Math.cos(a) * 55, cy: C[1] + Math.sin(a) * 55, r: 12, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1 }));
     }
     rotor.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 24, fill: 'url(#m-chrome)', stroke: '#0A0A0A', 'stroke-width': 2 }));
     rotor.appendChild(ns('rect', { x: C[0] - 4, y: C[1] - 24, width: 8, height: 10, fill: '#0A0A0A' }));
@@ -776,7 +781,7 @@ COMPONENT_VIEWS.carb = {
     // Bowl + jet
     svg.appendChild(ns('rect', { x: 240, y: 250, width: 120, height: 70, fill: 'url(#m-alu)', stroke: '#0A0A0A', 'stroke-width': 2 }));
     svg.appendChild(ns('rect', { x: 246, y: 274, width: 108, height: 40, fill: '#E2A93B', opacity: 0.55 }));
-    svg.appendChild(ns('rect', { x: 268, y: 266, width: 40, height: 14, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.2 }));
+    svg.appendChild(ns('rect', { x: 268, y: 266, width: 40, height: 14, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.2 }));
     svg.appendChild(ns('rect', { x: 296, y: 200, width: 8, height: 74, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 1 }));
     // Flow area labels
     svg.appendChild(txt(40, 76, 'AIR IN →', 'start', 10, '#3E6FB7'));
@@ -851,7 +856,7 @@ COMPONENT_VIEWS.spark_plug = {
     defsPackMetals();
     const svg = $('#cv-spark');
     svg.appendChild(iso3DBox(40, 250, 90, 60, 30, { front: '#2A2826', top: '#4A4642', right: '#1A1816' }));
-    svg.appendChild(txt(85, 286, '12 V', 'middle', 13, '#F6F5F2'));
+    svg.appendChild(txt(85, 286, '12 V', 'middle', 13, '#FFFFFF'));
     svg.appendChild(ns('rect', { x: 52, y: 236, width: 14, height: 8, fill: '#C2502A', stroke: '#0A0A0A' }));
     svg.appendChild(ns('path', { d: 'M 59 236 L 59 200 L 190 200', fill: 'none', stroke: '#C2502A', 'stroke-width': 3 }));
     // Coil
@@ -871,8 +876,8 @@ COMPONENT_VIEWS.spark_plug = {
     // Plug
     const X = 490;
     svg.appendChild(ns('rect', { x: X - 18, y: 36, width: 36, height: 22, fill: '#2A2826', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-    svg.appendChild(ns('rect', { x: X - 14, y: 58, width: 28, height: 70, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-    for (let i = 0; i < 4; i++) svg.appendChild(ns('line', { x1: X - 14, x2: X + 14, y1: 66 + i * 12, y2: 66 + i * 12, stroke: '#B9B3A4' }));
+    svg.appendChild(ns('rect', { x: X - 14, y: 58, width: 28, height: 70, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+    for (let i = 0; i < 4; i++) svg.appendChild(ns('line', { x1: X - 14, x2: X + 14, y1: 66 + i * 12, y2: 66 + i * 12, stroke: '#C9C9C9' }));
     svg.appendChild(hexBolt(X, 140, 22));
     svg.appendChild(ns('rect', { x: X - 16, y: 154, width: 32, height: 40, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
     for (let i = 0; i < 6; i++) svg.appendChild(ns('line', { x1: X - 16, x2: X + 16, y1: 158 + i * 6, y2: 162 + i * 6, stroke: '#0A0A0A', 'stroke-width': 0.8 }));
@@ -948,13 +953,13 @@ COMPONENT_VIEWS.chain = {
     defsPackMetals();
     const svg = $('#cv-chain');
     const FR = [230, 180], RR = [520, 180];
-    svg.appendChild(iso3DBox(20, 110, 150, 140, 40, { front: '#B8B2A6', top: '#E9E5DC', right: '#7E776B' }));
+    svg.appendChild(iso3DBox(20, 110, 150, 140, 40, { front: '#BDBDBD', top: '#E8E8E8', right: '#7A7A7A' }));
     svg.appendChild(txt(95, 186, 'ENGINE', 'middle', 11, '#0A0A0A'));
     svg.appendChild(txt(95, 202, '+ GEARBOX', 'middle', 9, '#2A2826'));
     // Wheel
     const wheelG = ns('g');
     wheelG.appendChild(ns('circle', { cx: RR[0], cy: RR[1], r: 160, fill: 'url(#m-tyre)', stroke: '#0A0A0A', 'stroke-width': 2 }));
-    wheelG.appendChild(ns('circle', { cx: RR[0], cy: RR[1], r: 138, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+    wheelG.appendChild(ns('circle', { cx: RR[0], cy: RR[1], r: 138, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
     const spokes = ns('g');
     for (let i = 0; i < 24; i++) {
       const a = i / 24 * Math.PI * 2;
@@ -968,14 +973,14 @@ COMPONENT_VIEWS.chain = {
     rs.appendChild(ns('path', { d: gearPath(RR[0], RR[1], 70, 39, 6), fill: 'url(#m-alu)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
     for (let i = 0; i < 5; i++) {
       const a = i / 5 * Math.PI * 2;
-      rs.appendChild(ns('circle', { cx: RR[0] + Math.cos(a) * 40, cy: RR[1] + Math.sin(a) * 40, r: 13, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.2 }));
+      rs.appendChild(ns('circle', { cx: RR[0] + Math.cos(a) * 40, cy: RR[1] + Math.sin(a) * 40, r: 13, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.2 }));
     }
     rs.appendChild(ns('circle', { cx: RR[0], cy: RR[1], r: 14, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
     svg.appendChild(rs);
     // Chain
     const chainD = `M ${FR[0]} ${FR[1] - 28} L ${RR[0]} ${RR[1] - 70} A 70 70 0 0 1 ${RR[0]} ${RR[1] + 70} L ${FR[0]} ${FR[1] + 28} A 28 28 0 0 1 ${FR[0]} ${FR[1] - 28} Z`;
     svg.appendChild(ns('path', { d: chainD, fill: 'none', stroke: '#0A0A0A', 'stroke-width': 9 }));
-    const hatch = ns('path', { d: chainD, fill: 'none', stroke: '#B9B3A4', 'stroke-width': 5, 'stroke-dasharray': '6 4' });
+    const hatch = ns('path', { d: chainD, fill: 'none', stroke: '#C9C9C9', 'stroke-width': 5, 'stroke-dasharray': '6 4' });
     svg.appendChild(hatch);
     // Front sprocket
     const fs = ns('g');
@@ -1034,7 +1039,7 @@ COMPONENT_VIEWS.brake = {
     const C = [230, 200];
     const disc = ns('g');
     disc.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 160, fill: 'url(#m-chrome)', stroke: '#0A0A0A', 'stroke-width': 2 }));
-    disc.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 92, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+    disc.appendChild(ns('circle', { cx: C[0], cy: C[1], r: 92, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
     for (let ring = 0; ring < 2; ring++) {
       for (let i = 0; i < 24; i++) {
         const a = (i + ring * 0.5) / 24 * Math.PI * 2;
@@ -1059,13 +1064,13 @@ COMPONENT_VIEWS.brake = {
     // Section A-A
     const SX = 540;
     svg.appendChild(txt(SX, 60, 'SECTION A-A', 'middle', 10, '#0A0A0A'));
-    svg.appendChild(ns('path', { d: `M ${SX - 80} 90 L ${SX + 80} 90 L ${SX + 80} 320 L ${SX - 80} 320 Z`, fill: '#F2EEE4', stroke: '#0A0A0A', 'stroke-width': 2 }));
+    svg.appendChild(ns('path', { d: `M ${SX - 80} 90 L ${SX + 80} 90 L ${SX + 80} 320 L ${SX - 80} 320 Z`, fill: '#F2F2F2', stroke: '#0A0A0A', 'stroke-width': 2 }));
     svg.appendChild(ns('rect', { x: SX - 6, y: 70, width: 12, height: 270, fill: 'url(#m-chrome)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
     const mk = (side) => {
       const g = ns('g');
       const x = side < 0 ? SX - 70 : SX + 22;
-      g.appendChild(ns('rect', { x, y: 130, width: 48, height: 40, fill: '#E9E5DC', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-      g.appendChild(ns('rect', { x, y: 240, width: 48, height: 40, fill: '#E9E5DC', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+      g.appendChild(ns('rect', { x, y: 130, width: 48, height: 40, fill: '#E8E8E8', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+      g.appendChild(ns('rect', { x, y: 240, width: 48, height: 40, fill: '#E8E8E8', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
       g.appendChild(ns('rect', { x: side < 0 ? SX - 22 : SX + 6, y: 120, width: 16, height: 170, fill: '#5E646A', stroke: '#0A0A0A', 'stroke-width': 1.2 }));
       svg.appendChild(g);
       return g;
@@ -1123,7 +1128,7 @@ COMPONENT_VIEWS.battery = {
     if (el) {
       svg.appendChild(iso3DBox(90, 90, 400, 220, 80, { front: '#2B2F33', top: '#4A5056', right: '#1A1D20' }));
       for (let r = 0; r < 4; r++) for (let c = 0; c < 12; c++) svg.appendChild(ns('circle', { cx: 112 + c * 32, cy: 124 + r * 34, r: 12, fill: '#1D6B55', stroke: '#0A0A0A', 'stroke-width': 1, opacity: 0.85 }));
-      svg.appendChild(ns('rect', { x: 200, y: 262, width: 180, height: 36, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+      svg.appendChild(ns('rect', { x: 200, y: 262, width: 180, height: 36, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
       svg.appendChild(txt(290, 285, 'HV PACK · 400 V', 'middle', 12, '#1D6B55'));
       for (let i = 0; i < 7; i++) svg.appendChild(ns('line', { x1: 500 + i * 8, y1: 120 - i * 4, x2: 500 + i * 8, y2: 280 - i * 4, stroke: '#5A5F66', 'stroke-width': 2 }));
       svg.appendChild(ns('rect', { x: 130, y: 50, width: 30, height: 20, fill: '#C2502A', stroke: '#0A0A0A' }));
@@ -1135,7 +1140,7 @@ COMPONENT_VIEWS.battery = {
       svg.appendChild(ns('rect', { x: 360, y: 70, width: 34, height: 26, fill: '#6B6963', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
       svg.appendChild(txt(217, 64, '+', 'middle', 16, '#C2502A'));
       svg.appendChild(txt(377, 64, '−', 'middle', 16, '#0A0A0A'));
-      svg.appendChild(ns('rect', { x: 210, y: 180, width: 180, height: 60, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
+      svg.appendChild(ns('rect', { x: 210, y: 180, width: 180, height: 60, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
       svg.appendChild(txt(300, 208, '12 V', 'middle', 18, '#0A0A0A'));
       svg.appendChild(txt(300, 228, '6 CELLS × 2.1 V', 'middle', 10));
       setStat('bt_v', 12.6); setStat('bt_e', 12); setStat('bt_c', 120);
@@ -1170,7 +1175,7 @@ COMPONENT_VIEWS.controller = {
         const glow = ns('rect', { x, y, width: 80, height: 50, fill: '#E2A93B', opacity: 0 });
         svg.appendChild(glow);
         fets.push({ glow, ph, hl });
-        svg.appendChild(txt(x + 40, y + 34, `${'UVW'[ph]}${hl ? '−' : '+'}`, 'middle', 11, '#F6F5F2'));
+        svg.appendChild(txt(x + 40, y + 34, `${'UVW'[ph]}${hl ? '−' : '+'}`, 'middle', 11, '#FFFFFF'));
       }
     }
     svg.appendChild(ns('rect', { x: 100, y: 236, width: 440, height: 8, fill: '#C2502A', stroke: '#0A0A0A' }));
@@ -1640,7 +1645,7 @@ function renderDyno(force) {
     if (c.auto) max = niceCeil(Math.max(c.auto, ...c.series.map(([k]) => (k === 'speed' ? d.peak_speed : k === 'kw' ? d.peak_power : 0)) ) * 1.05);
     const Y = (v) => (200 - clamp(v / max, 0, 1) * 192).toFixed(1);
     const yTicks = c.k === 'gear' ? [0, 1, 2, 3, 4, 5] : [0, max / 2, max];
-    let svg = yTicks.map((v) => `<line x1="0" x2="1000" y1="${Y(v)}" y2="${Y(v)}" stroke="#DDD9CF" vector-effect="non-scaling-stroke"/>`).join('');
+    let svg = yTicks.map((v) => `<line x1="0" x2="1000" y1="${Y(v)}" y2="${Y(v)}" stroke="#E6E6E6" vector-effect="non-scaling-stroke"/>`).join('');
     for (let t = xt; t < span; t += xt) svg += `<line x1="${X(t)}" x2="${X(t)}" y1="0" y2="200" stroke="#EEEBE3" vector-effect="non-scaling-stroke"/>`;
     if (c.red) svg += `<rect x="0" y="0" width="1000" height="${Y(c.red)}" fill="#B8322A" fill-opacity="0.07"/>`;
     d.events.forEach((ev) => { if (ev.type !== 'test') svg += `<line x1="${X(ev.t)}" x2="${X(ev.t)}" y1="0" y2="200" stroke="${C_EV[ev.type]}" stroke-opacity=".35" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>`; });

@@ -235,7 +235,7 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
+          "title": "Try it in the Overview",
           "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and click the clutch cover hotspot: the clutch sits behind the right-hand crankcase cover, on the gearbox input shaft. Then open the <a href=\"../?mode=4t&part=engine\">engine</a>, set the RPM slider to 3000, 6000 and 9000 rpm and work out the clutch basket speed behind a 3.4:1 primary reduction (about 880, 1760 and 2650 rpm)."
         },
         {
@@ -435,7 +435,7 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
+          "title": "Try it in the Overview",
           "html": "Set the <a href=\"../?mode=4t&part=engine\">engine</a> to 7500 and then 9000 rpm and calculate the mean piston speed for the K-Light 125 stroke of 49.5 mm (12.4 and 14.9 m/s). Then open the <a href=\"../?mode=4t&part=chain\">chain and final drive</a>, hold REV and read engine speed, wheel speed and road speed together, and compare them with the road speeds in the table above to see how much of the speed range each gear covers."
         },
         {
@@ -1710,7 +1710,7 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
+          "title": "Try it in the Overview",
           "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and work through its hotspots from the front tyre to the tail light, using plate F06 (Module 01) for the full list of 30 assemblies from Fuel tank to Tail light and indicators. For each, name the inspection from this chapter that applies, for example Drive chain: slack, wear length, lubrication; Front fork: leaks, oil level, clamp bolt torque."
         },
         {

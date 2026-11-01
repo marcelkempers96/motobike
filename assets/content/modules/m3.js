@@ -129,8 +129,8 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
-          "html": "Open the <a href=\"../?mode=4t&part=engine\">engine in the Lab</a>, set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125) and run it at 1500 and then 9000 rpm. Work out how the time available for the 180° intake stroke falls from 20 ms to 3.3 ms. Then open the <a href=\"../?mode=4t&part=air_filter\">air filter</a> and the <a href=\"../?mode=4t&part=carb\">carburettor</a>, and on the <a href=\"../?mode=4t&view=diagram\">course plate</a> trace the air path from the airbox through the throttle body to the inlet valve."
+          "title": "Try it in the Overview",
+          "html": "Open the <a href=\"../?mode=4t&part=engine\">engine in the Overview</a>, set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125) and run it at 1500 and then 9000 rpm. Work out how the time available for the 180° intake stroke falls from 20 ms to 3.3 ms. Then open the <a href=\"../?mode=4t&part=air_filter\">air filter</a> and the <a href=\"../?mode=4t&part=carb\">carburettor</a>, and on the <a href=\"../?mode=4t&view=diagram\">course plate</a> trace the air path from the airbox through the throttle body to the inlet valve."
         },
         {
           "type": "h3",
@@ -678,7 +678,7 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
+          "title": "Try it in the Overview",
           "html": "Run the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> and move the RPM slider from 1500 to 9000 rpm. The power stroke stays at 180° of crank angle but shrinks from 20 ms to 3.3 ms, while the flame needs roughly the same time to burn whatever the engine speed, which is why the spark must advance as revs rise. Then open the <a href=\"../?mode=4t&part=spark_plug\">spark plug</a> panel, hold IGNITE to build current in the coil and release it to fire the plug."
         },
         {

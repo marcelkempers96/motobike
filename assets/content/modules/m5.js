@@ -213,7 +213,7 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
+          "title": "Try it in the Overview",
           "html": "Compare the <a href=\"../?mode=4t&view=diagram\">four-stroke</a> and <a href=\"../?mode=elec&view=diagram\">electric</a> course plates. Using plate F06 (Module 01), list every assembly from Engine (14) to Drive chain (22) and from Battery (27) to Regulator/rectifier (29), and write for each whether an electric component replaces it, it remains unchanged, or it disappears. For example, the throttle body and injector have no electric equivalent, the battery becomes the auxiliary 12 V battery, and the regulator/rectifier is replaced by the <a href=\"../?mode=elec&part=dc_dc\">DC-DC converter</a>."
         },
         {
@@ -1436,8 +1436,8 @@ export default {
         {
           "type": "callout",
           "tone": "try",
-          "title": "Try it in the Lab",
-          "html": "Set the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> to bore 52 mm and stroke 58 mm (close to a 52.4 × 57.8 mm 125 cc single) and confirm a displacement of about 123 cm³, then move the RPM slider to 7500 rpm. If this engine delivers 8 kW at 30 % thermal efficiency, it consumes fuel energy at about 27 kW. Compare that with the 1.2 kW drawn by the charger in the worked example above, and with a petrol pump delivering 30 L/min, which transfers fuel energy at about 16 MW (30 × 8.9 kWh per minute). Then open the <a href=\"../?mode=elec&part=charge_port\">charge port</a> and <a href=\"../?mode=elec&part=battery\">battery</a> in the Lab."
+          "title": "Try it in the Overview",
+          "html": "Set the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> to bore 52 mm and stroke 58 mm (close to a 52.4 × 57.8 mm 125 cc single) and confirm a displacement of about 123 cm³, then move the RPM slider to 7500 rpm. If this engine delivers 8 kW at 30 % thermal efficiency, it consumes fuel energy at about 27 kW. Compare that with the 1.2 kW drawn by the charger in the worked example above, and with a petrol pump delivering 30 L/min, which transfers fuel energy at about 16 MW (30 × 8.9 kWh per minute). Then open the <a href=\"../?mode=elec&part=charge_port\">charge port</a> and <a href=\"../?mode=elec&part=battery\">battery</a> in the Overview."
         },
         {
           "type": "check",
