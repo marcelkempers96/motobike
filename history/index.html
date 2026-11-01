@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · History</title>
+  <meta name="description" content="A short history of the motorcycle, from the steam velocipedes of 1868 to fuel injection, ABS, electric fleets and battery swapping.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261101c">
+  <style>
+.ute-hero { padding: 64px 40px 52px; border-bottom: 1px solid var(--line); }
+.ute-hero h1 { max-width: 880px; }
+.ute-hero p { max-width: 720px; line-height: 1.55; }
+.ute-chapter { padding: 60px 40px; border-bottom: 1px solid var(--line); }
+.ute-chapter h2 { font-size: 28px; margin-bottom: 12px; max-width: 880px; }
+.ute-chapter .lead { font-size: 17px; line-height: 1.6; max-width: 720px; }
+.ute-chapter .prose { font-size: 16px; line-height: 1.65; max-width: 720px; }
+.ute-chapter h3 { font-size: 19px; font-weight: 600; margin: 36px 0 10px; }
+.ute-chapter-kicker { margin-bottom: 14px; }
+.ute-callbox { border-left-width: 2px; padding: 14px 18px; font-size: 15px; }
+.ute-chapter-foot { margin-top: 28px; }
+.ute-keys { margin: 24px 0; max-width: 1160px; }
+.ute-keys .k { padding: 18px 18px 16px; }
+.ute-keys .k .v { font-family: var(--sans); font-size: 26px; font-weight: 600; margin: 6px 0 4px; }
+.ute-keys .k p { font-size: 14px; color: var(--ink-soft); }
+.ute-table { font-size: 14.5px; }
+.ute-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); }
+.ute-table th { padding: 10px 12px; }
+.mz-skip { position: absolute; left: -9999px; }
+@media (max-width: 720px) {
+  .ute-hero { padding: 40px 16px 32px; }
+  .ute-hero h1 { font-size: 31px; }
+  .ute-hero p { font-size: 16px; }
+  .ute-chapter { padding: 44px 16px; }
+  .ute-chapter h2 { font-size: 24px; }
+  .ute-chapter .lead { font-size: 16px; }
+}
+
+.mz-h-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; align-items: center; }
+.mz-h-hero p { font-size: 18px; }
+.mz-h-lead { margin: 0; }
+.mz-h-lead img { display: block; width: 100%; height: auto; }
+.mz-h-lead figcaption, .mz-hfig figcaption { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); margin-top: 10px; }
+.mz-h-lead figcaption span, .mz-hfig figcaption span { display: block; color: var(--mute); font-size: 12.5px; margin-top: 2px; }
+.mz-jumpbar { padding-top: 0; padding-bottom: 0; }
+.mz-jump { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-left: 1px solid var(--line); }
+.mz-jump a { padding: 18px 16px; border-right: 1px solid var(--line); text-decoration: none; color: var(--ink); font: 600 15px/1.3 var(--sans); }
+.mz-jump a span { display: block; font: 600 12px/1.2 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); margin-bottom: 6px; }
+.mz-jump a:hover { background: #F6F6F6; }
+.mz-era { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 72px; align-items: start; padding: 48px 0; border-top: 1px solid var(--line-soft); scroll-margin-top: 70px; max-width: 1200px; }
+.mz-era:first-of-type { margin-top: 28px; }
+.mz-era h3 { font-size: 26px; margin: 8px 0 8px; }
+.mz-era .ute-label { color: var(--warm); font-size: 12px; }
+.mz-era-intro { font-size: 16.5px; line-height: 1.6; max-width: 640px; margin-bottom: 28px; }
+.mz-tl { list-style: none; margin: 0; padding: 0; max-width: 720px; }
+.mz-tl li { position: relative; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; padding: 0 0 26px; }
+.mz-tl li::before { content: ""; position: absolute; left: 138px; top: 6px; bottom: -6px; width: 1px; background: var(--line); }
+.mz-tl li:last-child::before { display: none; }
+.mz-tl li::after { content: ""; position: absolute; left: 134px; top: 5px; width: 9px; height: 9px; background: #FFFFFF; border: 1.5px solid var(--ink); }
+.mz-tl li > div { padding-left: 14px; }
+.mz-tl .yr { font: 600 15px/1.35 var(--mono); color: var(--ink); text-align: right; }
+.mz-tl h4 { font: 600 17px/1.35 var(--sans); color: var(--ink); margin: 0 0 4px; }
+.mz-tl p { margin: 0; font-size: 15.5px; line-height: 1.6; }
+.mz-era-side { position: sticky; top: 90px; padding-top: 34px; }
+.mz-hfig { margin: 0; }
+.mz-hfig img { display: block; width: 100%; height: auto; }
+.mz-hfig.is-portrait img { max-height: 520px; object-fit: cover; }
+.mz-hfig.is-plate a { display: block; border: 1px solid var(--line); padding: 10px; background: #FFFFFF; }
+.mz-four { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.mz-four div { background: #FFFFFF; padding: 16px; }
+.mz-four b { display: block; font: 600 22px/1.2 var(--sans); color: var(--ink); margin: 6px 0 2px; }
+.mz-four p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+.mz-era-side .ute-callbox { margin: 0; }
+.mz-today { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; max-width: 1200px; }
+.mz-today a { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: var(--ink-soft); border: 1px solid var(--line); padding: 16px 16px 20px; }
+.mz-today a:hover { border-color: var(--ink); }
+.mz-today img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #FFFFFF; margin-bottom: 8px; }
+.mz-today b { font: 600 18px/1.3 var(--sans); color: var(--ink); }
+.mz-today span { font-size: 14.5px; line-height: 1.5; }
+@media (max-width: 1100px) { .mz-jump { grid-template-columns: repeat(3, minmax(0, 1fr)); } .mz-jump a { border-bottom: 1px solid var(--line); } }
+@media (max-width: 960px) {
+  .mz-h-hero { grid-template-columns: 1fr; gap: 28px; }
+  .mz-era { grid-template-columns: 1fr; gap: 24px; padding: 36px 0; }
+  .mz-era-side { position: static; padding-top: 0; max-width: 560px; }
+  .mz-hfig.is-portrait img { max-height: 420px; }
+  .mz-today { grid-template-columns: 1fr; max-width: 520px; }
+}
+@media (max-width: 720px) { .mz-jumpbar { padding: 0 16px; } }
+@media (max-width: 540px) {
+  .mz-jump { grid-template-columns: 1fr 1fr; }
+  .mz-jump a { padding: 14px 12px; font-size: 14px; }
+  .mz-era h3 { font-size: 22px; }
+  .mz-tl li { grid-template-columns: 1fr; gap: 2px; padding: 0 0 22px 22px; }
+  .mz-tl li::before { left: 4px; top: 8px; }
+  .mz-tl li::after { left: 0; top: 4px; }
+  .mz-tl .yr { text-align: left; }
+  .mz-tl li > div { padding-left: 0; }
+  .mz-four b { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero mz-h-hero">
+    <div>
+      <span class="ute-label">Course · history</span>
+      <h1>A short history of the motorcycle</h1>
+      <p>Every part on a modern motorcycle answers a problem someone met along the way: an engine that could not idle, a front wheel that slid, exhaust that broke the emission rules. This timeline follows those problems from the steam velocipedes of 1868 to battery swapping.</p>
+    </div>
+    <figure class="mz-h-lead">
+      <img src="../assets/photos/curtiss-1907.jpg" alt="Early Curtiss racing motorcycle with a long multi-cylinder engine slung low in a bicycle-style diamond frame, narrow tyres and a sprung saddle" width="1800" height="1268">
+      <figcaption>An early Curtiss racing motorcycle: an air-cooled multi-cylinder engine slung low in a frame inherited from the safety bicycle. <span>Photograph, Transitions Lab collection</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="ute-chapter mz-jumpbar" aria-label="Eras">
+    <nav class="mz-jump"><a href="#before"><span>1867 to 1888</span>Four inventions meet</a><a href="#first"><span>1894 to 1903</span>The first motorcycles</a><a href="#interwar"><span>1912 to 1950</span>Two-strokes, twins and better forks</a><a href="#mass"><span>1958 to 1975</span>Mass production</a><a href="#rules"><span>1970s to 2020</span>Rules shape the machine</a><a href="#electric"><span>2015 to today</span>The electric transition</a></nav>
+  </section>
+
+  <section class="ute-chapter" id="timeline">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">A</span><span class="ute-label">Timeline</span></div>
+    <h2>From steam velocipede to battery swapping</h2>
+    <p class="lead">Six periods, each with the dates and machines that changed how motorcycles are built. Dates and facts come from chapter 1.1 of Module 01 and from the history notes in Modules 03 to 05.</p>
+    
+    <div class="mz-era" id="before">
+      <div class="mz-era-main">
+        <span class="ute-label">1867 to 1888</span>
+        <h3>Four inventions meet</h3>
+        <p class="mz-era-intro">A practical motorcycle needed a compact engine, the pneumatic tyre, the roller chain and a frame able to carry a rider and a power unit. All four arrived within about twenty years.</p>
+        <ol class="mz-tl">
+          <li><span class="yr">1867–69</span><div><h4>Roper’s steam velocipede</h4><p>Sylvester Roper builds a steam-powered two-wheeler in the United States, one of the first powered machines of its kind.</p></div></li>
+          <li><span class="yr">1868</span><div><h4>Perreaux patents a small steam engine</h4><p>Louis Guillaume Perreaux files his patent on 26 December 1868. By 1871 the engine is fitted to a Michaux iron-framed velocipede, with a pulley drive to the rear wheel.</p></div></li>
+          <li><span class="yr">1876</span><div><h4>Otto runs a four-stroke engine</h4><p>Nikolaus Otto runs a four-stroke engine: intake, compression, power, exhaust. Most combustion motorcycles still use this cycle.</p></div></li>
+          <li><span class="yr">1880</span><div><h4>The bush roller chain</h4><p>Renold’s bush roller chain gives a compact way to take drive to the rear wheel.</p></div></li>
+          <li><span class="yr">1885</span><div><h4>The Daimler Reitwagen</h4><p>Gottlieb Daimler and Wilhelm Maybach mount a small high-speed petrol engine in a wooden frame with outrigger wheels. It is an engine test bed, not a product.</p></div></li>
+          <li><span class="yr">1886</span><div><h4>The Starley safety bicycle</h4><p>Two wheels of similar size, a chain to the rear wheel and a diamond-shaped frame: the geometry the first motorcycles borrowed.</p></div></li>
+          <li><span class="yr">1888 and 1895</span><div><h4>The pneumatic tyre</h4><p>Dunlop’s pneumatic tyre of 1888, followed by Michelin’s in 1895, completes the set of four inventions.</p></div></li>
+        </ol>
+      </div>
+      <div class="mz-era-side"><div class="mz-four">
+          <div><span class="ute-label">Engine</span><b>about 1885</b><p>Practical petrol engines</p></div>
+          <div><span class="ute-label">Tyre</span><b>1888 · 1895</b><p>Dunlop, then Michelin</p></div>
+          <div><span class="ute-label">Chain</span><b>1880</b><p>Renold bush roller chain</p></div>
+          <div><span class="ute-label">Frame</span><b>1886</b><p>Starley safety bicycle</p></div>
+        </div></div>
+    </div>
+    <div class="mz-era" id="first">
+      <div class="mz-era-main">
+        <span class="ute-label">1894 to 1903</span>
+        <h3>The first motorcycles</h3>
+        <p class="mz-era-intro">The first machines sold to the public showed what worked and what did not. Within ten years the basic layout was settled.</p>
+        <ol class="mz-tl">
+          <li><span class="yr">1894</span><div><h4>Hildebrand & Wolfmüller</h4><p>The first machine sold in series and called a “motorrad”: a water-cooled 1,489 cc twin whose connecting rods drove cranks on the rear wheel directly, with no flywheel or gearbox. About one thousand were built before the company failed in 1897.</p></div></li>
+          <li><span class="yr">1897</span><div><h4>The Werner</h4><p>The Werner carries its engine above the front wheel. The high centre of mass makes the front wheel prone to slide.</p></div></li>
+          <li><span class="yr">1901</span><div><h4>The New Werner and Indian</h4><p>The New Werner moves the engine down to the bottom-bracket position between the wheels. In the same year Indian is founded in the United States.</p></div></li>
+          <li><span class="yr">1903</span><div><h4>The layout is settled; Harley-Davidson</h4><p>By about 1903 the engine low and central with the tank above it is established practice. Harley-Davidson is founded; with Indian it is one of the two American makers to survive the 1930s.</p></div></li>
+        </ol>
+      </div>
+      <div class="mz-era-side"><div class="ute-callbox"><h4>What the first machines taught</h4><p>The Hildebrand & Wolfmüller proved there was demand, but a direct drive with no flywheel could neither idle nor pull away cleanly. The Werner showed that engine position decides how a motorcycle handles. Both lessons are still visible on every machine in the workshop.</p></div></div>
+    </div>
+    <div class="mz-era" id="interwar">
+      <div class="mz-era-main">
+        <span class="ute-label">1912 to 1950</span>
+        <h3>Two-strokes, twins and better forks</h3>
+        <p class="mz-era-intro">Between the wars motorcycles gained overhead valves, chain final drive and the engine layouts that would be copied for decades.</p>
+        <ol class="mz-tl">
+          <li><span class="yr">1912 and 1913</span><div><h4>Scott two-strokes win the Senior TT</h4><p>Alfred Scott’s water-cooled two-stroke twins win the Isle of Man Senior TT in two successive years.</p></div></li>
+          <li><span class="yr">1920s–30s</span><div><h4>Overhead valves and chain final drive</h4><p>The interwar years bring overhead valves and chain final drive into general use.</p></div></li>
+          <li><span class="yr">1937</span><div><h4>The Triumph Speed Twin</h4><p>Edward Turner’s Speed Twin sets the parallel-twin layout that other makers copy for half a century.</p></div></li>
+          <li><span class="yr">After 1945</span><div><h4>The DKW RT125 is copied worldwide</h4><p>DKW’s loop-scavenged RT125 is copied as the BSA Bantam, the Harley-Davidson Hummer and Yamaha’s first product, the YA-1. It becomes the template for cheap motorised transport.</p></div></li>
+          <li><span class="yr">Late 1940s</span><div><h4>The telescopic fork</h4><p>Just after the Second World War the hydraulically damped telescopic fork becomes general.</p></div></li>
+        </ol>
+      </div>
+      <div class="mz-era-side"><figure class="mz-hfig is-portrait"><img src="../assets/photos/triumph-engine.jpg" alt="Triumph parallel-twin engine with finned cylinder head and polished engine covers" loading="lazy"><figcaption>A modern Triumph parallel twin. Edward Turner’s 1937 Speed Twin established the layout. <span>Photograph, Transitions Lab collection</span></figcaption></figure></div>
+    </div>
+    <div class="mz-era" id="mass">
+      <div class="mz-era-main">
+        <span class="ute-label">1958 to 1975</span>
+        <h3>Mass production</h3>
+        <p class="mz-era-intro">From the late 1950s Japanese mass production changed the economics of the motorcycle, and two-stroke engines reached very high outputs.</p>
+        <ol class="mz-tl">
+          <li><span class="yr">1958</span><div><h4>The Honda Super Cub</h4><p>A step-through with a 49 cc overhead-valve four-stroke and an automatic centrifugal clutch. It is generally described as the most-produced motor vehicle in history.</p></div></li>
+          <li><span class="yr">1969</span><div><h4>The Honda CB750</h4><p>An overhead-camshaft inline-four and a front disc brake reach the mass market.</p></div></li>
+          <li><span class="yr">1960s–70s</span><div><h4>Two-stroke development</h4><p>Suzuki, Kawasaki and Yamaha add reed valves, exhaust power valves and expansion chambers. Specific outputs rise sharply, but a ported two-stroke loses part of its fresh charge into the exhaust and burns its lubricating oil.</p></div></li>
+          <li><span class="yr">1975</span><div><h4>Linked brakes</h4><p>Moto Guzzi fits linked “integral” brakes on the 850 T3, an early form of the combined braking later required on small motorcycles.</p></div></li>
+        </ol>
+      </div>
+      <div class="mz-era-side"><figure class="mz-hfig is-portrait"><img src="../assets/photos/honda-air-cooled.jpg" alt="Air-cooled Honda engine with deep cooling fins, mounted in the frame below a white fuel tank" loading="lazy"><figcaption>An air-cooled Honda engine: deep fins on cylinder and head, the round generator and clutch covers below. <span>Photograph, Transitions Lab collection</span></figcaption></figure></div>
+    </div>
+    <div class="mz-era" id="rules">
+      <div class="mz-era-main">
+        <span class="ute-label">1970s to 2020</span>
+        <h3>Rules shape the machine</h3>
+        <p class="mz-era-intro">Emission limits and braking rules, more than fashion, decided what a road motorcycle looks like today: fuel injection, a catalytic converter and ABS or CBS.</p>
+        <ol class="mz-tl">
+          <li><span class="yr">Late 1970s</span><div><h4>US emission rules</h4><p>US EPA rules begin the pressure on two-stroke road machines, whose hydrocarbon emissions are many times those of a four-stroke.</p></div></li>
+          <li><span class="yr">1980</span><div><h4>Toothed belt drive</h4><p>Harley-Davidson starts using toothed belts with carbon or aramid cords for final drive. They are now common on electric motorcycles.</p></div></li>
+          <li><span class="yr">1988</span><div><h4>The first production ABS</h4><p>BMW offers the first production motorcycle ABS on the K100.</p></div></li>
+          <li><span class="yr">2005–10</span><div><h4>Euro 3 and Bharat Stage II and III</h4><p>Euro 3 (2006) in Europe and Bharat Stage II and III in India push road two-strokes out of most markets. They survive in off-road competition, some direct-injection designs and older fleets.</p></div></li>
+          <li><span class="yr">2013</span><div><h4>Stability control at lean</h4><p>Bosch Motorcycle Stability Control is first fitted on the KTM 1190 Adventure.</p></div></li>
+          <li><span class="yr">2016–17</span><div><h4>Euro 4 and compulsory ABS in the EU</h4><p>Euro 4 applies from 2016. Under Regulation (EU) No 168/2013 ABS becomes compulsory above 125 cc (new types from 2016, all new registrations from 2017), with ABS or CBS on the 125 cc class.</p></div></li>
+          <li><span class="yr">2017</span><div><h4>One hundred million Super Cubs</h4><p>The Super Cub passes 100 million units in October 2017.</p></div></li>
+          <li><span class="yr">2018–19</span><div><h4>ABS and CBS in India</h4><p>India requires ABS above 125 cc and CBS at or below 125 cc on new models from April 2018 and on all models from April 2019.</p></div></li>
+          <li><span class="yr">2020</span><div><h4>Euro 5 and BS-VI: the end of the carburettor</h4><p>Euro 5 (new types from 1 January 2020) and India’s BS-VI (1 April 2020) require the mixture to be held at stoichiometric, 14.7:1 for petrol, so a three-way catalyst can work. In practice that means fuel injection with an oxygen sensor, even on 100–125 cc commuters such as the K-Light 125.</p></div></li>
+        </ol>
+      </div>
+      <div class="mz-era-side"><figure class="mz-hfig is-plate"><a href="../assets/illustrations/powertrain/F12.png"><img src="../assets/illustrations/powertrain/F12.png" alt="Blueprint plate of an electronic fuel injection system with pump, injector, throttle body, sensors and ECU" loading="lazy"></a><figcaption>Course plate F12: the electronic fuel injection system that emission rules made standard. <span>CC BY-SA 4.0</span></figcaption></figure></div>
+    </div>
+    <div class="mz-era" id="electric">
+      <div class="mz-era-main">
+        <span class="ute-label">2015 to today</span>
+        <h3>The electric transition</h3>
+        <p class="mz-era-intro">The current transition is electric, and it is happening fastest where small motorcycles and scooters carry most of the traffic.</p>
+        <ol class="mz-tl">
+          <li><span class="yr">2015</span><div><h4>Gogoro battery swapping</h4><p>Gogoro introduces its swap network in Taiwan. Automated stations release a charged pack in seconds; by 2020 Gogoro operates about 1,700 sites in Taiwan.</p></div></li>
+          <li><span class="yr">2019</span><div><h4>A common Japanese battery</h4><p>Honda, Kawasaki, Suzuki and Yamaha form the Swappable Batteries Motorcycle Consortium to agree common specifications for swappable batteries and stations.</p></div></li>
+          <li><span class="yr">2022</span><div><h4>Gachaco</h4><p>The four makers and the energy company ENEOS create Gachaco, a swap service in Tokyo using a shared pack of about 1.3 kWh.</p></div></li>
+          <li><span class="yr">2020s</span><div><h4>China and India</h4><p>China’s fleet of electric two-wheelers is commonly estimated at more than 300 million. India’s electric two-wheeler sales pass one million a year in the mid-2020s.</p></div></li>
+          <li><span class="yr">2020s</span><div><h4>East Africa</h4><p>Where motorcycle taxis (boda bodas in Kenya and Uganda, motos in Rwanda) carry a large share of urban trips, firms such as Roam, Spiro and Ampersand build or import electric motorcycles and run swapping networks. Spiro reports over 50,000 machines and over 1,000 swap stations in late 2025.</p></div></li>
+        </ol>
+      </div>
+      <div class="mz-era-side"><figure class="mz-hfig is-land"><img src="../assets/photos/hybrid-power-unit.jpg" alt="Hybrid racing power unit with orange high-voltage cables against a black background" loading="lazy"><figcaption>High-voltage cabling on a hybrid racing power unit. Orange sheathing marks conductors above 60 V DC, on every electric motorcycle too. <span>Photograph, Transitions Lab collection</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="ute-chapter" id="today">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">B</span><span class="ute-label">Today</span></div>
+    <h2>Three machines, three generations</h2>
+    <p class="lead">The course uses three reference motorcycles that sum up the story so far: the air-cooled four-stroke that mass production made common, the two-stroke that emission rules pushed off the road, and the electric machine now replacing both in many cities.</p>
+    <div class="mz-today">
+      <a href="../?mode=4t"><img src="../assets/renders/bike_classic_4t_threeq.webp" alt="Classic air-cooled four-stroke roadster, three-quarter view" loading="lazy"><b>Four-stroke</b><span>Classic air-cooled roadster. Fuel injection and a catalyst keep it legal under Euro 5 and BS-VI.</span></a>
+      <a href="../?mode=2t"><img src="../assets/renders/bike_mx_2t_threeq.webp" alt="Two-stroke motocross bike, three-quarter view" loading="lazy"><b>Two-stroke</b><span>Motocross bike with an expansion chamber. Now mostly off road.</span></a>
+      <a href="../?mode=elec"><img src="../assets/renders/bike_electric_threeq.webp" alt="Electric scrambler, three-quarter view" loading="lazy"><b>Electric</b><span>Scrambler with a mid-mounted motor and belt drive.</span></a>
+    </div>
+  </section>
+
+  <section class="ute-chapter" id="sources">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">C</span><span class="ute-label">Sources and further study</span></div>
+    <h2>Where this history comes from</h2>
+    <div class="prose">
+      <p>The early part of this history draws on Charles M. Falco’s essay on the technical evolution of the motorcycle in the Solomon R. Guggenheim Museum’s exhibition catalogue <em>The Art of the Motorcycle</em> (New York, 1998). Falco sets out the four inventions that had to meet and records the production figures for the Hildebrand &amp; Wolfmüller. The regulatory dates come from the regulations cited in Modules 03 and 04, and the electric figures from Module 05.</p>
+      <p>Chapter 1.1 of Module 01 tells the same story in more depth and then shows how to read any motorcycle as a set of connected systems.</p>
+    </div>
+    <div class="ute-chapter-foot">
+      <a class="ute-linkbtn is-warm" href="../learn/#m1-history-systems">Read Module 01, chapter 1.1</a>
+      <a class="ute-linkbtn" href="../">Open the Overview</a>
+      <a class="ute-linkbtn" href="../sources/">Sources and credits</a>
+    </div>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+</body>
+</html>

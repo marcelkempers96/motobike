@@ -120,7 +120,7 @@ export function createViewer(el, opts = {}) {
         mat.emissiveIntensity = on ? 0.75 : (category && inCat ? 0.25 : 0);
       }
       let fade = 1;
-      if (focus && !on) fade = 0.1;
+      if (focus && !on) fade = 0.07;
       else if (category && !inCat && !on) fade = 0.14;
       const faded = fade < 1;
       mat.transparent = faded || m.userData.origTransparent;

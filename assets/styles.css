@@ -960,3 +960,22 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.015em; }
 .mz-best td b { margin-right: 6px; }
 .mz-best td small, .mz-best td span { color: var(--mute); }
 @media (max-width: 720px) { .mz-levels { grid-template-columns: 1fr; } }
+
+/* ---------- Typeface: Lato everywhere (clear, Calibri-like, as in Brightspace) ---------- */
+:root { --sans: "Lato", "Segoe UI", Calibri, Arial, sans-serif; --mono: "Lato", "Segoe UI", Calibri, Arial, sans-serif; }
+body { font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+.ute-label, .mz-cv-tag, .mz-menu-blurb, .mz-foot h4, .mz-crumbs { font-family: var(--sans); font-weight: 700; letter-spacing: .06em; }
+.ute-brand-mark { display: none; }
+.ute-brand-word { font-family: "Lato", var(--sans); font-weight: 900; font-size: 21px; color: var(--ink); letter-spacing: -0.01em; }
+.ute-brand-sub { font-family: var(--sans); font-weight: 700; }
+.mz-foot-brand span { font-family: "Lato", var(--sans); font-weight: 900; color: var(--ink); }
+.mz-menu-main { height: 60px; display: inline-flex; align-items: center; padding: 0 14px; text-decoration: none; color: var(--ink); font: 700 15px/1 var(--sans); border-bottom: 2px solid transparent; }
+.mz-menu-main:hover { color: var(--warm); }
+.mz-menu-main[aria-current="page"] { border-bottom-color: var(--warm); }
+.mz-menu-top { font-weight: 700; }
+h1, h2, h3, .ute-hero h1 { font-family: var(--sans); font-weight: 700; letter-spacing: -0.01em; }
+.ute-stats .stat-v, .ute-status-num, .ute-dash .cell .v, .ute-findings .cell .v, .big { font-family: var(--sans); font-weight: 700; }
+@media (max-width: 960px) {
+  .mz-menu-main { height: auto; padding: 14px 0; border-bottom: 1px solid var(--line-soft); font-size: 17px; }
+  .mz-menu-main[aria-current="page"] { color: var(--warm); border-bottom-color: var(--line-soft); }
+}

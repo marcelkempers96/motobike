@@ -1297,7 +1297,7 @@ COMPONENT_VIEWS.wiring = {
     data.nodes.forEach((n) => {
       const g = ns('g', { class: 'ute-wire-node', tabindex: 0, role: 'button', 'aria-label': `${n.t}, ${n.s}` });
       g.appendChild(ns('rect', { x: n.x, y: n.y, width: W, height: H, fill: '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5, rx: 3 }));
-      const t = ns('text', { x: n.x + 10, y: n.y + 19, 'font-family': 'Barlow, sans-serif', 'font-size': 12.5, 'font-weight': 700, fill: '#0A0A0A' });
+      const t = ns('text', { x: n.x + 10, y: n.y + 19, 'font-family': 'Lato, sans-serif', 'font-size': 12.5, 'font-weight': 700, fill: '#0A0A0A' });
       t.textContent = n.t;
       g.appendChild(t);
       g.appendChild(txt(n.x + 10, n.y + 36, n.s.toUpperCase(), 'start', 10));

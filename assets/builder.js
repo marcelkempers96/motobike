@@ -9,6 +9,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import * as PG from './progress.js';
 
 const RENDERS = '../assets/renders/';
 const MODELS = '../assets/models/';
@@ -25,7 +26,9 @@ const BIKES = {
   '4t': {
     file: 'bike_classic_4t', name: 'Four-stroke roadster', sub: '125 cc single, 5-speed', kind: 'ice',
     rim: { f: 19, r: 18 }, circ: 1.95, sprF: 15, sprR: 44, rangeF: [13, 17], rangeR: [36, 52],
-    primary: 3.35, gears: [2.77, 1.88, 1.40, 1.13, 0.96], redline: 10000, tpk: 10, rpk: 6500, tk: 1.2,
+    primary: 3.35, gears: [2.77, 1.88, 1.40, 1.13, 0.96], redline: 10000, rpk: 6500, tk: 1.2,
+    bore: 56.5, stroke: 49.5, cr: 9.5, crRange: [8, 12], bmep: 10e5, strokes: 4, eta: 0.27,
+    presets: [[125, 56.5, 49.5], [250, 72, 61.2], [400, 85, 70.5]],
     mass: 150, cda: 0.60, rake: 27, trail: 100, speedo: 'front', drive: '428 chain',
     paint: ['tank_paint'], frameNames: ['frame_body__frame__tubes', 'frame_body__frame__head_tube'],
     stockLabel: 'Classic red',
@@ -33,14 +36,16 @@ const BIKES = {
   '2t': {
     file: 'bike_mx_2t', name: 'Two-stroke MX', sub: '125 cc motocross, 6-speed', kind: 'ice',
     rim: { f: 21, r: 19 }, circ: 2.07, sprF: 13, sprR: 50, rangeF: [12, 15], rangeR: [44, 54],
-    primary: 3.47, gears: [2.15, 1.73, 1.44, 1.24, 1.09, 0.96], redline: 12500, tpk: 24, rpk: 10500, tk: 7.4,
+    primary: 3.47, gears: [2.15, 1.73, 1.44, 1.24, 1.09, 0.96], redline: 12500, rpk: 10500, tk: 5,
+    bore: 54, stroke: 54.5, cr: 12, crRange: [9, 14], bmep: 8e5, strokes: 2, eta: 0.2,
+    presets: [[125, 54, 54.5], [250, 66.4, 72], [400, 80, 79.5]],
     mass: 90, cda: 0.70, rake: 26.5, trail: 112, speedo: 'front', drive: '520 chain',
     paint: ['mx_red'], frameNames: ['frame_body__frame', 'frame_body__subframe'],
   },
   elec: {
     file: 'bike_electric', name: 'Electric scrambler', sub: '30 kW motor, belt drive', kind: 'elec',
     rim: { f: 17, r: 17 }, circ: 1.92, sprF: 30, sprR: 78, rangeF: [26, 34], rangeR: [66, 90],
-    fixed: 2.5, motorMax: 6000, tmot: 60, pmot: 30000,
+    fixed: 2.5, motorMax: 6000, tmot: 60, pmot: 30000, kw: 30, kwh: 9,
     mass: 140, cda: 0.60, rake: 25, trail: 95, speedo: 'motor', drive: 'toothed belt',
     paint: ['ev_body'], frameNames: ['frame_body__frame', 'frame_body__subframe'],
   },
@@ -418,6 +423,8 @@ function measure() {
     sprF: { c: sprF.getCenter(new THREE.Vector3()), r: (sprF.max.y - sprF.min.y) / 2 },
     sprR: { c: sprR.getCenter(new THREE.Vector3()), r: (sprR.max.y - sprR.min.y) / 2 },
     seatPt, low,
+    eng: boxOf(meshes.filter((m) => /^powertrain__(engine|motor$|motor__)/.test(m.name))).getCenter(new THREE.Vector3()),
+    batt: boxOf(pick('powertrain__traction_battery')).getCenter(new THREE.Vector3()),
   };
 }
 
@@ -685,6 +692,7 @@ function refreshBuildUI() {
   $('bb-reset').disabled = !placed.length;
   $('bb-auto').disabled = !cur;
   if (!cur && placed.length === total && total) {
+    try { PG.recordTool('builder', { bike: bikeId, assembled: true }); } catch (e) { /* storage unavailable */ }
     say(`<b>The ${B.name.toLowerCase()} is complete.</b> Every part from the workshop order is in place. Open Configure to change wheels, gearing and colours.`, 'done');
   }
   paintGhosts();
@@ -803,12 +811,26 @@ const SW = {
   wheel: ['#1B1B1B', '#C9A227', '#B9BDC2', '#C8502A', '#E9E4D6', '#1E2B5E'],
 };
 function stockCfg() {
-  return { rimF: B.rim.f, rimR: B.rim.r, sprF: B.sprF, sprR: B.sprR, body: null, frame: null, wheel: null, compare: cfg ? cfg.compare : false };
+  return { rimF: B.rim.f, rimR: B.rim.r, sprF: B.sprF, sprR: B.sprR, bore: B.bore, stroke: B.stroke, cr: B.cr, kw: B.kw, kwh: B.kwh,
+    body: null, frame: null, wheel: null, compare: cfg ? cfg.compare : false };
 }
 function wheelScale(which, c = cfg) {
   const R = which === 'f' ? geo.RF : geo.RR;
   const d = ((which === 'f' ? c.rimF - B.rim.f : c.rimR - B.rim.r) * 2.54) / 2; // cm of radius
   return { s: (R + d) / R, R, Rn: R + d };
+}
+/* Engine or battery grows a little with its size (within 10 %), so the change is visible */
+function engScale(c = cfg) {
+  if (!c) return 1;
+  const r = B.kind === 'elec' ? c.kw / B.kw : ccOf(c.bore, c.stroke) / ccOf(B.bore, B.stroke);
+  return Math.round(Math.min(1.1, Math.max(0.9, Math.cbrt(r))) * 1000) / 1000;
+}
+function battScale(c = cfg) {
+  if (!c || B.kind !== 'elec') return 1;
+  return Math.round(Math.min(1.1, Math.max(0.9, Math.cbrt(c.kwh / B.kwh))) * 1000) / 1000;
+}
+function scale3(c, s) {
+  return new THREE.Matrix4().makeTranslation(c.x, c.y, c.z).multiply(new THREE.Matrix4().makeScale(s, s, s)).multiply(new THREE.Matrix4().makeTranslation(-c.x, -c.y, -c.z));
 }
 function scaleAbout(c, s) {
   return new THREE.Matrix4().makeTranslation(c.x, c.y, 0).multiply(new THREE.Matrix4().makeScale(s, s, 1)).multiply(new THREE.Matrix4().makeTranslation(-c.x, -c.y, 0));
@@ -894,6 +916,8 @@ function applyCfg() {
       }
     } else if (/^transmission__(front_sprocket|front_pulley)/.test(n)) xf = scaleAbout(geo.sprF.c, sf);
     else if (/^transmission__(rear_sprocket|rear_pulley)/.test(n)) xf = scaleAbout(geo.sprR.c, sr);
+    else if (engScale() !== 1 && /^(powertrain__(engine|clutch|motor$|motor__)|electrical__(alternator|stator|starter_motor))/.test(n)) xf = scale3(geo.eng, engScale());
+    else if (battScale() !== 1 && /^powertrain__traction_battery/.test(n)) xf = scale3(geo.batt, battScale());
     m.userData.xf = xf;
     updateMesh(m);
   }
@@ -940,7 +964,7 @@ function updateCompare() {
   compareHolder.position.copy(holder.position); compareHolder.scale.copy(holder.scale);
 }
 function isModified() {
-  return cfg.rimF !== B.rim.f || cfg.rimR !== B.rim.r || cfg.sprF !== B.sprF || cfg.sprR !== B.sprR;
+  return cfg.rimF !== B.rim.f || cfg.rimR !== B.rim.r || cfg.sprF !== B.sprF || cfg.sprR !== B.sprR || engScale() !== 1 || battScale() !== 1;
 }
 
 function setupConfigUI() {
@@ -958,8 +982,51 @@ function setupConfigUI() {
     : `Teeth on the gearbox sprocket and the wheel sprocket (${B.drive}). Fewer front or more rear teeth means lower gearing: more pull, less top speed.`;
   $('bb-c-body-t').textContent = elec ? 'Tank cover and bodywork' : 'Tank and bodywork';
   swatches('bb-c-body', 'body'); swatches('bb-c-frame', 'frame'); swatches('bb-c-wheel', 'wheel');
+  setupEngineUI();
   $('bb-compare').checked = !!cfg.compare;
   syncOutputs();
+}
+function setupEngineUI() {
+  const el = $('bb-eng');
+  const elec = B.kind === 'elec';
+  const ctl = (id, label, min, max, step, val) => `<div class="bb-ctl"><label for="${id}">${label}</label><output id="${id}-o"></output><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"></div>`;
+  if (elec) {
+    el.innerHTML = `<h2>Motor and battery</h2><p class="bb-small">A stronger motor pulls harder and reaches a higher speed before drag wins. A bigger battery goes further but weighs about 6.5 kg per kWh.</p>
+      ${ctl('bb-kw', 'Motor peak power', 5, 40, 1, cfg.kw)}${ctl('bb-kwh', 'Battery capacity', 3, 15, 0.5, cfg.kwh)}`;
+  } else {
+    el.innerHTML = `<h2>Engine size</h2><p class="bb-small">Displacement is bore area times stroke. More cubic centimetres give more torque; a longer stroke lowers the safe redline.</p>
+      <div class="bb-presets" id="bb-pre" role="group" aria-label="Displacement presets">${B.presets.map(([cc, b, st]) => `<button type="button" data-b="${b}" data-s="${st}">${cc} cc</button>`).join('')}</div>
+      ${ctl('bb-bore', 'Bore', 50, 90, 0.5, cfg.bore)}${ctl('bb-stroke', 'Stroke', 45, 80, 0.5, cfg.stroke)}${ctl('bb-cr', 'Compression ratio', B.crRange[0], B.crRange[1], 0.1, cfg.cr)}
+      <a class="bb-link" id="bb-ov" href="#">Open this engine in the Overview</a>`;
+    el.querySelectorAll('#bb-pre button').forEach((b) => b.addEventListener('click', () => {
+      cfg.bore = +b.dataset.b; cfg.stroke = +b.dataset.s; $('bb-bore').value = cfg.bore; $('bb-stroke').value = cfg.stroke; userChange();
+    }));
+  }
+  el.querySelectorAll('input[type=range]').forEach((i) => i.addEventListener('input', () => {
+    const k = { 'bb-kw': 'kw', 'bb-kwh': 'kwh', 'bb-bore': 'bore', 'bb-stroke': 'stroke', 'bb-cr': 'cr' }[i.id];
+    cfg[k] = +i.value; userChange();
+  }));
+}
+function syncEngine() {
+  if (!cfg) return;
+  if (B.kind === 'elec') {
+    if (!$('bb-kw')) return;
+    $('bb-kw-o').innerHTML = `${cfg.kw} kW${cfg.kw === B.kw ? ' <small>stock</small>' : ''}`;
+    $('bb-kwh-o').innerHTML = `${fmt(cfg.kwh, 1)} kWh${cfg.kwh === B.kwh ? ' <small>stock</small>' : ''}`;
+    return;
+  }
+  if (!$('bb-bore')) return;
+  const cc = ccOf(cfg.bore, cfg.stroke);
+  $('bb-bore-o').innerHTML = `${fmt(cfg.bore, 1)} mm${cfg.bore === B.bore ? ' <small>stock</small>' : ''}`;
+  $('bb-stroke-o').innerHTML = `${fmt(cfg.stroke, 1)} mm <small>${fmt(cc)} cc</small>`;
+  $('bb-cr-o').innerHTML = `${fmt(cfg.cr, 1)} : 1${cfg.cr === B.cr ? ' <small>stock</small>' : ''}`;
+  $('bb-pre').querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.b === cfg.bore && +b.dataset.s === cfg.stroke)));
+  $('bb-ov').href = `../?mode=${bikeId}&part=engine&bore=${cfg.bore}&stroke=${cfg.stroke}&cr=${cfg.cr}`;
+}
+let recorded = false;
+function userChange() {
+  syncOutputs(); applyCfg();
+  if (!recorded) { recorded = true; try { PG.recordTool('builder', { configured: true }); } catch (e) { /* storage unavailable */ } }
 }
 function swatches(id, grp) {
   const el = $(id); el.innerHTML = '';
@@ -968,14 +1035,14 @@ function swatches(id, grp) {
     if (hex) b.style.background = hex; else { b.className = 'is-stock'; b.textContent = ''; }
     b.title = label; b.setAttribute('aria-label', label);
     b.setAttribute('aria-pressed', String((cfg[grp] || null) === hex));
-    b.addEventListener('click', () => { cfg[grp] = hex; applyCfg(); swatches(id, grp); });
+    b.addEventListener('click', () => { cfg[grp] = hex; userChange(); swatches(id, grp); });
     el.appendChild(b);
   };
   mk(null, 'Stock colour');
   SW[grp].forEach((h) => mk(h, 'Colour ' + h));
   const inp = document.createElement('input'); inp.type = 'color'; inp.title = 'Choose any colour'; inp.setAttribute('aria-label', 'Choose any colour');
   inp.value = cfg[grp] || '#888888';
-  inp.addEventListener('input', () => { cfg[grp] = inp.value; applyCfg(); [...el.querySelectorAll('button')].forEach((b) => b.setAttribute('aria-pressed', 'false')); });
+  inp.addEventListener('input', () => { cfg[grp] = inp.value; userChange(); [...el.querySelectorAll('button')].forEach((b) => b.setAttribute('aria-pressed', 'false')); });
   el.appendChild(inp);
 }
 function syncOutputs() {
@@ -986,12 +1053,13 @@ function syncOutputs() {
   $('bb-sf-o').innerHTML = `${cfg.sprF} T${cfg.sprF === B.sprF ? ' <small>stock</small>' : ''}`;
   $('bb-sr-o').innerHTML = `${cfg.sprR} T${cfg.sprR === B.sprR ? ' <small>stock</small>' : ''}`;
   void elec;
+  syncEngine();
 }
 [['bb-wf', 'rimF'], ['bb-wr', 'rimR'], ['bb-sf', 'sprF'], ['bb-sr', 'sprR']].forEach(([id, k]) => {
-  $(id).addEventListener('input', (e) => { cfg[k] = +e.target.value; syncOutputs(); applyCfg(); });
+  $(id).addEventListener('input', (e) => { cfg[k] = +e.target.value; userChange(); });
 });
 $('bb-compare').addEventListener('change', (e) => { cfg.compare = e.target.checked; applyCfg(); });
-$('bb-stock').addEventListener('click', () => { const cmp = cfg.compare; cfg = stockCfg(); cfg.compare = cmp; setupConfigUI(); applyCfg(); });
+$('bb-stock').addEventListener('click', () => { const cmp = cfg.compare; cfg = stockCfg(); cfg.compare = cmp; setupConfigUI(); applyCfg(); syncOutputs(); });
 
 /* Tabs */
 function setTab(t) {
@@ -1010,10 +1078,22 @@ document.querySelector('.bb-tabs').addEventListener('keydown', (e) => {
 /* --------------------------------------------------------------------------
    Physics: gearing, top speed, thrust, speedometer, geometry
    -------------------------------------------------------------------------- */
-function engineT(rpm) {
-  if (B.kind === 'elec') { const w = rpm * Math.PI / 30; return Math.min(B.tmot, w > 0 ? B.pmot / w : B.tmot); }
-  const x = (rpm - B.rpk) / B.rpk;
-  return Math.max(B.tpk * 0.25, B.tpk * (1 - B.tk * x * x));
+const ccOf = (bore, stroke) => Math.PI / 4 * bore * bore * stroke / 1000;
+function engineOf(c) {
+  if (B.kind === 'elec') {
+    const pmot = c.kw * 1000, tmot = B.tmot * c.kw / B.kw;
+    return { elec: true, pmot, tmot, tpk: tmot, maxRpm: B.motorMax, mass: B.mass + (c.kwh - B.kwh) * 6.5 + (c.kw - B.kw) * 0.3, kwh: c.kwh, kw: c.kw };
+  }
+  const cc = ccOf(c.bore, c.stroke), cc0 = ccOf(B.bore, B.stroke);
+  const crf = (1 - Math.pow(c.cr, -0.3)) / (1 - Math.pow(B.cr, -0.3));      // Otto efficiency relative to stock
+  const tpk = B.bmep * cc * 1e-6 / (B.strokes === 4 ? 4 * Math.PI : 2 * Math.PI) * crf;
+  const rs = Math.min(1.15, Math.max(0.75, B.stroke / c.stroke));             // same mean piston speed at the redline
+  return { elec: false, cc, tpk, crf, rpk: B.rpk * rs, maxRpm: Math.round(B.redline * rs / 100) * 100, mass: B.mass + (cc - cc0) * 0.08, eta: B.eta * crf };
+}
+function engineT(rpm, e) {
+  if (e.elec) { const w = rpm * Math.PI / 30; return Math.min(e.tmot, w > 0 ? e.pmot / w : e.tmot); }
+  const x = (rpm - e.rpk) / e.rpk;
+  return Math.max(e.tpk * 0.25, e.tpk * (1 - B.tk * x * x));
 }
 function analyse(c) {
   const sR = wheelScale('r', c).s, sF = wheelScale('f', c).s;
@@ -1021,9 +1101,10 @@ function analyse(c) {
   const fd = c.sprR / c.sprF;
   const elec = B.kind === 'elec';
   const ratios = elec ? [B.fixed * fd] : B.gears.map((g) => g * B.primary * fd);
-  const maxRpm = elec ? B.motorMax : B.redline;
+  const e = engineOf(c);
+  const maxRpm = e.maxRpm;
   const eff = elec ? 0.95 : 0.9;
-  const m = B.mass + RIDER;
+  const m = e.mass + RIDER;
   const res = (vk) => { const v = vk / 3.6; return 0.5 * RHO * B.cda * v * v + CRR * m * G; };
   const top = ratios[ratios.length - 1];
   const kmhPerRpm = (ratio) => circ * 60 / 1000 / ratio; // km/h per (rev/min)
@@ -1035,7 +1116,7 @@ function analyse(c) {
       let rpm = vk / kmhPerRpm(ratio);
       if (rpm > maxRpm) return;
       rpm = Math.max(rpm, minRpm);
-      const F = engineT(rpm) * ratio * eff / rw;
+      const F = engineT(rpm, e) * ratio * eff / rw;
       if (F > best) { best = F; gi = i; }
     });
     return { F: best, gi };
@@ -1044,7 +1125,27 @@ function analyse(c) {
   for (let vk = 1; vk < 260; vk += 0.25) { if (force(vk).F >= res(vk)) vTop = vk; else break; }
   const rpmAtTop = vTop / kmhPerRpm(top);
   const limited = vTop < vRedline - 1 ? 'power' : 'rpm';
-  const thrust1 = (elec ? B.tmot : B.tpk) * ratios[0] * eff / rw;
+  const thrust1 = e.tpk * ratios[0] * eff / rw;
+  // peak power
+  let pPk = 0, pRpm = 0;
+  for (let r = 1000; r <= maxRpm; r += 50) { const pw = engineT(r, e) * r * Math.PI / 30; if (pw > pPk) { pPk = pw; pRpm = r; } }
+  // 0-100 km/h: full throttle, ideal shifts, grip and wheelie limit 0.8 g, 10 % rotating mass
+  const accel = (target) => {
+    let v = 0, t = 0; const dt = 0.02;
+    while (v < target / 3.6 && t < 60) {
+      const F = Math.min(force(v * 3.6).F, 0.8 * m * G);
+      const acc = (F - res(v * 3.6)) / (m * 1.1);
+      if (acc <= 0.02) return null;
+      v += acc * dt; t += dt;
+    }
+    return t < 60 ? t + (elec ? 0 : 0.4) : null;
+  };
+  const t100 = accel(100), t60 = accel(60);
+  // steady cruise at 80 km/h (or 90 % of top speed if slower)
+  const vc = Math.min(80, vTop * 0.9), Pc = res(vc) * vc / 3.6;
+  let use = null, range = null;
+  if (elec) { const whkm = (Pc / 0.85 + 150) / vc; use = whkm; range = e.kwh * 1000 * 0.9 / whkm; }
+  else { const load = Math.min(1, Pc / pPk); const eta = e.eta * (0.35 + 0.65 * load); use = (Pc / eta) * (1 / (vc / 3.6)) * 1000 * 100 / 32e6; }
   // speedometer: front-wheel sensor (stock calibration), or motor speed on the electric bike
   let speedo;
   if (B.speedo === 'front') speedo = 1 / sF;
@@ -1057,7 +1158,7 @@ function analyse(c) {
   const rfStock = geo.RF / 100, rf = p.f.Rn / 100;
   const off = rfStock * Math.sin(THREE.MathUtils.degToRad(B.rake)) - (B.trail / 1000) * Math.cos(THREE.MathUtils.degToRad(B.rake));
   const trail = (rf * Math.sin(THREE.MathUtils.degToRad(rake)) - off) / Math.cos(THREE.MathUtils.degToRad(rake)) * 1000;
-  return { circ, rw, fd, ratios, top, maxRpm, kmh1000: 1000 * kmhPerRpm(top), vRedline, vTop, rpmAtTop, limited, thrust1, speedo,
+  return { e, m, pPk, pRpm, t100, t60, vc, use, range, circ, rw, fd, ratios, top, maxRpm, kmh1000: 1000 * kmhPerRpm(top), vRedline, vTop, rpmAtTop, limited, thrust1, speedo,
     seat: seat * 10, clear: clear * 10, rake, trail, theta: p.theta, kmhPerRpm, eff, res, minRpm };
 }
 
@@ -1073,11 +1174,32 @@ function delta(now, stock, d, unit, goodUp, eps) {
 }
 function renderEffects() {
   if (!cfg || !geo) return;
-  const a = analyse(cfg), s = analyse({ ...cfg, rimF: B.rim.f, rimR: B.rim.r, sprF: B.sprF, sprR: B.sprR });
+  const a = analyse(cfg), s = analyse(stockCfg());
   const elec = B.kind === 'elec';
   const thrIdx = a.thrust1 / s.thrust1 * 100;
   const spErr = (a.speedo - 1) * 100;
   const tiles = [];
+  const kw = (w) => fmt(w / 1000, 1);
+  const p2w = (an) => an.pPk / 1000 / an.m * 1000; // kW per tonne, bike plus rider
+  const tt = (t) => (t == null ? 'n/a' : fmt(t, 1));
+  if (elec) {
+    tiles.push({ l: 'Motor', v: `${kw(a.pPk)}<small> kW · ${fmt(a.e.tmot)} N m</small>`, d: delta(a.pPk / 1000, s.pPk / 1000, 1, ' kW', true),
+      e: `Full torque from standstill up to ${fmt(Math.round(a.e.pmot / a.e.tmot * 30 / Math.PI / 50) * 50)} r/min, then constant power to ${fmt(B.motorMax)} r/min.` });
+    tiles.push({ l: 'Range at a steady ' + fmt(a.vc) + ' km/h', v: `${fmt(a.range)}<small> km · ${fmt(a.use)} Wh/km</small>`, d: delta(a.range, s.range, 0, ' km', true),
+      e: `${fmt(cfg.kwh, 1)} kWh battery, 90 % usable. Faster riding uses much more: drag grows with the square of speed.` });
+  } else {
+    tiles.push({ l: 'Displacement', v: `${fmt(a.e.cc)}<small> cc</small>`, d: delta(a.e.cc, s.e.cc, 0, ' cc', null),
+      e: `π/4 × ${fmt(cfg.bore, 1)}² × ${fmt(cfg.stroke, 1)} mm. ${B.strokes === 4 ? 'Four-stroke' : 'Two-stroke'}, compression ${fmt(cfg.cr, 1)}:1.` });
+    tiles.push({ l: 'Peak torque and power', v: `${fmt(a.e.tpk, 1)}<small> N m · ${kw(a.pPk)} kW</small>`, d: delta(a.pPk / 1000, s.pPk / 1000, 1, ' kW', true),
+      e: `Torque = BMEP × volume ÷ ${B.strokes === 4 ? '4π' : '2π'} with BMEP ${B.bmep / 1e5} bar. Peak power at ${fmt(a.pRpm)} r/min, redline ${fmt(a.maxRpm)} r/min.` });
+  }
+  tiles.push({ l: 'Power to weight', v: `${fmt(p2w(a))}<small> kW per tonne</small>`, d: delta(p2w(a), p2w(s), 0, '', true),
+    e: `${fmt(a.m)} kg with a ${RIDER} kg rider. This number decides acceleration more than anything else.` });
+  tiles.push({ l: '0 to 100 km/h', v: a.t100 == null ? `n/a<small> · 0 to 60 in ${tt(a.t60)} s</small>` : `${tt(a.t100)}<small> s · 0 to 60 in ${tt(a.t60)} s</small>`,
+    d: a.t100 == null || s.t100 == null ? ['same', a.t100 == null ? 'Does not reach 100 km/h' : 'Stock does not reach 100 km/h'] : delta(a.t100, s.t100, 1, ' s', false),
+    e: 'Full throttle, perfect gear changes, limited by grip and wheelies at 0.8 g.' });
+  if (!elec) tiles.push({ l: `Fuel use at ${fmt(a.vc)} km/h`, v: `${fmt(a.use, 1)}<small> l/100 km</small>`, d: delta(a.use, s.use, 1, ' l', false),
+    e: 'A big engine loafing along wastes more fuel than a small one working hard; higher compression helps a little.' });
   if (elec) {
     tiles.push({ l: 'Motor reduction', v: `${fmt(a.top, 2)}<small> : 1</small>`, d: delta(a.top, s.top, 2, '', null),
       e: `Fixed ${B.fixed}:1 gears × belt ${cfg.sprR}/${cfg.sprF} (${fmt(a.fd, 2)}:1). The motor turns ${fmt(a.top, 1)} times for each turn of the wheel.` });
@@ -1097,7 +1219,7 @@ function renderEffects() {
   tiles.push({ l: `Top speed at ${elec ? 'max motor speed' : 'redline'}`, v: `${fmt(a.vRedline)}<small> km/h</small>`, d: delta(a.vRedline, s.vRedline, 0, ' km/h', null), e: `Road speed with the ${elec ? 'motor at' : 'engine at'} ${fmt(a.maxRpm)} r/min${elec ? '' : ' in top gear'}. The bike only gets there if it has the power to beat the drag.` });
   tiles.push({ l: 'Likely top speed', v: `${fmt(a.vTop)}<small> km/h</small>`, d: delta(a.vTop, s.vTop, 0, ' km/h', true, 0.6), e: capTxt });
   tiles.push({ l: elec ? 'Wheel thrust at launch' : 'Wheel thrust in 1st gear', v: `${fmt(a.thrust1)}<small> N · index ${fmt(thrIdx)}</small>`, d: delta(thrIdx, 100, 0, '', true),
-    e: `Peak ${elec ? 'motor' : 'engine'} torque × ${elec ? 'reduction' : '1st-gear ratio'} ÷ wheel radius. More thrust means harder acceleration, which is what lower gearing buys.` });
+    e: `Peak ${elec ? 'motor' : 'engine'} torque × ${elec ? 'reduction' : 'overall 1st-gear ratio'} ÷ wheel radius. More thrust means harder acceleration, which is what lower gearing buys.` });
   tiles.push({ l: elec ? 'Speed reading error (motor sensor)' : 'Speedometer error (front wheel)', v: `${spErr >= 0 ? '+' : '−'}${fmt(Math.abs(spErr), 1)}<small> %</small>`,
     d: Math.abs(spErr) < 0.05 ? ['same', 'Calibrated'] : ['down', spErr > 0 ? 'Reads high' : 'Reads low'],
     e: elec ? 'The display works out speed from motor revs and the stock gearing and tyre, so a new pulley or rear wheel size throws it off.' : `The speed is measured at the front wheel and calibrated for the stock ${B.rim.f} in wheel. A bigger wheel turns slower, so it reads low.` });
@@ -1108,7 +1230,7 @@ function renderEffects() {
   tiles.push({ l: 'Steering rake and trail', v: `${fmt(a.rake, 1)}°<small> · ${fmt(a.trail)} mm</small>`, d: delta(a.rake, s.rake, 1, '°', null),
     e: 'A higher front or a lower rear tips the fork back: more rake and trail, steadier but slower steering. The opposite quickens it.' });
   $('bb-tiles').innerHTML = tiles.map((t) => `<div class="bb-tile"><div class="l">${t.l}</div><div class="v">${t.v}</div><div class="d ${t.d[0]}">${t.d[1]}</div>${t.e ? `<div class="e">${t.e}</div>` : ''}</div>`).join('');
-  $('bb-fx-sub').textContent = `${B.name}: ${elec ? `${B.pmot / 1000} kW motor, ${B.tmot} N m peak` : `${B.gears.length}-speed gearbox, redline ${fmt(B.redline)} r/min`}, ${B.mass} kg plus a ${RIDER} kg rider. Teaching approximations.`;
+  $('bb-fx-sub').textContent = `${B.name}: ${elec ? `${cfg.kw} kW motor, ${fmt(cfg.kwh, 1)} kWh battery` : `${fmt(a.e.cc)} cc, ${B.gears.length}-speed gearbox, redline ${fmt(a.maxRpm)} r/min`}. Teaching approximations.`;
   drawChart(a, s);
 }
 
@@ -1124,7 +1246,7 @@ function drawChart(a, s) {
     for (let i = 0; i <= 60; i++) {
       const rpm = rpm0 + (an.maxRpm - rpm0) * i / 60;
       const v = rpm * an.kmhPerRpm(ratio);
-      pts.push([v, engineT(rpm) * ratio * an.eff]);
+      pts.push([v, engineT(rpm, an.e) * ratio * an.eff]);
     }
     return pts;
   });

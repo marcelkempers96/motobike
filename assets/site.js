@@ -7,30 +7,29 @@
 const ROOT = new URL('../', import.meta.url);           // site root, wherever the page lives
 const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split('#')[1] : '');
 
+export const MAIN = [['', 'Overview'], ['cockpit/', 'Cockpit']];
 export const NAV = [
-  { key: 'explore', title: 'Explore', blurb: 'The machine, in 3D and live', items: [
-    ['', 'Overview', 'The 3D bike and every component'],
-    ['cockpit/', 'Cockpit', 'Ride it, hear it, record a dyno run'],
-    ['wiring/', 'Wiring Lab', 'Harness, starting, charging, ignition'],
-    ['models/', '3D models', 'All 56 models, rotate and inspect'],
-    ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
-  ] },
-  { key: 'course', title: 'Course', blurb: 'Five modules, from history to high voltage', items: [
-    ['learn/', 'Course home', 'Start here'],
+  { key: 'course', title: 'Course', blurb: 'Learn: five modules, quiz and history', items: [
+    ['learn/', 'Course overview', 'How the course works, where to start'],
     ['learn/#foundations', '01 Foundations', 'Anatomy, physics, workshop'],
     ['learn/#engine', '02 The engine', 'Four-stroke and two-stroke'],
     ['learn/#fuel-ignition', '03 Fuel, ignition, electrics', 'Mixture, EFI, charging'],
     ['learn/#drivetrain-chassis', '04 Drivetrain and chassis', 'Clutch to brakes'],
     ['learn/#electric', '05 Electric motorcycles', 'Motors, packs, BMS'],
+    ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
     ['history/', 'History', 'From steam velocipede to battery swapping'],
-    ['quiz/', 'Quiz', 'Easy and hard, every module'],
     ['progress/', 'My progress', 'Saved in this browser, no login'],
+  ] },
+  { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [
+    ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
+    ['models/', '3D models', 'All 56 models, rotate and inspect'],
+    ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
   ] },
   { key: 'more', title: 'More', blurb: 'Files, sources and the project', items: [
     ['downloads/', 'Downloads', 'PDF modules, models, plates'],
     ['sources/', 'Sources and credits', 'Bibliography and licences'],
     ['updates/', 'Updates', 'What changed and when'],
-    ['about/', 'About', 'Why this exists'],
+    ['about/', 'About', 'Why this exists, who made it'],
     ['contact/', 'Contact', 'Collaborate or ask for a model'],
     ['kids/', 'Kids: build a bike', 'A simple game for younger learners'],
   ] },
@@ -49,6 +48,7 @@ export function navHTML() {
   return `
     <button type="button" class="mz-menu-btn" aria-expanded="false" aria-controls="mz-menu"><span></span><span></span><span></span><b>Menu</b></button>
     <div class="mz-menu" id="mz-menu">
+      ${MAIN.map(([h, t]) => `<a class="mz-menu-main" href="${url(h)}"${h === cur ? ' aria-current="page"' : ''}>${t}</a>`).join('')}
       ${NAV.map((g) => `
         <div class="mz-menu-group ${groupOf === g ? 'is-current' : ''}" data-group="${g.key}">
           <button type="button" class="mz-menu-top" aria-expanded="false">${g.title}<i aria-hidden="true"></i></button>
@@ -62,15 +62,16 @@ export function navHTML() {
 }
 
 export function footerHTML() {
+  const explore = { title: 'Explore', items: [['', 'Overview'], ['cockpit/', 'Cockpit'], ...NAV[1].items] };
   const col = (g) => `<div><h4>${g.title}</h4><ul>${g.items.map(([h, t]) => `<li><a href="${url(h)}">${t}</a></li>`).join('')}</ul></div>`;
   return `
     <div class="mz-foot">
       <div class="mz-foot-about">
-        <a class="mz-foot-brand" href="${url('')}"><img src="${url('assets/brand-mark.svg')}" alt="" width="28" height="28"><span>moto zero</span></a>
+        <a class="mz-foot-brand" href="${url('')}"><span>moto zero</span></a>
         <p>An open technical course on how motorcycles work, from the first combustion stroke to the battery management system of an electric bike. Built for technician trainees, students, researchers, fleet operators and riders.</p>
         <p>Created by <a href="https://www.transitionslab.org" target="_blank" rel="noopener">Transitions Lab</a> as an open educational programme. Text, plates and 3D models are CC BY-SA 4.0.</p>
       </div>
-      ${NAV.map(col).join('')}
+      ${[explore, NAV[0], NAV[2]].map(col).join('')}
     </div>
     <div class="mz-foot-bottom">
       <span>© ${new Date().getFullYear()} Transitions Lab · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></span>
