@@ -3,6 +3,7 @@
    Pick up each part (shown as its 3D render) and drop it where it belongs.
    ========================================================================== */
 import { HOTSPOTS, OVERVIEW_PLATE, PLATE_RATIO } from './content/assets-map.js';
+import { recordTool } from './progress.js';
 
 const R = '../assets/';
 const BIKES = {
@@ -157,6 +158,7 @@ function win() {
   st.done = true;
   const secs = Math.round((performance.now() - st.start) / 1000);
   $('#bg-board').classList.add('is-done');
+  recordTool('kids', { [`${st.bike}-${st.level}`]: secs });
   $('#bg-win').classList.add('is-on');
   const perfect = st.tries === parts().length;
   $('#bg-win-text').textContent = `${parts().length} parts in ${secs} seconds with ${st.tries} tries${perfect ? ': perfect, not a single mistake!' : '.'} Now see it move: start the engine in the Overview.`;
