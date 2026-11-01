@@ -8,7 +8,7 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=B612+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css">
   <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
 </head>
@@ -16,20 +16,9 @@
 <div class="ute-page">
   <header class="ute-top">
     <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
-    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../learn/">Learn</a><a href="../quiz/">Quiz</a><a href="../build/">Build</a><a href="../wiring/">Wiring</a><a href="../models/" aria-current="page">Models</a><a href="../sources/">Sources</a></nav>
+    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../cockpit/">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/" aria-current="page">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-kids" href="../build/">Kids: Build a bike</a></nav>
   </header>
-  <div class="mz-lib">
-    <aside class="mz-lib-list" id="lib-list" aria-label="Models"></aside>
-    <main class="mz-lib-main">
-      <div class="ute-section-head">
-        <div><span class="ute-label" id="lib-cat">Model library</span><h2 id="lib-title" style="font-size:22px">3D models</h2><p class="ute-sub" id="lib-sub">Drag to rotate, scroll or pinch to zoom, click a sub-part to highlight it.</p></div>
-        <div class="ute-head-tools" id="lib-tools"></div>
-      </div>
-      <div class="mz3d mz3d-part" id="lib-3d"></div>
-      <p class="mz3d-cap" id="lib-cap"></p>
-      <div class="mz-subparts" id="lib-subs"></div>
-    </main>
-  </div>
+  <main class="mz-lib-page" id="lib"></main>
   <footer class="ute-footer"><span>Moto Zero · Transitions Lab · CC BY-SA 4.0 · models generated in Blender (see source/3d)</span><span><a href="../">Lab</a> · <a href="../learn/">Learn</a></span></footer>
 </div>
 <script type="module" src="../assets/library.js"></script>

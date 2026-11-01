@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · Cockpit</title>
+  <meta name="description" content="A rider's-eye cockpit of a 125 cc motorcycle where every control works: key, stop switch, starter, choke, clutch, throttle, brakes, gears, lights and horn.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=B612+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .ck-wrap { max-width: 1440px; width: 100%; margin: 0 auto; padding: 24px 24px 8px; }
+    .ck-wrap h1 { font-size: 30px; letter-spacing: -0.02em; margin: 4px 0 8px; }
+    .ck-wrap p { font-size: 15px; max-width: 860px; }
+    .ck-keys { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 10px 0 16px; font: 500 12px/1.6 var(--sans); color: var(--ink-soft); }
+    .ck-keys kbd { font: 700 11px/1 var(--mono); border: 1px solid var(--ink); background: var(--surface); padding: 3px 6px; margin-right: 4px; }
+    .ck-frame { display: block; width: 100%; min-height: 900px; border: 0; background: transparent; }
+  </style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../cockpit/" aria-current="page">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-kids" href="../build/">Kids: Build a bike</a></nav>
+  </header>
+  <div class="ck-wrap">
+    <span class="ute-label">Interactive · Module 01</span>
+    <h1>Cockpit</h1>
+    <p>A rider’s-eye view of a 125 cc road motorcycle with every control working. Start it with the key ON, the stop switch at RUN and the gearbox in neutral (or the clutch pulled), then pull the clutch, select first and open the throttle while you let the clutch out. Every control works from the keyboard, so you can hold the clutch and the throttle at the same time.</p>
+    <div class="ck-keys"><span><kbd>K</kbd>key</span><span><kbd>X</kbd>stop switch</span><span><kbd>S</kbd>starter (hold)</span><span><kbd>C</kbd>clutch (hold)</span><span><kbd>T</kbd>throttle (hold) or mouse wheel</span><span><kbd>↑</kbd><kbd>↓</kbd>gears</span><span><kbd>F</kbd><kbd>R</kbd>brakes</span><span><kbd>H</kbd>horn</span><span><kbd>Q</kbd><kbd>E</kbd>indicators</span><span><kbd>B</kbd>high beam</span><span><kbd>V</kbd>choke</span></div>
+    <p><a class="ute-linkbtn is-warm" href="../#dyno-h">Record a run on the dyno in the Lab →</a></p>
+  </div>
+  <iframe class="ck-frame" id="ck" title="Interactive motorcycle cockpit" src="../assets/interactive/controls.html?embed=1"></iframe>
+  <footer class="ute-footer"><span>Moto Zero · Transitions Lab · CC BY-SA 4.0</span><span>125 cc single, 5-speed. Values are teaching approximations.</span></footer>
+</div>
+<script>
+(function () {
+  var f = document.getElementById('ck');
+  var KEYS = 'kxsctfrhvbqe';
+  function fit() { try { f.style.height = Math.ceil(f.contentDocument.documentElement.scrollHeight) + 'px'; } catch (e) {} }
+  f.addEventListener('load', function () { fit(); try { new ResizeObserver(fit).observe(f.contentDocument.documentElement); } catch (e) { setInterval(fit, 1000); } });
+  function fwd(type, e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    var k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (KEYS.indexOf(k) < 0 && k !== 'ArrowUp' && k !== 'ArrowDown') return;
+    if (/INPUT|TEXTAREA|SELECT/.test((e.target && e.target.tagName) || '')) return;
+    try { f.contentDocument.dispatchEvent(new KeyboardEvent(type, { key: e.key, repeat: e.repeat, bubbles: true })); e.preventDefault(); } catch (err) {}
+  }
+  document.addEventListener('keydown', function (e) { fwd('keydown', e); });
+  document.addEventListener('keyup', function (e) { fwd('keyup', e); });
+})();
+</script>
+</body>
+</html>

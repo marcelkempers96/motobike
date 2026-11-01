@@ -14,7 +14,9 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 const HL = new THREE.Color('#C8502A');
 const CAT = new THREE.Color('#E07A4F');
 const BLACK = new THREE.Color(0);
+/* Keep at most a few parsed models in memory; old ones are released. */
 const cache = new Map();
+const CACHE_MAX = 3;
 const loader = new GLTFLoader();
 loader.setMeshoptDecoder(MeshoptDecoder);
 
@@ -28,8 +30,23 @@ export const renderFor = (base, name) => `${base}${name.startsWith('bike_') ? na
 export const humanize = (s) => s.replace(/_/g, ' ').replace(/\b12v\b/i, '12 V').replace(/\bhv\b/i, 'HV').replace(/\bdc dc\b/i, 'DC-DC').replace(/\btft\b/i, 'TFT').replace(/\bcdi\b/i, 'CDI').replace(/\blv\b/i, 'LV').replace(/^./, (c) => c.toUpperCase());
 
 function loadGLB(url) {
-  if (!cache.has(url)) cache.set(url, new Promise((res, rej) => loader.load(url, res, undefined, rej)));
+  if (!cache.has(url)) {
+    cache.set(url, new Promise((res, rej) => loader.load(url, res, undefined, rej)));
+    while (cache.size > CACHE_MAX) {
+      const [k, pr] = cache.entries().next().value;
+      cache.delete(k);
+      pr.then((g) => disposeTree(g.scene)).catch(() => {});
+    }
+  } else { const v = cache.get(url); cache.delete(url); cache.set(url, v); }
   return cache.get(url).then((g) => g.scene.clone(true));
+}
+
+function disposeTree(obj) {
+  obj.traverse((m) => {
+    if (m.geometry) m.geometry.dispose();
+    const mats = m.material ? (Array.isArray(m.material) ? m.material : [m.material]) : [];
+    mats.forEach((mat) => { for (const k in mat) { const v = mat[k]; if (v && v.isTexture) v.dispose(); } mat.dispose(); });
+  });
 }
 
 /**
@@ -52,7 +69,7 @@ export function createViewer(el, opts = {}) {
   el.appendChild(status);
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: false });
-  renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  renderer.setPixelRatio(Math.min(1.5, window.devicePixelRatio || 1));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   const scene = new THREE.Scene();
@@ -78,12 +95,13 @@ export function createViewer(el, opts = {}) {
     renderer.setSize(r.width, r.height, false);
     camera.aspect = r.width / r.height;
     camera.updateProjectionMatrix();
-    dirty = true;
+    dirty = true; loop();
   }
   const ro = new ResizeObserver(resize); ro.observe(el);
   const io = new IntersectionObserver((e) => { visible = e[0].isIntersecting; if (visible) loop(); }, { rootMargin: '100px' });
   io.observe(el);
-  controls.addEventListener('change', () => { dirty = true; });
+  controls.addEventListener('change', () => { dirty = true; loop(); });
+  controls.addEventListener('start', () => loop());
 
   function paint() {
     for (const m of meshes) {
@@ -101,7 +119,7 @@ export function createViewer(el, opts = {}) {
       mat.opacity = fade ? 0.16 : m.userData.origOpacity;
       mat.depthWrite = !fade && m.userData.origDepthWrite;
     }
-    dirty = true;
+    dirty = true; loop();
   }
 
   function frame(dist, view) {
@@ -115,7 +133,7 @@ export function createViewer(el, opts = {}) {
     controls.target.copy(c); controls.update();
     shadow.position.set(c.x, box.min.y + 0.001, c.z);
     shadow.scale.setScalar(Math.max(size.x, size.z) * 0.62);
-    dirty = true;
+    dirty = true; loop();
   }
 
   function setupWheels(groups) {
@@ -152,13 +170,15 @@ export function createViewer(el, opts = {}) {
     let obj;
     try { obj = await loadGLB(base + name + '.glb'); } catch (e) { status.textContent = `Could not load ${name}.glb`; return null; }
     if (disposed) return null;
-    if (root) scene.remove(root);
+    if (root) { scene.remove(root); root.traverse((m) => { if (m.isMesh && m.material) m.material.dispose(); }); }
     root = obj;
     scene.add(root);
     meshes = [];
     root.traverse((m) => {
       if (!m.isMesh) return;
       m.material = m.material.clone();
+      // Transmission (glass) forces a second render pass every frame: use plain transparency instead.
+      if (m.material.transmission) { m.material.transmission = 0; m.material.transparent = true; m.material.opacity = Math.min(m.material.opacity, 0.35); }
       m.userData.origOpacity = m.material.opacity;
       m.userData.origTransparent = m.material.transparent;
       m.userData.origDepthWrite = m.material.depthWrite;
@@ -191,14 +211,14 @@ export function createViewer(el, opts = {}) {
     controls.target.copy(c);
     camera.position.copy(c).add(dir.multiplyScalar(d));
     controls.update();
-    dirty = true;
+    dirty = true; loop();
   };
   api.spin = (deg) => {
     if (!wheels.length || !deg) return;
     for (const w of wheels) w.pivot.rotation[w.axis] -= deg * Math.PI / 180;
-    dirty = true;
+    dirty = true; loop();
   };
-  api.render = () => { dirty = true; };
+  api.render = () => { dirty = true; loop(); };
 
   // Picking
   const ray = new THREE.Raycaster();
@@ -234,14 +254,18 @@ export function createViewer(el, opts = {}) {
   });
   canvas.addEventListener('pointerleave', () => { hovered = null; if (opts.onHover) opts.onHover(null, null); });
 
+  let idle = 0;
   function loop() {
+    idle = 0;
     if (raf || disposed) return;
     raf = requestAnimationFrame(() => {
       raf = 0;
       if (disposed || !visible) return;
       const changed = controls.update();
-      if (dirty || changed || controls.autoRotate) { renderer.render(scene, camera); dirty = false; }
-      loop();
+      if (dirty || changed || controls.autoRotate) { renderer.render(scene, camera); dirty = false; idle = 0; }
+      else idle++;
+      if (idle < 45 || controls.autoRotate) loop(); // sleep when nothing moves; woken by input or changes
+
     });
   }
 

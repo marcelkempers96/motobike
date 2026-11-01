@@ -8,17 +8,17 @@
 <meta name="description" content="Interactive motorcycle wiring: the main harness connector by connector, and live starting, charging and ignition circuits you can switch, rev and break.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=B612+Mono:wght@400;700&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <style>
 /* Layout: workbench. Drawing sheet left, inspection card right; controls sit under the sheet like a test bench. */
 :root{
-  --bg:#F5F4EF; --card:#FFFFFF; --ink:#1E2B5E; --text:#242833; --muted:#5C6170;
+  --bg:#F6F5F2; --card:#FFFFFF; --ink:#161616; --text:#242833; --muted:#5C6170;
   --line:#E1DFD6; --line2:#CDCAC0; --accent:#C8502A; --accent-soft:#F7E4DB; --accent-line:#ECC1B0;
-  --btn:#F1F0EB; --btn-h:#E9E7E0; --on-bg:#1E2B5E; --on-fg:#FFFFFF; --ok:#1F7A3A; --ok-soft:#E3F1E7;
-  --sheet:#FFFFFF; --wire:#1E2B5E;
+  --btn:#F1F0EB; --btn-h:#E9E7E0; --on-bg:#161616; --on-fg:#FFFFFF; --ok:#1F7A3A; --ok-soft:#E3F1E7;
+  --sheet:#FFFFFF; --wire:#161616;
   --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   --cond:'IBM Plex Sans Condensed','IBM Plex Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --mono:'B612 Mono','IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#12151D; --card:#1A1E29; --ink:#E4E8F3; --text:#D3D7E0; --muted:#98A0B0;
@@ -116,8 +116,8 @@ footer a{color:var(--ink)}
 .dia .seg.on.ac{animation:flow .32s linear infinite alternate}
 .dia .seg.on.slow{animation-duration:1.4s}
 @keyframes flow{to{stroke-dashoffset:-19}}
-.dia .swg circle{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2}
-.dia .swg path{fill:none;stroke:#1E2B5E;stroke-width:2;stroke-linecap:round}
+.dia .swg circle{fill:#FFFFFF;stroke:#161616;stroke-width:2}
+.dia .swg path{fill:none;stroke:#161616;stroke-width:2;stroke-linecap:round}
 .dia .swg.closed path,.dia .blade.closed{stroke:#C8502A}
 .dia .pbcap{transition:transform .08s}
 .dia .swg.closed .pbcap{transform:translateY(11px)}
@@ -182,29 +182,29 @@ footer a{color:var(--ink)}
 <desc>The main loom of a road motorcycle laid out flat: taped trunk, branches to each component ending in multi-pin connectors, fuse box, relays, earth points and wire colour codes. Only the battery positive feed is in the accent colour.</desc>
 <style>
 #WR01 path,#WR01 line,#WR01 circle,#WR01 rect,#WR01 ellipse,#WR01 polyline,#WR01 polygon{stroke-linecap:round;stroke-linejoin:round}
-#WR01 .o{stroke:#1E2B5E;stroke-width:2.2}
-#WR01 .i{stroke:#1E2B5E;stroke-width:1.3}
-#WR01 .f{stroke:#1E2B5E;stroke-width:0.8}
-#WR01 .h{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4;fill:none}
-#WR01 .c{stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4;fill:none}
-#WR01 .ph{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:18 4 3 4 3 4;fill:none}
+#WR01 .o{stroke:#161616;stroke-width:2.2}
+#WR01 .i{stroke:#161616;stroke-width:1.3}
+#WR01 .f{stroke:#161616;stroke-width:0.8}
+#WR01 .h{stroke:#161616;stroke-width:1;stroke-dasharray:6 4;fill:none}
+#WR01 .c{stroke:#161616;stroke-width:0.8;stroke-dasharray:14 4 2 4;fill:none}
+#WR01 .ph{stroke:#161616;stroke-width:1;stroke-dasharray:18 4 3 4 3 4;fill:none}
 #WR01 .n{fill:none}
-#WR01 .t{fill:#DCE4F2}
-#WR01 .t2{fill:#B9C7E3}
+#WR01 .t{fill:#EEEDE8}
+#WR01 .t2{fill:#D4D2CA}
 #WR01 .w{fill:#FFFFFF}
-#WR01 .k{fill:#1E2B5E}
+#WR01 .k{fill:#161616}
 #WR01 .x{fill:url(#WR01-hx)}
 #WR01 .xb{fill:url(#WR01-hxb)}
 #WR01 .xr{fill:url(#WR01-hxr)}
 #WR01 .fl{fill:url(#WR01-fl)}
 #WR01 .af{fill:#C8502A}
 #WR01 .as{stroke:#C8502A}
-#WR01 .ld{stroke:#1E2B5E;stroke-width:0.9;fill:none}
-#WR01 .dot{fill:#1E2B5E}
-#WR01 .dl{stroke:#1E2B5E;stroke-width:0.8;fill:none}
+#WR01 .ld{stroke:#161616;stroke-width:0.9;fill:none}
+#WR01 .dot{fill:#161616}
+#WR01 .dl{stroke:#161616;stroke-width:0.8;fill:none}
 #WR01 .acc{stroke:#C8502A;stroke-width:2.6;fill:none}
 #WR01 .acct{stroke:#C8502A;stroke-width:1.6;fill:none}
-#WR01 text{fill:#1E2B5E}
+#WR01 text{fill:#161616}
 #WR01 .l{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:500}
 #WR01 .ls{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:15px;font-weight:400}
 #WR01 .la{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:600;fill:#C8502A}
@@ -213,22 +213,22 @@ footer a{color:var(--ink)}
 #WR01 .pt{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.02em}
 #WR01 .pl{font-family:'IBM Plex Serif',serif;font-style:italic;font-weight:600;font-size:22px}
 #WR01 .num{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:15px;font-weight:500}
-#WR01 .sw{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:700;fill:#1E2B5E}
-#WR01 .lcd{font-family:'IBM Plex Mono',monospace;font-weight:600;fill:#1E2B5E}
+#WR01 .sw{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:700;fill:#161616}
+#WR01 .lcd{font-family:'IBM Plex Mono',monospace;font-weight:600;fill:#161616}
 </style>
 <defs>
-<pattern id="WR01-hx" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
-<pattern id="WR01-hxb" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(-45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
-<pattern id="WR01-hxr" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#DCE4F2"/><line x1="0" y1="0" x2="0" y2="8" stroke="#1E2B5E" stroke-width="0.7"/><line x1="4" y1="0" x2="4" y2="8" stroke="#1E2B5E" stroke-width="0.7" stroke-dasharray="2 2"/></pattern>
+<pattern id="WR01-hx" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#D4D2CA"/><line x1="0" y1="0" x2="0" y2="6" stroke="#161616" stroke-width="0.7"/></pattern>
+<pattern id="WR01-hxb" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(-45)"><rect width="6" height="6" fill="#D4D2CA"/><line x1="0" y1="0" x2="0" y2="6" stroke="#161616" stroke-width="0.7"/></pattern>
+<pattern id="WR01-hxr" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#EEEDE8"/><line x1="0" y1="0" x2="0" y2="8" stroke="#161616" stroke-width="0.7"/><line x1="4" y1="0" x2="4" y2="8" stroke="#161616" stroke-width="0.7" stroke-dasharray="2 2"/></pattern>
 <pattern id="WR01-fl" patternUnits="userSpaceOnUse" width="10" height="8"><rect width="10" height="8" fill="#F3D9CE"/><line x1="1" y1="2" x2="5" y2="2" stroke="#C8502A" stroke-width="0.7"/><line x1="6" y1="6" x2="9" y2="6" stroke="#C8502A" stroke-width="0.7"/></pattern>
-<marker id="WR01-ar" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 1.5 L10 5 L0 8.5 Z" fill="#1E2B5E"/></marker>
+<marker id="WR01-ar" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 1.5 L10 5 L0 8.5 Z" fill="#161616"/></marker>
 <marker id="WR01-aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="13" markerHeight="13" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#C8502A"/></marker>
-<marker id="WR01-ai" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#1E2B5E"/></marker>
+<marker id="WR01-ai" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#161616"/></marker>
 </defs>
 <text x="40" y="46" class="ls">Front of machine (headlight end) on the left; branch lengths shortened</text>
 <g id="WR01-headlight" data-part="Headlight connector" data-category="wiring">
-<path d="M180 540 C180 500 180 306 180 276" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M180 540 C180 500 180 306 180 276" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M180 540 C180 500 180 306 180 276" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M180 540 C180 500 180 306 180 276" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M180 276 Q172 260 172 242" class="n i"/>
 <path d="M180 276 Q180 260 180 242" class="n i"/>
 <path d="M180 276 Q188 260 188 242" class="n i"/>
@@ -241,8 +241,8 @@ footer a{color:var(--ink)}
 <text x="168" y="398" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 168 398)">W  Bl  G</text>
 </g>
 <g id="WR01-ind-front" data-part="Front indicator connectors" data-category="wiring">
-<path d="M280 540 C280 500 280 446 280 416" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M280 540 C280 500 280 446 280 416" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M280 540 C280 500 280 446 280 416" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M280 540 C280 500 280 446 280 416" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M280 416 Q274 400 274 382" class="n i"/>
 <path d="M280 416 Q280 400 280 382" class="n i"/>
 <path d="M280 416 Q286 400 286 382" class="n i"/>
@@ -254,8 +254,8 @@ footer a{color:var(--ink)}
 <text x="268" y="468" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 268 468)">O  Lb  G</text>
 </g>
 <g id="WR01-clocks" data-part="Instrument connector" data-category="wiring">
-<path d="M380 540 C380 500 380 291 380 261" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M380 540 C380 500 380 291 380 261" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M380 540 C380 500 380 291 380 261" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M380 540 C380 500 380 291 380 261" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M380 261 Q372 245 372 227" class="n i"/>
 <path d="M380 261 Q380 245 380 227" class="n i"/>
 <path d="M380 261 Q388 245 388 227" class="n i"/>
@@ -281,8 +281,8 @@ footer a{color:var(--ink)}
 <text x="368" y="390.5" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 368 390.5)">Bl  Y  G</text>
 </g>
 <g id="WR01-lsw" data-part="Left switch connector" data-category="wiring">
-<path d="M490 540 C490 500 490 431 490 401" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M490 540 C490 500 490 431 490 401" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M490 540 C490 500 490 431 490 401" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M490 540 C490 500 490 431 490 401" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M490 401 Q482 385 482 367" class="n i"/>
 <path d="M490 401 Q490 385 490 367" class="n i"/>
 <path d="M490 401 Q498 385 498 367" class="n i"/>
@@ -302,8 +302,8 @@ footer a{color:var(--ink)}
 <text x="478" y="460.5" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 478 460.5)">Bl/W  W  Lg</text>
 </g>
 <g id="WR01-rsw" data-part="Right switch connector" data-category="wiring">
-<path d="M590 540 C590 500 590 311 590 281" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M590 540 C590 500 590 311 590 281" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M590 540 C590 500 590 311 590 281" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M590 540 C590 500 590 311 590 281" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M590 281 Q582 265 582 247" class="n i"/>
 <path d="M590 281 Q590 265 590 247" class="n i"/>
 <path d="M590 281 Q598 265 598 247" class="n i"/>
@@ -319,8 +319,8 @@ footer a{color:var(--ink)}
 <text x="578" y="400.5" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 578 400.5)">B/W  Y/R  B</text>
 </g>
 <g id="WR01-ignsw" data-part="Ignition switch connector" data-category="wiring">
-<path d="M690 540 C690 500 690 446 690 416" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M690 540 C690 500 690 446 690 416" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M690 540 C690 500 690 446 690 416" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M690 540 C690 500 690 446 690 416" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M690 416 Q686 400 686 382" class="n i"/>
 <path d="M690 416 Q694 400 694 382" class="n i"/>
 <rect x="683" y="410" width="14" height="12" rx="2" class="t2 i"/>
@@ -331,8 +331,8 @@ footer a{color:var(--ink)}
 <text x="678" y="468" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 678 468)">R  B</text>
 </g>
 <g id="WR01-coil" data-part="Ignition coil connector" data-category="wiring">
-<path d="M790 540 C790 500 790 286 790 256" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M790 540 C790 500 790 286 790 256" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M790 540 C790 500 790 286 790 256" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M790 540 C790 500 790 286 790 256" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M790 256 Q786 240 786 222" class="n i"/>
 <path d="M790 256 Q794 240 794 222" class="n i"/>
 <rect x="783" y="250" width="14" height="12" rx="2" class="t2 i"/>
@@ -343,8 +343,8 @@ footer a{color:var(--ink)}
 <text x="778" y="388" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 778 388)">B/Y  Bl</text>
 </g>
 <g id="WR01-tps" data-part="Throttle position sensor connector" data-category="wiring">
-<path d="M890 540 C890 500 890 426 890 396" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M890 540 C890 500 890 426 890 396" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M890 540 C890 500 890 426 890 396" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M890 540 C890 500 890 426 890 396" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M890 396 Q882 380 882 362" class="n i"/>
 <path d="M890 396 Q890 380 890 362" class="n i"/>
 <path d="M890 396 Q898 380 898 362" class="n i"/>
@@ -357,8 +357,8 @@ footer a{color:var(--ink)}
 <text x="878" y="458" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 878 458)">Y/R  Lb  G/O</text>
 </g>
 <g id="WR01-inj" data-part="Injector connector" data-category="wiring">
-<path d="M990 540 C990 500 990 306 990 276" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M990 540 C990 500 990 306 990 276" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M990 540 C990 500 990 306 990 276" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M990 540 C990 500 990 306 990 276" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M990 276 Q986 260 986 242" class="n i"/>
 <path d="M990 276 Q994 260 994 242" class="n i"/>
 <rect x="983" y="270" width="14" height="12" rx="2" class="t2 i"/>
@@ -369,8 +369,8 @@ footer a{color:var(--ink)}
 <text x="978" y="398" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 978 398)">Bl  P/B</text>
 </g>
 <g id="WR01-map" data-part="MAP / IAT connector" data-category="wiring">
-<path d="M1090 540 C1090 500 1090 446 1090 416" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M1090 540 C1090 500 1090 446 1090 416" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M1090 540 C1090 500 1090 446 1090 416" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M1090 540 C1090 500 1090 446 1090 416" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M1090 416 Q1082 400 1082 382" class="n i"/>
 <path d="M1090 416 Q1090 400 1090 382" class="n i"/>
 <path d="M1090 416 Q1098 400 1098 382" class="n i"/>
@@ -383,8 +383,8 @@ footer a{color:var(--ink)}
 <text x="1078" y="468" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 1078 468)">Y/R  G/O  Lg</text>
 </g>
 <g id="WR01-tail" data-part="Tail light connector" data-category="wiring">
-<path d="M1320 540 C1320 500 1320 446 1320 416" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M1320 540 C1320 500 1320 446 1320 416" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M1320 540 C1320 500 1320 446 1320 416" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M1320 540 C1320 500 1320 446 1320 416" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M1320 416 Q1312 400 1312 382" class="n i"/>
 <path d="M1320 416 Q1320 400 1320 382" class="n i"/>
 <path d="M1320 416 Q1328 400 1328 382" class="n i"/>
@@ -397,8 +397,8 @@ footer a{color:var(--ink)}
 <text x="1308" y="468" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 1308 468)">Br  G/Y  G</text>
 </g>
 <g id="WR01-ind-rear" data-part="Rear indicator connectors" data-category="wiring">
-<path d="M1430 540 C1430 500 1430 306 1430 276" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M1430 540 C1430 500 1430 306 1430 276" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M1430 540 C1430 500 1430 306 1430 276" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M1430 540 C1430 500 1430 306 1430 276" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M1430 276 Q1424 260 1424 242" class="n i"/>
 <path d="M1430 276 Q1430 260 1430 242" class="n i"/>
 <path d="M1430 276 Q1436 260 1436 242" class="n i"/>
@@ -410,8 +410,8 @@ footer a{color:var(--ink)}
 <text x="1418" y="398" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 1418 398)">O  Lb  G</text>
 </g>
 <g id="WR01-horn" data-part="Horn connector" data-category="wiring">
-<path d="M200 540 C200 580 200 754 200 784" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M200 540 C200 580 200 754 200 784" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M200 540 C200 580 200 754 200 784" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M200 540 C200 580 200 754 200 784" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M200 784 Q196 800 196 818" class="n i"/>
 <path d="M200 784 Q204 800 204 818" class="n i"/>
 <rect x="193" y="778" width="14" height="12" rx="2" class="t2 i"/>
@@ -422,8 +422,8 @@ footer a{color:var(--ink)}
 <text x="188" y="672" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 188 672)">Lg  G</text>
 </g>
 <g id="WR01-fbs" data-part="Front brake switch connector" data-category="wiring">
-<path d="M305 540 C305 580 305 624 305 654" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M305 540 C305 580 305 624 305 654" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M305 540 C305 580 305 624 305 654" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M305 540 C305 580 305 624 305 654" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M305 654 Q301 670 301 688" class="n i"/>
 <path d="M305 654 Q309 670 309 688" class="n i"/>
 <rect x="298" y="648" width="14" height="12" rx="2" class="t2 i"/>
@@ -434,8 +434,8 @@ footer a{color:var(--ink)}
 <text x="293" y="607" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 293 607)">G/Y  Bl</text>
 </g>
 <g id="WR01-ckp" data-part="Crank position sensor connector" data-category="wiring">
-<path d="M515 540 C515 580 515 624 515 654" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M515 540 C515 580 515 624 515 654" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M515 540 C515 580 515 624 515 654" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M515 540 C515 580 515 624 515 654" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M515 654 Q511 670 511 688" class="n i"/>
 <path d="M515 654 Q519 670 519 688" class="n i"/>
 <rect x="508" y="648" width="14" height="12" rx="2" class="t2 i"/>
@@ -446,8 +446,8 @@ footer a{color:var(--ink)}
 <text x="503" y="607" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 503 607)">Bl/Y  G/W</text>
 </g>
 <g id="WR01-o2" data-part="Oxygen sensor connector" data-category="wiring">
-<path d="M620 540 C620 580 620 754 620 784" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M620 540 C620 580 620 754 620 784" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M620 540 C620 580 620 754 620 784" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M620 540 C620 580 620 754 620 784" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M620 784 Q612 800 612 818" class="n i"/>
 <path d="M620 784 Q620 800 620 818" class="n i"/>
 <path d="M620 784 Q628 800 628 818" class="n i"/>
@@ -461,8 +461,8 @@ footer a{color:var(--ink)}
 <text x="608" y="672" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 608 672)">W  G  Bl</text>
 </g>
 <g id="WR01-ects" data-part="Engine temperature sensor connector" data-category="wiring">
-<path d="M725 540 C725 580 725 624 725 654" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M725 540 C725 580 725 624 725 654" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M725 540 C725 580 725 624 725 654" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M725 540 C725 580 725 624 725 654" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M725 654 Q721 670 721 688" class="n i"/>
 <path d="M725 654 Q729 670 729 688" class="n i"/>
 <rect x="718" y="648" width="14" height="12" rx="2" class="t2 i"/>
@@ -473,8 +473,8 @@ footer a{color:var(--ink)}
 <text x="713" y="607" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 713 607)">G/Bl  G/O</text>
 </g>
 <g id="WR01-alt" data-part="Alternator connector" data-category="wiring">
-<path d="M830 540 C830 580 830 754 830 784" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M830 540 C830 580 830 754 830 784" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M830 540 C830 580 830 754 830 784" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M830 540 C830 580 830 754 830 784" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M830 784 Q822 800 822 818" class="n i"/>
 <path d="M830 784 Q830 800 830 818" class="n i"/>
 <path d="M830 784 Q838 800 838 818" class="n i"/>
@@ -487,8 +487,8 @@ footer a{color:var(--ink)}
 <text x="818" y="672" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 818 672)">Y  Y  Y</text>
 </g>
 <g id="WR01-neutral" data-part="Neutral switch lead" data-category="wiring">
-<path d="M935 540 C935 580 935 624 935 654" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M935 540 C935 580 935 624 935 654" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M935 540 C935 580 935 624 935 654" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M935 540 C935 580 935 624 935 654" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M935 654 Q935 670 935 688" class="n i"/>
 <rect x="928" y="648" width="14" height="12" rx="2" class="t2 i"/>
 <rect x="920" y="688" width="30" height="24" rx="3" class="t o"/>
@@ -497,8 +497,8 @@ footer a{color:var(--ink)}
 <text x="923" y="607" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 923 607)">Lg/R</text>
 </g>
 <g id="WR01-ecu" data-part="ECU connector" data-category="wiring">
-<path d="M1200 540 C1200 500 1200 281 1200 251" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M1200 540 C1200 500 1200 281 1200 251" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M1200 540 C1200 500 1200 281 1200 251" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M1200 540 C1200 500 1200 281 1200 251" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <path d="M1200 251 Q1188 235 1188 217" class="n i"/>
 <path d="M1200 251 Q1196 235 1196 217" class="n i"/>
 <path d="M1200 251 Q1204 235 1204 217" class="n i"/>
@@ -531,8 +531,8 @@ footer a{color:var(--ink)}
 <text x="1188" y="385.5" class="m" text-anchor="middle" style="font-size:15px" transform="rotate(-90 1188 385.5)">Y/R  G/O  Bl  P/B</text>
 </g>
 <g id="WR01-trunk" data-part="Main harness trunk" data-category="wiring">
-<path d="M140 540 L1470 540" class="n" style="stroke:#1E2B5E;stroke-width:26;stroke-linecap:round"/>
-<path d="M140 540 L1470 540" class="n" style="stroke:#DCE4F2;stroke-width:21.6;stroke-linecap:round"/>
+<path d="M140 540 L1470 540" class="n" style="stroke:#161616;stroke-width:26;stroke-linecap:round"/>
+<path d="M140 540 L1470 540" class="n" style="stroke:#EEEDE8;stroke-width:21.6;stroke-linecap:round"/>
 <line x1="146" y1="529.2" x2="155" y2="550.8" class="f"/>
 <line x1="153" y1="529.2" x2="162" y2="550.8" class="f"/>
 <line x1="160" y1="529.2" x2="169" y2="550.8" class="f"/>
@@ -751,8 +751,8 @@ footer a{color:var(--ink)}
 <circle cx="1010" cy="571" r="3" class="w f"/>
 </g>
 <g id="WR01-fusebox" data-part="Fuse box" data-category="wiring">
-<path d="M1090 540 C1090 600 1090 680 1090 720" class="n" style="stroke:#1E2B5E;stroke-width:12"/>
-<path d="M1090 540 C1090 600 1090 680 1090 720" class="n" style="stroke:#DCE4F2;stroke-width:8"/>
+<path d="M1090 540 C1090 600 1090 680 1090 720" class="n" style="stroke:#161616;stroke-width:12"/>
+<path d="M1090 540 C1090 600 1090 680 1090 720" class="n" style="stroke:#EEEDE8;stroke-width:8"/>
 <rect x="1020" y="720" width="140" height="110" rx="6" class="t2 o"/>
 <rect x="1030" y="730" width="120" height="90" rx="4" class="t i"/>
 <rect x="1034" y="744" width="16" height="34" rx="2" class="w i"/>
@@ -783,12 +783,12 @@ footer a{color:var(--ink)}
 <circle cx="1294" cy="654" r="6" class="t2 i"/>
 <circle cx="1326" cy="654" r="6" class="t2 i"/>
 <rect x="1296" y="680" width="28" height="10" rx="2" class="t2 i"/>
-<path d="M1250 540 C1250 600 1310 640 1310 690" class="n" style="stroke:#1E2B5E;stroke-width:6"/>
-<path d="M1250 540 C1250 600 1310 640 1310 690" class="n" style="stroke:#DCE4F2;stroke-width:3"/>
+<path d="M1250 540 C1250 600 1310 640 1310 690" class="n" style="stroke:#161616;stroke-width:6"/>
+<path d="M1250 540 C1250 600 1310 640 1310 690" class="n" style="stroke:#EEEDE8;stroke-width:3"/>
 </g>
 <g id="WR01-trelay" data-part="Turn signal relay" data-category="electrical">
-<path d="M1470 540 C1500 580 1520 600 1520 640" class="n" style="stroke:#1E2B5E;stroke-width:9"/>
-<path d="M1470 540 C1500 580 1520 600 1520 640" class="n" style="stroke:#DCE4F2;stroke-width:5.4"/>
+<path d="M1470 540 C1500 580 1520 600 1520 640" class="n" style="stroke:#161616;stroke-width:9"/>
+<path d="M1470 540 C1500 580 1520 600 1520 640" class="n" style="stroke:#EEEDE8;stroke-width:5.4"/>
 <rect x="1498" y="640" width="44" height="40" rx="4" class="t2 o"/>
 <rect x="1506" y="680" width="28" height="8" rx="2" class="t i"/>
 </g>
@@ -812,14 +812,14 @@ footer a{color:var(--ink)}
 <circle cx="1326" cy="654" r="7" class="w" style="stroke:#C8502A;stroke-width:2.4"/>
 </g>
 <g id="WR01-startercable" data-part="Starter motor cable" data-category="wiring">
-<path d="M1294 654 C1240 740 1260 940 1200 1000" class="n" style="stroke:#1E2B5E;stroke-width:7"/>
-<path d="M1294 654 C1240 740 1260 940 1200 1000" class="n" style="stroke:#DCE4F2;stroke-width:3.6"/>
+<path d="M1294 654 C1240 740 1260 940 1200 1000" class="n" style="stroke:#161616;stroke-width:7"/>
+<path d="M1294 654 C1240 740 1260 940 1200 1000" class="n" style="stroke:#EEEDE8;stroke-width:3.6"/>
 <circle cx="1200" cy="1000" r="8" class="t2 i"/>
 <circle cx="1200" cy="1000" r="3.5" class="w f"/>
 </g>
 <g id="WR01-earth-front" data-part="Earth point" data-category="wiring">
-<path d="M410 540 C410 600 410 740 410 800" class="n" style="stroke:#1E2B5E;stroke-width:6"/>
-<path d="M410 540 C410 600 410 740 410 800" class="n" style="stroke:#DCE4F2;stroke-width:3"/>
+<path d="M410 540 C410 600 410 740 410 800" class="n" style="stroke:#161616;stroke-width:6"/>
+<path d="M410 540 C410 600 410 740 410 800" class="n" style="stroke:#EEEDE8;stroke-width:3"/>
 <circle cx="410" cy="808" r="9" class="t2 o"/>
 <circle cx="410" cy="808" r="3.5" class="w f"/>
 <line x1="388" y1="826" x2="432" y2="826" class="i"/>
@@ -829,8 +829,8 @@ footer a{color:var(--ink)}
 <text x="424" y="796" class="m" style="font-size:15px">G</text>
 </g>
 <g id="WR01-bminus" data-part="Battery negative lead" data-category="wiring">
-<path d="M1479 848 C1520 780 1550 680 1550 760" class="n" style="stroke:#1E2B5E;stroke-width:7"/>
-<path d="M1479 848 C1520 780 1550 680 1550 760" class="n" style="stroke:#DCE4F2;stroke-width:3.6"/>
+<path d="M1479 848 C1520 780 1550 680 1550 760" class="n" style="stroke:#161616;stroke-width:7"/>
+<path d="M1479 848 C1520 780 1550 680 1550 760" class="n" style="stroke:#EEEDE8;stroke-width:3.6"/>
 <circle cx="1479" cy="848" r="7" class="w i"/>
 <circle cx="1550" cy="768" r="9" class="t2 o"/>
 <circle cx="1550" cy="768" r="3.5" class="w f"/>
@@ -1023,43 +1023,43 @@ footer a{color:var(--ink)}
 <title>F23 Electric starting circuit: battery, fuses, switches, interlocks, starter relay, starter motor and starter clutch</title>
 <style>
 .f23 *{stroke-linecap:round;stroke-linejoin:round}
-.f23 .o{fill:#DCE4F2;stroke:#1E2B5E;stroke-width:2.2}
-.f23 .o2{fill:#B9C7E3;stroke:#1E2B5E;stroke-width:2.2}
-.f23 .oi{fill:#DCE4F2;stroke:#1E2B5E;stroke-width:1.3}
-.f23 .o2i{fill:#B9C7E3;stroke:#1E2B5E;stroke-width:1.3}
-.f23 .p{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2.2}
-.f23 .pi{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:1.3}
-.f23 .i{fill:none;stroke:#1E2B5E;stroke-width:1.3}
-.f23 .d{fill:none;stroke:#1E2B5E;stroke-width:0.8}
-.f23 .w{fill:none;stroke:#1E2B5E;stroke-width:2}
+.f23 .o{fill:#EEEDE8;stroke:#161616;stroke-width:2.2}
+.f23 .o2{fill:#D4D2CA;stroke:#161616;stroke-width:2.2}
+.f23 .oi{fill:#EEEDE8;stroke:#161616;stroke-width:1.3}
+.f23 .o2i{fill:#D4D2CA;stroke:#161616;stroke-width:1.3}
+.f23 .p{fill:#FFFFFF;stroke:#161616;stroke-width:2.2}
+.f23 .pi{fill:#FFFFFF;stroke:#161616;stroke-width:1.3}
+.f23 .i{fill:none;stroke:#161616;stroke-width:1.3}
+.f23 .d{fill:none;stroke:#161616;stroke-width:0.8}
+.f23 .w{fill:none;stroke:#161616;stroke-width:2}
 .f23 .hv{fill:none;stroke:#C8502A;stroke-width:5}
 .f23 .wa{fill:none;stroke:#C8502A;stroke-width:2.6}
-.f23 .cl{fill:none;stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4}
-.f23 .ld{fill:none;stroke:#1E2B5E;stroke-width:0.9}
-.f23 .ink{fill:#1E2B5E;stroke:none}
+.f23 .cl{fill:none;stroke:#161616;stroke-width:0.8;stroke-dasharray:14 4 2 4}
+.f23 .ld{fill:none;stroke:#161616;stroke-width:0.9}
+.f23 .ink{fill:#161616;stroke:none}
 .f23 .acc{fill:#C8502A;stroke:none}
-.f23 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#1E2B5E;font-size:16px}
+.f23 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#161616;font-size:16px}
 .f23 .h{font-size:18px;font-weight:600}
 .f23 .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
 .f23 .s{font-size:15px}
 </style>
 <defs>
   <pattern id="f23-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-    <rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/>
+    <rect width="6" height="6" fill="#D4D2CA"/><line x1="0" y1="0" x2="0" y2="6" stroke="#161616" stroke-width="0.7"/>
   </pattern>
-  <circle id="f23-j" r="4" fill="#1E2B5E"/>
-  <g id="f23-gnd" fill="none" stroke="#1E2B5E" stroke-width="2" stroke-linecap="round"><path d="M0,0 V14 M-16,14 H16 M-10,20 H10 M-4,26 H4"/></g>
+  <circle id="f23-j" r="4" fill="#161616"/>
+  <g id="f23-gnd" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round"><path d="M0,0 V14 M-16,14 H16 M-10,20 H10 M-4,26 H4"/></g>
   <path id="f23-arr" fill="#C8502A" d="M0,0 L-15,-7 L-15,7 Z"/>
   <!-- normally open switch, 0..44 horizontal -->
-  <g id="f23-sw" stroke="#1E2B5E" stroke-width="2" fill="#FFFFFF" stroke-linecap="round">
+  <g id="f23-sw" stroke="#161616" stroke-width="2" fill="#FFFFFF" stroke-linecap="round">
     <circle cx="4" cy="0" r="4"/><circle cx="40" cy="0" r="4"/><path d="M7,-3 L38,-20" fill="none"/>
   </g>
   <!-- push button NO -->
-  <g id="f23-pb" stroke="#1E2B5E" stroke-width="2" fill="#FFFFFF" stroke-linecap="round">
+  <g id="f23-pb" stroke="#161616" stroke-width="2" fill="#FFFFFF" stroke-linecap="round">
     <circle cx="4" cy="0" r="4"/><circle cx="40" cy="0" r="4"/><path d="M2,-12 H42 M22,-12 V-28 M14,-28 H30" fill="none"/>
   </g>
   <!-- fuse 0..46 -->
-  <rect id="f23-fuse" x="0" y="-10" width="46" height="20" rx="2" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+  <rect id="f23-fuse" x="0" y="-10" width="46" height="20" rx="2" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 </defs>
 
 <!-- ================= BATTERY ================= -->
@@ -1169,7 +1169,7 @@ footer a{color:var(--ink)}
 <path class="wa seg" data-seg="ctl1" d="M420,120 V520 H440"/>
 <g class="swg" data-sw="ign" transform="translate(440,520)"><circle cx="4" cy="0" r="4"/><circle cx="40" cy="0" r="4"/><path class="blade" d="M7,-3 L38,-20"/></g>
 <path class="wa seg" data-seg="ctl2" d="M484,520 H510"/>
-<rect id="fuse10" x="510" y="510" width="46" height="20" rx="2" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<rect id="fuse10" x="510" y="510" width="46" height="20" rx="2" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="wa seg" data-seg="ctl3" d="M556,520 H590"/>
 <g class="swg" data-sw="stop" transform="translate(590,520)"><circle cx="4" cy="0" r="4"/><circle cx="40" cy="0" r="4"/><path class="blade" d="M7,-3 L38,-20"/></g>
 <path class="wa seg" data-seg="ctl4" d="M634,520 H660"/>
@@ -1183,7 +1183,7 @@ footer a{color:var(--ink)}
 <path class="wa seg" data-seg="coilret" d="M855,422 V620"/>
 <use xlink:href="#f23-j" x="855" y="620"/>
 <path class="wa seg" data-seg="neu1" d="M855,620 H900"/>
-<path fill="#1E2B5E" d="M900,608 V632 L920,620 Z"/><path class="w" d="M921,606 V634"/>
+<path fill="#161616" d="M900,608 V632 L920,620 Z"/><path class="w" d="M921,606 V634"/>
 <path class="wa seg" data-seg="neu2" d="M921,620 H960"/>
 <g class="swg" data-sw="neutral" transform="translate(960,620)"><circle cx="4" cy="0" r="4"/><circle cx="40" cy="0" r="4"/><path class="blade" d="M7,-3 L38,-20"/></g>
 <path class="w seg" data-seg="neu3" d="M1004,620 H1040 V650"/>
@@ -1249,44 +1249,44 @@ footer a{color:var(--ink)}
 <title>F21 Charging circuit: permanent-magnet alternator, shunt regulator/rectifier, fuse, battery and loads</title>
 <style>
 .f21 *{stroke-linecap:round;stroke-linejoin:round}
-.f21 .o{fill:#DCE4F2;stroke:#1E2B5E;stroke-width:2.2}
-.f21 .o2{fill:#B9C7E3;stroke:#1E2B5E;stroke-width:2.2}
-.f21 .p{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2.2}
-.f21 .i{fill:none;stroke:#1E2B5E;stroke-width:1.3}
-.f21 .d{fill:none;stroke:#1E2B5E;stroke-width:0.8}
-.f21 .w{fill:none;stroke:#1E2B5E;stroke-width:2}
+.f21 .o{fill:#EEEDE8;stroke:#161616;stroke-width:2.2}
+.f21 .o2{fill:#D4D2CA;stroke:#161616;stroke-width:2.2}
+.f21 .p{fill:#FFFFFF;stroke:#161616;stroke-width:2.2}
+.f21 .i{fill:none;stroke:#161616;stroke-width:1.3}
+.f21 .d{fill:none;stroke:#161616;stroke-width:0.8}
+.f21 .w{fill:none;stroke:#161616;stroke-width:2}
 .f21 .wa{fill:none;stroke:#C8502A;stroke-width:2.6}
-.f21 .hid{fill:none;stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4}
-.f21 .cl{fill:none;stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4}
-.f21 .ld{fill:none;stroke:#1E2B5E;stroke-width:0.9}
-.f21 .ink{fill:#1E2B5E;stroke:none}
+.f21 .hid{fill:none;stroke:#161616;stroke-width:1;stroke-dasharray:6 4}
+.f21 .cl{fill:none;stroke:#161616;stroke-width:0.8;stroke-dasharray:14 4 2 4}
+.f21 .ld{fill:none;stroke:#161616;stroke-width:0.9}
+.f21 .ink{fill:#161616;stroke:none}
 .f21 .acc{fill:#C8502A;stroke:none}
-.f21 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#1E2B5E;font-size:16px}
+.f21 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#161616;font-size:16px}
 .f21 .h{font-size:18px;font-weight:600}
 .f21 .m{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500}
 .f21 .s{font-size:15px}
 </style>
 <defs>
-  <g id="f21-tooth" stroke="#1E2B5E" stroke-linejoin="round">
-    <path fill="#B9C7E3" stroke-width="2.2" d="M-7,-58 L-7,-113 L-19,-116 L-19,-126 Q0,-131 19,-126 L19,-116 L7,-113 L7,-58 Z"/>
-    <rect fill="#DCE4F2" stroke-width="1.6" x="-13.5" y="-109" width="27" height="44" rx="3"/>
+  <g id="f21-tooth" stroke="#161616" stroke-linejoin="round">
+    <path fill="#D4D2CA" stroke-width="2.2" d="M-7,-58 L-7,-113 L-19,-116 L-19,-126 Q0,-131 19,-126 L19,-116 L7,-113 L7,-58 Z"/>
+    <rect fill="#EEEDE8" stroke-width="1.6" x="-13.5" y="-109" width="27" height="44" rx="3"/>
     <path fill="none" stroke-width="0.8" d="M-13.5,-102 H13.5 M-13.5,-95 H13.5 M-13.5,-88 H13.5 M-13.5,-81 H13.5 M-13.5,-74 H13.5"/>
   </g>
-  <path id="f21-mag" fill="#B9C7E3" stroke="#1E2B5E" stroke-width="1.3" d="M-31.7,-147.6 A151,151 0 0 1 31.7,-147.6 L28.3,-131.0 A134,134 0 0 0 -28.3,-131.0 Z"/>
-  <path id="f21-magn" fill="#DCE4F2" stroke="#1E2B5E" stroke-width="1.3" d="M-31.7,-147.6 A151,151 0 0 1 31.7,-147.6 L28.3,-131.0 A134,134 0 0 0 -28.3,-131.0 Z"/>
+  <path id="f21-mag" fill="#D4D2CA" stroke="#161616" stroke-width="1.3" d="M-31.7,-147.6 A151,151 0 0 1 31.7,-147.6 L28.3,-131.0 A134,134 0 0 0 -28.3,-131.0 Z"/>
+  <path id="f21-magn" fill="#EEEDE8" stroke="#161616" stroke-width="1.3" d="M-31.7,-147.6 A151,151 0 0 1 31.7,-147.6 L28.3,-131.0 A134,134 0 0 0 -28.3,-131.0 Z"/>
   <g id="f21-diode">
-    <path fill="#1E2B5E" d="M-11,8 L11,8 L0,-8 Z"/>
-    <path fill="none" stroke="#1E2B5E" stroke-width="2.2" stroke-linecap="round" d="M-12,-8 H12"/>
+    <path fill="#161616" d="M-11,8 L11,8 L0,-8 Z"/>
+    <path fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" d="M-12,-8 H12"/>
   </g>
   <g id="f21-scr">
-    <path fill="#1E2B5E" d="M-11,8 L11,8 L0,-8 Z"/>
-    <path fill="none" stroke="#1E2B5E" stroke-width="2.2" stroke-linecap="round" d="M-12,-8 H12 M6,-8 L18,-20"/>
-    <circle cx="21" cy="-23" r="3.2" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="1.6"/>
+    <path fill="#161616" d="M-11,8 L11,8 L0,-8 Z"/>
+    <path fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" d="M-12,-8 H12 M6,-8 L18,-20"/>
+    <circle cx="21" cy="-23" r="3.2" fill="#FFFFFF" stroke="#161616" stroke-width="1.6"/>
   </g>
-  <g id="f21-gnd" fill="none" stroke="#1E2B5E" stroke-width="2" stroke-linecap="round">
+  <g id="f21-gnd" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round">
     <path d="M0,0 V14 M-16,14 H16 M-10,20 H10 M-4,26 H4"/>
   </g>
-  <circle id="f21-j" r="4" fill="#1E2B5E"/>
+  <circle id="f21-j" r="4" fill="#161616"/>
   <path id="f21-arr" fill="#C8502A" d="M0,0 L-13,-6 L-13,6 Z"/>
 </defs>
 
@@ -1327,8 +1327,8 @@ footer a{color:var(--ink)}
 </g>
 
 <!-- stator lead harness -->
-<path d="M368,400 H560" stroke="#1E2B5E" stroke-width="16" fill="none"/>
-<path d="M368,400 H560" stroke="#DCE4F2" stroke-width="11.6" fill="none"/>
+<path d="M368,400 H560" stroke="#161616" stroke-width="16" fill="none"/>
+<path d="M368,400 H560" stroke="#EEEDE8" stroke-width="11.6" fill="none"/>
 <path class="d" d="M400,394 l6,12 M430,394 l6,12 M460,394 l6,12 M490,394 l6,12 M520,394 l6,12"/>
 <rect class="o2" x="554" y="388" width="14" height="24" rx="3"/>
 
@@ -1457,9 +1457,9 @@ footer a{color:var(--ink)}
 <use xlink:href="#f21-gnd" x="1590" y="660"/>
 <!-- load branch: ignition switch + lamp -->
 <path class="w seg" data-seg="load1" d="M1400,250 H1440"/>
-<circle cx="1444" cy="250" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="1444" cy="250" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="w blade" data-blade="ignsw" d="M1448,248 L1486,228"/>
-<circle cx="1490" cy="250" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="1490" cy="250" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="w seg" data-seg="load2" d="M1494,250 H1590 V318"/>
 <circle class="p" id="lamp" cx="1590" cy="340" r="22"/>
 <path class="w" d="M1574.4,324.4 L1605.6,355.6 M1605.6,324.4 L1574.4,355.6"/>
@@ -1477,38 +1477,38 @@ footer a{color:var(--ink)}
 <title>F22 Ignition circuits: AC-CDI and DC-TCI/ECU inductive ignition</title>
 <style>
 .f22 *{stroke-linecap:round;stroke-linejoin:round}
-.f22 .o{fill:#DCE4F2;stroke:#1E2B5E;stroke-width:2.2}
-.f22 .o2{fill:#B9C7E3;stroke:#1E2B5E;stroke-width:2.2}
-.f22 .p{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2.2}
-.f22 .pi{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:1.3}
-.f22 .i{fill:none;stroke:#1E2B5E;stroke-width:1.3}
-.f22 .d{fill:none;stroke:#1E2B5E;stroke-width:0.8}
-.f22 .w{fill:none;stroke:#1E2B5E;stroke-width:2}
+.f22 .o{fill:#EEEDE8;stroke:#161616;stroke-width:2.2}
+.f22 .o2{fill:#D4D2CA;stroke:#161616;stroke-width:2.2}
+.f22 .p{fill:#FFFFFF;stroke:#161616;stroke-width:2.2}
+.f22 .pi{fill:#FFFFFF;stroke:#161616;stroke-width:1.3}
+.f22 .i{fill:none;stroke:#161616;stroke-width:1.3}
+.f22 .d{fill:none;stroke:#161616;stroke-width:0.8}
+.f22 .w{fill:none;stroke:#161616;stroke-width:2}
 .f22 .wa{fill:none;stroke:#C8502A;stroke-width:2.6}
-.f22 .hid{fill:none;stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4}
-.f22 .ld{fill:none;stroke:#1E2B5E;stroke-width:0.9}
-.f22 .ink{fill:#1E2B5E;stroke:none}
+.f22 .hid{fill:none;stroke:#161616;stroke-width:1;stroke-dasharray:6 4}
+.f22 .ld{fill:none;stroke:#161616;stroke-width:0.9}
+.f22 .ink{fill:#161616;stroke:none}
 .f22 .acc{fill:#C8502A;stroke:none}
-.f22 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#1E2B5E;font-size:16px}
+.f22 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#161616;font-size:16px}
 .f22 .h{font-size:19px;font-weight:600}
 .f22 .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
 .f22 .s{font-size:15px}
 </style>
 <defs>
   <pattern id="f22-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-    <rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/>
+    <rect width="6" height="6" fill="#D4D2CA"/><line x1="0" y1="0" x2="0" y2="6" stroke="#161616" stroke-width="0.7"/>
   </pattern>
-  <circle id="f22-j" r="4" fill="#1E2B5E"/>
-  <g id="f22-gnd" fill="none" stroke="#1E2B5E" stroke-width="2" stroke-linecap="round">
+  <circle id="f22-j" r="4" fill="#161616"/>
+  <g id="f22-gnd" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round">
     <path d="M0,0 V14 M-16,14 H16 M-10,20 H10 M-4,26 H4"/>
   </g>
   <path id="f22-arr" fill="#C8502A" d="M0,0 L-13,-6 L-13,6 Z"/>
   <!-- flywheel face, origin = crank centre -->
-  <g id="f22-fly" stroke="#1E2B5E" stroke-linejoin="round">
-    <circle r="105" fill="#DCE4F2" stroke-width="2.2"/>
+  <g id="f22-fly" stroke="#161616" stroke-linejoin="round">
+    <circle r="105" fill="#EEEDE8" stroke-width="2.2"/>
     <circle r="95" fill="none" stroke-width="1.3"/>
     <circle r="62" fill="none" stroke-width="0.8"/>
-    <circle r="34" fill="#B9C7E3" stroke-width="1.3"/>
+    <circle r="34" fill="#D4D2CA" stroke-width="1.3"/>
     <path d="M0,-15 L13,-7.5 L13,7.5 L0,15 L-13,7.5 L-13,-7.5 Z" fill="#FFFFFF" stroke-width="1.6"/>
     <circle r="6" fill="none" stroke-width="0.8"/>
     <g fill="#FFFFFF" stroke-width="1.3">
@@ -1518,52 +1518,52 @@ footer a{color:var(--ink)}
     </g>
   </g>
   <!-- reluctor lobe at angle 0 (pointing +x) -->
-  <path id="f22-lobe" fill="#B9C7E3" stroke="#1E2B5E" stroke-width="1.6" d="M102.9,-20.5 L111,-17 A112,112 0 0 1 111,17 L102.9,20.5"/>
+  <path id="f22-lobe" fill="#D4D2CA" stroke="#161616" stroke-width="1.6" d="M102.9,-20.5 L111,-17 A112,112 0 0 1 111,17 L102.9,20.5"/>
   <!-- pulser coil: pole tip at origin pointing -x, body along +x, leads at x=60 -->
-  <g id="f22-pulser" stroke="#1E2B5E" stroke-linejoin="round">
-    <rect x="0" y="-5" width="10" height="10" fill="#B9C7E3" stroke-width="1.6"/>
-    <rect x="10" y="-16" width="44" height="32" rx="4" fill="#DCE4F2" stroke-width="2.2"/>
+  <g id="f22-pulser" stroke="#161616" stroke-linejoin="round">
+    <rect x="0" y="-5" width="10" height="10" fill="#D4D2CA" stroke-width="1.6"/>
+    <rect x="10" y="-16" width="44" height="32" rx="4" fill="#EEEDE8" stroke-width="2.2"/>
     <path d="M18,-16 V16 M24,-16 V16 M30,-16 V16 M36,-16 V16 M42,-16 V16 M48,-16 V16" fill="none" stroke-width="0.8"/>
-    <path d="M22,16 V26 H42 V16" fill="#B9C7E3" stroke-width="1.3"/>
+    <path d="M22,16 V26 H42 V16" fill="#D4D2CA" stroke-width="1.3"/>
     <circle cx="32" cy="21" r="3" fill="#FFFFFF" stroke-width="1"/>
     <path d="M54,-6 H60 M54,6 H60" fill="none" stroke-width="2"/>
   </g>
   <!-- ignition coil: body origin top-left, 220 x 90 -->
-  <g id="f22-coil" stroke="#1E2B5E" stroke-linejoin="round">
-    <path d="M20,90 V110 H48 V90 M172,90 V110 H200 V90" fill="#B9C7E3" stroke-width="1.6"/>
+  <g id="f22-coil" stroke="#161616" stroke-linejoin="round">
+    <path d="M20,90 V110 H48 V90 M172,90 V110 H200 V90" fill="#D4D2CA" stroke-width="1.6"/>
     <circle cx="34" cy="102" r="4" fill="#FFFFFF" stroke-width="1"/><circle cx="186" cy="102" r="4" fill="#FFFFFF" stroke-width="1"/>
-    <rect x="0" y="0" width="220" height="90" rx="14" fill="#DCE4F2" stroke-width="2.2"/>
-    <path d="M220,22 H240 Q252,22 252,34 V56 Q252,68 240,68 H220" fill="#B9C7E3" stroke-width="2.2"/>
+    <rect x="0" y="0" width="220" height="90" rx="14" fill="#EEEDE8" stroke-width="2.2"/>
+    <path d="M220,22 H240 Q252,22 252,34 V56 Q252,68 240,68 H220" fill="#D4D2CA" stroke-width="2.2"/>
     <path d="M226,26 V64 M233,26 V64 M240,26 V64" fill="none" stroke-width="0.8"/>
-    <rect x="35" y="-18" width="10" height="18" fill="#B9C7E3" stroke-width="1.6"/>
-    <rect x="85" y="-18" width="10" height="18" fill="#B9C7E3" stroke-width="1.6"/>
+    <rect x="35" y="-18" width="10" height="18" fill="#D4D2CA" stroke-width="1.6"/>
+    <rect x="85" y="-18" width="10" height="18" fill="#D4D2CA" stroke-width="1.6"/>
     <!-- cut-away window -->
     <rect x="16" y="14" width="190" height="62" fill="#FFFFFF" stroke-width="1.3"/>
-    <rect x="22" y="22" width="178" height="46" fill="#DCE4F2" stroke-width="1"/>
+    <rect x="22" y="22" width="178" height="46" fill="#EEEDE8" stroke-width="1"/>
     <path d="M22,26 H200 M22,30 H200 M22,60 H200 M22,64 H200" fill="none" stroke-width="0.6"/>
-    <rect x="22" y="32" width="178" height="26" fill="#B9C7E3" stroke-width="1"/>
+    <rect x="22" y="32" width="178" height="26" fill="#D4D2CA" stroke-width="1"/>
     <path d="M30,32 V58 M38,32 V58 M46,32 V58 M54,32 V58 M62,32 V58 M70,32 V58 M78,32 V58 M86,32 V58 M94,32 V58 M102,32 V58 M110,32 V58 M118,32 V58 M126,32 V58 M134,32 V58 M142,32 V58 M150,32 V58 M158,32 V58 M166,32 V58 M174,32 V58 M182,32 V58 M190,32 V58" fill="none" stroke-width="1.3"/>
     <rect x="14" y="39" width="194" height="12" fill="url(#f22-hatch)" stroke-width="1.3"/>
   </g>
   <!-- spark plug: origin = terminal top centre -->
-  <g id="f22-plug" stroke="#1E2B5E" stroke-linejoin="round">
-    <rect x="-3" y="10" width="6" height="12" fill="#B9C7E3" stroke-width="1.3"/>
-    <rect x="-7" y="0" width="14" height="12" rx="2" fill="#B9C7E3" stroke-width="1.6"/>
+  <g id="f22-plug" stroke="#161616" stroke-linejoin="round">
+    <rect x="-3" y="10" width="6" height="12" fill="#D4D2CA" stroke-width="1.3"/>
+    <rect x="-7" y="0" width="14" height="12" rx="2" fill="#D4D2CA" stroke-width="1.6"/>
     <path d="M-11,22 H11 L14,90 H-14 Z" fill="#FFFFFF" stroke-width="2.2"/>
     <path d="M-11.6,34 H11.6 M-12.1,46 H12.1 M-12.6,58 H12.6 M-13.1,70 H13.1 M-13.5,80 H13.5" fill="none" stroke-width="1"/>
-    <rect x="-24" y="90" width="48" height="26" rx="2" fill="#B9C7E3" stroke-width="2.2"/>
+    <rect x="-24" y="90" width="48" height="26" rx="2" fill="#D4D2CA" stroke-width="2.2"/>
     <path d="M-9,90 V116 M9,90 V116" fill="none" stroke-width="1.3"/>
-    <rect x="-19" y="116" width="38" height="5" fill="#B9C7E3" stroke-width="1.3"/>
-    <rect x="-14" y="121" width="28" height="46" fill="#DCE4F2" stroke-width="2.2"/>
+    <rect x="-19" y="116" width="38" height="5" fill="#D4D2CA" stroke-width="1.3"/>
+    <rect x="-14" y="121" width="28" height="46" fill="#EEEDE8" stroke-width="2.2"/>
     <path d="M-14,125 L14,129 M-14,130 L14,134 M-14,135 L14,139 M-14,140 L14,144 M-14,145 L14,149 M-14,150 L14,154 M-14,155 L14,159 M-14,160 L14,164" fill="none" stroke-width="0.8"/>
     <path d="M-6,167 L-5,176 H5 L6,167 Z" fill="#FFFFFF" stroke-width="1.3"/>
-    <rect x="-2.2" y="176" width="4.4" height="8" fill="#B9C7E3" stroke-width="1.2"/>
-    <path d="M9,167 V193 Q9,196 6,196 H-7 V189 H3 V167 Z" fill="#B9C7E3" stroke-width="1.3"/>
+    <rect x="-2.2" y="176" width="4.4" height="8" fill="#D4D2CA" stroke-width="1.2"/>
+    <path d="M9,167 V193 Q9,196 6,196 H-7 V189 H3 V167 Z" fill="#D4D2CA" stroke-width="1.3"/>
   </g>
   <!-- plug cap -->
-  <path id="f22-cap" fill="#B9C7E3" stroke="#1E2B5E" stroke-width="2.2" stroke-linejoin="round" d="M-17,-38 Q-17,-56 0,-56 Q17,-56 17,-38 V18 Q17,28 8,30 H-8 Q-17,28 -17,18 Z"/>
+  <path id="f22-cap" fill="#D4D2CA" stroke="#161616" stroke-width="2.2" stroke-linejoin="round" d="M-17,-38 Q-17,-56 0,-56 Q17,-56 17,-38 V18 Q17,28 8,30 H-8 Q-17,28 -17,18 Z"/>
   <!-- cylinder head fragment around plug thread, origin = plug terminal top -->
-  <g id="f22-head" stroke="#1E2B5E" stroke-linejoin="round">
+  <g id="f22-head" stroke="#161616" stroke-linejoin="round">
     <path d="M-74,112 H74 V206 H52 Q0,160 -52,206 H-74 Z" fill="url(#f22-hatch)" stroke-width="2.2"/>
     <rect x="-15" y="112" width="30" height="58" fill="#FFFFFF" stroke="none"/>
   </g>
@@ -1582,9 +1582,9 @@ footer a{color:var(--ink)}
 <path class="w seg" data-seg="srcA1" d="M220,186 V120 H480"/><path class="w seg" data-seg="srcA2" d="M480,120 H600 V200 H640"/>
 <use xlink:href="#f22-j" x="480" y="120"/>
 <path class="w seg" data-seg="stopA1" d="M480,120 V140"/>
-<circle cx="480" cy="144" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="480" cy="144" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="w blade" data-blade="stopA" d="M482,148 L498,180"/>
-<circle cx="480" cy="186" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="480" cy="186" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="w seg" data-seg="stopA2" d="M480,190 V204"/>
 <use xlink:href="#f22-gnd" x="480" y="204"/>
 <text x="508" y="160">Engine stop</text><text x="508" y="178">switch</text>
@@ -1608,11 +1608,11 @@ footer a{color:var(--ink)}
 <rect class="p" x="676" y="116" width="310" height="298"/>
 <rect class="o2" x="628" y="170" width="30" height="190" rx="4"/>
 <path class="w seg" data-seg="srcA3" d="M640,200 H720"/>
-<path fill="#1E2B5E" d="M720,188 V212 L740,200 Z"/><path class="w" d="M741,186 V214"/>
+<path fill="#161616" d="M720,188 V212 L740,200 Z"/><path class="w" d="M741,186 V214"/>
 <path class="wa seg" data-seg="chgA" d="M741,200 H880"/><path class="w" style="stroke-width:3" d="M880,180 V220 M892,180 V220"/><path class="wa seg" data-seg="outA1" d="M892,200 H1010"/>
 <use xlink:href="#f22-j" x="820" y="200"/>
 <path class="w seg" data-seg="scrA" d="M820,200 V320 M820,342 V392"/>
-<path fill="#1E2B5E" d="M808,322 H832 L820,340 Z"/><path class="w" d="M807,340 H833 M810,340 L798,352"/>
+<path fill="#161616" d="M808,322 H832 L820,340 Z"/><path class="w" d="M807,340 H833 M810,340 L798,352"/>
 <path class="w seg" data-seg="pcA" d="M640,330 H702"/>
 <rect class="o" x="702" y="300" width="80" height="62" rx="3"/>
 <text class="s" x="742" y="327" text-anchor="middle">Trigger</text>
@@ -1636,8 +1636,8 @@ footer a{color:var(--ink)}
 <!-- ignition coil -->
 <use xlink:href="#f22-coil" x="1080" y="190"/>
 <!-- HT lead -->
-<path d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#1E2B5E" stroke-width="10"/>
-<path id="htA" class="ht" d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#DCE4F2" stroke-width="5.6"/>
+<path d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#161616" stroke-width="10"/>
+<path id="htA" class="ht" d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#EEEDE8" stroke-width="5.6"/>
 <use xlink:href="#f22-head" x="1470" y="200"/>
 <use xlink:href="#f22-plug" x="1470" y="200"/>
 <use xlink:href="#f22-cap" x="1470" y="200"/>
@@ -1683,13 +1683,13 @@ footer a{color:var(--ink)}
 <path class="wa seg" data-seg="supB1" d="M70,88 V66 H250"/>
 <rect class="p" x="250" y="56" width="46" height="20" rx="2"/>
 <path class="wa seg" data-seg="supB2" d="M250,66 H296 M296,66 H340"/>
-<circle cx="344" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="344" cy="66" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="w blade" data-blade="ignB" d="M347,63 L380,46"/>
-<circle cx="384" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="384" cy="66" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="wa seg" data-seg="supB3" d="M388,66 H440"/>
-<circle cx="444" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="444" cy="66" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="w blade" data-blade="stopB" d="M447,63 L480,46"/>
-<circle cx="484" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<circle cx="484" cy="66" r="4" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
 <path class="wa seg" data-seg="supB4a" d="M488,66 H600"/><path class="wa seg" data-seg="supB4b" d="M600,66 H1170 V172"/>
 <use xlink:href="#f22-j" x="600" y="66"/>
 <text x="273" y="96" text-anchor="middle">Fuse</text>
@@ -1729,7 +1729,7 @@ footer a{color:var(--ink)}
 <path class="w seg" data-seg="gateB" d="M830,330 H876"/>
 <path class="w" d="M876,312 V348 M884,306 V354"/>
 <path class="w seg" data-seg="igbtC" d="M884,316 L904,302 V200 H1010"/><path class="w seg" data-seg="igbtE" d="M884,344 L904,358 V400"/>
-<path fill="#1E2B5E" d="M904,358 L890,355 L897,347 Z"/>
+<path fill="#161616" d="M904,358 L890,355 L897,347 Z"/>
 <path class="w" d="M775,390 V400 H904"/>
 <use xlink:href="#f22-j" x="860" y="400"/>
 <path class="w seg" data-seg="ecuG" d="M860,400 V452"/>
@@ -1743,8 +1743,8 @@ footer a{color:var(--ink)}
 <!-- ignition coil -->
 <use xlink:href="#f22-coil" x="1080" y="190"/>
 <!-- HT lead -->
-<path d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#1E2B5E" stroke-width="10"/>
-<path id="htB" class="ht" d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#DCE4F2" stroke-width="5.6"/>
+<path d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#161616" stroke-width="10"/>
+<path id="htB" class="ht" d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#EEEDE8" stroke-width="5.6"/>
 <use xlink:href="#f22-head" x="1470" y="200"/>
 <use xlink:href="#f22-plug" x="1470" y="200"/>
 <use xlink:href="#f22-cap" x="1470" y="200"/>
@@ -1769,7 +1769,7 @@ footer a{color:var(--ink)}
     <div class="legend" id="legend">
       <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#C8502A" stroke-width="3" stroke-dasharray="7 5"/></svg>Current flowing</span>
       <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#E9A88E" stroke-width="3"/></svg>Voltage present, no current</span>
-      <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#1E2B5E" stroke-width="3"/></svg>No voltage</span>
+      <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#161616" stroke-width="3"/></svg>No voltage</span>
       <span id="legend-note"></span>
     </div>
     <div class="msgbar" id="msgbar"><span class="dot"></span><p id="msg" role="status"></p></div>
@@ -1856,7 +1856,7 @@ footer a{color:var(--ink)}
 </div>
 
 <script>
-const DATA = {"systems": {"power": "Power and earths", "start": "Starting", "charge": "Charging", "ign": "Ignition", "fuel": "Fuel injection and sensors", "light": "Lighting and signals", "inst": "Controls and instruments"}, "colours": {"B": {"name": "Black", "hex": "#1d1d1f"}, "Br": {"name": "Brown", "hex": "#7a4a24"}, "R": {"name": "Red", "hex": "#c62828"}, "O": {"name": "Orange", "hex": "#ef7d1a"}, "Y": {"name": "Yellow", "hex": "#f2c200"}, "G": {"name": "Green", "hex": "#2e8b3d"}, "Lg": {"name": "Light green", "hex": "#93d48c"}, "Bl": {"name": "Blue", "hex": "#1f5fbf"}, "Lb": {"name": "Light blue", "hex": "#86c8f2"}, "P": {"name": "Pink", "hex": "#f29bc0"}, "W": {"name": "White", "hex": "#ffffff"}, "Gr": {"name": "Grey", "hex": "#8a8f98"}}, "harness": {"headlight": {"name": "Headlight connector (H4)", "sys": ["light"], "wires": [["W", "Low beam feed"], ["Bl", "High beam feed"], ["G", "Earth"]], "does": "Three-pin H4 socket behind the headlight shell. A 60/55 W bulb draws about 4.6 A on high beam, the largest steady load on a small machine, so these pins run warm.", "test": ["With low beam selected and the key on, 12 V between W and G at the socket.", "Bulb filament resistance under 1 Ω cold."], "fault": ["Overheated socket: brown, melted plastic and loose pins cause flicker and a dim beam."]}, "ind-front": {"name": "Front indicator connectors", "sys": ["light"], "wires": [["O", "Left indicator"], ["Lb", "Right indicator"], ["G", "Earth"]], "does": "Feeds the two front turn signals from the left switch cube via the turn relay.", "test": ["Switch to left: 12 V pulses on O at about 85 flashes per minute."], "fault": ["Fast flashing on one side means a blown bulb or a bad earth on that side."]}, "clocks": {"name": "Instrument connector, 16-pin", "sys": ["inst", "light"], "wires": [["Bl", "High beam pilot lamp"], ["Y", "Tachometer signal from the ECU"], ["G", "Earth"]], "does": "Carries every input the dash needs: switched and permanent feeds, speed and rpm signals, indicator and neutral pilots, fuel level and warning lamps. Only the three main wires are shown on the plate.", "test": ["Permanent feed present with the key off (keeps the clock running).", "Switched feed present only with the key on."], "fault": ["Water ingress at the back of the dash: random warning lamps and a dead odometer."]}, "lsw": {"name": "Left switch cube", "sys": ["light", "inst"], "wires": [["Bl/W", "Feed into the dip switch"], ["W", "Low beam out"], ["Lg", "Horn button out"]], "does": "Dip switch, indicator switch, horn button and often the pass button. Each is a pair of sprung brass contacts inside the cube.", "test": ["Continuity checks across each switch position with the connector unplugged."], "fault": ["Dirty contacts give intermittent horn or indicators; clean with contact cleaner."]}, "rsw": {"name": "Right switch cube", "sys": ["start", "ign", "inst"], "wires": [["B", "Switched feed in from the ignition switch"], ["B/W", "Engine stop switch out (run feed)"], ["Y/R", "Start button out to the starter relay coil"]], "does": "Engine stop switch and start button, plus the light switch on some models. Everything needed to start passes through it.", "test": ["12 V on B/W only with the key on and the stop switch in RUN.", "12 V on Y/R only while the start button is held."], "fault": ["Stop switch left in OFF: the most common no-start of all."]}, "ignsw": {"name": "Ignition switch connector", "sys": ["power", "start", "ign"], "wires": [["R", "Permanent battery feed from the main fuse"], ["B", "Switched output to the fuse box"]], "does": "The key switch connects the permanent battery feed to everything that should only work with the key on.", "test": ["Continuity between R and B with the key on, none with the key off."], "fault": ["Worn contacts cause cut-outs over bumps; the dash flickers at the same moment."]}, "coil": {"name": "Ignition coil connector", "sys": ["ign"], "wires": [["B/Y", "Run feed from the engine stop switch"], ["Bl", "Primary earth, switched by the ECU"]], "does": "Two-pin primary connector. The coil gets constant 12 V on one side; the ECU earths the other side for the dwell time and then releases it to fire the plug.", "test": ["Primary resistance across the two pins: 2 to 5 Ω.", "12 V on B/Y with the key on and RUN selected."], "fault": ["Cracked coil body leaks high voltage when wet: misfire in rain."]}, "tps": {"name": "Throttle position sensor, 3-pin", "sys": ["fuel"], "wires": [["Y/R", "5 V reference from the ECU"], ["Lb", "Position signal"], ["G/O", "Sensor earth"]], "does": "A potentiometer on the throttle body shaft. The ECU reads the signal voltage to know how far the throttle is open.", "test": ["Reference: 4.9 to 5.1 V.", "Signal: 0.4 to 0.7 V closed, rising smoothly to 4.2 to 4.8 V wide open with no dropouts."], "fault": ["Worn track gives a stumble at one throttle position."]}, "inj": {"name": "Injector connector", "sys": ["fuel"], "wires": [["Bl", "Switched 12 V feed"], ["P/B", "Injector drive, earthed by the ECU"]], "does": "The injector sees 12 V permanently while running; the ECU opens it by earthing the P/B wire for the pulse width it calculates, typically 2 to 10 ms.", "test": ["Injector resistance: 11 to 13 Ω (high-impedance type).", "A noid light on the connector flickers while cranking."], "fault": ["Varnished injector after storage: hard starting, uneven idle."]}, "map": {"name": "MAP / IAT sensor", "sys": ["fuel"], "wires": [["Y/R", "5 V reference"], ["G/O", "Sensor earth"], ["Lg", "Manifold pressure signal"]], "does": "Measures intake manifold pressure (engine load) and often intake air temperature in the same body.", "test": ["Key on, engine off: about 2.5 to 3.0 V on the pressure signal (atmospheric)."], "fault": ["Split vacuum hose to the sensor: rich running and poor idle."]}, "ecu": {"name": "ECU connector, 22-pin", "sys": ["fuel", "ign"], "wires": [["Y/R", "5 V sensor reference out"], ["G/O", "Sensor earth"], ["Bl", "Switched 12 V feed in"], ["P/B", "Injector drive out"]], "does": "The engine control unit reads crank, throttle, pressure, temperature and oxygen sensors and drives the injector, ignition coil, fuel pump relay and tachometer. Only four of the 22 wires are drawn.", "test": ["Check feeds and earths first: 12 V on the feed pin, under 0.1 V drop on each earth pin.", "Read fault codes before replacing any sensor."], "fault": ["Green corrosion on connector pins causes more ECU faults than the ECU itself."]}, "tail": {"name": "Tail and stop light connector", "sys": ["light"], "wires": [["Br", "Tail (position) lamp"], ["G/Y", "Stop lamp"], ["G", "Earth"]], "does": "Rear light: a dim tail filament or LED row, and a bright stop filament switched by the brake light switches.", "test": ["12 V on G/Y only with either brake applied."], "fault": ["Corroded earth makes the tail light glow when the indicators flash."]}, "ind-rear": {"name": "Rear indicator connectors", "sys": ["light"], "wires": [["O", "Left indicator"], ["Lb", "Right indicator"], ["G", "Earth"]], "does": "Feeds the two rear turn signals.", "test": ["Same test as the front pair; both sides should flash at the same rate."], "fault": ["LED indicators fitted to a thermal relay flash too fast: fit an LED relay or load resistors."]}, "horn": {"name": "Horn connector", "sys": ["light"], "wires": [["Lg", "From the horn button"], ["G", "Earth"]], "does": "The horn draws 2 to 3 A. On many machines the button switches the earth side instead of the feed.", "test": ["Bridge the horn straight to the battery: it should sound strongly."], "fault": ["Seized diaphragm after washing; adjust the screw on the back."]}, "fbs": {"name": "Front brake light switch", "sys": ["light"], "wires": [["Bl", "Switched feed in"], ["G/Y", "Stop lamp out"]], "does": "A plunger switch under the front brake lever, closed when the lever is pulled.", "test": ["Continuity across the switch only with the lever pulled."], "fault": ["Stuck switch: stop lamp on permanently, flat battery."]}, "ckp": {"name": "Crank position sensor", "sys": ["ign", "fuel"], "wires": [["Bl/Y", "Sensor signal"], ["G/W", "Signal return"]], "does": "A magnetic pickup reading teeth or lobes on the rotor. The ECU uses it for engine speed and to time both spark and injection.", "test": ["Resistance: 100 to 500 Ω.", "Peak voltage while cranking: above 0.7 V."], "fault": ["No signal means no spark and no injection, with everything else working."]}, "o2": {"name": "Oxygen sensor, 4-pin", "sys": ["fuel"], "wires": [["W", "Sensor signal"], ["G", "Sensor earth"], ["Bl", "Heater feed"]], "does": "Measures oxygen left in the exhaust. The ECU trims fuelling to hold the mixture near 14.7:1 at cruise. The fourth pin is the heater return.", "test": ["Heater resistance: 6 to 20 Ω.", "Warm engine: signal switches between about 0.1 and 0.9 V."], "fault": ["Lead fuel or silicone sealant kills the sensor: fault code and rich running."]}, "ects": {"name": "Engine temperature sensor", "sys": ["fuel", "inst"], "wires": [["G/Bl", "Temperature signal"], ["G/O", "Sensor earth"]], "does": "A thermistor in the coolant or cylinder head. Resistance falls as it warms; the ECU uses it for cold-start enrichment and fan control.", "test": ["About 2.5 kΩ at 20 °C, about 0.3 kΩ at 80 °C."], "fault": ["Open circuit reads as very cold: rich running and black plug."]}, "alt": {"name": "Alternator connector, 3-phase", "sys": ["charge"], "wires": [["Y", "Phase 1"], ["Y", "Phase 2"], ["Y", "Phase 3"]], "does": "Joins the stator to the regulator/rectifier. It carries the full charging current as AC, so it is a common hot spot.", "test": ["Unplug and measure 0.2 to 1.0 Ω between each pair of yellow wires on the stator side."], "fault": ["Browned or melted connector: cut it out and solder the three wires."]}, "neutral": {"name": "Neutral switch lead", "sys": ["start", "inst"], "wires": [["Lg/R", "Neutral lamp and starter interlock"]], "does": "A single wire to a switch in the gearbox that earths in neutral. It lights the N lamp and lets the starter work without pulling the clutch.", "test": ["Continuity to earth only in neutral."], "fault": ["No N lamp and the bike starts only with the clutch pulled."]}, "earth-front": {"name": "Earth point", "sys": ["power"], "wires": [["G", "Earth eyelet bolted to the frame"]], "does": "Several earth wires share one eyelet on the frame. Every circuit returns to the battery through points like this.", "test": ["Voltage drop from the eyelet to battery negative with the lights on: under 0.1 V."], "fault": ["Paint under the eyelet or corrosion: dim lights, odd gauge readings, indicators affecting other lamps."]}, "trunk": {"name": "Main harness trunk", "sys": ["power"], "wires": [], "does": "The bundled trunk of the loom, wrapped in half-lapped PVC tape and clipped to the frame. Branches leave it for each component.", "test": ["Look for chafing where the trunk passes the steering head and the frame rails."], "fault": ["Wire rubbed through at the steering head: fuse blows on full lock."]}, "fusebox": {"name": "Fuse box, 10/10/15/5 A", "sys": ["power"], "wires": [], "does": "Splits the switched feed into separate fused circuits (ignition and ECU, lights, fan, instruments) with a spare. Each blade fuse protects its own wires.", "test": ["With the key on, 12 V on both test points on top of each fuse."], "fault": ["A fuse that blows again at once means a short to earth in that circuit."]}, "mainfuse": {"name": "Main fuse 30 A", "sys": ["power", "start", "charge"], "wires": [["R", "Battery feed"]], "does": "Protects everything downstream of the battery except the starter cable. Usually on the starter relay.", "test": ["Continuity across the fuse; 12 V on both sides with the battery connected."], "fault": ["Blown: no dash, no horn, no crank."]}, "srelay": {"name": "Starter relay", "sys": ["start"], "wires": [["R", "Battery stud"], ["Y/R", "Coil feed from the start button"], ["G/R", "Coil earth through the interlocks"]], "does": "A solenoid switch. Under 1 A through its coil lets 80 to 150 A flow from the battery to the starter motor.", "test": ["Coil resistance: 3 to 5 Ω.", "Voltage across the two big studs while cranking: under 0.2 V."], "fault": ["Click but no crank: burnt contacts or a loose battery cable."]}, "trelay": {"name": "Turn signal relay", "sys": ["light"], "wires": [], "does": "Switches the indicator feed on and off at 60 to 120 flashes per minute.", "test": ["Bridge its input and output terminals: the selected indicators should light steadily."], "fault": ["Thermal relays flash too fast with LED indicators."]}, "battery": {"name": "Battery 12 V", "sys": ["power", "start", "charge"], "wires": [], "does": "Stores energy for starting and supplies all loads when the engine is off or idling.", "test": ["Rest voltage: 12.6 to 12.8 V (lead-acid), 13.2 to 13.4 V (lithium iron phosphate)."], "fault": ["Left unused for a month without a maintainer, a small battery can go flat beyond recovery."]}, "bplus": {"name": "Battery positive feed", "sys": ["power", "start", "charge"], "wires": [["R", "Battery positive to the starter relay and main fuse"]], "does": "The heavy red cable from the battery positive terminal. It is unfused between the battery and the relay, so it must be routed away from sharp edges.", "test": ["Terminal bolts tight; no green corrosion under the boot."], "fault": ["Loose terminal: relay chatters when start is pressed."]}, "startercable": {"name": "Starter motor cable", "sys": ["start"], "wires": [], "does": "Heavy cable from the relay M stud to the starter motor terminal. It only carries current while the starter turns.", "test": ["Voltage drop along the cable while cranking: under 0.3 V."], "fault": ["Corroded lug at the motor end: slow cranking that gets worse as the cable warms."]}, "bminus": {"name": "Battery earth", "sys": ["power"], "wires": [["G", "Battery negative to the engine or frame"]], "does": "The return path for every circuit, including the starter. It must be as heavy as the positive cable.", "test": ["Voltage drop from battery negative to the engine case while cranking: under 0.2 V."], "fault": ["Painted or loose mounting: starter turns slowly and the lights dim heavily when cranking."]}}, "starting": {"battery": {"name": "Battery 12 V", "does": "Supplies 80 to 150 A to the starter for a few seconds. Cranking is the heaviest load the electrical system ever sees, so a battery that lights the dash can still fail to crank.", "test": ["Rest voltage after an hour off charge: 12.6 to 12.8 V (lead-acid).", "While cranking the voltage must stay above 9.6 V; lower means a weak battery or a bad connection."], "fault": ["Sulphated cells after storage: rest voltage looks fine, then collapses under load."]}, "mainfuse": {"name": "Main fuse 30 A", "does": "Protects the whole loom from a short to earth. On most machines it sits on the starter relay body.", "test": ["Measure 12 V on both sides of the fuse with the key on."], "fault": ["A blown main fuse kills everything at once. Find the short before fitting a new one."]}, "relay": {"name": "Starter relay", "does": "A solenoid switch. A coil drawing under 1 A pulls a copper disc across two heavy studs, connecting battery cable B to motor cable M. The start button never carries the motor current.", "test": ["Coil resistance across the two small terminals: 3 to 5 Ω.", "Voltmeter across B and M while pressing start: the reading falls from 12 V to under 0.2 V when the relay closes."], "fault": ["Burnt contact disc: a click but no crank, with 12 V still across B and M."]}, "motor": {"name": "Starter motor", "does": "A permanent-magnet DC motor. Brushes feed the commutator, which switches current through the armature windings so it keeps turning between the magnets. A reduction gear and one-way clutch link it to the crankshaft.", "test": ["In neutral, bridge the battery straight to the motor terminal with a heavy jumper: it should spin briskly.", "Brush length above the service limit, typically 6 to 7 mm."], "fault": ["Worn brushes: slow or intermittent cranking.", "Water inside after washing: corroded commutator, seized bushes."]}, "ign": {"name": "Ignition switch", "does": "Switches the battery feed to the control circuit and fuse box.", "test": ["Continuity across the switch with the key on, none with it off."], "fault": ["Worn contacts: intermittent cut-out over bumps."]}, "fuse10": {"name": "Fuse 10 A", "does": "Protects the switched feed to the start button, engine stop switch, ignition and ECU.", "test": ["12 V on both sides of the fuse with the key on."], "fault": ["Blown: no click when pressing start, and no spark either."]}, "stop": {"name": "Engine stop switch", "does": "In RUN it passes the switched feed to the start button and ignition. In OFF it cuts both, so the engine can neither start nor keep running.", "test": ["Continuity in RUN, open in OFF."], "fault": ["Left in OFF by the rider: the most common no-start call-out."]}, "start": {"name": "Start button", "does": "Momentary button. Holding it sends feed to the starter relay coil.", "test": ["Continuity only while pressed.", "12 V on the wire to the relay while pressed."], "fault": ["Corroded contacts in the switch cube: works only when pressed hard."]}, "diode": {"name": "Interlock diode", "does": "Lets the relay coil earth through the neutral switch, but stops the neutral lamp earthing back through the relay coil and side-stand circuit.", "test": ["Diode mode: about 0.5 V one way, open the other."], "fault": ["Shorted diode: the N lamp glows when the clutch is pulled in gear."]}, "neutral": {"name": "Neutral switch", "does": "Earths when the gearbox is in neutral. Lights the N lamp and gives the relay coil an earth so the engine can start.", "test": ["Continuity to earth only in neutral."], "fault": ["Oily or broken contact: no N lamp, starts only with the clutch pulled."]}, "clutch": {"name": "Clutch lever switch", "does": "Closed while the clutch lever is pulled. Together with the side-stand switch it allows starting in gear.", "test": ["Continuity only with the lever pulled."], "fault": ["Lever adjuster moved: the switch never closes, so it only starts in neutral."]}, "stand": {"name": "Side-stand switch", "does": "Closed only with the side-stand up. Stops a start in gear with the stand down; the ECU also cuts the engine if a gear is selected with the stand down.", "test": ["Continuity with the stand up, open with it down."], "fault": ["Mud and corrosion: engine dies when first gear is selected."]}, "sclutch": {"name": "Starter drive and one-way clutch", "does": "The pinion drives a reduction gear, which drives the starter driven gear on the crankshaft. Rollers wedge the driven gear to the clutch housing while the starter turns it, and free off once the engine runs faster than the starter.", "test": ["Turn the driven gear by hand: it locks one way and spins freely the other."], "fault": ["Worn rollers or weak springs: the starter whirs and the engine does not turn."]}}, "charging": {"rotor": {"name": "Flywheel rotor", "does": "Bolted to the crankshaft taper. Twelve magnets of alternating polarity sweep past the stator, so the stator windings see a changing magnetic field whenever the engine turns.", "test": ["Inspect for cracked or loose magnets after a backfire or crash."], "fault": ["A loose magnet rubs the stator and wrecks the windings."]}, "stator": {"name": "Stator", "does": "Eighteen laminated iron poles wound with copper and connected as three phases. Output rises with engine speed, roughly 15 to 20 V AC per 1000 rpm unloaded on a small machine.", "test": ["Resistance between each pair of yellow leads: 0.2 to 1.0 Ω, all within 10% of each other.", "No continuity from any lead to earth.", "Unloaded AC between each pair at 5000 rpm: 50 to 80 V, balanced."], "fault": ["Burnt winding: dark varnish, one phase low or open."]}, "leads": {"name": "Stator leads", "does": "Three AC wires, usually all yellow, carry stator output to the regulator/rectifier.", "test": ["Inspect the connector for browning; measure resistance through it."], "fault": ["Melted connector: high resistance and heat, then a dead phase."]}, "regrec": {"name": "Regulator/rectifier", "does": "Turns three-phase AC into DC and limits system voltage. A shunt type limits it by short-circuiting the stator to earth once the battery is full, which is why the unit has cooling fins and runs hot.", "test": ["Charging voltage at 4000 to 5000 rpm: 13.8 to 14.6 V at the battery."], "fault": ["Regulation failure: over 15 V, boiling battery, blown bulbs.", "Rectifier failure: battery goes flat while riding."]}, "bridge": {"name": "Bridge diodes D1 to D6", "does": "A three-phase full-wave bridge. The upper diodes pass the most positive phase to B+, the lower diodes return current from earth to the most negative phase, so current reaches the battery in one direction only.", "test": ["Diode mode, red probe on a yellow input and black on B+: 0.4 to 0.6 V; reversed: open.", "Red probe on earth and black on a yellow input: 0.4 to 0.6 V; reversed: open."], "fault": ["Shorted diode: the battery drains overnight through the stator."]}, "scr": {"name": "SCR shunts G1 to G3", "does": "Thyristors across the lower diodes. When the sense circuit fires their gates, each SCR shorts its phase to earth for the rest of that half-cycle, so output beyond what the system needs is dumped as heat.", "test": ["Not meter-testable; judge by charging voltage."], "fault": ["SCR that never fires: overcharging."]}, "sense": {"name": "Sense and trigger circuit", "does": "Watches the B+ voltage and fires the SCR gates once it passes about 14.5 V.", "test": ["Charging voltage that rises steadily with rpm past 15 V points here."], "fault": ["Failed sense circuit: no regulation at all."]}, "fuse": {"name": "Main fuse 15 A", "does": "Protects the charging output and the loads from a short.", "test": ["12 V on both sides of the fuse."], "fault": ["Blown: the alternator can no longer reach the battery or loads."]}, "battery": {"name": "Battery 12 V 5 Ah", "does": "Stores energy and buffers the system voltage. At idle a small machine can run a deficit that the battery covers until the revs rise.", "test": ["Engine at 5000 rpm: 13.8 to 14.6 V across the terminals.", "Engine off after riding: 12.8 V or more."], "fault": ["Overcharged: acid smell, bulging case."]}, "ignsw": {"name": "Ignition switch", "does": "Connects the loads to the charging bus.", "test": ["Continuity with the key on."], "fault": ["Worn contacts drop the loads over bumps."]}, "loads": {"name": "Loads", "does": "Headlight, tail light, ignition, fuel pump, ECU and instruments. A 125 cc machine draws about 6 to 8 A with lights on, close to what its alternator makes at idle.", "test": ["Measure total draw with a DC clamp meter."], "fault": ["Heated grips and spotlights push the balance negative in town."]}}, "ignition": {"srcA": {"name": "Source coil", "does": "A high-turn winding on the stator that makes 100 to 400 V AC to charge the CDI capacitor. It needs no battery, so kick-start and off-road machines can run with none fitted.", "test": ["Resistance to earth: 50 to 800 Ω depending on model.", "Peak voltage while cranking, with a peak adapter: above 100 V."], "fault": ["Weak source coil: starts cold, dies when hot."]}, "flyA": {"name": "Flywheel rotor and reluctor", "does": "The raised reluctor lobe on the rotor rim passes the pulser once per revolution, marking the crank position at which the spark is due.", "test": ["Lobe edge clean and undamaged."], "fault": ["Damaged lobe gives a weak or wrongly timed pulse."]}, "pulserA": {"name": "Pulser coil", "does": "A magnetic pickup. The lobe passing its pole induces a short pulse that tells the CDI where the crankshaft is.", "test": ["Resistance: 100 to 500 Ω.", "Peak voltage while cranking: above 0.7 V.", "Air gap to the rotor: 0.5 to 0.9 mm."], "fault": ["Open coil or broken lead: no spark at all, everything else normal."]}, "stopA": {"name": "Engine stop switch (CDI)", "does": "Works the opposite way to a battery system. In STOP it shorts the source coil to earth, so the capacitor never charges. In RUN its contacts are open.", "test": ["Continuity to earth in STOP only."], "fault": ["Chafed kill wire touching the frame: no spark, same symptom as STOP."]}, "cdi": {"name": "CDI unit", "does": "Diode D charges capacitor C to 150 to 300 V from the source coil. When the pulser signal arrives, the trigger circuit fires the SCR, which dumps C into the coil primary within microseconds.", "test": ["Test the source coil, pulser and coil first; then substitute a known good unit."], "fault": ["Cracked solder joints inside the potting: cuts out when hot."]}, "coilA": {"name": "Ignition coil (CDI)", "does": "A step-up transformer. A pulse in the primary (few turns, thick wire) induces 20 to 40 kV in the secondary (thousands of turns, fine wire) around a laminated iron core.", "test": ["Primary: 0.2 to 1.0 Ω.", "Secondary with the cap removed: 5 to 15 kΩ."], "fault": ["Cracked case leaks high voltage when wet: misfire in rain."]}, "plugA": {"name": "HT lead, cap and spark plug", "does": "The HT lead carries the high voltage to the cap, which usually holds a 5 kΩ suppressor. The voltage jumps the plug gap and lights the mixture.", "test": ["Gap: 0.6 to 0.9 mm.", "Cap resistance about 5 kΩ.", "Light tan insulator is healthy; black soot is rich; white is lean or too hot."], "fault": ["Fouled plug: carbon lets the spark leak to earth instead of jumping the gap."]}, "batB": {"name": "Battery 12 V", "does": "Powers the inductive ignition and the ECU. With a flat battery there is no spark, even with a kick-start.", "test": ["At least 12 V with the key on; above 9.6 V while cranking."], "fault": ["Low battery voltage during cranking resets the ECU: no spark until the starter is released."]}, "fuseB": {"name": "Ignition fuse", "does": "Protects the switched feed to the ECU and coil.", "test": ["12 V on both sides with the key on."], "fault": ["Blown: dead ECU, no spark, no injection."]}, "ignB": {"name": "Ignition switch", "does": "Connects the battery to the ignition circuit.", "test": ["Continuity with the key on."], "fault": ["Intermittent contact: engine cuts out over bumps."]}, "stopB": {"name": "Engine stop switch", "does": "In RUN it closes the feed to the coil and ECU; in OFF it opens it.", "test": ["12 V after the switch in RUN only."], "fault": ["Corroded contacts: misfire that comes and goes with switch movement."]}, "ecu": {"name": "ECU with inductive ignition", "does": "The microcontroller reads crank position from the pulser and looks up advance and dwell in its map. Its IGBT earths the coil primary so current builds for the dwell time (2 to 4 ms). When the IGBT switches off, the collapsing field induces the high voltage.", "test": ["12 V at +B with the key on; under 0.1 V drop on each earth.", "Read fault codes before replacing parts."], "fault": ["Corroded connector pins cause more faults than the ECU itself."]}, "pulserB": {"name": "Crank position pulser", "does": "Gives the ECU a pulse once per revolution; the ECU times dwell and spark from it, adding advance as rpm rises.", "test": ["Resistance: 100 to 500 Ω.", "Peak voltage while cranking: above 0.7 V."], "fault": ["No pulse: no spark and no injection."]}, "coilB": {"name": "Ignition coil (inductive)", "does": "Primary fed with 12 V on its + terminal and earthed by the ECU on its − terminal. Current stores energy in the core; breaking the circuit releases it into the secondary.", "test": ["Primary: 2 to 5 Ω.", "Secondary with the cap removed: 8 to 15 kΩ."], "fault": ["Shorted turns: weak spark under load, misfire at high rpm."]}, "plugB": {"name": "HT lead, cap and spark plug", "does": "Same as panel A: the high voltage jumps the plug gap and lights the mixture.", "test": ["Gap: 0.6 to 0.9 mm.", "Cap resistance about 5 kΩ."], "fault": ["Worn electrodes need more voltage to fire; a weak coil then misfires under load."]}}};
+const DATA = {"systems": {"power": "Power and earths", "start": "Starting", "charge": "Charging", "ign": "Ignition", "fuel": "Fuel injection and sensors", "light": "Lighting and signals", "inst": "Controls and instruments"}, "colours": {"B": {"name": "Black", "hex": "#1d1d1f"}, "Br": {"name": "Brown", "hex": "#7a4a24"}, "R": {"name": "Red", "hex": "#c62828"}, "O": {"name": "Orange", "hex": "#ef7d1a"}, "Y": {"name": "Yellow", "hex": "#f2c200"}, "G": {"name": "Green", "hex": "#2e8b3d"}, "Lg": {"name": "Light green", "hex": "#93d48c"}, "Bl": {"name": "Blue", "hex": "#1f5fbf"}, "Lb": {"name": "Light blue", "hex": "#86c8f2"}, "P": {"name": "Pink", "hex": "#f29bc0"}, "W": {"name": "White", "hex": "#ffffff"}, "Gr": {"name": "Grey", "hex": "#8a8f98"}}, "harness": {"headlight": {"name": "Headlight connector (H4)", "sys": ["light"], "wires": [["W", "Low beam feed"], ["Bl", "High beam feed"], ["G", "Earth"]], "does": "Three-pin H4 socket behind the headlight shell. A 60/55 W bulb draws about 4.6 A on high beam, the largest steady load on a small machine, so these pins run warm.", "test": ["With low beam selected and the key on, 12 V between W and G at the socket.", "Bulb filament resistance under 1 Ω cold."], "fault": ["Overheated socket: brown, melted plastic and loose pins cause flicker and a dim beam."]}, "ind-front": {"name": "Front indicator connectors", "sys": ["light"], "wires": [["O", "Left indicator"], ["Lb", "Right indicator"], ["G", "Earth"]], "does": "Feeds the two front turn signals from the left switch cube via the turn relay.", "test": ["Switch to left: 12 V pulses on O at about 85 flashes per minute."], "fault": ["Fast flashing on one side means a blown bulb or a bad earth on that side."]}, "clocks": {"name": "Instrument connector, 16-pin", "sys": ["inst", "light"], "wires": [["Bl", "High beam pilot lamp"], ["Y", "Tachometer signal from the ECU"], ["G", "Earth"]], "does": "Carries every input the dash needs: switched and permanent feeds, speed and rpm signals, indicator and neutral pilots, fuel level and warning lamps. Only the three main wires are shown on the plate.", "test": ["Permanent feed present with the key off (keeps the clock running).", "Switched feed present only with the key on."], "fault": ["Water ingress at the back of the dash: random warning lamps and a dead odometer."]}, "lsw": {"name": "Left switch cube", "sys": ["light", "inst"], "wires": [["Bl/W", "Feed into the dip switch"], ["W", "Low beam out"], ["Lg", "Horn button out"]], "does": "Dip switch, indicator switch, horn button and often the pass button. Each is a pair of sprung brass contacts inside the cube.", "test": ["Continuity checks across each switch position with the connector unplugged."], "fault": ["Dirty contacts give intermittent horn or indicators; clean with contact cleaner."]}, "rsw": {"name": "Right switch cube", "sys": ["start", "ign", "inst"], "wires": [["B", "Switched feed in from the ignition switch"], ["B/W", "Engine stop switch out (run feed)"], ["Y/R", "Start button out to the starter relay coil"]], "does": "Engine stop switch and start button, plus the light switch on some models. Everything needed to start passes through it.", "test": ["12 V on B/W only with the key on and the stop switch in RUN.", "12 V on Y/R only while the start button is held."], "fault": ["Stop switch left in OFF: the most common no-start of all."]}, "ignsw": {"name": "Ignition switch connector", "sys": ["power", "start", "ign"], "wires": [["R", "Permanent battery feed from the main fuse"], ["B", "Switched output to the fuse box"]], "does": "The key switch connects the permanent battery feed to everything that should only work with the key on.", "test": ["Continuity between R and B with the key on, none with the key off."], "fault": ["Worn contacts cause cut-outs over bumps; the dash flickers at the same moment."]}, "coil": {"name": "Ignition coil connector", "sys": ["ign"], "wires": [["B/Y", "Run feed from the engine stop switch"], ["Bl", "Primary earth, switched by the ECU"]], "does": "Two-pin primary connector. The coil gets constant 12 V on one side; the ECU earths the other side for the dwell time and then releases it to fire the plug.", "test": ["Primary resistance across the two pins: 2 to 5 Ω.", "12 V on B/Y with the key on and RUN selected."], "fault": ["Cracked coil body leaks high voltage when wet: misfire in rain."]}, "tps": {"name": "Throttle position sensor, 3-pin", "sys": ["fuel"], "wires": [["Y/R", "5 V reference from the ECU"], ["Lb", "Position signal"], ["G/O", "Sensor earth"]], "does": "A potentiometer on the throttle body shaft. The ECU reads the signal voltage to know how far the throttle is open.", "test": ["Reference: 4.9 to 5.1 V.", "Signal: 0.4 to 0.7 V closed, rising smoothly to 4.2 to 4.8 V wide open with no dropouts."], "fault": ["Worn track gives a stumble at one throttle position."]}, "inj": {"name": "Injector connector", "sys": ["fuel"], "wires": [["Bl", "Switched 12 V feed"], ["P/B", "Injector drive, earthed by the ECU"]], "does": "The injector sees 12 V permanently while running; the ECU opens it by earthing the P/B wire for the pulse width it calculates, typically 2 to 10 ms.", "test": ["Injector resistance: 11 to 13 Ω (high-impedance type).", "A noid light on the connector flickers while cranking."], "fault": ["Varnished injector after storage: hard starting, uneven idle."]}, "map": {"name": "MAP / IAT sensor", "sys": ["fuel"], "wires": [["Y/R", "5 V reference"], ["G/O", "Sensor earth"], ["Lg", "Manifold pressure signal"]], "does": "Measures intake manifold pressure (engine load) and often intake air temperature in the same body.", "test": ["Key on, engine off: about 2.5 to 3.0 V on the pressure signal (atmospheric)."], "fault": ["Split vacuum hose to the sensor: rich running and poor idle."]}, "ecu": {"name": "ECU connector, 22-pin", "sys": ["fuel", "ign"], "wires": [["Y/R", "5 V sensor reference out"], ["G/O", "Sensor earth"], ["Bl", "Switched 12 V feed in"], ["P/B", "Injector drive out"]], "does": "The engine control unit reads crank, throttle, pressure, temperature and oxygen sensors and drives the injector, ignition coil, fuel pump relay and tachometer. Only four of the 22 wires are drawn.", "test": ["Check feeds and earths first: 12 V on the feed pin, under 0.1 V drop on each earth pin.", "Read fault codes before replacing any sensor."], "fault": ["Green corrosion on connector pins causes more ECU faults than the ECU itself."]}, "tail": {"name": "Tail and stop light connector", "sys": ["light"], "wires": [["Br", "Tail (position) lamp"], ["G/Y", "Stop lamp"], ["G", "Earth"]], "does": "Rear light: a dim tail filament or LED row, and a bright stop filament switched by the brake light switches.", "test": ["12 V on G/Y only with either brake applied."], "fault": ["Corroded earth makes the tail light glow when the indicators flash."]}, "ind-rear": {"name": "Rear indicator connectors", "sys": ["light"], "wires": [["O", "Left indicator"], ["Lb", "Right indicator"], ["G", "Earth"]], "does": "Feeds the two rear turn signals.", "test": ["Same test as the front pair; both sides should flash at the same rate."], "fault": ["LED indicators fitted to a thermal relay flash too fast: fit an LED relay or load resistors."]}, "horn": {"name": "Horn connector", "sys": ["light"], "wires": [["Lg", "From the horn button"], ["G", "Earth"]], "does": "The horn draws 2 to 3 A. On many machines the button switches the earth side instead of the feed.", "test": ["Bridge the horn straight to the battery: it should sound strongly."], "fault": ["Seized diaphragm after washing; adjust the screw on the back."]}, "fbs": {"name": "Front brake light switch", "sys": ["light"], "wires": [["Bl", "Switched feed in"], ["G/Y", "Stop lamp out"]], "does": "A plunger switch under the front brake lever, closed when the lever is pulled.", "test": ["Continuity across the switch only with the lever pulled."], "fault": ["Stuck switch: stop lamp on permanently, flat battery."]}, "ckp": {"name": "Crank position sensor", "sys": ["ign", "fuel"], "wires": [["Bl/Y", "Sensor signal"], ["G/W", "Signal return"]], "does": "A magnetic pickup reading teeth or lobes on the rotor. The ECU uses it for engine speed and to time both spark and injection.", "test": ["Resistance: 100 to 500 Ω.", "Peak voltage while cranking: above 0.7 V."], "fault": ["No signal means no spark and no injection, with everything else working."]}, "o2": {"name": "Oxygen sensor, 4-pin", "sys": ["fuel"], "wires": [["W", "Sensor signal"], ["G", "Sensor earth"], ["Bl", "Heater feed"]], "does": "Measures oxygen left in the exhaust. The ECU trims fuelling to hold the mixture near 14.7:1 at cruise. The fourth pin is the heater return.", "test": ["Heater resistance: 6 to 20 Ω.", "Warm engine: signal switches between about 0.1 and 0.9 V."], "fault": ["Lead fuel or silicone sealant kills the sensor: fault code and rich running."]}, "ects": {"name": "Engine temperature sensor", "sys": ["fuel", "inst"], "wires": [["G/Bl", "Temperature signal"], ["G/O", "Sensor earth"]], "does": "A thermistor in the coolant or cylinder head. Resistance falls as it warms; the ECU uses it for cold-start enrichment and fan control.", "test": ["About 2.5 kΩ at 20 °C, about 0.3 kΩ at 80 °C."], "fault": ["Open circuit reads as very cold: rich running and black plug."]}, "alt": {"name": "Alternator connector, 3-phase", "sys": ["charge"], "wires": [["Y", "Phase 1"], ["Y", "Phase 2"], ["Y", "Phase 3"]], "does": "Joins the stator to the regulator/rectifier. It carries the full charging current as AC, so it is a common hot spot.", "test": ["Unplug and measure 0.2 to 1.0 Ω between each pair of yellow wires on the stator side."], "fault": ["Browned or melted connector: cut it out and solder the three wires."]}, "neutral": {"name": "Neutral switch lead", "sys": ["start", "inst"], "wires": [["Lg/R", "Neutral lamp and starter interlock"]], "does": "A single wire to a switch in the gearbox that earths in neutral. It lights the N lamp and lets the starter work without pulling the clutch.", "test": ["Continuity to earth only in neutral."], "fault": ["No N lamp and the bike starts only with the clutch pulled."]}, "earth-front": {"name": "Earth point", "sys": ["power"], "wires": [["G", "Earth eyelet bolted to the frame"]], "does": "Several earth wires share one eyelet on the frame. Every circuit returns to the battery through points like this.", "test": ["Voltage drop from the eyelet to battery negative with the lights on: under 0.1 V."], "fault": ["Paint under the eyelet or corrosion: dim lights, odd gauge readings, indicators affecting other lamps."]}, "trunk": {"name": "Main harness trunk", "sys": ["power"], "wires": [], "does": "The bundled trunk of the loom, wrapped in half-lapped PVC tape and clipped to the frame. Branches leave it for each component.", "test": ["Look for chafing where the trunk passes the steering head and the frame rails."], "fault": ["Wire rubbed through at the steering head: fuse blows on full lock."]}, "fusebox": {"name": "Fuse box, 10/10/15/5 A", "sys": ["power"], "wires": [], "does": "Splits the switched feed into separate fused circuits (ignition and ECU, lights, fan, instruments) with a spare. Each blade fuse protects its own wires.", "test": ["With the key on, 12 V on both test points on top of each fuse."], "fault": ["A fuse that blows again at once means a short to earth in that circuit."]}, "mainfuse": {"name": "Main fuse 30 A", "sys": ["power", "start", "charge"], "wires": [["R", "Battery feed"]], "does": "Protects everything downstream of the battery except the starter cable. Usually on the starter relay.", "test": ["Continuity across the fuse; 12 V on both sides with the battery connected."], "fault": ["Blown: no dash, no horn, no crank."]}, "srelay": {"name": "Starter relay", "sys": ["start"], "wires": [["R", "Battery stud"], ["Y/R", "Coil feed from the start button"], ["G/R", "Coil earth through the interlocks"]], "does": "A solenoid switch. Under 1 A through its coil lets 80 to 150 A flow from the battery to the starter motor.", "test": ["Coil resistance: 3 to 5 Ω.", "Voltage across the two big studs while cranking: under 0.2 V."], "fault": ["Click but no crank: burnt contacts or a loose battery cable."]}, "trelay": {"name": "Turn signal relay", "sys": ["light"], "wires": [], "does": "Switches the indicator feed on and off at 60 to 120 flashes per minute.", "test": ["Bridge its input and output terminals: the selected indicators should light steadily."], "fault": ["Thermal relays flash too fast with LED indicators."]}, "battery": {"name": "Battery 12 V", "sys": ["power", "start", "charge"], "wires": [], "does": "Stores energy for starting and supplies all loads when the engine is off or idling.", "test": ["Rest voltage: 12.6 to 12.8 V (lead-acid), 13.2 to 13.4 V (lithium iron phosphate)."], "fault": ["Left unused for a month without a maintainer, a small battery can go flat beyond recovery."]}, "bplus": {"name": "Battery positive feed", "sys": ["power", "start", "charge"], "wires": [["R", "Battery positive to the starter relay and main fuse"]], "does": "The heavy red cable from the battery positive terminal. It is unfused between the battery and the relay, so it must be routed away from sharp edges.", "test": ["Terminal bolts tight; no green corrosion under the boot."], "fault": ["Loose terminal: relay chatters when start is pressed."]}, "startercable": {"name": "Starter motor cable", "sys": ["start"], "wires": [], "does": "Heavy cable from the relay M stud to the starter motor terminal. It only carries current while the starter turns.", "test": ["Voltage drop along the cable while cranking: under 0.3 V."], "fault": ["Corroded lug at the motor end: slow cranking that gets worse as the cable warms."]}, "bminus": {"name": "Battery earth", "sys": ["power"], "wires": [["G", "Battery negative to the engine or frame"]], "does": "The return path for every circuit, including the starter. It must be as heavy as the positive cable.", "test": ["Voltage drop from battery negative to the engine case while cranking: under 0.2 V."], "fault": ["Painted or loose mounting: starter turns slowly and the lights dim heavily when cranking."]}}, "starting": {"battery": {"name": "Battery 12 V", "does": "Supplies 80 to 150 A to the starter for a few seconds. Cranking is the heaviest load the electrical system ever sees, so a battery that lights the dash can still fail to crank.", "test": ["Rest voltage after an hour off charge: 12.6 to 12.8 V (lead-acid).", "While cranking the voltage must stay above 9.6 V; lower means a weak battery or a bad connection."], "fault": ["Sulphated cells after storage: rest voltage looks fine, then collapses under load."]}, "mainfuse": {"name": "Main fuse 30 A", "does": "Protects the whole loom from a short to earth. On most machines it sits on the starter relay body.", "test": ["Measure 12 V on both sides of the fuse with the key on."], "fault": ["A blown main fuse kills everything at once. Find the short before fitting a new one."]}, "relay": {"name": "Starter relay", "does": "A solenoid switch. A coil drawing under 1 A pulls a copper disc across two heavy studs, connecting battery cable B to motor cable M. The start button never carries the motor current.", "test": ["Coil resistance across the two small terminals: 3 to 5 Ω.", "Voltmeter across B and M while pressing start: the reading falls from 12 V to under 0.2 V when the relay closes."], "fault": ["Burnt contact disc: a click but no crank, with 12 V still across B and M."]}, "motor": {"name": "Starter motor", "does": "A permanent-magnet DC motor. Brushes feed the commutator, which switches current through the armature windings so it keeps turning between the magnets. A reduction gear and one-way clutch link it to the crankshaft.", "test": ["In neutral, bridge the battery straight to the motor terminal with a heavy jumper: it should spin briskly.", "Brush length above the service limit, typically 6 to 7 mm."], "fault": ["Worn brushes: slow or intermittent cranking.", "Water inside after washing: corroded commutator, seized bushes."]}, "ign": {"name": "Ignition switch", "does": "Switches the battery feed to the control circuit and fuse box.", "test": ["Continuity across the switch with the key on, none with it off."], "fault": ["Worn contacts: intermittent cut-out over bumps."]}, "fuse10": {"name": "Fuse 10 A", "does": "Protects the switched feed to the start button, engine stop switch, ignition and ECU.", "test": ["12 V on both sides of the fuse with the key on."], "fault": ["Blown: no click when pressing start, and no spark either."]}, "stop": {"name": "Engine stop switch", "does": "In RUN it passes the switched feed to the start button and ignition. In OFF it cuts both, so the engine can neither start nor keep running.", "test": ["Continuity in RUN, open in OFF."], "fault": ["Left in OFF by the rider: the most common no-start call-out."]}, "start": {"name": "Start button", "does": "Momentary button. Holding it sends feed to the starter relay coil.", "test": ["Continuity only while pressed.", "12 V on the wire to the relay while pressed."], "fault": ["Corroded contacts in the switch cube: works only when pressed hard."]}, "diode": {"name": "Interlock diode", "does": "Lets the relay coil earth through the neutral switch, but stops the neutral lamp earthing back through the relay coil and side-stand circuit.", "test": ["Diode mode: about 0.5 V one way, open the other."], "fault": ["Shorted diode: the N lamp glows when the clutch is pulled in gear."]}, "neutral": {"name": "Neutral switch", "does": "Earths when the gearbox is in neutral. Lights the N lamp and gives the relay coil an earth so the engine can start.", "test": ["Continuity to earth only in neutral."], "fault": ["Oily or broken contact: no N lamp, starts only with the clutch pulled."]}, "clutch": {"name": "Clutch lever switch", "does": "Closed while the clutch lever is pulled. Together with the side-stand switch it allows starting in gear.", "test": ["Continuity only with the lever pulled."], "fault": ["Lever adjuster moved: the switch never closes, so it only starts in neutral."]}, "stand": {"name": "Side-stand switch", "does": "Closed only with the side-stand up. Stops a start in gear with the stand down; the ECU also cuts the engine if a gear is selected with the stand down.", "test": ["Continuity with the stand up, open with it down."], "fault": ["Mud and corrosion: engine dies when first gear is selected."]}, "sclutch": {"name": "Starter drive and one-way clutch", "does": "The pinion drives a reduction gear, which drives the starter driven gear on the crankshaft. Rollers wedge the driven gear to the clutch housing while the starter turns it, and free off once the engine runs faster than the starter.", "test": ["Turn the driven gear by hand: it locks one way and spins freely the other."], "fault": ["Worn rollers or weak springs: the starter whirs and the engine does not turn."]}}, "charging": {"rotor": {"name": "Flywheel rotor", "does": "Bolted to the crankshaft taper. Twelve magnets of alternating polarity sweep past the stator, so the stator windings see a changing magnetic field whenever the engine turns.", "test": ["Inspect for cracked or loose magnets after a backfire or crash."], "fault": ["A loose magnet rubs the stator and wrecks the windings."]}, "stator": {"name": "Stator", "does": "Eighteen laminated iron poles wound with copper and connected as three phases. Output rises with engine speed, roughly 15 to 20 V AC per 1000 rpm unloaded on a small machine.", "test": ["Resistance between each pair of yellow leads: 0.2 to 1.0 Ω, all within 10% of each other.", "No continuity from any lead to earth.", "Unloaded AC between each pair at 5000 rpm: 50 to 80 V, balanced."], "fault": ["Burnt winding: dark varnish, one phase low or open."]}, "leads": {"name": "Stator leads", "does": "Three AC wires, usually all yellow, carry stator output to the regulator/rectifier.", "test": ["Inspect the connector for browning; measure resistance through it."], "fault": ["Melted connector: high resistance and heat, then a dead phase."]}, "regrec": {"name": "Regulator/rectifier", "does": "Turns three-phase AC into DC and limits system voltage. A shunt type limits it by short-circuiting the stator to earth once the battery is full, which is why the unit has cooling fins and runs hot.", "test": ["Charging voltage at 4000 to 5000 rpm: 14.0 to 15.0 V (K-Light 125: 14.5 ± 0.5 V) at the battery."], "fault": ["Regulation failure: over 15 V, boiling battery, blown bulbs.", "Rectifier failure: battery goes flat while riding."]}, "bridge": {"name": "Bridge diodes D1 to D6", "does": "A three-phase full-wave bridge. The upper diodes pass the most positive phase to B+, the lower diodes return current from earth to the most negative phase, so current reaches the battery in one direction only.", "test": ["Diode mode, red probe on a yellow input and black on B+: 0.4 to 0.6 V; reversed: open.", "Red probe on earth and black on a yellow input: 0.4 to 0.6 V; reversed: open."], "fault": ["Shorted diode: the battery drains overnight through the stator."]}, "scr": {"name": "SCR shunts G1 to G3", "does": "Thyristors across the lower diodes. When the sense circuit fires their gates, each SCR shorts its phase to earth for the rest of that half-cycle, so output beyond what the system needs is dumped as heat.", "test": ["Not meter-testable; judge by charging voltage."], "fault": ["SCR that never fires: overcharging."]}, "sense": {"name": "Sense and trigger circuit", "does": "Watches the B+ voltage and fires the SCR gates once it passes about 14.5 V.", "test": ["Charging voltage that rises steadily with rpm past 15 V points here."], "fault": ["Failed sense circuit: no regulation at all."]}, "fuse": {"name": "Main fuse 15 A", "does": "Protects the charging output and the loads from a short.", "test": ["12 V on both sides of the fuse."], "fault": ["Blown: the alternator can no longer reach the battery or loads."]}, "battery": {"name": "Battery 12 V 5 Ah", "does": "Stores energy and buffers the system voltage. At idle a small machine can run a deficit that the battery covers until the revs rise.", "test": ["Engine at 5000 rpm: 14.0 to 15.0 V (K-Light 125: 14.5 ± 0.5 V) across the terminals.", "Engine off after riding: 12.8 V or more."], "fault": ["Overcharged: acid smell, bulging case."]}, "ignsw": {"name": "Ignition switch", "does": "Connects the loads to the charging bus.", "test": ["Continuity with the key on."], "fault": ["Worn contacts drop the loads over bumps."]}, "loads": {"name": "Loads", "does": "Headlight, tail light, ignition, fuel pump, ECU and instruments. A 125 cc machine draws about 6 to 8 A with lights on, close to what its alternator makes at idle.", "test": ["Measure total draw with a DC clamp meter."], "fault": ["Heated grips and spotlights push the balance negative in town."]}}, "ignition": {"srcA": {"name": "Source coil", "does": "A high-turn winding on the stator that makes 100 to 400 V AC to charge the CDI capacitor. It needs no battery, so kick-start and off-road machines can run with none fitted.", "test": ["Resistance to earth: 50 to 800 Ω depending on model.", "Peak voltage while cranking, with a peak adapter: above 100 V."], "fault": ["Weak source coil: starts cold, dies when hot."]}, "flyA": {"name": "Flywheel rotor and reluctor", "does": "The raised reluctor lobe on the rotor rim passes the pulser once per revolution, marking the crank position at which the spark is due.", "test": ["Lobe edge clean and undamaged."], "fault": ["Damaged lobe gives a weak or wrongly timed pulse."]}, "pulserA": {"name": "Pulser coil", "does": "A magnetic pickup. The lobe passing its pole induces a short pulse that tells the CDI where the crankshaft is.", "test": ["Resistance: 100 to 500 Ω.", "Peak voltage while cranking: above 0.7 V.", "Air gap to the rotor: 0.5 to 0.9 mm."], "fault": ["Open coil or broken lead: no spark at all, everything else normal."]}, "stopA": {"name": "Engine stop switch (CDI)", "does": "Works the opposite way to a battery system. In STOP it shorts the source coil to earth, so the capacitor never charges. In RUN its contacts are open.", "test": ["Continuity to earth in STOP only."], "fault": ["Chafed kill wire touching the frame: no spark, same symptom as STOP."]}, "cdi": {"name": "CDI unit", "does": "Diode D charges capacitor C to 150 to 300 V from the source coil. When the pulser signal arrives, the trigger circuit fires the SCR, which dumps C into the coil primary within microseconds.", "test": ["Test the source coil, pulser and coil first; then substitute a known good unit."], "fault": ["Cracked solder joints inside the potting: cuts out when hot."]}, "coilA": {"name": "Ignition coil (CDI)", "does": "A step-up transformer. A pulse in the primary (few turns, thick wire) induces 10 to 35 kV in the secondary (thousands of turns, fine wire) around a laminated iron core.", "test": ["Primary: 0.2 to 1.0 Ω.", "Secondary with the cap removed: 5 to 15 kΩ."], "fault": ["Cracked case leaks high voltage when wet: misfire in rain."]}, "plugA": {"name": "HT lead, cap and spark plug", "does": "The HT lead carries the high voltage to the cap, which usually holds a 5 kΩ suppressor. The voltage jumps the plug gap and lights the mixture.", "test": ["Gap: 0.6 to 0.9 mm.", "Cap resistance about 5 kΩ.", "Light tan insulator is healthy; black soot is rich; white is lean or too hot."], "fault": ["Fouled plug: carbon lets the spark leak to earth instead of jumping the gap."]}, "batB": {"name": "Battery 12 V", "does": "Powers the inductive ignition and the ECU. With a flat battery there is no spark, even with a kick-start.", "test": ["At least 12 V with the key on; above 9.6 V while cranking."], "fault": ["Low battery voltage during cranking resets the ECU: no spark until the starter is released."]}, "fuseB": {"name": "Ignition fuse", "does": "Protects the switched feed to the ECU and coil.", "test": ["12 V on both sides with the key on."], "fault": ["Blown: dead ECU, no spark, no injection."]}, "ignB": {"name": "Ignition switch", "does": "Connects the battery to the ignition circuit.", "test": ["Continuity with the key on."], "fault": ["Intermittent contact: engine cuts out over bumps."]}, "stopB": {"name": "Engine stop switch", "does": "In RUN it closes the feed to the coil and ECU; in OFF it opens it.", "test": ["12 V after the switch in RUN only."], "fault": ["Corroded contacts: misfire that comes and goes with switch movement."]}, "ecu": {"name": "ECU with inductive ignition", "does": "The microcontroller reads crank position from the pulser and looks up advance and dwell in its map. Its IGBT earths the coil primary so current builds for the dwell time (2 to 4 ms). When the IGBT switches off, the collapsing field induces the high voltage.", "test": ["12 V at +B with the key on; under 0.1 V drop on each earth.", "Read fault codes before replacing parts."], "fault": ["Corroded connector pins cause more faults than the ECU itself."]}, "pulserB": {"name": "Crank position pulser", "does": "Gives the ECU a pulse once per revolution; the ECU times dwell and spark from it, adding advance as rpm rises.", "test": ["Resistance: 100 to 500 Ω.", "Peak voltage while cranking: above 0.7 V."], "fault": ["No pulse: no spark and no injection."]}, "coilB": {"name": "Ignition coil (inductive)", "does": "Primary fed with 12 V on its + terminal and earthed by the ECU on its − terminal. Current stores energy in the core; breaking the circuit releases it into the secondary.", "test": ["Primary: 2 to 5 Ω.", "Secondary with the cap removed: 8 to 15 kΩ."], "fault": ["Shorted turns: weak spark under load, misfire at high rpm."]}, "plugB": {"name": "HT lead, cap and spark plug", "does": "Same as panel A: the high voltage jumps the plug gap and lights the mixture.", "test": ["Gap: 0.6 to 0.9 mm.", "Cap resistance about 5 kΩ."], "fault": ["Worn electrodes need more voltage to fire; a weak coil then misfires under load."]}}};
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 const TABS = ["harness", "starting", "charging", "ignition"];

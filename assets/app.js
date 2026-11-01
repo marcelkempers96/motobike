@@ -74,15 +74,7 @@ function render() {
         <span class="ute-brand-word">moto zero</span>
         <span class="ute-brand-sub">Transitions Lab</span>
       </a>
-      <nav class="ute-nav" aria-label="Sections">
-        <a href="./" aria-current="page">Lab</a>
-        <a href="learn/">Learn</a>
-        <a href="quiz/">Quiz</a>
-        <a href="build/">Build</a>
-        <a href="wiring/">Wiring</a>
-        <a href="models/">Models</a>
-        <a href="sources/">Sources</a>
-      </nav>
+      <nav class="ute-nav" aria-label="Sections"><a href="" aria-current="page">Lab</a><a href="cockpit/">Cockpit</a><a href="learn/">Learn</a><a href="wiring/">Wiring</a><a href="models/">Models</a><a href="quiz/">Quiz</a><a href="sources/">Sources</a><a class="ute-nav-kids" href="build/">Kids: Build a bike</a></nav>
       <span class="ute-top-spacer"></span>
       <div class="ute-seg ute-mode-switch" role="group" aria-label="Mode">
         ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}">${MODE_INFO[m].short}</button>`).join('')}
@@ -650,7 +642,7 @@ COMPONENT_VIEWS.motor = {
   hold: { label: 'Throttle', flag: 'rider_throttle', hint: 'Press and hold' },
   html: () => `${statusHTML('Idle', 'Rotor at rest. Hold THROTTLE to energise the stator.', '0 rpm')}<svg class="ute-cv-svg" id="cv-motor" viewBox="0 0 600 440" role="img" aria-label="PMAC motor cutaway"></svg>`,
   sideHTML: () => card('Live state', statsHTML([['m_rpm', 'RPM', 'rpm'], ['m_tq', 'Torque', 'Nm'], ['m_temp', 'Motor temp', '°C'], ['m_soc', 'Battery', '%']])) +
-    card('Why it beats ICE', list(['Peak torque from 0 rpm: no clutch, no revving.', '~90 % efficient vs ~30 % for a petrol engine.', 'One moving part: the rotor.'])) +
+    card('Why it beats ICE', list(['Peak torque from 0 rpm: no clutch, no revving.', 'About 90 % efficient, against about 30 % for a petrol engine.', 'One moving part: the rotor.'])) +
     card('How it spins', '<p>The controller feeds three phases of AC into the stator windings in turn. That makes a rotating magnetic field. The rotor\'s permanent magnets chase it (N pulled to S) and the shaft turns.</p>'),
   mount: () => {
     defsPackMetals();
@@ -816,7 +808,7 @@ COMPONENT_VIEWS.spark_plug = {
   hold: { label: 'Ignite', flag: 'spark_hold', hint: 'Hold to charge · release to fire' },
   html: () => `${statusHTML('Ready', 'Hold IGNITE to charge the coil, release to fire.', '0 %')}<svg class="ute-cv-svg" id="cv-spark" viewBox="0 0 640 380" role="img" aria-label="Ignition circuit"></svg>`,
   sideHTML: () => card('How', '<p>The coil is a transformer. 12 V flows through a few hundred primary turns and builds a magnetic field. Cut it, and the field collapses through ~20 000 secondary turns, and <b>~25 000 V</b> jumps the plug gap.</p>') +
-    card('Parts', list(['Battery: 12 V supply', 'Coil: primary + secondary windings', 'HT lead: insulated high-tension wire', 'Plug: centre + ground electrode, ~0.7 mm gap'])) +
+    card('Parts', list(['Battery: 12 V supply', 'Coil: primary + secondary windings', 'HT lead: insulated high-tension wire', 'Plug: centre and earth electrodes, about 0.7 mm gap'])) +
     card('Timing', `<p>${S.mode === '2t' ? 'A two-stroke fires <b>every revolution</b>.' : 'A four-stroke fires <b>once every two revolutions</b>, just before TDC on the compression stroke.'}</p>` + statsHTML([['s_kv', 'Last spark', 'kV'], ['s_n', 'Sparks', '']])),
   mount: () => {
     defsPackMetals();
@@ -913,7 +905,7 @@ COMPONENT_VIEWS.chain = {
   hold: { label: 'Rev', flag: 'gear_hold', hint: 'Press and hold' },
   html: () => `${statusHTML('Stopped', 'Hold REV to spin the engine and drive the rear wheel.', '0 rpm')}<svg class="ute-cv-svg" id="cv-chain" viewBox="0 0 700 360" role="img" aria-label="Chain drive"></svg>`,
   sideHTML: () => card('Live gearing', statsHTML([['g_eng', 'Engine', 'rpm'], ['g_whl', 'Wheel', 'rpm'], ['g_ms', 'Chain', 'm/s'], ['g_kmh', 'Speed', 'km/h'], ['g_ratio', 'Final ratio', ':1']])) +
-    card('Parts', list(['Front (output) sprocket: 15 teeth', 'Chain: 520 pitch, ~110 links', 'Rear sprocket: 39 teeth', 'Primary drive + gearbox before it'])) +
+    card('Parts', list(['Front (output) sprocket: 15 teeth', 'Chain: 428 pitch, as on the K-Light 125', 'Rear sprocket: 39 teeth', 'Primary drive + gearbox before it'])) +
     card('Rule', '<p><b>Smaller rear sprocket</b> = higher top speed, softer pull. <b>Bigger rear sprocket</b> = quicker acceleration, lower top speed. One tooth at the front ≈ three at the back.</p>'),
   mount: () => {
     defsPackMetals();
@@ -1119,10 +1111,10 @@ COMPONENT_VIEWS.controller = {
   title: 'Motor controller (inverter)',
   kind: 'Electric · Interactive',
   hold: { label: 'Throttle', flag: 'rider_throttle', hint: 'Press and hold' },
-  html: () => `${statusHTML('Standby', 'DC bus live. MOSFETs off until you ask for torque.', '16 kHz')}<svg class="ute-cv-svg" id="cv-ctrl" viewBox="0 0 640 380" role="img" aria-label="Controller internals"></svg>`,
+  html: () => `${statusHTML('Standby', 'DC bus live. MOSFETs off until you ask for torque.', '8–20 kHz')}<svg class="ute-cv-svg" id="cv-ctrl" viewBox="0 0 640 380" role="img" aria-label="Controller internals"></svg>`,
   sideHTML: () => card('Live state', statsHTML([['k_t', 'Temp', '°C'], ['k_v', 'DC input', 'V'], ['k_l', 'Load', '%'], ['k_f', 'Switching', 'kHz']])) +
     card('Parts', list(['6 SiC MOSFETs: 2 per phase', 'Gate driver: flips them on/off', 'DC-link capacitor: smooths the bus', 'MCU: reads throttle + rotor angle', 'Cold plate: carries heat away'])) +
-    card('How', '<p>It <b>chops DC into three-phase AC</b> by switching the MOSFETs 16 000 times a second. Longer "on" pulses mean more current, more torque. The pattern\'s rhythm sets motor speed.</p>'),
+    card('How', '<p>It <b>chops DC into three-phase AC</b> by switching the MOSFETs thousands of times a second (typically 8 to 20 kHz). Longer "on" pulses mean more current, more torque. The pattern\'s rhythm sets motor speed.</p>'),
   mount: () => {
     defsPackMetals();
     const svg = $('#cv-ctrl');
@@ -1164,7 +1156,7 @@ COMPONENT_VIEWS.controller = {
       f.glow.setAttribute('opacity', S.elec.rpm > 30 && on ? 0.5 : 0);
     });
     const load = S.rider.throttle;
-    setStatus(load > 0.03 ? 'Switching' : 'Standby', load > 0.03 ? 'High-side and low-side MOSFETs alternate per phase.' : 'DC bus live. MOSFETs off until you ask for torque.', '16 kHz');
+    setStatus(load > 0.03 ? 'Switching' : 'Standby', load > 0.03 ? 'High-side and low-side MOSFETs alternate per phase.' : 'DC bus live. MOSFETs off until you ask for torque.', '8–20 kHz');
     setStat('k_t', fmt(S.elec.controller_temp));
     setStat('k_v', Math.round(400 - load * 18));
     setStat('k_l', Math.round(load * 100));
@@ -1196,7 +1188,7 @@ const WIRING = {
       { k: 'tail', x: 580, y: 320, t: 'Tail / brake', s: '5 / 21 W', specs: [['Tail', '5 W · 0.4 A'], ['Brake', '21 W · 1.75 A']] },
       { k: 'horn', x: 400, y: 440, t: 'Horn', s: '~3 A', specs: [['Current', '2–4 A'], ['Sound', '~110 dB']] },
       { k: 'inst', x: 580, y: 440, t: 'Instruments', s: '< 1 A', specs: [['Shows', 'Speed, rpm, lamps'], ['Current', '< 1 A']] },
-      { k: 'gnd', x: 220, y: 440, t: 'Frame ground', s: '0 V', specs: [['Voltage', '0 V'], ['Job', 'Return path for every circuit']] },
+      { k: 'gnd', x: 220, y: 440, t: 'Frame earth', s: '0 V', specs: [['Voltage', '0 V'], ['Job', 'Return path for every circuit']] },
     ],
     links: [
       ['alt', 'reg', 'ac'], ['reg', 'bat', 'v12'], ['bat', 'fuse', 'v12'], ['fuse', 'ign', 'v12'], ['ign', 'ecu', 'v12'],
@@ -1209,14 +1201,14 @@ const WIRING = {
       { k: 'cp', x: 40, y: 40, t: 'Charge port', s: 'AC / DC', specs: [['Home AC', '3.3–6.6 kW'], ['DC fast', 'up to ~50 kW'], ['Plug', 'Type 2 / CCS2']] },
       { k: 'bms', x: 220, y: 40, t: 'BMS', s: 'monitor', specs: [['Watches', 'Each cell V + temp'], ['Balances', 'Cells to match'], ['Can open', 'Main contactor']] },
       { k: 'pack', x: 40, y: 180, t: 'HV battery pack', s: '400 V', specs: [['Voltage', '~400 V'], ['Energy', '~12 kWh'], ['Cells', '~96 in series']] },
-      { k: 'ctrl', x: 400, y: 180, t: 'Controller', s: 'DC → 3φ AC', specs: [['In', '400 V DC'], ['Out', '3-phase AC'], ['Switching', '16 kHz']] },
+      { k: 'ctrl', x: 400, y: 180, t: 'Controller', s: 'DC → 3φ AC', specs: [['In', '400 V DC'], ['Out', '3-phase AC'], ['Switching', '8–20 kHz']] },
       { k: 'mot', x: 580, y: 180, t: 'Motor', s: '~40 kW', specs: [['Type', 'PMAC / PMSM'], ['Peak torque', '~95 Nm from 0 rpm'], ['Efficiency', '~90 %']] },
       { k: 'dcdc', x: 220, y: 320, t: 'DC-DC', s: '400 → 12 V', specs: [['In', '400 V'], ['Out', '13.8 V'], ['Power', '~500 W']] },
       { k: 'aux', x: 40, y: 320, t: '12 V aux battery', s: '12 V', specs: [['Voltage', '12 V'], ['Feeds', 'Lights, dash, contactor coil']] },
       { k: 'head', x: 400, y: 320, t: 'Headlight (LED)', s: '25 W', specs: [['Power', '25 W'], ['Current', '2 A @ 12 V']] },
       { k: 'inst', x: 580, y: 320, t: 'Instruments', s: 'TFT', specs: [['Shows', 'SoC, range, power'], ['Bus', 'CAN']] },
       { k: 'tail', x: 400, y: 440, t: 'Tail / brake', s: 'LED', specs: [['Power', '3 / 8 W'], ['Current', '< 1 A']] },
-      { k: 'gnd', x: 220, y: 440, t: 'Chassis ground', s: '0 V (12 V side)', specs: [['Note', 'HV is isolated from frame'], ['12 V side', 'Frame return']] },
+      { k: 'gnd', x: 220, y: 440, t: 'Chassis earth', s: '0 V (12 V side)', specs: [['Note', 'HV is isolated from frame'], ['12 V side', 'Frame return']] },
     ],
     links: [
       ['cp', 'pack', 'hv'], ['bms', 'pack', 'sig'], ['pack', 'ctrl', 'hv'], ['ctrl', 'mot', 'ac'], ['pack', 'dcdc', 'hv'],
@@ -1232,7 +1224,7 @@ COMPONENT_VIEWS.wiring = {
     <svg class="ute-cv-svg" id="cv-wiring" viewBox="0 0 900 500" role="img" aria-label="Wiring schematic"></svg>
     <div class="ute-wire-legend">${Object.values(WIRE_COLORS).map((c) => `<span><svg viewBox="0 0 26 6"><line x1="0" y1="3" x2="26" y2="3" stroke="${c.stroke}" stroke-width="3" ${c.dash ? `stroke-dasharray="${c.dash.split(' ').map((n) => n / 2).join(' ')}"` : ''}/></svg>${c.label}</span>`).join('')}</div>
     <div class="ute-wire-pop" id="cv-wire-pop"><h5></h5><dl></dl></div>`,
-  sideHTML: () => card('How to read', '<p><b style="color:#D23C2C">Red</b> is +12 V, <b>black</b> is ground, <b style="color:#1D6B55">green dashed</b> is high-voltage DC, <b style="color:#B8862A">amber</b> is AC, <b style="color:#3E6FB7">blue dashed</b> is a low-current signal.</p>') +
+  sideHTML: () => card('How to read', '<p><b style="color:#D23C2C">Red</b> is +12 V, <b>black</b> is earth, <b style="color:#1D6B55">green dashed</b> is high-voltage DC, <b style="color:#B8862A">amber</b> is AC, <b style="color:#3E6FB7">blue dashed</b> is a low-current signal.</p>') +
     card('Key laws', '<p><b>V = I · R</b>: voltage pushes current through resistance.<br><b>P = V · I</b>: power is voltage times current.<br>A 55 W bulb at 12 V draws <b>4.6 A</b>.</p>') +
     (S.mode === 'elec'
       ? card('Why two bus voltages', '<p>400 V moves big power with small current (thin cables, low loss). Lights and dash still run on safe 12 V, made by the DC-DC converter.</p>')
@@ -1282,6 +1274,33 @@ COMPONENT_VIEWS.wiring = {
     });
   },
 };
+
+/* ---------- Wiring Lab (petrol bikes): the course's interactive harness and circuits ---------- */
+const WIRING_HV = COMPONENT_VIEWS.wiring;
+const WL_TABS = [['harness', 'WR01 Main harness'], ['starting', 'F23 Starting'], ['charging', 'F21 Charging'], ['ignition', 'F22 Ignition']];
+function wiringLab(title, tab) {
+  return {
+    title,
+    kind: 'Electrical · Wiring Lab',
+    html: () => `${statusHTML('Wiring Lab', 'Trace the harness, work the switches and trigger faults to see exactly which wire goes dead.', tab.toUpperCase())}
+      <div class="ute-btnrow mz-wl-tabs" role="group" aria-label="Wiring views">${WL_TABS.map(([k, l]) => `<button type="button" class="ute-btn ${k === tab ? 'is-primary' : ''}" data-wl="${k}">${l}</button>`).join('')}<a class="ute-linkbtn" href="wiring/#${tab}" target="_blank" rel="noopener">Open full page ↗</a></div>
+      <iframe class="mz-wl" id="mz-wl" title="Wiring Lab" src="assets/interactive/wiring/wiring.html#${tab}"></iframe>`,
+    mount: () => {
+      const f = $('#mz-wl');
+      const fit = () => { try { f.style.height = Math.ceil(f.contentDocument.documentElement.scrollHeight) + 'px'; } catch (e) { /* noop */ } };
+      f.addEventListener('load', () => { fit(); try { new ResizeObserver(fit).observe(f.contentDocument.documentElement); } catch (e) { /* noop */ } });
+      $$('[data-wl]').forEach((b) => b.addEventListener('click', () => {
+        $$('[data-wl]').forEach((x) => x.classList.toggle('is-primary', x === b));
+        try { f.contentWindow.location.hash = b.dataset.wl; } catch (e) { f.src = 'assets/interactive/wiring/wiring.html#' + b.dataset.wl; }
+        const a = $('.mz-wl-tabs a'); if (a) a.href = 'wiring/#' + b.dataset.wl;
+        setStatus(null, null, b.dataset.wl.toUpperCase());
+      }));
+    },
+  };
+}
+Object.defineProperty(COMPONENT_VIEWS, 'wiring', { get: () => (S.mode === 'elec' ? WIRING_HV : wiringLab('Wiring and electrical', 'harness')), configurable: true });
+Object.defineProperty(COMPONENT_VIEWS, 'charging', { get: () => (S.mode === 'elec' ? undefined : wiringLab('Charging system', 'charging')), configurable: true });
+Object.defineProperty(COMPONENT_VIEWS, 'starter', { get: () => (S.mode === 'elec' ? undefined : wiringLab('Starter motor and starting circuit', 'starting')), configurable: true });
 
 /* ==========================================================================
    9. Ride: the Moto Zero cockpit simulator (assets/interactive/controls.html)

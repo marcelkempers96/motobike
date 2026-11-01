@@ -16,7 +16,7 @@ export function txt(x, y, s, anchor, size, fill) {
   const t = ns('text', {
     x, y,
     fill: fill || '#6B6963',
-    'font-family': 'IBM Plex Mono, monospace',
+    'font-family': 'B612 Mono, IBM Plex Mono, monospace',
     'font-size': size || 11,
     'letter-spacing': '0.08em',
     'text-anchor': anchor || 'start',
