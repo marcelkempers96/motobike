@@ -10,6 +10,22 @@ const $ = (s, r = document) => r.querySelector(s);
 const main = $('#learn-main');
 const toc = $('#learn-toc');
 const ROOT = '../';
+const CHAPTER_IMG = {
+  'm1-history-systems': 'photos/curtiss-1907.jpg', 'm1-types': 'photos/kenya-ride-helicopter.jpg', 'm1-anatomy': 'renders/bike_mx_2t_threeq.webp',
+  'm1-physics': 'photos/kenya-flag-ride.jpg', 'm1-workshop': 'photos/workshop-garage.jpg',
+  'm2-fundamentals': 'photos/engine-closeup.jpg', 'm2-four-stroke': 'renders/photo/render-engine-xray.jpg', 'm2-two-stroke': 'renders/engine_2t.webp',
+  'm2-top-end': 'renders/photo/render-valve.jpg', 'm2-bottom-end': 'renders/photo/render-crank.jpg', 'm2-lubrication-cooling': 'illustrations/powertrain/F11.png',
+  'm2-diagnosis': 'photos/carburettor-work.jpg',
+  'm3-mixture': 'photos/carburettor-fitting.jpg', 'm3-efi': 'renders/throttle_body.webp', 'm3-ignition': 'renders/photo/render-plug.jpg',
+  'm3-battery-charging': 'renders/battery_12v.webp', 'm3-lighting-wiring': 'interactive/wiring/preview/harness.png', 'm3-diagnosis': 'interactive/wiring/preview/starting-noearth.png',
+  'm4-clutch': 'renders/clutch_exploded.webp', 'm4-gearbox': 'illustrations/transmission/F14.png', 'm4-final-drive': 'renders/photo/render-chain.jpg',
+  'm4-frame-steering': 'renders/frame_cradle.webp', 'm4-suspension': 'renders/forks_usd.webp', 'm4-wheels-tyres': 'renders/front_wheel_mx.webp',
+  'm4-brakes': 'renders/photo/render-brake.jpg', 'm4-maintenance': 'photos/scooter-cvt-workshop.jpg',
+  'm5-architecture': 'photos/hybrid-power-unit.jpg', 'm5-motors': 'renders/motor.webp', 'm5-controllers': 'renders/controller.webp',
+  'm5-batteries': 'renders/photo/render-battery.jpg', 'm5-charging': 'renders/charge_port.webp', 'm5-safety': 'illustrations/electrical/F25.png',
+};
+const isPhoto = (p) => p.startsWith('photos/') || p.startsWith('renders/photo/');
+
 const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', 'fuel-ignition': 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'hybrid-power-unit-portrait.jpg' };
 
 function renderTOC(active, page) {
@@ -148,14 +164,17 @@ function renderModuleIndex(mod) {
     <section class="ute-chapter">
       <h2>Chapters</h2>
       <ol class="mz-chaplist">${mod.chapters.map((c, ci) => {
-        const pic = c.blocks.find((b) => b.type === 'plate') || c.blocks.find((b) => b.type === 'photo') || c.blocks.find((b) => b.type === 'model' || b.type === 'models');
-        let img = '';
-        if (pic && pic.type === 'plate') img = `${ROOT}assets/illustrations/${plateSrc(pic.id)}`;
-        else if (pic && pic.type === 'photo') img = `${ROOT}assets/${pic.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${pic.src}`;
-        else if (pic) { const f = pic.file || pic.files[0]; img = `${ROOT}assets/renders/${f.startsWith('bike_') ? f + '_side' : f}.webp`; }
-        return `<li><a href="#${c.id}">${img ? `<img src="${img}" alt="" loading="lazy">` : '<span></span>'}<div><span class="ute-chapter-num">${mod.num}.${ci + 1}</span>${PG.isDone(c.id) ? '<span class="mz-done-tag">✓ Completed</span>' : PG.isSeen(c.id) ? '<span class="mz-seen-tag">Started</span>' : ''}<h3>${c.title}</h3><p>${c.lead || ''}</p></div></a></li>`;
+        const ci_img = CHAPTER_IMG[c.id];
+        let img = ci_img ? `${ROOT}assets/${ci_img}` : '';
+        const photo = ci_img && isPhoto(ci_img);
+        if (!img) {
+          const pic = c.blocks.find((b) => b.type === 'plate') || c.blocks.find((b) => b.type === 'model' || b.type === 'models');
+          if (pic && pic.type === 'plate') img = `${ROOT}assets/illustrations/${plateSrc(pic.id)}`;
+          else if (pic) { const f = pic.file || pic.files[0]; img = `${ROOT}assets/renders/${f.startsWith('bike_') ? f + '_side' : f}.webp`; }
+        }
+        return `<li><a href="#${c.id}">${img ? `<img src="${img}" alt="" loading="lazy" class="${photo ? 'is-photo' : ''}">` : '<span></span>'}<div><span class="ute-chapter-num">${mod.num}.${ci + 1}</span>${PG.isDone(c.id) ? '<span class="mz-done-tag">✓ Completed</span>' : PG.isSeen(c.id) ? '<span class="mz-seen-tag">Started</span>' : ''}<h3>${c.title}</h3><p>${c.lead || ''}</p></div></a></li>`;
       }).join('')}
-      <li><a href="#${mod.id}-glossary"><span></span><div><span class="ute-chapter-num">${mod.num}</span><h3>Glossary and further reading</h3><p>Every term used in the module, and where to read more.</p></div></a></li></ol>
+      <li><a href="#${mod.id}-glossary"><span class="mz-az">A–Z</span><div><span class="ute-chapter-num">${mod.num}</span><h3>Glossary and further reading</h3><p>Every term used in the module, and where to read more.</p></div></a></li></ol>
     </section>`;
   window.scrollTo(0, 0);
 }

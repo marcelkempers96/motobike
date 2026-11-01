@@ -1078,3 +1078,8 @@ html.mz-embed .mz-cv-below { padding: 10px 0 0; }
 html.mz-embed .mz-home { display: none; }
 @media (max-width: 960px) { .mz-home-cards { grid-template-columns: 1fr; } .mz-home-hero { min-height: 360px; } .mz-home-hero-text { padding: 24px 18px; } .mz-home { padding: 24px 14px 36px; } }
 a.ute-btn { text-decoration: none; display: inline-flex; align-items: center; }
+.mz-chaplist img.is-photo { object-fit: cover; }
+.mz-chaplist img, .mz-chaplist a > span { width: 200px; height: 130px; }
+@media (max-width: 720px) { .mz-chaplist img { width: 100%; height: 180px; } }
+.mz-chaplist a { grid-template-columns: 200px minmax(0, 1fr); } @media (max-width: 720px) { .mz-chaplist a { grid-template-columns: 1fr; } }
+.mz-chaplist .mz-az { display: grid; place-items: center; font: 900 34px/1 var(--sans); color: var(--ink); background: #F5F5F5; letter-spacing: -0.02em; }
