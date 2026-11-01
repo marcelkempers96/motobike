@@ -359,7 +359,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Most sensors run from a regulated <strong>5 V reference</strong> and share a sensor ground, so one shorted sensor can drag the reference down and set several codes at once. Temperature sensors are NTC thermistors: resistance and signal voltage fall as temperature rises."
+          "html": "Most sensors run from a regulated <strong>5 V reference</strong> and share a sensor earth, so one shorted sensor can drag the reference down and set several codes at once. Temperature sensors are NTC thermistors: resistance and signal voltage fall as temperature rises."
         },
         {
           "type": "table",
@@ -688,7 +688,7 @@ export default {
         {
           "type": "photo",
           "src": "render-plug.jpg",
-          "caption": "A 14 mm resistor spark plug of the D7RTC class: threaded shell with sealing gasket, 16 mm hex, ribbed alumina insulator to stop flashover, terminal nut, and the centre and ground electrodes that form the 0.6–0."
+          "caption": "A 14 mm resistor spark plug of the D7RTC class: threaded shell with sealing gasket, 16 mm hex, ribbed alumina insulator to stop flashover, terminal nut, and the centre and earth electrodes that form the 0.6–0."
         },
         {
           "type": "p",
@@ -866,7 +866,7 @@ export default {
           "type": "callout",
           "tone": "safety",
           "title": "Battery safety",
-          "html": "Charging releases explosive hydrogen: ventilate, switch the charger off before touching the clips, wear eye protection. Removing: negative off first. Fitting: positive on first, negative last, so a spanner touching the frame cannot short the live terminal."
+          "html": "Charging releases explosive hydrogen: ventilate, switch the charger off before touching the clips, wear eye protection. When removing a battery take the negative off first; when fitting, connect the positive first, negative last, so a spanner touching the frame cannot short the live terminal."
         },
         {
           "type": "h3",

@@ -111,12 +111,12 @@ export default [
     q: "A K-Light stores P0118 (engine temperature signal above 4.9 V). Why might the thermistor itself be fine?",
     options: [
       "P0118 is only set by a failing ECU",
-      "Any open circuit between the 5 V pull-up and ground, such as a backed-out pin, gives the same voltage",
+      "Any open circuit between the 5 V pull-up and earth, such as a backed-out pin, gives the same voltage",
       "P0118 means the engine is genuinely overheating",
-      "A short to ground in the signal wire produces P0118",
+      "A short to earth in the signal wire produces P0118",
     ],
     answer: 1,
-    explain: "P0118 is a circuit range check. A backed-out terminal, broken wire, corroded connector or open sensor ground all read like an open thermistor. A short to ground gives the low code, P0117.",
+    explain: "P0118 is a circuit range check. A backed-out terminal, broken wire, corroded connector or open sensor earth all read like an open thermistor. A short to earth gives the low code, P0117.",
   },
 
   // 3.3 Ignition

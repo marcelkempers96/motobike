@@ -976,7 +976,7 @@ export default {
             },
             {
               "title": "Filter",
-              "html": "K-Light and CG125: a <strong>centrifugal filter rotor</strong> on the crank that must be cleaned. Larger engines: spin-on or cartridge paper filter with bypass."
+              "html": "Small singles: a strainer screen in the sump plus, on the Honda CG125 and similar engines, a <strong>centrifugal filter rotor</strong> on the crank that must be cleaned (the K-Light 125 manual calls for the strainer and filter to be cleaned at the specified intervals). Larger engines: spin-on or cartridge paper filter with bypass."
             },
             {
               "title": "Pressure feed",

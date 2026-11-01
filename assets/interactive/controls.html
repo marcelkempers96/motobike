@@ -851,7 +851,11 @@ document.addEventListener('keyup',e=>{
   if(HOLD_KEYS[k]) hold(HOLD_KEYS[k],false);
   if(k==='t') S.keyThr=false;
 });
-window.addEventListener('blur',()=>{ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; });
+function releaseKeys(){ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; }
+window.addEventListener('blur',()=>{
+  // Embedded: if focus only moved out to the Lab page, the page forwards the keyups, so keep holding.
+  setTimeout(()=>{ try{ if(window.parent!==window && window.parent.document.hasFocus()) return; }catch(_){} releaseKeys(); },0);
+});
 
 $('reset').addEventListener('click',()=>{ S=freshState(); setHoldThr(0); say('Reset: engine off, parked in first gear with the stop switch at RUN.'); render(true); });
 

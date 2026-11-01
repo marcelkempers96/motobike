@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero — the Lab
+   Moto Zero: the Lab
    One page, one app. See moto-spec/01-SPEC.md, 02-DESIGN.md, 03-FUNCTIONS.md.
    ========================================================================== */
 import {
@@ -8,7 +8,7 @@ import {
 } from './core.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
 import {
-  BIKE_MODEL, OVERVIEW_PLATE, PLATE_RATIO, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
+  BIKE_MODEL, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
   partForMesh, BIKE_WHEELS, HOTSPOTS,
 } from './content/assets-map.js';
 
@@ -42,7 +42,7 @@ const S = {
     throttle_hold: false,
   },
 
-  dyno: { recording: false, start_ms: 0, samples: [], maxSamples: 600, peak_speed: 0, peak_rpm: 0, peak_power: 0, tto100: null, avg_throttle: 0 },
+  dyno: null,
 
   assets: {},
   last_tick_ms: 0,
@@ -118,26 +118,33 @@ function render() {
       <div class="ute-section-head">
         <div>
           <h2 id="ride-h">Ride</h2>
-          <p class="ute-sub">The rider’s-eye cockpit: every control works. Key ON, stop switch at RUN, neutral, starter — then clutch, first gear and throttle. It drives the engine views and the dyno.${S.mode === 'elec' ? ' (In Electric mode the throttle drives the motor.)' : ''}</p>
+          <p class="ute-sub">The rider’s-eye cockpit: every control works and it drives the 3D bike, the close-ups and the dyno.${S.mode === 'elec' ? ' Electric mode: no starter, clutch or gears.' : ''}</p>
         </div>
-        <a class="ute-linkbtn" href="assets/interactive/controls.html" target="_blank" rel="noopener">Open full screen ↗</a>
+        <a class="ute-linkbtn" href="${cockpitSrc().replace('embed=1&', '').replace('?embed=1', '')}" target="_blank" rel="noopener">Open full screen ↗</a>
       </div>
-      <iframe id="mz-cockpit" class="mz-cockpit" src="assets/interactive/controls.html?embed=1" title="Interactive motorcycle cockpit" loading="eager"></iframe>
+      ${rideHowtoHTML()}
+      <iframe id="mz-cockpit" class="mz-cockpit" src="${cockpitSrc()}" title="Interactive motorcycle cockpit" loading="eager"></iframe>
     </section>
 
     <section class="ute-section ute-dyno" aria-labelledby="dyno-h">
       <div class="ute-section-head">
         <div>
           <h2 id="dyno-h">Dyno</h2>
-          <p class="ute-sub">Start a test, then ride above. Four channels at 20 Hz over a rolling 30 s window.</p>
+          <p class="ute-sub">Records a run from the cockpit: press Start test (or G), ride, then stop. Speed, rpm, throttle, brake${S.mode === 'elec' ? '' : ', gear, clutch'} and power at 20 samples a second, with every event marked. Hover a chart to read values.</p>
         </div>
         <div class="ute-btnrow">
-          <button type="button" class="ute-btn ${S.dyno.recording ? 'is-rec' : 'is-primary'}" data-dyno="start">${S.dyno.recording ? '■ Stop test' : '● Start test'}</button>
+          <button type="button" class="ute-btn ${S.dyno.recording ? 'is-rec' : 'is-primary'}" data-dyno="start" aria-pressed="${S.dyno.recording}">${S.dyno.recording ? '■ Stop test (G)' : '● Start test (G)'}</button>
           <button type="button" class="ute-btn" data-dyno="reset">Reset</button>
+          <button type="button" class="ute-btn" data-dyno="csv" ${S.dyno.samples.length ? '' : 'disabled'}>Export CSV</button>
         </div>
       </div>
-      <div class="ute-dyno-charts" id="ute-dyno-charts"></div>
       <div class="ute-findings" id="ute-findings"></div>
+      <div class="ute-dyno-body">
+        <div class="ute-dyno-charts" id="ute-dyno-charts"></div>
+        <div class="ute-dyno-logbox"><span class="ute-label">Session log</span><ol class="ute-dyno-log" id="ute-dyno-log" aria-live="off"></ol>
+          <div class="ute-dyno-legend">${Object.entries({ engine: 'Engine', gear: 'Gear', clutch: 'Clutch', brake: 'Brake', key: 'Key', test: 'Test' }).filter(([k]) => S.mode !== 'elec' || (k !== 'gear' && k !== 'clutch')).map(([k, l]) => `<span><i style="background:${C_EV[k]}"></i>${l}</span>`).join('')}</div>
+        </div>
+      </div>
     </section>
 
     <footer class="ute-footer">
@@ -148,23 +155,23 @@ function render() {
     <div class="ute-modal" id="ute-help" role="dialog" aria-modal="true" aria-labelledby="help-h">
       <div class="ute-modal-box">
         <h3 id="help-h">How to use the Lab</h3>
-        <p>Pick a bike at the top. Drag the 3D model to look around and click any part — or switch to the course plate and click a hotspot. The close-up below shows a working animation, the part’s own 3D model and its course plates. <b style="color:var(--warm)">Orange</b> marks interactive parts — hold the big green button to drive them.</p>
+        <p>Pick a bike at the top. Drag the 3D model to look around (one finger on a phone, pinch to zoom) and click or tap any part: it lights up orange and its close-up opens below with a working animation, the part’s own 3D model and its course plates. Tap it again or press Esc to clear. A system chip (Powertrain, Wheels…) fades everything else. Parts marked <b style="color:var(--warm)">●</b> are interactive: hold the big green button to drive them.</p>
         <div class="ute-kbd">
           <kbd>Space</kbd><span>Pause / resume the engine animation</span>
-          <kbd>Esc</kbd><span>Close the component view</span>
+          <kbd>Esc</kbd><span>Close the close-up, a plate or this help</span>
           <kbd>?</kbd><span>Open this help</span>
           <kbd>1 2 3</kbd><span>Four-stroke · two-stroke · electric</span>
-          <kbd>D</kbd><span>Toggle 3D model / course plate</span>
+          <kbd>G</kbd><span>Start / stop a dyno test</span>
         </div>
-        <p><b>Cockpit</b> (anywhere on the page):</p>
+        <p><b>Cockpit</b> (keys work anywhere on the page; hold several at once):</p>
         <div class="ute-kbd">
           <kbd>K</kbd><span>Ignition key</span>
           <kbd>X</kbd><span>Stop switch</span>
           <kbd>S</kbd><span>Starter (hold)</span>
-          <kbd>T</kbd><span>Throttle (hold)</span>
           <kbd>C</kbd><span>Clutch (hold)</span>
+          <kbd>T</kbd><span>Throttle (hold), or the mouse wheel over the cockpit</span>
+          <kbd>↑ ↓</kbd><span>Shift up / down (hold C)</span>
           <kbd>F / R</kbd><span>Front / rear brake (hold)</span>
-          <kbd>↑ ↓</kbd><span>Shift up / down</span>
           <kbd>H</kbd><span>Horn (hold)</span>
           <kbd>Q / E</kbd><span>Indicate left / right</span>
           <kbd>B · V</kbd><span>High beam · choke</span>
@@ -199,6 +206,7 @@ function wireChrome() {
   $('#ute-help').addEventListener('click', (e) => { if (e.target.id === 'ute-help') closeHelp(); });
   $('[data-dyno="start"]').addEventListener('click', toggleDyno);
   $('[data-dyno="reset"]').addEventListener('click', resetDyno);
+  $('[data-dyno="csv"]').addEventListener('click', exportDynoCSV);
   $('#mz-lightbox').addEventListener('click', (e) => { if (e.target.id === 'mz-lightbox' || e.target.closest('[data-lb-close]')) closePlate(); });
 }
 
@@ -233,7 +241,7 @@ function syncURL() {
 }
 
 /* ==========================================================================
-   3-4. Overview — the real 3D bike (GLB) or the course plate with hotspots
+   3-4. Overview: the real 3D bike (GLB)
    ========================================================================== */
 let V3 = null;
 let v3mod = null;
@@ -417,7 +425,7 @@ function setStatus(title, desc, num) {
   if (n && num != null) n.textContent = num;
 }
 function statsHTML(items) {
-  return `<div class="ute-stats">${items.map(([k, l, u]) => `<div class="stat"><div class="stat-l">${l}</div><div class="stat-v"><span data-sv="${k}">—</span><small>${u || ''}</small></div></div>`).join('')}</div>`;
+  return `<div class="ute-stats">${items.map(([k, l, u]) => `<div class="stat"><div class="stat-l">${l}</div><div class="stat-v"><span data-sv="${k}">–</span><small>${u || ''}</small></div></div>`).join('')}</div>`;
 }
 function setStat(k, v) {
   const el = document.querySelector(`[data-sv="${k}"]`);
@@ -529,7 +537,7 @@ function basicCard(key) {
     title: P.name,
     kind: `${P.tag || 'Component'} · 3D model`,
     html: () => `${statusHTML(P.name, P.desc ? P.desc.split('. ')[0] + '.' : '', (CATEGORIES.find((c) => c.k === PART_CATEGORY[key]) || { label: '' }).label.toUpperCase())}${viewer3dHTML(true)}`,
-    sideHTML: () => card('Role', `<p>${P.desc || '—'}</p><p><b>Note.</b> ${P.notes || '—'}</p>`) + card('Course plates', platesHTML(key)) + card('Go deeper', deeperHTML(key)),
+    sideHTML: () => card('Role', `<p>${P.desc || '–'}</p><p><b>Note.</b> ${P.notes || '–'}</p>`) + card('Course plates', platesHTML(key)) + card('Go deeper', deeperHTML(key)),
   };
 }
 
@@ -548,7 +556,7 @@ function engineView(title, focus) {
       <svg class="ute-cv-svg" id="cv-engine" role="img" aria-label="Engine cross-section"></svg>
       <div class="ute-under" id="cv-engine-under"><span class="ute-stroke-badge" id="cv-badge"><i></i><span>Intake</span></span></div>`,
     sideHTML: () => card('Parameters', `<div class="ute-sliders">
-        ${slider('base_rpm', 'Idle / target RPM', 600, 10000, 100, S.base_rpm)}
+        ${slider('base_rpm', 'Demo RPM (engine off in Ride)', 600, 10000, 100, S.base_rpm)}
         ${slider('bore_mm', 'Bore', 50, 100, 1, S.bore_mm, 'mm')}
         ${slider('stroke_mm', 'Stroke', 40, 90, 1, S.stroke_mm, 'mm')}
         ${slider('compression', 'Compression ratio', 7, 14, 0.1, S.compression, ':1')}
@@ -556,7 +564,7 @@ function engineView(title, focus) {
       card('Outputs', statsHTML([['disp', 'Displacement', 'cc'], ['cr', 'Compression', ':1'], ['tq', 'Torque', 'Nm'], ['kw', 'Power', 'kW']])) +
       card('Run', `<p>${focus || 'Animation runs at 60× slow-motion so you can follow each stroke.'}</p>
         <div class="ute-btnrow"><button class="ute-btn is-primary" type="button" data-cv-run>${S.running ? 'Pause' : 'Run'}</button><button class="ute-btn" type="button" data-cv-step>Step +30°</button></div>
-        <p style="margin-top:10px">Hold the throttle in <b>Ride</b> to rev it up.</p>`),
+        <p style="margin-top:10px" class="mz-live" id="cv-live"></p>`),
     mount: () => {
       const svg = $('#cv-engine');
       const eng = buildEngine(svg, { mode: S.mode });
@@ -589,7 +597,9 @@ function engineView(title, focus) {
         badge.querySelector('i').style.background = s.color;
         badge.querySelector('span').textContent = s.label;
       }
-      setStatus(r.spark ? 'Spark!' : s.label, STROKE_DESC[S.mode][s.k], `θ ${Math.round(S.crank_deg)}° · ${Math.round(S.rpm)} rpm`);
+      setStatus(r.spark ? 'Spark!' : s.label, STROKE_DESC[S.mode][s.k], `θ ${Math.round(S.crank_deg)}° · ${Math.round(S.rpm)} rpm${S.live ? '' : ' (demo)'}`);
+      const lv = $('#cv-live');
+      if (lv) { const t = S.live ? 'Live from Ride: the cockpit engine is running.' : 'Demo idle. Start the engine in Ride below and this follows its rpm.'; if (lv.textContent !== t) { lv.textContent = t; lv.classList.toggle('is-live', !!S.live); } }
     },
   };
 }
@@ -602,7 +612,7 @@ const STROKE_DESC = {
   },
   '2t': {
     power: 'Charge ignited at TDC. Gas pushes the piston down.',
-    blowdown: 'Piston uncovers the exhaust port — pressure blows out.',
+    blowdown: 'Piston uncovers the exhaust port and the pressure blows out.',
     scavenge: 'Transfer ports open. Fresh charge from the crankcase sweeps the cylinder.',
     compression: 'Ports covered. Piston rises and compresses; crankcase draws in new charge.',
   },
@@ -639,8 +649,8 @@ COMPONENT_VIEWS.motor = {
   hold: { label: 'Throttle', flag: 'rider_throttle', hint: 'Press and hold' },
   html: () => `${statusHTML('Idle', 'Rotor at rest. Hold THROTTLE to energise the stator.', '0 rpm')}<svg class="ute-cv-svg" id="cv-motor" viewBox="0 0 600 440" role="img" aria-label="PMAC motor cutaway"></svg>`,
   sideHTML: () => card('Live state', statsHTML([['m_rpm', 'RPM', 'rpm'], ['m_tq', 'Torque', 'Nm'], ['m_temp', 'Motor temp', '°C'], ['m_soc', 'Battery', '%']])) +
-    card('Why it beats ICE', list(['Peak torque from 0 rpm — no clutch, no revving.', '~90 % efficient vs ~30 % for a petrol engine.', 'One moving part: the rotor.'])) +
-    card('How it spins', '<p>The controller feeds three phases of AC into the stator windings in turn. That makes a rotating magnetic field. The rotor\'s permanent magnets chase it — N pulled to S — and the shaft turns.</p>'),
+    card('Why it beats ICE', list(['Peak torque from 0 rpm: no clutch, no revving.', '~90 % efficient vs ~30 % for a petrol engine.', 'One moving part: the rotor.'])) +
+    card('How it spins', '<p>The controller feeds three phases of AC into the stator windings in turn. That makes a rotating magnetic field. The rotor\'s permanent magnets chase it (N pulled to S) and the shaft turns.</p>'),
   mount: () => {
     defsPackMetals();
     const svg = $('#cv-motor');
@@ -711,7 +721,7 @@ COMPONENT_VIEWS.motor = {
     });
     setStatus(S.elec.rpm > 20 ? 'Spinning' : 'Idle', S.elec.rpm > 20 ? 'Three-phase field rotates; magnets chase it.' : 'Rotor at rest. Hold THROTTLE to energise the stator.', `${Math.round(S.elec.rpm)} rpm`);
     setStat('m_rpm', Math.round(S.elec.rpm));
-    setStat('m_tq', fmt(S.rider.throttle * 95));
+    setStat('m_tq', fmt(S.mode === 'elec' ? S.elec.torque : S.rider.throttle * 60));
     setStat('m_temp', fmt(S.elec.motor_temp));
     setStat('m_soc', fmt(S.elec.battery_soc, 1));
   },
@@ -724,7 +734,7 @@ COMPONENT_VIEWS.carb = {
   hold: { label: 'Gas', flag: 'carb_hold', hint: 'Press and hold' },
   html: () => `${statusHTML('Idle', 'Butterfly nearly closed. Air trickles past.', '900 rpm')}<svg class="ute-cv-svg" id="cv-carb" viewBox="0 0 600 340" role="img" aria-label="Carburettor cross-section"></svg>`,
   sideHTML: () => card('Live state', statsHTML([['c_thr', 'Throttle', '%'], ['c_air', 'Air', 'g/s'], ['c_fuel', 'Fuel', 'g/s']])) +
-    card('Parts', list(['Venturi — narrow throat speeds air up, drops pressure.', 'Main jet — fuel is pulled up by that low pressure.', 'Float bowl — keeps the fuel level constant.', 'Butterfly — the throttle plate you open with your wrist.'])) +
+    card('Parts', list(['Venturi: narrow throat speeds air up, drops pressure.', 'Main jet: fuel is pulled up by that low pressure.', 'Float bowl: keeps the fuel level constant.', 'Butterfly: the throttle plate you open with your wrist.'])) +
     card('Target 14.7 : 1 AFR', '<p>Petrol burns completely at about <b>14.7 g of air per 1 g of fuel</b>. Richer (less air) is cooler and safer at full power; leaner saves fuel but runs hot.</p>'),
   mount: () => {
     defsPackMetals();
@@ -804,8 +814,8 @@ COMPONENT_VIEWS.spark_plug = {
   kind: 'Ignition · Interactive',
   hold: { label: 'Ignite', flag: 'spark_hold', hint: 'Hold to charge · release to fire' },
   html: () => `${statusHTML('Ready', 'Hold IGNITE to charge the coil, release to fire.', '0 %')}<svg class="ute-cv-svg" id="cv-spark" viewBox="0 0 640 380" role="img" aria-label="Ignition circuit"></svg>`,
-  sideHTML: () => card('How', '<p>The coil is a transformer. 12 V flows through a few hundred primary turns and builds a magnetic field. Cut it, and the field collapses through ~20 000 secondary turns — <b>~25 000 V</b> jumps the plug gap.</p>') +
-    card('Parts', list(['Battery — 12 V supply', 'Coil — primary + secondary windings', 'HT lead — insulated high-tension wire', 'Plug — centre + ground electrode, ~0.7 mm gap'])) +
+  sideHTML: () => card('How', '<p>The coil is a transformer. 12 V flows through a few hundred primary turns and builds a magnetic field. Cut it, and the field collapses through ~20 000 secondary turns, and <b>~25 000 V</b> jumps the plug gap.</p>') +
+    card('Parts', list(['Battery: 12 V supply', 'Coil: primary + secondary windings', 'HT lead: insulated high-tension wire', 'Plug: centre + ground electrode, ~0.7 mm gap'])) +
     card('Timing', `<p>${S.mode === '2t' ? 'A two-stroke fires <b>every revolution</b>.' : 'A four-stroke fires <b>once every two revolutions</b>, just before TDC on the compression stroke.'}</p>` + statsHTML([['s_kv', 'Last spark', 'kV'], ['s_n', 'Sparks', '']])),
   mount: () => {
     defsPackMetals();
@@ -868,7 +878,7 @@ COMPONENT_VIEWS.spark_plug = {
         sp.n++;
         setStat('s_kv', fmt(S.cv.fire_kv, 1));
         setStat('s_n', sp.n);
-        setStatus('Fired!', 'Field collapses — ~25 kV jumps the gap and lights the charge.', `${fmt(S.cv.fire_kv, 1)} kV`);
+        setStatus('Fired!', 'Field collapses: ~25 kV jumps the gap and lights the charge.', `${fmt(S.cv.fire_kv, 1)} kV`);
       } else {
         S.cv.misfire_t = now;
         setStatus('Misfire', 'Not enough charge (< 50 %). The spark was too weak to jump the gap.', `${Math.round(S.cv.charge)} %`);
@@ -902,7 +912,7 @@ COMPONENT_VIEWS.chain = {
   hold: { label: 'Rev', flag: 'gear_hold', hint: 'Press and hold' },
   html: () => `${statusHTML('Stopped', 'Hold REV to spin the engine and drive the rear wheel.', '0 rpm')}<svg class="ute-cv-svg" id="cv-chain" viewBox="0 0 700 360" role="img" aria-label="Chain drive"></svg>`,
   sideHTML: () => card('Live gearing', statsHTML([['g_eng', 'Engine', 'rpm'], ['g_whl', 'Wheel', 'rpm'], ['g_ms', 'Chain', 'm/s'], ['g_kmh', 'Speed', 'km/h'], ['g_ratio', 'Final ratio', ':1']])) +
-    card('Parts', list(['Front (output) sprocket — 15 teeth', 'Chain — 520 pitch, ~110 links', 'Rear sprocket — 39 teeth', 'Primary drive + gearbox before it'])) +
+    card('Parts', list(['Front (output) sprocket: 15 teeth', 'Chain: 520 pitch, ~110 links', 'Rear sprocket: 39 teeth', 'Primary drive + gearbox before it'])) +
     card('Rule', '<p><b>Smaller rear sprocket</b> = higher top speed, softer pull. <b>Bigger rear sprocket</b> = quicker acceleration, lower top speed. One tooth at the front ≈ three at the back.</p>'),
   mount: () => {
     defsPackMetals();
@@ -951,10 +961,14 @@ COMPONENT_VIEWS.chain = {
     const c = S._chain;
     if (!c || !$('#cv-chain')) return;
     S.cv.gear_rpm = S.cv.gear_hold ? Math.min(8000, S.cv.gear_rpm + (8000 - S.cv.gear_rpm) * 1.2 * dt + 600 * dt) : Math.max(0, S.cv.gear_rpm - 2600 * dt);
-    const eng = Math.max(S.cv.gear_rpm, S.rider.throttle > 0.05 && S.mode !== 'elec' ? S.rpm : 0);
     const ratio = 39 / 15;
-    const sprRPM = eng / (GEAR.primary * GEAR.gear3);
+    // Live: the rear wheel turns with the cockpit's road speed; otherwise REV drives it through third gear.
+    const liveWhl = S.speed / 3.6 / (2 * Math.PI * GEAR.wheel_r_m) * 60;
+    const demoSpr = S.cv.gear_rpm / (GEAR.primary * GEAR.gear3);
+    const useLive = liveWhl * ratio >= demoSpr;
+    const sprRPM = useLive ? liveWhl * ratio : demoSpr;
     const whlRPM = sprRPM / ratio;
+    const eng = useLive ? (S.mode === 'elec' ? S.elec.rpm : (S.live ? S.rpm : 0)) : S.cv.gear_rpm;
     const fstep = sprRPM / 60 * 360 * dt / 30;
     c.fdeg = (c.fdeg + fstep) % 360;
     c.rdeg = (c.rdeg + fstep / ratio) % 360;
@@ -965,7 +979,7 @@ COMPONENT_VIEWS.chain = {
     c.hatch.setAttribute('stroke-dashoffset', c.off.toFixed(1));
     const chainMS = sprRPM / 60 * 15 * 0.015875;
     const kmh = kmhFromWheelRPM(whlRPM);
-    setStatus(eng > 50 ? 'Driving' : 'Stopped', eng > 50 ? 'Front sprocket pulls the chain; the big rear sprocket turns 2.6× slower.' : 'Hold REV to spin the engine and drive the rear wheel.', `${Math.round(eng)} rpm`);
+    setStatus(whlRPM > 1 ? (useLive && liveWhl > 1 ? 'Riding' : 'Driving') : 'Stopped', whlRPM > 1 ? 'Front sprocket pulls the chain; the big rear sprocket turns 2.6× slower.' : 'Hold REV, or ride in the cockpit below, to drive the rear wheel.', `${Math.round(whlRPM)} wheel rpm`);
     setStat('g_eng', Math.round(eng));
     setStat('g_whl', Math.round(whlRPM));
     setStat('g_ms', fmt(chainMS, 1));
@@ -982,7 +996,7 @@ COMPONENT_VIEWS.brake = {
   hold: { label: 'Brake', flag: 'brake_hold', hint: 'Press and hold' },
   html: () => `${statusHTML('Rolling', 'Disc spins with the wheel. Hold BRAKE to squeeze the pads.', '0 bar')}<svg class="ute-cv-svg" id="cv-brake" viewBox="0 0 660 400" role="img" aria-label="Disc brake and caliper section"></svg>`,
   sideHTML: () => card('Live state', statsHTML([['b_bar', 'Line pressure', 'bar'], ['b_sq', 'Pad squeeze', '%'], ['b_t', 'Disc temp', '°C']])) +
-    card('Parts', list(['Lever + master cylinder — your hand makes pressure', 'Brake line — carries incompressible fluid', 'Caliper pistons — push pads onto the disc', 'Disc — turns motion into heat'])) +
+    card('Parts', list(['Lever + master cylinder: your hand makes pressure', 'Brake line: carries incompressible fluid', 'Caliper pistons: push pads onto the disc', 'Disc: turns motion into heat'])) +
     card('How', '<p>Hydraulics multiply force: a small master piston pushes fluid into bigger caliper pistons, so a 2-finger pull becomes a clamp of over <b>10 kN</b>. Friction converts the bike\'s kinetic energy into heat in the disc.</p>'),
   mount: () => {
     defsPackMetals();
@@ -1040,15 +1054,17 @@ COMPONENT_VIEWS.brake = {
     if (!b || !$('#cv-brake')) return;
     S.cv.brake_pct = S.cv.brake_hold ? Math.min(1, S.cv.brake_pct + 3 * dt) : Math.max(0, S.cv.brake_pct - 2.5 * dt);
     const pct = Math.max(S.cv.brake_pct, S.rider.brake);
-    const spin = (90 + S.speed * 4) * (1 - pct * 0.97);
+    // The disc turns with the front wheel (shown 10x slower); parked, it idles slowly so the squeeze reads.
+    const wheelDeg = S.speed / 3.6 / (2 * Math.PI * GEAR.wheel_r_m) * 360 / 10;
+    const spin = S.speed > 0.5 ? wheelDeg : 90 * (1 - pct * 0.97);
     b.deg = (b.deg + spin * dt) % 360;
     b.disc.setAttribute('transform', `rotate(${b.deg} ${b.C[0]} ${b.C[1]})`);
     b.L.setAttribute('transform', `translate(${pct * 10} 0)`);
     b.Rr.setAttribute('transform', `translate(${-pct * 10} 0)`);
-    S.cv.disc_temp += (pct * spin * 1.4 - (S.cv.disc_temp - 40) * 0.15) * dt;
+    S.cv.disc_temp += (pct * (S.speed > 0.5 ? S.speed * 6 : spin * 1.4) - (S.cv.disc_temp - 40) * 0.15) * dt;
     S.cv.disc_temp = clamp(S.cv.disc_temp, 40, 650);
     b.heat.setAttribute('opacity', clamp((S.cv.disc_temp - 80) / 500, 0, 0.45).toFixed(2));
-    setStatus(pct > 0.05 ? 'Braking' : 'Rolling', pct > 0.05 ? 'Pistons squeeze the pads — friction turns speed into heat.' : 'Disc spins with the wheel. Hold BRAKE to squeeze the pads.', `${fmt(pct * 25, 1)} bar`);
+    setStatus(pct > 0.05 ? 'Braking' : 'Rolling', pct > 0.05 ? 'Pistons squeeze the pads; friction turns speed into heat.' : 'Disc spins with the wheel. Hold BRAKE to squeeze the pads.', `${fmt(pct * 25, 1)} bar`);
     setStat('b_bar', fmt(pct * 25, 1));
     setStat('b_sq', Math.round(pct * 100));
     setStat('b_t', Math.round(S.cv.disc_temp));
@@ -1104,7 +1120,7 @@ COMPONENT_VIEWS.controller = {
   hold: { label: 'Throttle', flag: 'rider_throttle', hint: 'Press and hold' },
   html: () => `${statusHTML('Standby', 'DC bus live. MOSFETs off until you ask for torque.', '16 kHz')}<svg class="ute-cv-svg" id="cv-ctrl" viewBox="0 0 640 380" role="img" aria-label="Controller internals"></svg>`,
   sideHTML: () => card('Live state', statsHTML([['k_t', 'Temp', '°C'], ['k_v', 'DC input', 'V'], ['k_l', 'Load', '%'], ['k_f', 'Switching', 'kHz']])) +
-    card('Parts', list(['6 SiC MOSFETs — 2 per phase', 'Gate driver — flips them on/off', 'DC-link capacitor — smooths the bus', 'MCU — reads throttle + rotor angle', 'Cold plate — carries heat away'])) +
+    card('Parts', list(['6 SiC MOSFETs: 2 per phase', 'Gate driver: flips them on/off', 'DC-link capacitor: smooths the bus', 'MCU: reads throttle + rotor angle', 'Cold plate: carries heat away'])) +
     card('How', '<p>It <b>chops DC into three-phase AC</b> by switching the MOSFETs 16 000 times a second. Longer "on" pulses mean more current, more torque. The pattern\'s rhythm sets motor speed.</p>'),
   mount: () => {
     defsPackMetals();
@@ -1216,7 +1232,7 @@ COMPONENT_VIEWS.wiring = {
     <div class="ute-wire-legend">${Object.values(WIRE_COLORS).map((c) => `<span><svg viewBox="0 0 26 6"><line x1="0" y1="3" x2="26" y2="3" stroke="${c.stroke}" stroke-width="3" ${c.dash ? `stroke-dasharray="${c.dash.split(' ').map((n) => n / 2).join(' ')}"` : ''}/></svg>${c.label}</span>`).join('')}</div>
     <div class="ute-wire-pop" id="cv-wire-pop"><h5></h5><dl></dl></div>`,
   sideHTML: () => card('How to read', '<p><b style="color:#D23C2C">Red</b> is +12 V, <b>black</b> is ground, <b style="color:#1D6B55">green dashed</b> is high-voltage DC, <b style="color:#B8862A">amber</b> is AC, <b style="color:#3E6FB7">blue dashed</b> is a low-current signal.</p>') +
-    card('Key laws', '<p><b>V = I · R</b> — voltage pushes current through resistance.<br><b>P = V · I</b> — power is voltage times current.<br>A 55 W bulb at 12 V draws <b>4.6 A</b>.</p>') +
+    card('Key laws', '<p><b>V = I · R</b>: voltage pushes current through resistance.<br><b>P = V · I</b>: power is voltage times current.<br>A 55 W bulb at 12 V draws <b>4.6 A</b>.</p>') +
     (S.mode === 'elec'
       ? card('Why two bus voltages', '<p>400 V moves big power with small current (thin cables, low loss). Lights and dash still run on safe 12 V, made by the DC-DC converter.</p>')
       : card('Why a battery AND an alternator', '<p>The battery starts the engine. Once running, the alternator makes all the power and recharges the battery. A dead alternator lets you ride only until the battery runs flat.</p>')),
@@ -1267,57 +1283,130 @@ COMPONENT_VIEWS.wiring = {
 };
 
 /* ==========================================================================
-   9. Ride — the Moto Zero cockpit simulator (assets/interactive/controls.html)
-   embedded same-origin; its live state drives the engine views and the dyno.
+   9. Ride: the Moto Zero cockpit simulator (assets/interactive/controls.html)
+   embedded same-origin. Its live state is the single source of truth for
+   rpm, road speed, throttle, brakes, clutch and gear: it drives the 3D wheels,
+   the close-ups and the dyno, in all three modes.
    ========================================================================== */
 const COCKPIT_KEYS = new Set(['k', 'x', 's', 'c', 't', 'f', 'r', 'h', 'v', 'b', 'q', 'e', 'ArrowUp', 'ArrowDown']);
+const heldKeys = new Set();   // cockpit keys currently held (from this page or from inside the cockpit)
+const cockpitSrc = () => `assets/interactive/controls.html?embed=1${S.mode === 'elec' ? '&mode=elec' : ''}`;
+
+const KEY_LABEL = { ArrowUp: '↑', ArrowDown: '↓' };
+function kbd(k, label) { return `<kbd data-k="${k}">${label || KEY_LABEL[k] || k.toUpperCase()}</kbd>`; }
+
+function rideStepsICE() {
+  return [
+    ['K', 'Key ON', (c) => c.key],
+    ['X', 'Stop switch at RUN', (c) => c.kill],
+    ['↓ ↑ / C', 'Neutral (green N) or hold the clutch', (c) => c.running || c.gi === 1 || c.clutchP > 0.7],
+    ['S', 'Hold the starter until it runs', (c) => c.running],
+    ['C + ↓', 'Hold the clutch, press ↓ for first gear', (c) => c.running && c.gi !== 1],
+    ['T', 'Hold T (or scroll up), then let C go slowly', (c) => c.running && c.v > 1.5],
+  ];
+}
+function rideStepsElec() {
+  return [
+    ['K', 'Key ON', (c) => c.key],
+    ['X', 'Stop switch at RUN: the bike is READY', (c) => c.key && c.kill],
+    ['T', 'Hold T or scroll up over the cockpit to ride', (c) => c.v > 1.5],
+    ['F / R', 'Brake; closing the throttle also regenerates', (c) => c.v > 1.5 && (c.frontP > 0.3 || c.rearP > 0.3)],
+  ];
+}
+function rideHowtoHTML() {
+  const elec = S.mode === 'elec';
+  const steps = elec ? rideStepsElec() : rideStepsICE();
+  const keys = elec
+    ? [['k', 'Key'], ['x', 'Stop switch'], ['t', 'Throttle (hold)'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam']]
+    : [['k', 'Key'], ['x', 'Stop switch'], ['s', 'Starter (hold)'], ['c', 'Clutch (hold)'], ['t', 'Throttle (hold)'], ['ArrowDown', 'Shift down'], ['ArrowUp', 'Shift up'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['v', 'Choke']];
+  return `<div class="mz-howto" aria-label="How to ride">
+    <div class="mz-howto-head"><span class="ute-label">How to ride</span><span class="mz-howto-note">Keys work anywhere on this page: no need to click into the cockpit. Hold several at once${elec ? '' : ', for example <b>C + T</b>'}.</span></div>
+    <ol class="mz-steps">${steps.map(([k, t], i) => `<li data-step="${i}"><b>${k}</b><span>${t}</span></li>`).join('')}</ol>
+    <div class="mz-keymap">${keys.map(([k, l]) => `<span>${kbd(k)}${l}</span>`).join('')}<span><kbd class="is-wide">Wheel</kbd>Throttle over the cockpit</span><span>${kbd('g', 'G')}Dyno start / stop</span></div>
+  </div>`;
+}
+function updateHowto(c) {
+  const box = $('.mz-steps');
+  if (!box || !c) return;
+  const steps = S.mode === 'elec' ? rideStepsElec() : rideStepsICE();
+  let now = -1;
+  steps.forEach(([, , done], i) => {
+    const li = box.children[i];
+    if (!li) return;
+    const d = !!done(c);
+    li.classList.toggle('is-done', d);
+    if (!d && now < 0) now = i;
+  });
+  [...box.children].forEach((li, i) => li.classList.toggle('is-now', i === now));
+}
+function markKey(k, on) {
+  $$(`.mz-keymap kbd[data-k="${k}"]`).forEach((el) => el.classList.toggle('is-held', on));
+}
 
 function mountRider() {
   const f = $('#mz-cockpit');
   if (!f) return;
+  heldKeys.clear();
   const fit = () => {
     try {
       const d = f.contentDocument;
-      if (d && d.body) f.style.height = Math.ceil(d.documentElement.scrollHeight) + 'px';
+      if (!d || !d.body) return;
+      const h = Math.ceil(d.querySelector('main') ? d.querySelector('main').getBoundingClientRect().bottom + d.defaultView.scrollY : d.documentElement.scrollHeight);
+      if (h > 50 && Math.abs(f.offsetHeight - h) > 1) f.style.height = h + 'px';
     } catch (e) { /* noop */ }
   };
   f.addEventListener('load', () => {
     fit();
-    try { new ResizeObserver(fit).observe(f.contentDocument.documentElement); } catch (e) { setInterval(fit, 1000); }
+    try { new ResizeObserver(fit).observe(f.contentDocument.body); } catch (e) { setInterval(fit, 1000); }
   });
-  window.addEventListener('message', (e) => {
-    if (e.source !== f.contentWindow || !e.data || e.data.mz !== 'key') return;
-    if (e.data.key === 'Escape') { if ($('#ute-help').classList.contains('is-open')) closeHelp(); else selectPart(null); }
-    else if (e.data.key === '?') openHelp();
-  });
+  window.addEventListener('resize', fit);
 }
 
-function cockpitState() {
+// Keys pressed while the cockpit itself has focus arrive here as messages.
+window.addEventListener('message', (e) => {
   const f = $('#mz-cockpit');
-  try { return f && f.contentWindow && f.contentWindow.__moto ? f.contentWindow.__moto.state() : null; } catch (e) { return null; }
-}
+  if (!f || e.source !== f.contentWindow || !e.data || e.data.mz !== 'key') return;
+  const { key, type } = e.data;
+  if (COCKPIT_KEYS.has(key)) {
+    if (type === 'down') heldKeys.add(key); else heldKeys.delete(key);
+    markKey(key, type === 'down');
+    return;
+  }
+  if (type === 'down') pageShortcut(key, !!e.data.repeat);
+});
 
-function forwardKey(type, e) {
+function cockpit() {
   const f = $('#mz-cockpit');
-  if (!f || !f.contentDocument) return false;
-  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-  if (!COCKPIT_KEYS.has(k)) return false;
-  try { f.contentDocument.dispatchEvent(new KeyboardEvent(type, { key: e.key, repeat: e.repeat, bubbles: true })); } catch (err) { return false; }
-  return true;
+  try { return f && f.contentWindow && f.contentWindow.__moto ? f.contentWindow.__moto : null; } catch (e) { return null; }
+}
+function cockpitState() { const m = cockpit(); return m ? m.state() : null; }
+
+function sendKey(type, key, repeat) {
+  const f = $('#mz-cockpit');
+  try { f.contentDocument.dispatchEvent(new KeyboardEvent(type, { key, repeat: !!repeat, bubbles: true })); return true; } catch (err) { return false; }
+}
+function releaseHeldKeys() {
+  heldKeys.forEach((k) => { sendKey('keyup', k); markKey(k, false); });
+  heldKeys.clear();
+  const m = cockpit();
+  if (m && m.releaseAll) m.releaseAll();
 }
 
 function updateRiderTick(dt) {
   const r = S.rider;
-  // Local holds from component-view buttons ramp a throttle of their own
+  // Hold buttons in the close-ups (motor, controller) open the same throttle the cockpit uses.
   S._localThr = r.throttle_hold ? Math.min(1, (S._localThr || 0) + 1.8 * dt) : Math.max(0, (S._localThr || 0) - 1.2 * dt);
-  const c = cockpitState();
+  const m = cockpit();
+  const c = m ? m.state() : null;
+  if (m && m.setExtThr && c && c.extThr !== S._localThr) m.setExtThr(S._localThr);
   S.ck = c;
   if (c) {
     r.throttle = Math.max(c.thr, S._localThr);
     r.brake = Math.max(c.frontP, c.rearP * 0.6);
     r.clutch = c.clutchP;
     r.kill = !c.kill;
-    S.gear = ['1', 'N', '2', '3', '4', '5'][c.gi];
+    S.gear = c.elec ? 'D' : ['1', 'N', '2', '3', '4', '5'][c.gi];
+    updateHowto(c);
   } else {
     r.throttle = S._localThr;
   }
@@ -1325,110 +1414,264 @@ function updateRiderTick(dt) {
 
 
 /* ==========================================================================
-   11. Dyno
+   11. Dyno: records a run from the cockpit, with timing and event markers
    ========================================================================== */
-const DYNO_CHARTS = [
-  { k: 'speed', label: 'Speed', unit: 'km/h', color: '#C2502A', max: 240 },
-  { k: 'rpm', label: 'RPM', unit: 'rpm', color: '#1D6B55', max: 10000 },
-  { k: 'throttle', label: 'Throttle', unit: '%', color: '#3E6FB7', max: 100 },
-  { k: 'brake', label: 'Brake', unit: '%', color: '#E2A93B', max: 100 },
-];
+const DYNO_HZ = 20, DYNO_MAX_S = 600;
+const C_EV = { engine: '#0A0A0A', gear: '#1E2B5E', clutch: '#3E6FB7', brake: '#B8322A', key: '#6B6963', test: '#1D6B55' };
+function dynoCharts() {
+  const elec = S.mode === 'elec';
+  const list = [
+    { k: 'speed', label: 'Road speed', unit: 'km/h', series: [['speed', 'Speed', '#C2502A']], auto: 60 },
+    { k: 'rpm', label: elec ? 'Motor speed' : 'Engine speed', unit: 'rpm', series: [['rpm', 'RPM', '#1D6B55']], max: elec ? 10000 : 12000, red: elec ? null : 10000 },
+    { k: 'pedal', label: 'Throttle and brake', unit: '%', series: [['thr', 'Throttle', '#3E6FB7'], ['brake', 'Brake', '#B8322A']], max: 100 },
+    { k: 'power', label: elec ? 'Motor power' : 'Power at the clutch', unit: 'kW', series: [['kw', 'Power', '#B8862A']], auto: 5 },
+  ];
+  if (!elec) list.push({ k: 'gear', label: 'Gear and clutch', unit: '', series: [['gear', 'Gear', '#1E2B5E'], ['clutch', 'Clutch pulled', '#3E6FB7']], max: 5, wide: true });
+  return list;
+}
+const niceCeil = (v) => { const p = Math.pow(10, Math.floor(Math.log10(v))); const n = v / p; return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p; };
+const fmtT = (t) => (t >= 60 ? `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}` : `${t.toFixed(1)} s`);
+const gearName = (g) => (g === 0 ? 'N' : String(g));
+
+function freshDyno() {
+  return { recording: false, t0: 0, elapsed: 0, samples: [], events: [], peak_speed: 0, peak_rpm: 0, peak_power: 0, t50: null, t100: null, restT: 0, dist: 0, shifts: 0, cursorT: null, prev: null };
+}
+
 function mountDyno() {
   const box = $('#ute-dyno-charts');
   if (!box) return;
-  box.innerHTML = DYNO_CHARTS.map((c) => `
-    <div class="ute-dyno-cell">
-      <header><span class="ute-label">${c.label}</span><b><span data-dv="${c.k}">0</span><small>${c.unit}</small></b></header>
-      <div class="ute-dyno-plot">
-        <svg viewBox="0 0 400 110" preserveAspectRatio="none" aria-hidden="true">
-          ${[0.33, 0.5, 0.66].map((f) => `<line x1="0" x2="400" y1="${110 * f}" y2="${110 * f}" stroke="#DDD9CF" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join('')}
-          <path d="M0 0 L0 110 L400 110" fill="none" stroke="#B9B3A4" stroke-width="1" vector-effect="non-scaling-stroke"/>
-          <path data-area="${c.k}" d="" fill="${c.color}" fill-opacity="0.08"/>
-          <path data-line="${c.k}" d="" fill="none" stroke="${c.color}" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
-        </svg>
-        <span class="lbl tl">${c.max.toLocaleString('en')}</span><span class="lbl bl">0</span><span class="lbl br" data-dt="${c.k}">0 s</span>
-      </div>
+  box.innerHTML = dynoCharts().map((c) => `
+    <div class="ute-dyno-cell ${c.wide ? 'is-wide' : ''}" data-chart="${c.k}">
+      <header><span class="ute-label">${c.label}${c.unit ? ` <small>(${c.unit})</small>` : ''}</span><span class="dy-vals">${c.series.map(([k, l, col]) => `<span class="dy-val" title="${l}"><i style="background:${col}"></i>${c.series.length > 1 ? `<em>${l}</em>` : ''}<b data-dv="${k}">0</b></span>`).join('')}</span></header>
+      <div class="ute-dyno-plot" data-plot="${c.k}"><div class="dy-y"></div><div class="dy-area"><svg viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"></svg><div class="dy-ev"></div></div><div class="dy-x"></div></div>
     </div>`).join('');
-  renderDynoCharts();
-  renderDynoFindings();
+  $$('.ute-dyno-plot .dy-area', box).forEach((a) => {
+    const set = (e) => {
+      const r = a.getBoundingClientRect();
+      const span = dynoSpan();
+      S.dyno.cursorT = clamp((e.clientX - r.left) / r.width, 0, 1) * span;
+      renderDyno(true);
+    };
+    a.addEventListener('pointermove', set);
+    a.addEventListener('pointerdown', set);
+    a.addEventListener('pointerleave', () => { S.dyno.cursorT = null; renderDyno(true); });
+  });
+  renderDyno(true);
+}
+
+function setDynoButtons() {
+  const d = S.dyno;
+  const b = $('[data-dyno="start"]');
+  if (b) {
+    b.classList.toggle('is-rec', d.recording);
+    b.classList.toggle('is-primary', !d.recording);
+    b.textContent = d.recording ? '■ Stop test (G)' : '● Start test (G)';
+    b.setAttribute('aria-pressed', String(d.recording));
+  }
+  const x = $('[data-dyno="csv"]');
+  if (x) x.disabled = !d.samples.length;
+}
+function dynoEvent(type, label) {
+  const d = S.dyno;
+  if (!d.recording) return;
+  d.events.push({ t: (performance.now() - d.t0) / 1000, type, label });
 }
 function toggleDyno() {
   const d = S.dyno;
   if (!d.recording) {
-    Object.assign(d, { recording: true, start_ms: performance.now(), samples: [], peak_speed: 0, peak_rpm: 0, peak_power: 0, tto100: null, avg_throttle: 0 });
-  } else d.recording = false;
-  const b = $('[data-dyno="start"]');
-  b.classList.toggle('is-rec', d.recording);
-  b.classList.toggle('is-primary', !d.recording);
-  b.textContent = d.recording ? '■ Stop test' : '● Start test';
-  renderDynoFindings();
+    Object.assign(d, freshDyno(), { recording: true, t0: performance.now() });
+    d.prev = S.ck ? snapCk(S.ck) : null;
+    d.restT = 0;
+    dynoEvent('test', 'Test started');
+    if (S.ck) dynoEvent('key', describeStart(S.ck));
+  } else {
+    dynoEvent('test', 'Test stopped');
+    d.recording = false;
+  }
+  setDynoButtons();
+  renderDyno(true);
 }
 function resetDyno() {
-  Object.assign(S.dyno, { recording: false, samples: [], peak_speed: 0, peak_rpm: 0, peak_power: 0, tto100: null, avg_throttle: 0 });
-  const b = $('[data-dyno="start"]');
-  b.classList.remove('is-rec'); b.classList.add('is-primary'); b.textContent = '● Start test';
-  renderDynoCharts();
-  renderDynoFindings();
+  S.dyno = freshDyno();
+  setDynoButtons();
+  renderDyno(true);
 }
-function recordDynoSample(now) {
-  if (now - S.last_dyno_sample_ms < 50) return;
-  S.last_dyno_sample_ms = now;
+function describeStart(c) {
+  if (c.elec) return `${c.key && c.kill ? 'Ready' : 'Not ready'} · ${(c.v * 3.6).toFixed(0)} km/h`;
+  return `${c.running ? 'Engine running' : 'Engine off'} · gear ${['1', 'N', '2', '3', '4', '5'][c.gi]} · ${(c.v * 3.6).toFixed(0)} km/h`;
+}
+const snapCk = (c) => ({ key: c.key, kill: c.kill, running: c.running, gi: c.gi, clutch: c.clutchP > 0.7, brake: Math.max(c.frontP, c.rearP) > 0.3, front: c.frontP > 0.3, rear: c.rearP > 0.3 });
+
+function detectEvents(c) {
   const d = S.dyno;
-  const kmh = S.speed;
-  const disp = displacementCC(S.bore_mm, S.stroke_mm);
-  const tq = approxTorqueNm(disp, S.mode === 'elec' ? '4t' : S.mode, S.compression);
-  const nowRPM = S.mode === 'elec' ? S.elec.rpm : S.rpm;
-  const kw = S.mode === 'elec' ? (S.elec.torque * S.elec.rpm / 9549) : (tq * S.rpm / 9549 * Math.max(0.15, S.rider.throttle));
-  const t = (now - d.start_ms) / 1000;
-  d.samples.push({ t, speed: kmh, rpm: nowRPM, throttle: S.rider.throttle * 100, brake: S.rider.brake * 100, power: kw });
-  if (d.samples.length > d.maxSamples) d.samples.shift();
-  d.peak_speed = Math.max(d.peak_speed, kmh);
-  d.peak_rpm = Math.max(d.peak_rpm, nowRPM);
-  d.peak_power = Math.max(d.peak_power, kw);
-  if (d.tto100 == null && kmh >= 100) d.tto100 = t;
-  d.avg_throttle = d.samples.reduce((a, s) => a + s.throttle, 0) / d.samples.length;
+  if (!c) return;
+  const n = snapCk(c), p = d.prev;
+  d.prev = n;
+  if (!p) return;
+  if (n.key !== p.key) dynoEvent('key', n.key ? 'Key ON' : 'Key OFF');
+  if (n.running !== p.running) {
+    if (c.elec) dynoEvent('engine', n.running ? 'Motor ready' : 'Motor off');
+    else if (n.running) dynoEvent('engine', 'Engine started');
+    else dynoEvent('engine', c.key && c.kill ? 'Stalled' : (c.key ? 'Stop switch OFF' : 'Engine stopped'));
+  }
+  if (!c.elec && n.gi !== p.gi) { d.shifts++; dynoEvent('gear', `Gear ${['1', 'N', '2', '3', '4', '5'][n.gi]}`); }
+  if (!c.elec && n.clutch !== p.clutch) dynoEvent('clutch', n.clutch ? 'Clutch in' : 'Clutch out');
+  if (n.brake !== p.brake) dynoEvent('brake', n.brake ? `Brake on (${n.front && n.rear ? 'both' : n.front ? 'front' : 'rear'})` : 'Brake off');
 }
-function renderDynoCharts() {
+
+function recordDynoSample(now) {
+  const d = S.dyno;
+  if (now - S.last_dyno_sample_ms < 1000 / DYNO_HZ) return;
+  const dtS = S.last_dyno_sample_ms ? Math.min(0.2, (now - S.last_dyno_sample_ms) / 1000) : 0;
+  S.last_dyno_sample_ms = now;
+  const c = S.ck;
+  const t = (now - d.t0) / 1000;
+  d.elapsed = t;
+  const kmh = S.speed;
+  const rpm = S.mode === 'elec' ? S.elec.rpm : S.rpm;
+  let kw;
+  if (c && typeof c.Pw === 'number') kw = c.Pw / 1000;
+  else {
+    const tq = approxTorqueNm(displacementCC(S.bore_mm, S.stroke_mm), S.mode === 'elec' ? '4t' : S.mode, S.compression);
+    kw = S.mode === 'elec' ? S.elec.torque * S.elec.rpm / 9549 : tq * S.rpm / 9549 * S.rider.throttle;
+  }
+  const gear = c ? (c.elec ? 1 : [1, 0, 2, 3, 4, 5][c.gi]) : 0;
+  const clutch = c ? c.clutchP * 100 : 0;
+  d.samples.push({ t, speed: kmh, rpm, thr: S.rider.throttle * 100, brake: S.rider.brake * 100, gear, clutch, kw });
+  d.peak_speed = Math.max(d.peak_speed, kmh);
+  d.peak_rpm = Math.max(d.peak_rpm, rpm);
+  d.peak_power = Math.max(d.peak_power, kw);
+  d.dist += kmh / 3.6 * dtS;
+  // Standing-start times: measured from the last moment the bike was at rest.
+  if (kmh < 1) d.restT = t;
+  else if (d.restT != null) {
+    if (kmh >= 50 && d._run50 !== d.restT) { d._run50 = d.restT; const v = t - d.restT; if (d.t50 == null || v < d.t50) { d.t50 = v; dynoEvent('test', `0 to 50 km/h in ${v.toFixed(1)} s`); } }
+    if (kmh >= 100 && d._run100 !== d.restT) { d._run100 = d.restT; const v = t - d.restT; if (d.t100 == null || v < d.t100) { d.t100 = v; dynoEvent('test', `0 to 100 km/h in ${v.toFixed(1)} s`); } }
+  }
+  if (t >= DYNO_MAX_S) { dynoEvent('test', `Stopped at the ${DYNO_MAX_S / 60} min limit`); d.recording = false; setDynoButtons(); }
+}
+
+const dynoSpan = () => {
+  const e = S.dyno.elapsed;
+  return e <= 10 ? 10 : e <= 30 ? 30 : niceCeil(e * 1.0001) <= e * 1.25 ? niceCeil(e * 1.0001) : Math.ceil(e / 10) * 10 + 10;
+};
+function tickStep(span) {
+  for (const s of [1, 2, 5, 10, 15, 30, 60, 120]) if (span / s <= 8) return s;
+  return 300;
+}
+function sampleAt(t) {
   const s = S.dyno.samples;
-  const tEnd = s.length ? s[s.length - 1].t : 0;
-  const tStart = Math.max(0, tEnd - 30);
-  DYNO_CHARTS.forEach((c) => {
-    const line = document.querySelector(`[data-line="${c.k}"]`);
-    const area = document.querySelector(`[data-area="${c.k}"]`);
-    if (!line) return;
-    const win = s.filter((p) => p.t >= tStart);
-    if (win.length < 2) { line.setAttribute('d', ''); area.setAttribute('d', ''); }
-    else {
-      const X = (t) => ((t - tStart) / 30 * 400).toFixed(1);
-      const Y = (v) => (110 - clamp(v / c.max, 0, 1) * 106).toFixed(1);
-      const pts = win.map((p) => `${X(p.t)} ${Y(p[c.k])}`);
-      line.setAttribute('d', 'M ' + pts.join(' L '));
-      area.setAttribute('d', `M ${X(win[0].t)} 110 L ${pts.join(' L ')} L ${X(win[win.length - 1].t)} 110 Z`);
-    }
-    const cur = s.length ? s[s.length - 1][c.k] : 0;
-    const v = document.querySelector(`[data-dv="${c.k}"]`);
-    if (v) v.textContent = Math.round(cur).toLocaleString('en');
-    const dt = document.querySelector(`[data-dt="${c.k}"]`);
-    if (dt) dt.textContent = `${tEnd.toFixed(1)} s`;
+  if (!s.length) return null;
+  if (t == null) return s[s.length - 1];
+  let lo = 0, hi = s.length - 1;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if (s[mid].t < t) lo = mid + 1; else hi = mid; }
+  return s[lo];
+}
+
+function renderDyno(force) {
+  const d = S.dyno;
+  const s = d.samples;
+  const span = dynoSpan();
+  const X = (t) => (t / span * 1000).toFixed(1);
+  const step = Math.max(1, Math.ceil(s.length / 900));
+  const xt = tickStep(span);
+  dynoCharts().forEach((c) => {
+    const cell = document.querySelector(`[data-chart="${c.k}"]`);
+    if (!cell) return;
+    let max = c.max;
+    if (c.auto) max = niceCeil(Math.max(c.auto, ...c.series.map(([k]) => (k === 'speed' ? d.peak_speed : k === 'kw' ? d.peak_power : 0)) ) * 1.05);
+    const Y = (v) => (200 - clamp(v / max, 0, 1) * 192).toFixed(1);
+    const yTicks = c.k === 'gear' ? [0, 1, 2, 3, 4, 5] : [0, max / 2, max];
+    let svg = yTicks.map((v) => `<line x1="0" x2="1000" y1="${Y(v)}" y2="${Y(v)}" stroke="#DDD9CF" vector-effect="non-scaling-stroke"/>`).join('');
+    for (let t = xt; t < span; t += xt) svg += `<line x1="${X(t)}" x2="${X(t)}" y1="0" y2="200" stroke="#EEEBE3" vector-effect="non-scaling-stroke"/>`;
+    if (c.red) svg += `<rect x="0" y="0" width="1000" height="${Y(c.red)}" fill="#B8322A" fill-opacity="0.07"/>`;
+    d.events.forEach((ev) => { if (ev.type !== 'test') svg += `<line x1="${X(ev.t)}" x2="${X(ev.t)}" y1="0" y2="200" stroke="${C_EV[ev.type]}" stroke-opacity=".35" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>`; });
+    c.series.forEach(([k, , col], si) => {
+      if (s.length < 2) return;
+      const pts = [];
+      for (let i = 0; i < s.length; i += step) {
+        const p = s[i];
+        const v = k === 'clutch' ? p.clutch / 100 * 5 : p[k];
+        if (k === 'gear' && pts.length) pts.push(`${X(p.t)} ${pts[pts.length - 1].split(' ')[1]}`);
+        pts.push(`${X(p.t)} ${Y(v)}`);
+      }
+      const last = s[s.length - 1];
+      pts.push(`${X(last.t)} ${Y(k === 'clutch' ? last.clutch / 100 * 5 : last[k])}`);
+      const fillArea = (k === 'clutch' || (c.series.length === 1));
+      if (fillArea) svg += `<path d="M ${X(s[0].t)} 200 L ${pts.join(' L ')} L ${X(last.t)} 200 Z" fill="${col}" fill-opacity="${k === 'clutch' ? 0.16 : 0.08}"/>`;
+      if (k !== 'clutch') svg += `<path d="M ${pts.join(' L ')}" fill="none" stroke="${col}" stroke-width="${si ? 1.6 : 2}" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>`;
+    });
+    if (d.cursorT != null) svg += `<line x1="${X(d.cursorT)}" x2="${X(d.cursorT)}" y1="0" y2="200" stroke="#0A0A0A" vector-effect="non-scaling-stroke"/>`;
+    cell.querySelector('svg').innerHTML = svg;
+    // Axes (HTML, so text never stretches)
+    const yLab = (v) => (c.k === 'gear' ? gearName(v) : v >= 1000 ? `${v / 1000}k` : String(+v.toFixed(1)));
+    cell.querySelector('.dy-y').innerHTML = yTicks.map((v) => `<span style="top:${(Y(v) / 2).toFixed(1)}%">${yLab(v)}</span>`).join('');
+    let xs = '';
+    for (let t = 0; t <= span + 1e-6; t += xt) xs += `<span style="left:${(t / span * 100).toFixed(2)}%">${t >= 60 ? `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}` : t}${t === 0 ? ' s' : ''}</span>`;
+    cell.querySelector('.dy-x').innerHTML = xs;
+    cell.querySelector('.dy-ev').innerHTML = c.k === 'speed' ? d.events.filter((ev) => ev.type !== 'test').map((ev) => `<i style="left:${(ev.t / span * 100).toFixed(2)}%;background:${C_EV[ev.type]}" title="${fmtT(ev.t)} · ${ev.label}"></i>`).join('') : '';
+    // Values: live, or under the cursor
+    const p = sampleAt(d.cursorT);
+    c.series.forEach(([k]) => {
+      const el = cell.querySelector(`[data-dv="${k}"]`);
+      if (!el) return;
+      let v = '–';
+      if (p) v = k === 'gear' ? (S.mode === 'elec' ? 'D' : gearName(p.gear)) : k === 'clutch' ? `${Math.round(p.clutch)} %` : k === 'kw' ? p.kw.toFixed(1) : Math.round(p[k]).toLocaleString('en');
+      if (k === 'thr' || k === 'brake') v = p ? `${Math.round(p[k])} %` : '–';
+      el.textContent = v;
+    });
   });
+  renderDynoFindings();
+  renderDynoLog(force);
 }
 function renderDynoFindings() {
   const box = $('#ute-findings');
   if (!box) return;
   const d = S.dyno;
   const s = d.samples;
-  const run = s.length ? s[s.length - 1].t : 0;
+  const avgThr = s.length ? s.reduce((a, p) => a + p.thr, 0) / s.length : 0;
   const cells = [
-    ['Status', d.recording ? '● REC' : (s.length ? 'Stopped' : 'Idle')],
-    ['Run time', `${run.toFixed(1)} s`],
+    ['Status', d.recording ? '● Recording' : (s.length ? 'Stopped' : 'Ready')],
+    ['Elapsed', fmtT(d.elapsed)],
+    ['0 to 50 km/h', d.t50 == null ? '–' : `${d.t50.toFixed(1)} s`],
+    ['0 to 100 km/h', d.t100 == null ? '–' : `${d.t100.toFixed(1)} s`],
     ['Peak speed', `${Math.round(d.peak_speed)} km/h`],
-    ['Peak RPM', Math.round(d.peak_rpm).toLocaleString('en')],
+    [S.mode === 'elec' ? 'Peak motor rpm' : 'Peak rpm', Math.round(d.peak_rpm).toLocaleString('en')],
     ['Peak power', `${d.peak_power.toFixed(1)} kW`],
-    ['0 → 100 km/h', d.tto100 == null ? '—' : `${d.tto100.toFixed(1)} s`],
-    ['Avg throttle', `${Math.round(d.avg_throttle)} %`],
-    ['Samples', s.length],
+    ['Distance', d.dist >= 1000 ? `${(d.dist / 1000).toFixed(2)} km` : `${Math.round(d.dist)} m`],
+    ['Avg throttle', `${Math.round(avgThr)} %`],
+    [S.mode === 'elec' ? 'Brake events' : 'Gear changes', S.mode === 'elec' ? d.events.filter((e) => e.label.startsWith('Brake on')).length : d.shifts],
   ];
-  box.innerHTML = cells.map(([l, v]) => `<div class="cell"><div class="l">${l}</div><div class="v" ${l === 'Status' && d.recording ? 'style="color:var(--warm)"' : ''}>${v}</div></div>`).join('');
+  box.innerHTML = cells.map(([l, v], i) => `<div class="cell"><div class="l">${l}</div><div class="v ${i === 0 && d.recording ? 'is-rec' : ''}">${v}</div></div>`).join('');
+}
+let _logN = -1;
+function renderDynoLog(force) {
+  const box = $('#ute-dyno-log');
+  if (!box) return;
+  const ev = S.dyno.events;
+  if (!force && ev.length === _logN) return;
+  _logN = ev.length;
+  box.innerHTML = ev.length
+    ? ev.map((e) => `<li><time>${fmtT(e.t)}</time><i style="background:${C_EV[e.type]}"></i><span>${e.label}</span></li>`).join('')
+    : '<li class="is-empty">No events yet. Start a test, then ride: engine start and stall, gear changes, clutch and brakes are logged here.</li>';
+  box.scrollTop = box.scrollHeight;
+}
+function exportDynoCSV() {
+  const d = S.dyno;
+  if (!d.samples.length) return;
+  const evAt = new Map();
+  d.events.forEach((e) => {
+    const p = sampleAt(e.t);
+    if (p) evAt.set(p, (evAt.get(p) ? evAt.get(p) + '; ' : '') + e.label);
+  });
+  const rows = [['time_s', 'speed_kmh', S.mode === 'elec' ? 'motor_rpm' : 'engine_rpm', 'throttle_pct', 'brake_pct', 'gear', 'clutch_pulled_pct', 'power_kw', 'event']];
+  d.samples.forEach((p) => rows.push([p.t.toFixed(2), p.speed.toFixed(1), Math.round(p.rpm), Math.round(p.thr), Math.round(p.brake), S.mode === 'elec' ? 'D' : gearName(p.gear), Math.round(p.clutch), p.kw.toFixed(2), `"${(evAt.get(p) || '').replace(/"/g, "'")}"`]));
+  const blob = new Blob([rows.map((r) => r.join(',')).join('\n')], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `moto-zero-dyno-${S.mode}-${new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
 }
 
 /* ==========================================================================
@@ -1445,13 +1688,14 @@ function tick(now) {
   const ck = S.ck;
   const ice = S.mode !== 'elec';
 
-  if (ice && ck && (ck.running || ck.cranking)) {
+  S.live = !!(ck && (ck.running || ck.cranking));
+  if (ice && S.live) {
     S.rpm = ck.rpm;               // the cockpit's engine model is the source of truth
-  } else if (S.rider.throttle > 0.02) {
+  } else if (S.rider.throttle > 0.02 && !ck) {
     const target = Math.max(S.base_rpm, 900 + S.rider.throttle * 7000);
     S.rpm += (target - S.rpm) * Math.min(1, 2.0 * dt);
   } else {
-    S.rpm += (S.base_rpm - S.rpm) * Math.min(1, 1.0 * dt);   // demo idle while the cockpit is off
+    S.rpm += (S.base_rpm - S.rpm) * Math.min(1, 1.0 * dt);   // demo idle while the cockpit engine is off
   }
 
   if (S.running && S.rpm > 10) {
@@ -1460,18 +1704,23 @@ function tick(now) {
     S.crank_deg = (S.crank_deg + shaftDegPerSec * dt) % cycleDeg;
   }
 
-  // Electric drive (used in Electric mode, and by the motor/controller close-ups)
+  // Electric drive: the cockpit's motor when the bike is READY, else a local demo for the close-ups
   if (!ice) {
-    const target = S.rider.throttle * 10000;
-    S.elec.rpm += (target - S.elec.rpm) * Math.min(1, 3.0 * dt);
     const load = S.rider.throttle;
-    S.elec.motor_temp += (60 + load * 60 - S.elec.motor_temp) * 0.3 * dt;
-    S.elec.controller_temp += (50 + load * 40 - S.elec.controller_temp) * 0.3 * dt;
-    S.elec.battery_soc = Math.max(0, S.elec.battery_soc - load * 0.015 * dt);
-    S.elec.torque = load * 95;
+    if (ck && ck.running) {
+      S.elec.rpm = ck.rpm;
+      S.elec.torque = ck.Te || 0;
+    } else {
+      S.elec.rpm += (load * 10000 - S.elec.rpm) * Math.min(1, 3.0 * dt);
+      S.elec.torque = load * 60;
+    }
+    const p = ck ? (ck.Pw || 0) / 30000 : load;
+    S.elec.motor_temp += (60 + p * 60 - S.elec.motor_temp) * 0.3 * dt;
+    S.elec.controller_temp += (50 + p * 40 - S.elec.controller_temp) * 0.3 * dt;
+    S.elec.battery_soc = Math.max(0, S.elec.battery_soc - p * 0.05 * dt);
   }
 
-  if (ice && ck) {
+  if (ck) {
     S.speed = ck.v * 3.6;
   } else {
     const drive = S.rider.throttle > 0.05;
@@ -1486,37 +1735,70 @@ function tick(now) {
   if (cfg && cfg.update) cfg.update(dt);
 
   if (S.dyno.recording) {
+    detectEvents(ck);
     recordDynoSample(now);
-    if ((++S._dynoFrame) % 3 === 0) { renderDynoCharts(); renderDynoFindings(); }
+    if ((++S._dynoFrame) % 6 === 0) renderDyno();
   }
   requestAnimationFrame(tick);
 }
 
 /* ---------- Keyboard ---------- */
+function pageShortcut(key, repeat) {
+  const lb = $('#mz-lightbox');
+  if (key === 'Escape') {
+    if (lb && lb.classList.contains('is-open')) closePlate();
+    else if ($('#ute-help').classList.contains('is-open')) closeHelp();
+    else selectPart(null);
+    return true;
+  }
+  if (key === '?' || key === '/') { openHelp(); return true; }
+  if (key === ' ') { toggleRun(); return true; }
+  if (repeat) return true;
+  if (['1', '2', '3'].includes(key)) { switchMode(['4t', '2t', 'elec'][+key - 1]); return true; }
+  if (key === 'g' || key === 'G') { toggleDyno(); return true; }
+  return false;
+}
 function wireChromeGlobal() {
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
-    const tag = (e.target && e.target.tagName) || '';
-    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
-    const lb = $('#mz-lightbox');
-    if (e.key === 'Escape') {
-      if (lb && lb.classList.contains('is-open')) closePlate();
-      else if ($('#ute-help').classList.contains('is-open')) closeHelp();
-      else selectPart(null);
-      return;
-    }
-    if (e.key === '?' || e.key === '/') { e.preventDefault(); openHelp(); return; }
+    const t = e.target || {};
+    const tag = t.tagName || '';
+    const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    const typing = tag === 'TEXTAREA' || tag === 'SELECT' || t.isContentEditable || (tag === 'INPUT' && !['range', 'checkbox', 'radio', 'button'].includes(t.type));
+    if (typing) return;
+    const modalOpen = $('#ute-help').classList.contains('is-open') || $('#mz-lightbox').classList.contains('is-open');
+    if (e.key === 'Escape' || e.key === '?' || e.key === '/') { e.preventDefault(); pageShortcut(e.key); return; }
+    if (modalOpen) return;
     if (e.key === ' ') {
-      if (e.target.closest && e.target.closest('button, [role="button"], a, canvas')) return;
-      e.preventDefault(); toggleRun(); return;
+      if (t.closest && t.closest('button, [role="button"], a, input, summary')) return;
+      e.preventDefault(); pageShortcut(' '); return;
     }
-    if (!e.repeat && ['1', '2', '3'].includes(e.key)) { switchMode(['4t', '2t', 'elec'][+e.key - 1]); return; }
-    if (forwardKey('keydown', e)) e.preventDefault();
+    if (['1', '2', '3', 'g'].includes(k) && tag !== 'INPUT') { pageShortcut(k, e.repeat); return; }
+    if (!COCKPIT_KEYS.has(k)) return;
+    if (tag === 'INPUT' && t.type === 'range' && k.startsWith('Arrow')) return;   // arrows still move a focused slider
+    e.preventDefault();
+    if (!e.repeat) { heldKeys.add(k); markKey(k, true); }
+    sendKey('keydown', e.key, e.repeat);
   });
-  document.addEventListener('keyup', (e) => { forwardKey('keyup', e); });
-  // Safety: any pointer release anywhere ends local holds.
+  document.addEventListener('keyup', (e) => {
+    const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (!COCKPIT_KEYS.has(k)) return;
+    // Release even if a modifier is down or focus moved: a stuck throttle is worse than a spare keyup.
+    sendKey('keyup', e.key);
+    heldKeys.delete(k); markKey(k, false);
+  });
+  // Safety: anything that takes the keyboard away releases every hold.
   window.addEventListener('pointerup', () => { S.rider.throttle_hold = false; });
-  window.addEventListener('blur', () => { S.rider.throttle_hold = false; Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false }); });
+  window.addEventListener('blur', () => {
+    // Focus moving into the cockpit is not a real blur: its keyups still arrive there.
+    setTimeout(() => {
+      if (document.hasFocus()) return;
+      releaseHeldKeys();
+      S.rider.throttle_hold = false;
+      Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false });
+    }, 0);
+  });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) releaseHeldKeys(); });
 }
 
 
@@ -1530,6 +1812,7 @@ if (document.getElementById('ute-root')) {
     if (q.get('part') && (PARTS[q.get('part')] || COMPONENT_VIEWS[q.get('part')])) S.selected_part = q.get('part');
   } catch (e) { /* noop */ }
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) S.base_rpm = S.rpm = 1200;
+  S.dyno = freshDyno();
   defsPackMetals();
   render();
   wireChromeGlobal();

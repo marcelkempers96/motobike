@@ -8,7 +8,7 @@ import { ns, txt, defsPackMetals, buildEngine, buildTimingStrip, displacementCC,
 function scaffold(el, { viewBox, controls = '', stats = null }) {
   el.innerHTML = `
     <div class="ute-figure-stage"><svg viewBox="${viewBox}" role="img"></svg></div>
-    ${stats ? `<div class="ute-stats ute-fig-stats">${stats.map(([k, l, u]) => `<div class="stat"><div class="stat-l">${l}</div><div class="stat-v"><span data-k="${k}">—</span><small>${u || ''}</small></div></div>`).join('')}</div>` : ''}
+    ${stats ? `<div class="ute-stats ute-fig-stats">${stats.map(([k, l, u]) => `<div class="stat"><div class="stat-l">${l}</div><div class="stat-v"><span data-k="${k}">–</span><small>${u || ''}</small></div></div>`).join('')}</div>` : ''}
     ${controls ? `<div class="ute-figure-controls">${controls}</div>` : ''}
     <div class="ute-figure-cap" data-cap></div>`;
   const svg = el.querySelector('svg');
@@ -106,7 +106,7 @@ function engineParams(el) {
     set('disp', fmt(disp, 1)); set('cr', fmt(v.cr, 1)); set('tq', fmt(tq, 1)); set('kw', fmt(tq * v.rpm / 9549, 1));
     const ps = 2 * v.stroke / 1000 * v.rpm / 60;
     set('ps', fmt(ps, 1));
-    cap(`Displacement = π/4 × bore² × stroke = <b>${fmt(disp, 1)} cc</b>. ${v.bore > v.stroke ? 'Bore &gt; stroke: <b>over-square</b>, revs freely.' : v.bore < v.stroke ? 'Stroke &gt; bore: <b>under-square</b>, strong low-down torque.' : '<b>Square</b> engine.'} ${ps > 20 ? 'Mean piston speed above 20 m/s — highly stressed.' : ''}`);
+    cap(`Displacement = π/4 × bore² × stroke = <b>${fmt(disp, 1)} cc</b>. ${v.bore > v.stroke ? 'Bore &gt; stroke: <b>over-square</b>, revs freely.' : v.bore < v.stroke ? 'Stroke &gt; bore: <b>under-square</b>, strong low-down torque.' : '<b>Square</b> engine.'} ${ps > 20 ? 'Mean piston speed above 20 m/s: highly stressed.' : ''}`);
   });
   const loop = (now) => {
     const dt = Math.min(0.1, (now - last) / 1000); last = now;
@@ -198,7 +198,7 @@ const LOADS = [['Headlight', 55], ['Tail light', 5], ['Brake light', 21], ['Indi
 function ohmsLaw(el) {
   el.innerHTML = `
     <div class="ute-figure-stage" style="padding:12px 16px"><div class="ute-loads">${LOADS.map(([n, w], i) => `<label class="ute-load"><input type="checkbox" data-load="${i}" ${i < 3 ? 'checked' : ''}><span>${n}</span><b>${w} W</b></label>`).join('')}</div></div>
-    <div class="ute-stats ute-fig-stats">${[['w', 'Total power', 'W'], ['a', 'Current @ 12 V', 'A'], ['r', 'Equivalent resistance', 'Ω'], ['f', 'Suggested fuse', 'A']].map(([k, l, u]) => `<div class="stat"><div class="stat-l">${l}</div><div class="stat-v"><span data-k="${k}">—</span><small>${u}</small></div></div>`).join('')}</div>
+    <div class="ute-stats ute-fig-stats">${[['w', 'Total power', 'W'], ['a', 'Current @ 12 V', 'A'], ['r', 'Equivalent resistance', 'Ω'], ['f', 'Suggested fuse', 'A']].map(([k, l, u]) => `<div class="stat"><div class="stat-l">${l}</div><div class="stat-v"><span data-k="${k}">–</span><small>${u}</small></div></div>`).join('')}</div>
     <div class="ute-figure-cap" data-cap></div>`;
   const FUSES = [5, 7.5, 10, 15, 20, 25, 30, 40, 60, 100, 150];
   const upd = () => {
@@ -208,7 +208,7 @@ function ohmsLaw(el) {
     el.querySelector('[data-k="w"]').textContent = W;
     el.querySelector('[data-k="a"]').textContent = A.toFixed(1);
     el.querySelector('[data-k="r"]').textContent = A ? R.toFixed(2) : '∞';
-    el.querySelector('[data-k="f"]').textContent = A ? fuse : '—';
+    el.querySelector('[data-k="f"]').textContent = A ? fuse : '–';
     el.querySelector('[data-cap]').innerHTML = `<b>I = P / V</b> = ${W} W ÷ 12 V = <b>${A.toFixed(1)} A</b>. <b>R = V / I</b> = ${A ? R.toFixed(2) : '∞'} Ω. ${sel.some(([n]) => n === 'Starter motor') ? 'The starter alone pulls ~100 A, which is why it has its own relay and heavy cable and is not on the fused accessory circuit.' : 'A fuse is sized about 25 % above the normal current so it blows on a short, not in normal use.'}`;
   };
   el.querySelectorAll('[data-load]').forEach((c) => c.addEventListener('change', upd));
@@ -324,7 +324,7 @@ function sag(el) {
     g.appendChild(txt(540, 90, `${TRAVEL} mm TRAVEL`, 'end', 10));
     g.appendChild(txt(60 + 480 * 0.325, 150, 'TARGET 30–35 %', 'middle', 10, '#1D6B55'));
     cap(pct < 25 ? '<b>Too little sag.</b> The suspension is topped out: harsh, and the wheel can lift over dips. Reduce preload or fit a softer spring.'
-      : pct > 40 ? '<b>Too much sag.</b> Little travel left for bumps; it will bottom out and steer lazily. Add preload — or fit a stiffer spring if preload runs out.'
+      : pct > 40 ? '<b>Too much sag.</b> Little travel left for bumps; it will bottom out and steer lazily. Add preload, or fit a stiffer spring if preload runs out.'
       : '<b>Good sag.</b> About a third of travel used just sitting on it, leaving room to extend into dips and compress over bumps.');
   });
 }
@@ -395,7 +395,7 @@ function torqueCurves(el) {
     set('ice_t', fmt(ti, 1)); set('ev_t', fmt(te, 1)); set('ice_p', fmt(ti * rpm / 9549, 1)); set('ev_p', fmt(te * rpm / 9549, 1));
     cap(rpm < 1500 ? '<b>Standstill to idle.</b> The petrol engine makes nothing useful yet and needs a clutch to pull away. The motor gives full torque from 0 rpm.'
       : rpm <= BASE ? `<b>Constant-torque region.</b> Below its base speed (${BASE} rpm here) the motor is limited by current, so torque is flat and power rises in a straight line.`
-      : '<b>Constant-power region.</b> Above base speed the battery voltage limits the motor; torque falls as 1/rpm so power stays flat. The petrol engine is near its peak here — that is why it needs a gearbox.');
+      : '<b>Constant-power region.</b> Above base speed the battery voltage limits the motor; torque falls as 1/rpm so power stays flat. The petrol engine is near its peak here, which is why it needs a gearbox.');
   });
 }
 
@@ -465,7 +465,7 @@ function weightTransfer(el) {
     g.appendChild(ns('rect', { x: 165, y: 228, width: 30, height: front * 30, fill: '#C2502A' }));
     g.appendChild(ns('rect', { x: 405, y: 228, width: 30, height: rear * 30, fill: '#3E6FB7' }));
     cap(rear <= 0.01 ? '<b>Stoppie!</b> All the weight is on the front; the rear wheel lifts. This is the braking limit of a short, tall motorcycle.'
-      : `Braking shifts <b>m·a·h ÷ L = ${fmt(dW)} N</b> onto the front. With ${fmt(front * 100)} % of the load up front, the front tyre can provide most of the grip — which is why the front brake does most of the stopping.`);
+      : `Braking shifts <b>m·a·h ÷ L = ${fmt(dW)} N</b> onto the front. With ${fmt(front * 100)} % of the load up front, the front tyre can provide most of the grip, which is why the front brake does most of the stopping.`);
   });
 }
 

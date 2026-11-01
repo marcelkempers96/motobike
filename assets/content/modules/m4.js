@@ -930,7 +930,7 @@ export default {
             },
             {
               "title": "Adjust",
-              "html": "Too much sag: add preload. Too little: reduce it. Set twin shocks to the same step."
+              "html": "Too much sag calls for more preload and too little for less; set twin shocks to the same step."
             },
             {
               "title": "Check the spring",
@@ -1060,7 +1060,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "<strong>Spoked</strong> wheels (32–40 spokes in tension) absorb impacts and can be repaired, but need truing and usually a tube. <strong>Cast</strong> wheels are stiff, run tubeless and need no truing, but crack or bend and cannot be repaired. The K-Light 125 has alloy wheels: 1.85 × 17 front, 3.00 × 15 rear."
+          "html": "<strong>Spoked</strong> wheels (32–40 spokes in tension) absorb impacts and can be repaired, but need truing and usually a tube. <strong>Cast</strong> wheels are stiff, run tubeless and need no truing, but crack or bend and cannot be repaired. The K-Light 125 uses aluminium alloy wheels, 1.85 × 17 front and 3.00 × 15 rear (rim width in inches × diameter), with tubeless 90/90-17 and 130/90-15 tyres."
         },
         {
           "type": "plate",
@@ -1312,7 +1312,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Pressure is equal throughout a confined fluid, so a small master piston drives large caliper pistons with force multiplied by the <strong>area ratio</strong>. The lever multiplies again."
+          "html": "Pressure is equal throughout a confined fluid, so a small master piston drives large caliper pistons with force multiplied by the <strong>area ratio</strong>, and the lever ratio multiplies the hand force again before it reaches the master piston."
         },
         {
           "type": "steps",

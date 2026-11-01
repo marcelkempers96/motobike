@@ -44,7 +44,7 @@ export function createViewer(el, opts = {}) {
   const base = opts.base || 'assets/models/';
   const canvas = document.createElement('canvas');
   canvas.className = 'mz3d-canvas';
-  canvas.setAttribute('aria-label', '3D model — drag to orbit, scroll or pinch to zoom');
+  canvas.setAttribute('aria-label', '3D model: drag to orbit, scroll or pinch to zoom');
   el.appendChild(canvas);
   const status = document.createElement('div');
   status.className = 'mz3d-status';

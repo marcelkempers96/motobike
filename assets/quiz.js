@@ -82,7 +82,7 @@ function results() {
     <div class="ute-result">
       <span class="ute-label">${modTitle(topic)} · result</span>
       <div class="big">${run.right} / ${total}</div>
-      <p>${pct >= 90 ? 'Workshop-ready. Excellent.' : pct >= 70 ? 'Solid — review the ones you missed below.' : pct >= 50 ? 'Getting there. Re-read the chapters linked below and try again.' : 'Worth another pass through the Learn pages first.'}</p>
+      <p>${pct >= 90 ? 'Workshop-ready. Excellent.' : pct >= 70 ? 'Solid. Review the ones you missed below.' : pct >= 50 ? 'Getting there. Re-read the chapters linked below and try again.' : 'Worth another pass through the Learn pages first.'}</p>
       <div class="ute-chapter-foot"><button type="button" class="ute-btn is-primary" data-again>Try again</button>${wrong.length ? '<button type="button" class="ute-btn" data-retry>Retry the ones I missed</button>' : ''}<button type="button" class="ute-btn" data-setup>Change topic</button></div>
     </div>
     <h4 class="ute-quiz-h">Review</h4>

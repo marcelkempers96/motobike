@@ -953,7 +953,7 @@ export default {
             },
             {
               "title": "Lift the lever",
-              "html": "Through its full travel."
+              "html": "Lift the gear lever firmly through its full travel so the drum indexes cleanly into the next gear."
             },
             {
               "title": "Release and reopen",
@@ -986,7 +986,7 @@ export default {
             },
             {
               "title": "Clutch in below 15&ndash;20 km/h",
-              "html": "Avoids stalling."
+              "html": "Disengage the clutch as the speed falls below about 15–20 km/h so the engine does not stall."
             },
             {
               "title": "Select first, left foot down",

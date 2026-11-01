@@ -106,7 +106,7 @@ export function wheelRPMFromEngine(rpm) { return rpm / GEAR.primary / GEAR.gear3
 export function kmhFromWheelRPM(wrpm) { return (wrpm / 60) * (2 * Math.PI * GEAR.wheel_r_m) * 3.6; }
 
 export const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-export const fmt = (v, d = 0) => (Number.isFinite(v) ? v.toFixed(d) : '—');
+export const fmt = (v, d = 0) => (Number.isFinite(v) ? v.toFixed(d) : '–');
 
 /* ---------- Stroke maps ---------- */
 export const STROKES_4T = [

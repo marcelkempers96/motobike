@@ -708,7 +708,7 @@ export default {
           "items": [
             {
               "title": "Pulling away (5 km/h)",
-              "html": "72 V controller, 300 A phase limit, 120 A battery limit. Effective duty about 0.2, so 300 A phase draws only about 60 A from the pack. Full torque."
+              "html": "72 V controller, 300 A phase limit, 120 A battery limit. Effective duty about 0.2, so 300 A phase draws only about 60 A from the pack while the motor delivers full torque."
             },
             {
               "title": "Accelerating",
@@ -1151,7 +1151,7 @@ export default {
             },
             {
               "title": "No fast charge when cold",
-              "html": "Prevents lithium plating."
+              "html": "Below about 0 °C fast charging plates lithium metal on the anode, which permanently costs capacity."
             },
             {
               "title": "Never store empty",
@@ -1367,7 +1367,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "A swap pack must be liftable (roughly 10–15 kg), have a connector and latch rated for thousands of insertions with sequenced pins (ground and communication first, power last), identify and authenticate itself, log its history, and survive drops and rough handling."
+          "html": "A swap pack must be liftable (roughly 10–15 kg), have a connector and latch rated for thousands of insertions with sequenced pins (earth and communication first, power last), identify and authenticate itself, log its history, and survive drops and rough handling."
         },
         {
           "type": "h3",
@@ -1448,7 +1448,7 @@ export default {
     {
       "id": "m5-safety",
       "title": "Safety, diagnosis and service",
-      "lead": "Many workshops treat 48–96 V scooters as low voltage because they look like e-bikes. They are not. This chapter sets out the rules that keep you safe around traction packs, the tests that find faults fast, and what an electric motorcycle still needs at every service.",
+      "lead": "Many workshops treat 48–96 V scooters as low voltage because they look like e-bikes, but anything above 60 V DC is high voltage. Working on one safely depends on strict isolation rules, faults are found with a short list of electrical tests, and the service schedule is shorter than a petrol bike's but still covers bearings, final drive, brakes, tyres and connectors.",
       "blocks": [
         {
           "type": "h3",
@@ -1521,7 +1521,7 @@ export default {
             },
             {
               "title": "Lock out, tag out",
-              "html": "Cover or lock the disconnect socket, tag it with your name, date and 'Do not energise'. Only then start work."
+              "html": "Cover or lock the disconnect socket, tag it with your name, date and 'Do not energise', and only then start work."
             }
           ]
         },
@@ -1582,7 +1582,7 @@ export default {
             [
               "Throttle signal",
               "About 0.8 V closed to 4.2 V open, smooth",
-              "Near 0 V or 5 V at rest: broken ground, signal or sensor"
+              "Near 0 V or 5 V at rest: broken earth, signal or sensor"
             ],
             [
               "Contactor",
@@ -1639,7 +1639,7 @@ export default {
             },
             {
               "title": "Hall states",
-              "html": "Supply 5 V and ground (with 1 kΩ pull-ups), turn the wheel slowly forward and record one electrical cycle: six valid states, one bit changing per step, never 000 or 111. If one is missing, check supply, wire continuity through the axle cable and water in the connector before condemning the sensor."
+              "html": "Supply 5 V and earth (with 1 kΩ pull-ups), turn the wheel slowly forward and record one electrical cycle: six valid states, one bit changing per step, never 000 or 111. If one is missing, check supply, wire continuity through the axle cable and water in the connector before condemning the sensor."
             },
             {
               "title": "Back-EMF (optional)",
@@ -1701,7 +1701,7 @@ export default {
             },
             {
               "title": "Throttle",
-              "html": "Back-probe with the wheel raised: 5.0 ± 0.25 V supply, ground within 0.1 V of controller B−, signal rising smoothly from about 0.8 V to 4.2 V."
+              "html": "Back-probe with the wheel raised: 5.0 ± 0.25 V supply, earth within 0.1 V of controller B−, signal rising smoothly from about 0.8 V to 4.2 V."
             },
             {
               "title": "Interlocks",
