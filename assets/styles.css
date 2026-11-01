@@ -1098,3 +1098,6 @@ a.ute-btn { text-decoration: none; display: inline-flex; align-items: center; }
   .mz-menu-panel a { padding: 9px 0; }
   .mz-menu-panel a:last-child { border-bottom: 0; }
 }
+
+/* ---------- Cockpit: keyboard guide only where there is a keyboard ---------- */
+@media (max-width: 900px), (hover: none) and (pointer: coarse) { .mz-howto { display: none !important; } }

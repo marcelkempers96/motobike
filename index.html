@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20261101d">
+  <link rel="stylesheet" href="assets/styles.css?v=20261102a">
   <style>
     .hm-wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
     .hm-hero { position: relative; background: #111; color: #FFF; overflow: hidden; }
@@ -24,6 +24,14 @@
     .hm-quick a:hover { background: var(--warm); border-color: var(--warm); color: #FFF; }
     .hm-stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px; font-size: 14px; color: #DDD; }
     .hm-stats b { display: block; font-size: 28px; color: #FFF; line-height: 1.1; }
+    .hm-tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 40px; background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.22); max-width: 1100px; }
+    .hm-tools a { display: block; padding: 14px 16px; background: rgba(17,17,17,.62); color: #FFF; text-decoration: none; transition: background .2s; }
+    .hm-tools a:hover { background: var(--warm); }
+    .hm-tools b { display: block; font: 700 16px/1.25 var(--sans); }
+    .hm-tools span { display: block; font-size: 13.5px; line-height: 1.4; color: #DDD; margin-top: 3px; }
+    .hm-tools a:hover span { color: #FFF; }
+    @media (max-width: 900px) { .hm-tools { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 720px) { .hm-tools { margin-top: 28px; } .hm-tools a { padding: 11px 12px; } .hm-tools b { font-size: 15px; } .hm-tools span { font-size: 12.5px; } }
 
     .hm-section { padding: 64px 0; border-bottom: 1px solid var(--line); }
     .hm-section h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.015em; margin: 6px 0 12px; max-width: 820px; }
@@ -37,6 +45,14 @@
     .hm-feature-img img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .4s ease; }
     .hm-feature-img.is-photo img { object-fit: cover; }
     .hm-feature-img:hover img { transform: scale(1.03); }
+    .hm-feature-img.is-swap, .hm-feature-img.is-shot { background: #FFFFFF; position: relative; }
+    .hm-feature-img.is-shot { aspect-ratio: auto; }
+    .hm-feature-img.is-shot img { height: auto; }
+    .hm-feature-img.is-swap img.is-alt { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease, transform .4s ease; animation: hmswap 9s ease-in-out 2s infinite; }
+    .hm-feature-img.is-swap:hover img.is-alt { opacity: 1; animation: none; }
+    @keyframes hmswap { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+    .hm-swap-tag { position: absolute; left: 12px; bottom: 12px; font: 700 12px/1 var(--sans); letter-spacing: .05em; text-transform: uppercase; color: var(--ink); background: #FFFFFF; border: 1px solid var(--line); padding: 7px 9px; }
+    @media (prefers-reduced-motion: reduce) { .hm-feature-img.is-swap img.is-alt { animation: none; } }
     .hm-num { font: 900 15px/1 var(--sans); color: var(--warm); }
     .hm-feature h3 { font-size: clamp(24px, 2.4vw, 32px); line-height: 1.15; margin: 10px 0 10px; }
     .hm-feature p { font-size: 17px; margin: 0 0 14px; }
@@ -119,11 +135,8 @@
         <div class="hm-quick">
           <a class="is-main" href="overview/">Explore the motorcycle in 3D →</a>
           <a href="learn/">Start the course</a>
-          <a href="cockpit/">Ride in the Cockpit</a>
-          <a href="build/">Build a bike</a>
-          <a href="wiring/">Wiring Lab</a>
         </div>
-        <div class="hm-stats"><span><b>5</b>course modules</span><span><b>32</b>chapters</span><span><b>56</b>3D models</span><span><b>38</b>technical plates</span><span><b>148</b>quiz questions</span></div>
+        <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview</b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit</b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder</b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><b>Wiring Lab</b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course</b><span>Five modules from engine to battery</span></a><a href="quiz/"><b>Quiz</b><span>Easy, mixed and hard questions</span></a><a href="types/"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a><a href="models/"><b>3D models</b><span>56 models to rotate and download</span></a></div>
       </div>
     </section>
 
@@ -134,7 +147,7 @@
         <p class="hm-lead">Pick one. They all link together.</p>
 
         <div class="hm-feature">
-          <a class="hm-feature-img" href="overview/"><img src="assets/renders/bike_classic_4t_threeq.webp" alt="Classic four-stroke motorcycle, 3D render" loading="lazy"></a>
+          <a class="hm-feature-img is-swap" href="overview/"><img src="assets/photos/home-ov-all-3q.webp" alt="The Overview: classic four-stroke motorcycle in 3D" loading="lazy"><img class="is-alt" src="assets/photos/home-ov-elec-3q.webp" alt="The same bike with a see-through shell, electrical parts highlighted" loading="lazy"><span class="hm-swap-tag">Solid and see-through</span></a>
           <div>
             <span class="hm-num">01</span>
             <h3>How a motorcycle works</h3>
@@ -145,7 +158,7 @@
         </div>
 
         <div class="hm-feature is-flip">
-          <a class="hm-feature-img is-photo" href="build/"><img src="assets/renders/photo/render-engine-exploded.jpg" alt="Engine and clutch, exploded render" loading="lazy"></a>
+          <a class="hm-feature-img is-shot" href="build/"><img src="assets/photos/home-builder.webp" alt="The Bike builder half way through: frame, engine and wheels fitted, sprockets and chain next" loading="lazy"></a>
           <div>
             <span class="hm-num">02</span>
             <h3>Build a bike from the ground up</h3>
