@@ -1886,6 +1886,12 @@ if (document.getElementById('ute-root')) {
   try {
     const q = new URLSearchParams(location.search);
     if (['4t', '2t', 'elec'].includes(q.get('mode'))) S.mode = q.get('mode');
+    // Engine size from the Bike builder: ?bore=mm&stroke=mm&cr=ratio
+    const num = (k, lo, hi) => { const v = parseFloat(q.get(k)); return Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : null; };
+    const bore = num('bore', 40, 100), stroke = num('stroke', 40, 90), cr = num('cr', 7, 14);
+    if (bore) S.bore_mm = bore;
+    if (stroke) S.stroke_mm = stroke;
+    if (cr) S.compression = cr;
     if (q.get('part') && (PARTS[q.get('part')] || COMPONENT_VIEWS[q.get('part')])) S.selected_part = q.get('part');
   } catch (e) { /* noop */ }
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) S.base_rpm = S.rpm = 1200;
