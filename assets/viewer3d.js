@@ -22,6 +22,9 @@ export function webglOK() {
   try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; }
 }
 
+/* Rendered stills (assets/renders/*.webp) — bikes use their side view */
+export const renderFor = (base, name) => `${base}${name.startsWith('bike_') ? name + '_side' : name}.webp`;
+
 export const humanize = (s) => s.replace(/_/g, ' ').replace(/\b12v\b/i, '12 V').replace(/\bhv\b/i, 'HV').replace(/\bdc dc\b/i, 'DC-DC').replace(/\btft\b/i, 'TFT').replace(/\bcdi\b/i, 'CDI').replace(/\blv\b/i, 'LV').replace(/^./, (c) => c.toUpperCase());
 
 function loadGLB(url) {
@@ -136,9 +139,16 @@ export function createViewer(el, opts = {}) {
     }
   }
 
+  const poster = document.createElement('img');
+  poster.className = 'mz3d-poster';
+  poster.alt = '';
+  poster.hidden = true;
+  el.appendChild(poster);
   api.load = async function load(name, o = {}) {
     status.textContent = 'Loading 3D model…';
     status.hidden = false;
+    const psrc = opts.poster ? opts.poster(name) : null;
+    if (psrc) { poster.src = psrc; poster.hidden = false; poster.onerror = () => { poster.hidden = true; }; }
     let obj;
     try { obj = await loadGLB(base + name + '.glb'); } catch (e) { status.textContent = `Could not load ${name}.glb`; return null; }
     if (disposed) return null;
@@ -160,6 +170,7 @@ export function createViewer(el, opts = {}) {
     setupWheels(o.wheels);
     paint();
     status.hidden = true;
+    poster.hidden = true;
     resize();
     loop();
     return root;

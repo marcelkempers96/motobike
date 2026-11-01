@@ -3,6 +3,7 @@ import { MODULES, QBYID, TOPIC_ALIAS } from './content/index.js';
 import { mountFigure } from './figures.js';
 import { questionCard } from './quizkit.js';
 import { PLATES, plateSrc, MODELS } from './content/assets-map.js';
+import GLOSSARY from './content/glossary.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const main = $('#learn-main');
@@ -24,7 +25,7 @@ function moduleOf(hash) {
 function renderTOC(active) {
   toc.innerHTML = `<span class="ute-label">Course</span>
     <ol>${MODULES.map((m) => `<li><a href="#${m.id}" class="${active && active.id === m.id ? 'is-on' : ''}">${m.title}</a>
-      ${active && active.id === m.id ? `<ol class="ute-toc-sub">${m.chapters.map((c) => `<li><a href="#${c.id}" data-chap="${c.id}">${c.title}</a></li>`).join('')}</ol>` : ''}</li>`).join('')}</ol>
+      ${active && active.id === m.id ? `<ol class="ute-toc-sub">${m.chapters.map((c) => `<li><a href="#${c.id}" data-chap="${c.id}">${c.title}</a></li>`).join('')}<li><a href="#${m.id}-glossary" data-chap="${m.id}-glossary">Glossary and further reading</a></li></ol>` : ''}</li>`).join('')}</ol>
     <div class="ute-toc-foot"><a class="ute-linkbtn" href="${ROOT}quiz/">Take the quiz →</a></div>`;
 }
 
@@ -57,6 +58,19 @@ function home() {
     </section>`;
 }
 
+function glossaryHTML(mod) {
+  const g = GLOSSARY['m' + (MODULES.indexOf(mod) + 1)];
+  if (!g) return '';
+  return `<article class="ute-chapter" id="${mod.id}-glossary">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}</span><span class="ute-label">Reference</span></div>
+    <h2>Glossary</h2>
+    <input class="mz-gloss-filter" type="search" placeholder="Filter ${g.terms.length} terms…" aria-label="Filter glossary terms">
+    <dl class="mz-gloss">${g.terms.map(([t, d]) => `<div><dt>${t}</dt><dd>${d}</dd></div>`).join('')}</dl>
+    <h2 style="margin-top:28px">Further reading</h2>
+    ${g.reading.map((grp) => `${grp.title ? `<h3>${grp.title}</h3>` : ''}<ul class="mz-reading">${grp.items.map((i) => `<li>${i}</li>`).join('')}</ul>`).join('')}
+  </article>`;
+}
+
 function block(b, mod) {
   switch (b.type) {
     case 'p': return `<p>${b.html}</p>`;
@@ -71,6 +85,7 @@ function block(b, mod) {
       const files = (b.files || [b.file]).filter((f) => MODELS[f]);
       return files.length ? `<figure class="ute-figure mz-learn-model" data-models="${files.join(',')}"><div class="mz-variants">${files.length > 1 ? `<div class="ute-seg" role="group" aria-label="Models">${files.map((f) => `<button type="button" data-model="${f}">${MODELS[f][1].split(/[,(]/)[0].trim()}</button>`).join('')}</div>` : ''}</div><div class="ute-figure-stage"><div class="mz3d mz3d-part"><p class="mz3d-status">3D model · ${MODELS[files[0]][1]}</p></div></div><p class="mz3d-cap"></p><div class="mz-subparts"></div><figcaption class="ute-figure-cap"><span class="ute-label">3D · drag to rotate</span> ${b.caption || ''}</figcaption></figure>` : '';
     }
+    case 'photo': return `<figure class="ute-figure mz-learn-photo"><div class="ute-figure-stage"><img src="${ROOT}assets/renders/photo/${b.src}" alt="${(b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"></div>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Render</span> ${b.caption}</figcaption>` : ''}</figure>`;
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
     default: void mod; return '';
   }
@@ -99,6 +114,7 @@ function renderModule(mod, chap) {
         <div class="prose">${c.blocks.map((b) => block(b, mod)).join('')}</div>
         ${c.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${c.lab}">Try it in the Lab →</a></div>` : ''}
       </article>`).join('')}
+    ${glossaryHTML(mod)}
     <nav class="ute-chapter ute-pager">
       ${prev ? `<a class="ute-linkbtn" href="#${prev.id}">← ${prev.num} ${prev.title}</a>` : '<span></span>'}
       ${next ? `<a class="ute-linkbtn is-warm" href="#${next.id}">${next.num} ${next.title} →</a>` : `<a class="ute-linkbtn is-warm" href="${ROOT}quiz/">Take the full quiz →</a>`}
@@ -110,6 +126,10 @@ function renderModule(mod, chap) {
     f.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
   });
   setupModels();
+  main.querySelectorAll('.mz-gloss-filter').forEach((inp) => inp.addEventListener('input', () => {
+    const q = inp.value.trim().toLowerCase();
+    inp.nextElementSibling.querySelectorAll('div').forEach((d) => { d.hidden = q && !d.textContent.toLowerCase().includes(q); });
+  }));
   main.querySelectorAll('.ute-check').forEach((c) => {
     const q = QBYID[c.dataset.q];
     if (!q) { c.remove(); return; }
@@ -153,11 +173,11 @@ async function wake(fig) {
   v3 = v3 || import('./viewer3d.js');
   const mod = await v3;
   const box = fig.querySelector('.mz3d');
-  if (!mod.webglOK()) { box.innerHTML = '<p class="mz3d-status">3D view needs WebGL.</p>'; return; }
+  if (!mod.webglOK()) { box.innerHTML = `<img class="mz3d-poster" src="${mod.renderFor(`${ROOT}assets/renders/`, fig.dataset.models.split(',')[0])}" alt="">`; return; }
   if (!live.has(fig)) return;
   box.innerHTML = '';
   const cap = fig.querySelector('.mz3d-cap'), subs = fig.querySelector('.mz-subparts');
-  const viewer = mod.createViewer(box, { base: `${ROOT}assets/models/`, onPick: (m, n) => { if (!m) return; viewer.setHighlight((x) => x === n); cap.textContent = mod.humanize(n.split('__').slice(1).join(' · ')); } });
+  const viewer = mod.createViewer(box, { base: `${ROOT}assets/models/`, poster: (n) => mod.renderFor(`${ROOT}assets/renders/`, n), onPick: (m, n) => { if (!m) return; viewer.setHighlight((x) => x === n); cap.textContent = mod.humanize(n.split('__').slice(1).join(' · ')); } });
   live.set(fig, viewer);
   const files = fig.dataset.models.split(',');
   const load = async (f) => {

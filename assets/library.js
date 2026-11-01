@@ -1,6 +1,6 @@
 /* Moto Zero — model library: every GLB, grouped by category, with sub-parts. */
 import { MODELS } from './content/assets-map.js';
-import { createViewer, webglOK, humanize } from './viewer3d.js';
+import { createViewer, webglOK, humanize, renderFor } from './viewer3d.js';
 
 const $ = (s) => document.querySelector(s);
 const CATS = { bikes: 'Complete motorcycles', powertrain: 'Powertrain', transmission: 'Transmission', chassis: 'Chassis', frame_body: 'Frame and body', wheels: 'Wheels', electrical: 'Electrical', wiring: 'Wiring' };
@@ -8,13 +8,14 @@ const BIKE_CATS = ['powertrain', 'transmission', 'chassis', 'frame_body', 'wheel
 
 $('#lib-list').innerHTML = `<span class="ute-label">${Object.keys(MODELS).length} models</span>` + Object.entries(CATS).map(([c, label]) => {
   const items = Object.entries(MODELS).filter(([, v]) => v[0] === c);
-  return items.length ? `<h3>${label}</h3>${items.map(([k, v]) => `<button type="button" data-m="${k}">${v[1]}</button>`).join('')}` : '';
+  return items.length ? `<h3>${label}</h3>${items.map(([k, v]) => `<button type="button" data-m="${k}" class="mz-lib-render"><img src="${renderFor('../assets/renders/', k)}" alt="" loading="lazy"><span>${v[1]}</span></button>`).join('')}` : '';
 }).join('');
 
 let viewer = null;
-if (!webglOK()) { $('#lib-3d').innerHTML = '<p class="mz3d-status">3D view needs WebGL, which this browser has turned off.</p>'; }
+if (!webglOK()) { $('#lib-3d').innerHTML = '<img class="mz3d-poster" id="lib-poster" alt=""><p class="mz3d-status" style="align-items:end">Render · 3D needs WebGL</p>'; }
 else viewer = createViewer($('#lib-3d'), {
   base: '../assets/models/',
+  poster: (n) => renderFor('../assets/renders/', n),
   onPick: (m, name) => { if (!m) return; viewer.setHighlight((n) => n === name); $('#lib-cap').textContent = humanize(name.split('__').slice(1).join(' · ')); },
 });
 
@@ -26,7 +27,7 @@ async function show(key) {
   $('#lib-cat').textContent = CATS[cat];
   document.title = `Moto Zero · ${title}`;
   history.replaceState(null, '', '#' + key);
-  if (!viewer) return;
+  if (!viewer) { const p = $('#lib-poster'); if (p) p.src = renderFor('../assets/renders/', key); return; }
   const bike = cat === 'bikes';
   $('#lib-tools').innerHTML = bike ? `<div class="ute-chips" style="margin:0">${['all', ...BIKE_CATS].map((c) => `<button type="button" class="ute-chip ${c === 'all' ? 'is-on' : ''}" data-c="${c}">${c === 'all' ? 'All' : CATS[c]}</button>`).join('')}</div>` : '';
   $('#lib-tools').querySelectorAll('[data-c]').forEach((b) => b.addEventListener('click', () => {

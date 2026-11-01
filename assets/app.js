@@ -294,7 +294,7 @@ async function mount3D(wrap, token) {
   try { mod = await load3D(); } catch (e) { mod = null; }
   if (token !== mountToken) return;
   if (!mod || !mod.webglOK()) {
-    S.view = 'diagram';
+    S.view = 'diagram'; // no WebGL: fall back to the course plate
     $$('.ute-view-toggle button').forEach((x) => x.classList.toggle('is-on', x.dataset.view === 'diagram'));
     mountOverview();
     return;
@@ -302,6 +302,7 @@ async function mount3D(wrap, token) {
   const tip = $('#mz3d-tip');
   V3 = mod.createViewer($('#mz3d-bike'), {
     view: 'side',
+    poster: (n) => mod.renderFor('assets/renders/', n),
     onPick: (m, name) => { const k = partForMesh(name); if (k) selectPart(k, true); },
     onHover: (m, name, e) => {
       const k = partForMesh(name);
@@ -474,10 +475,15 @@ async function mountAssetsPanel(key) {
   let mod;
   try { mod = await load3D(); } catch (e) { mod = null; }
   if (S.selected_part !== key || !el.isConnected) return;
-  if (!mod || !mod.webglOK()) { el.innerHTML = '<p class="mz3d-status">3D view needs WebGL, which this browser has turned off.</p>'; return; }
+  if (!mod || !mod.webglOK()) {
+    const m = modelsFor(key, S.mode)[0];
+    el.innerHTML = m ? `<img class="mz3d-poster" src="assets/renders/${m}.webp" alt="${MODELS[m] ? MODELS[m][1] : ''}"><p class="mz3d-status" style="align-items:end">Render · 3D needs WebGL</p>` : '<p class="mz3d-status">3D view needs WebGL, which this browser has turned off.</p>';
+    return;
+  }
   const cap = $('#mz-cv3d-cap'), subs = $('#mz-subparts'), vbox = $('#mz-variants');
   const viewer = mod.createViewer(el, {
     view: 'threeq',
+    poster: (n) => mod.renderFor('assets/renders/', n),
     onPick: (m, name) => { if (!m) return; viewer.setHighlight((n) => n === name); cap.textContent = mod.humanize(name.split('__').slice(-1)[0]); },
   });
   CV3 = viewer;
