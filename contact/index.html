@@ -59,6 +59,13 @@
 .mz-err { color: #B8322A; font-size: 14.5px; margin: 0; }
 .mz-how { font-size: 14px; color: var(--mute); margin: 0; }
 @media (max-width: 960px) { .mz-contact { grid-template-columns: 1fr; gap: 48px; max-width: 640px; } }
+.mz-cphotos { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 8px; padding: 0 40px 8px; }
+.mz-cphotos img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.mz-look { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1160px; margin-top: 16px; }
+.mz-look div { border: 1px solid var(--line); padding: 18px; }
+.mz-look b { display: block; font: 700 17px/1.3 var(--sans); color: var(--ink); margin-bottom: 6px; }
+.mz-look p { margin: 0; font-size: 15px; line-height: 1.5; }
+@media (max-width: 900px) { .mz-cphotos { grid-template-columns: 1fr 1fr; padding: 0 16px 8px; } .mz-cphotos img { height: 160px; } .mz-look { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -73,6 +80,25 @@
     <h1>Write to us</h1>
     <p>Moto Zero is maintained by Transitions Lab. Write about anything that would make the course more useful, and we will answer by email.</p>
     <p class="mz-direct"><a href="mailto:marcel@transitionslab.org">marcel@transitionslab.org</a><span>·</span><a href="https://www.transitionslab.org" target="_blank" rel="noopener">transitionslab.org ↗</a></p>
+  </section>
+
+  <section class="mz-cphotos" aria-label="Photos">
+    <img src="../assets/photos/kenya-crew.jpg" alt="Riders and mechanics on open grassland in Kenya" loading="lazy">
+    <img src="../assets/photos/workshop-garage.jpg" alt="Two people working on a motorcycle outside a garage" loading="lazy">
+    <img src="../assets/photos/carburettor-fitting.jpg" alt="A mechanic fitting a carburettor" loading="lazy">
+    <img src="../assets/photos/kenya-ride-helicopter.jpg" alt="Riders on a dirt track in Kenya" loading="lazy">
+  </section>
+
+  <section class="ute-chapter">
+    <h2>What we are looking for</h2>
+    <div class="mz-look">
+      <div><b>Training centres and workshops</b><p>To pilot the course and the repair guides with apprentices and fundis.</p></div>
+      <div><b>Fleet operators</b><p>Boda boda and delivery fleets, petrol or electric, who want their mechanics trained.</p></div>
+      <div><b>Mechanics and engineers</b><p>To check the repair steps and specifications, and share the faults you see most.</p></div>
+      <div><b>Translators</b><p>Kiswahili, French and other languages, so more mechanics can use it.</p></div>
+      <div><b>3D artists</b><p>To model more parts and bikes for the Overview and the builder.</p></div>
+      <div><b>Partners and funders</b><p>To bring electric motorcycle training to more places.</p></div>
+    </div>
   </section>
 
   <section class="ute-chapter">
@@ -92,7 +118,7 @@
         <form class="mz-form" id="mz-contact" novalidate>
           <div class="mz-field"><label for="cf-name">Name</label><input id="cf-name" name="name" autocomplete="name" required></div>
           <div class="mz-field"><label for="cf-email">Your email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="mz-field"><label for="cf-topic">Topic</label><select id="cf-topic" name="topic"><option>A missing model, part or plate</option><option>A correction</option><option>A translation</option><option>A teaching adaptation</option><option>A collaboration or partnership</option><option>Something else</option></select></div>
+          <div class="mz-field"><label for="cf-topic">Topic</label><select id="cf-topic" name="topic"><option>A missing model, part or plate</option><option>A correction</option><option>A translation</option><option>A teaching adaptation</option><option>A collaboration or partnership</option><option>Piloting the course or repair guides</option><option>Training for a fleet</option><option>Funding or partnership</option><option>Something else</option></select></div>
           <div class="mz-field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="7" required></textarea></div>
           <p class="mz-err" id="cf-err" role="alert" hidden></p>
           <div><button type="submit" class="ute-btn is-primary mz-send">Open in my email app</button></div>

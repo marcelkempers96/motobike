@@ -7,6 +7,11 @@
 const ROOT = new URL('../', import.meta.url);           // site root, wherever the page lives
 const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split('#')[1] : '');
 
+/* Email updates. Paste a form endpoint (Formspree, Buttondown, Mailchimp...) here to collect
+   sign-ups directly; while it is empty the form opens an email to the team instead. */
+export const SUBSCRIBE_ENDPOINT = '';
+const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
+
 export const MAIN = [['overview/', 'Overview'], ['cockpit/', 'Cockpit']];
 export const NAV = [
   { key: 'course', title: 'Course', blurb: 'Learn: five modules, quiz, history and types', items: [
@@ -67,6 +72,11 @@ export function footerHTML() {
   const explore = { title: 'Explore', items: [['', 'Home'], ['overview/', 'Overview'], ['cockpit/', 'Cockpit'], ...NAV[1].items] };
   const col = (g) => `<div><h4>${g.title}</h4><ul>${g.items.map(([h, t]) => `<li><a href="${url(h)}">${t}</a></li>`).join('')}</ul></div>`;
   return `
+    <form class="mz-sub" novalidate>
+      <div><h4>Get updates</h4><p>New modules, repair guides and tools. At most one email a month.</p></div>
+      <div class="mz-sub-row"><label class="mz-sub-l" for="mz-sub-email">Email address</label><input id="mz-sub-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required><button type="submit">Subscribe</button></div>
+      <p class="mz-sub-msg" aria-live="polite"></p>
+    </form>
     <div class="mz-foot">
       <div class="mz-foot-about">
         <a class="mz-foot-brand" href="${url('')}"><span>moto zero</span></a>
@@ -79,6 +89,26 @@ export function footerHTML() {
       <span>© ${new Date().getFullYear()} Transitions Lab · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></span>
       <span><a href="${url('privacy/')}">Privacy</a> · <a href="${url('cookies/')}">Cookies and storage</a> · <a href="${url('terms/')}">Terms of use</a> · <a href="${url('contact/')}">Contact</a> · <a href="https://www.transitionslab.org" target="_blank" rel="noopener">transitionslab.org</a></span>
     </div>`;
+}
+
+function wireSubscribe(form) {
+  const msg = form.querySelector('.mz-sub-msg');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = form.email.value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please enter a valid email address.'; return; }
+    if (!SUBSCRIBE_ENDPOINT) {
+      location.href = `mailto:${SUBSCRIBE_MAILTO}?subject=${encodeURIComponent('Subscribe me to Moto Zero updates')}&body=${encodeURIComponent('Please add ' + email + ' to the Moto Zero update list.')}`;
+      msg.textContent = 'Your email app should open with the request ready to send.';
+      return;
+    }
+    msg.textContent = 'Sending…';
+    try {
+      const r = await fetch(SUBSCRIBE_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+      msg.textContent = r.ok ? 'Thank you. You are on the list.' : 'That did not work. Please try again later.';
+      if (r.ok) form.reset();
+    } catch (err) { msg.textContent = 'That did not work. Please check your connection.'; }
+  });
 }
 
 function wireNav(nav) {
@@ -121,6 +151,7 @@ export function mountSite(root = document) {
     f.dataset.mounted = '1';
     f.className = 'mz-footer';
     f.innerHTML = footerHTML();
+    const sub = f.querySelector('.mz-sub'); if (sub) wireSubscribe(sub);
   });
 }
 

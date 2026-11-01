@@ -33,6 +33,13 @@
     @media (max-width: 900px) { .hm-tools { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 720px) { .hm-tools { margin-top: 28px; } .hm-tools a { padding: 11px 12px; } .hm-tools b { font-size: 15px; } .hm-tools span { font-size: 12.5px; } }
 
+    .hm-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 16px 0 0; font: 400 14px/1.4 var(--sans); color: #DDD; }
+    .hm-facts span + span::before { content: "·"; margin-right: 18px; color: #999; }
+    .hm-look { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 8px; }
+    .hm-look div { border: 1px solid var(--line); padding: 18px 18px 20px; }
+    .hm-look b { display: block; font: 700 17px/1.3 var(--sans); color: var(--ink); margin-bottom: 6px; }
+    .hm-look p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink-soft); }
+    @media (max-width: 900px) { .hm-look { grid-template-columns: 1fr; } .hm-facts { font-size: 13px; } .hm-facts span + span::before { margin-right: 10px; } }
     .hm-section { padding: 64px 0; border-bottom: 1px solid var(--line); }
     .hm-section h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.015em; margin: 6px 0 12px; max-width: 820px; }
     .hm-section .hm-lead { font-size: 18px; max-width: 760px; color: var(--ink-soft); margin: 0 0 28px; }
@@ -137,6 +144,7 @@
           <a href="learn/">Start the course</a>
         </div>
         <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview</b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit</b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder</b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><b>Wiring Lab</b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course</b><span>Five modules from engine to battery</span></a><a href="quiz/"><b>Quiz</b><span>Easy, mixed and hard questions</span></a><a href="types/"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a><a href="models/"><b>3D models</b><span>56 models to rotate and download</span></a></div>
+        <p class="hm-facts"><span>5 modules</span><span>32 chapters</span><span>56 3D models</span><span>38 technical plates</span><span>16 motorcycle types</span><span>148 quiz questions</span></p>
       </div>
     </section>
 
@@ -183,23 +191,9 @@
 
     <section class="hm-section">
       <div class="hm-wrap">
-        <span class="hm-label">In the workshop and on the road</span>
-        <h2>For the people who keep machines running</h2>
-        <div class="hm-gallery">
-          <figure><img src="assets/photos/kenya-crew.jpg" alt="Riders and mechanics on open grassland in Kenya" loading="lazy"><figcaption>Riders and mechanics, Kenya</figcaption></figure>
-          <figure><img src="assets/photos/engine-closeup.jpg" alt="Close-up of an air-cooled V-twin engine" loading="lazy"><figcaption>Air-cooled V-twin</figcaption></figure>
-          <figure><img src="assets/photos/carburettor-work.jpg" alt="A mechanic fitting a carburettor" loading="lazy"><figcaption>Fitting a carburettor</figcaption></figure>
-          <figure><img src="assets/photos/workshop-garage.jpg" alt="Two people working on a motorcycle outside a garage" loading="lazy"><figcaption>Learning by doing</figcaption></figure>
-          <figure><img src="assets/photos/kenya-flag-ride.jpg" alt="Two riders beside a Kenyan flag" loading="lazy" style="object-position:center 78%"><figcaption>On the road</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="hm-section">
-      <div class="hm-wrap">
         <span class="hm-label">The course</span>
-        <h2>What you learn</h2>
-        <p class="hm-lead">Five modules, from how it works to how to fix it.</p>
+        <h2>The course: from how it works to how to fix it</h2>
+        <p class="hm-lead">Five modules, 32 chapters, each with pictures, animations and a quick check.</p>
         <div class="hm-modules">
           <a class="hm-mod" href="learn/#foundations"><img src="assets/photos/honda-air-cooled.jpg" alt="" loading="lazy"><div><b>01</b><h3>Foundations</h3><p>Anatomy, physics, workshop.</p></div></a>
           <a class="hm-mod" href="learn/#engine"><img src="assets/photos/triumph-engine.jpg" alt="" loading="lazy"><div><b>02</b><h3>The engine</h3><p>Four-stroke and two-stroke.</p></div></a>
@@ -211,6 +205,20 @@
           <span><i></i>Interactive figures in every module</span><span><i></i>Working animations with graphs</span><span><i></i>Easy, mixed and hard quizzes</span><span><i></i>Progress saved in your browser</span><span><i></i>Free PDF modules to download</span>
         </div>
         <p style="margin-top:24px"><a class="ute-btn is-primary" href="learn/">Go to the course →</a> <a class="ute-btn" href="quiz/">Take a quiz</a> <a class="ute-btn" href="history/">Read the history</a> <a class="ute-btn" href="types/">Motorcycle types</a></p>
+      </div>
+    </section>
+
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <span class="hm-label">In the workshop and on the road</span>
+        <h2>For the people who keep machines running</h2>
+        <div class="hm-gallery">
+          <figure><img src="assets/photos/kenya-crew.jpg" alt="Riders and mechanics on open grassland in Kenya" loading="lazy"></figure>
+          <figure><img src="assets/photos/engine-closeup.jpg" alt="Close-up of an air-cooled V-twin engine" loading="lazy"></figure>
+          <figure><img src="assets/photos/carburettor-work.jpg" alt="A mechanic fitting a carburettor" loading="lazy"></figure>
+          <figure><img src="assets/photos/workshop-garage.jpg" alt="Two people working on a motorcycle outside a garage" loading="lazy"></figure>
+          <figure><img src="assets/photos/kenya-flag-ride.jpg" alt="Two riders beside a Kenyan flag" loading="lazy" style="object-position:center 78%"></figure>
+        </div>
       </div>
     </section>
 
@@ -232,6 +240,23 @@
             <img src="assets/renders/charge_port.webp" alt="Charge port, 3D render" loading="lazy">
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <span class="hm-label">Work with us</span>
+        <h2>What we are looking for</h2>
+        <p class="hm-lead">Moto Zero is open and growing. If one of these is you, get in touch.</p>
+        <div class="hm-look">
+          <div><b>Training centres and workshops</b><p>To pilot the course and the repair guides with apprentices and fundis.</p></div>
+          <div><b>Fleet operators</b><p>Boda boda and delivery fleets, petrol or electric, who want their mechanics trained.</p></div>
+          <div><b>Mechanics and engineers</b><p>To check the repair steps and specifications, and share the faults you see most.</p></div>
+          <div><b>Translators</b><p>Kiswahili, French and other languages, so more mechanics can use it.</p></div>
+          <div><b>3D artists</b><p>To model more parts and bikes for the Overview and the builder.</p></div>
+          <div><b>Partners and funders</b><p>To bring electric motorcycle training to more places.</p></div>
+        </div>
+        <p style="margin-top:24px"><a class="ute-btn is-primary" href="contact/">Get in touch →</a></p>
       </div>
     </section>
 
