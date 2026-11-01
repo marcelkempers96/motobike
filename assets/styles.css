@@ -844,3 +844,15 @@ body { font-size: 14px; font-variant-numeric: tabular-nums; }
 }
 .ute-stats { background: #E4E4E1; border-color: #E4E4E1; }
 .ute-stats .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+/* Phones: compact, non-sticky header */
+@media (max-width: 720px) {
+  .ute-top { position: static; padding: 8px 12px; gap: 8px; row-gap: 6px; }
+  .ute-brand-word { font-size: 17px; }
+  .ute-brand-mark { width: 24px; height: 24px; }
+  .ute-top .ute-mode-switch button { padding: 6px 8px; font-size: 11px; }
+  .ute-top .ute-iconbtn { width: 30px; height: 30px; }
+  .ute-nav { order: 10; width: 100%; display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -12px; padding: 0 12px; height: auto; }
+  .ute-nav::-webkit-scrollbar { display: none; }
+  .ute-nav a { padding: 6px 9px; font-size: 12px; white-space: nowrap; flex: none; }
+  .ute-nav .ute-nav-kids { margin-left: 6px; padding-left: 9px; }
+}

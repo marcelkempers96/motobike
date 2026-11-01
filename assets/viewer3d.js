@@ -81,7 +81,7 @@ export function createViewer(el, opts = {}) {
   controls.enableDamping = true;
   controls.autoRotate = !!opts.autoRotate;
   controls.autoRotateSpeed = 0.8;
-  const shadow = new THREE.Mesh(new THREE.CircleGeometry(1, 48), new THREE.MeshBasicMaterial({ color: 0x0a0a0a, transparent: true, opacity: 0.05, depthWrite: false }));
+  const shadow = new THREE.Mesh(new THREE.CircleGeometry(1, 48), new THREE.MeshBasicMaterial({ color: 0x0a0a0a, transparent: true, opacity: 0.035, depthWrite: false }));
   shadow.rotation.x = -Math.PI / 2;
   scene.add(shadow);
 
