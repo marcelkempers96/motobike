@@ -88,6 +88,12 @@ function block(b, mod) {
       return files.length ? `<figure class="ute-figure mz-learn-model" data-models="${files.join(',')}"><div class="mz-variants">${files.length > 1 ? `<div class="ute-seg" role="group" aria-label="Models">${files.map((f) => `<button type="button" data-model="${f}">${MODELS[f][1].split(/[,(]/)[0].trim()}</button>`).join('')}</div>` : ''}</div><div class="ute-figure-stage"><div class="mz3d mz3d-part"><p class="mz3d-status">3D model · ${MODELS[files[0]][1]}</p></div></div><p class="mz3d-cap"></p><div class="mz-subparts"></div><figcaption class="ute-figure-cap"><span class="ute-label">3D · drag to rotate</span> ${b.caption || ''}</figcaption></figure>` : '';
     }
     case 'photo': return `<figure class="ute-figure mz-learn-photo"><div class="ute-figure-stage"><img src="${ROOT}assets/${b.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${b.src}" alt="${(b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"></div>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">${b.src.startsWith('render-') ? 'Render' : 'Photograph'}</span> ${b.caption}</figcaption>` : ''}</figure>`;
+    case 'wiring': {
+      const TAB = { harness: ['harness', 'WR01 · Main harness'], starting: ['starting-cranking', 'F23 · Starting circuit'], charging: ['charging', 'F21 · Charging circuit'], ignition: ['ignition-spark', 'F22 · Ignition circuits'] };
+      const t = TAB[b.tab] || TAB.harness;
+      const img = b.preview || t[0];
+      return `<figure class="ute-figure mz-learn-wiring"><a class="mz-wiring-card" href="${ROOT}wiring/#${b.tab || 'harness'}"><img src="${ROOT}assets/interactive/wiring/preview/${img}.png" alt="Wiring Lab: ${t[1]}" loading="lazy"><span class="ute-linkbtn is-warm">Open the Wiring Lab: ${t[1]} →</span></a>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Interactive</span> ${b.caption}</figcaption>` : ''}</figure>`;
+    }
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
     default: void mod; return '';
   }

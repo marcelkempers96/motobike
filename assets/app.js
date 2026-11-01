@@ -79,6 +79,7 @@ function render() {
         <a href="learn/">Learn</a>
         <a href="quiz/">Quiz</a>
         <a href="build/">Build</a>
+        <a href="wiring/">Wiring</a>
         <a href="models/">Models</a>
         <a href="sources/">Sources</a>
       </nav>
