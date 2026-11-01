@@ -193,7 +193,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const day = (t) => new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 const bar = (p) => `<div class="mz-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${p}"><i style="width:${p}%"></i></div>`;
 const TOOLS = [
-  ['overview', 'Overview', '../'], ['cockpit', 'Cockpit', '../cockpit/'], ['wiring', 'Wiring Lab', '../wiring/'],
+  ['overview', 'Overview', '../overview/'], ['cockpit', 'Cockpit', '../cockpit/'], ['wiring', 'Wiring Lab', '../wiring/'],
   ['models', '3D models', '../models/'], ['build', 'Bike builder', '../build/'], ['kids', 'Kids: build a bike', '../kids/'],
 ];
 const CH = {};

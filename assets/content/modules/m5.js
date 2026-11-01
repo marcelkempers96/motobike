@@ -11,7 +11,7 @@ export default {
       "id": "m5-architecture",
       "title": "Architecture of an electric two-wheeler",
       "lead": "An electric motorcycle has fewer moving parts than a petrol one but more control units. Before you can fix one, you need the map: which category it belongs to, where the energy goes, and what every box between the battery and the tyre does.",
-      "lab": "?mode=elec&part=wiring",
+      "lab": "overview/?mode=elec&part=wiring",
       "blocks": [
         {
           "type": "h3",
@@ -214,7 +214,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Compare the <a href=\"../?mode=4t&view=diagram\">four-stroke</a> and <a href=\"../?mode=elec&view=diagram\">electric</a> course plates. Using plate F06 (Module 01), list every assembly from Engine (14) to Drive chain (22) and from Battery (27) to Regulator/rectifier (29), and write for each whether an electric component replaces it, it remains unchanged, or it disappears. For example, the throttle body and injector have no electric equivalent, the battery becomes the auxiliary 12 V battery, and the regulator/rectifier is replaced by the <a href=\"../?mode=elec&part=dc_dc\">DC-DC converter</a>."
+          "html": "Compare the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke</a> and <a href=\"../overview/?mode=elec&view=diagram\">electric</a> course plates. Using plate F06 (Module 01), list every assembly from Engine (14) to Drive chain (22) and from Battery (27) to Regulator/rectifier (29), and write for each whether an electric component replaces it, it remains unchanged, or it disappears. For example, the throttle body and injector have no electric equivalent, the battery becomes the auxiliary 12 V battery, and the regulator/rectifier is replaced by the <a href=\"../overview/?mode=elec&part=dc_dc\">DC-DC converter</a>."
         },
         {
           "type": "h3",
@@ -321,7 +321,7 @@ export default {
       "id": "m5-motors",
       "title": "Electric motors",
       "lead": "The traction motor is the part that replaces the whole engine. Two equations explain most of its behaviour: torque follows current, and back-EMF follows speed. Everything else, from top speed to why hub motors judder, falls out of those.",
-      "lab": "?mode=elec&part=motor",
+      "lab": "overview/?mode=elec&part=motor",
       "blocks": [
         {
           "type": "h3",
@@ -611,7 +611,7 @@ export default {
       "id": "m5-controllers",
       "title": "Motor controllers and regenerative braking",
       "lead": "The controller is the electric bike's throttle body, ignition and engine brake rolled into one box of six switches. Understanding how it chops battery voltage, splits current into torque and field, and runs the motor backwards as a generator explains most of how the bike feels and most of how it fails.",
-      "lab": "?mode=elec&part=controller",
+      "lab": "overview/?mode=elec&part=controller",
       "blocks": [
         {
           "type": "h3",
@@ -900,7 +900,7 @@ export default {
       "id": "m5-batteries",
       "title": "Batteries and the BMS",
       "lead": "The battery is the heaviest, most expensive and most dangerous part of an electric motorcycle. A few lines of arithmetic tell you its voltage, energy, current and heat; the BMS is what keeps those numbers inside safe limits for years.",
-      "lab": "?mode=elec&part=battery",
+      "lab": "overview/?mode=elec&part=battery",
       "blocks": [
         {
           "type": "h3",
@@ -1199,7 +1199,7 @@ export default {
       "id": "m5-charging",
       "title": "Charging, swapping and standards",
       "lead": "Refilling is where electric two-wheelers differ most from petrol ones. A plug takes hours, a fast charger tens of minutes, a swap station one minute. Knowing the charge profile, the arithmetic and the standards lets you set expectations, pick the right charger and spot a dangerous one.",
-      "lab": "?mode=elec&part=charge_port",
+      "lab": "overview/?mode=elec&part=charge_port",
       "blocks": [
         {
           "type": "h3",
@@ -1457,7 +1457,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Set the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> to bore 52 mm and stroke 58 mm (close to a 52.4 × 57.8 mm 125 cc single) and confirm a displacement of about 123 cm³, then move the RPM slider to 7500 rpm. If this engine delivers 8 kW at 30 % thermal efficiency, it consumes fuel energy at about 27 kW. Compare that with the 1.2 kW drawn by the charger in the worked example above, and with a petrol pump delivering 30 L/min, which transfers fuel energy at about 16 MW (30 × 8.9 kWh per minute). Then open the <a href=\"../?mode=elec&part=charge_port\">charge port</a> and <a href=\"../?mode=elec&part=battery\">battery</a> in the Overview."
+          "html": "Set the <a href=\"../overview/?mode=4t&part=engine\">four-stroke engine</a> to bore 52 mm and stroke 58 mm (close to a 52.4 × 57.8 mm 125 cc single) and confirm a displacement of about 123 cm³, then move the RPM slider to 7500 rpm. If this engine delivers 8 kW at 30 % thermal efficiency, it consumes fuel energy at about 27 kW. Compare that with the 1.2 kW drawn by the charger in the worked example above, and with a petrol pump delivering 30 L/min, which transfers fuel energy at about 16 MW (30 × 8.9 kWh per minute). Then open the <a href=\"../overview/?mode=elec&part=charge_port\">charge port</a> and <a href=\"../overview/?mode=elec&part=battery\">battery</a> in the Overview."
         },
         {
           "type": "check",

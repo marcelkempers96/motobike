@@ -11,7 +11,7 @@ export default {
       "id": "m2-fundamentals",
       "title": "Engine fundamentals and key numbers",
       "lead": "A handful of numbers describe any engine: bore, stroke, compression ratio, torque and power. Learn to calculate them and you can compare a commuter single with a racing two-stroke on equal terms, and spot what a spec sheet is really telling you.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "h3",
@@ -170,7 +170,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Open the <a href=\"../?mode=4t&part=engine\">engine in the Overview</a>. Its sliders move in whole millimetres, so set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125's 56.5 × 49.5 mm), calculate the displacement (π/4 × 5.7² × 5.0 ≈ 128 cm³) and compare it with the Outputs panel; the true K-Light figure is 124 cm³. Raise the bore to 62 mm with the stroke unchanged and recalculate (about 151 cm³). Move the compression ratio from 9:1 to 11:1 and work out the change in ideal Otto efficiency at γ = 1.3 (48.3 % to 51.3 %), then set a short and a long stroke at 9000 rpm and compare the mean piston speeds."
+          "html": "Open the <a href=\"../overview/?mode=4t&part=engine\">engine in the Overview</a>. Its sliders move in whole millimetres, so set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125's 56.5 × 49.5 mm), calculate the displacement (π/4 × 5.7² × 5.0 ≈ 128 cm³) and compare it with the Outputs panel; the true K-Light figure is 124 cm³. Raise the bore to 62 mm with the stroke unchanged and recalculate (about 151 cm³). Move the compression ratio from 9:1 to 11:1 and work out the change in ideal Otto efficiency at γ = 1.3 (48.3 % to 51.3 %), then set a short and a long stroke at 9000 rpm and compare the mean piston speeds."
         },
         {
           "type": "h3",
@@ -207,7 +207,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "With the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> selected, set the RPM slider to 3000, 6000 and 9000 rpm in turn and calculate the mean piston speed (2 × stroke × rpm ÷ 60) and the number of power strokes per second (rpm ÷ 120). Switch to the <a href=\"../?mode=2t&part=engine\">two-stroke engine</a> at the same speeds and confirm that the power-stroke frequency doubles (rpm ÷ 60). Use these numbers to explain why a 125 cm³ two-stroke can produce two to three times the power of a 125 cm³ commuter four-stroke."
+          "html": "With the <a href=\"../overview/?mode=4t&part=engine\">four-stroke engine</a> selected, set the RPM slider to 3000, 6000 and 9000 rpm in turn and calculate the mean piston speed (2 × stroke × rpm ÷ 60) and the number of power strokes per second (rpm ÷ 120). Switch to the <a href=\"../overview/?mode=2t&part=engine\">two-stroke engine</a> at the same speeds and confirm that the power-stroke frequency doubles (rpm ÷ 60). Use these numbers to explain why a 125 cm³ two-stroke can produce two to three times the power of a 125 cm³ commuter four-stroke."
         },
         {
           "type": "h3",
@@ -231,7 +231,7 @@ export default {
       "id": "m2-four-stroke",
       "title": "The four-stroke cycle",
       "lead": "A four-stroke needs two full turns of the crank, 720°, to complete one cycle. Knowing exactly what the piston and both valves are doing at every point is the key to valve timing, valve adjustment and half of engine diagnosis.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "p",
@@ -417,7 +417,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Run the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> at a low RPM setting and pause it with the Space key where the inlet valve begins to lift and where the exhaust valve closes. Read the crank angle (θ) from the status line and calculate the overlap; the Overview's valve events are simplified, so compare your figure with the real timing given in this chapter. Then step through a full 720° cycle and explain why the camshaft, driven at half crankshaft speed, has turned through only 360°."
+          "html": "Run the <a href=\"../overview/?mode=4t&part=engine\">four-stroke engine</a> at a low RPM setting and pause it with the Space key where the inlet valve begins to lift and where the exhaust valve closes. Read the crank angle (θ) from the status line and calculate the overlap; the Overview's valve events are simplified, so compare your figure with the real timing given in this chapter. Then step through a full 720° cycle and explain why the camshaft, driven at half crankshaft speed, has turned through only 360°."
         },
         {
           "type": "check",
@@ -429,7 +429,7 @@ export default {
       "id": "m2-two-stroke",
       "title": "The two-stroke cycle",
       "lead": "A two-stroke does the whole job in one revolution, with no valves at all: the piston itself opens and closes ports in the cylinder wall. That makes it light and powerful, and also explains its smoke, its narrow powerband and its thirst.",
-      "lab": "?mode=2t&part=cylinder",
+      "lab": "overview/?mode=2t&part=cylinder",
       "blocks": [
         {
           "type": "p",
@@ -633,7 +633,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Switch to the <a href=\"../?mode=2t&part=engine\">two-stroke engine</a> and run the animation slowly. Pause when the exhaust port starts to open and when the transfer ports start to open, read both crank angles from the status line and calculate the blowdown period. Then raise the RPM slider and compare the number of power strokes per second with the <a href=\"../?mode=4t&part=engine\">four-stroke</a> at the same speed."
+          "html": "Switch to the <a href=\"../overview/?mode=2t&part=engine\">two-stroke engine</a> and run the animation slowly. Pause when the exhaust port starts to open and when the transfer ports start to open, read both crank angles from the status line and calculate the blowdown period. Then raise the RPM slider and compare the number of power strokes per second with the <a href=\"../overview/?mode=4t&part=engine\">four-stroke</a> at the same speed."
         }
       ]
     },
@@ -641,7 +641,7 @@ export default {
       "id": "m2-top-end",
       "title": "The top end",
       "lead": "The cylinder head is where breathing, combustion and most routine adjustment happen. Understanding valves, seats, springs and the valve train explains why clearances are checked so often, and what happens when they are not.",
-      "lab": "?mode=4t&part=cylinder",
+      "lab": "overview/?mode=4t&part=cylinder",
       "blocks": [
         {
           "type": "p",
@@ -823,7 +823,7 @@ export default {
       "id": "m2-bottom-end",
       "title": "The bottom end",
       "lead": "Piston, rings, rod and crank turn gas pressure into rotation, and they do it while stopping and restarting the piston twice every revolution. This chapter is about how they are built, how they are balanced and how they wear.",
-      "lab": "?mode=4t&part=crankshaft",
+      "lab": "overview/?mode=4t&part=crankshaft",
       "blocks": [
         {
           "type": "h3",
@@ -978,7 +978,7 @@ export default {
       "id": "m2-lubrication-cooling",
       "title": "Lubrication and cooling",
       "lead": "Oil and coolant are what keep a running engine from welding itself together. Picking the right oil for a wet clutch and understanding the pressurised cooling system are everyday workshop skills, and one of them carries a real scald risk.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "h3",
@@ -1152,7 +1152,7 @@ export default {
       "id": "m2-diagnosis",
       "title": "Engine diagnosis and service",
       "lead": "Every engine needs three things: compression, a well-timed spark and the right mixture. Good diagnosis checks them from the least to the most invasive test, with numbers you can compare against the manual.",
-      "lab": "?mode=4t&part=spark_plug",
+      "lab": "overview/?mode=4t&part=spark_plug",
       "blocks": [
         {
           "type": "p",

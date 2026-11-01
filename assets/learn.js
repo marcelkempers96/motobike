@@ -92,7 +92,7 @@ function block(b, mod) {
       const img = b.preview || t[0];
       return `<figure class="ute-figure mz-learn-wiring"><a class="mz-wiring-card" href="${ROOT}wiring/#${b.tab || 'harness'}"><img src="${ROOT}assets/interactive/wiring/preview/${img}.png" alt="Wiring Lab: ${t[1]}" loading="lazy"><span class="ute-linkbtn is-warm">Open the Wiring Lab: ${t[1]} →</span></a>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Interactive</span> ${b.caption}</figcaption>` : ''}</figure>`;
     }
-    case 'animation': return `<figure class="ute-figure mz-learn-anim"><iframe data-src="${ROOT}?embed=1&mode=${b.mode || '4t'}&part=${b.part}" title="Interactive animation: ${b.part}" loading="lazy"></iframe>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption}</figcaption>` : ''}</figure>`;
+    case 'animation': return `<figure class="ute-figure mz-learn-anim"><iframe data-src="${ROOT}overview/?embed=1&mode=${b.mode || '4t'}&part=${b.part}" title="Interactive animation: ${b.part}" loading="lazy"></iframe>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption}</figcaption>` : ''}</figure>`;
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
     default: void mod; return '';
   }
@@ -188,7 +188,7 @@ function renderPage(p) {
           <h2>${chap.title}</h2>
           ${chap.lead ? `<p class="lead">${chap.lead}</p>` : ''}
           <div class="prose">${chap.blocks.map((b) => block(b, mod)).join('')}</div>
-          ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab}">Try it in the Overview →</a></div>` : ''}
+          ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab.startsWith('?') ? 'overview/' + chap.lab : chap.lab}">Try it in the Overview →</a></div>` : ''}
           <div class="mz-complete"><button type="button" class="ute-btn ${PG.isDone(chap.id) ? '' : 'is-primary'}" data-complete="${chap.id}">${PG.isDone(chap.id) ? '✓ Chapter completed' : 'Mark this chapter as complete'}</button><a href="${ROOT}progress/">My progress</a></div>
         </article>
         ${pager}

@@ -7,7 +7,7 @@
 const ROOT = new URL('../', import.meta.url);           // site root, wherever the page lives
 const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split('#')[1] : '');
 
-export const MAIN = [['', 'Overview'], ['cockpit/', 'Cockpit']];
+export const MAIN = [['overview/', 'Overview'], ['cockpit/', 'Cockpit']];
 export const NAV = [
   { key: 'course', title: 'Course', blurb: 'Learn: five modules, quiz and history', items: [
     ['learn/', 'Course overview', 'How the course works, where to start'],
@@ -62,7 +62,7 @@ export function navHTML() {
 }
 
 export function footerHTML() {
-  const explore = { title: 'Explore', items: [['', 'Overview'], ['cockpit/', 'Cockpit'], ...NAV[1].items] };
+  const explore = { title: 'Explore', items: [['', 'Home'], ['overview/', 'Overview'], ['cockpit/', 'Cockpit'], ...NAV[1].items] };
   const col = (g) => `<div><h4>${g.title}</h4><ul>${g.items.map(([h, t]) => `<li><a href="${url(h)}">${t}</a></li>`).join('')}</ul></div>`;
   return `
     <div class="mz-foot">

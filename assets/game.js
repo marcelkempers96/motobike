@@ -7,9 +7,9 @@ import { recordTool } from './progress.js';
 
 const R = '../assets/';
 const BIKES = {
-  '4t': { name: 'Classic four-stroke', render: 'bike_classic_4t_side', ride: '../?mode=4t' },
-  '2t': { name: 'Two-stroke motocross', render: 'bike_mx_2t_side', ride: '../?mode=2t' },
-  elec: { name: 'Electric scrambler', render: 'bike_electric_side', ride: '../?mode=elec' },
+  '4t': { name: 'Classic four-stroke', render: 'bike_classic_4t_side', ride: '../cockpit/?mode=4t' },
+  '2t': { name: 'Two-stroke motocross', render: 'bike_mx_2t_side', ride: '../cockpit/?mode=2t' },
+  elec: { name: 'Electric scrambler', render: 'bike_electric_side', ride: '../cockpit/?mode=elec' },
 };
 /* [part key, render, name, what it does (one friendly sentence)] */
 const PARTS = {

@@ -135,7 +135,6 @@ ${PAGE === 'overview' ? `
     </div>
 
     <section class="ute-cview" id="ute-cview-slot"></section>
-    ${PAGE === 'overview' && !EMBED ? homeIntroHTML() : ''}
 
 ` : ''}
 ${PAGE === 'cockpit' ? `

@@ -11,7 +11,7 @@ export default {
       "id": "m3-mixture",
       "title": "Air, fuel and mixture",
       "lead": "An engine is a controlled fire, and a fire needs the right recipe: a set mass of air for every gram of fuel. Get the recipe wrong and you lose power, burn valves or foul plugs. This chapter explains that recipe, how we describe it with lambda, and how a carburettor tries to hold it across the whole throttle range.",
-      "lab": "?mode=4t&part=carb",
+      "lab": "overview/?mode=4t&part=carb",
       "blocks": [
         {
           "type": "h3",
@@ -130,7 +130,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Open the <a href=\"../?mode=4t&part=engine\">engine in the Overview</a>, set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125) and run it at 1500 and then 9000 rpm. Work out how the time available for the 180° intake stroke falls from 20 ms to 3.3 ms. Then open the <a href=\"../?mode=4t&part=air_filter\">air filter</a> and the <a href=\"../?mode=4t&part=carb\">carburettor</a>, and on the <a href=\"../?mode=4t&view=diagram\">course plate</a> trace the air path from the airbox through the throttle body to the inlet valve."
+          "html": "Open the <a href=\"../overview/?mode=4t&part=engine\">engine in the Overview</a>, set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125) and run it at 1500 and then 9000 rpm. Work out how the time available for the 180° intake stroke falls from 20 ms to 3.3 ms. Then open the <a href=\"../overview/?mode=4t&part=air_filter\">air filter</a> and the <a href=\"../overview/?mode=4t&part=carb\">carburettor</a>, and on the <a href=\"../overview/?mode=4t&view=diagram\">course plate</a> trace the air path from the airbox through the throttle body to the inlet valve."
         },
         {
           "type": "h3",
@@ -271,7 +271,7 @@ export default {
       "id": "m3-efi",
       "title": "Electronic fuel injection and engine management",
       "lead": "A carburettor cannot hold the narrow lambda window a catalyst needs, cannot correct for air density or ethanol, and cannot report its own faults. Fuel injection can: it opens a valve for a calculated number of milliseconds and checks the result in the exhaust, many times a second.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "p",
@@ -557,7 +557,7 @@ export default {
       "id": "m3-ignition",
       "title": "Ignition systems",
       "lead": "A 12 V battery cannot jump a spark plug gap; that needs thousands of volts, delivered at exactly the right crank angle, thousands of times a minute. The ignition system is a voltage multiplier and a precision clock in one.",
-      "lab": "?mode=4t&part=spark_plug",
+      "lab": "overview/?mode=4t&part=spark_plug",
       "blocks": [
         {
           "type": "h3",
@@ -699,7 +699,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Run the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> and move the RPM slider from 1500 to 9000 rpm. The power stroke stays at 180° of crank angle but shrinks from 20 ms to 3.3 ms, while the flame needs roughly the same time to burn whatever the engine speed, which is why the spark must advance as revs rise. Then open the <a href=\"../?mode=4t&part=spark_plug\">spark plug</a> panel, hold IGNITE to build current in the coil and release it to fire the plug."
+          "html": "Run the <a href=\"../overview/?mode=4t&part=engine\">four-stroke engine</a> and move the RPM slider from 1500 to 9000 rpm. The power stroke stays at 180° of crank angle but shrinks from 20 ms to 3.3 ms, while the flame needs roughly the same time to burn whatever the engine speed, which is why the spark must advance as revs rise. Then open the <a href=\"../overview/?mode=4t&part=spark_plug\">spark plug</a> panel, hold IGNITE to build current in the coil and release it to fire the plug."
         },
         {
           "type": "wiring",
@@ -795,7 +795,7 @@ export default {
       "id": "m3-battery-charging",
       "title": "Battery, charging and starting",
       "lead": "The battery is the motorcycle's energy savings account: the alternator pays in, lights and ECU draw out, and the starter makes one huge withdrawal every time you press the button. Know the numbers and you can tell a tired battery from a dead regulator in minutes.",
-      "lab": "?mode=4t&part=battery",
+      "lab": "overview/?mode=4t&part=battery",
       "blocks": [
         {
           "type": "h3",
@@ -1018,7 +1018,7 @@ export default {
       "id": "m3-lighting-wiring",
       "title": "Lighting, signalling and wiring",
       "lead": "Lights, indicators and the harness that feeds them are where most everyday electrical faults live. A few simple calculations explain LED hyper-flash, melted connectors and why the fuse must match the wire, not the lamp.",
-      "lab": "?mode=4t&part=wiring",
+      "lab": "overview/?mode=4t&part=wiring",
       "blocks": [
         {
           "type": "h3",
@@ -1202,7 +1202,7 @@ export default {
       "id": "m3-diagnosis",
       "title": "Electrical diagnosis",
       "lead": "Electrical faults are invisible until you measure them. With a multimeter, Ohm's law and a handful of K-Light reference values you can find almost any fault by method rather than by swapping parts.",
-      "lab": "?mode=4t&part=wiring",
+      "lab": "overview/?mode=4t&part=wiring",
       "blocks": [
         {
           "type": "h3",

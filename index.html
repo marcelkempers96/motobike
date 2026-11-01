@@ -3,17 +3,240 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moto Zero · Overview and components</title>
-  <meta name="description" content="An interactive workshop manual: click any part of a four-stroke, two-stroke or electric motorcycle to see how it works.">
+  <title>Moto Zero · How motorcycles work, and how to work on them</title>
+  <meta name="description" content="Moto Zero is an open course on how motorcycles work: every part in 3D, a cockpit you can ride, a bike you can build, a live wiring lab and five course modules. Free, no login. By Transitions Lab.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20261101c">
-  <script type="importmap">{"imports":{"three":"./assets/vendor/three/build/three.module.js","three/addons/":"./assets/vendor/three/examples/jsm/"}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=20261101d">
+  <style>
+    .hm-wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+    .hm-hero { position: relative; background: #111; color: #FFF; overflow: hidden; }
+    .hm-hero video, .hm-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+    .hm-hero-in { position: relative; padding: 96px 24px 64px; max-width: 1320px; margin: 0 auto; }
+    .hm-kicker { font: 700 13px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: #F2C9B6; }
+    .hm-hero h1 { color: #FFF; font-size: clamp(34px, 5vw, 64px); line-height: 1.04; letter-spacing: -0.02em; max-width: 900px; margin: 12px 0 18px; }
+    .hm-mission { font-size: clamp(17px, 1.6vw, 21px); line-height: 1.55; max-width: 760px; color: #EFEFEF; margin: 0 0 28px; }
+    .hm-quick { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hm-quick a { display: inline-flex; align-items: center; gap: 8px; padding: 13px 18px; text-decoration: none; font: 700 15px/1 var(--sans); border: 1.5px solid #FFF; color: #FFF; }
+    .hm-quick a.is-main { background: #FFF; color: #111; }
+    .hm-quick a:hover { background: var(--warm); border-color: var(--warm); color: #FFF; }
+    .hm-stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px; font-size: 14px; color: #DDD; }
+    .hm-stats b { display: block; font-size: 28px; color: #FFF; line-height: 1.1; }
+
+    .hm-section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+    .hm-section h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.015em; margin: 6px 0 12px; max-width: 820px; }
+    .hm-section .hm-lead { font-size: 18px; max-width: 760px; color: var(--ink-soft); margin: 0 0 28px; }
+    .hm-label { font: 700 13px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--warm); }
+
+    .hm-feature { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: center; padding: 28px 0; }
+    .hm-feature + .hm-feature { border-top: 1px solid var(--line-soft); }
+    .hm-feature.is-flip .hm-feature-img { order: 2; }
+    .hm-feature-img { display: block; background: #F6F6F6; border: 1px solid var(--line); aspect-ratio: 16 / 10; overflow: hidden; }
+    .hm-feature-img img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .4s ease; }
+    .hm-feature-img.is-photo img { object-fit: cover; }
+    .hm-feature-img:hover img { transform: scale(1.03); }
+    .hm-num { font: 900 15px/1 var(--sans); color: var(--warm); }
+    .hm-feature h3 { font-size: clamp(24px, 2.4vw, 32px); line-height: 1.15; margin: 10px 0 10px; }
+    .hm-feature p { font-size: 17px; margin: 0 0 14px; }
+    .hm-feature ul { margin: 0 0 20px; padding-left: 20px; font-size: 16px; }
+    .hm-feature li { margin: 4px 0; }
+
+    .hm-gallery { display: grid; grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: 240px 240px; gap: 10px; }
+    .hm-gallery figure { margin: 0; position: relative; overflow: hidden; background: #111; }
+    .hm-gallery figure:first-child { grid-row: 1 / 3; }
+    .hm-gallery img, .hm-gallery video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hm-gallery figcaption { position: absolute; left: 0; bottom: 0; background: rgba(17,17,17,.75); color: #FFF; font-size: 13px; padding: 6px 10px; }
+
+    .hm-modules { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+    .hm-mod { display: flex; flex-direction: column; border: 1px solid var(--line); text-decoration: none; color: var(--ink-soft); background: #FFF; }
+    .hm-mod img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .hm-mod div { padding: 14px 16px 16px; }
+    .hm-mod b { font: 900 13px/1 var(--sans); color: var(--warm); }
+    .hm-mod h3 { font-size: 18px; line-height: 1.25; margin: 6px 0 6px; }
+    .hm-mod p { font-size: 14px; margin: 0; }
+    .hm-mod:hover { border-color: var(--ink); }
+    .hm-learnrow { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; font-size: 15px; }
+    .hm-learnrow span { display: inline-flex; align-items: center; gap: 8px; }
+    .hm-learnrow i { width: 8px; height: 8px; background: var(--warm); display: inline-block; }
+
+    .hm-soon { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; background: #111; color: #EEE; padding: 40px; }
+    .hm-soon h2 { color: #FFF; }
+    .hm-soon .hm-label { color: #F2C9B6; }
+    .hm-soon p { font-size: 17px; color: #DDD; }
+    .hm-soon-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hm-soon-imgs img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #FFF; display: block; }
+    .hm-tag { display: inline-block; background: var(--warm); color: #FFF; font: 700 12px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; padding: 6px 9px; margin-bottom: 10px; }
+    .hm-soon .ute-btn { background: #FFF; color: #111; border-color: #FFF; }
+
+    .hm-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .hm-links a { display: block; padding: 20px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: #FFF; }
+    .hm-links a b { display: block; font-size: 18px; margin-bottom: 6px; }
+    .hm-links a span { font-size: 14px; color: var(--mute); }
+    .hm-links a:hover { border-color: var(--ink); }
+
+    @media (max-width: 1100px) { .hm-modules { grid-template-columns: repeat(3, minmax(0, 1fr)); } .hm-links { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 860px) {
+      .hm-feature, .hm-soon { grid-template-columns: 1fr; gap: 20px; }
+      .hm-feature.is-flip .hm-feature-img { order: 0; }
+      .hm-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 160px 160px; }
+      .hm-gallery figure:first-child { grid-column: 1 / -1; grid-row: auto; }
+      .hm-modules { grid-template-columns: 1fr 1fr; }
+      .hm-soon { padding: 24px 18px; }
+      .hm-section { padding: 44px 0; }
+      .hm-hero-in { padding: 64px 16px 44px; }
+      .hm-wrap { padding: 0 16px; }
+    }
+    @media (max-width: 520px) { .hm-modules, .hm-links { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-  <div id="ute-root"></div>
-  <script type="module" src="assets/app.js"></script>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="./" aria-label="Moto Zero home"><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <main>
+    <section class="hm-hero">
+      <video src="assets/video/workshop.mp4" poster="assets/video/workshop-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video>
+      <div class="hm-hero-in">
+        <span class="hm-kicker">Open course · free · no login</span>
+        <h1>Learn how motorcycles work, and how to work on them.</h1>
+        <p class="hm-mission">Moto Zero makes the machine visible. Every part in 3D, a cockpit you can ride, a bike you can build and a wiring loom you can trace, joined to a five-module course that takes you from the first combustion stroke to the battery of an electric bike. Built for mechanics, trainees, students and riders, wherever they work.</p>
+        <div class="hm-quick">
+          <a class="is-main" href="overview/">Explore the motorcycle in 3D →</a>
+          <a href="learn/">Start the course</a>
+          <a href="cockpit/">Ride in the Cockpit</a>
+          <a href="build/">Build a bike</a>
+          <a href="wiring/">Wiring Lab</a>
+        </div>
+        <div class="hm-stats"><span><b>5</b>course modules</span><span><b>32</b>chapters</span><span><b>56</b>3D models</span><span><b>38</b>technical plates</span><span><b>148</b>quiz questions</span></div>
+      </div>
+    </section>
+
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <span class="hm-label">Start here</span>
+        <h2>Three ways into the machine</h2>
+        <p class="hm-lead">Pick a way in. Each one links to the others, so you can go from a part to its chapter, from a chapter to a working animation, and from there to a quiz.</p>
+
+        <div class="hm-feature">
+          <a class="hm-feature-img" href="overview/"><img src="assets/renders/bike_classic_4t_threeq.webp" alt="Classic four-stroke motorcycle, 3D render" loading="lazy"></a>
+          <div>
+            <span class="hm-num">01</span>
+            <h3>How a motorcycle works</h3>
+            <p>Turn a four-stroke, a two-stroke or an electric bike in 3D. Tap any part to see it on its own, look inside it and watch it work.</p>
+            <ul><li>Highlight a whole system: powertrain, chassis, electrics</li><li>See hidden parts through a see-through shell</li><li>Run the engine, brake, chain, carburettor, ignition and motor, with live graphs</li></ul>
+            <a class="ute-btn is-primary" href="overview/">Open the Overview →</a>
+          </div>
+        </div>
+
+        <div class="hm-feature is-flip">
+          <a class="hm-feature-img is-photo" href="build/"><img src="assets/renders/photo/render-engine-exploded.jpg" alt="Engine and clutch, exploded render" loading="lazy"></a>
+          <div>
+            <span class="hm-num">02</span>
+            <h3>Build a bike from the ground up</h3>
+            <p>Start with the frame and fit every part in workshop order, then change the specification and see what it does.</p>
+            <ul><li>Wheel size, sprockets and engine size</li><li>The effect on gearing, top speed, acceleration and ride height</li><li>Speedometer error, power to weight and more</li></ul>
+            <a class="ute-btn is-primary" href="build/">Open the Bike builder →</a>
+          </div>
+        </div>
+
+        <div class="hm-feature">
+          <a class="hm-feature-img" href="wiring/"><img src="assets/interactive/wiring/preview/harness.png" alt="Wiring Lab, main harness" loading="lazy"></a>
+          <div>
+            <span class="hm-num">03</span>
+            <h3>Learn all about wiring</h3>
+            <p>The wiring plates from Module 3, made live. Trace each branch of the harness, work the switches and watch where current flows.</p>
+            <ul><li>Main harness, starting, charging and ignition circuits</li><li>Trigger real faults and find which wire goes dead</li><li>Change the circuit and see current, voltage drop and fuses respond</li></ul>
+            <a class="ute-btn is-primary" href="wiring/">Open the Wiring Lab →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <span class="hm-label">In the workshop and on the road</span>
+        <h2>Made for the people who keep machines running</h2>
+        <div class="hm-gallery">
+          <figure><img src="assets/photos/kenya-crew.jpg" alt="Riders and mechanics on open grassland in Kenya" loading="lazy"><figcaption>Riders and mechanics, Kenya</figcaption></figure>
+          <figure><img src="assets/photos/engine-closeup.jpg" alt="Close-up of an air-cooled V-twin engine" loading="lazy"><figcaption>Air-cooled V-twin</figcaption></figure>
+          <figure><img src="assets/photos/carburettor-work.jpg" alt="A mechanic fitting a carburettor" loading="lazy"><figcaption>Fitting a carburettor</figcaption></figure>
+          <figure><img src="assets/photos/workshop-garage.jpg" alt="Two people working on a motorcycle outside a garage" loading="lazy"><figcaption>Learning by doing</figcaption></figure>
+          <figure><img src="assets/photos/kenya-flag-ride.jpg" alt="Two riders beside a Kenyan flag" loading="lazy" style="object-position:center 78%"><figcaption>On the road</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <span class="hm-label">The course</span>
+        <h2>What you learn</h2>
+        <p class="hm-lead">Five modules, written to explain the machine well enough to describe it, specify it and repair it. Every chapter has learning goals, worked numbers from a real 125 cc machine, workshop job sheets and questions with answers.</p>
+        <div class="hm-modules">
+          <a class="hm-mod" href="learn/#foundations"><img src="assets/photos/honda-air-cooled.jpg" alt="" loading="lazy"><div><b>01</b><h3>Foundations</h3><p>History, types, anatomy and controls, the physics of riding, and safe workshop practice.</p></div></a>
+          <a class="hm-mod" href="learn/#engine"><img src="assets/photos/triumph-engine.jpg" alt="" loading="lazy"><div><b>02</b><h3>The engine</h3><p>Four-stroke and two-stroke cycles, the top and bottom end, lubrication, cooling and diagnosis.</p></div></a>
+          <a class="hm-mod" href="learn/#fuel-ignition"><img src="assets/photos/vintage-timing-cover.jpg" alt="" loading="lazy"><div><b>03</b><h3>Fuel, ignition, electrics</h3><p>Mixture, carburettors and injection, ignition, charging, lighting and electrical fault-finding.</p></div></a>
+          <a class="hm-mod" href="learn/#drivetrain-chassis"><img src="assets/photos/honda-cb650r-engine.jpg" alt="" loading="lazy"><div><b>04</b><h3>Drivetrain and chassis</h3><p>Clutch, gearbox, final drive, geometry, suspension, wheels, tyres, brakes and servicing.</p></div></a>
+          <a class="hm-mod" href="learn/#electric"><img src="assets/photos/hybrid-power-unit-portrait.jpg" alt="" loading="lazy"><div><b>05</b><h3>Electric motorcycles</h3><p>Motors, controllers, regeneration, cells, packs and the BMS, charging and high-voltage safety.</p></div></a>
+        </div>
+        <div class="hm-learnrow">
+          <span><i></i>Interactive figures in every module</span><span><i></i>Working animations with graphs</span><span><i></i>Easy, mixed and hard quizzes</span><span><i></i>Progress saved in your browser</span><span><i></i>Free PDF modules to download</span>
+        </div>
+        <p style="margin-top:24px"><a class="ute-btn is-primary" href="learn/">Go to the course →</a> <a class="ute-btn" href="quiz/">Take a quiz</a> <a class="ute-btn" href="history/">Read the history</a></p>
+      </div>
+    </section>
+
+    <section class="hm-section" style="border-bottom:0">
+      <div class="hm-wrap">
+        <div class="hm-soon">
+          <div>
+            <span class="hm-tag">Coming soon</span><br>
+            <span class="hm-label">Electrical components training</span>
+            <h2>Motors, controllers and battery systems, for working mechanics</h2>
+            <p>Many skilled mechanics learned their trade on engines and gearboxes, by hand. Electric motorcycles bring motors, controllers, battery packs and electronics that few of them have had the chance to train on. We are building practical training modules on these components for informal mechanics, the fundis who keep the fleets moving.</p>
+            <p>In the meantime, start with the electrics you can already explore.</p>
+            <div class="ute-btnrow"><a class="ute-btn" href="wiring/">Open the Wiring Lab →</a><a class="ute-btn mz-btn-light" href="learn/#electric" style="background:transparent;color:#FFF;border-color:#FFF">Module 05: Electric motorcycles</a><a class="ute-btn mz-btn-light" href="about/#fundi" style="background:transparent;color:#FFF;border-color:#FFF">About the programme</a></div>
+          </div>
+          <div class="hm-soon-imgs">
+            <img src="assets/renders/motor.webp" alt="Electric motor, 3D render" loading="lazy">
+            <img src="assets/renders/controller.webp" alt="Motor controller, 3D render" loading="lazy">
+            <img src="assets/renders/battery_hv.webp" alt="High-voltage battery pack, 3D render" loading="lazy">
+            <img src="assets/renders/charge_port.webp" alt="Charge port, 3D render" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <span class="hm-label">More</span>
+        <h2>Everything else on the site</h2>
+        <div class="hm-links">
+          <a href="about/"><b>About Moto Zero</b><span>Why it exists, who made it and the story behind it</span></a>
+          <a href="downloads/"><b>Downloads</b><span>PDF modules, 3D models and technical plates</span></a>
+          <a href="models/"><b>3D model library</b><span>All 56 models to rotate, inspect and download</span></a>
+          <a href="sources/"><b>Sources and credits</b><span>Bibliography, licences and where the material comes from</span></a>
+          <a href="progress/"><b>My progress</b><span>Chapters done and quiz scores, saved in this browser</span></a>
+          <a href="updates/"><b>Updates</b><span>What changed and when</span></a>
+          <a href="contact/"><b>Contact</b><span>Collaborate, ask for a model or send a correction</span></a>
+          <a href="kids/"><b>Kids: build a bike</b><span>A simple drag-and-drop game for younger learners</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-mz-footer></footer>
+</div>
+<script>
+  (function () {
+    var v = document.querySelector('.hm-hero video');
+    if (v && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); }
+  })();
+</script>
+<script type="module" src="assets/site.js"></script>
 </body>
 </html>

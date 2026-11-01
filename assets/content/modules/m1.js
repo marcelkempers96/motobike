@@ -11,7 +11,7 @@ export default {
       "id": "m1-history-systems",
       "title": "A short history and the motorcycle as a system",
       "lead": "Every part on a modern motorcycle is an answer to a problem someone hit along the way: a bike that could not idle, a front wheel that slid, exhaust that broke the emission rules. Knowing that story, and seeing the machine as a set of connected systems, is what lets you diagnose it later.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "h3",
@@ -253,7 +253,7 @@ export default {
       "id": "m1-types",
       "title": "Types and configurations",
       "lead": "A pedelec, a Super Cub, a boda boda commuter and a 450 cc motocross bike all have two wheels, but they answer different jobs and fall into different legal classes. This chapter sorts them by use, by law, by engine layout and by frame.",
-      "lab": "?mode=2t&part=frame",
+      "lab": "overview/?mode=2t&part=frame",
       "blocks": [
         {
           "type": "h3",
@@ -616,7 +616,7 @@ export default {
       "id": "m1-anatomy",
       "title": "Anatomy and controls",
       "lead": "A road motorcycle breaks down into 30 named assemblies, and every one has a job, typical materials and a typical way of failing. Learn the names once here and every later module, and every workshop conversation, gets easier.",
-      "lab": "?mode=4t&part=chain",
+      "lab": "overview/?mode=4t&part=chain",
       "blocks": [
         {
           "type": "plate",
@@ -855,7 +855,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and click, in order, the drive chain, rear sprocket, swingarm and rear tyre hotspots, and write down the order in which drive torque passes through them from the gearbox output to the road. Then find the throttle body, the side cover over the battery and the instrument cluster, and sketch the connections you expect between throttle body and injector, ECU, battery and regulator/rectifier before checking against Module 03. Plate F06 above numbers all 30 assemblies by name."
+          "html": "Open the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke course plate</a> and click, in order, the drive chain, rear sprocket, swingarm and rear tyre hotspots, and write down the order in which drive torque passes through them from the gearbox output to the road. Then find the throttle body, the side cover over the battery and the instrument cluster, and sketch the connections you expect between throttle body and injector, ECU, battery and regulator/rectifier before checking against Module 03. Plate F06 above numbers all 30 assemblies by name."
         },
         {
           "type": "h3",

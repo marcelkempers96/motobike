@@ -11,7 +11,7 @@ export default {
       "id": "m4-clutch",
       "title": "Primary drive and clutch",
       "lead": "A 125 cc crankshaft spins at up to about 10,000 rpm, but at 90 km/h the rear wheel turns at roughly 800 rpm. The first step down happens right at the crank, in the primary drive, and the clutch sitting behind it lets the rider connect and disconnect all that torque by hand.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "h3",
@@ -236,7 +236,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and click the clutch cover hotspot: the clutch sits behind the right-hand crankcase cover, on the gearbox input shaft. Then open the <a href=\"../?mode=4t&part=engine\">engine</a>, set the RPM slider to 3000, 6000 and 9000 rpm and work out the clutch basket speed behind a 3.4:1 primary reduction (about 880, 1760 and 2650 rpm)."
+          "html": "Open the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke course plate</a> and click the clutch cover hotspot: the clutch sits behind the right-hand crankcase cover, on the gearbox input shaft. Then open the <a href=\"../overview/?mode=4t&part=engine\">engine</a>, set the RPM slider to 3000, 6000 and 9000 rpm and work out the clutch basket speed behind a 3.4:1 primary reduction (about 880, 1760 and 2650 rpm)."
         },
         {
           "type": "check",
@@ -248,7 +248,7 @@ export default {
       "id": "m4-gearbox",
       "title": "Gearbox",
       "lead": "An engine only makes useful torque in a narrow speed band: the K-Light 125 peaks at 8.9 N·m at 7,500 rpm and 7.8 kW at 9,000 rpm. The gearbox keeps it in that band from walking pace to top speed, one positive click at a time.",
-      "lab": "?mode=4t&part=engine",
+      "lab": "overview/?mode=4t&part=engine",
       "blocks": [
         {
           "type": "h3",
@@ -436,7 +436,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Set the <a href=\"../?mode=4t&part=engine\">engine</a> to 7500 and then 9000 rpm and calculate the mean piston speed for the K-Light 125 stroke of 49.5 mm (12.4 and 14.9 m/s). Then open the <a href=\"../?mode=4t&part=chain\">chain and final drive</a>, hold REV and read engine speed, wheel speed and road speed together, and compare them with the road speeds in the table above to see how much of the speed range each gear covers."
+          "html": "Set the <a href=\"../overview/?mode=4t&part=engine\">engine</a> to 7500 and then 9000 rpm and calculate the mean piston speed for the K-Light 125 stroke of 49.5 mm (12.4 and 14.9 m/s). Then open the <a href=\"../overview/?mode=4t&part=chain\">chain and final drive</a>, hold REV and read engine speed, wheel speed and road speed together, and compare them with the road speeds in the table above to see how much of the speed range each gear covers."
         },
         {
           "type": "check",
@@ -448,7 +448,7 @@ export default {
       "id": "m4-final-drive",
       "title": "Final drive and CVT",
       "lead": "The last stage carries torque from the gearbox to the rear wheel: by chain on most bikes, by belt or shaft on some, and on scooters by a belt running between two pulleys that change size as you ride.",
-      "lab": "?mode=4t&part=chain",
+      "lab": "overview/?mode=4t&part=chain",
       "blocks": [
         {
           "type": "h3",
@@ -702,7 +702,7 @@ export default {
       "id": "m4-frame-steering",
       "title": "Frame and steering geometry",
       "lead": "The frame holds the steering axis, swingarm pivot and engine in fixed relation under braking, cornering and bumps. A few degrees of rake and a few millimetres of trail decide whether the bike feels calm or nimble.",
-      "lab": "?mode=4t&part=frame",
+      "lab": "overview/?mode=4t&part=frame",
       "blocks": [
         {
           "type": "h3",
@@ -852,7 +852,7 @@ export default {
       "id": "m4-suspension",
       "title": "Suspension",
       "lead": "Springs hold the bike up; dampers stop it bouncing. Get sag right and the bike sits level, keeps its tyres on the road and uses its travel properly.",
-      "lab": "?mode=4t&part=forks",
+      "lab": "overview/?mode=4t&part=forks",
       "blocks": [
         {
           "type": "h3",
@@ -1062,7 +1062,7 @@ export default {
       "id": "m4-wheels-tyres",
       "title": "Wheels and tyres",
       "lead": "Two contact patches the size of a palm carry everything. Wheels have to run true on good bearings, and tyres have to be the right size, age, pressure and condition.",
-      "lab": "?mode=4t&part=front_wheel",
+      "lab": "overview/?mode=4t&part=front_wheel",
       "blocks": [
         {
           "type": "h3",
@@ -1288,7 +1288,7 @@ export default {
       "id": "m4-brakes",
       "title": "Brakes",
       "lead": "A brake is a heat machine: it turns motion into heat in seconds. Hydraulics multiply a 100 N squeeze into thousands of newtons of clamp, and the fluid has to stay liquid when the disc is hot.",
-      "lab": "?mode=4t&part=brake",
+      "lab": "overview/?mode=4t&part=brake",
       "blocks": [
         {
           "type": "h3",
@@ -1731,7 +1731,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Open the <a href=\"../?mode=4t&view=diagram\">four-stroke course plate</a> and work through its hotspots from the front tyre to the tail light, using plate F06 (Module 01) for the full list of 30 assemblies from Fuel tank to Tail light and indicators. For each, name the inspection from this chapter that applies, for example Drive chain: slack, wear length, lubrication; Front fork: leaks, oil level, clamp bolt torque."
+          "html": "Open the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke course plate</a> and work through its hotspots from the front tyre to the tail light, using plate F06 (Module 01) for the full list of 30 assemblies from Fuel tank to Tail light and indicators. For each, name the inspection from this chapter that applies, for example Drive chain: slack, wear length, lubrication; Front fork: leaks, oil level, clamp bolt torque."
         },
         {
           "type": "check",
