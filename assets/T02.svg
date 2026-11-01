@@ -1,0 +1,660 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="T02" viewBox="0 0 1600 900">
+<title>T02 Vintage V-twin, c. 1915 to 1930, left side elevation</title>
+<desc>Loop-frame V-twin of the Harley-Davidson J and Indian Powerplus era: inlet-over-exhaust 45 degree twin, magneto ignition, springer front fork, rigid rear, flat-sided tank with hand gear shift, foot clutch, footboards, acetylene headlamp and chain drive.</desc>
+<style>
+#T02 path,#T02 line,#T02 circle,#T02 rect,#T02 ellipse,#T02 polyline,#T02 polygon{stroke-linecap:round;stroke-linejoin:round}
+#T02 .o{stroke:#1E2B5E;stroke-width:2.2}
+#T02 .i{stroke:#1E2B5E;stroke-width:1.3}
+#T02 .f{stroke:#1E2B5E;stroke-width:0.8}
+#T02 .h{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4;fill:none}
+#T02 .c{stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4;fill:none}
+#T02 .ph{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:18 4 3 4 3 4;fill:none}
+#T02 .n{fill:none}
+#T02 .t{fill:#DCE4F2}
+#T02 .t2{fill:#B9C7E3}
+#T02 .w{fill:#FFFFFF}
+#T02 .k{fill:#1E2B5E}
+#T02 .x{fill:url(#T02-hx)}
+#T02 .xb{fill:url(#T02-hxb)}
+#T02 .xr{fill:url(#T02-hxr)}
+#T02 .fl{fill:url(#T02-fl)}
+#T02 .af{fill:#C8502A}
+#T02 .as{stroke:#C8502A}
+#T02 .ld{stroke:#1E2B5E;stroke-width:0.9;fill:none}
+#T02 .dot{fill:#1E2B5E}
+#T02 .dl{stroke:#1E2B5E;stroke-width:0.8;fill:none}
+#T02 .acc{stroke:#C8502A;stroke-width:2.6;fill:none}
+#T02 .acct{stroke:#C8502A;stroke-width:1.6;fill:none}
+#T02 text{fill:#1E2B5E}
+#T02 .l{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:500}
+#T02 .ls{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:15px;font-weight:400}
+#T02 .la{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:600;fill:#C8502A}
+#T02 .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
+#T02 .mb{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600}
+#T02 .pt{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.02em}
+#T02 .pl{font-family:'IBM Plex Serif',serif;font-style:italic;font-weight:600;font-size:22px}
+#T02 .num{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:15px;font-weight:500}
+#T02 .sw{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:700;fill:#1E2B5E}
+#T02 .lcd{font-family:'IBM Plex Mono',monospace;font-weight:600;fill:#1E2B5E}
+</style>
+<defs>
+<pattern id="T02-hx" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
+<pattern id="T02-hxb" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(-45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
+<pattern id="T02-hxr" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#DCE4F2"/><line x1="0" y1="0" x2="0" y2="8" stroke="#1E2B5E" stroke-width="0.7"/><line x1="4" y1="0" x2="4" y2="8" stroke="#1E2B5E" stroke-width="0.7" stroke-dasharray="2 2"/></pattern>
+<pattern id="T02-fl" patternUnits="userSpaceOnUse" width="10" height="8"><rect width="10" height="8" fill="#F3D9CE"/><line x1="1" y1="2" x2="5" y2="2" stroke="#C8502A" stroke-width="0.7"/><line x1="6" y1="6" x2="9" y2="6" stroke="#C8502A" stroke-width="0.7"/></pattern>
+<marker id="T02-ar" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 1.5 L10 5 L0 8.5 Z" fill="#1E2B5E"/></marker>
+<marker id="T02-aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="13" markerHeight="13" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#C8502A"/></marker>
+<marker id="T02-ai" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#1E2B5E"/></marker>
+<style>#T02 .l{font-size:17px;font-weight:600}</style></defs>
+<g id="T02-guards" data-part="Valanced mudguards" data-category="vintage">
+<path d="M230.06 557.67 A208 208 0 0 1 622.85 537.08 L610.8 541.95 A195 195 0 0 0 242.55 561.25 Z" class="t o"/>
+<path d="M239.95 549.56 A201 201 0 0 1 612.17 530.05" class="n f"/>
+<path d="M1005.14 593.26 A208 208 0 0 1 1417.98 586.05 L1405.1 587.86 A195 195 0 0 0 1018.07 594.62 Z" class="t o"/>
+<path d="M1013.47 583.56 A201 201 0 0 1 1409.31 576.65" class="n f"/>
+<line x1="531" y1="440.06" x2="448.47" y2="591.36" class="f"/>
+<line x1="360.91" y1="425.18" x2="417.8" y2="587.59" class="f"/>
+</g>
+<g id="T02-rack" data-part="Luggage rack" data-category="vintage">
+<path d="M1009.81 404.99 L1299.81 422.99 L1300.19 417.01 L1010.19 399.01 Z" class="t i"/>
+<line x1="1050" y1="404" x2="1052" y2="416" class="f"/>
+<line x1="1100" y1="404" x2="1102" y2="416" class="f"/>
+<line x1="1150" y1="404" x2="1152" y2="416" class="f"/>
+<line x1="1200" y1="404" x2="1202" y2="416" class="f"/>
+<line x1="1250" y1="404" x2="1252" y2="416" class="f"/>
+<line x1="1290" y1="420" x2="1330" y2="520" class="i"/>
+<line x1="1060" y1="404" x2="1040" y2="470" class="i"/>
+</g>
+<g id="T02-wheels" data-part="Clincher wheels" data-category="vintage">
+<path d="M244 615 a186 186 0 1 0 372 0 a186 186 0 1 0 -372 0 Z M280 615 a150 150 0 1 0 300 0 a150 150 0 1 0 -300 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="430" cy="615" r="169.8" class="n f"/>
+<circle cx="430" cy="615" r="182" class="n f" stroke-dasharray="1.5 3"/>
+<path d="M280 615 a150 150 0 1 0 300 0 a150 150 0 1 0 -300 0 Z M288 615 a142 142 0 1 0 284 0 a142 142 0 1 0 -284 0 Z" class="t o" fill-rule="evenodd"/>
+<circle cx="430" cy="615" r="146" class="n f"/>
+<circle cx="430" cy="615" r="146" class="n f"/>
+<line x1="449.56" y1="619.16" x2="509.41" y2="732.72" class="f"/>
+<line x1="447.32" y1="625" x2="567.78" y2="580.65" class="f"/>
+<line x1="443.38" y1="629.86" x2="425.04" y2="756.91" class="f"/>
+<line x1="438.13" y1="633.27" x2="561.66" y2="668.19" class="f"/>
+<line x1="432.09" y1="634.89" x2="342.58" y2="726.9" class="f"/>
+<line x1="425.84" y1="634.56" x2="505.25" y2="735.42" class="f"/>
+<line x1="420" y1="632.32" x2="293.5" y2="654.14" class="f"/>
+<line x1="415.14" y1="628.38" x2="420.09" y2="756.65" class="f"/>
+<line x1="411.73" y1="623.13" x2="296.56" y2="566.43" class="f"/>
+<line x1="410.11" y1="617.09" x2="338.72" y2="723.78" class="f"/>
+<line x1="410.44" y1="610.84" x2="350.59" y2="497.28" class="f"/>
+<line x1="412.68" y1="605" x2="292.22" y2="649.35" class="f"/>
+<line x1="416.62" y1="600.14" x2="434.96" y2="473.09" class="f"/>
+<line x1="421.87" y1="596.73" x2="298.34" y2="561.81" class="f"/>
+<line x1="427.91" y1="595.11" x2="517.42" y2="503.1" class="f"/>
+<line x1="434.16" y1="595.44" x2="354.75" y2="494.58" class="f"/>
+<line x1="440" y1="597.68" x2="566.5" y2="575.86" class="f"/>
+<line x1="444.86" y1="601.62" x2="439.91" y2="473.35" class="f"/>
+<line x1="448.27" y1="606.87" x2="563.44" y2="663.57" class="f"/>
+<line x1="449.89" y1="612.91" x2="521.28" y2="506.22" class="f"/>
+<circle cx="430" cy="615" r="26" class="t o"/>
+<line x1="449.97" y1="616.05" x2="526.84" y2="718.85" class="i"/>
+<line x1="448.67" y1="622.17" x2="560.71" y2="559.52" class="i"/>
+<line x1="445.54" y1="627.59" x2="447.31" y2="755.94" class="i"/>
+<line x1="440.89" y1="631.77" x2="568.36" y2="646.94" class="i"/>
+<line x1="435.18" y1="634.32" x2="361.16" y2="739.2" class="i"/>
+<line x1="428.95" y1="634.97" x2="523.16" y2="722.17" class="i"/>
+<line x1="422.83" y1="633.67" x2="301.3" y2="675.01" class="i"/>
+<line x1="417.41" y1="630.54" x2="442.38" y2="756.46" class="i"/>
+<line x1="413.23" y1="625.89" x2="290.61" y2="587.91" class="i"/>
+<line x1="410.68" y1="620.18" x2="356.86" y2="736.72" class="i"/>
+<line x1="410.03" y1="613.95" x2="333.16" y2="511.15" class="i"/>
+<line x1="411.33" y1="607.83" x2="299.29" y2="670.48" class="i"/>
+<line x1="414.46" y1="602.41" x2="412.69" y2="474.06" class="i"/>
+<line x1="419.11" y1="598.23" x2="291.64" y2="583.06" class="i"/>
+<line x1="424.82" y1="595.68" x2="498.84" y2="490.8" class="i"/>
+<line x1="431.05" y1="595.03" x2="336.84" y2="507.83" class="i"/>
+<line x1="437.17" y1="596.33" x2="558.7" y2="554.99" class="i"/>
+<line x1="442.59" y1="599.46" x2="417.62" y2="473.54" class="i"/>
+<line x1="446.77" y1="604.11" x2="569.39" y2="642.09" class="i"/>
+<line x1="449.32" y1="609.82" x2="503.14" y2="493.28" class="i"/>
+<path d="M524.65 712.69 L532.84 721.47 L529.03 725.01 L520.85 716.24 Z" class="t2 f"/>
+<path d="M554.17 559.47 L565.22 554.78 L567.25 559.57 L556.2 564.25 Z" class="t2 f"/>
+<path d="M449.15 749.67 L450.62 761.58 L445.46 762.21 L443.99 750.3 Z" class="t2 f"/>
+<path d="M563.1 643.06 L574.79 645.76 L573.62 650.83 L561.93 648.13 Z" class="t2 f"/>
+<path d="M366.34 735.21 L360.52 745.7 L355.97 743.18 L361.79 732.69 Z" class="t2 f"/>
+<path d="M521.19 715.93 L529.06 724.99 L525.13 728.4 L517.26 719.35 Z" class="t2 f"/>
+<path d="M307.84 674.83 L296.97 679.9 L294.77 675.19 L305.64 670.12 Z" class="t2 f"/>
+<path d="M444.44 750.26 L445.49 762.21 L440.31 762.66 L439.26 750.71 Z" class="t2 f"/>
+<path d="M296 591.6 L284.22 589.31 L285.22 584.21 L296.99 586.5 Z" class="t2 f"/>
+<path d="M362.18 732.91 L356 743.2 L351.55 740.52 L357.73 730.24 Z" class="t2 f"/>
+<path d="M335.35 517.31 L327.16 508.53 L330.97 504.99 L339.15 513.76 Z" class="t2 f"/>
+<path d="M305.83 670.53 L294.78 675.22 L292.75 670.43 L303.8 665.75 Z" class="t2 f"/>
+<path d="M410.85 480.33 L409.38 468.42 L414.54 467.79 L416.01 479.7 Z" class="t2 f"/>
+<path d="M296.9 586.94 L285.21 584.24 L286.38 579.17 L298.07 581.87 Z" class="t2 f"/>
+<path d="M493.66 494.79 L499.48 484.3 L504.03 486.82 L498.21 497.31 Z" class="t2 f"/>
+<path d="M338.81 514.07 L330.94 505.01 L334.87 501.6 L342.74 510.65 Z" class="t2 f"/>
+<path d="M552.16 555.17 L563.03 550.1 L565.23 554.81 L554.36 559.88 Z" class="t2 f"/>
+<path d="M415.56 479.74 L414.51 467.79 L419.69 467.34 L420.74 479.29 Z" class="t2 f"/>
+<path d="M564 638.4 L575.78 640.69 L574.78 645.79 L563.01 643.5 Z" class="t2 f"/>
+<path d="M497.82 497.09 L504 486.8 L508.45 489.48 L502.27 499.76 Z" class="t2 f"/>
+<path d="M508.21 726.3 L514.92 736.24 L510.61 739.15 L503.89 729.2 Z" class="t2 f"/>
+<path d="M561.33 579.58 L572.97 576.67 L574.23 581.72 L562.59 584.62 Z" class="t2 f"/>
+<path d="M427.85 751.01 L427.43 763 L422.24 762.82 L422.66 750.83 Z" class="t2 f"/>
+<path d="M557.07 663.54 L568.2 668.03 L566.25 672.85 L555.12 668.36 Z" class="t2 f"/>
+<path d="M348.32 723.77 L340.93 733.23 L336.83 730.02 L344.22 720.57 Z" class="t2 f"/>
+<path d="M504.27 728.96 L510.63 739.13 L506.22 741.89 L499.86 731.71 Z" class="t2 f"/>
+<path d="M299.99 654.99 L288.45 658.29 L287.02 653.3 L298.55 649.99 Z" class="t2 f"/>
+<path d="M423.11 750.85 L422.27 762.82 L417.08 762.46 L417.92 750.49 Z" class="t2 f"/>
+<path d="M301.31 570.93 L290.04 566.82 L291.81 561.94 L303.09 566.04 Z" class="t2 f"/>
+<path d="M344.57 720.85 L336.86 730.05 L332.88 726.7 L340.59 717.51 Z" class="t2 f"/>
+<path d="M351.79 503.7 L345.08 493.76 L349.39 490.85 L356.11 500.8 Z" class="t2 f"/>
+<path d="M298.67 650.42 L287.03 653.33 L285.77 648.28 L297.41 645.38 Z" class="t2 f"/>
+<path d="M432.15 478.99 L432.57 467 L437.76 467.18 L437.34 479.17 Z" class="t2 f"/>
+<path d="M302.93 566.46 L291.8 561.97 L293.75 557.15 L304.88 561.64 Z" class="t2 f"/>
+<path d="M511.68 506.23 L519.07 496.77 L523.17 499.98 L515.78 509.43 Z" class="t2 f"/>
+<path d="M355.73 501.04 L349.37 490.87 L353.78 488.11 L360.14 498.29 Z" class="t2 f"/>
+<path d="M560.01 575.01 L571.55 571.71 L572.98 576.7 L561.45 580.01 Z" class="t2 f"/>
+<path d="M436.89 479.15 L437.73 467.18 L442.92 467.54 L442.08 479.51 Z" class="t2 f"/>
+<path d="M558.69 659.07 L569.96 663.18 L568.19 668.06 L556.91 663.96 Z" class="t2 f"/>
+<path d="M515.43 509.15 L523.14 499.95 L527.12 503.3 L519.41 512.49 Z" class="t2 f"/>
+<path d="M1026 615 a186 186 0 1 0 372 0 a186 186 0 1 0 -372 0 Z M1062 615 a150 150 0 1 0 300 0 a150 150 0 1 0 -300 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="1212" cy="615" r="169.8" class="n f"/>
+<circle cx="1212" cy="615" r="182" class="n f" stroke-dasharray="1.5 3"/>
+<path d="M1062 615 a150 150 0 1 0 300 0 a150 150 0 1 0 -300 0 Z M1070 615 a142 142 0 1 0 284 0 a142 142 0 1 0 -284 0 Z" class="t o" fill-rule="evenodd"/>
+<circle cx="1212" cy="615" r="146" class="n f"/>
+<circle cx="1212" cy="615" r="146" class="n f"/>
+<line x1="1239.39" y1="620.82" x2="1291.41" y2="732.72" class="f"/>
+<line x1="1236.25" y1="629" x2="1349.78" y2="580.65" class="f"/>
+<line x1="1230.74" y1="635.81" x2="1207.04" y2="756.91" class="f"/>
+<line x1="1223.39" y1="640.58" x2="1343.66" y2="668.19" class="f"/>
+<line x1="1214.93" y1="642.85" x2="1124.58" y2="726.9" class="f"/>
+<line x1="1206.18" y1="642.39" x2="1287.25" y2="735.42" class="f"/>
+<line x1="1198" y1="639.25" x2="1075.5" y2="654.14" class="f"/>
+<line x1="1191.19" y1="633.74" x2="1202.09" y2="756.65" class="f"/>
+<line x1="1186.42" y1="626.39" x2="1078.56" y2="566.43" class="f"/>
+<line x1="1184.15" y1="617.93" x2="1120.72" y2="723.78" class="f"/>
+<line x1="1184.61" y1="609.18" x2="1132.59" y2="497.28" class="f"/>
+<line x1="1187.75" y1="601" x2="1074.22" y2="649.35" class="f"/>
+<line x1="1193.26" y1="594.19" x2="1216.96" y2="473.09" class="f"/>
+<line x1="1200.61" y1="589.42" x2="1080.34" y2="561.81" class="f"/>
+<line x1="1209.07" y1="587.15" x2="1299.42" y2="503.1" class="f"/>
+<line x1="1217.82" y1="587.61" x2="1136.75" y2="494.58" class="f"/>
+<line x1="1226" y1="590.75" x2="1348.5" y2="575.86" class="f"/>
+<line x1="1232.81" y1="596.26" x2="1221.91" y2="473.35" class="f"/>
+<line x1="1237.58" y1="603.61" x2="1345.44" y2="663.57" class="f"/>
+<line x1="1239.85" y1="612.07" x2="1303.28" y2="506.22" class="f"/>
+<circle cx="1212" cy="615" r="34" class="t o"/>
+<line x1="1239.96" y1="616.47" x2="1308.84" y2="718.85" class="i"/>
+<line x1="1238.14" y1="625.03" x2="1342.71" y2="559.52" class="i"/>
+<line x1="1233.76" y1="632.62" x2="1229.31" y2="755.94" class="i"/>
+<line x1="1227.25" y1="638.48" x2="1350.36" y2="646.94" class="i"/>
+<line x1="1219.25" y1="642.05" x2="1143.16" y2="739.2" class="i"/>
+<line x1="1210.53" y1="642.96" x2="1305.16" y2="722.17" class="i"/>
+<line x1="1201.97" y1="641.14" x2="1083.3" y2="675.01" class="i"/>
+<line x1="1194.38" y1="636.76" x2="1224.38" y2="756.46" class="i"/>
+<line x1="1188.52" y1="630.25" x2="1072.61" y2="587.91" class="i"/>
+<line x1="1184.95" y1="622.25" x2="1138.86" y2="736.72" class="i"/>
+<line x1="1184.04" y1="613.53" x2="1115.16" y2="511.15" class="i"/>
+<line x1="1185.86" y1="604.97" x2="1081.29" y2="670.48" class="i"/>
+<line x1="1190.24" y1="597.38" x2="1194.69" y2="474.06" class="i"/>
+<line x1="1196.75" y1="591.52" x2="1073.64" y2="583.06" class="i"/>
+<line x1="1204.75" y1="587.95" x2="1280.84" y2="490.8" class="i"/>
+<line x1="1213.47" y1="587.04" x2="1118.84" y2="507.83" class="i"/>
+<line x1="1222.03" y1="588.86" x2="1340.7" y2="554.99" class="i"/>
+<line x1="1229.62" y1="593.24" x2="1199.62" y2="473.54" class="i"/>
+<line x1="1235.48" y1="599.75" x2="1351.39" y2="642.09" class="i"/>
+<line x1="1239.05" y1="607.75" x2="1285.14" y2="493.28" class="i"/>
+<path d="M1306.65 712.69 L1314.84 721.47 L1311.03 725.01 L1302.85 716.24 Z" class="t2 f"/>
+<path d="M1336.17 559.47 L1347.22 554.78 L1349.25 559.57 L1338.2 564.25 Z" class="t2 f"/>
+<path d="M1231.15 749.67 L1232.62 761.58 L1227.46 762.21 L1225.99 750.3 Z" class="t2 f"/>
+<path d="M1345.1 643.06 L1356.79 645.76 L1355.62 650.83 L1343.93 648.13 Z" class="t2 f"/>
+<path d="M1148.34 735.21 L1142.52 745.7 L1137.97 743.18 L1143.79 732.69 Z" class="t2 f"/>
+<path d="M1303.19 715.93 L1311.06 724.99 L1307.13 728.4 L1299.26 719.35 Z" class="t2 f"/>
+<path d="M1089.84 674.83 L1078.97 679.9 L1076.77 675.19 L1087.64 670.12 Z" class="t2 f"/>
+<path d="M1226.44 750.26 L1227.49 762.21 L1222.31 762.66 L1221.26 750.71 Z" class="t2 f"/>
+<path d="M1078 591.6 L1066.22 589.31 L1067.22 584.21 L1078.99 586.5 Z" class="t2 f"/>
+<path d="M1144.18 732.91 L1138 743.2 L1133.55 740.52 L1139.73 730.24 Z" class="t2 f"/>
+<path d="M1117.35 517.31 L1109.16 508.53 L1112.97 504.99 L1121.15 513.76 Z" class="t2 f"/>
+<path d="M1087.83 670.53 L1076.78 675.22 L1074.75 670.43 L1085.8 665.75 Z" class="t2 f"/>
+<path d="M1192.85 480.33 L1191.38 468.42 L1196.54 467.79 L1198.01 479.7 Z" class="t2 f"/>
+<path d="M1078.9 586.94 L1067.21 584.24 L1068.38 579.17 L1080.07 581.87 Z" class="t2 f"/>
+<path d="M1275.66 494.79 L1281.48 484.3 L1286.03 486.82 L1280.21 497.31 Z" class="t2 f"/>
+<path d="M1120.81 514.07 L1112.94 505.01 L1116.87 501.6 L1124.74 510.65 Z" class="t2 f"/>
+<path d="M1334.16 555.17 L1345.03 550.1 L1347.23 554.81 L1336.36 559.88 Z" class="t2 f"/>
+<path d="M1197.56 479.74 L1196.51 467.79 L1201.69 467.34 L1202.74 479.29 Z" class="t2 f"/>
+<path d="M1346 638.4 L1357.78 640.69 L1356.78 645.79 L1345.01 643.5 Z" class="t2 f"/>
+<path d="M1279.82 497.09 L1286 486.8 L1290.45 489.48 L1284.27 499.76 Z" class="t2 f"/>
+<path d="M1290.21 726.3 L1296.92 736.24 L1292.61 739.15 L1285.89 729.2 Z" class="t2 f"/>
+<path d="M1343.33 579.58 L1354.97 576.67 L1356.23 581.72 L1344.59 584.62 Z" class="t2 f"/>
+<path d="M1209.85 751.01 L1209.43 763 L1204.24 762.82 L1204.66 750.83 Z" class="t2 f"/>
+<path d="M1339.07 663.54 L1350.2 668.03 L1348.25 672.85 L1337.12 668.36 Z" class="t2 f"/>
+<path d="M1130.32 723.77 L1122.93 733.23 L1118.83 730.02 L1126.22 720.57 Z" class="t2 f"/>
+<path d="M1286.27 728.96 L1292.63 739.13 L1288.22 741.89 L1281.86 731.71 Z" class="t2 f"/>
+<path d="M1081.99 654.99 L1070.45 658.29 L1069.02 653.3 L1080.55 649.99 Z" class="t2 f"/>
+<path d="M1205.11 750.85 L1204.27 762.82 L1199.08 762.46 L1199.92 750.49 Z" class="t2 f"/>
+<path d="M1083.31 570.93 L1072.04 566.82 L1073.81 561.94 L1085.09 566.04 Z" class="t2 f"/>
+<path d="M1126.57 720.85 L1118.86 730.05 L1114.88 726.7 L1122.59 717.51 Z" class="t2 f"/>
+<path d="M1133.79 503.7 L1127.08 493.76 L1131.39 490.85 L1138.11 500.8 Z" class="t2 f"/>
+<path d="M1080.67 650.42 L1069.03 653.33 L1067.77 648.28 L1079.41 645.38 Z" class="t2 f"/>
+<path d="M1214.15 478.99 L1214.57 467 L1219.76 467.18 L1219.34 479.17 Z" class="t2 f"/>
+<path d="M1084.93 566.46 L1073.8 561.97 L1075.75 557.15 L1086.88 561.64 Z" class="t2 f"/>
+<path d="M1293.68 506.23 L1301.07 496.77 L1305.17 499.98 L1297.78 509.43 Z" class="t2 f"/>
+<path d="M1137.73 501.04 L1131.37 490.87 L1135.78 488.11 L1142.14 498.29 Z" class="t2 f"/>
+<path d="M1342.01 575.01 L1353.55 571.71 L1354.98 576.7 L1343.45 580.01 Z" class="t2 f"/>
+<path d="M1218.89 479.15 L1219.73 467.18 L1224.92 467.54 L1224.08 479.51 Z" class="t2 f"/>
+<path d="M1340.69 659.07 L1351.96 663.18 L1350.19 668.06 L1338.91 663.96 Z" class="t2 f"/>
+<path d="M1297.43 509.15 L1305.14 499.95 L1309.12 503.3 L1301.41 512.49 Z" class="t2 f"/>
+<path d="M437.79 619.5 L430 624 L422.21 619.5 L422.21 610.5 L430 606 L437.79 610.5 Z" class="t2 f"/>
+<circle cx="430" cy="615" r="4.05" class="w f"/>
+</g>
+<g id="T02-rbrake" data-part="Rear brake drum" data-category="vintage">
+<circle cx="1212" cy="615" r="54" class="t2 o"/>
+<circle cx="1212" cy="615" r="48" class="n f"/>
+<line x1="1234.68" y1="615" x2="1259" y2="615" class="f"/>
+<line x1="1228.04" y1="631.04" x2="1245.23" y2="648.23" class="f"/>
+<line x1="1212" y1="637.68" x2="1212" y2="662" class="f"/>
+<line x1="1195.96" y1="631.04" x2="1178.77" y2="648.23" class="f"/>
+<line x1="1189.32" y1="615" x2="1165" y2="615" class="f"/>
+<line x1="1195.96" y1="598.96" x2="1178.77" y2="581.77" class="f"/>
+<line x1="1212" y1="592.32" x2="1212" y2="568" class="f"/>
+<line x1="1228.04" y1="598.96" x2="1245.23" y2="581.77" class="f"/>
+<path d="M1245.22 596.72 L1228.08 554.01 L1222.44 556.06 L1236.77 599.8 Z" class="t i"/>
+<circle cx="1240.99" cy="598.26" r="6" class="t2 i"/>
+<circle cx="1240.99" cy="598.26" r="2.4" class="w f"/>
+<circle cx="1225.26" cy="555.03" r="3" class="w i"/>
+<path d="M1219.79 619.5 L1212 624 L1204.21 619.5 L1204.21 610.5 L1212 606 L1219.79 610.5 Z" class="t2 f"/>
+<circle cx="1212" cy="615" r="4.05" class="w f"/>
+<line x1="1225.26" y1="555.03" x2="1060" y2="690" class="i"/>
+</g>
+<g id="T02-frame-outline" data-part="Rigid loop frame" data-category="vintage">
+<path d="M598 302 L936 332" fill="none" stroke="#1E2B5E" stroke-width="15.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M568 358 L924 432" fill="none" stroke="#1E2B5E" stroke-width="14.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M568 380 C575 403.33 596.33 466.67 610 520 C623.67 573.33 635 665 650 700 C665 735 665 724.33 700 730 C735 735.67 823.67 737 860 734 C896.33 731 908.33 715.67 918 712" fill="none" stroke="#1E2B5E" stroke-width="16.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M918 712 L936 332" fill="none" stroke="#1E2B5E" stroke-width="16.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M936 332 L1212 615" fill="none" stroke="#1E2B5E" stroke-width="13.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M918 712 L1212 615" fill="none" stroke="#1E2B5E" stroke-width="14.4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="T02-frame" data-part="Rigid loop frame" data-category="vintage">
+<path d="M598 302 L936 332" fill="none" stroke="#DCE4F2" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M568 358 L924 432" fill="none" stroke="#DCE4F2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M568 380 C575 403.33 596.33 466.67 610 520 C623.67 573.33 635 665 650 700 C665 735 665 724.33 700 730 C735 735.67 823.67 737 860 734 C896.33 731 908.33 715.67 918 712" fill="none" stroke="#DCE4F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M918 712 L936 332" fill="none" stroke="#DCE4F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M936 332 L1212 615" fill="none" stroke="#DCE4F2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M918 712 L1212 615" fill="none" stroke="#DCE4F2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M574.38 387.27 L606.38 305.27 L589.62 298.73 L557.62 380.73 Z" class="t o"/>
+<circle cx="598" cy="302" r="10" class="t i"/>
+<circle cx="566" cy="384" r="10" class="t i"/>
+<circle cx="936" cy="332" r="10" class="t i"/>
+<circle cx="918" cy="712" r="10" class="t i"/>
+<circle cx="924" cy="432" r="10" class="t i"/>
+<circle cx="1212" cy="615" r="16" class="t i"/>
+<path d="M1219.79 619.5 L1212 624 L1204.21 619.5 L1204.21 610.5 L1212 606 L1219.79 610.5 Z" class="t2 f"/>
+<circle cx="1212" cy="615" r="4.05" class="w f"/>
+</g>
+<g id="T02-fork" data-part="Springer fork" data-category="vintage">
+<path d="M550.62 393.35 L447.96 605.01 L456.04 608.99 L561.38 398.65 Z" class="t o"/>
+<path d="M525.86 364.24 L422.32 609.44 L429.68 612.56 L534.14 367.76 Z" class="t o"/>
+<path d="M449.98 601.35 L422.32 612.29 L425.68 621.71 L454.02 612.65 Z" class="t2 o"/>
+<circle cx="452" cy="607" r="5" class="w i"/>
+<circle cx="426" cy="611" r="4" class="w i"/>
+<path d="M517.41 367.28 L563.41 407.28 L572.59 396.72 L526.59 356.72 Z" class="t o"/>
+<path d="M550.96 290.31 L604.96 316.31 L611.04 303.69 L557.04 277.69 Z" class="t o"/>
+<path d="M565.29 301.32 L546.59 301.31 M562.54 311.07 L543.84 311.06 M559.79 320.82 L541.09 320.81 M557.04 330.57 L538.34 330.56 M554.29 340.32 L535.59 340.31 M551.54 350.07 L532.84 350.06 M548.79 359.82 L530.09 359.81 M546.04 369.57 L527.34 369.56 " class="n f"/>
+<path d="M549.34 291.56 L565.29 301.32 M546.59 301.31 L562.54 311.07 M543.84 311.06 L559.79 320.82 M541.09 320.81 L557.04 330.57 M538.34 330.56 L554.29 340.32 M535.59 340.31 L551.54 350.07 M532.84 350.06 L548.79 359.82 M530.09 359.81 L546.04 369.57 " class="n i" style="stroke-width:2.4"/>
+<path d="M577.17 307.47 L562.12 309.24 M574.02 318.61 L558.98 320.39 M570.88 329.76 L555.83 331.53 M567.74 340.9 L552.69 342.67 M564.59 352.04 L549.55 353.81 M561.45 363.19 L546.41 364.96 M558.31 374.33 L543.26 376.1 " class="n f"/>
+<path d="M565.26 298.1 L577.17 307.47 M562.12 309.24 L574.02 318.61 M558.98 320.39 L570.88 329.76 M555.83 331.53 L567.74 340.9 M552.69 342.67 L564.59 352.04 M549.55 353.81 L561.45 363.19 M546.41 364.96 L558.31 374.33 " class="n i" style="stroke-width:2.4"/>
+<path d="M433.79 615.5 L426 620 L418.21 615.5 L418.21 606.5 L426 602 L433.79 606.5 Z" class="t2 f"/>
+<circle cx="426" cy="611" r="4.05" class="w f"/>
+</g>
+<g id="T02-bars-outline" data-part="Handlebar and twist grips" data-category="vintage">
+<path d="M598 302 C599 299 599 293.33 604 284 C609 274.67 613.67 253.67 628 246 C642.33 238.33 670.67 236.67 690 238 C709.33 239.33 735 251.33 744 254" fill="none" stroke="#1E2B5E" stroke-width="12.4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="T02-bars" data-part="Handlebar and twist grips" data-category="vintage">
+<path d="M598 302 C599 299 599 293.33 604 284 C609 274.67 613.67 253.67 628 246 C642.33 238.33 670.67 236.67 690 238 C709.33 239.33 735 251.33 744 254" fill="none" stroke="#DCE4F2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M710.31 253.31 L762.31 265.31 L765.69 250.69 L713.69 238.69 Z" class="t2 o"/>
+<line x1="720.5" y1="241" x2="720.5" y2="255" class="f"/>
+<line x1="729" y1="243" x2="729" y2="257" class="f"/>
+<line x1="737.5" y1="245" x2="737.5" y2="259" class="f"/>
+<line x1="746" y1="247" x2="746" y2="261" class="f"/>
+<line x1="754.5" y1="249" x2="754.5" y2="263" class="f"/>
+<path d="M732 262 C726.67 268.33 712 285.33 700 300 C688 314.67 670 330 660 350 C650 370 643.33 408.33 640 420" class="n i"/>
+</g>
+<g id="T02-lamp" data-part="Acetylene headlamp" data-category="vintage">
+<path d="M494 308 C501 296.33 521.33 313 528 322 C534.67 331 535.67 350.33 534 362 C532.33 373.67 526 387 518 392 C510 397 490 406 486 392 C482 378 487 319.67 494 308 Z" class="t o"/>
+<circle cx="488" cy="352" r="40" class="t o"/>
+<circle cx="488" cy="352" r="33" class="w i"/>
+<circle cx="488" cy="352" r="12" class="n f"/>
+<path d="M492 312 l10 -22 h18 l8 22" class="t2 i"/>
+<path d="M524.29 359.49 L532.29 379.49 L539.71 376.51 L531.71 356.51 Z" class="t i"/>
+<rect x="574" y="340" width="26" height="54" rx="6" class="t2 o"/>
+<path d="M587 340 C582.5 336.67 571.5 324 560 320 C548.5 316 525 316.67 518 316" class="n i"/>
+</g>
+<g id="T02-tank" data-part="Tank, fuel and oil" data-category="vintage">
+<path d="M612 306 C637.67 296.67 708.67 301.33 760 304 C811.33 306.67 892.33 309.33 920 322 C947.67 334.67 926.33 363.67 926 380 C925.67 396.33 945.67 412.67 918 420 C890.33 427.33 809.67 426.33 760 424 C710.33 421.67 645.67 416.67 620 406 C594.33 395.33 607.33 376.67 606 360 C604.67 343.33 586.33 315.33 612 306 Z" class="t o"/>
+<path d="M626 318 C647.67 304.33 713.33 313.67 760 316 C806.67 318.33 880.67 316.33 906 332 C931.33 347.67 936.33 396.33 912 410 C887.67 423.67 807 416 760 414 C713 412 652.33 414 630 398 C607.67 382 604.33 331.67 626 318 Z" class="n f"/>
+<line x1="790" y1="314" x2="788" y2="418" class="i" stroke-dasharray="5 4"/>
+<rect x="651" y="296" width="18" height="10" rx="3" class="t2 i"/>
+<rect x="851" y="296" width="18" height="10" rx="3" class="t2 i"/>
+<rect x="812" y="290" width="10" height="18" rx="2" class="w i"/>
+<circle cx="817" cy="288" r="6" class="t2 i"/>
+<text x="650" y="374" class="m" text-anchor="middle" style="font-size:11px">FUEL</text>
+<text x="850" y="374" class="m" text-anchor="middle" style="font-size:11px">OIL</text>
+</g>
+<g id="T02-shift" data-part="Hand gear shift" data-category="vintage">
+<path d="M690 396 L744 396 L744 412 L690 412 Z" class="t2 i"/>
+<circle cx="700" cy="404" r="3" class="w f"/>
+<circle cx="716" cy="404" r="3" class="w f"/>
+<circle cx="732" cy="404" r="3" class="w f"/>
+<path d="M723.96 451.41 L706.97 343.56 L701.03 344.44 L716.04 452.59 Z" class="t o"/>
+<circle cx="702" cy="338" r="9" class="t2 o"/>
+<circle cx="720" cy="452" r="6" class="t2 i"/>
+<line x1="720" y1="452" x2="790" y2="560" class="i"/>
+</g>
+<g id="T02-engine" data-part="F-head V-twin" data-category="vintage">
+<path d="M780.27 583.79 L741.24 489.55 L683.96 513.28 L722.99 607.52 Z" class="t o"/>
+<path d="M707.63 604.4 L788.93 570.72 L787.35 566.9 L706.04 600.57 Z" class="t i"/>
+<path d="M704.72 595.64 L784.79 562.48 L783.21 558.65 L703.14 591.82 Z" class="t i"/>
+<path d="M701.82 586.89 L780.66 554.23 L779.07 550.41 L700.23 583.06 Z" class="t i"/>
+<path d="M698.91 578.13 L776.52 545.99 L774.94 542.16 L697.33 574.31 Z" class="t i"/>
+<path d="M696.01 569.38 L772.38 537.74 L770.8 533.92 L694.42 565.55 Z" class="t i"/>
+<path d="M693.1 560.62 L768.25 529.5 L766.66 525.67 L691.52 556.8 Z" class="t i"/>
+<path d="M690.2 551.87 L764.11 521.26 L762.53 517.43 L688.62 548.04 Z" class="t i"/>
+<path d="M687.29 543.11 L759.97 513.01 L758.39 509.19 L685.71 539.29 Z" class="t i"/>
+<path d="M684.39 534.36 L755.84 504.77 L754.25 500.94 L682.81 530.54 Z" class="t i"/>
+<path d="M681.49 525.61 L751.7 496.52 L750.12 492.7 L679.9 521.78 Z" class="t i"/>
+<path d="M745.86 487.64 L732.37 462.92 L671.39 488.18 L679.34 515.19 Z" class="t o"/>
+<path d="M674.65 514.32 L748.56 483.71 L747.07 480.11 L673.15 510.72 Z" class="t2 i"/>
+<path d="M672.72 505.74 L743.86 476.28 L742.36 472.67 L671.22 502.14 Z" class="t2 i"/>
+<path d="M670.79 497.16 L739.15 468.84 L737.66 465.24 L669.29 493.56 Z" class="t2 i"/>
+<path d="M714.82 470.19 L703.63 451.01 L683.3 459.43 L688.95 480.91 Z" class="t2 o"/>
+<path d="M686.61 456.98 L698.4 448.85 M684.32 451.44 L696.1 443.31 M682.02 445.89 L693.81 437.76 " class="n f"/>
+<path d="M700.7 454.39 L686.61 456.98 M698.4 448.85 L684.32 451.44 M696.1 443.31 L682.02 445.89 " class="n i" style="stroke-width:2.4"/>
+<path d="M687.91 441.83 L724.49 425.6 L722.57 420.98 L685.24 435.36 Z" class="t i"/>
+<circle cx="686.58" cy="438.59" r="4" class="w i"/>
+<line x1="723.53" y1="423.29" x2="769.51" y2="584" class="i"/>
+<circle cx="652.58" cy="549.9" r="15" class="t2 o"/>
+<circle cx="652.58" cy="549.9" r="6" class="n f"/>
+<path d="M769.84 471.24 L788.32 463.59 L785.64 457.12 L767.16 464.77 Z" class="w i"/>
+<path d="M817.01 607.52 L856.04 513.28 L798.76 489.55 L759.73 583.79 Z" class="t o"/>
+<path d="M751.07 570.72 L832.37 604.4 L833.96 600.57 L752.65 566.9 Z" class="t i"/>
+<path d="M755.21 562.48 L835.28 595.64 L836.86 591.82 L756.79 558.65 Z" class="t i"/>
+<path d="M759.34 554.23 L838.18 586.89 L839.77 583.06 L760.93 550.41 Z" class="t i"/>
+<path d="M763.48 545.99 L841.09 578.13 L842.67 574.31 L765.06 542.16 Z" class="t i"/>
+<path d="M767.62 537.74 L843.99 569.38 L845.58 565.55 L769.2 533.92 Z" class="t i"/>
+<path d="M771.75 529.5 L846.9 560.62 L848.48 556.8 L773.34 525.67 Z" class="t i"/>
+<path d="M775.89 521.26 L849.8 551.87 L851.38 548.04 L777.47 517.43 Z" class="t i"/>
+<path d="M780.03 513.01 L852.71 543.11 L854.29 539.29 L781.61 509.19 Z" class="t i"/>
+<path d="M784.16 504.77 L855.61 534.36 L857.19 530.54 L785.75 500.94 Z" class="t i"/>
+<path d="M788.3 496.52 L858.51 525.61 L860.1 521.78 L789.88 492.7 Z" class="t i"/>
+<path d="M860.66 515.19 L868.61 488.18 L807.63 462.92 L794.14 487.64 Z" class="t o"/>
+<path d="M791.44 483.71 L865.35 514.32 L866.85 510.72 L792.93 480.11 Z" class="t2 i"/>
+<path d="M796.14 476.28 L867.28 505.74 L868.78 502.14 L797.64 472.67 Z" class="t2 i"/>
+<path d="M800.85 468.84 L869.21 497.16 L870.71 493.56 L802.34 465.24 Z" class="t2 i"/>
+<path d="M851.05 480.91 L856.7 459.43 L836.37 451.01 L825.18 470.19 Z" class="t2 o"/>
+<path d="M840.45 451.62 L854.53 454.21 M842.75 446.08 L856.83 448.66 M845.04 440.53 L859.13 443.12 " class="n f"/>
+<path d="M852.24 459.75 L840.45 451.62 M854.53 454.21 L842.75 446.08 M856.83 448.66 L845.04 440.53 " class="n i" style="stroke-width:2.4"/>
+<path d="M854.76 435.36 L817.43 420.98 L815.51 425.6 L852.09 441.83 Z" class="t i"/>
+<circle cx="853.42" cy="438.59" r="4" class="w i"/>
+<line x1="816.47" y1="423.29" x2="770.49" y2="584" class="i"/>
+<circle cx="887.42" cy="549.9" r="15" class="t2 o"/>
+<circle cx="887.42" cy="549.9" r="6" class="n f"/>
+<path d="M772.84 464.77 L754.36 457.12 L751.68 463.59 L770.16 471.24 Z" class="w i"/>
+<path d="M706 600 C719 590.67 748.33 584 770 584 C791.67 584 814.33 594.33 836 600 C857.67 605.67 884.33 608 900 618 C915.67 628 928 644.33 930 660 C932 675.67 927 700.67 912 712 C897 723.33 868 726 840 728 C812 730 767.33 730.33 744 724 C720.67 717.67 708.67 704 700 690 C691.33 676 691 655 692 640 C693 625 693 609.33 706 600 Z" class="t o"/>
+<circle cx="770" cy="658" r="42" class="n i"/>
+<circle cx="819.73" cy="663.23" r="3.2" class="t2 f"/>
+<circle cx="819.73" cy="663.23" r="1.28" class="w f"/>
+<circle cx="807.16" cy="691.46" r="3.2" class="t2 f"/>
+<circle cx="807.16" cy="691.46" r="1.28" class="w f"/>
+<circle cx="780.4" cy="706.91" r="3.2" class="t2 f"/>
+<circle cx="780.4" cy="706.91" r="1.28" class="w f"/>
+<circle cx="749.66" cy="703.68" r="3.2" class="t2 f"/>
+<circle cx="749.66" cy="703.68" r="1.28" class="w f"/>
+<circle cx="726.7" cy="683" r="3.2" class="t2 f"/>
+<circle cx="726.7" cy="683" r="1.28" class="w f"/>
+<circle cx="720.27" cy="652.77" r="3.2" class="t2 f"/>
+<circle cx="720.27" cy="652.77" r="1.28" class="w f"/>
+<circle cx="732.84" cy="624.54" r="3.2" class="t2 f"/>
+<circle cx="732.84" cy="624.54" r="1.28" class="w f"/>
+<circle cx="759.6" cy="609.09" r="3.2" class="t2 f"/>
+<circle cx="759.6" cy="609.09" r="1.28" class="w f"/>
+<circle cx="790.34" cy="612.32" r="3.2" class="t2 f"/>
+<circle cx="790.34" cy="612.32" r="1.28" class="w f"/>
+<circle cx="813.3" cy="633" r="3.2" class="t2 f"/>
+<circle cx="813.3" cy="633" r="1.28" class="w f"/>
+<circle cx="880" cy="676" r="26" class="n i"/>
+</g>
+<g id="T02-magneto" data-part="Magneto" data-category="vintage">
+<path d="M668 584 H720 a16 16 0 0 1 0 32 H668 a16 16 0 0 1 0 -32 Z" class="t2 o"/>
+<circle cx="668" cy="600" r="16" class="t o"/>
+<circle cx="668" cy="600" r="7" class="w i"/>
+<path d="M678 568 l12 -12 h18 l12 12" class="t i"/>
+<path d="M690 558 C691.67 551.67 687.25 534.67 700 520 C712.75 505.33 755.42 478.34 766.5 470.01" class="n i"/>
+<path d="M704 558 C713.33 543.33 749.75 485.67 760 470 C770.25 454.33 764.58 465.01 765.5 464.01" class="n i"/>
+</g>
+<g id="T02-carb" data-part="Carburettor" data-category="vintage">
+<rect x="756" y="502" width="32" height="40" rx="4" class="t2 o"/>
+<path d="M772 502 C768.67 496.67 764.83 477.18 752 470 C739.17 462.82 704.5 460.77 694.99 458.92" class="n o" style="stroke-width:6"/>
+<path d="M772 502 C775.33 496.67 779.83 477.18 792 470 C804.17 462.82 836.17 460.77 845.01 458.92" class="n o" style="stroke-width:6"/>
+<path d="M756 530 q-30 4 -36 26" class="n o" style="stroke-width:7"/>
+<circle cx="720" cy="558" r="9" class="t i"/>
+</g>
+<g id="T02-exhaust-outline" data-part="Exhaust and silencer" data-category="vintage">
+<path d="M652.58 549.9 C645.92 556.57 613.35 566.55 612.58 589.9 C611.82 613.25 633.43 662.98 648 690 C662.57 717.02 674.67 740.33 700 752 C725.33 763.67 783.33 758.67 800 760" fill="none" stroke="#1E2B5E" stroke-width="15.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.42 549.9 C892.42 558.24 910.32 571.55 917.42 599.9 C924.51 628.25 932.9 694.65 930 720 C927.1 745.35 918.33 745.33 900 752 C881.67 758.67 833.33 758.67 820 760" fill="none" stroke="#1E2B5E" stroke-width="15.4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="T02-exhaust" data-part="Exhaust and silencer" data-category="vintage">
+<path d="M652.58 549.9 C645.92 556.57 613.35 566.55 612.58 589.9 C611.82 613.25 633.43 662.98 648 690 C662.57 717.02 674.67 740.33 700 752 C725.33 763.67 783.33 758.67 800 760" fill="none" stroke="#DCE4F2" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.42 549.9 C892.42 558.24 910.32 571.55 917.42 599.9 C924.51 628.25 932.9 694.65 930 720 C927.1 745.35 918.33 745.33 900 752 C881.67 758.67 833.33 758.67 820 760" fill="none" stroke="#DCE4F2" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M800 744 H990 a16 16 0 0 1 0 32 H800 a16 16 0 0 1 0 -32 Z" class="t o"/>
+<line x1="816" y1="746" x2="816" y2="774" class="f"/>
+<line x1="836" y1="746" x2="836" y2="774" class="f"/>
+<line x1="856" y1="746" x2="856" y2="774" class="f"/>
+<line x1="876" y1="746" x2="876" y2="774" class="f"/>
+<line x1="896" y1="746" x2="896" y2="774" class="f"/>
+<line x1="916" y1="746" x2="916" y2="774" class="f"/>
+<line x1="936" y1="746" x2="936" y2="774" class="f"/>
+<line x1="956" y1="746" x2="956" y2="774" class="f"/>
+<line x1="976" y1="746" x2="976" y2="774" class="f"/>
+<path d="M1003.49 763.97 L1065.49 771.97 L1066.51 764.03 L1004.51 756.03 Z" class="t i"/>
+</g>
+<g id="T02-chain" data-part="Drive chain" data-category="vintage">
+<path d="M744 676 C744 667 777.33 654.33 800 650 C822.67 645.67 861.33 645.67 880 650 C898.67 654.33 912 667 912 676 C912 685 898.67 699.33 880 704 C861.33 708.67 822.67 708.67 800 704 C777.33 699.33 744 685 744 676 Z" class="t2 o"/>
+<text x="830" y="683" class="m" text-anchor="middle" style="font-size:10px">PRIMARY</text>
+<path d="M926.22 696.74 A3.2 3.2 0 0 0 926.22 703.26 L928.65 703.2 L928.28 705.2 L926.03 704.26 A3.2 3.2 0 0 0 923.67 710.35 L925.97 711.17 L924.9 712.9 L923.14 711.21 A3.2 3.2 0 0 0 918.74 716.03 L920.58 717.63 L918.97 718.85 L917.93 716.64 A3.2 3.2 0 0 0 912.09 719.55 L913.23 721.71 L911.28 722.26 L911.11 719.83 A3.2 3.2 0 0 0 904.62 720.43 L904.9 722.85 L902.88 722.67 L903.61 720.34 A3.2 3.2 0 0 0 897.33 718.55 L896.72 720.91 L894.9 720.01 L896.42 718.1 A3.2 3.2 0 0 0 891.21 714.17 L889.79 716.15 L888.42 714.65 L890.53 713.42 A3.2 3.2 0 0 0 887.09 707.87 L885.05 709.2 L884.32 707.31 L886.73 706.92 A3.2 3.2 0 0 0 885.53 700.51 L883.14 701.01 L883.14 698.99 L885.53 699.49 A3.2 3.2 0 0 0 886.73 693.08 L884.32 692.69 L885.05 690.8 L887.09 692.13 A3.2 3.2 0 0 0 890.53 686.58 L888.42 685.35 L889.79 683.85 L891.21 685.83 A3.2 3.2 0 0 0 896.42 681.9 L894.9 679.99 L896.72 679.09 L897.33 681.45 A3.2 3.2 0 0 0 903.61 679.66 L902.88 677.33 L904.9 677.15 L904.62 679.57 A3.2 3.2 0 0 0 911.11 680.17 L911.28 677.74 L913.23 678.29 L912.09 680.45 A3.2 3.2 0 0 0 917.93 683.36 L918.97 681.15 L920.58 682.37 L918.74 683.97 A3.2 3.2 0 0 0 923.14 688.79 L924.9 687.1 L925.97 688.83 L923.67 689.65 A3.2 3.2 0 0 0 926.03 695.74 L928.28 694.8 L928.65 696.8 Z" class="t i"/>
+<path d="M1278.42 611.58 A3.4 3.4 0 0 0 1278.42 618.42 L1280.96 618.75 L1280.79 621.11 L1278.23 621.06 A3.4 3.4 0 0 0 1277.26 627.84 L1279.72 628.52 L1279.22 630.83 L1276.7 630.43 A3.4 3.4 0 0 0 1274.77 637 L1277.11 638.02 L1276.28 640.24 L1273.84 639.48 A3.4 3.4 0 0 0 1271 645.71 L1273.17 647.05 L1272.04 649.13 L1269.73 648.03 A3.4 3.4 0 0 0 1266.03 653.79 L1267.99 655.43 L1266.57 657.33 L1264.44 655.91 A3.4 3.4 0 0 0 1259.96 661.09 L1261.66 662.99 L1259.99 664.66 L1258.09 662.96 A3.4 3.4 0 0 0 1252.91 667.44 L1254.33 669.57 L1252.43 670.99 L1250.79 669.03 A3.4 3.4 0 0 0 1245.03 672.73 L1246.13 675.04 L1244.05 676.17 L1242.71 674 A3.4 3.4 0 0 0 1236.48 676.84 L1237.24 679.28 L1235.02 680.11 L1234 677.77 A3.4 3.4 0 0 0 1227.43 679.7 L1227.83 682.22 L1225.52 682.72 L1224.84 680.26 A3.4 3.4 0 0 0 1218.06 681.23 L1218.11 683.79 L1215.75 683.96 L1215.42 681.42 A3.4 3.4 0 0 0 1208.58 681.42 L1208.25 683.96 L1205.89 683.79 L1205.94 681.23 A3.4 3.4 0 0 0 1199.16 680.26 L1198.48 682.72 L1196.17 682.22 L1196.57 679.7 A3.4 3.4 0 0 0 1190 677.77 L1188.98 680.11 L1186.76 679.28 L1187.52 676.84 A3.4 3.4 0 0 0 1181.29 674 L1179.95 676.17 L1177.87 675.04 L1178.97 672.73 A3.4 3.4 0 0 0 1173.21 669.03 L1171.57 670.99 L1169.67 669.57 L1171.09 667.44 A3.4 3.4 0 0 0 1165.91 662.96 L1164.01 664.66 L1162.34 662.99 L1164.04 661.09 A3.4 3.4 0 0 0 1159.56 655.91 L1157.43 657.33 L1156.01 655.43 L1157.97 653.79 A3.4 3.4 0 0 0 1154.27 648.03 L1151.96 649.13 L1150.83 647.05 L1153 645.71 A3.4 3.4 0 0 0 1150.16 639.48 L1147.72 640.24 L1146.89 638.02 L1149.23 637 A3.4 3.4 0 0 0 1147.3 630.43 L1144.78 630.83 L1144.28 628.52 L1146.74 627.84 A3.4 3.4 0 0 0 1145.77 621.06 L1143.21 621.11 L1143.04 618.75 L1145.58 618.42 A3.4 3.4 0 0 0 1145.58 611.58 L1143.04 611.25 L1143.21 608.89 L1145.77 608.94 A3.4 3.4 0 0 0 1146.74 602.16 L1144.28 601.48 L1144.78 599.17 L1147.3 599.57 A3.4 3.4 0 0 0 1149.23 593 L1146.89 591.98 L1147.72 589.76 L1150.16 590.52 A3.4 3.4 0 0 0 1153 584.29 L1150.83 582.95 L1151.96 580.87 L1154.27 581.97 A3.4 3.4 0 0 0 1157.97 576.21 L1156.01 574.57 L1157.43 572.67 L1159.56 574.09 A3.4 3.4 0 0 0 1164.04 568.91 L1162.34 567.01 L1164.01 565.34 L1165.91 567.04 A3.4 3.4 0 0 0 1171.09 562.56 L1169.67 560.43 L1171.57 559.01 L1173.21 560.97 A3.4 3.4 0 0 0 1178.97 557.27 L1177.87 554.96 L1179.95 553.83 L1181.29 556 A3.4 3.4 0 0 0 1187.52 553.16 L1186.76 550.72 L1188.98 549.89 L1190 552.23 A3.4 3.4 0 0 0 1196.57 550.3 L1196.17 547.78 L1198.48 547.28 L1199.16 549.74 A3.4 3.4 0 0 0 1205.94 548.77 L1205.89 546.21 L1208.25 546.04 L1208.58 548.58 A3.4 3.4 0 0 0 1215.42 548.58 L1215.75 546.04 L1218.11 546.21 L1218.06 548.77 A3.4 3.4 0 0 0 1224.84 549.74 L1225.52 547.28 L1227.83 547.78 L1227.43 550.3 A3.4 3.4 0 0 0 1234 552.23 L1235.02 549.89 L1237.24 550.72 L1236.48 553.16 A3.4 3.4 0 0 0 1242.71 556 L1244.05 553.83 L1246.13 554.96 L1245.03 557.27 A3.4 3.4 0 0 0 1250.79 560.97 L1252.43 559.01 L1254.33 560.43 L1252.91 562.56 A3.4 3.4 0 0 0 1258.09 567.04 L1259.99 565.34 L1261.66 567.01 L1259.96 568.91 A3.4 3.4 0 0 0 1264.44 574.09 L1266.57 572.67 L1267.99 574.57 L1266.03 576.21 A3.4 3.4 0 0 0 1269.73 581.97 L1272.04 580.87 L1273.17 582.95 L1271 584.29 A3.4 3.4 0 0 0 1273.84 590.52 L1276.28 589.76 L1277.11 591.98 L1274.77 593 A3.4 3.4 0 0 0 1276.7 599.57 L1279.22 599.17 L1279.72 601.48 L1277.26 602.16 A3.4 3.4 0 0 0 1278.23 608.94 L1280.79 608.89 L1280.96 611.25 Z" class="t2 i"/>
+<path d="M898.52 683.08 L1185.92 556.01 L1183.09 549.61 L895.69 676.68 Z" class="t2 i"/>
+<circle cx="897.1" cy="679.88" r="1.5" class="w f"/>
+<circle cx="905.33" cy="676.24" r="1.5" class="w f"/>
+<circle cx="913.57" cy="672.6" r="1.5" class="w f"/>
+<circle cx="921.8" cy="668.96" r="1.5" class="w f"/>
+<circle cx="930.03" cy="665.32" r="1.5" class="w f"/>
+<circle cx="938.26" cy="661.68" r="1.5" class="w f"/>
+<circle cx="946.49" cy="658.04" r="1.5" class="w f"/>
+<circle cx="954.72" cy="654.4" r="1.5" class="w f"/>
+<circle cx="962.95" cy="650.76" r="1.5" class="w f"/>
+<circle cx="971.19" cy="647.12" r="1.5" class="w f"/>
+<circle cx="979.42" cy="643.48" r="1.5" class="w f"/>
+<circle cx="987.65" cy="639.85" r="1.5" class="w f"/>
+<circle cx="995.88" cy="636.21" r="1.5" class="w f"/>
+<circle cx="1004.11" cy="632.57" r="1.5" class="w f"/>
+<circle cx="1012.34" cy="628.93" r="1.5" class="w f"/>
+<circle cx="1020.57" cy="625.29" r="1.5" class="w f"/>
+<circle cx="1028.8" cy="621.65" r="1.5" class="w f"/>
+<circle cx="1037.04" cy="618.01" r="1.5" class="w f"/>
+<circle cx="1045.27" cy="614.37" r="1.5" class="w f"/>
+<circle cx="1053.5" cy="610.73" r="1.5" class="w f"/>
+<circle cx="1061.73" cy="607.09" r="1.5" class="w f"/>
+<circle cx="1069.96" cy="603.45" r="1.5" class="w f"/>
+<circle cx="1078.19" cy="599.81" r="1.5" class="w f"/>
+<circle cx="1086.42" cy="596.17" r="1.5" class="w f"/>
+<circle cx="1094.66" cy="592.53" r="1.5" class="w f"/>
+<circle cx="1102.89" cy="588.89" r="1.5" class="w f"/>
+<circle cx="1111.12" cy="585.25" r="1.5" class="w f"/>
+<circle cx="1119.35" cy="581.61" r="1.5" class="w f"/>
+<circle cx="1127.58" cy="577.98" r="1.5" class="w f"/>
+<circle cx="1135.81" cy="574.34" r="1.5" class="w f"/>
+<circle cx="1144.04" cy="570.7" r="1.5" class="w f"/>
+<circle cx="1152.27" cy="567.06" r="1.5" class="w f"/>
+<circle cx="1160.51" cy="563.42" r="1.5" class="w f"/>
+<circle cx="1168.74" cy="559.78" r="1.5" class="w f"/>
+<circle cx="1176.97" cy="556.14" r="1.5" class="w f"/>
+<path d="M909.19 725.3 L1220.96 685.94 L1220.08 678.99 L908.32 718.35 Z" class="t2 i"/>
+<circle cx="908.76" cy="721.83" r="1.5" class="w f"/>
+<circle cx="917.68" cy="720.7" r="1.5" class="w f"/>
+<circle cx="926.61" cy="719.57" r="1.5" class="w f"/>
+<circle cx="935.54" cy="718.44" r="1.5" class="w f"/>
+<circle cx="944.47" cy="717.32" r="1.5" class="w f"/>
+<circle cx="953.4" cy="716.19" r="1.5" class="w f"/>
+<circle cx="962.33" cy="715.06" r="1.5" class="w f"/>
+<circle cx="971.26" cy="713.94" r="1.5" class="w f"/>
+<circle cx="980.19" cy="712.81" r="1.5" class="w f"/>
+<circle cx="989.12" cy="711.68" r="1.5" class="w f"/>
+<circle cx="998.05" cy="710.55" r="1.5" class="w f"/>
+<circle cx="1006.98" cy="709.43" r="1.5" class="w f"/>
+<circle cx="1015.91" cy="708.3" r="1.5" class="w f"/>
+<circle cx="1024.83" cy="707.17" r="1.5" class="w f"/>
+<circle cx="1033.76" cy="706.04" r="1.5" class="w f"/>
+<circle cx="1042.69" cy="704.92" r="1.5" class="w f"/>
+<circle cx="1051.62" cy="703.79" r="1.5" class="w f"/>
+<circle cx="1060.55" cy="702.66" r="1.5" class="w f"/>
+<circle cx="1069.48" cy="701.53" r="1.5" class="w f"/>
+<circle cx="1078.41" cy="700.41" r="1.5" class="w f"/>
+<circle cx="1087.34" cy="699.28" r="1.5" class="w f"/>
+<circle cx="1096.27" cy="698.15" r="1.5" class="w f"/>
+<circle cx="1105.2" cy="697.02" r="1.5" class="w f"/>
+<circle cx="1114.13" cy="695.9" r="1.5" class="w f"/>
+<circle cx="1123.05" cy="694.77" r="1.5" class="w f"/>
+<circle cx="1131.98" cy="693.64" r="1.5" class="w f"/>
+<circle cx="1140.91" cy="692.52" r="1.5" class="w f"/>
+<circle cx="1149.84" cy="691.39" r="1.5" class="w f"/>
+<circle cx="1158.77" cy="690.26" r="1.5" class="w f"/>
+<circle cx="1167.7" cy="689.13" r="1.5" class="w f"/>
+<circle cx="1176.63" cy="688.01" r="1.5" class="w f"/>
+<circle cx="1185.56" cy="686.88" r="1.5" class="w f"/>
+<circle cx="1194.49" cy="685.75" r="1.5" class="w f"/>
+<circle cx="1203.42" cy="684.62" r="1.5" class="w f"/>
+<circle cx="1212.35" cy="683.5" r="1.5" class="w f"/>
+</g>
+<g id="T02-board" data-part="Footboard" data-category="vintage">
+<path d="M560 712 L720 708 L726 722 L566 726 Z" class="t o"/>
+<line x1="572" y1="711" x2="572" y2="723" class="f"/>
+<line x1="584" y1="711" x2="584" y2="723" class="f"/>
+<line x1="596" y1="711" x2="596" y2="723" class="f"/>
+<line x1="608" y1="711" x2="608" y2="723" class="f"/>
+<line x1="620" y1="711" x2="620" y2="723" class="f"/>
+<line x1="632" y1="711" x2="632" y2="723" class="f"/>
+<line x1="644" y1="711" x2="644" y2="723" class="f"/>
+<line x1="656" y1="711" x2="656" y2="723" class="f"/>
+<line x1="668" y1="711" x2="668" y2="723" class="f"/>
+<line x1="680" y1="711" x2="680" y2="723" class="f"/>
+<line x1="692" y1="711" x2="692" y2="723" class="f"/>
+<line x1="704" y1="711" x2="704" y2="723" class="f"/>
+<line x1="600" y1="726" x2="626" y2="742" class="i"/>
+<line x1="690" y1="722" x2="700" y2="740" class="i"/>
+</g>
+<g id="T02-clutch" data-part="Foot clutch" data-category="vintage">
+<path d="M572 670 C574.67 675.67 578.67 699.67 588 704 C597.33 708.33 621.33 697.33 628 696" class="n o" style="stroke-width:9"/>
+<path d="M572 670 C574.67 675.67 578.67 699.67 588 704 C597.33 708.33 621.33 697.33 628 696" class="n" style="stroke:#DCE4F2;stroke-width:5"/>
+<circle cx="588" cy="704" r="6" class="t2 i"/>
+<line x1="628" y1="696" x2="744" y2="690" class="i"/>
+</g>
+<g id="T02-saddle" data-part="Sprung solo saddle" data-category="vintage">
+<path d="M940.46 332.58 L948.46 270.58 L939.54 269.42 L931.54 331.42 Z" class="t o"/>
+<path d="M888 254 C894.33 249.67 912.67 241.67 932 240 C951.33 238.33 986.67 241.33 1004 244 C1021.33 246.67 1031.67 251.67 1036 256 C1040.33 260.33 1044.33 267.33 1030 270 C1015.67 272.67 972.67 272.67 950 272 C927.33 271.33 904.33 269 894 266 C883.67 263 881.67 258.33 888 254 Z" class="t2 o"/>
+<line x1="900" y1="258" x2="1026" y2="260" class="f" stroke-dasharray="2 4"/>
+<path d="M1012 274.8 L996 277.6 M1012 280.4 L996 283.2 M1012 286 L996 288.8 M1012 291.6 L996 294.4 M1012 297.2 L996 300 " class="n f"/>
+<path d="M996 272 L1012 274.8 M996 277.6 L1012 280.4 M996 283.2 L1012 286 M996 288.8 L1012 291.6 M996 294.4 L1012 297.2 " class="n i" style="stroke-width:2.4"/>
+<path d="M1032 272.8 L1016 275.6 M1032 278.4 L1016 281.2 M1032 284 L1016 286.8 M1032 289.6 L1016 292.4 M1032 295.2 L1016 298 " class="n f"/>
+<path d="M1016 270 L1032 272.8 M1016 275.6 L1032 278.4 M1016 281.2 L1032 284 M1016 286.8 L1032 289.6 M1016 292.4 L1032 295.2 " class="n i" style="stroke-width:2.4"/>
+<path d="M937.94 303 L1031.94 305 L1032.06 299 L938.06 297 Z" class="t i"/>
+<path d="M945 277.5 L935 281 M945 284.5 L935 288 M945 291.5 L935 295 M945 298.5 L935 302 M945 305.5 L935 309 M945 312.5 L935 316 M945 319.5 L935 323 M945 326.5 L935 330 " class="n f"/>
+<path d="M935 274 L945 277.5 M935 281 L945 284.5 M935 288 L945 291.5 M935 295 L945 298.5 M935 302 L945 305.5 M935 309 L945 312.5 M935 316 L945 319.5 M935 323 L945 326.5 " class="n i" style="stroke-width:2.4"/>
+</g>
+<g id="T02-stand" data-part="Rear stand" data-category="vintage">
+<path d="M1221.43 613.92 L1341.43 472.92 L1334.57 467.08 L1214.57 608.08 Z" class="t o"/>
+<circle cx="1338" cy="470" r="6" class="t2 i"/>
+<path d="M1332 466 q14 -10 18 6" class="n i"/>
+</g>
+<line x1="226" y1="615" x2="634" y2="615" class="c"/>
+<line x1="1008" y1="615" x2="1416" y2="615" class="c"/>
+<line x1="150" y1="800" x2="1450" y2="800" class="i"/>
+<g id="T02-labels">
+<g id="T02-lamp-label" data-part="Acetylene headlamp" data-category="vintage">
+<polyline points="466,352 202,352" class="ld"/>
+<text x="196" y="357.5" class="l" text-anchor="end">Acetylene headlamp</text>
+<text x="196" y="375" class="ls" text-anchor="end">carbide gas generator</text>
+<circle cx="466" cy="352" r="2.4" class="dot"/>
+</g>
+<g id="T02-fork-label" data-part="Springer fork" data-category="vintage">
+<polyline points="532,362 210,412 202,412" class="ld"/>
+<text x="196" y="417.5" class="l" text-anchor="end">Springer fork</text>
+<text x="196" y="435" class="ls" text-anchor="end">coil springs, rocker at axle</text>
+<circle cx="532" cy="362" r="2.4" class="dot"/>
+</g>
+<g id="T02-wheels-label" data-part="Clincher wheels" data-category="vintage">
+<polyline points="270.49,540.62 202,540.62" class="ld"/>
+<text x="196" y="546.12" class="l" text-anchor="end">Clincher tyres</text>
+<text x="196" y="563.62" class="ls" text-anchor="end">28 x 3 in, beaded edge</text>
+<circle cx="270.49" cy="540.62" r="2.4" class="dot"/>
+</g>
+<g id="T02-clutch-label" data-part="Foot clutch" data-category="vintage">
+<polyline points="574,674 202,674" class="ld"/>
+<text x="196" y="679.5" class="l" text-anchor="end">Foot clutch</text>
+<text x="196" y="697" class="ls" text-anchor="end">rocker pedal: heel in, toe out</text>
+<circle cx="574" cy="674" r="2.4" class="dot"/>
+</g>
+<g id="T02-frame-label" data-part="Rigid loop frame" data-category="vintage">
+<polyline points="1080,480 1406,480" class="ld"/>
+<text x="1412" y="485.5" class="l">Rigid frame</text>
+<text x="1412" y="503" class="ls">hardtail, no rear springs</text>
+<circle cx="1080" cy="480" r="2.4" class="dot"/>
+</g>
+<g id="T02-stand-label" data-part="Rear stand" data-category="vintage">
+<polyline points="1300,520 1398,540 1406,540" class="ld"/>
+<text x="1412" y="545.5" class="l">Rear stand</text>
+<text x="1412" y="563" class="ls">folded up for riding</text>
+<circle cx="1300" cy="520" r="2.4" class="dot"/>
+</g>
+<g id="T02-shift-label" data-part="Hand gear shift" data-category="vintage">
+<polyline points="702,338 440,66" class="ld"/>
+<text x="440" y="58" class="l" text-anchor="middle">Hand gear shift</text>
+<text x="440" y="39" class="ls" text-anchor="middle">three speeds, gate on the tank</text>
+<circle cx="702" cy="338" r="2.4" class="dot"/>
+</g>
+<g id="T02-tank-label" data-part="Tank, fuel and oil" data-category="vintage">
+<polyline points="700,330 595.4,66" class="ld"/>
+<text x="595.4" y="58" class="l" text-anchor="middle">Tank, fuel and oil</text>
+<circle cx="700" cy="330" r="2.4" class="dot"/>
+</g>
+<g id="T02-engine-label" data-part="F-head V-twin" data-category="vintage">
+<polyline points="770,520 980,66" class="ld"/>
+<text x="980" y="58" class="l" text-anchor="middle">F-head V-twin</text>
+<text x="980" y="39" class="ls" text-anchor="middle">45 degree, inlet over exhaust</text>
+<circle cx="770" cy="520" r="2.4" class="dot"/>
+</g>
+<g id="T02-saddle-label" data-part="Sprung solo saddle" data-category="vintage">
+<polyline points="960,252 1180,66" class="ld"/>
+<text x="1180" y="58" class="l" text-anchor="middle">Sprung saddle</text>
+<text x="1180" y="39" class="ls" text-anchor="middle">spring in the seat post</text>
+<circle cx="960" cy="252" r="2.4" class="dot"/>
+</g>
+<g id="T02-magneto-label" data-part="Magneto" data-category="vintage">
+<polyline points="690,600 380,858" class="ld"/>
+<text x="380" y="874" class="l" text-anchor="middle">Magneto</text>
+<text x="380" y="891" class="ls" text-anchor="middle">ignition with no battery</text>
+<circle cx="690" cy="600" r="2.4" class="dot"/>
+</g>
+<g id="T02-carb-label" data-part="Carburettor" data-category="vintage">
+<polyline points="772,524 560,858" class="ld"/>
+<text x="560" y="874" class="l" text-anchor="middle">Carburettor</text>
+<text x="560" y="891" class="ls" text-anchor="middle">one, feeding both cylinders</text>
+<circle cx="772" cy="524" r="2.4" class="dot"/>
+</g>
+<g id="T02-board-label" data-part="Footboard" data-category="vintage">
+<polyline points="640,716 740,858" class="ld"/>
+<text x="740" y="874" class="l" text-anchor="middle">Footboard</text>
+<circle cx="640" cy="716" r="2.4" class="dot"/>
+</g>
+<g id="T02-chain-label" data-part="Drive chain" data-category="vintage">
+<polyline points="1060,650 1180,858" class="ld"/>
+<text x="1180" y="874" class="l" text-anchor="middle">Drive chain</text>
+<text x="1180" y="891" class="ls" text-anchor="middle">primary in a case, final drive open</text>
+<circle cx="1060" cy="650" r="2.4" class="dot"/>
+</g>
+</g>
+</svg>

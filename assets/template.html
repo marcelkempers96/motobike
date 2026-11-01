@@ -1,0 +1,312 @@
+<title>Moto Zero Motorcycle Types</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda: photographs, labelled cutaway plates, history and the parts that define each type.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a museum wall. Timeline rail across the top, a hanging grid of plates, and a lightbox that opens one machine at a time. */
+:root{
+  --bg:#F5F4EF; --card:#FFFFFF; --ink:#1E2B5E; --text:#242833; --muted:#5C6170;
+  --line:#E1DFD6; --line2:#CDCAC0; --accent:#C8502A; --accent-soft:#F7E4DB; --accent-line:#ECC1B0;
+  --btn:#F1F0EB; --btn-h:#E9E7E0; --on-bg:#1E2B5E; --on-fg:#FFFFFF; --sheet:#FFFFFF; --shade:rgba(18,21,29,.55);
+  --f-pioneer:#8A6A3B; --f-road:#1E2B5E; --f-offroad:#3C7A3E; --f-work:#B5642A; --f-electric:#2C6FA8;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --cond:'IBM Plex Sans Condensed','IBM Plex Sans',system-ui,sans-serif;
+  --serif:'IBM Plex Serif',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151D; --card:#1A1E29; --ink:#E4E8F3; --text:#D3D7E0; --muted:#98A0B0;
+  --line:#2A3040; --line2:#394054; --accent:#E2733F; --accent-soft:#3A271F; --accent-line:#6B3A26;
+  --btn:#232838; --btn-h:#2B3144; --on-bg:#E4E8F3; --on-fg:#12151D; --shade:rgba(0,0,0,.7);
+  --f-pioneer:#C9A266; --f-road:#AFC0EE; --f-offroad:#7CC47F; --f-work:#E79A5E; --f-electric:#78B4E6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151D; --card:#1A1E29; --ink:#E4E8F3; --text:#D3D7E0; --muted:#98A0B0;
+  --line:#2A3040; --line2:#394054; --accent:#E2733F; --accent-soft:#3A271F; --accent-line:#6B3A26;
+  --btn:#232838; --btn-h:#2B3144; --on-bg:#E4E8F3; --on-fg:#12151D; --shade:rgba(0,0,0,.7);
+  --f-pioneer:#C9A266; --f-road:#AFC0EE; --f-offroad:#7CC47F; --f-work:#E79A5E; --f-electric:#78B4E6; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 var(--sans)}
+.wrap{max-width:1480px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{padding-block:28px 8px}
+.brand{display:flex;align-items:center;gap:10px;margin:0 0 12px;font:600 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.brand svg{width:22px;height:22px;flex:none}
+.brand span{color:var(--muted);font-weight:500}
+h1{font:600 34px/1.1 var(--sans);color:var(--ink);margin:0 0 10px;letter-spacing:-.015em;text-wrap:balance}
+.lede{max-width:780px;margin:0;color:var(--muted);font-size:16px}
+.lede b{color:var(--text);font-weight:600}
+
+/* timeline */
+.rail{margin:22px 0 6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 10px;overflow-x:auto}
+.rail-in{position:relative;min-width:900px;height:150px;margin:0 70px}
+.rail .axis{position:absolute;left:0;right:0;bottom:24px;border-top:1.5px solid var(--ink)}
+.rail .tick{position:absolute;bottom:4px;transform:translateX(-50%);font:500 11px/1 var(--mono);color:var(--muted)}
+.rail .tick::before{content:"";position:absolute;left:50%;bottom:16px;height:6px;border-left:1px solid var(--ink)}
+.rail button{position:absolute;transform:translateX(-50%);border:0;background:none;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font:600 11.5px/1.15 var(--cond);color:var(--ink);white-space:nowrap}
+.rail button i{width:11px;height:11px;border-radius:50%;background:var(--card);border:2.5px solid var(--fam,var(--ink));display:block}
+.rail button .stem{width:1px;background:var(--line2);flex:1}
+.rail button:hover i,.rail button:focus-visible i{background:var(--fam)}
+.rail button.dim{opacity:.28}
+.rail-cap{font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:6px;padding-block:14px 14px;align-items:center}
+.filters button{font:500 13.5px/1 var(--sans);color:var(--ink);background:var(--card);border:1px solid var(--line2);border-radius:20px;padding:9px 13px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.filters button i{width:9px;height:9px;border-radius:50%;background:var(--fam,var(--ink));display:block}
+.filters button:hover{background:var(--btn-h)}
+.filters button[aria-pressed="true"]{background:var(--on-bg);color:var(--on-fg);border-color:var(--on-bg)}
+.filters .count{font:500 12px/1 var(--mono);color:var(--muted);margin-left:auto}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding-bottom:28px}
+.card{all:unset;box-sizing:border-box;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s,border-color .22s;position:relative;min-width:0}
+.card:hover,.card:focus-visible{transform:translateY(-3px) scale(1.025);box-shadow:0 14px 34px rgba(30,43,94,.16);border-color:var(--line2);z-index:2}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.card:active{transform:scale(.99)}
+.card .pic{background:var(--sheet);aspect-ratio:16/9.2;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);position:relative}
+.card .pic img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.card:hover .pic img{transform:scale(1.06)}
+.card .no{position:absolute;top:10px;left:12px;font:600 11px/1 var(--mono);color:#5C6170;letter-spacing:.05em}
+.card .body{padding:12px 14px 14px;display:grid;gap:5px}
+.card .era{display:flex;gap:8px;align-items:center;font:500 11.5px/1.2 var(--mono);color:var(--muted);letter-spacing:.03em}
+.card .era i{width:8px;height:8px;border-radius:50%;background:var(--fam);display:block;flex:none}
+.card h3{font:600 18px/1.2 var(--sans);color:var(--ink);margin:0}
+.card p{margin:0;font-size:13.5px;color:var(--muted)}
+.card .more{font:600 12.5px/1 var(--sans);color:var(--accent);margin-top:4px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:var(--shade);display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:max(18px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) 24px max(12px,env(safe-area-inset-left,0px));animation:fade .18s ease-out}
+.lb .box{background:var(--bg);border-radius:14px;max-width:1240px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.35);animation:grow .26s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+@keyframes fade{from{opacity:0}}
+@keyframes grow{from{transform:scale(.94) translateY(12px);opacity:.4}}
+.lb .bar{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:2}
+.lb .bar .t{flex:1;min-width:0}
+.lb .bar .era{font:500 11.5px/1.2 var(--mono);color:var(--muted);display:flex;gap:8px;align-items:center}
+.lb .bar .era i{width:8px;height:8px;border-radius:50%;background:var(--fam)}
+.lb .bar h2{margin:2px 0 0;font:600 22px/1.15 var(--sans);color:var(--ink);text-wrap:balance}
+.lb .bar button{font:500 13px/1 var(--sans);color:var(--ink);background:var(--btn);border:1px solid var(--line2);border-radius:8px;padding:9px 11px;min-height:38px;cursor:pointer}
+.lb .bar button:hover{background:var(--btn-h)}
+.lb .bar .x{font-size:18px;width:40px}
+.views{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.views button{font:500 13px/1 var(--sans);color:var(--ink);background:transparent;border:1px solid var(--line2);border-radius:20px;padding:8px 12px;cursor:pointer}
+.views button[aria-pressed="true"]{background:var(--on-bg);color:var(--on-fg);border-color:var(--on-bg)}
+.stage{margin:10px 16px 0;background:var(--sheet);border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}
+.stage .plate{overflow-x:auto}
+.stage .plate svg{display:block;width:100%;height:auto;min-width:720px}
+.stage .photo{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;background:#EEECE6}
+.stage .photo img{display:block;max-width:100%;max-height:72vh;object-fit:contain}
+.stage .photo .fallback{padding:40px 24px;text-align:center;color:#3A3F4C;max-width:520px;font-size:14px}
+.stage .photo .fallback a{color:#1E2B5E;font-weight:600}
+.credit{font-size:12px;color:var(--muted);padding:6px 16px 0}
+.credit a{color:var(--ink)}
+.cols{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:26px;padding:18px 16px 22px}
+.cols h4{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.story p{margin:0 0 12px;font:400 16px/1.62 var(--serif);color:var(--text);max-width:68ch}
+.story p strong{font-family:var(--sans);font-weight:600;font-size:15px;color:var(--ink)}
+.story .tag{font:600 18px/1.35 var(--sans);color:var(--ink);margin:0 0 14px;max-width:60ch}
+.facts{display:grid;gap:16px;align-content:start}
+table.specs{width:100%;border-collapse:collapse;font-size:14px}
+table.specs td{padding:7px 0;border-top:1px solid var(--line);vertical-align:top}
+table.specs td:first-child{color:var(--muted);width:42%;font:500 12.5px/1.4 var(--mono)}
+table.specs td:last-child{color:var(--text);font-weight:500}
+.facts ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:500 12.5px/1 var(--sans);padding:7px 9px;border-radius:20px;background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.nextbox{margin:0 16px 18px;padding:14px 16px;border-radius:10px;background:var(--accent-soft);border:1px solid var(--accent-line);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.nextbox p{margin:0;flex:1 1 300px;font-size:14px;color:var(--text)}
+.nextbox button{font:600 13.5px/1 var(--sans);color:#fff;background:var(--accent);border:0;border-radius:8px;padding:11px 14px;cursor:pointer}
+.mod{font-size:13px;color:var(--muted)}
+footer{padding-block:6px 32px;color:var(--muted);font-size:12.5px;max-width:110ch}
+footer a{color:var(--ink)}
+body.locked{overflow:hidden}
+@media (max-width: 860px){ .cols{grid-template-columns:minmax(0,1fr)} h1{font-size:28px} }
+@media (prefers-reduced-motion: reduce){ .card,.card .pic img{transition:none} .lb,.lb .box{animation:none} }
+</style>
+<!--BODY-->
+<div class="wrap">
+<header class="top">
+  <p class="brand"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="60" cy="60" r="9" fill="#C8502A"/></svg>Moto Zero <span>by Transitions Lab</span></p>
+  <h1>Motorcycle types</h1>
+  <p class="lede">From Daimler's wooden <b>Reitwagen</b> of 1885 to the battery-swapping <b>e-boda</b>, motorcycles have been reshaped again and again by roads, money, sport and fuel. Sixteen types, each with a photograph, a labelled plate of the parts that define it and the story of how it came to be. Pick one to open it.</p>
+</header>
+
+<section class="rail" aria-label="Timeline">
+  <p class="rail-cap">When each type appeared</p>
+  <div class="rail-in" id="rail"></div>
+</section>
+
+<div class="filters" id="filters" role="group" aria-label="Filter by family"></div>
+<main class="grid" id="grid"></main>
+
+<footer>Moto Zero by Transitions Lab. Text and plates CC BY-SA 4.0; photographs from Wikimedia Commons under the licences shown with each, and from the Transitions Lab collection. Figures are typical ranges for each type, not the specification of any one model. Download the course and models at <a href="https://www.transitionslab.org/motorcycle-anatomy" target="_blank" rel="noopener">transitionslab.org/motorcycle-anatomy</a>.</footer>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="box" id="lb-box">
+    <div class="bar">
+      <div class="t"><div class="era" id="lb-era"></div><h2 id="lb-title"></h2></div>
+      <button type="button" id="lb-prev" aria-label="Previous type">←</button>
+      <button type="button" id="lb-next" aria-label="Next type">→</button>
+      <button type="button" class="x" id="lb-close" aria-label="Close">×</button>
+    </div>
+    <div class="views" id="lb-views" role="group" aria-label="Choose view"></div>
+    <div class="stage" id="lb-stage"></div>
+    <div class="credit" id="lb-credit"></div>
+    <div class="cols">
+      <div class="story" id="lb-story"></div>
+      <div class="facts" id="lb-facts"></div>
+    </div>
+    <div class="nextbox" id="lb-nextbox"></div>
+  </div>
+</div>
+
+<!--PLATES-->
+
+<script>
+const TYPES = /*TYPES*/;
+const FAMILIES = /*FAMILIES*/;
+const MEDIA = /*MEDIA*/;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const famVar = f => `var(--f-${f})`;
+let filter = null, current = -1, view = "plate";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");
+
+/* timeline */
+(function buildRail() {
+  const rail = $("#rail"), y0 = 1880, y1 = 2030;
+  const pos = y => ((y - y0) / (y1 - y0) * 100);
+  let h = '<div class="axis"></div>';
+  for (let y = y0; y <= y1; y += 10) h += `<span class="tick" style="left:${pos(y)}%">${y}</span>`;
+  const sorted = TYPES.map((t, i) => ({t, i})).sort((a, b) => a.t.start - b.t.start);
+  const rows = [];
+  sorted.forEach(({t, i}) => {
+    const x = pos(t.start);
+    let r = 0;
+    while (rows[r] !== undefined && x - rows[r] < 8.5) r++;
+    rows[r] = x;
+    const top = 4 + r * 26;
+    h += `<button type="button" data-i="${i}" style="left:${x}%;top:${top}px;bottom:24px;--fam:${famVar(t.family)}"><span>${esc(t.name.replace(/ and .*/, ""))} · ${t.start}</span><i></i><span class="stem"></span></button>`;
+  });
+  rail.innerHTML = h;
+  rail.addEventListener("click", e => { const b = e.target.closest("button[data-i]"); if (b) open(+b.dataset.i); });
+})();
+
+/* filters + grid */
+function buildFilters() {
+  const f = $("#filters");
+  f.innerHTML = `<button type="button" data-f="" aria-pressed="true">All types</button>` +
+    Object.entries(FAMILIES).map(([k, v]) => `<button type="button" data-f="${k}" aria-pressed="false" style="--fam:${famVar(k)}"><i></i>${v}</button>`).join("") +
+    `<span class="count" id="count"></span>`;
+  f.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    filter = b.dataset.f || null;
+    $$("#filters button").forEach(x => x.setAttribute("aria-pressed", String((x.dataset.f || null) === filter)));
+    applyFilter();
+  });
+}
+function buildGrid() {
+  $("#grid").innerHTML = TYPES.map((t, i) => `
+    <button type="button" class="card" data-i="${i}" data-f="${t.family}" style="--fam:${famVar(t.family)}" aria-label="${esc(t.name)}, ${esc(t.era)}. Open details">
+      <span class="pic"><span class="no">${String(i + 1).padStart(2, "0")}</span><img src="${MEDIA[t.id].thumb}" alt="" loading="lazy"></span>
+      <span class="body">
+        <span class="era"><i></i>${esc(t.era)} · ${esc(FAMILIES[t.family])}</span>
+        <h3>${esc(t.name)}</h3>
+        <p>${esc(t.tagline)}</p>
+        <span class="more">Open →</span>
+      </span>
+    </button>`).join("");
+  $("#grid").addEventListener("click", e => { const c = e.target.closest(".card"); if (c) open(+c.dataset.i); });
+}
+function applyFilter() {
+  let n = 0;
+  $$(".card").forEach(c => { const on = !filter || c.dataset.f === filter; c.hidden = !on; if (on) n++; });
+  $$("#rail button").forEach(b => b.classList.toggle("dim", !!filter && TYPES[+b.dataset.i].family !== filter));
+  $("#count").textContent = `${n} of ${TYPES.length}`;
+}
+
+/* lightbox */
+function viewsFor(t) {
+  const m = MEDIA[t.id], v = [["plate", "Labelled plate"]];
+  if (m.photo) v.push(["photo", "Photograph"]);
+  if (m.photo2) v.push(["photo2", m.photo2.label || "Second photograph"]);
+  if (m.own) v.push(["own", "Workshop photograph"]);
+  if (m.render) v.push(["render", "3D render"]);
+  return v;
+}
+function renderStage(t) {
+  const m = MEDIA[t.id], st = $("#lb-stage"), cr = $("#lb-credit");
+  if (view === "plate") {
+    const tpl = document.getElementById("plate-" + t.plate);
+    st.innerHTML = `<div class="plate"></div>`;
+    st.firstChild.appendChild(tpl.content.cloneNode(true));
+    cr.innerHTML = `Plate ${t.plate}, Moto Zero, CC BY-SA 4.0. Scroll sideways on small screens.`;
+  } else if (view === "photo" || view === "photo2") {
+    const p = m[view];
+    st.innerHTML = `<div class="photo"><img alt="${esc(p.subject)}" src="${esc(p.src)}"><div class="fallback" hidden>The photograph is hosted on Wikimedia Commons and could not load here. <a href="${esc(p.page)}" target="_blank" rel="noopener">Open it on Wikimedia Commons</a>.</div></div>`;
+    const img = st.querySelector("img");
+    img.addEventListener("error", () => { img.hidden = true; st.querySelector(".fallback").hidden = false; });
+    cr.innerHTML = `${esc(p.subject)}. Photo: ${esc(p.author)}, <a href="${esc(p.licence_url)}" target="_blank" rel="noopener">${esc(p.licence)}</a>, via <a href="${esc(p.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>.`;
+  } else {
+    const p = m[view];
+    st.innerHTML = `<div class="photo"><img alt="${esc(p.caption)}" src="${p.src}"></div>`;
+    cr.innerHTML = `${esc(p.caption)} ${esc(p.credit)}.`;
+  }
+}
+function open(i) {
+  current = i;
+  const t = TYPES[i];
+  const vs = viewsFor(t);
+  if (!vs.some(v => v[0] === view)) view = vs.length > 1 ? vs[1][0] : "plate";
+  $("#lb-box").style.setProperty("--fam", famVar(t.family));
+  $("#lb-era").innerHTML = `<i></i>${esc(t.era)} · ${esc(FAMILIES[t.family])} · ${String(i + 1).padStart(2, "0")} of ${TYPES.length}`;
+  $("#lb-title").textContent = t.name;
+  $("#lb-views").innerHTML = vs.map(([k, l]) => `<button type="button" data-v="${k}" aria-pressed="${k === view}">${l}</button>`).join("");
+  renderStage(t);
+  $("#lb-story").innerHTML = `<p class="tag">${esc(t.tagline)}</p>` + t.history.map(p => `<p>${md(p)}</p>`).join("");
+  $("#lb-facts").innerHTML =
+    `<div><h4>Typical figures</h4><table class="specs"><tbody>${Object.entries(t.specs).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("")}</tbody></table></div>` +
+    `<div><h4>What defines it</h4><ul>${t.built.map(b => `<li>${esc(b)}</li>`).join("")}</ul></div>` +
+    `<div><h4>Landmark models</h4><div class="chips">${t.models.map(x => `<span>${esc(x)}</span>`).join("")}</div></div>` +
+    `<div><h4>Where you see it</h4><p style="margin:0;font-size:14px">${esc(t.where)}</p></div>` +
+    (t.module ? `<p class="mod">In the course: ${esc(t.module)}.</p>` : "");
+  const nx = TYPES[(i + 1) % TYPES.length];
+  $("#lb-nextbox").innerHTML = `<p><b>What came next.</b> ${esc(t.next)}</p><button type="button" id="lb-go">${esc(nx.name)} →</button>`;
+  $("#lb-go").onclick = () => open((i + 1) % TYPES.length);
+  const lb = $("#lb");
+  if (lb.hidden) { lb.hidden = false; document.body.classList.add("locked"); }
+  lb.scrollTop = 0;
+  try { history.replaceState(null, "", "#" + t.id); } catch (_) {}
+  $("#lb-close").focus({preventScroll: true});
+}
+function close() {
+  $("#lb").hidden = true; document.body.classList.remove("locked");
+  try { history.replaceState(null, "", location.pathname + location.search); } catch (_) {}
+  const c = $(`.card[data-i="${current}"]`); if (c) c.focus({preventScroll: true});
+  current = -1;
+}
+$("#lb-views").addEventListener("click", e => {
+  const b = e.target.closest("button[data-v]"); if (!b) return;
+  view = b.dataset.v;
+  $$("#lb-views button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  renderStage(TYPES[current]);
+});
+$("#lb-close").onclick = close;
+$("#lb-prev").onclick = () => open((current - 1 + TYPES.length) % TYPES.length);
+$("#lb-next").onclick = () => open((current + 1) % TYPES.length);
+$("#lb").addEventListener("click", e => { if (e.target.id === "lb") close(); });
+document.addEventListener("keydown", e => {
+  if ($("#lb").hidden) return;
+  if (e.key === "Escape") close();
+  if (e.key === "ArrowRight") $("#lb-next").click();
+  if (e.key === "ArrowLeft") $("#lb-prev").click();
+});
+buildFilters(); buildGrid(); applyFilter();
+const start = TYPES.findIndex(t => "#" + t.id === location.hash);
+if (start >= 0) open(start);
+window.addEventListener("hashchange", () => { const k = TYPES.findIndex(t => "#" + t.id === location.hash); if (k >= 0 && k !== current) open(k); });
+</script>
