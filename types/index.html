@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Moto Zero · Motorcycle types</title>
+  <meta name="description" content="Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda: photographs, labelled plates, history and the parts that define each type.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261101c">
+  <style>
+.mz-ty { --f-pioneer:#8A6A3B; --f-road:#1E2B5E; --f-offroad:#3C7A3E; --f-work:#B5642A; --f-electric:#2C6FA8; }
+.mz-ty-hero { padding: 56px 40px 28px; }
+.mz-ty-hero h1 { max-width: 880px; margin-bottom: 12px; }
+.mz-ty-hero p { max-width: 760px; font-size: 17px; line-height: 1.6; margin: 0; }
+.mz-ty-hero p b { color: var(--ink); }
+.mz-ty-hero .ute-chapter-foot { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.mz-ty-sec { padding: 0 40px; }
+
+/* timeline */
+.mz-rail { border: 1px solid var(--line); background: #FFFFFF; padding: 14px 16px 10px; overflow-x: auto; }
+.mz-rail-cap { font: 700 12px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); margin: 0 0 6px; }
+.mz-rail-in { position: relative; min-width: 900px; height: 150px; margin: 0 70px; }
+.mz-rail .axis { position: absolute; left: 0; right: 0; bottom: 24px; border-top: 1.5px solid var(--ink); }
+.mz-rail .tick { position: absolute; bottom: 4px; transform: translateX(-50%); font: 400 11px/1 var(--sans); color: var(--mute); }
+.mz-rail .tick::before { content: ""; position: absolute; left: 50%; bottom: 16px; height: 6px; border-left: 1px solid var(--ink); }
+.mz-rail button { position: absolute; transform: translateX(-50%); border: 0; background: none; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; font: 700 11.5px/1.15 var(--sans); color: var(--ink); white-space: nowrap; }
+.mz-rail button i { width: 11px; height: 11px; border-radius: 50%; background: #FFFFFF; border: 2.5px solid var(--fam, var(--ink)); display: block; }
+.mz-rail button .stem { width: 1px; background: var(--line); flex: 1; }
+.mz-rail button:hover i, .mz-rail button:focus-visible i { background: var(--fam); }
+.mz-rail button:hover span:first-child { color: var(--warm); }
+.mz-rail button.dim { opacity: .25; }
+
+/* filters */
+.mz-ty-filters { display: flex; flex-wrap: wrap; gap: 6px; padding: 18px 0 14px; align-items: center; }
+.mz-ty-filters button { font: 700 13.5px/1 var(--sans); color: var(--ink); background: #FFFFFF; border: 1.5px solid var(--line); padding: 9px 13px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; }
+.mz-ty-filters button i { width: 9px; height: 9px; border-radius: 50%; background: var(--fam, var(--ink)); display: block; }
+.mz-ty-filters button:hover { border-color: var(--ink); }
+.mz-ty-filters button[aria-pressed="true"] { background: var(--ink); color: #FFFFFF; border-color: var(--ink); }
+.mz-ty-filters .count { font: 400 13px/1 var(--sans); color: var(--mute); margin-left: auto; }
+
+/* grid */
+.mz-ty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; padding-bottom: 48px; }
+.mz-ty-card { all: unset; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--line); overflow: hidden; cursor: pointer; transition: transform .22s cubic-bezier(.2,.7,.2,1), box-shadow .22s, border-color .22s; position: relative; min-width: 0; }
+.mz-ty-card:hover, .mz-ty-card:focus-visible { transform: translateY(-3px) scale(1.025); box-shadow: 0 14px 34px rgba(10,10,10,.14); border-color: var(--ink); z-index: 2; }
+.mz-ty-card:focus-visible { outline: 2px solid var(--warm); outline-offset: 3px; }
+.mz-ty-card .pic { background: #FFFFFF; aspect-ratio: 16 / 9.2; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line-soft); position: relative; overflow: hidden; }
+.mz-ty-card .pic img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.mz-ty-card:hover .pic img { transform: scale(1.06); }
+.mz-ty-card .no { position: absolute; top: 10px; left: 12px; font: 700 11px/1 var(--sans); color: var(--mute); letter-spacing: .05em; }
+.mz-ty-card .body { padding: 12px 14px 16px; display: grid; gap: 6px; }
+.mz-ty-era { display: flex; gap: 8px; align-items: center; font: 400 12.5px/1.2 var(--sans); color: var(--mute); }
+.mz-ty-era i { width: 8px; height: 8px; border-radius: 50%; background: var(--fam); display: block; flex: none; }
+.mz-ty-card h3 { font: 700 18px/1.25 var(--sans); color: var(--ink); margin: 0; }
+.mz-ty-card p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
+.mz-ty-card .more { font: 700 13px/1 var(--sans); color: var(--warm); margin-top: 4px; }
+
+/* full view */
+.mz-lb { position: fixed; inset: 0; z-index: 200; background: rgba(10,10,10,.55); display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: max(18px, env(safe-area-inset-top, 0px)) 12px 24px; animation: mzfade .18s ease-out; }
+.mz-lb .box { background: #FFFFFF; max-width: 1240px; width: 100%; box-shadow: 0 30px 80px rgba(0,0,0,.35); animation: mzgrow .26s cubic-bezier(.2,.8,.2,1); }
+@keyframes mzfade { from { opacity: 0; } }
+@keyframes mzgrow { from { transform: scale(.95) translateY(12px); opacity: .4; } }
+.mz-lb .bar { display: flex; align-items: center; gap: 8px; padding: 14px 16px; border-bottom: 1px solid var(--line); background: #FFFFFF; position: sticky; top: 0; z-index: 2; }
+.mz-lb .bar .t { flex: 1; min-width: 0; }
+.mz-lb .bar h2 { margin: 3px 0 0; font: 900 24px/1.15 var(--sans); color: var(--ink); }
+.mz-lb .bar button, .mz-lb .bar a { font: 700 15px/1 var(--sans); color: var(--ink); background: #FFFFFF; border: 1.5px solid var(--line); padding: 9px 11px; min-height: 40px; min-width: 40px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.mz-lb .bar button:hover, .mz-lb .bar a:hover { border-color: var(--ink); }
+.mz-lb .bar .x { font-size: 20px; }
+.mz-lb .views { display: flex; gap: 6px; padding: 12px 16px 0; flex-wrap: wrap; }
+.mz-lb .views button { font: 700 13px/1 var(--sans); color: var(--ink); background: #FFFFFF; border: 1.5px solid var(--line); padding: 8px 12px; cursor: pointer; }
+.mz-lb .views button[aria-pressed="true"] { background: var(--ink); color: #FFFFFF; border-color: var(--ink); }
+.mz-lb .stage { margin: 10px 16px 0; background: #FFFFFF; border: 1px solid var(--line); overflow: hidden; position: relative; }
+.mz-lb .plate { overflow-x: auto; }
+.mz-lb .plate svg, .mz-lb .plate img { display: block; width: 100%; height: auto; min-width: 720px; }
+.mz-lb .photo { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 300px; background: #F5F5F5; }
+.mz-lb .photo img { display: block; max-width: 100%; max-height: 72vh; object-fit: contain; }
+.mz-lb .fallback { padding: 40px 24px; text-align: center; color: var(--ink-soft); max-width: 520px; font-size: 14.5px; }
+.mz-lb .fallback a { color: var(--ink); font-weight: 700; }
+.mz-lb .credit { font-size: 12.5px; color: var(--mute); padding: 6px 16px 0; }
+.mz-lb .credit a { color: var(--ink); }
+.mz-lb .cols { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 32px; padding: 20px 16px 22px; }
+.mz-lb h4 { font: 700 12px/1.2 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--mute); margin: 0 0 8px; }
+.mz-lb .story p { margin: 0 0 14px; font-size: 16.5px; line-height: 1.65; color: var(--ink-soft); max-width: 68ch; }
+.mz-lb .story p strong { color: var(--ink); }
+.mz-lb .story .tag { font: 700 19px/1.4 var(--sans); color: var(--ink); margin: 0 0 16px; }
+.mz-lb .facts { display: grid; gap: 20px; align-content: start; }
+.mz-lb table.specs { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.mz-lb table.specs td { padding: 8px 0; border-top: 1px solid var(--line-soft); vertical-align: top; }
+.mz-lb table.specs td:first-child { color: var(--mute); width: 40%; }
+.mz-lb table.specs td:last-child { color: var(--ink); font-weight: 700; }
+.mz-lb .facts ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14.5px; line-height: 1.5; }
+.mz-lb .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.mz-lb .chips span { font: 400 13px/1 var(--sans); padding: 7px 9px; border: 1px solid var(--line); color: var(--ink); }
+.mz-lb .facts p { margin: 0; font-size: 14.5px; line-height: 1.55; }
+.mz-lb .mod a { color: var(--warm); font-weight: 700; }
+.mz-lb .nextbox { margin: 0 16px 18px; padding: 14px 16px; background: #FBF1EC; border-left: 3px solid var(--warm); display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.mz-lb .nextbox p { margin: 0; flex: 1 1 300px; font-size: 14.5px; line-height: 1.55; }
+.mz-lb .nextbox button { font: 700 14px/1 var(--sans); color: #FFFFFF; background: var(--warm); border: 0; padding: 12px 14px; cursor: pointer; }
+html.mz-locked { overflow: hidden; }
+.mz-lb[hidden], .mz-ty [hidden], .mz-lb [hidden] { display: none !important; }
+
+.mz-ty-note { padding: 32px 40px 48px; border-top: 1px solid var(--line); }
+.mz-ty-note p { max-width: 760px; font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
+.mz-ty-note a { color: var(--ink); }
+
+@media (max-width: 860px) { .mz-lb .cols { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 720px) {
+  .mz-ty-hero { padding: 36px 16px 20px; }
+  .mz-ty-hero h1 { font-size: 31px; }
+  .mz-ty-hero p { font-size: 16px; }
+  .mz-ty-sec { padding: 0 16px; }
+  .mz-ty-note { padding: 28px 16px 40px; }
+  .mz-ty-filters .count { margin-left: 0; width: 100%; }
+  .mz-lb { padding: 0; }
+  .mz-lb .bar { padding: 10px 12px; gap: 6px; }
+  .mz-lb .bar h2 { font-size: 19px; }
+  .mz-lb .bar .era { font-size: 11.5px; }
+  .mz-lb .views, .mz-lb .cols { padding-left: 12px; padding-right: 12px; }
+  .mz-lb .stage { margin: 10px 12px 0; }
+  .mz-lb .credit { padding: 6px 12px 0; }
+  .mz-lb .nextbox { margin: 0 12px 18px; }
+  .mz-lb .story p { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .mz-ty-card, .mz-ty-card .pic img { transition: none; } .mz-lb, .mz-lb .box { animation: none; } }
+  </style>
+</head>
+<body>
+<div class="ute-page mz-ty">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="mz-ty-hero">
+    <span class="ute-label">Course · Motorcycle types</span>
+    <h1>Motorcycle types through the ages</h1>
+    <p>From Daimler's wooden <b>Reitwagen</b> of 1885 to the battery-swapping <b>e-boda</b>, motorcycles have been reshaped again and again by roads, money, sport and fuel. Each of the sixteen types has a labelled plate of the parts that define it, a photograph, its typical figures and the story of how it came to be.</p>
+    <div class="ute-chapter-foot">
+      <a class="ute-linkbtn is-warm" href="#grid" data-jump>Browse the types</a>
+      <a class="ute-linkbtn" href="../history/">Read the history</a>
+      <a class="ute-linkbtn" href="../learn/#foundations">Module 01: Foundations</a>
+    </div>
+  </section>
+
+  <section class="mz-ty-sec" aria-label="Timeline">
+    <div class="mz-rail">
+      <p class="mz-rail-cap">When each type appeared</p>
+      <div class="mz-rail-in" id="rail"></div>
+    </div>
+    <div class="mz-ty-filters" id="filters" role="group" aria-label="Filter by family"></div>
+    <div class="mz-ty-grid" id="grid"><p>Loading the types…</p></div>
+  </section>
+
+  <section class="mz-ty-note">
+    <h2 style="font-size:20px;margin:0 0 10px">About this page</h2>
+    <p>Figures are typical ranges for each type, not the specification of any one model. The order follows the story rather than strict dates, and each entry ends with what came next. Text and plates are CC BY-SA 4.0, Transitions Lab. Photographs load from Wikimedia Commons under the licence shown on each file page, and from the Transitions Lab collection.</p>
+    <p>Take it with you: <a href="motorcycle-types.md" download>page text (Markdown)</a>, <a href="motorcycle-types.json" download>all content as data (JSON)</a>, <a href="standalone.html" download>single-file offline version (HTML, 2.8 MB)</a>. The plates are on the <a href="../downloads/#types">downloads page</a>.</p>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+
+<div class="mz-lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="box" id="lb-box">
+    <div class="bar">
+      <div class="t"><div class="mz-ty-era era" id="lb-era"></div><h2 id="lb-title"></h2></div>
+      <button type="button" id="lb-prev" aria-label="Previous type">←</button>
+      <button type="button" id="lb-next" aria-label="Next type">→</button>
+      <button type="button" class="x" id="lb-close" aria-label="Close">×</button>
+    </div>
+    <div class="views" id="lb-views" role="group" aria-label="Choose view"></div>
+    <div class="stage" id="lb-stage"></div>
+    <div class="credit" id="lb-credit"></div>
+    <div class="cols">
+      <div class="story" id="lb-story"></div>
+      <div class="facts" id="lb-facts"></div>
+    </div>
+    <div class="nextbox" id="lb-nextbox"></div>
+  </div>
+</div>
+
+<script type="module" src="../assets/site.js"></script>
+<script type="module" src="../assets/types.js"></script>
+</body>
+</html>

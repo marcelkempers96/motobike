@@ -43,7 +43,7 @@ function home() {
       <span class="ute-label">Open course · CC BY-SA 4.0</span>
       <h1>How motorcycles work, from the first combustion stroke to the BMS of an electric bike.</h1>
       <p>Five modules, re-told for the screen: short explanations, live figures you can drive, and a quick check at the end of every chapter. Reference values come from a fuel-injected 125 cc single, the K-Light 125.</p>
-      <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="#${MODULES[0].id}">Start with Module ${MODULES[0].num} →</a><a class="ute-linkbtn" href="${ROOT}">Open the Overview</a><a class="ute-linkbtn" href="${ROOT}quiz/">Quiz</a><a class="ute-linkbtn" href="${ROOT}build/">Bike builder</a><a class="ute-linkbtn" href="${ROOT}kids/">Kids: Build a bike</a></div>
+      <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="#${MODULES[0].id}">Start with Module ${MODULES[0].num} →</a><a class="ute-linkbtn" href="${ROOT}overview/">Open the Overview</a><a class="ute-linkbtn" href="${ROOT}quiz/">Quiz</a><a class="ute-linkbtn" href="${ROOT}types/">Motorcycle types</a><a class="ute-linkbtn" href="${ROOT}build/">Bike builder</a><a class="ute-linkbtn" href="${ROOT}kids/">Kids: Build a bike</a></div>
     </section>
     ${(() => {
       const d = PG.load();

@@ -9,7 +9,7 @@ const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split(
 
 export const MAIN = [['overview/', 'Overview'], ['cockpit/', 'Cockpit']];
 export const NAV = [
-  { key: 'course', title: 'Course', blurb: 'Learn: five modules, quiz and history', items: [
+  { key: 'course', title: 'Course', blurb: 'Learn: five modules, quiz, history and types', items: [
     ['learn/', 'Course overview', 'How the course works, where to start'],
     ['learn/#foundations', '01 Foundations', 'Anatomy, physics, workshop'],
     ['learn/#engine', '02 The engine', 'Four-stroke and two-stroke'],
@@ -18,6 +18,7 @@ export const NAV = [
     ['learn/#electric', '05 Electric motorcycles', 'Motors, packs, BMS'],
     ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
     ['history/', 'History', 'From steam velocipede to battery swapping'],
+    ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
     ['progress/', 'My progress', 'Saved in this browser, no login'],
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [

@@ -194,7 +194,7 @@ const day = (t) => new Date(t).toLocaleDateString('en-GB', { day: 'numeric', mon
 const bar = (p) => `<div class="mz-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${p}"><i style="width:${p}%"></i></div>`;
 const TOOLS = [
   ['overview', 'Overview', '../overview/'], ['cockpit', 'Cockpit', '../cockpit/'], ['wiring', 'Wiring Lab', '../wiring/'],
-  ['models', '3D models', '../models/'], ['build', 'Bike builder', '../build/'], ['kids', 'Kids: build a bike', '../kids/'],
+  ['types', 'Motorcycle types', '../types/'], ['models', '3D models', '../models/'], ['build', 'Bike builder', '../build/'], ['kids', 'Kids: build a bike', '../kids/'],
 ];
 const CH = {};
 MODULES.forEach((m, mi) => m.chapters.forEach((c, ci) => { CH[c.id] = { m, c, num: `${mi + 1}.${ci + 1}` }; }));
