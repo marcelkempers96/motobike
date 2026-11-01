@@ -4,6 +4,7 @@ import { mountFigure } from './figures.js';
 import { questionCard } from './quizkit.js';
 import { PLATES, plateSrc, MODELS } from './content/assets-map.js';
 import GLOSSARY from './content/glossary.js';
+import * as PG from './progress.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const main = $('#learn-main');
@@ -14,7 +15,7 @@ const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg
 function renderTOC(active, page) {
   toc.innerHTML = `<span class="ute-label">Course</span>
     <ol>${MODULES.map((m) => `<li><a href="#${m.id}" class="${active && active.id === m.id ? 'is-on' : ''}">${m.title}</a>
-      ${active && active.id === m.id ? `<ol class="ute-toc-sub">${m.chapters.map((c) => `<li><a href="#${c.id}" data-chap="${c.id}" class="${page === c.id ? 'is-on' : ''}">${c.title}</a></li>`).join('')}<li><a href="#${m.id}-glossary" data-chap="${m.id}-glossary" class="${page === m.id + '-glossary' ? 'is-on' : ''}">Glossary and further reading</a></li></ol>` : ''}</li>`).join('')}</ol>
+      ${active && active.id === m.id ? `<ol class="ute-toc-sub">${m.chapters.map((c) => `<li><a href="#${c.id}" data-chap="${c.id}" class="${page === c.id ? 'is-on' : ''} ${PG.isDone(c.id) ? 'is-done' : ''}">${c.title}</a></li>`).join('')}<li><a href="#${m.id}-glossary" data-chap="${m.id}-glossary" class="${page === m.id + '-glossary' ? 'is-on' : ''}">Glossary and further reading</a></li></ol>` : ''}</li>`).join('')}</ol>
     <div class="ute-toc-foot"><a class="ute-linkbtn" href="${ROOT}quiz/">Take the quiz →</a></div>`;
 }
 
@@ -28,6 +29,15 @@ function home() {
       <p>Five modules, re-told for the screen: short explanations, live figures you can drive, and a quick check at the end of every chapter. Reference values come from a fuel-injected 125 cc single, the K-Light 125.</p>
       <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="#${MODULES[0].id}">Start with Module ${MODULES[0].num} →</a><a class="ute-linkbtn" href="${ROOT}">Open the Overview</a><a class="ute-linkbtn" href="${ROOT}quiz/">Quiz</a><a class="ute-linkbtn" href="${ROOT}build/">Bike builder</a><a class="ute-linkbtn" href="${ROOT}kids/">Kids: Build a bike</a></div>
     </section>
+    ${(() => {
+      const d = PG.load();
+      const recent = Object.entries(d.chapters).sort((a, b) => (b[1].last || 0) - (a[1].last || 0))[0];
+      const all = MODULES.flatMap((m) => m.chapters);
+      const done = all.filter((c) => d.chapters[c.id] && d.chapters[c.id].done).length;
+      if (!recent) return '';
+      const ch = all.find((c) => c.id === recent[0]);
+      return ch ? `<section class="ute-chapter mz-resume"><div><span class="ute-label">Your progress · ${done} of ${all.length} chapters completed</span><h2>Continue where you left off</h2><p>${ch.title}</p></div><div class="ute-btnrow"><a class="ute-btn is-primary" href="#${ch.id}">Continue →</a><a class="ute-linkbtn" href="${ROOT}progress/">My progress</a></div></section>` : '';
+    })()}
     <section class="ute-chapter">
       <h2>Modules</h2>
       <div class="ute-modcards">${MODULES.map((m) => `
@@ -107,7 +117,7 @@ function wireContent() {
   main.querySelectorAll('.ute-check').forEach((c) => {
     const q = QBYID[c.dataset.q];
     if (!q) { c.remove(); return; }
-    c.appendChild(questionCard(q, { meta: 'Check yourself' }));
+    c.appendChild(questionCard(q, { meta: 'Check yourself', retry: true, onAnswer: (ok) => PG.recordCheck(q.id, ok) }));
   });
 }
 
@@ -141,7 +151,7 @@ function renderModuleIndex(mod) {
         if (pic && pic.type === 'plate') img = `${ROOT}assets/illustrations/${plateSrc(pic.id)}`;
         else if (pic && pic.type === 'photo') img = `${ROOT}assets/${pic.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${pic.src}`;
         else if (pic) { const f = pic.file || pic.files[0]; img = `${ROOT}assets/renders/${f.startsWith('bike_') ? f + '_side' : f}.webp`; }
-        return `<li><a href="#${c.id}">${img ? `<img src="${img}" alt="" loading="lazy">` : '<span></span>'}<div><span class="ute-chapter-num">${mod.num}.${ci + 1}</span><h3>${c.title}</h3><p>${c.lead || ''}</p></div></a></li>`;
+        return `<li><a href="#${c.id}">${img ? `<img src="${img}" alt="" loading="lazy">` : '<span></span>'}<div><span class="ute-chapter-num">${mod.num}.${ci + 1}</span>${PG.isDone(c.id) ? '<span class="mz-done-tag">✓ Completed</span>' : PG.isSeen(c.id) ? '<span class="mz-seen-tag">Started</span>' : ''}<h3>${c.title}</h3><p>${c.lead || ''}</p></div></a></li>`;
       }).join('')}
       <li><a href="#${mod.id}-glossary"><span></span><div><span class="ute-chapter-num">${mod.num}</span><h3>Glossary and further reading</h3><p>Every term used in the module, and where to read more.</p></div></a></li></ol>
     </section>`;
@@ -177,11 +187,25 @@ function renderPage(p) {
           ${chap.lead ? `<p class="lead">${chap.lead}</p>` : ''}
           <div class="prose">${chap.blocks.map((b) => block(b, mod)).join('')}</div>
           ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab}">Try it in the Overview →</a></div>` : ''}
+          <div class="mz-complete"><button type="button" class="ute-btn ${PG.isDone(chap.id) ? '' : 'is-primary'}" data-complete="${chap.id}">${PG.isDone(chap.id) ? '✓ Chapter completed' : 'Mark this chapter as complete'}</button><a href="${ROOT}progress/">My progress</a></div>
         </article>
         ${pager}
       </div>`;
   }
   wireContent();
+  if (chap) {
+    PG.chapterSeen(chap.id);
+    const btn = main.querySelector('[data-complete]');
+    if (btn) btn.addEventListener('click', () => {
+      const now = !PG.isDone(chap.id);
+      PG.chapterDone(chap.id, now);
+      btn.textContent = now ? '✓ Chapter completed' : 'Mark this chapter as complete';
+      btn.classList.toggle('is-primary', !now);
+      renderTOC(mod, pageHash(p));
+    });
+    const nx = main.querySelector('.mz-pager-next');
+    if (nx) nx.addEventListener('click', () => PG.chapterDone(chap.id, true));
+  }
   tocToCurrent();
   window.scrollTo(0, 0);
 }

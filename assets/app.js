@@ -6,6 +6,7 @@ import {
   ns, txt, iso3DBox, hexBolt, defsPackMetals, GEAR, displacementCC, approxTorqueNm,
   wheelRPMFromEngine, kmhFromWheelRPM, clamp, fmt, buildEngine, buildTimingStrip, strokeAt,
 } from './core.js';
+import { mountSite } from './site.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
 import {
   BIKE_MODEL, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
@@ -75,7 +76,7 @@ function render() {
         <span class="ute-brand-word">moto zero</span>
         <span class="ute-brand-sub">Transitions Lab</span>
       </a>
-      <nav class="ute-nav" aria-label="Sections"><a href="./"${PAGE === 'overview' ? ' aria-current="page"' : ''}>Overview</a><a href="cockpit/"${PAGE === 'cockpit' ? ' aria-current="page"' : ''}>Cockpit</a><a href="learn/">Learn</a><a href="wiring/">Wiring</a><a href="models/">Models</a><a href="quiz/">Quiz</a><a href="sources/">Sources</a><a class="ute-nav-kids" href="build/">Bike builder</a><a class="ute-nav-kids" href="kids/">Kids: Build a bike</a></nav>
+      <nav data-mz-nav></nav>
       <span class="ute-top-spacer"></span>
       <div class="ute-seg ute-mode-switch" role="group" aria-label="Mode">
         ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}">${MODE_INFO[m].short}</button>`).join('')}
@@ -145,10 +146,7 @@ ${PAGE === 'cockpit' ? `
     </section>
 
 ` : ''}
-    <footer class="ute-footer">
-      <span>Moto Zero · Transitions Lab · CC BY-SA 4.0 · numbers are illustrative</span>
-      <span><a href="learn/">Learn the theory →</a> · <a href="quiz/">Test yourself →</a> · <a href="sources/">Sources &amp; credits</a></span>
-    </footer>
+    <footer data-mz-footer></footer>
 
     <div class="ute-modal" id="ute-help" role="dialog" aria-modal="true" aria-labelledby="help-h">
       <div class="ute-modal-box">
@@ -184,6 +182,7 @@ ${PAGE === 'cockpit' ? `
     </div>
   `;
   wireChrome();
+  mountSite(root);
   mountOverview();
   renderComponentView();
   mountRider();
