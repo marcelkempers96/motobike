@@ -659,6 +659,11 @@ export default {
           "caption": "Ignition circuits: AC-CDI with exciter and pulser coils, and DC-TCI or ECU-controlled inductive ignition."
         },
         {
+          "type": "wiring",
+          "tab": "ignition",
+          "caption": "Crank the engine and watch the primary current build in the coil and collapse at the trigger point, producing the secondary spark; compare the CDI and TCI/ECU variants and find where the kill switch interrupts each."
+        },
+        {
           "type": "h3",
           "text": "Timing and advance"
         },
@@ -675,6 +680,12 @@ export default {
           "tone": "try",
           "title": "Try it in the Lab",
           "html": "Run the <a href=\"../?mode=4t&part=engine\">four-stroke engine</a> and move the RPM slider from 1500 to 9000 rpm. The power stroke stays at 180° of crank angle but shrinks from 20 ms to 3.3 ms, while the flame needs roughly the same time to burn whatever the engine speed, which is why the spark must advance as revs rise. Then open the <a href=\"../?mode=4t&part=spark_plug\">spark plug</a> panel, hold IGNITE to build current in the coil and release it to fire the plug."
+        },
+        {
+          "type": "wiring",
+          "tab": "ignition",
+          "caption": "Raise the engine speed and watch the spark move earlier before TDC; then trigger the ignition faults and decide, from what the circuit shows, whether the coil, the pickup or the kill-switch wiring is to blame.",
+          "preview": "ignition"
         },
         {
           "type": "h3",
@@ -926,6 +937,11 @@ export default {
           "caption": "Charging circuit: permanent-magnet alternator, shunt regulator/rectifier, fuse, battery and loads."
         },
         {
+          "type": "wiring",
+          "tab": "charging",
+          "caption": "Start the engine and raise the revs: watch the stator AC, the rectified DC and the battery voltage settle at 14.5 ± 0.5 V, then switch on the headlight and see how the regulator shunts less current to earth."
+        },
+        {
           "type": "check",
           "q": "m3-21"
         },
@@ -970,6 +986,11 @@ export default {
           "type": "plate",
           "id": "F23",
           "caption": "Electric starting circuit: battery, fuses, switches, interlocks, starter relay, starter motor and starter clutch."
+        },
+        {
+          "type": "wiring",
+          "tab": "starting",
+          "caption": "Switch the key on, select neutral and hold START: follow the control current through the interlocks to the relay coil and the heavy current from battery to starter motor, then pull in the clutch with a gear selected and fold the side stand down to see which interlock breaks the circuit."
         }
       ]
     },
@@ -1130,6 +1151,11 @@ export default {
           ]
         },
         {
+          "type": "wiring",
+          "tab": "harness",
+          "caption": "Trace the main harness from battery to each load: click a connector to see its wire colours, then follow one circuit (for example the brake light) from fuse to switch to lamp to earth, as in the five-step method above."
+        },
+        {
           "type": "check",
           "q": "m3-26"
         },
@@ -1274,6 +1300,12 @@ export default {
           "caption": "Use Ohm's law to see how a small resistance turns into a big voltage drop at high current."
         },
         {
+          "type": "wiring",
+          "tab": "starting",
+          "caption": "Fault-finding exercise: trigger the poor starter-earth fault and hold START. The starter clicks or turns slowly although the battery is charged; locate the volts lost on the earth side as you would with a meter in job sheet 3.6.4.",
+          "preview": "starting-noearth"
+        },
+        {
           "type": "check",
           "q": "m3-28"
         },
@@ -1319,6 +1351,12 @@ export default {
           "tone": "elec",
           "title": "Always charge the battery first",
           "html": "A discharged battery pulls the charging voltage down and hides a bad regulator, and sags under cranking like a failing starter. Every reference value assumes a charged battery."
+        },
+        {
+          "type": "wiring",
+          "tab": "charging",
+          "caption": "Fault-finding exercise: run the engine at 5000 rpm and compare a healthy shunt regulator with a failed one; decide from the battery voltage whether the fault is undercharging or overcharging, and which test from job sheet 3.6.2 confirms it.",
+          "preview": "charging-shunt"
         },
         {
           "type": "h3",

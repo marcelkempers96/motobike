@@ -11,22 +11,10 @@ const toc = $('#learn-toc');
 const ROOT = '../';
 const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', 'fuel-ignition': 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'hybrid-power-unit-portrait.jpg' };
 
-function moduleOf(hash) {
-  const h = decodeURIComponent(hash.replace(/^#/, ''));
-  if (!h) return { mod: null };
-  const slug = TOPIC_ALIAS[h] || h;
-  let mod = MODULES.find((m) => m.id === slug);
-  let chap = null;
-  if (!mod) {
-    for (const m of MODULES) { const c = m.chapters.find((x) => x.id === h); if (c) { mod = m; chap = c; break; } }
-  }
-  return { mod, chap };
-}
-
-function renderTOC(active) {
+function renderTOC(active, page) {
   toc.innerHTML = `<span class="ute-label">Course</span>
     <ol>${MODULES.map((m) => `<li><a href="#${m.id}" class="${active && active.id === m.id ? 'is-on' : ''}">${m.title}</a>
-      ${active && active.id === m.id ? `<ol class="ute-toc-sub">${m.chapters.map((c) => `<li><a href="#${c.id}" data-chap="${c.id}">${c.title}</a></li>`).join('')}<li><a href="#${m.id}-glossary" data-chap="${m.id}-glossary">Glossary and further reading</a></li></ol>` : ''}</li>`).join('')}</ol>
+      ${active && active.id === m.id ? `<ol class="ute-toc-sub">${m.chapters.map((c) => `<li><a href="#${c.id}" data-chap="${c.id}" class="${page === c.id ? 'is-on' : ''}">${c.title}</a></li>`).join('')}<li><a href="#${m.id}-glossary" data-chap="${m.id}-glossary" class="${page === m.id + '-glossary' ? 'is-on' : ''}">Glossary and further reading</a></li></ol>` : ''}</li>`).join('')}</ol>
     <div class="ute-toc-foot"><a class="ute-linkbtn" href="${ROOT}quiz/">Take the quiz →</a></div>`;
 }
 
@@ -63,7 +51,7 @@ function home() {
 function glossaryHTML(mod) {
   const g = GLOSSARY['m' + (MODULES.indexOf(mod) + 1)];
   if (!g) return '';
-  return `<article class="ute-chapter" id="${mod.id}-glossary">
+  return `<article class="ute-chapter mz-chapter" id="${mod.id}-glossary">
     <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}</span><span class="ute-label">Reference</span></div>
     <h2>Glossary</h2>
     <input class="mz-gloss-filter" type="search" placeholder="Filter ${g.terms.length} terms…" aria-label="Filter glossary terms">
@@ -99,37 +87,12 @@ function block(b, mod) {
   }
 }
 
-function renderModule(mod, chap) {
-  document.title = `Moto Zero · ${mod.title}`;
-  renderTOC(mod);
-  const i = MODULES.indexOf(mod);
-  const prev = MODULES[i - 1], next = MODULES[i + 1];
-  main.innerHTML = `
-    <section class="ute-hero mz-hero-cover">
-      <img class="mz-cover" src="${ROOT}assets/photos/${COVER[mod.id]}" alt="" loading="eager">
-      <div>
-      <span class="ute-label">Module ${mod.num}</span>
-      <h1>${mod.title}</h1>
-      <p>${mod.intro}</p>
-      <div class="ute-chapter-foot">
-        <a class="ute-linkbtn" href="${ROOT}assets/pdf/${mod.pdf}" target="_blank" rel="noopener">Download PDF</a>
-        <a class="ute-linkbtn is-warm" href="${ROOT}quiz/?topic=${mod.id}">Quiz this module →</a>
-      </div>
-      </div>
-    </section>
-    ${mod.chapters.map((c, ci) => `
-      <article class="ute-chapter" id="${c.id}">
-        <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}.${ci + 1}</span><span class="ute-label">${mod.title}</span></div>
-        <h2>${c.title}</h2>
-        ${c.lead ? `<p class="lead">${c.lead}</p>` : ''}
-        <div class="prose">${c.blocks.map((b) => block(b, mod)).join('')}</div>
-        ${c.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${c.lab}">Try it in the Lab →</a></div>` : ''}
-      </article>`).join('')}
-    ${glossaryHTML(mod)}
-    <nav class="ute-chapter ute-pager">
-      ${prev ? `<a class="ute-linkbtn" href="#${prev.id}">← ${prev.num} ${prev.title}</a>` : '<span></span>'}
-      ${next ? `<a class="ute-linkbtn is-warm" href="#${next.id}">${next.num} ${next.title} →</a>` : `<a class="ute-linkbtn is-warm" href="${ROOT}quiz/">Take the full quiz →</a>`}
-    </nav>`;
+/* ---------- One page per chapter: module overview, chapter pages, glossary page ---------- */
+const FLAT = MODULES.flatMap((m) => [...m.chapters.map((c) => ({ mod: m, chap: c })), { mod: m, chap: null, gloss: true }]);
+const pageHash = (p) => (p.gloss ? `${p.mod.id}-glossary` : p.chap.id);
+const pageTitle = (p) => (p.gloss ? 'Glossary and further reading' : p.chap.title);
+
+function wireContent() {
   main.querySelectorAll('[data-fig]').forEach((f) => mountFigure(f.dataset.fig, f));
   main.querySelectorAll('[data-plate]').forEach((f) => {
     const open = () => openPlate(f.dataset.plate);
@@ -146,9 +109,76 @@ function renderModule(mod, chap) {
     if (!q) { c.remove(); return; }
     c.appendChild(questionCard(q, { meta: 'Check yourself' }));
   });
-  if (chap) requestAnimationFrame(() => document.getElementById(chap.id)?.scrollIntoView());
-  else window.scrollTo(0, 0);
-  observeChapters();
+}
+
+function crumbs(mod, here) {
+  return `<nav class="mz-crumbs" aria-label="Breadcrumb"><a href="#">Learn</a><span>/</span><a href="#${mod.id}">Module ${mod.num}</a>${here ? `<span>/</span><b>${here}</b>` : ''}</nav>`;
+}
+
+function renderModuleIndex(mod) {
+  document.title = `Moto Zero · ${mod.title}`;
+  renderTOC(mod, null);
+  main.innerHTML = `
+    <section class="ute-hero mz-hero-cover">
+      <img class="mz-cover" src="${ROOT}assets/photos/${COVER[mod.id]}" alt="" loading="eager">
+      <div>
+        ${crumbs(mod)}
+        <span class="ute-label">Module ${mod.num} · ${mod.chapters.length} chapters</span>
+        <h1>${mod.title}</h1>
+        <p>${mod.intro}</p>
+        <div class="ute-chapter-foot">
+          <a class="ute-linkbtn is-warm" href="#${mod.chapters[0].id}">Start chapter ${mod.num}.1 →</a>
+          <a class="ute-linkbtn" href="${ROOT}assets/pdf/${mod.pdf}" target="_blank" rel="noopener">Download the PDF</a>
+          <a class="ute-linkbtn" href="${ROOT}quiz/?topic=${mod.id}">Quiz this module</a>
+        </div>
+      </div>
+    </section>
+    <section class="ute-chapter">
+      <h2>Chapters</h2>
+      <ol class="mz-chaplist">${mod.chapters.map((c, ci) => {
+        const pic = c.blocks.find((b) => b.type === 'plate') || c.blocks.find((b) => b.type === 'photo') || c.blocks.find((b) => b.type === 'model' || b.type === 'models');
+        let img = '';
+        if (pic && pic.type === 'plate') img = `${ROOT}assets/illustrations/${plateSrc(pic.id)}`;
+        else if (pic && pic.type === 'photo') img = `${ROOT}assets/${pic.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${pic.src}`;
+        else if (pic) { const f = pic.file || pic.files[0]; img = `${ROOT}assets/renders/${f.startsWith('bike_') ? f + '_side' : f}.webp`; }
+        return `<li><a href="#${c.id}">${img ? `<img src="${img}" alt="" loading="lazy">` : '<span></span>'}<div><span class="ute-chapter-num">${mod.num}.${ci + 1}</span><h3>${c.title}</h3><p>${c.lead || ''}</p></div></a></li>`;
+      }).join('')}
+      <li><a href="#${mod.id}-glossary"><span></span><div><span class="ute-chapter-num">${mod.num}</span><h3>Glossary and further reading</h3><p>Every term used in the module, and where to read more.</p></div></a></li></ol>
+    </section>`;
+  window.scrollTo(0, 0);
+}
+
+function renderPage(p) {
+  const { mod, chap } = p;
+  const i = FLAT.indexOf(p);
+  const prev = FLAT[i - 1], next = FLAT[i + 1];
+  const ci = chap ? mod.chapters.indexOf(chap) : mod.chapters.length;
+  document.title = `Moto Zero · ${pageTitle(p)}`;
+  renderTOC(mod, pageHash(p));
+  const pager = `<nav class="mz-pager" aria-label="Chapter navigation">
+      ${prev ? `<a class="mz-pager-prev" href="#${pageHash(prev)}"><span class="ute-label">← Previous</span><b>${pageTitle(prev)}</b></a>` : '<span></span>'}
+      ${next ? `<a class="mz-pager-next" href="#${pageHash(next)}"><span class="ute-label">Next →</span><b>${pageTitle(next)}</b></a>` : `<a class="mz-pager-next" href="${ROOT}quiz/"><span class="ute-label">Finished →</span><b>Take the full quiz</b></a>`}
+    </nav>`;
+  const progress = `<div class="mz-progress" aria-label="Progress in this module"><i style="width:${Math.round((ci + 1) / (mod.chapters.length + 1) * 100)}%"></i></div>`;
+  if (p.gloss) {
+    main.innerHTML = `<div class="mz-page">${crumbs(mod, 'Glossary')}${progress}${glossaryHTML(mod)}${pager}</div>`;
+  } else {
+    main.innerHTML = `
+      <div class="mz-page">
+        ${crumbs(mod, `Chapter ${mod.num}.${ci + 1}`)}
+        ${progress}
+        <article class="ute-chapter mz-chapter" id="${chap.id}">
+          <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}.${ci + 1}</span><span class="ute-label">${mod.title} · chapter ${ci + 1} of ${mod.chapters.length}</span></div>
+          <h2>${chap.title}</h2>
+          ${chap.lead ? `<p class="lead">${chap.lead}</p>` : ''}
+          <div class="prose">${chap.blocks.map((b) => block(b, mod)).join('')}</div>
+          ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab}">Try it in the Lab →</a></div>` : ''}
+        </article>
+        ${pager}
+      </div>`;
+  }
+  wireContent();
+  window.scrollTo(0, 0);
 }
 
 /* ---------- Plates lightbox ---------- */
@@ -221,25 +251,15 @@ function sleep(fig) {
   if (box) box.innerHTML = '<p class="mz3d-status">3D model</p>';
 }
 
-let io;
-function observeChapters() {
-  if (io) io.disconnect();
-  io = new IntersectionObserver((ents) => {
-    ents.forEach((e) => {
-      if (!e.isIntersecting) return;
-      toc.querySelectorAll('[data-chap]').forEach((a) => a.classList.toggle('is-on', a.dataset.chap === e.target.id));
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-  main.querySelectorAll('.ute-chapter[id]').forEach((c) => io.observe(c));
-}
-
-let current = null;
 function route() {
-  const { mod, chap } = moduleOf(location.hash);
-  if (!mod) { current = null; home(); window.scrollTo(0, 0); return; }
-  if (current === mod && chap) { document.getElementById(chap.id)?.scrollIntoView(); return; }
-  current = mod;
-  renderModule(mod, chap);
+  const h = decodeURIComponent(location.hash.replace(/^#/, ''));
+  if (!h) { home(); window.scrollTo(0, 0); return; }
+  const slug = TOPIC_ALIAS[h] || h;
+  const mod = MODULES.find((m) => m.id === slug);
+  if (mod) { renderModuleIndex(mod); return; }
+  const p = FLAT.find((x) => pageHash(x) === h);
+  if (p) { renderPage(p); return; }
+  home();
 }
 window.addEventListener('hashchange', route);
 route();
