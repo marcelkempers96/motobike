@@ -21,12 +21,12 @@ const CHAPTER_IMG = {
   'm4-clutch': 'renders/clutch_exploded.webp', 'm4-gearbox': 'illustrations/transmission/F14.png', 'm4-final-drive': 'renders/photo/render-chain.jpg',
   'm4-frame-steering': 'renders/frame_cradle.webp', 'm4-suspension': 'renders/forks_usd.webp', 'm4-wheels-tyres': 'renders/front_wheel_mx.webp',
   'm4-brakes': 'renders/photo/render-brake.jpg', 'm4-maintenance': 'photos/scooter-cvt-workshop.jpg',
-  'm5-architecture': 'photos/hybrid-power-unit.jpg', 'm5-motors': 'renders/motor.webp', 'm5-controllers': 'renders/controller.webp',
+  'm5-architecture': 'photos/electric-scrambler-render.jpg', 'm5-motors': 'renders/motor.webp', 'm5-controllers': 'renders/controller.webp',
   'm5-batteries': 'renders/photo/render-battery.jpg', 'm5-charging': 'renders/charge_port.webp', 'm5-safety': 'illustrations/electrical/F25.png',
 };
 const isPhoto = (p) => p.startsWith('photos/') || p.startsWith('renders/photo/');
 
-const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', 'fuel-ignition': 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'hybrid-power-unit-portrait.jpg' };
+const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', 'fuel-ignition': 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'electric-scrambler-render.jpg' };
 
 function renderTOC(active, page) {
   toc.innerHTML = `<span class="ute-label">Course</span>
@@ -101,7 +101,7 @@ function block(b, mod) {
       const files = (b.files || [b.file]).filter((f) => MODELS[f]);
       return files.length ? `<figure class="ute-figure mz-learn-model" data-models="${files.join(',')}"><div class="mz-variants">${files.length > 1 ? `<div class="ute-seg" role="group" aria-label="Models">${files.map((f) => `<button type="button" data-model="${f}">${MODELS[f][1].split(/[,(]/)[0].trim()}</button>`).join('')}</div>` : ''}</div><div class="ute-figure-stage"><div class="mz3d mz3d-part"><p class="mz3d-status">3D model · ${MODELS[files[0]][1]}</p></div></div><p class="mz3d-cap"></p><div class="mz-subparts"></div><figcaption class="ute-figure-cap"><span class="ute-label">3D · drag to rotate</span> ${b.caption || ''}</figcaption></figure>` : '';
     }
-    case 'photo': return `<figure class="ute-figure mz-learn-photo"><div class="ute-figure-stage"><img src="${ROOT}assets/${b.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${b.src}" alt="${(b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"></div>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">${b.src.startsWith('render-') ? 'Render' : 'Photograph'}</span> ${b.caption}</figcaption>` : ''}</figure>`;
+    case 'photo': return `<figure class="ute-figure mz-learn-photo"><div class="ute-figure-stage"><img src="${ROOT}assets/${b.src.startsWith('render-') ? 'renders/photo' : 'photos'}/${b.src}" alt="${(b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"></div>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">${/render/.test(b.src) ? 'Render' : 'Photograph'}</span> ${b.caption}</figcaption>` : ''}</figure>`;
     case 'wiring': {
       const TAB = { harness: ['harness', 'WR01 · Main harness'], starting: ['starting-cranking', 'F23 · Starting circuit'], charging: ['charging', 'F21 · Charging circuit'], ignition: ['ignition-spark', 'F22 · Ignition circuits'] };
       const t = TAB[b.tab] || TAB.harness;

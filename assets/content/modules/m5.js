@@ -140,8 +140,8 @@ export default {
         },
         {
           "type": "photo",
-          "src": "hybrid-power-unit.jpg",
-          "caption": "High-voltage cabling on a hybrid racing power unit: the orange sheathing is the industry convention for conductors above 60 V DC, and the cables run in short, clamped, separately routed bundles to the motor-generator and energy store. The same colour code marks the traction circuit on every electric motorcycle."
+          "src": "electric-scrambler-render.jpg",
+          "caption": "The course's electric scrambler. The battery pack fills the frame where a petrol engine would sit, with the motor and controller below it driving the rear wheel."
         },
         {
           "type": "check",

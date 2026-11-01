@@ -3,7 +3,7 @@ const fs = require('fs'), path = require('path'), { execSync } = require('child_
 const MarkdownIt = require('markdown-it'), container = require('markdown-it-container');
 const { chromium } = require('playwright');
 const ROOT = '/home/claude/mc';
-const COVER = { 1: 'honda-air-cooled', 2: 'triumph-engine', 3: 'vintage-timing-cover', 4: 'honda-cb650r-engine', 5: 'hybrid-power-unit-portrait' };
+const COVER = { 1: 'honda-air-cooled', 2: 'triumph-engine', 3: 'vintage-timing-cover', 4: 'honda-cb650r-engine', 5: 'electric-scrambler-render' };
 const SLUG = { 1: 'foundations', 2: 'engine', 3: 'fuel-ignition-electrical', 4: 'drivetrain-chassis', 5: 'electric' };
 const CALLOUT = { NOTE: 'Note', WARNING: 'Safety', SPEC: 'Reference data', TRY: 'Explorer exercise', OBJECTIVES: 'Learning objectives' };
 
