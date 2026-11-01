@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Asset map — ties every part key to the course's real assets:
+   Asset map: ties every part key to the course's real assets:
    3D models (assets/models/*.glb), course plates (assets/illustrations/**.png),
    bike mesh names and diagram hotspots.
    ========================================================================== */

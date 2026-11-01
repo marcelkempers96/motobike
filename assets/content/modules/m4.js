@@ -1,4 +1,4 @@
-/* Moto Zero — Module 04 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Moto Zero: Module 04 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "drivetrain-chassis",
