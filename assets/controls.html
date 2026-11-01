@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motorcycle Controls</title>
+<meta name="description" content="Interactive rider's-eye view of a classic 125 cc road motorcycle cockpit: start the engine, work the clutch, gears, throttle and brakes, and see what each switch does. Moto Zero, Transitions Lab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F6F2; --card:#FFFFFF; --ink:#1E2B5E; --text:#232733; --muted:#5D6270;
+  --line:#E2E0D8; --line2:#CFCCC2; --accent:#C8502A; --accent-soft:#F6E3DA;
+  --ok:#1F7A3A; --warn:#A8361A;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 var(--sans)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 24px}
+header.top{padding-top:28px;padding-bottom:14px}
+.eyebrow{font:500 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing:-.01em}
+.lede{max-width:820px;margin:0;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:22px;align-items:start;padding-bottom:40px}
+.stage{min-width:0}
+.art{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+.art svg{display:block;width:100%;height:auto;touch-action:none;user-select:none;-webkit-user-select:none}
+.msgbar{display:flex;gap:12px;align-items:center;min-height:44px;padding:10px 14px;margin-top:10px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
+.msgbar .dot{width:9px;height:9px;border-radius:50%;background:#B9BDC6;flex:none}
+.msgbar.run .dot{background:var(--ok)}
+.msgbar.warn{border-color:#E9B8A6;background:#FCF1EC}
+.msgbar.warn .dot{background:var(--accent)}
+#msg{margin:0;font-size:14px;color:var(--text)}
+.readouts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:10px}
+.ro{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.ro .k{font:500 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ro .v{font:600 20px/1.25 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.deck{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.grp h3{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.btns{display:flex;flex-wrap:wrap;gap:6px}
+.deck button,.reset{font:500 13px/1 var(--sans);color:var(--ink);background:#F3F2EE;border:1px solid var(--line2);border-radius:8px;padding:9px 11px;min-height:38px;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.deck button:hover{background:#ECEAE3}
+.deck button[aria-pressed="true"],.deck button[aria-checked="true"],.deck button.down{background:var(--ink);color:#fff;border-color:var(--ink)}
+.deck button:focus-visible,.reset:focus-visible,.entry:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.deck button.hl,.entry.hl{box-shadow:0 0 0 2px var(--accent)}
+.thr{grid-column:1/-1;display:flex;align-items:center;gap:12px;padding-top:12px;border-top:1px solid var(--line)}
+.thr label{font:500 12px/1 var(--mono);color:var(--muted)}
+.thr input{flex:1;accent-color:var(--accent);min-width:0}
+.thr output{font:600 13px/1 var(--mono);color:var(--ink);width:40px;text-align:right}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 14px 14px;position:sticky;top:14px;max-height:calc(100vh - 28px);overflow:auto}
+.panel h2{font:600 16px/1.2 var(--sans);color:var(--ink);margin:0 4px 4px}
+.panel .hint{font-size:13px;color:var(--muted);margin:0 4px 10px}
+.panel ol{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.entry{display:block;width:100%;text-align:left;background:transparent;border:1px solid transparent;border-radius:9px;padding:8px 10px;cursor:pointer;font:inherit;color:inherit}
+.entry:hover,.entry.hl{background:var(--accent-soft);border-color:#EBC3B3}
+.entry .nm{display:flex;gap:8px;align-items:baseline;font-weight:600;color:var(--ink);font-size:14px}
+.entry .nm i{font:500 11px/1 var(--mono);font-style:normal;color:var(--accent);min-width:18px}
+.entry .ds{display:block;font-size:13px;line-height:1.45;color:var(--muted);margin-top:2px;padding-left:26px}
+.keys{margin:12px 4px 0;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.keys kbd{font:500 11px/1 var(--mono);background:#F1F0EB;border:1px solid var(--line2);border-bottom-width:2px;border-radius:4px;padding:2px 5px;color:var(--ink)}
+.panel-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 4px 0}
+.reset{background:var(--ink);color:#fff;border-color:var(--ink)}
+.reset:hover{background:#2A3A78}
+.foot{font-size:12px;color:var(--muted)}
+/* SVG interaction */
+.ctl{cursor:pointer;outline:none}
+.ctl.static{cursor:default}
+.ctl.hl,.ctl:focus-visible{filter:drop-shadow(0 0 1.5px #C8502A) drop-shadow(0 0 7px rgba(200,80,42,.75))}
+#throttleHit{cursor:ns-resize}
+.waves path{opacity:0}
+.waves.on path{animation:wave .6s linear infinite}
+.waves.on path:nth-child(2){animation-delay:.2s}
+.waves.on path:nth-child(3){animation-delay:.4s}
+@keyframes wave{0%{opacity:.95}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.waves.on path{animation:none;opacity:.8}}
+@media (max-width:1100px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .panel{position:static;max-height:none}
+  .panel ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  h1{font-size:24px}
+  .deck{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .readouts{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .panel ol{grid-template-columns:minmax(0,1fr)}
+  .ro .v{font-size:17px}
+}
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <p class="eyebrow">Moto Zero &middot; Module 01 &middot; Controls</p>
+  <h1>Motorcycle controls</h1>
+  <p class="lede">A rider's-eye view of a classic 125 cc road motorcycle with every control working. Start it with the key ON, the stop switch at RUN and the gearbox in neutral, then pull the clutch, select first and open the throttle to see how engine speed, gear and road speed are linked.</p>
+</header>
+
+<main class="wrap layout">
+  <section class="stage" aria-label="Interactive cockpit">
+    <figure class="art" id="art"></figure>
+    <div class="msgbar" id="msgbar"><span class="dot" aria-hidden="true"></span><p id="msg" role="status" aria-live="polite">Engine off, parked in first gear. Turn the key ON to begin.</p></div>
+    <div class="readouts" aria-label="Readouts">
+      <div class="ro"><div class="k">Engine</div><div class="v" id="roEng">OFF</div></div>
+      <div class="ro"><div class="k">r/min</div><div class="v" id="roRpm">0</div></div>
+      <div class="ro"><div class="k">km/h</div><div class="v" id="roSpd">0</div></div>
+      <div class="ro"><div class="k">Gear</div><div class="v" id="roGear">1</div></div>
+      <div class="ro"><div class="k">Clutch</div><div class="v" id="roClu">OUT</div></div>
+      <div class="ro"><div class="k">Engine temp</div><div class="v" id="roTmp">20 &deg;C</div></div>
+    </div>
+    <div class="deck" id="deck" aria-label="Control buttons">
+      <div class="grp"><h3>Start</h3><div class="btns">
+        <button type="button" data-ctl="ignition" data-act="ignition" role="switch" aria-checked="false">Key ON</button>
+        <button type="button" data-ctl="kill" data-act="kill" role="switch" aria-checked="true">Stop: RUN</button>
+        <button type="button" data-ctl="starter" data-hold="starter">Starter</button>
+        <button type="button" data-ctl="choke" data-act="choke" role="switch" aria-checked="false">Choke</button>
+      </div></div>
+      <div class="grp"><h3>Hands</h3><div class="btns">
+        <button type="button" data-ctl="clutch" data-act="clutch" aria-pressed="false">Clutch</button>
+        <button type="button" data-ctl="front" data-hold="front">Front brake</button>
+        <button type="button" data-ctl="horn" data-hold="horn">Horn</button>
+      </div></div>
+      <div class="grp"><h3>Feet</h3><div class="btns">
+        <button type="button" data-ctl="gear" data-act="down">Shift down</button>
+        <button type="button" data-ctl="gear" data-act="up">Shift up</button>
+        <button type="button" data-ctl="rear" data-hold="rear">Rear brake</button>
+      </div></div>
+      <div class="grp"><h3>Lights</h3><div class="btns">
+        <button type="button" data-ctl="indicator" data-act="indL" aria-pressed="false">Indicate left</button>
+        <button type="button" data-ctl="indicator" data-act="indR" aria-pressed="false">Indicate right</button>
+        <button type="button" data-ctl="beam" data-act="beam" role="switch" aria-checked="false">High beam</button>
+      </div></div>
+      <div class="thr" data-ctl="throttle"><label for="thr">Throttle (held open)</label><input id="thr" type="range" min="0" max="100" step="1" value="0"><output id="thrOut" for="thr">0%</output></div>
+    </div>
+  </section>
+
+  <aside class="panel" aria-label="What each control does">
+    <h2>The controls</h2>
+    <p class="hint">Hover or focus an entry to find the control, or hover a control to find its entry.</p>
+    <ol id="entries"></ol>
+    <p class="keys">Keyboard: <kbd>K</kbd> key, <kbd>X</kbd> stop switch, <kbd>S</kbd> starter, <kbd>C</kbd> clutch (hold), <kbd>T</kbd> throttle (hold), <kbd>F</kbd> front brake, <kbd>R</kbd> rear brake, <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> gear, <kbd>Q</kbd>/<kbd>E</kbd> indicators, <kbd>H</kbd> horn, <kbd>B</kbd> beam, <kbd>V</kbd> choke.</p>
+    <div class="panel-foot"><span class="foot">125 cc single, 5-speed. Transitions Lab, CC BY-SA 4.0</span><button type="button" class="reset" id="reset">Reset</button></div>
+  </aside>
+</main>
+
+<script>
+(function(){
+'use strict';
+/* =====================================================================
+   ARTWORK  (viewBox 0 0 1400 900, rider's-eye view)
+   ===================================================================== */
+const F = (n)=> (Math.round(n*100)/100);
+const SANS = "'IBM Plex Sans',Helvetica,Arial,sans-serif";
+const MONO = "'IBM Plex Mono',Menlo,Consolas,monospace";
+
+function lg(id, stops, x1=0,y1=0,x2=0,y2=1, extra=''){
+  return `<linearGradient id="${id}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" ${extra}>`+
+    stops.map(s=>`<stop offset="${s[0]}" stop-color="${s[1]}"${s[2]!==undefined?` stop-opacity="${s[2]}"`:''}/>`).join('')+`</linearGradient>`;
+}
+function rg(id, stops, cx=.5,cy=.5,r=.5, extra=''){
+  return `<radialGradient id="${id}" cx="${cx}" cy="${cy}" r="${r}" ${extra}>`+
+    stops.map(s=>`<stop offset="${s[0]}" stop-color="${s[1]}"${s[2]!==undefined?` stop-opacity="${s[2]}"`:''}/>`).join('')+`</radialGradient>`;
+}
+
+function defs(){
+  return `<defs>
+  ${lg('chromeV',[[0,'#3f464d'],[.16,'#aab2b9'],[.3,'#f4f7f9'],[.38,'#ffffff'],[.5,'#b9c1c8'],[.66,'#5b636b'],[.82,'#8f989f'],[1,'#3a4046']])}
+  ${lg('chromeD',[[0,'#f7f9fa'],[.22,'#a9b1b8'],[.42,'#eef1f3'],[.6,'#6d757d'],[.8,'#c7cdd2'],[1,'#596168']],0,0,1,1)}
+  ${lg('chromeD2',[[0,'#4d555c'],[.3,'#d7dce0'],[.5,'#ffffff'],[.7,'#8c949b'],[1,'#3d434a']],0,0,1,1)}
+  ${lg('alloyV',[[0,'#5c636a'],[.2,'#a9afb5'],[.42,'#e3e6e8'],[.55,'#cdd1d5'],[.78,'#8a9097'],[1,'#50575e']])}
+  ${lg('alloyH',[[0,'#666d74'],[.3,'#d5d9dc'],[.5,'#eef0f2'],[.7,'#a8aeb4'],[1,'#5a6168']],0,0,1,0)}
+  ${lg('rubberV',[[0,'#050506'],[.18,'#1c1e21'],[.36,'#3a3e44'],[.46,'#2c2f34'],[.7,'#141518'],[1,'#040405']])}
+  ${lg('rubberH',[[0,'#060607'],[.3,'#2a2d31'],[.5,'#34383d'],[.75,'#16181b'],[1,'#050506']],0,0,1,0)}
+  ${lg('plasticV',[[0,'#3a3e44'],[.12,'#2a2d32'],[.5,'#1a1c20'],[1,'#0b0c0e']])}
+  ${lg('plasticTop',[[0,'#4a4f56'],[.5,'#2b2e33'],[1,'#1b1d21']])}
+  ${lg('steelBlk',[[0,'#1a1c1f'],[.35,'#4b5057'],[.5,'#5c626a'],[.7,'#26292d'],[1,'#0e0f11']])}
+  ${rg('tankPaint',[[0,'#5d8fd6'],[.18,'#3a67ac'],[.5,'#1d3f78'],[.8,'#112850'],[1,'#0a1834']],.42,.3,.78)}
+  ${lg('tankEdge',[[0,'#000',0],[.75,'#000',0],[1,'#000',.45]],0,0,1,0)}
+  ${lg('gloss',[[0,'#ffffff',.85],[1,'#ffffff',0]],0,0,1,1)}
+  ${lg('glossV',[[0,'#ffffff',.55],[1,'#ffffff',0]])}
+  ${rg('face',[[0,'#2b3037'],[.65,'#171a1e'],[1,'#08090b']])}
+  ${rg('faceRim',[[.86,'#000',0],[1,'#000',.75]])}
+  ${lg('glare',[[0,'#ffffff',.26],[.55,'#ffffff',.05],[1,'#ffffff',0]],0,0,.6,1)}
+  ${lg('needle',[[0,'#ff9a4a'],[.5,'#ff6a1f'],[1,'#c9400c']],0,0,1,0)}
+  ${rg('hub',[[0,'#7b828a'],[.35,'#3a3f45'],[1,'#0c0d0f']],.4,.35,.65)}
+  ${rg('softShadow',[[0,'#000',.32],[.6,'#000',.14],[1,'#000',0]])}
+  ${rg('lensG',[[0,'#eaffef'],[.3,'#59ff7e'],[1,'#0b9a2e']])}
+  ${rg('lensB',[[0,'#eef6ff'],[.3,'#4fa0ff'],[1,'#0b3fb0']])}
+  ${rg('lensR',[[0,'#fff1ee'],[.3,'#ff5240'],[1,'#a8160b']])}
+  ${rg('glowG',[[0,'#40ff70',.55],[1,'#40ff70',0]])}
+  ${rg('glowB',[[0,'#3c8cff',.6],[1,'#3c8cff',0]])}
+  ${rg('glowR',[[0,'#ff3b2a',.55],[1,'#ff3b2a',0]])}
+  ${lg('mirrorGlass',[[0,'#dfe9f1'],[.42,'#a9c2d6'],[.5,'#8ea6b8'],[.52,'#5e6a72'],[.75,'#454c52'],[1,'#2e3338']])}
+  ${lg('redRock',[[0,'#f0453b'],[.5,'#c51f17'],[1,'#7d0d08']])}
+  ${lg('redRockDn',[[0,'#8d140e'],[.5,'#a8170f'],[1,'#c42a20']])}
+  ${lg('blkRock',[[0,'#4a4e55'],[.5,'#2a2d32'],[1,'#121315']])}
+  ${lg('blkRockDn',[[0,'#0d0e10'],[.5,'#1a1c1f'],[1,'#2a2d31']])}
+  ${rg('btnBlk',[[0,'#5a5f66'],[.5,'#2a2d32'],[1,'#0e0f11']],.4,.35,.7)}
+  ${rg('btnRed',[[0,'#ff7a6a'],[.45,'#d42a1e'],[1,'#7a0c07']],.4,.35,.7)}
+  ${rg('capChrome',[[0,'#ffffff'],[.35,'#d9dee2'],[.7,'#7d868e'],[1,'#3f464d']],.38,.32,.75)}
+  ${lg('headShell',[[0,'#c8ced3'],[.35,'#ffffff'],[.6,'#9aa2a9'],[1,'#4d545b']])}
+  </defs>`;
+}
+
+/* ---------- instruments ---------- */
+const DIAL = {
+  speedo:{cx:530, cy:200, max:140, major:20, minor:10, fine:5, units:'km/h', red:null},
+  tacho:{cx:870, cy:200, max:12, major:1, minor:.5, fine:null, units:'×1000 r/min', red:10}
+};
+const SWEEP0=-135, SWEEP=270;
+function pol(cx,cy,r,deg){ const a=deg*Math.PI/180; return [cx+r*Math.sin(a), cy-r*Math.cos(a)]; }
+function arc(cx,cy,r,d0,d1){ const p0=pol(cx,cy,r,d0), p1=pol(cx,cy,r,d1); const lf=(d1-d0)>180?1:0; return `M${F(p0[0])},${F(p0[1])} A${r},${r} 0 ${lf} 1 ${F(p1[0])},${F(p1[1])}`; }
+function dial(id,o){
+  const {cx,cy,max}=o; const R=128, Rf=110;
+  let s=`<g id="${id}" class="ctl static" data-ctl="${id}" role="img" aria-label="${id==='speedo'?'Speedometer':'Tachometer'}">`;
+  s+=`<circle cx="${cx}" cy="${cy+14}" r="${R+14}" fill="url(#softShadow)"/>`;
+  s+=`<circle cx="${cx}" cy="${cy+6}" r="${R+2}" fill="#0b0c0e"/>`;               // cup
+  s+=`<circle cx="${cx}" cy="${cy}" r="${R}" fill="url(#chromeD)"/>`;
+  s+=`<circle cx="${cx}" cy="${cy}" r="${R-4}" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="1.2"/>`;
+  s+=`<circle cx="${cx}" cy="${cy}" r="${R-9}" fill="url(#chromeD2)"/>`;
+  s+=`<circle cx="${cx}" cy="${cy}" r="${Rf+3}" fill="#050506"/>`;
+  s+=`<circle cx="${cx}" cy="${cy}" r="${Rf}" fill="url(#face)"/>`;
+  // red zone
+  if(o.red!=null){ const d0=SWEEP0+SWEEP*o.red/max, d1=SWEEP0+SWEEP; s+=`<path d="${arc(cx,cy,99,d0,d1)}" fill="none" stroke="#d92a1a" stroke-width="10"/>`; }
+  // ticks
+  const steps = o.fine? o.fine : o.minor;
+  for(let v=0; v<=max+1e-9; v+=steps){
+    const d=SWEEP0+SWEEP*v/max; const isMaj=Math.abs(v/o.major-Math.round(v/o.major))<1e-6; const isMin=Math.abs(v/o.minor-Math.round(v/o.minor))<1e-6;
+    const r1=104, r0=isMaj?88:(isMin?95:99); const w=isMaj?3.2:(isMin?1.8:1.1);
+    const p0=pol(cx,cy,r0,d), p1=pol(cx,cy,r1,d);
+    const col=(o.red!=null && v>=o.red)?'#ffd7cf':'#f1f1ec';
+    s+=`<line x1="${F(p0[0])}" y1="${F(p0[1])}" x2="${F(p1[0])}" y2="${F(p1[1])}" stroke="${col}" stroke-width="${w}" stroke-linecap="butt"/>`;
+    if(isMaj){ const pt=pol(cx,cy,72,d); s+=`<text x="${F(pt[0])}" y="${F(pt[1]+6.5)}" text-anchor="middle" font-family="${SANS}" font-size="${max>20?17:19}" font-weight="600" fill="${(o.red!=null&&v>=o.red)?'#ff6a55':'#f3f3ee'}">${v}</text>`; }
+  }
+  s+=`<text x="${cx}" y="${cy-36}" text-anchor="middle" font-family="${SANS}" font-size="11.5" font-weight="500" letter-spacing=".06em" fill="#c9cbc6">${o.units}</text>`;
+  if(id==='speedo'){
+    // odometer drum window
+    const wx=cx-39, wy=cy+66;
+    s+=`<rect x="${wx-3}" y="${wy-3}" width="84" height="24" rx="3" fill="#2a2d31"/>`;
+    s+=`<rect x="${wx}" y="${wy}" width="78" height="18" rx="1.5" fill="#050505"/>`;
+    for(let i=0;i<6;i++){ const last=i===5; s+=`<rect x="${wx+i*13+.5}" y="${wy+.5}" width="12" height="17" fill="${last?'#e9e7e0':'#111'}"/>`+
+      `<text id="odo${i}" x="${wx+i*13+6.5}" y="${wy+13.4}" text-anchor="middle" font-family="${MONO}" font-size="12.5" font-weight="500" fill="${last?'#111':'#eeeeea'}">${'124836'[i]}</text>`; }
+    s+=`<rect x="${wx}" y="${wy}" width="78" height="9" fill="#fff" opacity=".07"/>`;
+    
+  } else {
+    
+  }
+  // needle
+  s+=`<g id="${id}Needle" transform="rotate(${SWEEP0} ${cx} ${cy})">`+
+     `<path d="M${cx-1.6},${cy+3} L${cx+2.6},${cy+3} L${cx+1},${cy-100} L${cx},${cy-101} Z" fill="#000" opacity=".35" transform="translate(2.5 3)"/>`+
+     `<path d="M${cx-4},${cy+24} L${cx+4},${cy+24} L${cx+1.4},${cy-100} L${cx-1.4},${cy-100} Z" fill="url(#needle)"/>`+
+     `</g>`;
+  s+=`<circle cx="${cx}" cy="${cy}" r="14" fill="url(#hub)"/><circle cx="${cx}" cy="${cy}" r="14" fill="none" stroke="#000" stroke-opacity=".5"/>`;
+  // glass glare + rim shade
+  s+=`<circle cx="${cx}" cy="${cy}" r="${Rf}" fill="url(#faceRim)"/>`;
+  s+=`<path d="M${cx-104},${cy-12} A106,106 0 0 1 ${cx+52},${cy-92} C${cx+10},${cy-70} ${cx-60},${cy-50} ${cx-104},${cy-12} Z" fill="url(#glare)"/>`;
+  s+=`<path d="${arc(cx,cy,Rf-2,-70,-10)}" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>`;
+  s+=`</g>`;
+  return s;
+}
+
+function lamp(id,x,y,color,sym){
+  const lens=color==='g'?'lensG':color==='b'?'lensB':'lensR', glow=color==='g'?'glowG':color==='b'?'glowB':'glowR';
+  const off=color==='g'?'#1f4a2c':color==='b'?'#1b2f5c':'#4a1a16';
+  return `<g id="${id}" transform="translate(${x} ${y})" data-on="url(#${lens})" data-off="${off}">`+
+    `<circle class="glow" r="26" fill="url(#${glow})" opacity="0"/>`+
+    `<circle r="13.5" fill="#2b2e33"/><circle r="12" fill="#060708"/>`+
+    `<g class="sym" fill="${off}" stroke="${off}">${sym}</g>`+
+    `<path d="M-8,-6 A10,10 0 0 1 4,-10" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.4"/>`+
+  `</g>`;
+}
+const SYM = {
+  L:`<path d="M-8,0 L-1,-6.5 L-1,-2.6 L7.5,-2.6 L7.5,2.6 L-1,2.6 L-1,6.5 Z" stroke="none"/>`,
+  R:`<path d="M8,0 L1,-6.5 L1,-2.6 L-7.5,-2.6 L-7.5,2.6 L1,2.6 L1,6.5 Z" stroke="none"/>`,
+  N:`<text x="0" y="5.6" text-anchor="middle" font-family="${SANS}" font-size="16" font-weight="700" stroke="none">N</text>`,
+  HB:`<path d="M1.5,-6.5 C9,-6.5 9,6.5 1.5,6.5 Z" stroke="none"/><path d="M-8,-5 H-1.5 M-8,-1.7 H-1.5 M-8,1.7 H-1.5 M-8,5 H-1.5" fill="none" stroke-width="1.7"/>`,
+  OIL:`<path d="M-9,-1 L-6,-3 L-6,4.5 L4,4.5 L9,-1.5 L10,-0.5 L5,-3 L-3,-3 L-3,-5 L-6,-5 L-6,-3 Z" stroke="none"/><path d="M9.2,2 C10.4,3.6 10.4,4.8 9.2,5 C8,4.8 8,3.6 9.2,2 Z" stroke="none"/>`,
+  BRK:`<circle r="5.2" fill="none" stroke-width="1.8"/><path d="M-0.9,-3.4 H0.9 L0.5,1 H-0.5 Z" stroke="none"/><circle cy="2.6" r="0.95" stroke="none"/><path d="M-7.2,-4.6 A8.6,8.6 0 0 0 -7.2,4.6 M7.2,-4.6 A8.6,8.6 0 0 1 7.2,4.6" fill="none" stroke-width="1.6"/>`
+};
+
+/* ---------- handlebar pieces (local frames) ---------- */
+const BAR_ANG = -8.7;               // degrees, left straight segment (right is mirrored)
+function ribsPath(xa,xb,R,tw){
+  let dark='', lite='';
+  for(let k=0;k<24;k++){
+    const th=((k*15+tw)%360)*Math.PI/180, c=Math.cos(th);
+    if(c<=0.08) continue;
+    const y=R*Math.sin(th)*0.97;
+    dark+=`<line x1="${xa}" x2="${xb}" y1="${F(y)}" y2="${F(y)}" stroke="#000" stroke-opacity="${F(.3+.45*c)}" stroke-width="${F(.6+1.5*c)}"/>`;
+    lite+=`<line x1="${xa}" x2="${xb}" y1="${F(y-1.6*c)}" y2="${F(y-1.6*c)}" stroke="#8a9098" stroke-opacity="${F(.32*c*c)}" stroke-width=".9"/>`;
+  }
+  return dark+lite;
+}
+function grip(side, ribsId){
+  // local: outer end at x=-236, inner flange at -104. Radius 21. (used unmirrored for left, mirrored for right)
+  const x0=-236, x1=-104, R=21;
+  return `<g>`+
+   `<rect x="${x0-12}" y="-15" width="16" height="30" rx="6" fill="url(#chromeV)"/>`+            // bar-end weight
+   `<ellipse cx="${x0-12}" cy="0" rx="4" ry="15" fill="url(#chromeD)"/>`+
+   `<rect x="${x0}" y="${-R}" width="${x1-x0}" height="${2*R}" rx="10" fill="url(#rubberV)"/>`+
+   `<g id="${ribsId}">${ribsPath(x0+16,x1-14,R,0)}</g>`+
+   `<rect x="${x0+2}" y="${-R+.5}" width="12" height="${2*R-1}" rx="6" fill="url(#rubberV)"/>`+
+   `<rect x="${x1-13}" y="${-R+.5}" width="9" height="${2*R-1}" rx="3" fill="url(#rubberV)"/>`+
+   `<rect x="${x1-4}" y="${-R-3}" width="8" height="${2*R+6}" rx="3" fill="url(#${side==='R'?'plasticV':'rubberV'})"/>`+
+   `<rect x="${x0}" y="${-R}" width="${x1-x0}" height="${2*R}" rx="10" fill="none" stroke="#000" stroke-opacity=".6"/>`+
+  `</g>`;
+}
+function perch(){
+  // clamp around the bar at x 4..46 and lever boss (30,-48)
+  return `<path d="M10,-26 L44,-26 L46,-40 C44,-58 16,-60 12,-42 Z" fill="url(#alloyV)" stroke="#3a4046" stroke-width=".8"/>`+
+   `<rect x="4" y="-27" width="42" height="54" rx="7" fill="url(#alloyV)" stroke="#3a4046" stroke-width=".8"/>`+
+   `<line x1="25" y1="-27" x2="25" y2="27" stroke="#3a4046" stroke-width="1.2"/>`+
+   `<circle cx="14" cy="18" r="4.2" fill="url(#chromeD2)" stroke="#333"/><circle cx="36" cy="18" r="4.2" fill="url(#chromeD2)" stroke="#333"/>`+
+   `<path d="M12.4,18 h3.2 M34.4,18 h3.2" stroke="#222" stroke-width="1.2"/>`;
+}
+function lever(id){
+  return `<g id="${id}" transform="rotate(0 30 -48)">`+
+   `<path d="M20,-58 C-20,-64 -100,-67 -224,-69 C-233,-69 -235,-56 -224,-56 C-100,-54 -20,-52 14,-38 Z" fill="#000" opacity=".28" transform="translate(4 7)"/>`+
+   `<path d="M20,-62 C-20,-66 -100,-69 -222,-71 A7.5,7.5 0 0 0 -222,-56 C-100,-54 -20,-51 14,-36 Z" fill="url(#alloyV)" stroke="#40464c" stroke-width=".9"/>`+
+   `<path d="M10,-60 C-30,-63 -110,-66 -214,-68" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round"/>`+
+   `<circle cx="-226" cy="-63.5" r="8.5" fill="url(#capChrome)" stroke="#40464c" stroke-width=".8"/>`+
+   `<circle cx="30" cy="-48" r="15" fill="url(#alloyV)" stroke="#40464c" stroke-width=".9"/>`+
+   `<circle cx="30" cy="-48" r="7" fill="url(#chromeD2)" stroke="#2c3136" stroke-width=".8"/>`+
+   `<path d="M26.5,-48 h7" stroke="#222" stroke-width="1.6"/>`+
+  `</g>`;
+}
+function cubeBox(){
+  // local box symmetric about bar; x range set by caller
+  return (x0,x1)=>`<rect x="${x0}" y="-52" width="${x1-x0}" height="106" rx="16" fill="#000" opacity=".3" transform="translate(4 8)"/>`+
+    `<rect x="${x0}" y="-52" width="${x1-x0}" height="106" rx="16" fill="url(#plasticV)" stroke="#000" stroke-width="1"/>`+
+    `<rect x="${x0+4}" y="-49" width="${x1-x0-8}" height="34" rx="12" fill="url(#plasticTop)" opacity=".55"/>`+
+    `<line x1="${x0+3}" y1="0" x2="${x1-3}" y2="0" stroke="#000" stroke-opacity=".7" stroke-width="1.2"/>`+
+    `<line x1="${x0+3}" y1="1.2" x2="${x1-3}" y2="1.2" stroke="#fff" stroke-opacity=".08" stroke-width="1"/>`;
+}
+const box=cubeBox();
+
+function leftCube(){
+  // unmirrored left local frame, cube x -96..-6
+  let s=box(-96,-6);
+  // choke lever (top-front, outboard corner)
+  s+=`<g id="choke" class="ctl" data-ctl="choke" tabindex="0" role="switch" aria-checked="false" aria-label="Choke">`+
+     `<rect x="-122" y="38" width="56" height="54" fill="#000" fill-opacity="0"/>`+
+     `<path d="M-84,84 A34,34 0 0 0 -110,72" fill="none" stroke="#8a9096" stroke-width="1.4" stroke-dasharray="2 3"/>`+
+     `<g id="chokeLever" transform="rotate(0 -84 48)"><path d="M-84,82 L-84,48" stroke="#000" stroke-width="10" stroke-linecap="round"/><path d="M-84,82 L-84,48" stroke="url(#alloyH)" stroke-width="7" stroke-linecap="round"/><circle cx="-84" cy="84" r="6.5" fill="url(#capChrome)" stroke="#333" stroke-width=".8"/></g>`+
+     `<circle cx="-84" cy="48" r="7" fill="url(#btnBlk)" stroke="#000"/>`+
+     `</g>`;
+  // dip switch rocker
+  s+=`<g id="beam" class="ctl" data-ctl="beam" tabindex="0" role="switch" aria-checked="false" aria-label="Dip switch, high or low beam">`+
+     `<rect x="-80" y="-44" width="58" height="26" rx="5" fill="#0a0b0c"/>`+
+     `<rect id="beamHi" x="-78" y="-42" width="27" height="22" rx="4" fill="url(#blkRock)"/>`+
+     `<rect id="beamLo" x="-51" y="-42" width="27" height="22" rx="4" fill="url(#blkRockDn)"/>`+
+     `<g fill="#e8e6de" stroke="#e8e6de"><path d="M-62,-36.5 C-57,-36.5 -57,-26 -62,-26 Z" stroke="none"/><path d="M-73,-35 h7 M-73,-31.2 h7 M-73,-27.4 h7" stroke-width="1.3"/>`+
+     `<path d="M-33,-36.5 C-28,-36.5 -28,-26 -33,-26 Z" stroke="none"/><path d="M-44,-36.5 l7,2.2 M-44,-32.5 l7,2.2 M-44,-28.5 l7,2.2" stroke-width="1.3"/></g>`+
+     `</g>`;
+  // indicator slider
+  s+=`<g id="indicator" data-ctl="indicator">`+
+     `<rect x="-84" y="-11" width="66" height="21" rx="4" fill="#050506" stroke="#000"/>`+
+     `<path d="M-91,-0.5 l5,-5 v10 Z M-11,-0.5 l-5,-5 v10 Z" fill="#7dd88f"/>`+
+     `<g id="indKnob"><rect x="-61" y="-14" width="20" height="27" rx="4" fill="url(#blkRock)" stroke="#000"/><path d="M-55,-8 v15 M-51,-8 v15 M-47,-8 v15" stroke="#000" stroke-opacity=".6" stroke-width="1.2"/></g>`+
+     `<rect id="indL" class="ctl" data-ctl="indicator" tabindex="0" role="button" aria-pressed="false" aria-label="Turn signal left" x="-96" y="-16" width="45" height="31" fill="#000" fill-opacity="0"/>`+
+     `<rect id="indR" class="ctl" data-ctl="indicator" tabindex="0" role="button" aria-pressed="false" aria-label="Turn signal right" x="-51" y="-16" width="45" height="31" fill="#000" fill-opacity="0"/>`+
+     `</g>`;
+  // horn
+  s+=`<g id="horn" class="ctl" data-ctl="horn" tabindex="0" role="button" aria-label="Horn">`+
+     `<circle cx="-51" cy="33" r="16" fill="#060607"/>`+
+     `<circle id="hornCap" cx="-51" cy="33" r="13.5" fill="url(#btnBlk)"/>`+
+     `<path d="M-60,29.5 h4 l9,-5.5 v18 l-9,-5.5 h-4 Z" fill="#e8e6de"/><path d="M-43,28 a6,6 0 0 1 0,10" fill="none" stroke="#e8e6de" stroke-width="1.4"/>`+
+     `</g>`;
+  s+=`<circle cx="-12" cy="46" r="2.6" fill="url(#chromeD2)"/>`;
+  return s;
+}
+function rightCube(){
+  // unmirrored right local frame (x positive outward), cube x 6..96
+  let s=box(6,96);
+  s+=`<g id="kill" class="ctl" data-ctl="kill" tabindex="0" role="switch" aria-checked="true" aria-label="Engine stop switch, RUN or OFF">`+
+     `<rect x="20" y="-45" width="62" height="29" rx="5" fill="#0a0b0c"/>`+
+     `<rect id="killOff" x="22" y="-43" width="29" height="25" rx="4" fill="url(#redRock)"/>`+
+     `<rect id="killRun" x="51" y="-43" width="29" height="25" rx="4" fill="url(#redRockDn)"/>`+
+     `<g fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">`+
+       `<path d="M31.5,-35 A5.5,5.5 0 1 0 41.5,-35"/><path d="M36.5,-38 v-1"/><path d="M30,-24.5 L43,-37"/>`+
+       `<path d="M60.5,-35 A5.5,5.5 0 1 0 70.5,-35"/><path d="M68.5,-37.5 l2,2.5 l2.5,-2"/>`+
+     `</g>`+
+     `</g>`;
+  s+=`<g id="starter" class="ctl" data-ctl="starter" tabindex="0" role="button" aria-label="Electric starter button">`+
+     `<circle cx="51" cy="20" r="19" fill="#060607"/>`+
+     `<circle id="starterCap" cx="51" cy="20" r="16" fill="url(#btnBlk)"/>`+
+     `<path d="M45,13.5 A9,9 0 1 0 57,13.5" fill="none" stroke="#e8e6de" stroke-width="1.6"/>`+
+     `<path d="M52.5,9 L46.5,21 H51 L49,30 L56,17.5 H51.5 Z" fill="#e8e6de"/>`+
+     `</g>`;
+  s+=`<circle cx="12" cy="46" r="2.6" fill="url(#chromeD2)"/><circle cx="90" cy="46" r="2.6" fill="url(#chromeD2)"/>`;
+  return s;
+}
+function masterCyl(){
+  // mirrored right frame (same coordinates as left perch): reservoir ahead of the lever
+  return `<path d="M10,-30 L42,-30 L44,-86 L8,-86 Z" fill="url(#alloyV)" stroke="#3a4046" stroke-width=".8"/>`+
+    `<rect x="-6" y="-128" width="62" height="46" rx="9" fill="#000" opacity=".3" transform="translate(4 7)"/>`+
+    `<rect x="-6" y="-128" width="62" height="46" rx="9" fill="url(#alloyV)" stroke="#3a4046" stroke-width=".9"/>`+
+    `<rect x="-2" y="-124" width="54" height="38" rx="7" fill="url(#chromeD)" stroke="#555c63" stroke-width=".8"/>`+
+    `<circle cx="4" cy="-118" r="2.6" fill="url(#chromeD2)" stroke="#333" stroke-width=".6"/><circle cx="46" cy="-118" r="2.6" fill="url(#chromeD2)" stroke="#333" stroke-width=".6"/>`+
+    `<circle cx="4" cy="-92" r="2.6" fill="url(#chromeD2)" stroke="#333" stroke-width=".6"/><circle cx="46" cy="-92" r="2.6" fill="url(#chromeD2)" stroke="#333" stroke-width=".6"/>`+
+    `<rect x="10" y="-111" width="30" height="13" rx="2.5" fill="#2b2c2a"/><rect x="11" y="-108" width="28" height="9" rx="2" fill="#b39b56" opacity=".85"/>`;
+}
+
+function buildSVG(){
+  const W=1400,H=900;
+  const L=`translate(330 440) rotate(${BAR_ANG})`;
+  const Rm=`translate(1070 440) rotate(${-BAR_ANG}) scale(-1 1)`;
+  const Ru=`translate(1070 440) rotate(${-BAR_ANG})`;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" id="cockpit" role="group" aria-label="Rider's-eye view of a motorcycle cockpit">`;
+  s+=`<title>Motorcycle controls from the rider's seat</title>`;
+  s+=defs();
+
+  // headlamp shell and indicator stalks, ahead of the instruments
+  s+=`<ellipse cx="700" cy="40" rx="200" ry="80" fill="url(#softShadow)" opacity=".6"/>`;
+  [[-1,440],[1,960]].forEach(([d,x])=>{
+    s+=`<path d="M${700+d*150},34 L${x-d*24},34" stroke="#0d0e10" stroke-width="13" stroke-linecap="round"/><path d="M${700+d*150},32 L${x-d*24},32" stroke="url(#chromeV)" stroke-width="8"/>`+
+       `<ellipse cx="${x}" cy="36" rx="34" ry="25" fill="url(#chromeD)" stroke="#40464c"/>`+
+       `<ellipse cx="${x-d*6}" cy="34" rx="25" ry="18" fill="#d9821e"/><ellipse cx="${x-d*10}" cy="28" rx="13" ry="7" fill="#ffd28a" opacity=".75"/>`;
+  });
+  s+=`<path d="M548,0 L548,22 C548,74 622,100 700,100 C778,100 852,74 852,22 L852,0 Z" fill="url(#headShell)" stroke="#4d545b" stroke-width="1"/>`+
+     `<path d="M548,0 L548,10 C548,24 622,34 700,34 C778,34 852,24 852,10 L852,0" fill="none" stroke="#3d444a" stroke-width="1.2"/>`+
+     `<path d="M548,0 C556,16 630,26 700,26 C770,26 844,16 852,0 Z" fill="url(#chromeD2)"/>`+
+     `<path d="M574,40 C590,70 640,84 700,86" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="3" stroke-linecap="round"/>`;
+
+  // mirrors (stems then heads)
+  const mirror=(x,y,sx,stx,sty)=>
+    `<path d="M${stx},${sty} C${stx-sx*20},${sty-90} ${x+sx*30},${y+120} ${x+sx*16},${y+50}" fill="none" stroke="#2a2f34" stroke-width="12" stroke-linecap="round"/>`+
+    `<path d="M${stx},${sty} C${stx-sx*20},${sty-90} ${x+sx*30},${y+120} ${x+sx*16},${y+50}" fill="none" stroke="#c8ced3" stroke-width="7" stroke-linecap="round"/>`+
+    `<path d="M${stx-2},${sty-4} C${stx-sx*22},${sty-92} ${x+sx*27},${y+118} ${x+sx*13},${y+52}" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-opacity=".9"/>`+
+    `<ellipse cx="${x+4}" cy="${y+9}" rx="86" ry="62" fill="url(#softShadow)"/>`+
+    `<ellipse cx="${x}" cy="${y}" rx="80" ry="56" fill="url(#chromeD)" stroke="#3d444a" stroke-width="1"/>`+
+    `<ellipse cx="${x}" cy="${y}" rx="71" ry="48" fill="url(#mirrorGlass)" stroke="#1d2125" stroke-width="2"/>`+
+    `<path d="M${x-58},${y-18} C${x-40},${y-40} ${x},${y-46} ${x+30},${y-42}" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>`;
+  s+=mirror(225,108,-1,351,406)+mirror(1175,108,1,1049,406);
+
+  // cables and looms (behind the instruments)
+  const cable=(d,w,c)=>`<path d="${d}" fill="none" stroke="#050506" stroke-width="${w+2}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="${Math.max(1,w/4)}" stroke-linecap="round" transform="translate(-1 -1.5)"/>`;
+  s+=cable('M372,372 C392,300 430,260 470,250',8,'#1a1c1f');                 // clutch cable
+  s+=cable('M272,398 C290,330 380,310 450,300',11,'#141518');                // left loom
+  s+=cable('M1040,375 C1012,316 972,268 930,250',8,'#1a1c1f');               // brake hose
+  s+=cable('M1128,398 C1110,330 1020,310 950,300',11,'#141518');             // right loom
+  s+=cable('M1110,386 C1090,320 1000,290 960,276',6,'#22252a');               // throttle cables
+  s+=cable('M1100,390 C1080,330 990,300 955,288',6,'#22252a');
+
+  // top yoke + fork caps
+  s+=`<path d="M498,372 C498,342 526,330 560,334 L840,334 C874,330 902,342 902,372 C902,404 872,422 840,422 L560,422 C528,422 498,404 498,372 Z" fill="#000" opacity=".3" transform="translate(0 8)"/>`+
+     `<path d="M498,372 C498,342 526,330 560,334 L840,334 C874,330 902,342 902,372 C902,404 872,422 840,422 L560,422 C528,422 498,404 498,372 Z" fill="url(#alloyV)" stroke="#40464c"/>`+
+     `<path d="M512,352 C530,338 560,338 600,340 L800,340 C840,338 870,338 888,352" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>`;
+  [548,852].forEach(x=>{ s+=`<circle cx="${x}" cy="370" r="30" fill="#2b3036"/><circle cx="${x}" cy="370" r="27" fill="url(#capChrome)"/>`+
+     `<polygon points="${[0,1,2,3,4,5].map(i=>{const a=Math.PI/3*i+Math.PI/6;return F(x+12*Math.cos(a))+','+F(370+12*Math.sin(a))}).join(' ')}" fill="url(#chromeD2)" stroke="#40464c"/>`+
+     `<circle cx="${x}" cy="370" r="5" fill="#2a2e33"/>`; });
+
+  // instrument back plate
+  s+=`<rect x="470" y="140" width="460" height="186" rx="40" fill="#101113"/>`;
+  s+=`<rect x="476" y="146" width="448" height="40" rx="22" fill="#fff" opacity=".04"/>`;
+
+  s+=dial('speedo',DIAL.speedo);
+  s+=dial('tacho',DIAL.tacho);
+
+  // telltale pod
+  s+=`<g id="lamps" class="ctl static" data-ctl="lamps" role="img" aria-label="Warning lamps">`+
+     `<rect x="661" y="92" width="78" height="204" rx="18" fill="#000" opacity=".35" transform="translate(2 5)"/>`+
+     `<rect x="661" y="92" width="78" height="204" rx="18" fill="url(#chromeD)"/>`+
+     `<rect x="665" y="96" width="70" height="196" rx="15" fill="url(#plasticV)"/>`+
+     lamp('lampL',684,124,'g',SYM.L)+lamp('lampR',716,124,'g',SYM.R)+
+     lamp('lampN',700,160,'g',SYM.N)+lamp('lampHB',700,196,'b',SYM.HB)+
+     lamp('lampOil',700,232,'r',SYM.OIL)+lamp('lampBrk',700,268,'r',SYM.BRK)+
+     `<path d="M670,110 C690,100 712,99 730,104" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3"/>`+
+     `</g>`;
+
+  // ignition switch
+  s+=`<g id="ignition" class="ctl" data-ctl="ignition" tabindex="0" role="switch" aria-checked="false" aria-label="Ignition key, OFF or ON">`+
+     `<circle cx="700" cy="336" r="40" fill="url(#softShadow)"/>`+
+     `<circle cx="700" cy="332" r="31" fill="url(#chromeD)" stroke="#40464c"/>`+
+     `<circle cx="700" cy="332" r="24" fill="url(#plasticV)"/>`+
+     `<text x="660" y="374" text-anchor="middle" font-family="${SANS}" font-size="11" font-weight="700" fill="#2c3238">OFF</text>`+
+     `<text x="740" y="374" text-anchor="middle" font-family="${SANS}" font-size="11" font-weight="700" fill="#1a6b33">ON</text>`+
+     `<path d="M671,366 L677,358 M729,366 L723,358" stroke="#2c3238" stroke-width="1.4" stroke-linecap="round"/>`+
+     `<circle cx="${F(700-33*Math.sin(Math.PI/4))}" cy="${F(332-33*Math.cos(Math.PI/4))}" r="2.2" fill="#5d6270"/><circle cx="${F(700+33*Math.sin(Math.PI/4))}" cy="${F(332-33*Math.cos(Math.PI/4))}" r="2.2" fill="#1F7A3A"/>`+
+     `<g id="key" transform="rotate(-45 700 332)">`+
+       `<rect x="695" y="318" width="10" height="28" rx="2" fill="url(#chromeV)"/>`+
+       `<path d="M686,330 L686,296 C686,280 714,280 714,296 L714,330 C714,346 686,346 686,330 Z" fill="#000" opacity=".35" transform="translate(3 5)"/>`+
+       `<path d="M686,330 L686,296 C686,280 714,280 714,296 L714,330 C714,346 686,346 686,330 Z" fill="url(#steelBlk)" stroke="#000"/>`+
+       `<path d="M690,300 C690,288 710,288 710,300" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>`+
+       `<circle cx="700" cy="294" r="5" fill="#f0f0f0" stroke="#333" stroke-width="1"/><circle cx="700" cy="294" r="2.6" fill="#0c0d0f"/>`+
+       `<path d="M691,316 h18 M691,321 h18 M691,326 h18" stroke="#000" stroke-opacity=".55" stroke-width="1.2"/>`+
+     `</g>`+
+     `</g>`;
+
+  // engine covers, footpegs and foot controls (bottom edge, behind the tank)
+  [[1,0],[-1,1400]].forEach(([d,o])=>{ const X=x=>o+d*x;
+    s+=`<path d="M${X(372)},900 C${X(370)},830 ${X(424)},784 ${X(510)},780 L${X(530)},900 Z" fill="#3a3f45"/>`+
+       `<path d="M${X(384)},900 C${X(384)},838 ${X(432)},796 ${X(510)},792 L${X(526)},900 Z" fill="url(#alloyH)" stroke="#4a5157"/>`+
+       `<path d="M${X(398)},892 C${X(398)},846 ${X(440)},812 ${X(500)},806" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.2"/>`+
+       `<path d="M${X(412)},900 C${X(414)},858 ${X(446)},830 ${X(500)},826" fill="none" stroke="#5a6168" stroke-opacity=".6" stroke-width="1.2"/>`+
+       [[402,868],[430,822],[476,800]].map(p=>`<circle cx="${X(p[0])}" cy="${p[1]}" r="4.2" fill="url(#chromeD2)" stroke="#333" stroke-width=".7"/>`).join('');
+  });
+
+  // tank (with soft shadow)
+  const tankD='M612,418 C560,452 472,520 454,622 C442,702 454,792 480,900 L920,900 C946,792 958,702 946,622 C928,520 840,452 788,418 Z';
+  s+=`<g id="tank" class="ctl static" data-ctl="tank" role="img" aria-label="Fuel tank and filler cap">`+
+     `<path d="${tankD}" fill="#000" opacity=".22" transform="translate(0 10)"/>`+
+     `<path d="${tankD}" fill="url(#tankPaint)"/>`+
+     `<path d="${tankD}" fill="url(#tankEdge)"/>`+
+     `<path d="${tankD}" fill="url(#tankEdge)" transform="translate(1400 0) scale(-1 1)"/>`+
+     `<path d="M500,640 C506,560 560,494 640,456 C590,512 548,578 532,660 C522,710 522,760 530,820 C510,770 498,700 500,640 Z" fill="url(#gloss)" opacity=".55"/>`+
+     `<path d="M842,470 C880,500 912,548 924,600" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>`+
+     `<path d="M630,438 C584,470 500,532 482,628 C470,704 482,792 506,900" fill="none" stroke="#d8b55a" stroke-opacity=".85" stroke-width="2.2"/>`+
+     `<path d="M630,438 C584,470 500,532 482,628 C470,704 482,792 506,900" fill="none" stroke="#d8b55a" stroke-opacity=".85" stroke-width="2.2" transform="translate(1400 0) scale(-1 1)"/>`+
+     `<path d="M640,444 C596,476 514,536 497,630 C486,704 497,790 520,900" fill="none" stroke="#d8b55a" stroke-opacity=".55" stroke-width="1"/>`+
+     `<path d="M640,444 C596,476 514,536 497,630 C486,704 497,790 520,900" fill="none" stroke="#d8b55a" stroke-opacity=".55" stroke-width="1" transform="translate(1400 0) scale(-1 1)"/>`+
+     `<path d="M700,440 L700,546 M700,654 L700,900" stroke="#081530" stroke-opacity=".55" stroke-width="2"/>`+
+     `<path d="M702,440 L702,546 M702,654 L702,900" stroke="#9fc0ee" stroke-opacity=".18" stroke-width="1.2"/>`+
+     // filler cap
+     `<circle cx="700" cy="604" r="56" fill="#000" opacity=".25" transform="translate(2 6)"/>`+
+     `<circle cx="700" cy="600" r="56" fill="url(#chromeD)" stroke="#3f464d"/>`+
+     `<circle cx="700" cy="600" r="47" fill="#2a2f35"/>`+
+     `<circle cx="700" cy="600" r="45" fill="url(#capChrome)"/>`+
+     `<circle cx="700" cy="600" r="45" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.2"/>`+
+     `<rect x="684" y="540" width="32" height="16" rx="4" fill="url(#chromeV)" stroke="#3f464d" stroke-width=".8"/>`+
+     `<line x1="684" y1="548" x2="716" y2="548" stroke="#3f464d" stroke-width=".8"/>`+
+     `<circle cx="700" cy="614" r="11" fill="url(#chromeD2)" stroke="#3f464d"/><rect x="698" y="606" width="4" height="15" rx="1" fill="#1a1c1f"/>`+
+     `<path d="M672,586 A32,32 0 0 1 690,572" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-opacity=".9"/>`+
+     `</g>`;
+
+  // left foot: peg, bracket, gear lever
+  s+=`<path d="M326,826 L420,818 L428,858 L330,862 Z" fill="url(#alloyV)" stroke="#40464c"/>`+
+     `<rect x="176" y="822" width="156" height="40" rx="14" fill="url(#rubberV)"/>`+
+     `<path d="${Array.from({length:9},(_,i)=>`M${196+i*15},825 v34`).join(' ')}" stroke="#000" stroke-opacity=".7" stroke-width="3"/>`+
+     `<rect x="176" y="822" width="156" height="40" rx="14" fill="none" stroke="#000"/>`;
+  s+=`<g id="gear" class="ctl" data-ctl="gear" role="img" aria-label="Gear-change lever">`+
+     `<g id="gearLever" transform="rotate(0 460 872)">`+
+       `<path d="M462,876 C430,860 360,820 312,800" fill="none" stroke="#050506" stroke-width="16" stroke-linecap="round"/>`+
+       `<path d="M462,876 C430,860 360,820 312,800" fill="none" stroke="url(#steelBlk)" stroke-width="12" stroke-linecap="round"/>`+
+       `<path d="M458,870 C428,855 362,816 316,796" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>`+
+       `<rect x="252" y="780" width="72" height="24" rx="11" fill="url(#rubberV)" stroke="#000"/>`+
+       `<path d="M266,782 v20 M278,782 v20 M290,782 v20 M302,782 v20" stroke="#000" stroke-opacity=".6" stroke-width="2"/>`+
+     `</g>`+
+     `<circle cx="460" cy="872" r="13" fill="url(#chromeD2)" stroke="#333"/><circle cx="460" cy="872" r="5" fill="#222"/>`+
+     `</g>`;
+  // gear buttons (UI overlay)
+  s+=`<g class="ui">`+
+     `<text x="104" y="728" text-anchor="middle" font-family="${MONO}" font-size="12" font-weight="500" letter-spacing=".08em" fill="#5D6270">GEAR</text>`+
+     `<g id="gearUp" class="ctl" data-ctl="gear" tabindex="0" role="button" aria-label="Shift up (lift the gear lever)">`+
+       `<rect x="58" y="738" width="92" height="52" rx="10" fill="#FFFFFF" stroke="#CFCCC2" stroke-width="1.5"/>`+
+       `<path d="M90,770 l14,-14 l14,14" fill="none" stroke="#1E2B5E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`+
+     `</g>`+
+     `<g id="gearDown" class="ctl" data-ctl="gear" tabindex="0" role="button" aria-label="Shift down (press the gear lever)">`+
+       `<rect x="58" y="798" width="92" height="52" rx="10" fill="#FFFFFF" stroke="#CFCCC2" stroke-width="1.5"/>`+
+       `<path d="M90,816 l14,14 l14,-14" fill="none" stroke="#1E2B5E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`+
+     `</g>`+
+     `<text id="gearTxt" x="104" y="885" text-anchor="middle" font-family="${MONO}" font-size="20" font-weight="600" fill="#1E2B5E">1</text>`+
+     `</g>`;
+  // right foot: peg, bracket, brake pedal
+  s+=`<path d="M1074,826 L980,818 L972,858 L1070,862 Z" fill="url(#alloyV)" stroke="#40464c"/>`+
+     `<rect x="1068" y="822" width="156" height="40" rx="14" fill="url(#rubberV)"/>`+
+     `<path d="${Array.from({length:9},(_,i)=>`M${1088+i*15},825 v34`).join(' ')}" stroke="#000" stroke-opacity=".7" stroke-width="3"/>`+
+     `<rect x="1068" y="822" width="156" height="40" rx="14" fill="none" stroke="#000"/>`;
+  s+=`<g id="rear" class="ctl" data-ctl="rear" tabindex="0" role="button" aria-label="Rear brake pedal">`+
+     `<rect x="960" y="760" width="200" height="130" fill="#000" fill-opacity="0"/>`+
+     `<g id="rearPedal" transform="rotate(0 990 858)">`+
+       `<path d="M990,858 C1030,836 1070,812 1094,798" fill="none" stroke="#050506" stroke-width="16" stroke-linecap="round"/>`+
+       `<path d="M990,858 C1030,836 1070,812 1094,798" fill="none" stroke="url(#steelBlk)" stroke-width="12" stroke-linecap="round"/>`+
+       `<path d="M992,852 C1030,830 1068,808 1090,794" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>`+
+       `<rect x="1076" y="776" width="70" height="28" rx="8" fill="url(#steelBlk)" stroke="#000"/>`+
+       `<path d="M1084,782 h54 M1084,790 h54 M1084,798 h54" stroke="#000" stroke-opacity=".7" stroke-width="2"/>`+
+     `</g>`+
+     `<circle cx="990" cy="858" r="13" fill="url(#chromeD2)" stroke="#333"/><circle cx="990" cy="858" r="5" fill="#222"/>`+
+     `</g>`;
+
+  // handlebar tube
+  const barD='M94.7,476 L330,440 C450,421.6 580,404 700,404 C820,404 950,421.6 1070,440 L1305.3,476';
+  s+=`<path d="${barD}" fill="none" stroke="#000" stroke-opacity=".25" stroke-width="30" transform="translate(0 9)" stroke-linecap="round"/>`+
+     `<path d="${barD}" fill="none" stroke="#30363c" stroke-width="28"/>`+
+     `<path d="${barD}" fill="none" stroke="#7a838b" stroke-width="24"/>`+
+     `<path d="${barD}" fill="none" stroke="#b8c0c7" stroke-width="16" transform="translate(0 -1.5)"/>`+
+     `<path d="${barD}" fill="none" stroke="#e8edf0" stroke-width="8" transform="translate(0 -4)"/>`+
+     `<path d="${barD}" fill="none" stroke="#ffffff" stroke-width="3" transform="translate(0 -5.5)"/>`+
+     `<path d="${barD}" fill="none" stroke="#3d454c" stroke-opacity=".7" stroke-width="3" transform="translate(0 9)"/>`;
+  // bar clamps
+  [640,760].forEach(x=>{ s+=`<rect x="${x-26}" y="383" width="52" height="46" rx="7" fill="#000" opacity=".3" transform="translate(2 5)"/>`+
+     `<rect x="${x-26}" y="383" width="52" height="46" rx="7" fill="url(#alloyH)" stroke="#40464c"/>`+
+     `<rect x="${x-22}" y="386" width="44" height="6" rx="3" fill="#fff" opacity=".45"/>`+
+     [[-15,393],[15,393],[-15,420],[15,420]].map(p=>`<circle cx="${x+p[0]}" cy="${p[1]}" r="5" fill="url(#chromeD2)" stroke="#333" stroke-width=".7"/><circle cx="${x+p[0]}" cy="${p[1]}" r="2" fill="#222"/>`).join(''); });
+
+  // LEFT assembly
+  s+=`<g transform="${L}">`+
+     leftCube()+
+     grip('L','ribsL')+
+     `<g id="clutchHit" class="ctl" data-ctl="clutch" tabindex="0" role="button" aria-pressed="false" aria-label="Clutch lever">`+
+       `<path d="M48,-30 L48,-80 L-240,-82 L-240,-58 L-20,-52 L8,-30 Z" fill="#000" fill-opacity="0"/>`+
+       perch()+
+       `<path d="M40,-42 L58,-66" stroke="#151618" stroke-width="12" stroke-linecap="round"/><path d="M40,-42 L58,-66" stroke="url(#chromeV)" stroke-width="8" stroke-linecap="round"/>`+
+       lever('clutchLever')+
+     `</g>`+
+     `<g id="hornWaves" class="waves" fill="none" stroke="#C8502A" stroke-width="3" stroke-linecap="round">`+
+       `<path d="M-30,58 a32,32 0 0 1 -42,0"/><path d="M-22,70 a44,44 0 0 1 -58,0"/><path d="M-14,82 a56,56 0 0 1 -74,0"/></g>`+
+     `</g>`;
+
+  // RIGHT assembly (switch cube unmirrored, hardware mirrored)
+  s+=`<g transform="${Ru}">${rightCube()}</g>`;
+  s+=`<g transform="${Rm}">`+
+     `<g id="throttleHit" class="ctl" data-ctl="throttle" tabindex="0" role="slider" aria-label="Throttle grip, drag down to open" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="closed">`+
+       grip('R','ribsR')+
+       `<rect x="-250" y="-26" width="150" height="52" fill="#000" fill-opacity="0"/>`+
+     `</g>`+
+     `<g id="frontHit" class="ctl" data-ctl="front" tabindex="0" role="button" aria-label="Front brake lever">`+
+       `<path d="M58,-30 L58,-130 L-8,-130 L-8,-80 L-240,-82 L-240,-58 L-20,-52 L8,-30 Z" fill="#000" fill-opacity="0"/>`+
+       perch()+ masterCyl()+
+       lever('frontLever')+
+     `</g>`+
+     `</g>`;
+
+  s+=`</svg>`;
+  return s;
+}
+
+/* =====================================================================
+   SIMULATION
+   ===================================================================== */
+const GEARS=['1','N','2','3','4','5'];
+const RATIO={'1':2.77,'2':1.88,'3':1.40,'4':1.13,'5':0.96};
+const PRIMARY=3.35, FINAL=2.93, CIRC=1.95, RW=CIRC/(2*Math.PI), MASS=150, REDLINE=10000;
+const ODO0=12483.6;
+function overall(g){ return g==='N'?0:RATIO[g]*PRIMARY*FINAL; }
+
+let S;
+function freshState(){
+  return { key:false, kill:true, running:false, cranking:false, crankT:0, crankNeed:.6, grace:0,
+    rpm:0, v:0, gi:0, clutchIn:false, clutchLatched:false, clutchP:0, frontIn:false, frontP:0, rearIn:false, rearP:0,
+    gripThr:0, holdThr:0, keyThr:false, thr:0, cut:false, ind:0, beam:false, horn:false, choke:false, temp:20,
+    dist:ODO0, dispRpm:0, dispV:0, gearAnim:0, warmTold:false, stalledMsgT:0 };
+}
+S=freshState();
+
+/* ---------- DOM ---------- */
+const art=document.getElementById('art');
+art.innerHTML=buildSVG();
+const $=id=>document.getElementById(id);
+const svg=$('cockpit');
+const msgEl=$('msg'), msgBar=$('msgbar');
+let msgTimer=0;
+function say(t,warn){ if(!t) return; msgEl.textContent=t; msgBar.classList.toggle('warn',!!warn); clearTimeout(msgTimer); msgTimer=setTimeout(()=>{msgBar.classList.remove('warn'); msgEl.textContent=statusLine();},warn?4200:5500); }
+function statusLine(){
+  if(!S.key) return 'Ignition OFF. Turn the key ON to begin.';
+  if(S.cranking) return 'Cranking on the starter motor...';
+  if(!S.running) return S.kill? (GEARS[S.gi]==='N'||S.clutchP>.7?'Ready: press the starter button.':'Select neutral or pull the clutch, then press the starter.') : 'Stop switch at OFF: set it to RUN to start.';
+  if(GEARS[S.gi]==='N') return 'Engine idling in neutral. Pull the clutch and shift down for first gear.';
+  if(S.v<.3 && S.clutchP>.7) return 'Clutch pulled, in gear: open the throttle a little and let the clutch out.';
+  return 'Riding in gear '+GEARS[S.gi]+'.';
+}
+
+/* ---------- entries ---------- */
+const ENTRIES=[
+ ['ignition','Ignition switch','Turns the electrical system on. The red oil-pressure lamp stays lit until the engine runs, and the green N lamp confirms neutral.'],
+ ['kill','Engine stop switch','The red rocker under the right thumb cuts the ignition without letting go of the bars, and it must be at RUN for the engine to start or keep running.'],
+ ['starter','Starter button','Spins the engine on the electric starter. The interlock allows it only with the key ON, the stop switch at RUN, and neutral selected or the clutch pulled.'],
+ ['throttle','Throttle grip','Rolling the right grip toward you opens the throttle and raises engine speed, and a return spring closes it when released. Drag the grip downward, hold T or set the slider.'],
+ ['front','Front brake lever','Squeezed with the right hand, it applies the front disc brake, which gives most of the stopping force because weight transfers forward under braking.'],
+ ['clutch','Clutch lever','Pulled toward the grip, it separates the clutch plates so the engine runs without driving the rear wheel, for pulling away, changing gear and stopping. Click to pull it in and click again to let it out, or hold C.'],
+ ['gear','Gear-change lever','Worked by the left toe in a one-down, four-up pattern: press down for 1st, lift once for neutral and again for 2nd to 5th, with the clutch pulled for every change.'],
+ ['rear','Rear brake pedal','Pressed with the right foot, it brakes the rear wheel and steadies the machine at walking pace.'],
+ ['indicator','Turn-signal switch','Slide left or right to flash the indicators at about 1.5 Hz, and press the same side again to cancel.'],
+ ['horn','Horn button','Sounds the horn for as long as it is held, with the ignition ON.'],
+ ['beam','Dip switch','Selects high or low beam, and the blue lamp shows when high beam is on.'],
+ ['choke','Choke (enricher)','Richens the mixture for a cold start and lifts the idle to about 2,000 r/min. Switch it off once the engine is warm or the idle stays too high.'],
+ ['speedo','Speedometer','Road speed in km/h, with the odometer drum below the needle counting total distance in kilometres.'],
+ ['tacho','Tachometer','Engine speed in thousands of revolutions per minute: a warm idle sits near 1,400 r/min and the red zone from 10,000 r/min marks the redline.'],
+ ['lamps','Warning lamps','Left and right indicators and neutral in green, high beam in blue, oil pressure and brake in red.'],
+ ['tank','Fuel tank and filler cap','The steel tank carries the fuel above the engine, and the hinged cap is vented and locks with the ignition key.']
+];
+const ol=$('entries');
+ol.innerHTML=ENTRIES.map((e,i)=>`<li><button type="button" class="entry" data-ctl="${e[0]}"><span class="nm"><i>${String(i+1).padStart(2,'0')}</i>${e[1]}</span><span class="ds">${e[2]}</span></button></li>`).join('');
+
+function hl(ctl,on){
+  document.querySelectorAll(`[data-ctl="${ctl}"]`).forEach(el=>{ if(el.classList.contains('ctl')||el.classList.contains('entry')||el.tagName==='BUTTON') el.classList.toggle('hl',on); });
+}
+document.querySelectorAll('[data-ctl]').forEach(el=>{
+  const c=el.getAttribute('data-ctl');
+  el.addEventListener('pointerenter',()=>hl(c,true));
+  el.addEventListener('pointerleave',()=>hl(c,false));
+  el.addEventListener('focus',()=>hl(c,true));
+  el.addEventListener('blur',()=>hl(c,false));
+});
+ol.addEventListener('click',e=>{
+  const b=e.target.closest('.entry'); if(!b) return; const c=b.dataset.ctl;
+  const target=svg.querySelector(`.ctl[data-ctl="${c}"]`);
+  if(target){ const r=svg.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) svg.scrollIntoView({behavior:'smooth',block:'center'});
+    hl(c,true); setTimeout(()=>{ if(!b.matches(':hover,:focus')) hl(c,false); },1400); }
+});
+
+/* ---------- actions ---------- */
+function setKey(on){
+  S.key=on;
+  if(!on){ if(S.running) say('Key OFF: the ignition is cut and the engine stops.'); S.running=false; S.cranking=false; }
+  else say(S.running?'':'Ignition ON: the oil and neutral lamps show the system is live.');
+  if(on && !S.running) setTimeout(()=>{ if(!msgBar.classList.contains('warn')) msgEl.textContent=statusLine(); },1800);
+}
+function setKill(run){
+  S.kill=run;
+  if(!run && S.running){ S.running=false; S.cranking=false; say('Stop switch OFF: ignition cut, the engine runs down.'); }
+  else if(!run) say('Stop switch at OFF. The engine cannot start until it is back at RUN.');
+  else say(statusLine());
+}
+function startPress(){
+  if(!S.key) return say("Nothing happens: the ignition key is OFF.",true);
+  if(!S.kill) return say('Starter disabled: the engine stop switch is at OFF. Set it to RUN.',true);
+  if(GEARS[S.gi]!=='N' && S.clutchP<.7) return say('Starter interlock: select neutral (green N) or pull the clutch lever first.',true);
+  if(S.running) return say('The engine is already running.',true);
+  if(S.cranking) return;
+  S.cranking=true; S.crankT=0;
+  S.crankNeed = S.temp>=50 ? .5 : (S.choke ? .7 : 1.6);
+  say(S.temp<50 && !S.choke ? 'Cranking a cold engine without the choke takes longer and it will idle roughly.' : 'Cranking...');
+}
+function shift(dir){
+  const ni=Math.max(0,Math.min(5,S.gi+dir));
+  if(ni===S.gi) return say(dir>0?'Already in top gear (5th).':'Already in first gear: there is nothing below 1st.',true);
+  if(S.running && S.clutchP<.7) { kickLever(dir); return say('Pull the clutch lever in before changing gear.',true); }
+  const ng=GEARS[ni];
+  if(ng!=='N'){ const w=S.v*60/CIRC*overall(ng); if(w>10300 && S.clutchP<1.01) return say(`Too fast for ${ng==='1'?'1st':ng+(ng==='2'?'nd':ng==='3'?'rd':'th')}: the engine would be pushed past 10,000 r/min.`,true); }
+  S.gi=ni; kickLever(dir);
+  if(ng==='N') say('Neutral: the green N lamp is lit and the engine is disconnected from the rear wheel.');
+  else say(`Gear ${ng} selected.`);
+}
+function kickLever(dir){ S.gearAnim = dir>0? -1 : 1; }
+function clutchClick(){ // toggle
+  if(S.clutchIn){ S.clutchIn=false; S.clutchLatched=false; } else { S.clutchIn=true; S.clutchLatched=true; }
+}
+function setInd(side){ S.ind = (S.ind===side)?0:side; if(!S.key && S.ind) say('Indicators need the ignition ON.',true); }
+function setBeam(){ S.beam=!S.beam; if(!S.key) say('Headlamp needs the ignition ON.',true); }
+function setChoke(){ S.choke=!S.choke; if(S.choke && S.temp>=50) say('The engine is already warm: the choke will only raise the idle and waste fuel.',true); }
+function setHorn(on){ S.horn=on; if(on && !S.key) say('The horn needs the ignition ON.',true); }
+
+function act(a){
+  switch(a){
+    case 'ignition': setKey(!S.key); break;
+    case 'kill': setKill(!S.kill); break;
+    case 'choke': setChoke(); break;
+    case 'beam': setBeam(); break;
+    case 'indL': setInd(-1); break;
+    case 'indR': setInd(1); break;
+    case 'up': shift(1); break;
+    case 'down': shift(-1); break;
+    case 'clutch': clutchClick(); break;
+  }
+  render(true);
+}
+function hold(name,on){
+  if(name==='front') S.frontIn=on;
+  else if(name==='rear') S.rearIn=on;
+  else if(name==='horn') setHorn(on);
+  else if(name==='starter'){ if(on) startPress(); }
+  else if(name==='clutchHold'){ if(on){ S.clutchIn=true; } else if(!S.clutchLatched) S.clutchIn=false; }
+  render(true);
+}
+
+/* bind SVG controls */
+function bindClick(el,a){
+  el.addEventListener('click',e=>{ e.preventDefault(); act(a); });
+  el.addEventListener('keydown',e=>{ if((e.key==='Enter'||e.key===' ')&&!e.repeat){ e.preventDefault(); e.stopPropagation(); act(a); } else if(e.key===' '||e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); } });
+}
+function bindHold(el,name){
+  let down=false;
+  el.addEventListener('pointerdown',e=>{ if(e.button>0) return; e.preventDefault(); down=true; try{el.setPointerCapture(e.pointerId);}catch(_){} el.classList.add('down'); hold(name,true); });
+  const up=()=>{ if(!down) return; down=false; el.classList.remove('down'); hold(name,false); };
+  el.addEventListener('pointerup',up); el.addEventListener('pointercancel',up); el.addEventListener('lostpointercapture',up);
+  el.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); e.stopPropagation(); if(!e.repeat){ el.classList.add('down'); hold(name,true);} } });
+  el.addEventListener('keyup',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); e.stopPropagation(); el.classList.remove('down'); hold(name,false);} });
+  el.addEventListener('contextmenu',e=>e.preventDefault());
+}
+bindClick($('ignition'),'ignition'); bindClick($('kill'),'kill'); bindClick($('choke'),'choke'); bindClick($('beam'),'beam');
+bindClick($('indL'),'indL'); bindClick($('indR'),'indR'); bindClick($('gearUp'),'up'); bindClick($('gearDown'),'down');
+bindHold($('starter'),'starter'); bindHold($('horn'),'horn'); bindHold($('frontHit'),'front'); bindHold($('rear'),'rear');
+// clutch on the artwork: press and hold pulls in; a quick click latches it in until the next click
+(function(){
+  const el=$('clutchHit'); let t0=0, down=false, wasLatched=false;
+  el.addEventListener('pointerdown',e=>{ if(e.button>0) return; e.preventDefault(); down=true; t0=performance.now(); try{el.setPointerCapture(e.pointerId);}catch(_){}
+    wasLatched=S.clutchLatched; if(wasLatched){ S.clutchLatched=false; S.clutchIn=false; } else S.clutchIn=true; render(true); });
+  const up=()=>{ if(!down) return; down=false; if(wasLatched) return; if(performance.now()-t0<350){ S.clutchLatched=true; } else { S.clutchIn=false; } render(true); };
+  el.addEventListener('pointerup',up); el.addEventListener('pointercancel',up); el.addEventListener('lostpointercapture',up);
+  el.addEventListener('keydown',e=>{ if((e.key==='Enter'||e.key===' ')){ e.preventDefault(); e.stopPropagation(); if(!e.repeat) act('clutch'); } });
+})();
+// throttle grip drag
+(function(){
+  const el=$('throttleHit'); let y0=0, t0=0, dragging=false;
+  el.addEventListener('pointerdown',e=>{ if(e.button>0) return; e.preventDefault(); dragging=true; y0=e.clientY; t0=S.gripThr; try{el.setPointerCapture(e.pointerId);}catch(_){} });
+  el.addEventListener('pointermove',e=>{ if(!dragging) return; const k=900/svg.getBoundingClientRect().height; S.gripThr=Math.max(0,Math.min(1,t0+(e.clientY-y0)*k/140)); });
+  const up=()=>{ if(!dragging) return; dragging=false; S.gripThr=0; };
+  el.addEventListener('pointerup',up); el.addEventListener('pointercancel',up); el.addEventListener('lostpointercapture',up);
+  el.addEventListener('keydown',e=>{
+    let d=0; if(e.key==='ArrowUp'||e.key==='ArrowRight') d=.1; else if(e.key==='ArrowDown'||e.key==='ArrowLeft') d=-.1; else if(e.key==='Home') d=-1; else if(e.key==='End') d=1;
+    if(d){ e.preventDefault(); e.stopPropagation(); setHoldThr(S.holdThr+d); }
+  });
+})();
+const thrIn=$('thr'), thrOut=$('thrOut');
+function setHoldThr(v){ S.holdThr=Math.max(0,Math.min(1,Math.round(v*100)/100)); thrIn.value=Math.round(S.holdThr*100); }
+thrIn.addEventListener('input',()=>{ S.holdThr=thrIn.value/100; });
+
+/* deck */
+document.querySelectorAll('#deck [data-act]').forEach(b=>b.addEventListener('click',()=>act(b.dataset.act)));
+document.querySelectorAll('#deck [data-hold]').forEach(b=>bindHold(b,b.dataset.hold));
+
+/* keyboard shortcuts */
+const HOLD_KEYS={c:'clutchHold',f:'front',r:'rear',h:'horn',s:'starter'};
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey||e.altKey) return;
+  const tag=(e.target.tagName||'').toLowerCase(); if(tag==='input'||tag==='textarea') return;
+  const k=e.key.length===1?e.key.toLowerCase():e.key;
+  if(HOLD_KEYS[k]){ if(!e.repeat) hold(HOLD_KEYS[k],true); e.preventDefault(); return; }
+  if(e.repeat) return;
+  const map={k:'ignition',x:'kill',v:'choke',b:'beam',q:'indL',e:'indR',ArrowUp:'up',ArrowDown:'down'};
+  if(k==='t'){ S.keyThr=true; e.preventDefault(); return; }
+  if(map[k]){ e.preventDefault(); act(map[k]); }
+});
+document.addEventListener('keyup',e=>{
+  const k=e.key.length===1?e.key.toLowerCase():e.key;
+  if(HOLD_KEYS[k]) hold(HOLD_KEYS[k],false);
+  if(k==='t') S.keyThr=false;
+});
+window.addEventListener('blur',()=>{ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; });
+
+$('reset').addEventListener('click',()=>{ S=freshState(); setHoldThr(0); say('Reset: engine off, parked in first gear with the stop switch at RUN.'); render(true); });
+
+/* ---------- physics ---------- */
+function fric(rpm){ if(rpm<=0) return 0; const x=rpm/10000; return 0.6+2.2*x+1.5*x*x; }
+function shape(rpm){ return 0.55+0.45*Math.exp(-Math.pow((rpm-7000)/3800,2)); }
+function idleTarget(){
+  if(S.choke) return S.temp<50 ? 2200-(S.temp-20)*10 : 2000;
+  if(S.temp<35) return 980; if(S.temp<50) return 1180; return 1400;
+}
+let noise=0, lastT=performance.now(), simT=0;
+function step(dt){
+  simT+=dt;
+  // lever positions
+  const clutchTarget=S.clutchIn?1:0;
+  S.clutchP += clutchTarget>S.clutchP ? Math.min(clutchTarget-S.clutchP, dt/0.12) : -Math.min(S.clutchP-clutchTarget, dt/0.9);
+  S.frontP += ((S.frontIn?1:0)-S.frontP)*Math.min(1,dt/0.06);
+  S.rearP  += ((S.rearIn?1:0)-S.rearP)*Math.min(1,dt/0.06);
+  // throttle
+  const kt = S.keyThr ? Math.min(1,(S.thrKeyT=(S.thrKeyT||0)+dt)/0.8) : (S.thrKeyT=0);
+  const target=Math.max(S.gripThr,S.holdThr,kt);
+  S.thr += (target-S.thr)*Math.min(1,dt/0.05);
+  const e=Math.max(0,Math.min(1,(0.78-S.clutchP)/0.58));   // clutch engagement
+  const g=GEARS[S.gi], G=overall(g);
+  // engine torque
+  let Te=0, Tstart=0;
+  if(S.cranking){
+    S.crankT+=dt; Tstart = S.rpm<320 ? 7 : Math.max(0,7*(1-(S.rpm-320)/80));
+    if(S.crankT>=S.crankNeed){ S.cranking=false; S.running=true; S.grace=0.5; S.rpm=Math.max(S.rpm,820); S.warmTold=false; msgBar.classList.remove('warn'); msgEl.textContent='Engine running. '+statusLine().replace('Engine idling in neutral. ',''); }
+  }
+  if(S.running){
+    if(S.rpm>REDLINE) S.cut=true; else if(S.rpm<9750) S.cut=false;
+    const it=idleTarget();
+    noise += (Math.random()-.5)*dt*40; noise*=Math.exp(-dt*3);
+    const rough = (!S.choke && S.temp<50) ? noise*1.8 : noise*0.15;
+    const Tidle=Math.max(0,Math.min(6,0.008*(it-S.rpm)+fric(it)+rough));
+    Te = S.cut?0: (12*shape(S.rpm)*Math.pow(S.thr,0.6) + Tidle);
+    S.temp += (85-S.temp)*0.024*dt;
+    if(S.grace>0) S.grace-=dt;
+  } else {
+    S.temp += (20-S.temp)*0.004*dt;
+  }
+  // clutch torque
+  let Tcl=0; const ww=S.v*60/CIRC*G;
+  if(G>0 && e>0){ const slip=(S.rpm-ww)*2*Math.PI/60; const cap=42*e; Tcl=Math.max(-cap,Math.min(cap,2*slip)); }
+  // engine
+  S.rpm += (Te+Tstart-fric(S.rpm)-Tcl)*1194*dt;   // 60/(2*pi*Ie), Ie = 0.008 kg m2
+  if(S.rpm<0) S.rpm=0;
+  // vehicle
+  const g9=9.81;
+  const Fdrive = G>0 ? Tcl*G*0.92/RW : 0;
+  const Fb = S.frontP*0.78*MASS*g9 + S.rearP*0.36*MASS*g9;
+  const roll = 0.015*MASS*g9, drag=0.5*1.2*0.55*S.v*S.v;
+  if(S.v>0.02){ S.v += (Fdrive-roll-drag-Fb*Math.min(1,S.v/0.3+0.2))/MASS*dt; if(S.v<0) S.v=0; }
+  else { const net=Fdrive-roll-Fb; S.v = net>0 ? S.v+net/MASS*dt : 0; }
+  S.dist += S.v*dt/1000;
+  // stall
+  if(S.running && S.grace<=0 && S.rpm<560){
+    S.running=false; S.cut=false;
+    if(performance.now()-S.stalledMsgT>1500){ S.stalledMsgT=performance.now();
+      say(G>0&&e>0 ? 'Stalled: the engine was dragged below idle in gear. Pull the clutch before stopping, and give more throttle while letting it out.' : 'Stalled: the idle was too low. Use the choke on a cold engine.',true); }
+  }
+  if(S.running && S.choke && S.temp>=58 && !S.warmTold){ S.warmTold=true; say('The engine is warm: switch the choke off to bring the idle down to about 1,400 r/min.'); }
+}
+
+/* ---------- render ---------- */
+const nS=$('speedoNeedle'), nT=$('tachoNeedle'), lev=$('clutchLever'), flev=$('frontLever'), key=$('key'), knob=$('indKnob');
+const odo=[0,1,2,3,4,5].map(i=>$('odo'+i));
+const ribsR=$('ribsR');
+const lampEls={}; ['lampL','lampR','lampN','lampHB','lampOil','lampBrk'].forEach(id=>{ const g=$(id); lampEls[id]={glow:g.querySelector('.glow'),sym:g.querySelector('.sym'),on:g.dataset.on,off:g.dataset.off,state:null}; });
+function setLamp(id,on){ const L=lampEls[id]; if(L.state===on) return; L.state=on; L.glow.setAttribute('opacity',on?1:0); L.sym.setAttribute('fill',on?L.on:L.off); L.sym.setAttribute('stroke',on?L.on:L.off); }
+let lastTw=-1, lastOdo='', lastAria='';
+function setAttr(el,a,v){ if(el.getAttribute(a)!==String(v)) el.setAttribute(a,v); }
+function render(force){
+  const now=performance.now();
+  // needles
+  const jitter = S.running ? (Math.sin(now/37)*8+Math.sin(now/91)*6)*(S.temp<50&&!S.choke?3:1) : 0;
+  S.dispRpm += ((S.key?S.rpm+jitter:0)-S.dispRpm)*0.22;
+  S.dispV += (S.v*3.6-S.dispV)*0.2;
+  const aT=SWEEP0+SWEEP*Math.max(0,Math.min(12.4,S.dispRpm/1000))/12;
+  const aS=SWEEP0+SWEEP*Math.max(0,Math.min(145,S.dispV))/140;
+  nT.setAttribute('transform',`rotate(${F(aT)} ${DIAL.tacho.cx} ${DIAL.tacho.cy})`);
+  nS.setAttribute('transform',`rotate(${F(aS)} ${DIAL.speedo.cx} ${DIAL.speedo.cy})`);
+  // odometer
+  const od=(Math.floor(S.dist*10)/10).toFixed(1).replace('.','').padStart(6,'0').slice(-6);
+  if(od!==lastOdo){ lastOdo=od; for(let i=0;i<6;i++) odo[i].textContent=od[i]; }
+  // levers
+  lev.setAttribute('transform',`rotate(${F(-7.5*S.clutchP)} 30 -48)`);
+  flev.setAttribute('transform',`rotate(${F(-7*S.frontP)} 30 -48)`);
+  $('rearPedal').setAttribute('transform',`rotate(${F(3.5*S.rearP)} 990 858) translate(0 ${F(4*S.rearP)})`);
+  S.gearAnim*=0.86; if(Math.abs(S.gearAnim)<.01) S.gearAnim=0;
+  $('gearLever').setAttribute('transform',`rotate(${F(5*S.gearAnim)} 460 872)`);
+  // throttle ribs (twist)
+  const tw=Math.round(S.thr*95);
+  if(tw!==lastTw){ lastTw=tw; ribsR.innerHTML=ribsPath(-220,-118,21,tw); }
+  // key
+  setAttr(key,'transform',`rotate(${S.key?45:-45} 700 332)`);
+  // switches
+  setAttr($('killOff'),'fill',S.kill?'url(#redRock)':'url(#redRockDn)');
+  setAttr($('killRun'),'fill',S.kill?'url(#redRockDn)':'url(#redRock)');
+  setAttr($('beamHi'),'fill',S.beam?'url(#blkRockDn)':'url(#blkRock)');
+  setAttr($('beamLo'),'fill',S.beam?'url(#blkRock)':'url(#blkRockDn)');
+  setAttr(knob,'transform',`translate(${S.ind*13} 0)`);
+  setAttr($('chokeLever'),'transform',`rotate(${S.choke?52:0} -84 48)`);
+  setAttr($('hornCap'),'r',S.horn?12:13.5);
+  setAttr($('starterCap'),'r',(S.cranking||$('starter').classList.contains('down'))?14:16);
+  $('hornWaves').classList.toggle('on',S.horn&&S.key);
+  // lamps
+  const blink = (now % 667) < 333;
+  setLamp('lampL',S.key&&S.ind===-1&&blink);
+  setLamp('lampR',S.key&&S.ind===1&&blink);
+  setLamp('lampN',S.key&&GEARS[S.gi]==='N');
+  setLamp('lampHB',S.key&&S.beam);
+  setLamp('lampOil',S.key&&!(S.running&&S.rpm>700));
+  setLamp('lampBrk',S.key&&(S.frontIn||S.rearIn));
+  // aria + deck state
+  const g=GEARS[S.gi];
+  $('gearTxt').textContent=g;
+  setAttr($('ignition'),'aria-checked',S.key); setAttr($('kill'),'aria-checked',S.kill); setAttr($('beam'),'aria-checked',S.beam); setAttr($('choke'),'aria-checked',S.choke);
+  setAttr($('indL'),'aria-pressed',S.ind===-1); setAttr($('indR'),'aria-pressed',S.ind===1); setAttr($('clutchHit'),'aria-pressed',S.clutchIn);
+  const pct=Math.round(S.thr*100);
+  if(String(pct)!==lastAria){ lastAria=String(pct); setAttr($('throttleHit'),'aria-valuenow',pct); setAttr($('throttleHit'),'aria-valuetext',pct+' percent open'); thrOut.textContent=Math.round(Math.max(S.thr,S.holdThr)*100)+'%'; }
+  document.querySelectorAll('#deck [data-act]').forEach(b=>{
+    const a=b.dataset.act;
+    if(a==='ignition'){ setAttr(b,'aria-checked',S.key); b.textContent=S.key?'Key ON':'Key OFF'; }
+    else if(a==='kill'){ setAttr(b,'aria-checked',S.kill); b.textContent=S.kill?'Stop: RUN':'Stop: OFF'; }
+    else if(a==='choke') setAttr(b,'aria-checked',S.choke);
+    else if(a==='beam'){ setAttr(b,'aria-checked',S.beam); b.textContent=S.beam?'High beam':'Low beam'; }
+    else if(a==='indL') setAttr(b,'aria-pressed',S.ind===-1);
+    else if(a==='indR') setAttr(b,'aria-pressed',S.ind===1);
+    else if(a==='clutch'){ setAttr(b,'aria-pressed',S.clutchIn); b.textContent=S.clutchIn?'Clutch IN':'Clutch'; }
+  });
+  // readouts
+  $('roEng').textContent = S.cranking?'CRANK':S.running?'RUN':'OFF';
+  $('roRpm').textContent = Math.round(S.key?Math.max(0,S.rpm):0).toLocaleString('en-US');
+  $('roSpd').textContent = (S.v*3.6).toFixed(0);
+  $('roGear').textContent = g;
+  $('roClu').textContent = S.clutchP>.75?'IN':S.clutchP>.2?'SLIP':'OUT';
+  $('roTmp').textContent = Math.round(S.temp)+' °C';
+  msgBar.classList.toggle('run',S.running);
+}
+function frame(t){
+  let dt=Math.min(0.05,(t-lastT)/1000); lastT=t;
+  const n=Math.max(1,Math.round(dt/0.001)); const h=dt/n;
+  for(let i=0;i<n;i++) step(h);
+  render();
+  requestAnimationFrame(frame);
+}
+render(true);
+requestAnimationFrame(t=>{ lastT=t; requestAnimationFrame(frame); });
+
+/* test hook */
+window.__moto = { state:()=>S, buildSVG };
+})();
+</script>
+</body>
+</html>

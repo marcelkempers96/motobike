@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Viewer</title>
+<style>
+:root{--bg:#F7F6F2;--ink:#1E2B5E;--muted:#5D6270;--line:#E2E0D8;--accent:#C8502A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#232733;font:15px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;height:100vh}
+#c{width:100%;height:100%;display:block;touch-action:none}
+aside{border-left:1px solid var(--line);padding:16px;overflow:auto;background:#fff}
+h1{font-size:17px;color:var(--ink);margin:0 0 4px}
+p{margin:0 0 12px;color:var(--muted);font-size:13px}
+label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}
+select{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.cats button{border:1px solid var(--line);background:#F3F2EE;border-radius:999px;padding:6px 10px;font:inherit;font-size:13px;cursor:pointer;color:var(--ink)}
+.cats button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+#picked{margin-top:14px;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:13px;min-height:44px}
+@media (max-width:760px){.wrap{grid-template-columns:1fr;grid-template-rows:60vh auto;height:auto}aside{border-left:0;border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <canvas id="c" aria-label="3D model"></canvas>
+  <aside>
+    <h1>Moto Zero model viewer</h1>
+    <p>Reference implementation for the website: loads a GLB, highlights a category on the bikes, and highlights the clicked component. Drag to orbit, scroll to zoom.</p>
+    <label for="model">Model</label>
+    <select id="model"></select>
+    <label>Highlight category (bikes)</label>
+    <div class="cats" id="cats"></div>
+    <div id="picked">Click a part.</div>
+  </aside>
+</div>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+// Edit this list to match the files you upload (path relative to this page).
+const MODELS = ['bike_classic_4t','bike_mx_2t','bike_electric','engine_4t','engine_2t','clutch','clutch_exploded','crankshaft','piston','motor','brake','forks_usd','front_wheel_mx','handlebar'];
+const BASE = '../models-compressed/';   // folder holding <name>.glb (any category subfolder flattened, or adjust below)
+const CATS = ['powertrain','transmission','chassis','frame_body','wheels','electrical','wiring'];
+const HL = new THREE.Color('#C8502A');
+
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(2, devicePixelRatio));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const scene = new THREE.Scene(); scene.background = new THREE.Color('#F7F6F2');
+scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(35, 1, 0.01, 100);
+const controls = new OrbitControls(camera, canvas); controls.enableDamping = true;
+const loader = new GLTFLoader(); loader.setMeshoptDecoder(MeshoptDecoder);
+let root = null, catOn = null, picked = null;
+
+function resize(){ const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix(); }
+addEventListener('resize', resize);
+
+function paint(){
+  if (!root) return;
+  root.traverse(o => {
+    if (!o.isMesh) return;
+    const names = [o.name || '', o.parent?.name || ''];
+    const on = (catOn && names.some(x => x.startsWith(catOn + '__'))) || (picked && (o === picked));
+    o.material.emissive?.copy(on ? HL : new THREE.Color(0));
+    if (o.material.emissive) o.material.emissiveIntensity = on ? 0.55 : 0;
+  });
+}
+function load(name){
+  loader.load(`${BASE}${name}.glb`, g => {
+    if (root) scene.remove(root);
+    root = g.scene; scene.add(root);
+    root.traverse(o => { if (o.isMesh) o.material = o.material.clone(); });
+    const box = new THREE.Box3().setFromObject(root), size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+    const d = size.length() * 1.1;
+    camera.position.copy(c).add(new THREE.Vector3(-0.55 * d, 0.32 * d, 0.85 * d)); camera.near = d / 100; camera.far = d * 20; camera.updateProjectionMatrix();
+    controls.target.copy(c); controls.update(); picked = null; paint();
+    document.getElementById('picked').textContent = 'Click a part.';
+  }, undefined, e => { document.getElementById('picked').textContent = 'Could not load ' + name + '.glb: check BASE path.'; });
+}
+const sel = document.getElementById('model');
+sel.innerHTML = MODELS.map(m => `<option value="${m}">${m}</option>`).join('');
+sel.onchange = () => load(sel.value);
+document.getElementById('cats').innerHTML = CATS.map(c => `<button type="button" data-c="${c}" aria-pressed="false">${c.replace('_', ' & ')}</button>`).join('');
+document.getElementById('cats').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  catOn = catOn === b.dataset.c ? null : b.dataset.c;
+  document.querySelectorAll('#cats button').forEach(x => x.setAttribute('aria-pressed', x.dataset.c === catOn));
+  paint();
+};
+const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(); let downAt = null;
+canvas.addEventListener('pointerdown', e => downAt = [e.clientX, e.clientY]);
+canvas.addEventListener('pointerup', e => {
+  if (!root || !downAt || Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 5) return;
+  const r = canvas.getBoundingClientRect(); ptr.set((e.clientX - r.left) / r.width * 2 - 1, -(e.clientY - r.top) / r.height * 2 + 1);
+  ray.setFromCamera(ptr, camera); const hit = ray.intersectObject(root, true)[0];
+  picked = hit ? hit.object : null; paint();
+  const n = picked ? (picked.name || picked.parent?.name) : '';
+  document.getElementById('picked').textContent = n ? n.split('__').join(' › ').replace(/_/g, ' ') : 'Click a part.';
+});
+resize(); load(MODELS[0]);
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+</script>
+</body>
+</html>
