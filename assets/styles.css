@@ -515,3 +515,9 @@ p { margin: 0 0 10px; }
 .ute-review-item div { margin-top: 6px; }
 .ute-toc .ute-toc-foot a { display: inline-flex; border: 1px solid var(--ink); padding: 9px 14px; }
 .ute-toc .ute-toc-foot a::before { content: none; }
+.ute-sources { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; margin: 14px 0; }
+.ute-source { background: var(--surface); border: 1px solid var(--ink); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.ute-source h3 { font-size: 17px; margin: 0; }
+.ute-source p { margin: 0; font-size: 13.5px; }
+.ute-source .ute-cite { font-size: 12.5px; color: var(--mute); }
+.ute-source .ute-linkbtn { align-self: flex-start; margin-top: auto; }

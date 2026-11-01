@@ -75,6 +75,7 @@ function render() {
         <a href="./" aria-current="page">Lab</a>
         <a href="learn/">Learn</a>
         <a href="quiz/">Quiz</a>
+        <a href="sources/">Sources</a>
       </nav>
       <span class="ute-top-spacer"></span>
       <div class="ute-seg ute-mode-switch" role="group" aria-label="Mode">
@@ -151,7 +152,7 @@ function render() {
 
     <footer class="ute-footer">
       <span>Moto Zero · Transitions Lab · CC BY-SA 4.0 · numbers are illustrative</span>
-      <span><a href="learn/">Learn the theory →</a> · <a href="quiz/">Test yourself →</a></span>
+      <span><a href="learn/">Learn the theory →</a> · <a href="quiz/">Test yourself →</a> · <a href="sources/">Sources &amp; credits</a></span>
     </footer>
 
     <div class="ute-modal" id="ute-help" role="dialog" aria-modal="true" aria-labelledby="help-h">
