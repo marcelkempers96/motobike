@@ -1083,3 +1083,7 @@ a.ute-btn { text-decoration: none; display: inline-flex; align-items: center; }
 @media (max-width: 720px) { .mz-chaplist img { width: 100%; height: 180px; } }
 .mz-chaplist a { grid-template-columns: 200px minmax(0, 1fr); } @media (max-width: 720px) { .mz-chaplist a { grid-template-columns: 1fr; } }
 .mz-chaplist .mz-az { display: grid; place-items: center; font: 900 34px/1 var(--sans); color: var(--ink); background: #F5F5F5; letter-spacing: -0.02em; }
+.mz-gal-item { display: flex; flex-direction: column; }
+.mz-gal-item .mz-gal-card { flex: 1; }
+.mz-gal-dl { display: block; padding: 8px 10px; border: 1px solid var(--line); border-top: 0; font: 700 13px/1.2 var(--sans); color: var(--ink); text-decoration: none; background: #FAFAFA; }
+.mz-gal-dl:hover { background: var(--ink); color: #FFF; }
