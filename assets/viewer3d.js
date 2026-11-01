@@ -81,7 +81,7 @@ export function createViewer(el, opts = {}) {
   controls.enableDamping = true;
   controls.autoRotate = !!opts.autoRotate;
   controls.autoRotateSpeed = 0.8;
-  const shadow = new THREE.Mesh(new THREE.CircleGeometry(1, 48), new THREE.MeshBasicMaterial({ color: 0x0a0a0a, transparent: true, opacity: 0.12, depthWrite: false }));
+  const shadow = new THREE.Mesh(new THREE.CircleGeometry(1, 48), new THREE.MeshBasicMaterial({ color: 0x0a0a0a, transparent: true, opacity: 0.05, depthWrite: false }));
   shadow.rotation.x = -Math.PI / 2;
   scene.add(shadow);
 
@@ -134,7 +134,7 @@ export function createViewer(el, opts = {}) {
   function frame(dist, view) {
     const box = new THREE.Box3().setFromObject(root);
     const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
-    const d = dist || size.length() * 1.15;
+    const d = dist || size.length() * 1.45;
     // Bikes are modelled along X; side view looks along Z.
     const dir = view === 'side' ? new THREE.Vector3(0, 0.12, 1) : view === 'front' ? new THREE.Vector3(1, 0.25, 0.2) : new THREE.Vector3(-0.62, 0.34, 0.85);
     camera.position.copy(c).add(dir.normalize().multiplyScalar(d));
@@ -145,24 +145,28 @@ export function createViewer(el, opts = {}) {
     dirty = true; loop();
   }
 
+  /* Spinning groups. Each spec: { prefixes, axis: 'thin'|'long', centerFrom?: prefix, rate?: number }.
+     The pivot sits at the centre of the group (or of the centerFrom meshes) and turns
+     about the group's thinnest or longest dimension. */
   function setupWheels(groups) {
     wheels = [];
     if (!groups) return;
     for (const g of groups) {
       const ms = meshes.filter((m) => g.prefixes.some((p) => m.name.startsWith(p)));
       if (!ms.length) continue;
+      const ref = g.centerFrom ? meshes.filter((m) => m.name.startsWith(g.centerFrom)) : ms;
       const box = new THREE.Box3();
-      ms.forEach((m) => box.expandByObject(m));
+      (ref.length ? ref : ms).forEach((m) => box.expandByObject(m));
       const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
-      // rotation axis = thinnest dimension of the wheel
-      const axis = size.x < size.y && size.x < size.z ? 'x' : size.y < size.z ? 'y' : 'z';
+      const dims = [['x', size.x], ['y', size.y], ['z', size.z]].sort((a, b) => a[1] - b[1]);
+      const axis = g.axis === 'long' ? dims[2][0] : dims[0][0];
       const pivot = new THREE.Group();
       pivot.position.copy(c);
       root.add(pivot);
       pivot.updateMatrixWorld();
       const spinners = ms.filter((m) => !g.static || !g.static.some((s) => m.name.startsWith(s)));
       spinners.forEach((m) => pivot.attach(m));
-      wheels.push({ pivot, axis, r: Math.max(size.x, size.y, size.z) / 2 });
+      wheels.push({ pivot, axis, rate: g.rate || 1 });
     }
   }
 
@@ -196,7 +200,7 @@ export function createViewer(el, opts = {}) {
     });
     picked = null;
     frame(o.dist, o.view || opts.view);
-    setupWheels(o.wheels);
+    setupWheels(o.wheels || (opts.spin ? opts.spin(name) : null));
     paint();
     status.hidden = true;
     poster.hidden = true;
@@ -224,7 +228,7 @@ export function createViewer(el, opts = {}) {
   };
   api.spin = (deg) => {
     if (!wheels.length || !deg) return;
-    for (const w of wheels) w.pivot.rotation[w.axis] -= deg * Math.PI / 180;
+    for (const w of wheels) w.pivot.rotation[w.axis] -= deg * w.rate * Math.PI / 180;
     dirty = true; loop();
   };
   api.render = () => { dirty = true; loop(); };

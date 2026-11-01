@@ -3,72 +3,264 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moto Zero · Build a bike</title>
-  <meta name="description" content="A drag-and-drop game: pick up each motorcycle part and put it in the right place to build a whole bike.">
+  <title>Moto Zero · Bike builder</title>
+  <meta name="description" content="Assemble a motorcycle from its real 3D parts in workshop order, then change wheel sizes, sprockets and colours and see the effect on gearing, speed and geometry.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css">
+  <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
   <style>
-    .bg-wrap { max-width: 1400px; width: 100%; margin: 0 auto; padding: 20px 24px 32px; }
-    .bg-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
-    .bg-head h1 { font-size: 30px; letter-spacing: -0.02em; margin: 4px 0; }
-    .bg-head p { margin: 0; font-size: 15px; max-width: 640px; }
-    .bg-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-    .bg-score { display: flex; gap: 1px; background: var(--ink); border: 1px solid var(--ink); margin-bottom: 12px; }
-    .bg-score > div { flex: 1; background: var(--paper-2); padding: 8px 12px; }
-    .bg-score .l { font: 500 10px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
-    .bg-score .v { font: 700 20px/1.2 var(--mono); color: var(--ink); }
-    .bg-game { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; align-items: start; }
-    .bg-board { position: relative; background: #FFFFFF; border: 1px solid var(--ink); user-select: none; touch-action: none; }
-    .bg-board img.bg-plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: .16; transition: opacity .6s ease; pointer-events: none; }
-    .bg-board.is-done img.bg-plate { opacity: 1; }
-    .bg-slot { position: absolute; width: 64px; height: 64px; margin: -32px 0 0 -32px; border: 2px dashed var(--brand); border-radius: 50%; background: rgba(220,228,242,.55); display: grid; place-items: center; cursor: pointer; padding: 0; transition: transform .15s ease, background .15s ease, border-color .15s ease; }
-    .bg-slot span { position: absolute; top: calc(100% + 4px); left: 50%; transform: translateX(-50%); white-space: nowrap; font: 600 11px/1 var(--sans); color: var(--brand); background: rgba(255,255,255,.9); padding: 2px 5px; pointer-events: none; }
-    .bg-board.is-expert .bg-slot:not(.is-filled) span { display: none; }
-    .bg-slot.is-hot { transform: scale(1.18); background: rgba(43,183,110,.25); border-color: var(--go); }
-    .bg-slot.is-filled { border: 2px solid var(--go); background: #FFFFFF; cursor: default; }
-    .bg-slot.is-filled img { width: 56px; height: 56px; object-fit: contain; }
-    .bg-slot.is-wrong { animation: bg-shake .35s; border-color: var(--warm); }
-    .bg-board.is-done .bg-slot { opacity: 0; pointer-events: none; transition: opacity .6s ease .3s; }
-    @keyframes bg-shake { 0%,100% { translate: 0; } 25% { translate: -6px; } 75% { translate: 6px; } }
-    .bg-tray { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-content: start; }
-    .bg-tray h2 { grid-column: 1 / -1; font-size: 15px; margin: 0; }
-    .bg-card { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 6px; background: var(--surface); border: 1px solid var(--ink); cursor: grab; touch-action: none; font: 600 12.5px/1.2 var(--sans); color: var(--ink); text-align: center; }
-    .bg-card img { width: 100%; height: 76px; object-fit: contain; pointer-events: none; }
-    .bg-card:hover, .bg-card:focus-visible { border-color: var(--warm); outline: none; box-shadow: 0 0 0 2px var(--warm); }
-    .bg-card.is-picked { box-shadow: 0 0 0 3px var(--go); border-color: var(--go); }
-    .bg-card.is-used { display: none; }
-    .bg-drag { position: fixed; z-index: 200; width: 120px; pointer-events: none; transform: translate(-50%, -50%) rotate(-4deg); background: var(--surface); border: 2px solid var(--warm); padding: 6px; font: 600 12px/1.2 var(--sans); text-align: center; box-shadow: 0 10px 24px rgba(10,10,10,.25); }
-    .bg-drag img { width: 100%; height: 70px; object-fit: contain; }
-    .bg-msg { margin-top: 12px; min-height: 52px; padding: 10px 14px; background: var(--surface); border: 2px solid var(--brand); font-size: 15px; }
-    .bg-msg b { color: var(--brand); }
-    .bg-msg.is-good { border-color: var(--go); }
-    .bg-msg.is-good b { color: #1E7A4A; }
-    .bg-msg.is-bad { border-color: var(--warm); }
-    .bg-msg.is-bad b { color: var(--warm); }
-    .bg-win { display: none; margin-top: 16px; border: 2px solid var(--go); background: var(--surface); padding: 18px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: center; }
-    .bg-win.is-on { display: grid; }
-    .bg-win img { width: 100%; height: auto; display: block; }
-    .bg-win h2 { font-size: 28px; margin: 0 0 8px; }
-    .bg-confetti { position: fixed; inset: 0; pointer-events: none; z-index: 150; overflow: hidden; }
-    .bg-confetti i { position: absolute; top: -20px; width: 10px; height: 14px; animation: bg-fall linear forwards; }
-    @keyframes bg-fall { to { transform: translateY(110vh) rotate(720deg); } }
-    @media (max-width: 960px) { .bg-game { grid-template-columns: 1fr; } .bg-tray { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); } .bg-win { grid-template-columns: 1fr; } }
-    @media (max-width: 540px) { .bg-wrap { padding: 14px; } .bg-slot { width: 44px; height: 44px; margin: -22px 0 0 -22px; } .bg-slot span { font-size: 9.5px; } .bg-slot.is-filled img { width: 38px; height: 38px; } }
-    @media (prefers-reduced-motion: reduce) { .bg-confetti { display: none; } }
+    :root {
+      --bb-font: "Figtree", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      --bb-ink: #111111;
+      --bb-soft: #4A4A46;
+      --bb-mute: #76746E;
+      --bb-rule: #E3E1DC;
+      --bb-rule-2: #CFCCC4;
+      --bb-tint: #F7F6F3;
+      --bb-acc: #C8502A;
+      --bb-acc-soft: #FBEDE7;
+      --bb-ok: #2E7D4F;
+    }
+    body { background: #FFFFFF; color: var(--bb-ink); font-family: var(--bb-font); font-size: 14px; }
+    .ute-top { background: #FFFFFF; border-bottom: 1px solid var(--bb-rule); }
+    .ute-brand-sub { font: 500 12px/1 var(--bb-font); letter-spacing: 0; text-transform: none; border-left-color: var(--bb-rule-2); }
+    .ute-nav { flex-wrap: wrap; }
+    .ute-nav a { font: 500 13.5px/1 var(--bb-font); letter-spacing: 0; text-transform: none; color: var(--bb-soft); padding: 8px 10px; }
+    .ute-nav a[aria-current="page"] { color: var(--bb-ink); border-bottom-color: var(--bb-acc); }
+    .ute-nav .ute-nav-tool { margin-left: 10px; border-left: 1px solid var(--bb-rule-2); }
+    .ute-nav .ute-nav-kids { border-left: 1px solid var(--bb-rule-2); }
+    .ute-footer { font-family: var(--bb-font); background: #FFFFFF; border-top: 1px solid var(--bb-rule); }
+
+    .bb { max-width: 1480px; width: 100%; margin: 0 auto; padding: 22px 24px 40px; }
+    .bb-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px 28px; flex-wrap: wrap; margin-bottom: 18px; }
+    .bb-head h1 { font: 700 32px/1.1 var(--bb-font); letter-spacing: -0.02em; margin: 2px 0 8px; }
+    .bb-eyebrow { font: 600 12.5px/1 var(--bb-font); color: var(--bb-acc); margin: 0; }
+    .bb-intro { font-size: 15.5px; line-height: 1.5; color: var(--bb-soft); max-width: 720px; margin: 0 0 4px; }
+    .bb-kids { font-size: 13.5px; color: var(--bb-mute); margin: 0; }
+    .bb-kids a { color: var(--bb-acc); }
+    .bb-bikes { display: flex; gap: 8px; flex-wrap: wrap; }
+    .bb-bike { display: flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; background: #fff; border: 1px solid var(--bb-rule-2); border-radius: 10px; cursor: pointer; text-align: left; font-family: var(--bb-font); transition: border-color .15s, box-shadow .15s; }
+    .bb-bike img { width: 72px; height: 46px; object-fit: contain; }
+    .bb-bike b { display: block; font-weight: 600; font-size: 14px; color: var(--bb-ink); }
+    .bb-bike span { display: block; font-size: 12px; color: var(--bb-mute); }
+    .bb-bike:hover { border-color: var(--bb-ink); }
+    .bb-bike[aria-checked="true"] { border-color: var(--bb-acc); box-shadow: 0 0 0 1px var(--bb-acc) inset; background: var(--bb-acc-soft); }
+
+    .bb-grid { display: grid; grid-template-columns: minmax(0, 1fr) 400px; grid-template-areas: "stage side" "fx side"; gap: 18px 22px; align-items: start; }
+    .bb-stage { grid-area: stage; position: relative; height: min(66vh, 640px); min-height: 420px; background: #fff; border: 1px solid var(--bb-rule); border-radius: 14px; overflow: hidden; touch-action: none; }
+    .bb-stage canvas { display: block; width: 100%; height: 100%; outline: none; cursor: grab; }
+    .bb-stage canvas:active { cursor: grabbing; }
+    .bb-stage.is-drop { box-shadow: 0 0 0 2px var(--bb-acc) inset; }
+    .bb-stage.is-drop::after { content: "Release to fit the part"; position: absolute; left: 50%; top: 14px; transform: translateX(-50%); background: var(--bb-acc); color: #fff; font: 600 13px/1 var(--bb-font); padding: 8px 12px; border-radius: 99px; pointer-events: none; }
+    .bb-views { position: absolute; top: 12px; left: 12px; display: flex; gap: 4px; flex-wrap: wrap; }
+    .bb-pill { font: 500 12.5px/1 var(--bb-font); padding: 7px 10px; background: rgba(255,255,255,.92); border: 1px solid var(--bb-rule-2); border-radius: 99px; color: var(--bb-soft); cursor: pointer; }
+    .bb-pill:hover { color: var(--bb-ink); border-color: var(--bb-ink); }
+    .bb-pill.is-on { background: var(--bb-ink); border-color: var(--bb-ink); color: #fff; }
+    .bb-status { position: absolute; inset: 0; display: grid; place-items: center; font: 500 14px/1.4 var(--bb-font); color: var(--bb-mute); background: #fff; }
+    .bb-status[hidden] { display: none; }
+    .bb-note { position: absolute; left: 12px; right: 12px; bottom: 12px; max-width: 560px; background: rgba(255,255,255,.96); border: 1px solid var(--bb-rule); border-left: 3px solid var(--bb-acc); border-radius: 10px; padding: 10px 14px; font-size: 13.5px; line-height: 1.45; color: var(--bb-soft); box-shadow: 0 6px 20px rgba(0,0,0,.06); opacity: 0; transform: translateY(6px); transition: opacity .25s, transform .25s; pointer-events: none; }
+    .bb-note.is-on { opacity: 1; transform: none; }
+    .bb-note b { color: var(--bb-ink); display: block; font-size: 14px; margin-bottom: 2px; }
+    .bb-note.is-warn { border-left-color: #B7791F; }
+    .bb-hintline { position: absolute; right: 14px; top: 16px; font-size: 12px; color: var(--bb-mute); pointer-events: none; }
+
+    .bb-side { grid-area: side; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+    .bb-tabs { display: grid; grid-template-columns: 1fr 1fr; background: var(--bb-tint); border: 1px solid var(--bb-rule); border-radius: 10px; padding: 3px; }
+    .bb-tabs button { border: 0; background: transparent; padding: 9px 8px; border-radius: 8px; font: 600 14px/1 var(--bb-font); color: var(--bb-soft); cursor: pointer; }
+    .bb-tabs button[aria-selected="true"] { background: #fff; color: var(--bb-ink); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    .bb-panel[hidden] { display: none; }
+    .bb-box { border: 1px solid var(--bb-rule); border-radius: 12px; padding: 14px; background: #fff; }
+    .bb-box + .bb-box { margin-top: 12px; }
+    .bb-box h2 { font: 600 15px/1.25 var(--bb-font); margin: 0 0 8px; }
+    .bb-box h3 { font: 600 13.5px/1.25 var(--bb-font); margin: 0 0 6px; color: var(--bb-ink); }
+    .bb-small { font-size: 12.5px; color: var(--bb-mute); line-height: 1.45; margin: 0; }
+
+    .bb-prog { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--bb-mute); margin-bottom: 10px; }
+    .bb-bar { flex: 1; height: 6px; background: var(--bb-tint); border-radius: 99px; overflow: hidden; border: 1px solid var(--bb-rule); }
+    .bb-bar i { display: block; height: 100%; width: 0; background: var(--bb-acc); transition: width .4s ease; }
+    .bb-step-t { font: 700 19px/1.2 var(--bb-font); margin: 0 0 4px; }
+    .bb-step-why { font-size: 13.5px; color: var(--bb-soft); margin: 0 0 12px; }
+    .bb-tray { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; }
+    .bb-card { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 6px 9px; background: #fff; border: 1px solid var(--bb-rule-2); border-radius: 10px; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; font: 600 12.5px/1.2 var(--bb-font); color: var(--bb-ink); text-align: center; transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .bb-card img, .bb-card canvas { width: 100%; height: 74px; object-fit: contain; pointer-events: none; -webkit-user-drag: none; }
+    .bb-card:hover, .bb-card:focus-visible { border-color: var(--bb-acc); box-shadow: 0 0 0 1px var(--bb-acc); outline: none; transform: translateY(-1px); }
+    .bb-card.is-later { opacity: .45; border-style: dashed; }
+    .bb-card.is-later:hover { opacity: .7; }
+    .bb-card .bb-tag { position: absolute; top: 6px; right: 6px; font: 600 10.5px/1 var(--bb-font); color: var(--bb-mute); background: var(--bb-tint); padding: 3px 5px; border-radius: 4px; }
+    .bb-card.is-dragging { opacity: .3; }
+    .bb-tray-sub { grid-column: 1 / -1; font: 600 12px/1 var(--bb-font); color: var(--bb-mute); margin: 6px 0 0; }
+    .bb-label-card { width: 100%; height: 74px; display: grid; place-items: center; background: var(--bb-tint); border-radius: 6px; color: var(--bb-mute); font-size: 11px; }
+    .bb-drag { position: fixed; z-index: 300; width: 128px; pointer-events: none; transform: translate(-50%, -60%) rotate(-3deg); background: #fff; border: 1.5px solid var(--bb-acc); border-radius: 12px; padding: 6px; font: 600 12px/1.2 var(--bb-font); text-align: center; box-shadow: 0 14px 30px rgba(0,0,0,.18); }
+    .bb-drag img, .bb-drag canvas { width: 100%; height: 74px; object-fit: contain; display: block; }
+    .bb-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+    .bb-btn { font: 600 13px/1 var(--bb-font); padding: 9px 12px; border-radius: 8px; border: 1px solid var(--bb-rule-2); background: #fff; color: var(--bb-ink); cursor: pointer; }
+    .bb-btn:hover:not(:disabled) { border-color: var(--bb-ink); }
+    .bb-btn:disabled { opacity: .4; cursor: default; }
+    .bb-btn.is-acc { background: var(--bb-acc); border-color: var(--bb-acc); color: #fff; }
+    .bb-btn.is-acc:hover:not(:disabled) { background: #A9401F; border-color: #A9401F; }
+    .bb-msg { margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: var(--bb-tint); font-size: 13.5px; line-height: 1.45; color: var(--bb-soft); min-height: 42px; }
+    .bb-msg b { color: var(--bb-ink); }
+    .bb-msg.is-warn { background: #FFF6E5; color: #6B4A10; }
+    .bb-msg.is-warn b { color: #6B4A10; }
+    .bb-msg.is-done { background: #ECF6F0; color: #1F5135; }
+    .bb-steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+    .bb-steps li { counter-increment: s; display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; padding: 6px 0; border-top: 1px solid var(--bb-rule); font-size: 13.5px; color: var(--bb-mute); }
+    .bb-steps li:first-child { border-top: 0; }
+    .bb-steps li::before { content: counter(s); width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 600 11.5px/1 var(--bb-font); border: 1px solid var(--bb-rule-2); color: var(--bb-mute); }
+    .bb-steps li.is-done { color: var(--bb-ink); }
+    .bb-steps li.is-done::before { content: "✓"; background: var(--bb-ok); border-color: var(--bb-ok); color: #fff; }
+    .bb-steps li.is-cur { color: var(--bb-ink); font-weight: 600; }
+    .bb-steps li.is-cur::before { border-color: var(--bb-acc); background: var(--bb-acc); color: #fff; }
+    .bb-steps li small { font-size: 11.5px; color: var(--bb-mute); font-weight: 400; }
+
+    .bb-ctl { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; margin: 10px 0 2px; }
+    .bb-ctl label { font-size: 13.5px; font-weight: 500; color: var(--bb-ink); }
+    .bb-ctl output { font: 600 13.5px/1 var(--bb-font); font-variant-numeric: tabular-nums; color: var(--bb-ink); }
+    .bb-ctl output small { color: var(--bb-mute); font-weight: 400; }
+    .bb-ctl input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: var(--bb-acc); margin: 6px 0 0; height: 24px; }
+    .bb-sw { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 10px; }
+    .bb-sw button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--bb-rule-2); cursor: pointer; padding: 0; position: relative; }
+    .bb-sw button[aria-pressed="true"] { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--bb-acc); }
+    .bb-sw button.is-stock { background: conic-gradient(#ddd 0 25%, #fff 0 50%, #ddd 0 75%, #fff 0) 50% / 10px 10px; font: 600 9px/1 var(--bb-font); color: var(--bb-mute); }
+    .bb-sw input[type=color] { width: 30px; height: 30px; border: 1px solid var(--bb-rule-2); border-radius: 50%; padding: 0; background: none; cursor: pointer; overflow: hidden; }
+    .bb-sw input[type=color]::-webkit-color-swatch-wrapper { padding: 0; }
+    .bb-sw input[type=color]::-webkit-color-swatch { border: 0; border-radius: 50%; }
+    .bb-toggle { display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 500; cursor: pointer; }
+    .bb-toggle input { width: 18px; height: 18px; accent-color: var(--bb-acc); }
+
+    .bb-fx { grid-area: fx; min-width: 0; }
+    .bb-fx-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    .bb-fx-head h2 { font: 700 20px/1.2 var(--bb-font); margin: 0; }
+    .bb-fx-head p { margin: 0; font-size: 13px; color: var(--bb-mute); }
+    .bb-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; border-top: 1px solid var(--bb-rule); border-left: 1px solid var(--bb-rule); }
+    .bb-tile { padding: 12px 14px; border-right: 1px solid var(--bb-rule); border-bottom: 1px solid var(--bb-rule); min-width: 0; }
+    .bb-tile .l { font-size: 12.5px; color: var(--bb-mute); margin-bottom: 4px; }
+    .bb-tile .v { font: 700 21px/1.15 var(--bb-font); color: var(--bb-ink); font-variant-numeric: tabular-nums; }
+    .bb-tile .v small { font-size: 13px; font-weight: 500; color: var(--bb-mute); }
+    .bb-tile .d { font-size: 12px; font-weight: 600; margin-top: 2px; font-variant-numeric: tabular-nums; min-height: 15px; }
+    .bb-tile .d.up { color: var(--bb-ok); } .bb-tile .d.down { color: #B03A1A; } .bb-tile .d.same { color: var(--bb-mute); font-weight: 500; }
+    .bb-tile .e { font-size: 12.5px; color: var(--bb-soft); line-height: 1.4; margin-top: 6px; }
+    .bb-chart { margin-top: 16px; border: 1px solid var(--bb-rule); border-radius: 12px; padding: 12px 14px 8px; }
+    .bb-chart h3 { font: 600 14.5px/1.2 var(--bb-font); margin: 0 0 2px; }
+    .bb-chart p { font-size: 12.5px; color: var(--bb-mute); margin: 0 0 6px; }
+    .bb-chart svg { width: 100%; height: auto; display: block; font-family: var(--bb-font); }
+    .bb-legend { display: flex; gap: 6px 14px; flex-wrap: wrap; font-size: 12px; color: var(--bb-soft); margin-top: 4px; }
+    .bb-legend i { display: inline-block; width: 16px; height: 0; border-top: 2.5px solid; vertical-align: middle; margin-right: 5px; }
+
+    @media (max-width: 1100px) {
+      .bb-grid { grid-template-columns: minmax(0, 1fr) 340px; }
+    }
+    @media (max-width: 880px) {
+      .ute-top { position: static; }
+      .bb { padding: 14px 16px 32px; }
+      .bb-head h1 { font-size: 27px; }
+      .bb-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "stage" "side" "fx"; }
+      .bb-stage { position: sticky; top: 0; z-index: 20; height: 44vh; min-height: 280px; border-radius: 12px; box-shadow: 0 8px 16px -12px rgba(0,0,0,.25); }
+      .bb-bikes { width: 100%; }
+      .bb-bike { flex: 1 1 0; min-width: 0; flex-direction: column; gap: 2px; padding: 6px; text-align: center; }
+      .bb-bike img { width: 100%; height: 40px; }
+      .bb-bike b { font-size: 12.5px; }
+      .bb-bike span { display: none; }
+      .bb-note { font-size: 12.5px; padding: 8px 10px; bottom: 8px; left: 8px; right: 8px; }
+      .bb-hintline { display: none; }
+      .bb-views { top: 8px; left: 8px; }
+      .bb-tray { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .bb-card img, .bb-card canvas { height: 60px; }
+      .bb-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .bb-tile .v { font-size: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .bb-note, .bb-bar i, .bb-card { transition: none; } }
   </style>
 </head>
 <body>
 <div class="ute-page">
   <header class="ute-top">
     <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
-    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../cockpit/">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-kids" href="../build/" aria-current="page">Kids: Build a bike</a></nav>
+    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../cockpit/">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-tool" href="../build/" aria-current="page">Bike builder</a><a class="ute-nav-kids" href="../kids/">Kids: Build a bike</a></nav>
   </header>
-  <main class="bg-wrap" id="bg"></main>
-  <footer class="ute-footer"><span>Moto Zero · Transitions Lab · CC BY-SA 4.0</span><span>Drag with the mouse or a finger, or tap a part and then tap its place.</span></footer>
+  <main class="bb" id="bb">
+    <section class="bb-head">
+      <div>
+        <p class="bb-eyebrow">Workshop tool</p>
+        <h1>Bike builder</h1>
+        <p class="bb-intro">Assemble a motorcycle from its real 3D parts in workshop order, then change wheel sizes, sprockets and colours and see what each change does to gearing, speed and geometry.</p>
+        <p class="bb-kids">For younger learners there is a simpler game: <a href="../kids/">Kids: Build a bike</a>.</p>
+      </div>
+      <div class="bb-bikes" id="bb-bikes" role="radiogroup" aria-label="Choose a bike"></div>
+    </section>
+    <div class="bb-grid">
+      <div class="bb-stage" id="bb-stage">
+        <div class="bb-views" id="bb-views" role="group" aria-label="Camera views"></div>
+        <div class="bb-hintline">Drag to orbit · scroll or pinch to zoom</div>
+        <div class="bb-note" id="bb-note" aria-live="polite"></div>
+        <div class="bb-status" id="bb-status">Loading the 3D workshop…</div>
+      </div>
+      <aside class="bb-side">
+        <div class="bb-tabs" role="tablist" aria-label="Builder mode">
+          <button role="tab" id="bb-tab-a" aria-controls="bb-pa" aria-selected="true">Assemble</button>
+          <button role="tab" id="bb-tab-c" aria-controls="bb-pc" aria-selected="false">Configure</button>
+        </div>
+        <div class="bb-panel" id="bb-pa" role="tabpanel" aria-labelledby="bb-tab-a">
+          <div class="bb-box">
+            <div class="bb-prog"><span id="bb-prog-t">Step 1</span><div class="bb-bar"><i id="bb-bar"></i></div><span id="bb-prog-n">0%</span></div>
+            <h2 class="bb-step-t" id="bb-step-t">Frame</h2>
+            <p class="bb-step-why" id="bb-step-why"></p>
+            <div class="bb-tray" id="bb-tray"></div>
+            <div class="bb-msg" id="bb-msg" aria-live="polite">Drag a part onto the bike, or select it and press Enter to fit it.</div>
+            <div class="bb-actions">
+              <button class="bb-btn" id="bb-undo" type="button">Undo</button>
+              <button class="bb-btn" id="bb-reset" type="button">Start again</button>
+              <button class="bb-btn" id="bb-auto" type="button">Fit the remaining parts</button>
+            </div>
+          </div>
+          <div class="bb-box">
+            <h2>Assembly order</h2>
+            <ol class="bb-steps" id="bb-steps"></ol>
+          </div>
+        </div>
+        <div class="bb-panel" id="bb-pc" role="tabpanel" aria-labelledby="bb-tab-c" hidden>
+          <div class="bb-box">
+            <h2>Wheels</h2>
+            <p class="bb-small">Rim diameter with the same tyre profile. The bike sits on the new tyres, so ride height and steering angle change too.</p>
+            <div class="bb-ctl"><label for="bb-wf">Front rim</label><output id="bb-wf-o"></output><input type="range" id="bb-wf" step="1"></div>
+            <div class="bb-ctl"><label for="bb-wr">Rear rim</label><output id="bb-wr-o"></output><input type="range" id="bb-wr" step="1"></div>
+          </div>
+          <div class="bb-box">
+            <h2 id="bb-fd-t">Final drive</h2>
+            <p class="bb-small" id="bb-fd-s">Teeth on the gearbox sprocket and the wheel sprocket. Fewer front or more rear teeth means lower gearing: more pull, less top speed.</p>
+            <div class="bb-ctl"><label for="bb-sf" id="bb-sf-l">Front sprocket</label><output id="bb-sf-o"></output><input type="range" id="bb-sf" step="1"></div>
+            <div class="bb-ctl"><label for="bb-sr" id="bb-sr-l">Rear sprocket</label><output id="bb-sr-o"></output><input type="range" id="bb-sr" step="1"></div>
+          </div>
+          <div class="bb-box">
+            <h2>Colours</h2>
+            <h3 id="bb-c-body-t">Tank and bodywork</h3><div class="bb-sw" id="bb-c-body"></div>
+            <h3>Frame</h3><div class="bb-sw" id="bb-c-frame"></div>
+            <h3>Wheels</h3><div class="bb-sw" id="bb-c-wheel"></div>
+          </div>
+          <div class="bb-box">
+            <label class="bb-toggle"><input type="checkbox" id="bb-compare"> Compare with stock</label>
+            <p class="bb-small" style="margin-top:6px">Shows the stock bike as an orange outline in 3D and the stock curves in the chart.</p>
+            <div class="bb-actions"><button class="bb-btn" id="bb-stock" type="button">Reset to stock</button></div>
+          </div>
+        </div>
+      </aside>
+      <section class="bb-fx" id="bb-fx" aria-label="Effects of the configuration">
+        <div class="bb-fx-head"><h2>Effects</h2><p id="bb-fx-sub">Live numbers for the current set-up. Values are teaching approximations.</p></div>
+        <div class="bb-tiles" id="bb-tiles"></div>
+        <div class="bb-chart">
+          <h3>Wheel torque and road speed</h3>
+          <p id="bb-chart-s">Torque at the rear wheel in each gear. Where a curve meets the grey resistance line, the bike cannot go any faster.</p>
+          <svg id="bb-chart" viewBox="0 0 640 260" role="img" aria-label="Wheel torque against road speed"></svg>
+          <div class="bb-legend" id="bb-legend"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="ute-footer"><span>Moto Zero · Transitions Lab · CC BY-SA 4.0</span><span>Drag parts with a mouse or a finger, or select one and press Enter. Values are teaching approximations.</span></footer>
 </div>
-<script type="module" src="../assets/game.js"></script>
+<script type="module" src="../assets/builder.js"></script>
 </body>
 </html>

@@ -842,3 +842,5 @@ body { font-size: 14px; font-variant-numeric: tabular-nums; }
   .ute-toc-foot { display: none; }
   .mz-chapter .mz-learn-plate img, .mz-chapter .ute-figure-img, .mz-chapter .mz-learn-photo img { max-height: 260px; }
 }
+.ute-stats { background: #E4E4E1; border-color: #E4E4E1; }
+.ute-stats .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }

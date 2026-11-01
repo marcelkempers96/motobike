@@ -363,6 +363,7 @@ function renderComponentView() {
   const slot = $('#ute-cview-slot');
   if (!slot) return;
   if (CV3) { CV3.dispose(); CV3 = null; }
+  CV3_MODEL = null; S._brakeSpin = null;
   // Reset local holds so nothing sticks when switching views
   Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false, throttle_hold: false, particles: [] });
   if (!S.selected_part) { slot.innerHTML = emptyCViewHTML(); return; }
@@ -463,6 +464,32 @@ function assetsPanelHTML(key) {
   </div>`;
 }
 
+/* Moving parts of the component models, driven by the live simulation */
+const MOVING = {
+  brake: { kind: 'brake', groups: [{ prefixes: ['brake__disc', 'brake__carrier', 'brake__float_buttons', 'brake__hub'] }] },
+  motor: { kind: 'motor', groups: [{ prefixes: ['motor__rotor', 'motor__magnets', 'motor__shaft', 'motor__sprocket', 'motor__lock_washer'], centerFrom: 'motor__shaft', axis: 'long' }] },
+  crankshaft_single: { kind: 'engine', groups: [{ prefixes: ['crankshaft_single__'], centerFrom: 'crankshaft_single__shafts', axis: 'long' }] },
+  crankshaft: { kind: 'engine', groups: [{ prefixes: ['crankshaft__'], centerFrom: 'crankshaft__main_journal', axis: 'long' }] },
+  chain_sprockets: { kind: 'engine', groups: [{ prefixes: ['chain_sprockets__front_sprocket', 'chain_sprockets__countershaft', 'chain_sprockets__retainer'], centerFrom: 'chain_sprockets__front_sprocket', rate: 1 }, { prefixes: ['chain_sprockets__rear_sprocket'], rate: 15 / 42 }] },
+  rear_sprocket: { kind: 'wheel', groups: [{ prefixes: ['rear_sprocket__'] }] },
+  clutch: { kind: 'engine', groups: [{ prefixes: ['clutch__basket', 'clutch__hub', 'clutch__friction_plates', 'clutch__steel_plates', 'clutch__pressure_plate', 'clutch__springs', 'clutch__spring_bolts', 'clutch__mainshaft'], centerFrom: 'clutch__mainshaft', axis: 'long', rate: 0.3 }] },
+};
+['front_wheel_spoked', 'front_wheel_cast', 'front_wheel_mx', 'rear_wheel_spoked', 'rear_wheel_cast', 'rear_wheel_mx'].forEach((w) => {
+  MOVING[w] = { kind: 'wheel', groups: [{ prefixes: [w + '__'], static: [w + '__brake_arm', w + '__brake_cable', w + '__brake_plate', w + '__axle'] }] };
+});
+let CV3_MODEL = null;
+function updateComponentModelTick(dt) {
+  if (!CV3 || !CV3_MODEL || !MOVING[CV3_MODEL]) return;
+  const k = MOVING[CV3_MODEL].kind;
+  const wheelRPM = S.speed / 3.6 / (2 * Math.PI * GEAR.wheel_r_m) * 60;
+  let degPerSec = 0;
+  if (k === 'wheel') degPerSec = Math.max(wheelRPM, 25) * 6 / 10;
+  else if (k === 'brake') degPerSec = S._brakeSpin != null ? S._brakeSpin : Math.max(wheelRPM, 25) * 6 / 10;
+  else if (k === 'engine') degPerSec = S.running ? S.rpm * 6 / 60 : 0;
+  else if (k === 'motor') degPerSec = Math.max(S.elec.rpm, S.rider.throttle * 10000) * 6 / 60;
+  if (degPerSec) CV3.spin(degPerSec * dt);
+}
+
 async function mountAssetsPanel(key) {
   $$('#ute-cview-slot [data-plate]').forEach((b) => b.addEventListener('click', () => openPlate(b.dataset.plate)));
   const el = $('#mz-cv3d');
@@ -478,6 +505,7 @@ async function mountAssetsPanel(key) {
   const cap = $('#mz-cv3d-cap'), subs = $('#mz-subparts'), vbox = $('#mz-variants');
   const viewer = mod.createViewer(el, {
     view: 'threeq',
+    spin: (n) => (MOVING[n] ? MOVING[n].groups : null),
     poster: (n) => mod.renderFor('assets/renders/', n),
     onPick: (m, name) => { if (!m) return; viewer.setHighlight((n) => n === name); cap.textContent = mod.humanize(name.split('__').slice(-1)[0]); },
   });
@@ -501,6 +529,7 @@ async function mountAssetsPanel(key) {
     vbox.querySelectorAll('button').forEach((b) => b.classList.toggle('is-on', b.dataset.model === name));
     await viewer.load(name, { view: 'threeq' });
     if (CV3 !== viewer) return;
+    CV3_MODEL = name;
     cap.textContent = MODELS[name] ? MODELS[name][1] : name;
     listSubs(() => true, 1);
   };
@@ -1060,6 +1089,7 @@ COMPONENT_VIEWS.brake = {
     const spin = S.speed > 0.5 ? wheelDeg : 90 * (1 - pct * 0.97);
     b.deg = (b.deg + spin * dt) % 360;
     b.disc.setAttribute('transform', `rotate(${b.deg} ${b.C[0]} ${b.C[1]})`);
+    S._brakeSpin = spin;
     b.L.setAttribute('transform', `translate(${pct * 10} 0)`);
     b.Rr.setAttribute('transform', `translate(${-pct * 10} 0)`);
     S.cv.disc_temp += (pct * (S.speed > 0.5 ? S.speed * 6 : spin * 1.4) - (S.cv.disc_temp - 40) * 0.15) * dt;
@@ -1759,6 +1789,7 @@ function tick(now) {
   }
 
   updateOverviewTick(dt);
+  updateComponentModelTick(dt);
   const cfg = S.selected_part && (COMPONENT_VIEWS[S.selected_part]);
   if (cfg && cfg.update) cfg.update(dt);
 
