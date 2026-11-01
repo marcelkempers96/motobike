@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1020" class="f22">
+<title>F22 Ignition circuits: AC-CDI and DC-TCI/ECU inductive ignition</title>
+<style>
+.f22 *{stroke-linecap:round;stroke-linejoin:round}
+.f22 .o{fill:#DCE4F2;stroke:#1E2B5E;stroke-width:2.2}
+.f22 .o2{fill:#B9C7E3;stroke:#1E2B5E;stroke-width:2.2}
+.f22 .p{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2.2}
+.f22 .pi{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:1.3}
+.f22 .i{fill:none;stroke:#1E2B5E;stroke-width:1.3}
+.f22 .d{fill:none;stroke:#1E2B5E;stroke-width:0.8}
+.f22 .w{fill:none;stroke:#1E2B5E;stroke-width:2}
+.f22 .wa{fill:none;stroke:#C8502A;stroke-width:2.6}
+.f22 .hid{fill:none;stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4}
+.f22 .ld{fill:none;stroke:#1E2B5E;stroke-width:0.9}
+.f22 .ink{fill:#1E2B5E;stroke:none}
+.f22 .acc{fill:#C8502A;stroke:none}
+.f22 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#1E2B5E;font-size:16px}
+.f22 .h{font-size:19px;font-weight:600}
+.f22 .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
+.f22 .s{font-size:15px}
+</style>
+<defs>
+  <pattern id="f22-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+    <rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/>
+  </pattern>
+  <circle id="f22-j" r="4" fill="#1E2B5E"/>
+  <g id="f22-gnd" fill="none" stroke="#1E2B5E" stroke-width="2" stroke-linecap="round">
+    <path d="M0,0 V14 M-16,14 H16 M-10,20 H10 M-4,26 H4"/>
+  </g>
+  <path id="f22-arr" fill="#C8502A" d="M0,0 L-13,-6 L-13,6 Z"/>
+  <!-- flywheel face, origin = crank centre -->
+  <g id="f22-fly" stroke="#1E2B5E" stroke-linejoin="round">
+    <circle r="105" fill="#DCE4F2" stroke-width="2.2"/>
+    <circle r="95" fill="none" stroke-width="1.3"/>
+    <circle r="62" fill="none" stroke-width="0.8"/>
+    <circle r="34" fill="#B9C7E3" stroke-width="1.3"/>
+    <path d="M0,-15 L13,-7.5 L13,7.5 L0,15 L-13,7.5 L-13,-7.5 Z" fill="#FFFFFF" stroke-width="1.6"/>
+    <circle r="6" fill="none" stroke-width="0.8"/>
+    <g fill="#FFFFFF" stroke-width="1.3">
+      <path d="M0,-50 a8,8 0 0 1 0,16 a8,8 0 0 1 0,-16"/>
+      <path d="M43.3,25 a8,8 0 0 1 0,16 a8,8 0 0 1 0,-16" transform="translate(0,-8)"/>
+      <path d="M-43.3,25 a8,8 0 0 1 0,16 a8,8 0 0 1 0,-16" transform="translate(0,-8)"/>
+    </g>
+  </g>
+  <!-- reluctor lobe at angle 0 (pointing +x) -->
+  <path id="f22-lobe" fill="#B9C7E3" stroke="#1E2B5E" stroke-width="1.6" d="M102.9,-20.5 L111,-17 A112,112 0 0 1 111,17 L102.9,20.5"/>
+  <!-- pulser coil: pole tip at origin pointing -x, body along +x, leads at x=60 -->
+  <g id="f22-pulser" stroke="#1E2B5E" stroke-linejoin="round">
+    <rect x="0" y="-5" width="10" height="10" fill="#B9C7E3" stroke-width="1.6"/>
+    <rect x="10" y="-16" width="44" height="32" rx="4" fill="#DCE4F2" stroke-width="2.2"/>
+    <path d="M18,-16 V16 M24,-16 V16 M30,-16 V16 M36,-16 V16 M42,-16 V16 M48,-16 V16" fill="none" stroke-width="0.8"/>
+    <path d="M22,16 V26 H42 V16" fill="#B9C7E3" stroke-width="1.3"/>
+    <circle cx="32" cy="21" r="3" fill="#FFFFFF" stroke-width="1"/>
+    <path d="M54,-6 H60 M54,6 H60" fill="none" stroke-width="2"/>
+  </g>
+  <!-- ignition coil: body origin top-left, 220 x 90 -->
+  <g id="f22-coil" stroke="#1E2B5E" stroke-linejoin="round">
+    <path d="M20,90 V110 H48 V90 M172,90 V110 H200 V90" fill="#B9C7E3" stroke-width="1.6"/>
+    <circle cx="34" cy="102" r="4" fill="#FFFFFF" stroke-width="1"/><circle cx="186" cy="102" r="4" fill="#FFFFFF" stroke-width="1"/>
+    <rect x="0" y="0" width="220" height="90" rx="14" fill="#DCE4F2" stroke-width="2.2"/>
+    <path d="M220,22 H240 Q252,22 252,34 V56 Q252,68 240,68 H220" fill="#B9C7E3" stroke-width="2.2"/>
+    <path d="M226,26 V64 M233,26 V64 M240,26 V64" fill="none" stroke-width="0.8"/>
+    <rect x="35" y="-18" width="10" height="18" fill="#B9C7E3" stroke-width="1.6"/>
+    <rect x="85" y="-18" width="10" height="18" fill="#B9C7E3" stroke-width="1.6"/>
+    <!-- cut-away window -->
+    <rect x="16" y="14" width="190" height="62" fill="#FFFFFF" stroke-width="1.3"/>
+    <rect x="22" y="22" width="178" height="46" fill="#DCE4F2" stroke-width="1"/>
+    <path d="M22,26 H200 M22,30 H200 M22,60 H200 M22,64 H200" fill="none" stroke-width="0.6"/>
+    <rect x="22" y="32" width="178" height="26" fill="#B9C7E3" stroke-width="1"/>
+    <path d="M30,32 V58 M38,32 V58 M46,32 V58 M54,32 V58 M62,32 V58 M70,32 V58 M78,32 V58 M86,32 V58 M94,32 V58 M102,32 V58 M110,32 V58 M118,32 V58 M126,32 V58 M134,32 V58 M142,32 V58 M150,32 V58 M158,32 V58 M166,32 V58 M174,32 V58 M182,32 V58 M190,32 V58" fill="none" stroke-width="1.3"/>
+    <rect x="14" y="39" width="194" height="12" fill="url(#f22-hatch)" stroke-width="1.3"/>
+  </g>
+  <!-- spark plug: origin = terminal top centre -->
+  <g id="f22-plug" stroke="#1E2B5E" stroke-linejoin="round">
+    <rect x="-3" y="10" width="6" height="12" fill="#B9C7E3" stroke-width="1.3"/>
+    <rect x="-7" y="0" width="14" height="12" rx="2" fill="#B9C7E3" stroke-width="1.6"/>
+    <path d="M-11,22 H11 L14,90 H-14 Z" fill="#FFFFFF" stroke-width="2.2"/>
+    <path d="M-11.6,34 H11.6 M-12.1,46 H12.1 M-12.6,58 H12.6 M-13.1,70 H13.1 M-13.5,80 H13.5" fill="none" stroke-width="1"/>
+    <rect x="-24" y="90" width="48" height="26" rx="2" fill="#B9C7E3" stroke-width="2.2"/>
+    <path d="M-9,90 V116 M9,90 V116" fill="none" stroke-width="1.3"/>
+    <rect x="-19" y="116" width="38" height="5" fill="#B9C7E3" stroke-width="1.3"/>
+    <rect x="-14" y="121" width="28" height="46" fill="#DCE4F2" stroke-width="2.2"/>
+    <path d="M-14,125 L14,129 M-14,130 L14,134 M-14,135 L14,139 M-14,140 L14,144 M-14,145 L14,149 M-14,150 L14,154 M-14,155 L14,159 M-14,160 L14,164" fill="none" stroke-width="0.8"/>
+    <path d="M-6,167 L-5,176 H5 L6,167 Z" fill="#FFFFFF" stroke-width="1.3"/>
+    <rect x="-2.2" y="176" width="4.4" height="8" fill="#B9C7E3" stroke-width="1.2"/>
+    <path d="M9,167 V193 Q9,196 6,196 H-7 V189 H3 V167 Z" fill="#B9C7E3" stroke-width="1.3"/>
+  </g>
+  <!-- plug cap -->
+  <path id="f22-cap" fill="#B9C7E3" stroke="#1E2B5E" stroke-width="2.2" stroke-linejoin="round" d="M-17,-38 Q-17,-56 0,-56 Q17,-56 17,-38 V18 Q17,28 8,30 H-8 Q-17,28 -17,18 Z"/>
+  <!-- cylinder head fragment around plug thread, origin = plug terminal top -->
+  <g id="f22-head" stroke="#1E2B5E" stroke-linejoin="round">
+    <path d="M-74,112 H74 V206 H52 Q0,160 -52,206 H-74 Z" fill="url(#f22-hatch)" stroke-width="2.2"/>
+    <rect x="-15" y="112" width="30" height="58" fill="#FFFFFF" stroke="none"/>
+  </g>
+  <!-- spark -->
+  <path id="f22-spark" fill="#C8502A" d="M-2,-1 L9,-7 L5,-1 L15,-4 L2,9 L5,2 Z"/>
+</defs>
+
+<!-- ======================= PANEL A ======================= -->
+<text class="h" x="24" y="34">A   AC-CDI: capacitor discharge ignition, powered by its own source coil</text>
+<path class="d" d="M24,48 H1576"/>
+<use xlink:href="#f22-fly" x="220" y="290" id="flyA"/>
+<use xlink:href="#f22-lobe" id="lobeA" transform="translate(220,290) rotate(35)"/>
+<path class="hid" d="M198,208 H242 V252 H198 Z M192,200 H248 M192,260 H248 M220,208 V186"/>
+<use xlink:href="#f22-pulser" transform="translate(333,290)"/>
+<!-- source lead -->
+<path class="w seg" data-seg="srcA1" d="M220,186 V120 H480"/><path class="w seg" data-seg="srcA2" d="M480,120 H600 V200 H640"/>
+<use xlink:href="#f22-j" x="480" y="120"/>
+<path class="w seg" data-seg="stopA1" d="M480,120 V140"/>
+<circle cx="480" cy="144" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="w blade" data-blade="stopA" d="M482,148 L498,180"/>
+<circle cx="480" cy="186" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="w seg" data-seg="stopA2" d="M480,190 V204"/>
+<use xlink:href="#f22-gnd" x="480" y="204"/>
+<text x="508" y="160">Engine stop</text><text x="508" y="178">switch</text>
+<!-- pulser leads -->
+<path class="w seg" data-seg="pulA" d="M393,284 H560 V330 H640"/>
+<path class="w seg" data-seg="pulgA" d="M393,296 H410 V372"/>
+<use xlink:href="#f22-gnd" x="410" y="372"/>
+<!-- labels left -->
+<text x="24" y="160">Source coil</text><text x="24" y="178">(behind rotor)</text>
+<path class="ld" d="M110,155 H150 L200,225"/><circle cx="200" cy="225" r="2.4" class="ink"/>
+<text x="24" y="420">Flywheel rotor</text>
+<path class="ld" d="M124,415 H140 L160,370"/><circle cx="160" cy="370" r="2.4" class="ink"/>
+<text x="250" y="440">Reluctor</text>
+<path class="ld" d="M276,425 L304,358"/><circle cx="304" cy="358" r="2.4" class="ink"/>
+<text x="330" y="250">Pulser coil</text>
+<path class="ld" d="M366,256 V272"/><circle cx="366" cy="272" r="2.4" class="ink"/>
+
+<!-- CDI unit -->
+<text x="660" y="80">CDI unit (potting removed)</text>
+<rect class="o" x="650" y="90" width="360" height="350" rx="12"/>
+<rect class="p" x="676" y="116" width="310" height="298"/>
+<rect class="o2" x="628" y="170" width="30" height="190" rx="4"/>
+<path class="w seg" data-seg="srcA3" d="M640,200 H720"/>
+<path fill="#1E2B5E" d="M720,188 V212 L740,200 Z"/><path class="w" d="M741,186 V214"/>
+<path class="wa seg" data-seg="chgA" d="M741,200 H880"/><path class="w" style="stroke-width:3" d="M880,180 V220 M892,180 V220"/><path class="wa seg" data-seg="outA1" d="M892,200 H1010"/>
+<use xlink:href="#f22-j" x="820" y="200"/>
+<path class="w seg" data-seg="scrA" d="M820,200 V320 M820,342 V392"/>
+<path fill="#1E2B5E" d="M808,322 H832 L820,340 Z"/><path class="w" d="M807,340 H833 M810,340 L798,352"/>
+<path class="w seg" data-seg="pcA" d="M640,330 H702"/>
+<rect class="o" x="702" y="300" width="80" height="62" rx="3"/>
+<text class="s" x="742" y="327" text-anchor="middle">Trigger</text>
+<text class="s" x="742" y="346" text-anchor="middle">circuit</text>
+<path class="w" d="M782,352 H798"/>
+<path class="w seg" data-seg="gndA" d="M742,362 V392 H900 V440 V452"/>
+<use xlink:href="#f22-j" x="820" y="392"/>
+<use xlink:href="#f22-gnd" x="900" y="452"/>
+<text class="s" x="730" y="182" text-anchor="middle">D</text>
+<text class="s" x="886" y="170" text-anchor="middle">C</text>
+<text class="s" x="842" y="337">SCR</text>
+<text class="m" x="684" y="194">SRC</text>
+<text class="m" x="684" y="324">PC</text>
+<text class="m" x="978" y="194" text-anchor="end">IG</text>
+<!-- CDI out to coil -->
+<path class="wa seg" data-seg="outA2" d="M1010,200 H1040 V150 H1120 V172"/>
+<path class="w seg" data-seg="coilgA" d="M1170,172 V150 H1220 V152"/>
+<use xlink:href="#f22-gnd" x="1220" y="152"/>
+<text class="m" x="1110" y="140" text-anchor="end" visibility="hidden">.</text>
+
+<!-- ignition coil -->
+<use xlink:href="#f22-coil" x="1080" y="190"/>
+<!-- HT lead -->
+<path d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#1E2B5E" stroke-width="10"/>
+<path id="htA" class="ht" d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#DCE4F2" stroke-width="5.6"/>
+<use xlink:href="#f22-head" x="1470" y="200"/>
+<use xlink:href="#f22-plug" x="1470" y="200"/>
+<use xlink:href="#f22-cap" x="1470" y="200"/>
+<g class="spark" id="sparkA"><circle cx="1470" cy="391" r="16" class="glow"/><use xlink:href="#f22-spark" transform="translate(1470,391) scale(1.8) translate(-8,-3)"/></g>
+<path class="w" d="M1410,406 V420"/>
+<use xlink:href="#f22-gnd" x="1410" y="420"/>
+
+<!-- coil labels -->
+<path class="ld" d="M1200,235 V330 H1214"/><circle cx="1200" cy="235" r="2.4" class="ink"/>
+<path class="ld" d="M1180,245 V354 H1214"/><circle cx="1180" cy="245" r="2.4" class="ink"/>
+<path class="ld" d="M1160,255 V378 H1214"/><circle cx="1160" cy="255" r="2.4" class="ink"/>
+<text x="1220" y="335">Laminated iron core</text>
+<text x="1220" y="359">Primary winding</text>
+<text x="1220" y="383">Secondary winding</text>
+<text x="1090" y="120" visibility="hidden">.</text>
+<text x="1246" y="176">Ignition coil</text>
+<text x="1386" y="88">HT lead</text>
+<text x="1504" y="160">Plug cap</text>
+<path class="ld" d="M1500,155 H1487"/><circle cx="1487" cy="155" r="2.4" class="ink"/>
+<text x="1504" y="262">Spark plug</text>
+<path class="ld" d="M1500,257 H1484"/><circle cx="1484" cy="257" r="2.4" class="ink"/>
+<text x="1490" y="458">Cylinder head</text>
+<path class="ld" d="M1520,442 V380"/><circle cx="1520" cy="380" r="2.4" class="ink"/>
+<text x="1110" y="168" visibility="hidden">.</text>
+<text class="s" x="24" y="472">C charges to roughly 150–300 V from the source coil through D; the pulser fires</text>
+<text class="s" x="24" y="491">the SCR and C discharges into the coil primary. The engine stop switch kills the</text>
+<text class="s" x="24" y="510">spark by shorting the source coil to earth.</text>
+
+<!-- ======================= PANEL B ======================= -->
+<g transform="translate(0,510)">
+<text class="h" x="24" y="34">B   DC-TCI / ECU: battery-fed inductive ignition, switched by the ECU</text>
+<path class="d" d="M24,48 H1576"/>
+<!-- battery -->
+<rect class="o" x="40" y="100" width="150" height="84" rx="6"/>
+<rect class="o2" x="40" y="100" width="150" height="20" rx="6"/>
+<rect class="o2" x="58" y="88" width="24" height="12" rx="2"/>
+<rect class="o2" x="148" y="88" width="24" height="12" rx="2"/>
+<path class="i" d="M70,132 V148 M62,140 H78 M152,140 H168"/>
+<text class="m" x="115" y="172" text-anchor="middle">Battery 12 V</text>
+<path class="w seg" data-seg="batgB" d="M160,88 V80 H230 V140"/>
+<use xlink:href="#f22-gnd" x="230" y="140"/>
+<!-- supply -->
+<path class="wa seg" data-seg="supB1" d="M70,88 V66 H250"/>
+<rect class="p" x="250" y="56" width="46" height="20" rx="2"/>
+<path class="wa seg" data-seg="supB2" d="M250,66 H296 M296,66 H340"/>
+<circle cx="344" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="w blade" data-blade="ignB" d="M347,63 L380,46"/>
+<circle cx="384" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="wa seg" data-seg="supB3" d="M388,66 H440"/>
+<circle cx="444" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="w blade" data-blade="stopB" d="M447,63 L480,46"/>
+<circle cx="484" cy="66" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="wa seg" data-seg="supB4a" d="M488,66 H600"/><path class="wa seg" data-seg="supB4b" d="M600,66 H1170 V172"/>
+<use xlink:href="#f22-j" x="600" y="66"/>
+<text x="273" y="96" text-anchor="middle">Fuse</text>
+<text x="364" y="96" text-anchor="middle">Ignition</text><text x="364" y="114" text-anchor="middle">switch</text>
+<text x="464" y="96" text-anchor="middle">Engine stop</text><text x="464" y="114" text-anchor="middle">switch</text>
+<!-- flywheel + pulser -->
+<use xlink:href="#f22-fly" x="220" y="350" id="flyB"/>
+<use xlink:href="#f22-lobe" id="lobeB" transform="translate(220,350) rotate(-30)"/>
+<use xlink:href="#f22-pulser" transform="translate(333,350)"/>
+<path class="w seg" data-seg="pulB" d="M393,344 H560 V330 H640"/>
+<path class="w seg" data-seg="pulgB" d="M393,356 H410 V420"/>
+<use xlink:href="#f22-gnd" x="410" y="420"/>
+<text x="330" y="300">Pulser coil (crank position)</text>
+<path class="ld" d="M366,306 V332"/><circle cx="366" cy="332" r="2.4" class="ink"/>
+<text x="24" y="470">Reluctor lobe passes the pulser once per revolution</text>
+<!-- ECU -->
+<text x="660" y="106">ECU (cover cut away)</text>
+<g class="o2">
+  <rect x="800" y="116" width="8" height="28" rx="2"/><rect x="824" y="116" width="8" height="28" rx="2"/><rect x="848" y="116" width="8" height="28" rx="2"/>
+  <rect x="872" y="116" width="8" height="28" rx="2"/><rect x="896" y="116" width="8" height="28" rx="2"/><rect x="920" y="116" width="8" height="28" rx="2"/>
+  <rect x="944" y="116" width="8" height="28" rx="2"/><rect x="968" y="116" width="8" height="28" rx="2"/>
+</g>
+<rect class="o" x="650" y="140" width="360" height="300" rx="12"/>
+<rect class="p" x="676" y="166" width="310" height="248"/>
+<rect class="o2" x="628" y="180" width="30" height="190" rx="4"/>
+<path class="w seg" data-seg="ecuFeed" d="M600,66 V200 H720"/>
+<rect class="o" x="720" y="182" width="80" height="36" rx="3"/>
+<text class="s" x="760" y="206" text-anchor="middle">5 V reg.</text>
+<path class="w" d="M760,218 V260"/>
+<rect class="o" x="720" y="260" width="110" height="130" rx="3"/>
+<path class="i" d="M720,280 h-6 M720,300 h-6 M720,360 h-6 M720,380 h-6 M830,280 h6 M830,300 h6 M830,360 h6 M830,380 h6"/>
+<text class="s" x="775" y="312" text-anchor="middle">Micro-</text>
+<text class="s" x="775" y="330" text-anchor="middle">controller</text>
+<text class="s" x="775" y="348" text-anchor="middle">with map</text>
+<path class="w seg" data-seg="pcB" d="M640,330 H720"/>
+<!-- IGBT -->
+<path class="w seg" data-seg="gateB" d="M830,330 H876"/>
+<path class="w" d="M876,312 V348 M884,306 V354"/>
+<path class="w seg" data-seg="igbtC" d="M884,316 L904,302 V200 H1010"/><path class="w seg" data-seg="igbtE" d="M884,344 L904,358 V400"/>
+<path fill="#1E2B5E" d="M904,358 L890,355 L897,347 Z"/>
+<path class="w" d="M775,390 V400 H904"/>
+<use xlink:href="#f22-j" x="860" y="400"/>
+<path class="w seg" data-seg="ecuG" d="M860,400 V452"/>
+<use xlink:href="#f22-gnd" x="860" y="452"/>
+<text class="s" x="914" y="336">IGBT</text>
+<text class="m" x="684" y="194">+B</text>
+<text class="m" x="684" y="324">PC</text>
+<text class="m" x="978" y="194" text-anchor="end">IG</text>
+<path class="wa seg" data-seg="igB" d="M1010,200 H1040 V150 H1120 V172"/>
+
+<!-- ignition coil -->
+<use xlink:href="#f22-coil" x="1080" y="190"/>
+<!-- HT lead -->
+<path d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#1E2B5E" stroke-width="10"/>
+<path id="htB" class="ht" d="M1332,235 H1380 V100 H1470 V146" fill="none" stroke="#DCE4F2" stroke-width="5.6"/>
+<use xlink:href="#f22-head" x="1470" y="200"/>
+<use xlink:href="#f22-plug" x="1470" y="200"/>
+<use xlink:href="#f22-cap" x="1470" y="200"/>
+<g class="spark" id="sparkB"><circle cx="1470" cy="391" r="16" class="glow"/><use xlink:href="#f22-spark" transform="translate(1470,391) scale(1.8) translate(-8,-3)"/></g>
+<path class="w" d="M1410,406 V420"/>
+<use xlink:href="#f22-gnd" x="1410" y="420"/>
+
+<text class="m" x="1112" y="164" text-anchor="end">−</text>
+<text class="m" x="1178" y="164">+</text>
+<text x="1386" y="88">HT lead</text>
+<text x="1084" y="336">Ignition coil</text>
+<text class="s" x="1084" y="360">The ECU earths the coil primary for</text>
+<text class="s" x="1084" y="379">the dwell time; when the IGBT opens</text>
+<text class="s" x="1084" y="398">the collapsing field induces 20–40 kV</text>
+<text class="s" x="1084" y="417">in the secondary and the plug fires.</text>
+</g>
+<g class="hots"><circle class="hot" data-k="flyA" cx="220" cy="290" r="112"/><rect class="hot" data-k="srcA" x="186" y="196" width="68" height="70" rx="6"/><rect class="hot" data-k="pulserA" x="326" y="268" width="74" height="44" rx="6"/><rect class="hot" data-k="stopA" data-sw="stopA" x="462" y="132" width="48" height="64" rx="6"/><rect class="hot" data-k="cdi" x="624" y="86" width="390" height="358" rx="6"/><rect class="hot" data-k="coilA" x="1076" y="168" width="258" height="112" rx="6"/><rect class="hot" data-k="plugA" x="1436" y="96" width="70" height="330" rx="6"/><rect class="hot" data-k="batB" x="36" y="594" width="158" height="104" rx="6"/><rect class="hot" data-k="fuseB" x="246" y="562" width="54" height="28" rx="6"/><rect class="hot" data-k="ignB" data-sw="ignB" x="334" y="546" width="58" height="40" rx="6"/><rect class="hot" data-k="stopB" data-sw="stopB" x="434" y="546" width="58" height="40" rx="6"/><rect class="hot" data-k="ecu" x="624" y="622" width="390" height="332" rx="6"/><circle class="hot" data-k="flyB" cx="220" cy="860" r="112"/><rect class="hot" data-k="pulserB" x="326" y="838" width="74" height="44" rx="6"/><rect class="hot" data-k="coilB" x="1076" y="678" width="258" height="112" rx="6"/><rect class="hot" data-k="plugB" x="1436" y="606" width="70" height="330" rx="6"/></g>
+</svg>

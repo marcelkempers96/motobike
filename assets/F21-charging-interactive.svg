@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1640 800" class="f21">
+<title>F21 Charging circuit: permanent-magnet alternator, shunt regulator/rectifier, fuse, battery and loads</title>
+<style>
+.f21 *{stroke-linecap:round;stroke-linejoin:round}
+.f21 .o{fill:#DCE4F2;stroke:#1E2B5E;stroke-width:2.2}
+.f21 .o2{fill:#B9C7E3;stroke:#1E2B5E;stroke-width:2.2}
+.f21 .p{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2.2}
+.f21 .i{fill:none;stroke:#1E2B5E;stroke-width:1.3}
+.f21 .d{fill:none;stroke:#1E2B5E;stroke-width:0.8}
+.f21 .w{fill:none;stroke:#1E2B5E;stroke-width:2}
+.f21 .wa{fill:none;stroke:#C8502A;stroke-width:2.6}
+.f21 .hid{fill:none;stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4}
+.f21 .cl{fill:none;stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4}
+.f21 .ld{fill:none;stroke:#1E2B5E;stroke-width:0.9}
+.f21 .ink{fill:#1E2B5E;stroke:none}
+.f21 .acc{fill:#C8502A;stroke:none}
+.f21 text{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:500;fill:#1E2B5E;font-size:16px}
+.f21 .h{font-size:18px;font-weight:600}
+.f21 .m{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500}
+.f21 .s{font-size:15px}
+</style>
+<defs>
+  <g id="f21-tooth" stroke="#1E2B5E" stroke-linejoin="round">
+    <path fill="#B9C7E3" stroke-width="2.2" d="M-7,-58 L-7,-113 L-19,-116 L-19,-126 Q0,-131 19,-126 L19,-116 L7,-113 L7,-58 Z"/>
+    <rect fill="#DCE4F2" stroke-width="1.6" x="-13.5" y="-109" width="27" height="44" rx="3"/>
+    <path fill="none" stroke-width="0.8" d="M-13.5,-102 H13.5 M-13.5,-95 H13.5 M-13.5,-88 H13.5 M-13.5,-81 H13.5 M-13.5,-74 H13.5"/>
+  </g>
+  <path id="f21-mag" fill="#B9C7E3" stroke="#1E2B5E" stroke-width="1.3" d="M-31.7,-147.6 A151,151 0 0 1 31.7,-147.6 L28.3,-131.0 A134,134 0 0 0 -28.3,-131.0 Z"/>
+  <path id="f21-magn" fill="#DCE4F2" stroke="#1E2B5E" stroke-width="1.3" d="M-31.7,-147.6 A151,151 0 0 1 31.7,-147.6 L28.3,-131.0 A134,134 0 0 0 -28.3,-131.0 Z"/>
+  <g id="f21-diode">
+    <path fill="#1E2B5E" d="M-11,8 L11,8 L0,-8 Z"/>
+    <path fill="none" stroke="#1E2B5E" stroke-width="2.2" stroke-linecap="round" d="M-12,-8 H12"/>
+  </g>
+  <g id="f21-scr">
+    <path fill="#1E2B5E" d="M-11,8 L11,8 L0,-8 Z"/>
+    <path fill="none" stroke="#1E2B5E" stroke-width="2.2" stroke-linecap="round" d="M-12,-8 H12 M6,-8 L18,-20"/>
+    <circle cx="21" cy="-23" r="3.2" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="1.6"/>
+  </g>
+  <g id="f21-gnd" fill="none" stroke="#1E2B5E" stroke-width="2" stroke-linecap="round">
+    <path d="M0,0 V14 M-16,14 H16 M-10,20 H10 M-4,26 H4"/>
+  </g>
+  <circle id="f21-j" r="4" fill="#1E2B5E"/>
+  <path id="f21-arr" fill="#C8502A" d="M0,0 L-13,-6 L-13,6 Z"/>
+</defs>
+
+<!-- ============ ALTERNATOR ============ -->
+<g transform="translate(330,400)">
+  <!-- flywheel rotor -->
+<g id="rotor21">  <circle class="o" r="180"/>
+  <circle class="i" r="170"/>
+  <circle class="p" r="151"/>
+    <use xlink:href="#f21-mag" transform="rotate(0)"/>
+  <use xlink:href="#f21-magn" transform="rotate(30)"/>
+  <use xlink:href="#f21-mag" transform="rotate(60)"/>
+  <use xlink:href="#f21-magn" transform="rotate(90)"/>
+  <use xlink:href="#f21-mag" transform="rotate(120)"/>
+  <use xlink:href="#f21-magn" transform="rotate(150)"/>
+  <use xlink:href="#f21-mag" transform="rotate(180)"/>
+  <use xlink:href="#f21-magn" transform="rotate(210)"/>
+  <use xlink:href="#f21-mag" transform="rotate(240)"/>
+  <use xlink:href="#f21-magn" transform="rotate(270)"/>
+  <use xlink:href="#f21-mag" transform="rotate(300)"/>
+  <use xlink:href="#f21-magn" transform="rotate(330)"/></g>
+    <!-- stator: 18 teeth -->
+  <use xlink:href="#f21-tooth"/><use xlink:href="#f21-tooth" transform="rotate(20)"/><use xlink:href="#f21-tooth" transform="rotate(40)"/>
+  <use xlink:href="#f21-tooth" transform="rotate(60)"/><use xlink:href="#f21-tooth" transform="rotate(80)"/><use xlink:href="#f21-tooth" transform="rotate(100)"/>
+  <use xlink:href="#f21-tooth" transform="rotate(120)"/><use xlink:href="#f21-tooth" transform="rotate(140)"/><use xlink:href="#f21-tooth" transform="rotate(160)"/>
+  <use xlink:href="#f21-tooth" transform="rotate(180)"/><use xlink:href="#f21-tooth" transform="rotate(200)"/><use xlink:href="#f21-tooth" transform="rotate(220)"/>
+  <use xlink:href="#f21-tooth" transform="rotate(240)"/><use xlink:href="#f21-tooth" transform="rotate(260)"/><use xlink:href="#f21-tooth" transform="rotate(280)"/>
+  <use xlink:href="#f21-tooth" transform="rotate(300)"/><use xlink:href="#f21-tooth" transform="rotate(320)"/><use xlink:href="#f21-tooth" transform="rotate(340)"/>
+  <circle class="o2" r="62"/>
+  <circle class="p" r="40"/>
+  <!-- bolt holes on stator plate -->
+  <circle class="i" cx="0" cy="-51" r="5"/><circle class="i" cx="44.2" cy="25.5" r="5"/><circle class="i" cx="-44.2" cy="25.5" r="5"/>
+  <!-- crankshaft taper and nut -->
+  <circle class="o" r="26"/>
+  <path class="p" d="M0,-15 L13,-7.5 L13,7.5 L0,15 L-13,7.5 L-13,-7.5 Z"/>
+  <circle class="d" r="6"/>
+  <path class="cl" d="M-200,0 H-40 M40,0 H60 M0,-200 V-40 M0,40 V200"/>
+</g>
+
+<!-- stator lead harness -->
+<path d="M368,400 H560" stroke="#1E2B5E" stroke-width="16" fill="none"/>
+<path d="M368,400 H560" stroke="#DCE4F2" stroke-width="11.6" fill="none"/>
+<path class="d" d="M400,394 l6,12 M430,394 l6,12 M460,394 l6,12 M490,394 l6,12 M520,394 l6,12"/>
+<rect class="o2" x="554" y="388" width="14" height="24" rx="3"/>
+
+<!-- alternator labels (left column) -->
+<g>
+  <text x="24" y="200">Flywheel rotor</text>
+  <path class="ld" d="M128,195 H190 L224,253"/><circle cx="224" cy="253" r="2.4" class="ink"/>
+  <text x="24" y="250">Magnets, 12 poles</text>
+  <path class="ld" d="M146,245 H178 L218,300"/><circle cx="218" cy="300" r="2.4" class="ink"/>
+  <text x="24" y="560">Stator core</text>
+  <path class="ld" d="M110,555 H190 L276,450"/><circle cx="276" cy="450" r="2.4" class="ink"/>
+  <text x="24" y="610">Stator winding</text>
+  <path class="ld" d="M126,605 H210 L251,486"/><circle cx="251" cy="486" r="2.4" class="ink"/>
+  <text x="24" y="660">Crankshaft nut</text>
+  <path class="ld" d="M126,655 H232 L322,408"/><circle cx="322" cy="408" r="2.4" class="ink"/>
+    <text class="h" x="200" y="740">Permanent-magnet alternator</text>
+  <text class="s" x="200" y="762">front view, outer flywheel rotor over 18-pole stator</text>
+  <text x="440" y="200">Stator leads (3 × AC)</text><path class="ld" d="M530,206 V392"/><circle cx="530" cy="392" r="2.4" class="ink"/>
+</g>
+
+<!-- ============ REGULATOR / RECTIFIER ============ -->
+<!-- cooling fins -->
+<g class="o2">
+  <rect x="676" y="150" width="9" height="40" rx="2"/><rect x="702" y="150" width="9" height="40" rx="2"/><rect x="728" y="150" width="9" height="40" rx="2"/>
+  <rect x="754" y="150" width="9" height="40" rx="2"/><rect x="780" y="150" width="9" height="40" rx="2"/><rect x="806" y="150" width="9" height="40" rx="2"/>
+  <rect x="832" y="150" width="9" height="40" rx="2"/><rect x="858" y="150" width="9" height="40" rx="2"/><rect x="884" y="150" width="9" height="40" rx="2"/>
+  <rect x="910" y="150" width="9" height="40" rx="2"/><rect x="936" y="150" width="9" height="40" rx="2"/><rect x="962" y="150" width="9" height="40" rx="2"/>
+  <rect x="988" y="150" width="9" height="40" rx="2"/><rect x="1014" y="150" width="9" height="40" rx="2"/><rect x="1040" y="150" width="9" height="40" rx="2"/>
+  <rect x="1066" y="150" width="9" height="40" rx="2"/><rect x="1092" y="150" width="9" height="40" rx="2"/><rect x="1118" y="150" width="9" height="40" rx="2"/>
+  <rect x="1144" y="150" width="9" height="40" rx="2"/><rect x="1170" y="150" width="9" height="40" rx="2"/>
+</g>
+<!-- mounting ears -->
+<path class="o" d="M640,600 H612 a22,22 0 0 0 0,44 H640 Z"/><circle class="p" cx="614" cy="622" r="8"/>
+<path class="o" d="M1210,600 H1238 a22,22 0 0 1 0,44 H1210 Z"/><circle class="p" cx="1236" cy="622" r="8"/>
+<!-- housing, cover cut away -->
+<rect class="o" x="640" y="186" width="570" height="458" rx="10"/>
+<path class="p" d="M664,212 H1186 V620 H664 Z"/>
+<path class="i" d="M664,212 H1186 V620 H664 Z"/>
+<!-- connectors -->
+<rect class="o2" x="616" y="318" width="30" height="164" rx="4"/>
+<rect class="o2" x="1204" y="226" width="30" height="48" rx="4"/>
+<rect class="o2" x="1204" y="560" width="30" height="48" rx="4"/>
+
+<!-- AC inputs with hops -->
+<path class="w seg" data-seg="phU" d="M560,394 H580 V340 H794 a6,6 0 0 1 12,0 H904 a6,6 0 0 1 12,0 H1020"/>
+<path class="w seg" data-seg="phV" d="M568,400 H794 a6,6 0 0 1 12,0 H910"/>
+<path class="w seg" data-seg="phW" d="M560,406 H580 V460 H800"/>
+<text class="m" x="600" y="333">U</text><text class="m" x="600" y="393">V</text><text class="m" x="600" y="453">W</text>
+
+<!-- bridge columns x = 800, 910, 1020 ; + rail y=250 ; - rail y=584 -->
+<path class="wa seg" data-seg="posRail" d="M800,250 H1234"/>
+<path class="w seg" data-seg="negRail" d="M800,584 H1234"/>
+<!-- column 1 (node y=460) -->
+<path class="w seg" data-seg="col1" d="M800,250 V275 M800,305 V334 M800,346 V394 M800,406 V530 M800,560 V584"/>
+<use xlink:href="#f21-diode" x="800" y="290"/>
+<use xlink:href="#f21-diode" x="800" y="545"/>
+<!-- column 2 (node y=400) -->
+<path class="w seg" data-seg="col2" d="M910,250 V275 M910,305 V334 M910,346 V530 M910,560 V584"/>
+<use xlink:href="#f21-diode" x="910" y="290"/>
+<use xlink:href="#f21-diode" x="910" y="545"/>
+<!-- column 3 (node y=340) -->
+<path class="w seg" data-seg="col3" d="M1020,250 V275 M1020,305 V530 M1020,560 V584"/>
+<use xlink:href="#f21-diode" x="1020" y="290"/>
+<use xlink:href="#f21-diode" x="1020" y="545"/>
+<!-- SCR shunts across lower diodes -->
+<path class="w seg" data-seg="shunt1" d="M800,500 H846 V530 M846,560 V584"/>
+<path class="w seg" data-seg="shunt2" d="M910,500 H956 V530 M956,560 V584"/>
+<path class="w seg" data-seg="shunt3" d="M1020,500 H1066 V530 M1066,560 V584"/>
+<use xlink:href="#f21-scr" x="846" y="545"/>
+<use xlink:href="#f21-scr" x="956" y="545"/>
+<use xlink:href="#f21-scr" x="1066" y="545"/>
+<!-- junctions -->
+<use xlink:href="#f21-j" x="800" y="460"/><use xlink:href="#f21-j" x="910" y="400"/><use xlink:href="#f21-j" x="1020" y="340"/>
+<use xlink:href="#f21-j" x="910" y="250"/><use xlink:href="#f21-j" x="1020" y="250"/>
+<use xlink:href="#f21-j" x="910" y="584"/><use xlink:href="#f21-j" x="1020" y="584"/>
+<use xlink:href="#f21-j" x="800" y="500"/><use xlink:href="#f21-j" x="910" y="500"/><use xlink:href="#f21-j" x="1020" y="500"/>
+<use xlink:href="#f21-j" x="846" y="584"/><use xlink:href="#f21-j" x="956" y="584"/><use xlink:href="#f21-j" x="1066" y="584"/>
+<use xlink:href="#f21-j" x="1150" y="250"/><use xlink:href="#f21-j" x="1150" y="584"/>
+<!-- gate labels -->
+<text class="s" x="872" y="527">G1</text><text class="s" x="982" y="527">G2</text><text class="s" x="1092" y="527">G3</text>
+<!-- sense / trigger IC -->
+<path class="w seg" data-seg="sense" d="M1150,250 V340 M1150,440 V584"/>
+<rect class="o" x="1110" y="340" width="80" height="100" rx="3"/>
+<path class="i" d="M1110,355 h-8 M1110,375 h-8 M1110,395 h-8 M1110,415 h-8 M1190,355 h8 M1190,375 h8 M1190,395 h8 M1190,415 h8"/>
+<text class="s" x="1150" y="372" text-anchor="middle">Sense</text>
+<text class="s" x="1150" y="392" text-anchor="middle">and</text>
+<text class="s" x="1150" y="412" text-anchor="middle">trigger</text>
+<text class="s" x="1150" y="460" text-anchor="middle" dx="-60">to G1–G3</text>
+<!-- designators -->
+<g class="s">
+  <text x="776" y="296" text-anchor="end">D1</text><text x="886" y="296" text-anchor="end">D2</text><text x="996" y="296" text-anchor="end">D3</text>
+  <text x="776" y="551" text-anchor="end">D4</text><text x="886" y="551" text-anchor="end">D5</text><text x="996" y="551" text-anchor="end">D6</text>
+</g>
+<text class="m" x="1176" y="240" text-anchor="end">B+</text>
+<text class="m" x="1176" y="608" text-anchor="end">E</text>
+<!-- reg/rec titles -->
+<text class="h" x="640" y="690">Regulator/rectifier (shunt type), cover cut away</text>
+<text class="s" x="640" y="714">D1–D6 three-phase full-wave bridge; SCR shunts G1–G3 short the stator to earth</text>
+<text class="s" x="640" y="734">when battery voltage exceeds about 14.5 V, so output is capped by dumping current as heat</text>
+<text class="s" x="684" y="236">Aluminium finned housing</text>
+
+<!-- ============ OUTPUT SIDE ============ -->
+<!-- reg/rec E to ground -->
+<path class="w seg" data-seg="regE" d="M1234,584 H1290 V660"/>
+<use xlink:href="#f21-gnd" x="1290" y="660"/>
+<!-- B+ to fuse -->
+<path class="wa seg" data-seg="out1" d="M1234,250 H1300"/>
+<rect class="p" id="fuse15" x="1300" y="238" width="54" height="24" rx="2"/>
+<path class="wa seg" data-seg="out2" d="M1300,250 H1354"/>
+<path class="wa seg" data-seg="out3" d="M1354,250 H1400"/>
+<text x="1327" y="226" text-anchor="middle">Main fuse</text>
+<text class="m" x="1327" y="290" text-anchor="middle">15 A</text>
+<use xlink:href="#f21-j" x="1400" y="250"/>
+<path class="wa seg" data-seg="batt" d="M1400,250 V470"/>
+<!-- battery (physical) -->
+<g>
+  <rect class="o" x="1352" y="478" width="200" height="150" rx="6"/>
+  <rect class="o2" x="1352" y="478" width="200" height="26" rx="6"/>
+  <rect class="o2" x="1386" y="466" width="28" height="14" rx="2"/>
+  <rect class="o2" x="1490" y="466" width="28" height="14" rx="2"/>
+  <path class="i" d="M1400,520 V540 M1390,530 H1410 M1494,530 H1514"/>
+  <text x="1452" y="572" text-anchor="middle">Battery</text>
+  <text class="m" x="1452" y="596" text-anchor="middle">12 V  5 Ah</text>
+</g>
+<path class="w seg" data-seg="batE" d="M1504,466 V446 H1590 V660"/>
+<use xlink:href="#f21-gnd" x="1590" y="660"/>
+<!-- load branch: ignition switch + lamp -->
+<path class="w seg" data-seg="load1" d="M1400,250 H1440"/>
+<circle cx="1444" cy="250" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="w blade" data-blade="ignsw" d="M1448,248 L1486,228"/>
+<circle cx="1490" cy="250" r="4" fill="#FFFFFF" stroke="#1E2B5E" stroke-width="2"/>
+<path class="w seg" data-seg="load2" d="M1494,250 H1590 V318"/>
+<circle class="p" id="lamp" cx="1590" cy="340" r="22"/>
+<path class="w" d="M1574.4,324.4 L1605.6,355.6 M1605.6,324.4 L1574.4,355.6"/>
+<path class="w seg" data-seg="load3" d="M1590,362 V446"/>
+<use xlink:href="#f21-j" x="1590" y="446"/>
+<text x="1466" y="208" text-anchor="middle">Ignition switch</text>
+<text x="1560" y="345" text-anchor="end">Loads</text>
+<!-- arrows: charging current -->
+<!-- legend -->
+
+<g class="hots"><circle class="hot" data-k="rotor" cx="330" cy="400" r="180"/><circle class="hot" data-k="stator" cx="330" cy="400" r="150"/><rect class="hot" data-k="leads" x="368" y="384" width="204" height="32" rx="6"/><rect class="hot" data-k="regrec" x="604" y="146" width="640" height="506" rx="6"/><rect class="hot" data-k="bridge" x="772" y="266" width="272" height="50" rx="6"/><rect class="hot" data-k="bridge" x="782" y="526" width="36" height="38" rx="6"/><rect class="hot" data-k="bridge" x="892" y="526" width="36" height="38" rx="6"/><rect class="hot" data-k="bridge" x="1002" y="526" width="36" height="38" rx="6"/><rect class="hot" data-k="scr" x="828" y="526" width="36" height="38" rx="6"/><rect class="hot" data-k="scr" x="938" y="526" width="36" height="38" rx="6"/><rect class="hot" data-k="scr" x="1048" y="526" width="36" height="38" rx="6"/><rect class="hot" data-k="sense" x="1100" y="334" width="102" height="112" rx="6"/><rect class="hot" data-k="fuse" x="1294" y="232" width="66" height="36" rx="6"/><rect class="hot" data-k="battery" x="1348" y="460" width="210" height="174" rx="6"/><rect class="hot" data-k="ignsw" data-sw="ignsw" x="1432" y="220" width="66" height="40" rx="6"/><rect class="hot" data-k="loads" x="1562" y="312" width="56" height="56" rx="6"/></g>
+</svg>
