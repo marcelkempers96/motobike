@@ -92,6 +92,7 @@ function block(b, mod) {
       const img = b.preview || t[0];
       return `<figure class="ute-figure mz-learn-wiring"><a class="mz-wiring-card" href="${ROOT}wiring/#${b.tab || 'harness'}"><img src="${ROOT}assets/interactive/wiring/preview/${img}.png" alt="Wiring Lab: ${t[1]}" loading="lazy"><span class="ute-linkbtn is-warm">Open the Wiring Lab: ${t[1]} →</span></a>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Interactive</span> ${b.caption}</figcaption>` : ''}</figure>`;
     }
+    case 'animation': return `<figure class="ute-figure mz-learn-anim"><iframe data-src="${ROOT}?embed=1&mode=${b.mode || '4t'}&part=${b.part}" title="Interactive animation: ${b.part}" loading="lazy"></iframe>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption}</figcaption>` : ''}</figure>`;
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
     default: void mod; return '';
   }
@@ -110,6 +111,7 @@ function wireContent() {
     f.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
   });
   setupModels();
+  setupAnims();
   main.querySelectorAll('.mz-gloss-filter').forEach((inp) => inp.addEventListener('input', () => {
     const q = inp.value.trim().toLowerCase();
     inp.nextElementSibling.querySelectorAll('div').forEach((d) => { d.hidden = q && !d.textContent.toLowerCase().includes(q); });
@@ -228,6 +230,23 @@ lb.addEventListener('click', (e) => { if (e.target === lb || e.target.tagName ==
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePlate(); });
 
 /* ---------- 3D model blocks: created when near the viewport, disposed when far ---------- */
+/* Interactive animations from the Overview, loaded when scrolled near */
+function setupAnims() {
+  const frames = main.querySelectorAll('.mz-learn-anim iframe[data-src]');
+  if (!frames.length) return;
+  const io = new IntersectionObserver((ents) => ents.forEach((e) => {
+    if (!e.isIntersecting) return;
+    const f = e.target; io.unobserve(f);
+    f.src = f.dataset.src;
+    f.addEventListener('load', () => {
+      const fit = () => { try { f.style.height = Math.ceil(f.contentDocument.documentElement.scrollHeight) + 'px'; } catch (err) { /* noop */ } };
+      fit();
+      try { new ResizeObserver(fit).observe(f.contentDocument.documentElement); } catch (err) { setInterval(fit, 1000); }
+    });
+  }), { rootMargin: '400px 0px' });
+  frames.forEach((f) => io.observe(f));
+}
+
 let v3;
 const live = new Map();
 function setupModels() {

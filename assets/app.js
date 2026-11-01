@@ -188,7 +188,7 @@ ${PAGE === 'cockpit' ? `
   `;
   wireChrome();
   mountSite(root);
-  mountOverview();
+  if (!EMBED) mountOverview();
   renderComponentView();
   mountRider();
   mountDyno();
@@ -388,8 +388,10 @@ function emptyCViewHTML() {
 }
 
 let CV3 = null;
-let animOpen = false;
-try { animOpen = localStorage.getItem('mz-anim-open') === '1'; } catch (e) { /* noop */ }
+const EMBED = /[?&]embed=1/.test(location.search);
+if (EMBED) document.documentElement.classList.add('mz-embed');
+let animOpen = EMBED;
+try { if (!EMBED) animOpen = localStorage.getItem('mz-anim-open') === '1'; } catch (e) { /* noop */ }
 function renderComponentView() {
   const slot = $('#ute-cview-slot');
   const panel = $('#mz-panel');
@@ -2109,7 +2111,7 @@ if (document.getElementById('ute-root')) {
   S.dyno = freshDyno();
   defsPackMetals();
   render();
-  recordTool(($('#ute-root').dataset.page || 'overview'), { visited: true });
+  if (!EMBED) recordTool(($('#ute-root').dataset.page || 'overview'), { visited: true });
   wireChromeGlobal();
   startLoop();
   if (S.selected_part) requestAnimationFrame(() => { applyMotoHighlight(); });

@@ -1043,3 +1043,14 @@ h1, h2, h3, .ute-hero h1 { font-family: var(--sans); font-weight: 700; letter-sp
 .mz-graph-note { font-size: 13px; color: var(--mute); margin: 6px 0 0; }
 .mz-cv-graphs { grid-template-columns: repeat(auto-fill, minmax(300px, 440px)); }
 .mz-graph svg { max-width: 420px; }
+/* Embedded animation (used inside course chapters) */
+html.mz-embed body { background: #FFFFFF; }
+html.mz-embed .ute-top, html.mz-embed .mz-footer, html.mz-embed .mz-split-left, html.mz-embed .mz-split-handle, html.mz-embed .mz-panel-model, html.mz-embed .mz-cv-banner, html.mz-embed [data-cv-close], html.mz-embed [data-anim], html.mz-embed .ute-modal { display: none !important; }
+html.mz-embed .mz-split { display: block; height: auto; min-height: 0; border: 0; }
+html.mz-embed .mz-panel { display: flex; padding: 0; overflow: visible; }
+html.mz-embed .mz-panel-head { display: none; }
+html.mz-embed .mz-anim { max-height: none; border: 0; margin: 0; }
+html.mz-embed .mz-anim .ute-cview-side { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+html.mz-embed .ute-cview { padding: 0; }
+html.mz-embed .mz-cv-below { padding: 10px 0 0; }
+.mz-learn-anim iframe { display: block; width: 100%; min-height: 560px; border: 0; }

@@ -173,6 +173,16 @@ export default {
           "html": "Open the <a href=\"../?mode=4t&part=engine\">engine in the Overview</a>. Its sliders move in whole millimetres, so set bore 57 mm and stroke 50 mm (the nearest settings to the K-Light 125's 56.5 × 49.5 mm), calculate the displacement (π/4 × 5.7² × 5.0 ≈ 128 cm³) and compare it with the Outputs panel; the true K-Light figure is 124 cm³. Raise the bore to 62 mm with the stroke unchanged and recalculate (about 151 cm³). Move the compression ratio from 9:1 to 11:1 and work out the change in ideal Otto efficiency at γ = 1.3 (48.3 % to 51.3 %), then set a short and a long stroke at 9000 rpm and compare the mean piston speeds."
         },
         {
+          "type": "h3",
+          "text": "Try it: bore, stroke and the numbers they give"
+        },
+        {
+          "type": "animation",
+          "part": "piston",
+          "mode": "4t",
+          "caption": "Change bore, stroke and compression in the Parameters card and watch displacement, torque and power follow. The graphs compare your engine with the 125 cc reference and show how fast the piston moves through each turn."
+        },
+        {
           "type": "check",
           "q": "m2-02"
         },
@@ -332,6 +342,16 @@ export default {
           "html": "More duration and overlap move peak power up the rev range but cost idle quality, cranking compression, low-speed torque and emissions. Variable valve timing (Honda HYPER VTEC, Ducati DVT, Yamaha VVA and others) exists to escape this compromise."
         },
         {
+          "type": "h3",
+          "text": "Try it: the four strokes, live"
+        },
+        {
+          "type": "animation",
+          "part": "engine",
+          "mode": "4t",
+          "caption": "Watch intake, compression, power and exhaust; use Step +30° to stop at each stroke. The timing strip shows where the crank is in its 720° cycle."
+        },
+        {
           "type": "check",
           "q": "m2-07"
         },
@@ -483,6 +503,16 @@ export default {
               "30–33°"
             ]
           ]
+        },
+        {
+          "type": "h3",
+          "text": "Try it: a two-stroke at work"
+        },
+        {
+          "type": "animation",
+          "part": "engine",
+          "mode": "2t",
+          "caption": "See the exhaust and transfer ports open as the piston uncovers them, and the charge fire every revolution."
         },
         {
           "type": "check",

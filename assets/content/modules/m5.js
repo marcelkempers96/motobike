@@ -364,6 +364,16 @@ export default {
           "html": "Fewer turns give higher Kv (faster) but lower Kt (less torque per amp): the same power, but more current for the same torque. Choosing a winding is a matching exercise between motor, pack voltage and controller current rating. Data sheets mix line-to-line, per-phase, peak and RMS values, so check the convention before comparing two motors."
         },
         {
+          "type": "h3",
+          "text": "Try it: the electric motor"
+        },
+        {
+          "type": "animation",
+          "part": "motor",
+          "mode": "elec",
+          "caption": "Hold THROTTLE: the three-phase field rotates and the rotor magnets follow. The graph shows flat torque up to the base speed, then constant power."
+        },
+        {
           "type": "check",
           "q": "m5-06"
         },
@@ -647,6 +657,16 @@ export default {
         {
           "type": "p",
           "html": "The battery voltage is fixed, so the controller switches at a fixed frequency (<strong>8–20 kHz</strong> for MOSFET drives, 5–10 kHz for large IGBT drives) and varies the duty cycle D: <strong>V_avg = D × V_DC</strong>. Winding inductance smooths the current. The faint whine of some scooters at low speed is the PWM frequency exciting the laminations."
+        },
+        {
+          "type": "h3",
+          "text": "Try it: the controller switching"
+        },
+        {
+          "type": "animation",
+          "part": "controller",
+          "mode": "elec",
+          "caption": "Hold THROTTLE and watch the high-side and low-side MOSFETs of each phase take turns, turning the battery DC into three-phase AC."
         },
         {
           "type": "check",

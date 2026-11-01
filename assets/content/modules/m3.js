@@ -230,6 +230,16 @@ export default {
           ]
         },
         {
+          "type": "h3",
+          "text": "Try it: the carburettor"
+        },
+        {
+          "type": "animation",
+          "part": "carb",
+          "mode": "4t",
+          "caption": "Hold GAS to open the throttle plate. Air speeds up through the venturi and pulls fuel from the jet; the graph shows air and fuel flow staying near 14.7 : 1."
+        },
+        {
           "type": "check",
           "q": "m3-01"
         },
@@ -610,6 +620,16 @@ export default {
         {
           "type": "p",
           "html": "K-Light coil values: primary <strong>4 &Omega;</strong> &plusmn; 10&ndash;15 %, secondary <strong>18.6 k&Omega;</strong> through the plug cap and <strong>13.6 k&Omega;</strong> without, so the suppressor cap is about 5 k&Omega;."
+        },
+        {
+          "type": "h3",
+          "text": "Try it: charge the coil and fire the plug"
+        },
+        {
+          "type": "animation",
+          "part": "spark_plug",
+          "mode": "4t",
+          "caption": "Hold IGNITE to build the field in the coil, then release to fire. Release too early and it misfires. The graph shows how the voltage needed rises with the gap."
         },
         {
           "type": "check",

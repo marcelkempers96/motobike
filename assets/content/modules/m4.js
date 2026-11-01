@@ -583,6 +583,16 @@ export default {
           "caption": "A scooter unit-swing engine on the centre stand with the CVT cover removed: the finned fan of the drive pulley, the cogged V-belt and the driven pulley with its clutch bell sit directly in front of the rear wheel, and the swingarm pivot is visible at the front of the crankcase."
         },
         {
+          "type": "h3",
+          "text": "Try it: chain and sprockets"
+        },
+        {
+          "type": "animation",
+          "part": "chain",
+          "mode": "4t",
+          "caption": "Hold REV and watch the small front sprocket drive the big rear one 2.6 times slower. The graph gives road speed against engine speed in each gear."
+        },
+        {
           "type": "check",
           "q": "m4-09"
         },
@@ -1347,6 +1357,16 @@ export default {
         {
           "type": "p",
           "html": "The hydraulic ratio here is about 12, and 48:1 from hand to clamp. The price is travel: a <strong>smaller master cylinder</strong> gives a more powerful but softer lever with more travel."
+        },
+        {
+          "type": "h3",
+          "text": "Try it: squeeze the pads"
+        },
+        {
+          "type": "animation",
+          "part": "brake",
+          "mode": "4t",
+          "caption": "Hold BRAKE: line pressure rises, the pistons push the pads onto the disc and the disc heats up. Brake repeatedly to see the temperature climb towards fade and the pads wear towards the 3 mm limit."
         },
         {
           "type": "check",
