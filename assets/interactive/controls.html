@@ -136,6 +136,7 @@ html.elec .deck button.na:hover{background:#F4F4F4}
         <button type="button" data-ctl="kill" data-act="kill" role="switch" aria-checked="true">Stop: RUN</button>
         <button type="button" data-ctl="starter" data-hold="starter">Starter</button>
         <button type="button" data-ctl="choke" data-act="choke" role="switch" aria-checked="false">Choke</button>
+        <button type="button" id="sndBtn" role="switch" aria-checked="true" title="Sound on/off (M)">Sound: ON</button>
       </div></div>
       <div class="grp"><h3>Hands</h3><div class="btns">
         <button type="button" data-ctl="clutch" data-act="clutch" aria-pressed="false">Clutch</button>
@@ -160,7 +161,7 @@ html.elec .deck button.na:hover{background:#F4F4F4}
     <h2>The controls</h2>
     <p class="hint" id="panelHint">Hover or focus an entry to find the control, or hover a control to find its entry.</p>
     <ol id="entries"></ol>
-    <p class="keys">Keyboard: <kbd>K</kbd> key, <kbd>X</kbd> stop switch, <kbd>S</kbd> starter, <kbd>C</kbd> clutch (hold), <kbd>T</kbd> throttle (hold), <kbd>F</kbd> front brake, <kbd>R</kbd> rear brake, <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> gear, <kbd>Q</kbd>/<kbd>E</kbd> indicators, <kbd>H</kbd> horn, <kbd>B</kbd> beam, <kbd>V</kbd> choke. Mouse wheel over the cockpit: throttle.</p>
+    <p class="keys">Keyboard: <kbd>K</kbd> key, <kbd>X</kbd> stop switch, <kbd>M</kbd> sound, <kbd>S</kbd> starter, <kbd>C</kbd> clutch (hold), <kbd>T</kbd> throttle (hold), <kbd>F</kbd> front brake, <kbd>R</kbd> rear brake, <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> gear, <kbd>Q</kbd>/<kbd>E</kbd> indicators, <kbd>H</kbd> horn, <kbd>B</kbd> beam, <kbd>V</kbd> choke. Mouse wheel over the cockpit: throttle.</p>
     <div class="panel-foot"><span class="foot">125 cc single, 5-speed. Transitions Lab, CC BY-SA 4.0</span><button type="button" class="reset" id="reset">Reset</button></div>
   </aside>
 </main>
@@ -1020,11 +1021,95 @@ function render(force){
   $('roTmp').textContent = Math.round(S.temp)+' °C';
   msgBar.classList.toggle('run',S.running);
 }
+
+/* =====================================================================
+   SOUND  (Web Audio, synthesised from the simulation state; no files)
+   Engine note follows r/min and throttle, plus starter, horn, indicator
+   relay, gear clunks and switch clicks. M toggles sound.
+   ===================================================================== */
+const SND={ ctx:null, on:true, built:false, last:{gi:null,key:null,kill:null,ind:0,run:false}, indT:0, indPhase:0 };
+function sndCtx(ext){
+  if(ext && !SND.ctx) SND.ctx=ext;
+  if(!SND.ctx){ try{ SND.ctx=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return null; } }
+  if(SND.ctx.state==='suspended') SND.ctx.resume().catch(()=>{});
+  if(!SND.built) sndBuild();
+  return SND.ctx;
+}
+function sndNoise(c){ const len=c.sampleRate*2, b=c.createBuffer(1,len,c.sampleRate), d=b.getChannelData(0); for(let i=0;i<len;i++) d[i]=Math.random()*2-1; return b; }
+function sndBuild(){
+  const c=SND.ctx; if(!c) return; SND.built=true;
+  const master=c.createGain(); master.gain.value=SND.on?0.9:0;
+  const comp=c.createDynamicsCompressor(); comp.threshold.value=-18; comp.ratio.value=4;
+  master.connect(comp); comp.connect(c.destination); SND.master=master;
+  // engine: two harmonic-rich oscillators, firing-rate amplitude modulation, low-pass that opens with throttle
+  const eGain=c.createGain(); eGain.gain.value=0;
+  const lp=c.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=400; lp.Q.value=4;
+  const shaper=c.createWaveShaper(); const curve=new Float32Array(1024); for(let i=0;i<1024;i++){ const x=i/512-1; curve[i]=Math.tanh(2.2*x); } shaper.curve=curve;
+  const o1=c.createOscillator(); o1.type='sawtooth'; const o2=c.createOscillator(); o2.type='square';
+  const g1=c.createGain(); g1.gain.value=0.6; const g2=c.createGain(); g2.gain.value=0.35;
+  o1.connect(g1); o2.connect(g2); g1.connect(shaper); g2.connect(shaper);
+  const am=c.createGain(); am.gain.value=0.55; const lfo=c.createOscillator(); lfo.type='sine'; const lfoD=c.createGain(); lfoD.gain.value=0.45; lfo.connect(lfoD); lfoD.connect(am.gain);
+  shaper.connect(am); am.connect(lp); lp.connect(eGain); eGain.connect(master);
+  o1.start(); o2.start(); lfo.start();
+  // intake / wind noise
+  const nz=c.createBufferSource(); nz.buffer=sndNoise(c); nz.loop=true; const bp=c.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=700; bp.Q.value=0.8; const nG=c.createGain(); nG.gain.value=0; nz.connect(bp); bp.connect(nG); nG.connect(master); nz.start();
+  // electric whine
+  const w=c.createOscillator(); w.type='triangle'; const wG=c.createGain(); wG.gain.value=0; w.connect(wG); wG.connect(master); w.start();
+  // starter motor
+  const st=c.createOscillator(); st.type='sawtooth'; st.frequency.value=58; const stG=c.createGain(); stG.gain.value=0; const stLp=c.createBiquadFilter(); stLp.type='lowpass'; stLp.frequency.value=900; st.connect(stLp); stLp.connect(stG); stG.connect(master); st.start();
+  // horn
+  const h1=c.createOscillator(); h1.type='square'; h1.frequency.value=415; const h2=c.createOscillator(); h2.type='square'; h2.frequency.value=505; const hBp=c.createBiquadFilter(); hBp.type='bandpass'; hBp.frequency.value=900; hBp.Q.value=1.2; const hG=c.createGain(); hG.gain.value=0; h1.connect(hBp); h2.connect(hBp); hBp.connect(hG); hG.connect(master); h1.start(); h2.start();
+  Object.assign(SND,{o1,o2,lfo,lp,eGain,nG,bp,w,wG,stG,hG});
+}
+function sndBlip(freq,dur,vol,type,noise){
+  const c=SND.ctx; if(!c||!SND.built) return; const t=c.currentTime;
+  const g=c.createGain(); g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.0001,t+dur); g.connect(SND.master);
+  if(noise){ const n=c.createBufferSource(); n.buffer=sndNoise(c); const f=c.createBiquadFilter(); f.type='highpass'; f.frequency.value=freq; n.connect(f); f.connect(g); n.start(t); n.stop(t+dur+0.02); }
+  else { const o=c.createOscillator(); o.type=type||'sine'; o.frequency.setValueAtTime(freq,t); o.frequency.exponentialRampToValueAtTime(Math.max(30,freq*0.6),t+dur); o.connect(g); o.start(t); o.stop(t+dur+0.02); }
+}
+function sndSet(param,v){ const c=SND.ctx; param.setTargetAtTime(v,c.currentTime,0.03); }
+function sound(dt){
+  const c=SND.ctx; if(!c||!SND.built||c.state!=='running') return;
+  const L=SND.last, thr=S.thr||0;
+  if(ELEC){
+    sndSet(SND.eGain.gain,0);
+    const ready=S.key&&S.kill; const mrpm=Math.abs(S.rpm||0);
+    sndSet(SND.w.frequency,Math.min(4000,120+mrpm/60*8)); sndSet(SND.wG.gain, ready&&mrpm>30 ? 0.015+0.05*thr : 0);
+  } else {
+    sndSet(SND.wG.gain,0);
+    const rpm=Math.max(0,S.rpm), f0=Math.max(8,rpm/60);
+    sndSet(SND.o1.frequency,f0); sndSet(SND.o2.frequency,f0*2.02); sndSet(SND.lfo.frequency,f0/2);
+    sndSet(SND.lp.frequency,260+rpm*0.08+thr*2400);
+    const on=(S.running||S.cranking)&&rpm>60;
+    sndSet(SND.eGain.gain, on ? 0.10+0.20*thr+Math.min(0.08,rpm/80000) : 0);
+    sndSet(SND.stG.gain, S.cranking ? 0.10 : 0);
+  }
+  const v=S.v||0; sndSet(SND.bp.frequency,500+v*30); sndSet(SND.nG.gain, Math.min(0.08, v*0.002 + (S.running&&!ELEC ? thr*0.03 : 0)));
+  sndSet(SND.hG.gain, S.horn&&S.key ? 0.08 : 0);
+  // indicator relay: tick on, tock off
+  if(S.ind && S.key){ SND.indT+=dt; if(SND.indT>=0.36){ SND.indT=0; SND.indPhase^=1; sndBlip(SND.indPhase?2600:1800,0.025,0.18,null,true); } } else { SND.indT=0.36; }
+  // events
+  if(L.gi!==null && L.gi!==S.gi){ sndBlip(95,0.14,0.35,'sine'); sndBlip(1200,0.03,0.08,null,true); }
+  if(L.key!==null && L.key!==S.key){ sndBlip(3200,0.02,0.15,null,true); }
+  if(L.kill!==null && L.kill!==S.kill){ sndBlip(2400,0.02,0.15,null,true); }
+  if(L.run && !S.running && !ELEC){ sndBlip(70,0.4,0.25,'sawtooth'); }
+  L.gi=S.gi; L.key=S.key; L.kill=S.kill; L.run=S.running;
+}
+function setSound(on){
+  SND.on=on; if(SND.master) SND.master.gain.setTargetAtTime(on?0.9:0,SND.ctx.currentTime,0.05);
+  const b=document.getElementById('sndBtn'); if(b){ b.setAttribute('aria-checked',String(on)); b.textContent=on?'Sound: ON':'Sound: OFF'; }
+  try{ localStorage.setItem('mz-sound',on?'1':'0'); }catch(e){}
+}
+try{ if(localStorage.getItem('mz-sound')==='0') SND.on=false; }catch(e){}
+['pointerdown','keydown'].forEach(ev=>document.addEventListener(ev,()=>sndCtx(),{capture:true}));
+document.addEventListener('keydown',e=>{ if((e.key==='m'||e.key==='M')&&!e.repeat&&!e.ctrlKey&&!e.metaKey){ sndCtx(); setSound(!SND.on); } });
+
 function frame(t){
   let dt=Math.min(0.05,(t-lastT)/1000); lastT=t;
   const n=Math.max(1,Math.round(dt/0.001)); const h=dt/n;
   for(let i=0;i<n;i++) step(h);
   render();
+  sound(dt);
   requestAnimationFrame(frame);
 }
 render(true);
@@ -1076,7 +1161,12 @@ if(EMBED){
 }
 
 /* hooks for the Overview (same origin) */
+document.getElementById('sndBtn')?.addEventListener('click',()=>{ sndCtx(); setSound(!SND.on); });
+setSound(SND.on);
 window.__moto = {
+  setAudio:(ctx)=>{ sndCtx(ctx); },
+  sound:(on)=>setSound(on),
+  audioState:()=>({ state: SND.ctx ? SND.ctx.state : 'none', built: SND.built, on: SND.on, engineGain: SND.eGain ? +SND.eGain.gain.value.toFixed(3) : 0 }),
   state:()=>S, buildSVG,
   setExtThr:(v)=>{ S.extThr=Math.max(0,Math.min(1,+v||0)); },
   releaseAll:()=>{ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; S.extThr=0; render(true); },

@@ -207,7 +207,7 @@ const pmrem = new THREE.PMREMGenerator(renderer);
 const envTex = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 pmrem.dispose();
 scene.environment = envTex;
-scene.add(new THREE.HemisphereLight(0xffffff, 0xe8e6e0, 0.35));
+scene.add(new THREE.HemisphereLight(0xffffff, 0xe6e6e6, 0.35));
 const key = new THREE.DirectionalLight(0xffffff, 1.6);
 key.position.set(1.4, 4.2, 2.4);
 key.castShadow = true;
@@ -1135,14 +1135,14 @@ function drawChart(a, s) {
   const path = (pts) => pts.map((p, i) => (i ? 'L' : 'M') + x(p[0]).toFixed(1) + ' ' + y(Math.min(p[1], tMax)).toFixed(1)).join(' ');
   let g = '';
   const stepT = tMax > 600 ? 200 : tMax > 300 ? 100 : 50;
-  for (let t = 0; t <= tMax; t += stepT) g += `<line x1="${L}" x2="${W - Rm}" y1="${y(t)}" y2="${y(t)}" stroke="#ECEAE5"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end" font-size="11" fill="#76746E">${t}</text>`;
-  for (let v = 0; v <= vMax; v += 20) g += `<line x1="${x(v)}" x2="${x(v)}" y1="${T}" y2="${H - Bm}" stroke="#F3F1EC"/><text x="${x(v)}" y="${H - Bm + 16}" text-anchor="middle" font-size="11" fill="#76746E">${v}</text>`;
-  g += `<text x="${W - Rm}" y="${H - 4}" text-anchor="end" font-size="11.5" fill="#4A4A46">Road speed, km/h</text>`;
-  g += `<text x="12" y="${T + (H - T - Bm) / 2}" font-size="11.5" fill="#4A4A46" transform="rotate(-90 12 ${T + (H - T - Bm) / 2})" text-anchor="middle">Wheel torque, N m</text>`;
+  for (let t = 0; t <= tMax; t += stepT) g += `<line x1="${L}" x2="${W - Rm}" y1="${y(t)}" y2="${y(t)}" stroke="#EBEBEB"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end" font-size="11" fill="#6B6B6B">${t}</text>`;
+  for (let v = 0; v <= vMax; v += 20) g += `<line x1="${x(v)}" x2="${x(v)}" y1="${T}" y2="${H - Bm}" stroke="#F3F3F3"/><text x="${x(v)}" y="${H - Bm + 16}" text-anchor="middle" font-size="11" fill="#6B6B6B">${v}</text>`;
+  g += `<text x="${W - Rm}" y="${H - 4}" text-anchor="end" font-size="11.5" fill="#444444">Road speed, km/h</text>`;
+  g += `<text x="12" y="${T + (H - T - Bm) / 2}" font-size="11.5" fill="#444444" transform="rotate(-90 12 ${T + (H - T - Bm) / 2})" text-anchor="middle">Wheel torque, N m</text>`;
   // resistance as wheel torque
   const rp = []; for (let v = 0; v <= vMax; v += 2) rp.push([v, a.res(v) * a.rw]);
-  g += `<path d="${path(rp)}" fill="none" stroke="#9A988F" stroke-width="2" stroke-dasharray="1 0"/>`;
-  if (cfg.compare) cs.forEach((pts) => { g += `<path d="${path(pts)}" fill="none" stroke="#9A988F" stroke-width="1.5" stroke-dasharray="5 4"/>`; });
+  g += `<path d="${path(rp)}" fill="none" stroke="#9A9A9A" stroke-width="2" stroke-dasharray="1 0"/>`;
+  if (cfg.compare) cs.forEach((pts) => { g += `<path d="${path(pts)}" fill="none" stroke="#9A9A9A" stroke-width="1.5" stroke-dasharray="5 4"/>`; });
   ca.forEach((pts, i) => { g += `<path d="${path(pts)}" fill="none" stroke="${elec ? '#C8502A' : GEAR_COL[i]}" stroke-width="2.4" stroke-linejoin="round"/>`; });
   ca.forEach((pts, i) => {
     const pk = pts.reduce((m, p) => (p[1] > m[1] ? p : m), pts[0]);
@@ -1156,7 +1156,7 @@ function drawChart(a, s) {
   $('bb-chart-s').textContent = elec
     ? 'Torque at the rear wheel: flat while the motor is torque-limited, then falling as it reaches its power limit. Where it meets the grey resistance line, the bike cannot go faster.'
     : 'Torque at the rear wheel in each gear (numbered). Where the top-gear curve meets the grey resistance line, or the curve ends at the redline, is the top speed.';
-  $('bb-legend').innerHTML = `<span><i style="border-color:#C8502A"></i>${elec ? 'Wheel torque' : 'Wheel torque per gear'}</span><span><i style="border-color:#9A988F"></i>Rolling and air resistance</span>${cfg.compare ? '<span><i style="border-color:#9A988F;border-top-style:dashed"></i>Stock gearing and wheels</span>' : ''}`;
+  $('bb-legend').innerHTML = `<span><i style="border-color:#C8502A"></i>${elec ? 'Wheel torque' : 'Wheel torque per gear'}</span><span><i style="border-color:#9A9A9A"></i>Rolling and air resistance</span>${cfg.compare ? '<span><i style="border-color:#9A9A9A;border-top-style:dashed"></i>Stock gearing and wheels</span>' : ''}`;
 }
 
 /* --------------------------------------------------------------------------
@@ -1185,7 +1185,7 @@ function debugState() {
     realVisible: meshes.filter((m) => m.material === m.userData.real && m.visible).length,
     renders: () => renderer.info.render, memory: () => ({ ...renderer.info.memory }),
     homeOk: () => { const bad = meshes.filter((m) => m.userData.anim || !m.visible || (!m.userData.xf && !m.matrix.equals(m.userData.home))).map((m) => m.name); return bad.length ? bad : true; },
-    cfg: () => ({ ...cfg }), renderMs: () => lastRenderMs, gl: { renderer, scene, camera, key }, analyse: () => analyse(cfg),
+    idle: () => raf === 0 && !anims.length, cfg: () => ({ ...cfg }), renderMs: () => lastRenderMs, gl: { renderer, scene, camera, key }, analyse: () => analyse(cfg),
   };
 }
 

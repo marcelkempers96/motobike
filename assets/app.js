@@ -1351,7 +1351,20 @@ Object.defineProperty(COMPONENT_VIEWS, 'starter', { get: () => (S.mode === 'elec
    rpm, road speed, throttle, brakes, clutch and gear: it drives the 3D wheels,
    the close-ups and the dyno, in all three modes.
    ========================================================================== */
-const COCKPIT_KEYS = new Set(['k', 'x', 's', 'c', 't', 'f', 'r', 'h', 'v', 'b', 'q', 'e', 'ArrowUp', 'ArrowDown']);
+const COCKPIT_KEYS = new Set(['k', 'x', 's', 'c', 't', 'f', 'r', 'h', 'v', 'b', 'q', 'e', 'm', 'ArrowUp', 'ArrowDown']);
+/* Browsers only allow sound after a user gesture on this page, so the page makes the
+   audio context on the first click or key and hands it to the cockpit. */
+let mzAudio = null;
+function unlockCockpitAudio() {
+  const f = document.querySelector('#mz-cockpit');
+  if (!f) return;
+  try {
+    if (!mzAudio) mzAudio = new (window.AudioContext || window.webkitAudioContext)();
+    if (mzAudio.state === 'suspended') mzAudio.resume();
+    if (f.contentWindow && f.contentWindow.__moto && f.contentWindow.__moto.setAudio) f.contentWindow.__moto.setAudio(mzAudio);
+  } catch (e) { /* no audio */ }
+}
+['pointerdown', 'keydown'].forEach((ev) => document.addEventListener(ev, unlockCockpitAudio, { capture: true }));
 const heldKeys = new Set();   // cockpit keys currently held (from this page or from inside the cockpit)
 const cockpitSrc = () => `assets/interactive/controls.html?embed=1${S.mode === 'elec' ? '&mode=elec' : ''}`;
 
@@ -1380,8 +1393,8 @@ function rideHowtoHTML() {
   const elec = S.mode === 'elec';
   const steps = elec ? rideStepsElec() : rideStepsICE();
   const keys = elec
-    ? [['k', 'Key'], ['x', 'Stop switch'], ['t', 'Throttle (hold)'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam']]
-    : [['k', 'Key'], ['x', 'Stop switch'], ['s', 'Starter (hold)'], ['c', 'Clutch (hold)'], ['t', 'Throttle (hold)'], ['ArrowDown', 'Shift down'], ['ArrowUp', 'Shift up'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['v', 'Choke']];
+    ? [['k', 'Key'], ['x', 'Stop switch'], ['t', 'Throttle (hold)'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['m', 'Sound on/off']]
+    : [['k', 'Key'], ['x', 'Stop switch'], ['s', 'Starter (hold)'], ['c', 'Clutch (hold)'], ['t', 'Throttle (hold)'], ['ArrowDown', 'Shift down'], ['ArrowUp', 'Shift up'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['v', 'Choke'], ['m', 'Sound on/off']];
   return `<div class="mz-howto" aria-label="How to ride">
     <div class="mz-howto-head"><span class="ute-label">How to ride</span><span class="mz-howto-note">Keys work anywhere on this page: no need to click into the cockpit. Hold several at once${elec ? '' : ', for example <b>C + T</b>'}.</span></div>
     <ol class="mz-steps">${steps.map(([k, t], i) => `<li data-step="${i}"><b>${k}</b><span>${t}</span></li>`).join('')}</ol>

@@ -8,18 +8,19 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css">
   <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
   <style>
     :root {
-      --bb-font: "Figtree", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      --bb-font: var(--sans, "Barlow", system-ui, -apple-system, "Segoe UI", Arial, sans-serif);
+      --bb-num: var(--mono, "Barlow Semi Condensed", "Barlow", system-ui, sans-serif);
       --bb-ink: #111111;
-      --bb-soft: #4A4A46;
-      --bb-mute: #76746E;
-      --bb-rule: #E3E1DC;
-      --bb-rule-2: #CFCCC4;
-      --bb-tint: #F7F6F3;
+      --bb-soft: #444444;
+      --bb-mute: #6B6B6B;
+      --bb-rule: #E5E5E5;
+      --bb-rule-2: #D4D4D4;
+      --bb-tint: #F5F5F5;
       --bb-acc: #C8502A;
       --bb-acc-soft: #FBEDE7;
       --bb-ok: #2E7D4F;
@@ -37,7 +38,7 @@
     .bb { max-width: 1480px; width: 100%; margin: 0 auto; padding: 22px 24px 40px; }
     .bb-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px 28px; flex-wrap: wrap; margin-bottom: 18px; }
     .bb-head h1 { font: 700 32px/1.1 var(--bb-font); letter-spacing: -0.02em; margin: 2px 0 8px; }
-    .bb-eyebrow { font: 600 12.5px/1 var(--bb-font); color: var(--bb-acc); margin: 0; }
+    .bb-eyebrow { font: 600 13px/1 var(--bb-num); letter-spacing: .04em; text-transform: uppercase; color: var(--bb-acc); margin: 0; }
     .bb-intro { font-size: 15.5px; line-height: 1.5; color: var(--bb-soft); max-width: 720px; margin: 0 0 4px; }
     .bb-kids { font-size: 13.5px; color: var(--bb-mute); margin: 0; }
     .bb-kids a { color: var(--bb-acc); }
@@ -118,7 +119,7 @@
 
     .bb-ctl { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; margin: 10px 0 2px; }
     .bb-ctl label { font-size: 13.5px; font-weight: 500; color: var(--bb-ink); }
-    .bb-ctl output { font: 600 13.5px/1 var(--bb-font); font-variant-numeric: tabular-nums; color: var(--bb-ink); }
+    .bb-ctl output { font: 600 14px/1 var(--bb-num); font-variant-numeric: tabular-nums; color: var(--bb-ink); }
     .bb-ctl output small { color: var(--bb-mute); font-weight: 400; }
     .bb-ctl input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: var(--bb-acc); margin: 6px 0 0; height: 24px; }
     .bb-sw { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 10px; }
@@ -138,7 +139,7 @@
     .bb-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; border-top: 1px solid var(--bb-rule); border-left: 1px solid var(--bb-rule); }
     .bb-tile { padding: 12px 14px; border-right: 1px solid var(--bb-rule); border-bottom: 1px solid var(--bb-rule); min-width: 0; }
     .bb-tile .l { font-size: 12.5px; color: var(--bb-mute); margin-bottom: 4px; }
-    .bb-tile .v { font: 700 21px/1.15 var(--bb-font); color: var(--bb-ink); font-variant-numeric: tabular-nums; }
+    .bb-tile .v { font: 600 22px/1.15 var(--bb-num); color: var(--bb-ink); font-variant-numeric: tabular-nums; }
     .bb-tile .v small { font-size: 13px; font-weight: 500; color: var(--bb-mute); }
     .bb-tile .d { font-size: 12px; font-weight: 600; margin-top: 2px; font-variant-numeric: tabular-nums; min-height: 15px; }
     .bb-tile .d.up { color: var(--bb-ok); } .bb-tile .d.down { color: #B03A1A; } .bb-tile .d.same { color: var(--bb-mute); font-weight: 500; }
@@ -179,7 +180,7 @@
 <div class="ute-page">
   <header class="ute-top">
     <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
-    <nav class="ute-nav" aria-label="Sections"><a href="../">Lab</a><a href="../cockpit/">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-tool" href="../build/" aria-current="page">Bike builder</a><a class="ute-nav-kids" href="../kids/">Kids: Build a bike</a></nav>
+    <nav class="ute-nav" aria-label="Sections"><a href="../">Overview</a><a href="../cockpit/">Cockpit</a><a href="../learn/">Learn</a><a href="../wiring/">Wiring</a><a href="../models/">Models</a><a href="../quiz/">Quiz</a><a href="../sources/">Sources</a><a class="ute-nav-tool" href="../build/" aria-current="page">Bike builder</a><a class="ute-nav-kids" href="../kids/">Kids: Build a bike</a></nav>
   </header>
   <main class="bb" id="bb">
     <section class="bb-head">
