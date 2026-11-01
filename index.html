@@ -88,7 +88,18 @@
       .hm-hero-in { padding: 64px 16px 44px; }
       .hm-wrap { padding: 0 16px; }
     }
-    @media (max-width: 520px) { .hm-modules, .hm-links { grid-template-columns: 1fr; } }
+    @media (max-width: 520px) { .hm-modules { grid-template-columns: 1fr 1fr; gap: 10px; } .hm-mod img { aspect-ratio: 1; } .hm-mod div { padding: 10px 12px 12px; } .hm-mod h3 { font-size: 15px; } .hm-mod p { font-size: 13px; } }
+      @media (max-width: 860px) {
+      .hm-feature ul, .hm-learnrow, .hm-stats span:nth-child(n+4), .hm-gallery figcaption { display: none; }
+      .hm-quick a:nth-child(n+4) { display: none; }
+      .hm-hero h1 { font-size: 32px; }
+      .hm-feature h3 { font-size: 22px; }
+      .hm-links a span { display: none; }
+      .hm-links { grid-template-columns: 1fr 1fr; }
+      .hm-links a { padding: 14px; }
+      .hm-links a b { font-size: 16px; margin: 0; }
+      .hm-soon-imgs { grid-template-columns: repeat(4, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -104,7 +115,7 @@
       <div class="hm-hero-in">
         <span class="hm-kicker">Open course · free · no login</span>
         <h1>Learn how motorcycles work, and how to work on them.</h1>
-        <p class="hm-mission">Moto Zero makes the machine visible. Every part in 3D, a cockpit you can ride, a bike you can build and a wiring loom you can trace, joined to a five-module course that takes you from the first combustion stroke to the battery of an electric bike. Built for mechanics, trainees, students and riders, wherever they work.</p>
+        <p class="hm-mission">See every part in 3D, ride it, build it and trace its wiring. A free course for mechanics, students and riders.</p>
         <div class="hm-quick">
           <a class="is-main" href="overview/">Explore the motorcycle in 3D →</a>
           <a href="learn/">Start the course</a>
@@ -120,14 +131,14 @@
       <div class="hm-wrap">
         <span class="hm-label">Start here</span>
         <h2>Three ways into the machine</h2>
-        <p class="hm-lead">Pick a way in. Each one links to the others, so you can go from a part to its chapter, from a chapter to a working animation, and from there to a quiz.</p>
+        <p class="hm-lead">Pick one. They all link together.</p>
 
         <div class="hm-feature">
           <a class="hm-feature-img" href="overview/"><img src="assets/renders/bike_classic_4t_threeq.webp" alt="Classic four-stroke motorcycle, 3D render" loading="lazy"></a>
           <div>
             <span class="hm-num">01</span>
             <h3>How a motorcycle works</h3>
-            <p>Turn a four-stroke, a two-stroke or an electric bike in 3D. Tap any part to see it on its own, look inside it and watch it work.</p>
+            <p>Tap any part of a 3D bike to look inside and watch it work.</p>
             <ul><li>Highlight a whole system: powertrain, chassis, electrics</li><li>See hidden parts through a see-through shell</li><li>Run the engine, brake, chain, carburettor, ignition and motor, with live graphs</li></ul>
             <a class="ute-btn is-primary" href="overview/">Open the Overview →</a>
           </div>
@@ -138,7 +149,7 @@
           <div>
             <span class="hm-num">02</span>
             <h3>Build a bike from the ground up</h3>
-            <p>Start with the frame and fit every part in workshop order, then change the specification and see what it does.</p>
+            <p>Fit every part in workshop order, then change the specification.</p>
             <ul><li>Wheel size, sprockets and engine size</li><li>The effect on gearing, top speed, acceleration and ride height</li><li>Speedometer error, power to weight and more</li></ul>
             <a class="ute-btn is-primary" href="build/">Open the Bike builder →</a>
           </div>
@@ -149,7 +160,7 @@
           <div>
             <span class="hm-num">03</span>
             <h3>Learn all about wiring</h3>
-            <p>The wiring plates from Module 3, made live. Trace each branch of the harness, work the switches and watch where current flows.</p>
+            <p>Trace the harness, work the switches and find faults.</p>
             <ul><li>Main harness, starting, charging and ignition circuits</li><li>Trigger real faults and find which wire goes dead</li><li>Change the circuit and see current, voltage drop and fuses respond</li></ul>
             <a class="ute-btn is-primary" href="wiring/">Open the Wiring Lab →</a>
           </div>
@@ -160,7 +171,7 @@
     <section class="hm-section">
       <div class="hm-wrap">
         <span class="hm-label">In the workshop and on the road</span>
-        <h2>Made for the people who keep machines running</h2>
+        <h2>For the people who keep machines running</h2>
         <div class="hm-gallery">
           <figure><img src="assets/photos/kenya-crew.jpg" alt="Riders and mechanics on open grassland in Kenya" loading="lazy"><figcaption>Riders and mechanics, Kenya</figcaption></figure>
           <figure><img src="assets/photos/engine-closeup.jpg" alt="Close-up of an air-cooled V-twin engine" loading="lazy"><figcaption>Air-cooled V-twin</figcaption></figure>
@@ -175,13 +186,13 @@
       <div class="hm-wrap">
         <span class="hm-label">The course</span>
         <h2>What you learn</h2>
-        <p class="hm-lead">Five modules, written to explain the machine well enough to describe it, specify it and repair it. Every chapter has learning goals, worked numbers from a real 125 cc machine, workshop job sheets and questions with answers.</p>
+        <p class="hm-lead">Five modules, from how it works to how to fix it.</p>
         <div class="hm-modules">
-          <a class="hm-mod" href="learn/#foundations"><img src="assets/photos/honda-air-cooled.jpg" alt="" loading="lazy"><div><b>01</b><h3>Foundations</h3><p>History, types, anatomy and controls, the physics of riding, and safe workshop practice.</p></div></a>
-          <a class="hm-mod" href="learn/#engine"><img src="assets/photos/triumph-engine.jpg" alt="" loading="lazy"><div><b>02</b><h3>The engine</h3><p>Four-stroke and two-stroke cycles, the top and bottom end, lubrication, cooling and diagnosis.</p></div></a>
-          <a class="hm-mod" href="learn/#fuel-ignition"><img src="assets/photos/vintage-timing-cover.jpg" alt="" loading="lazy"><div><b>03</b><h3>Fuel, ignition, electrics</h3><p>Mixture, carburettors and injection, ignition, charging, lighting and electrical fault-finding.</p></div></a>
-          <a class="hm-mod" href="learn/#drivetrain-chassis"><img src="assets/photos/honda-cb650r-engine.jpg" alt="" loading="lazy"><div><b>04</b><h3>Drivetrain and chassis</h3><p>Clutch, gearbox, final drive, geometry, suspension, wheels, tyres, brakes and servicing.</p></div></a>
-          <a class="hm-mod" href="learn/#electric"><img src="assets/photos/hybrid-power-unit-portrait.jpg" alt="" loading="lazy"><div><b>05</b><h3>Electric motorcycles</h3><p>Motors, controllers, regeneration, cells, packs and the BMS, charging and high-voltage safety.</p></div></a>
+          <a class="hm-mod" href="learn/#foundations"><img src="assets/photos/honda-air-cooled.jpg" alt="" loading="lazy"><div><b>01</b><h3>Foundations</h3><p>Anatomy, physics, workshop.</p></div></a>
+          <a class="hm-mod" href="learn/#engine"><img src="assets/photos/triumph-engine.jpg" alt="" loading="lazy"><div><b>02</b><h3>The engine</h3><p>Four-stroke and two-stroke.</p></div></a>
+          <a class="hm-mod" href="learn/#fuel-ignition"><img src="assets/photos/vintage-timing-cover.jpg" alt="" loading="lazy"><div><b>03</b><h3>Fuel, ignition, electrics</h3><p>Mixture, ignition, wiring.</p></div></a>
+          <a class="hm-mod" href="learn/#drivetrain-chassis"><img src="assets/photos/honda-cb650r-engine.jpg" alt="" loading="lazy"><div><b>04</b><h3>Drivetrain and chassis</h3><p>Clutch to brakes.</p></div></a>
+          <a class="hm-mod" href="learn/#electric"><img src="assets/photos/hybrid-power-unit-portrait.jpg" alt="" loading="lazy"><div><b>05</b><h3>Electric motorcycles</h3><p>Motors, batteries, charging.</p></div></a>
         </div>
         <div class="hm-learnrow">
           <span><i></i>Interactive figures in every module</span><span><i></i>Working animations with graphs</span><span><i></i>Easy, mixed and hard quizzes</span><span><i></i>Progress saved in your browser</span><span><i></i>Free PDF modules to download</span>
@@ -196,9 +207,9 @@
           <div>
             <span class="hm-tag">Coming soon</span><br>
             <span class="hm-label">Electrical components training</span>
-            <h2>Motors, controllers and battery systems, for working mechanics</h2>
-            <p>Many skilled mechanics learned their trade on engines and gearboxes, by hand. Electric motorcycles bring motors, controllers, battery packs and electronics that few of them have had the chance to train on. We are building practical training modules on these components for informal mechanics, the fundis who keep the fleets moving.</p>
-            <p>In the meantime, start with the electrics you can already explore.</p>
+            <h2>Electric motorcycle training for mechanics</h2>
+            <p>Practical modules on motors, controllers and battery packs, for the fundis who keep the fleets moving.</p>
+            <p>Until then, try the Wiring Lab.</p>
             <div class="ute-btnrow"><a class="ute-btn" href="wiring/">Open the Wiring Lab →</a><a class="ute-btn mz-btn-light" href="learn/#electric" style="background:transparent;color:#FFF;border-color:#FFF">Module 05: Electric motorcycles</a><a class="ute-btn mz-btn-light" href="about/#fundi" style="background:transparent;color:#FFF;border-color:#FFF">About the programme</a></div>
           </div>
           <div class="hm-soon-imgs">
@@ -214,16 +225,16 @@
     <section class="hm-section">
       <div class="hm-wrap">
         <span class="hm-label">More</span>
-        <h2>Everything else on the site</h2>
+        <h2>Everything else</h2>
         <div class="hm-links">
-          <a href="about/"><b>About Moto Zero</b><span>Why it exists, who made it and the story behind it</span></a>
-          <a href="downloads/"><b>Downloads</b><span>PDF modules, 3D models and technical plates</span></a>
-          <a href="models/"><b>3D model library</b><span>All 56 models to rotate, inspect and download</span></a>
-          <a href="sources/"><b>Sources and credits</b><span>Bibliography, licences and where the material comes from</span></a>
-          <a href="progress/"><b>My progress</b><span>Chapters done and quiz scores, saved in this browser</span></a>
+          <a href="about/"><b>About Moto Zero</b><span>The story behind it</span></a>
+          <a href="downloads/"><b>Downloads</b><span>PDFs, models, diagrams</span></a>
+          <a href="models/"><b>3D model library</b><span>56 models to explore</span></a>
+          <a href="sources/"><b>Sources and credits</b><span>Bibliography and licences</span></a>
+          <a href="progress/"><b>My progress</b><span>Saved in this browser</span></a>
           <a href="updates/"><b>Updates</b><span>What changed and when</span></a>
-          <a href="contact/"><b>Contact</b><span>Collaborate, ask for a model or send a correction</span></a>
-          <a href="kids/"><b>Kids: build a bike</b><span>A simple drag-and-drop game for younger learners</span></a>
+          <a href="contact/"><b>Contact</b><span>Collaborate or ask</span></a>
+          <a href="kids/"><b>Kids: build a bike</b><span>For younger learners</span></a>
         </div>
       </div>
     </section>
