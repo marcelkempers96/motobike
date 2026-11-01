@@ -20,7 +20,14 @@ assets/
   styles.css          design tokens + all components
   core.js             SVG helpers, physics, engine cross-section (shared)
   app.js              the Lab
-  content/            editable data: parts, lessons, questions
+  figures.js          14 interactive teaching figures (Learn)
+  learn.js / quiz.js / quizkit.js
+  content/
+    parts.js          Lab part names, categories, copy
+    modules/m1–m5.js  lessons per course module (edit text here)
+    questions/m1–m5.js  148 multiple-choice questions
+  pdf/                the five course modules (downloadable from Learn)
+  brand/              Moto Zero logo files
   models/manifest.json  map part keys → render images
 inbox/                drop zone for raw uploads (not deployed)
 moto-spec/            product spec, design system, behaviour spec
@@ -37,3 +44,9 @@ Then open http://localhost:8000.
 ## Deploy (Vercel)
 
 Import the repo. Framework preset **Other**, no build command, output directory = root.
+
+## Editing content
+
+Lessons and questions are plain data files in `assets/content/` — see the block types at the
+top of any `modules/mN.js`. Illustration blocks point at `assets/illustrations/<category>/<file>.svg`
+from the asset package; they stay hidden until those files are added.
