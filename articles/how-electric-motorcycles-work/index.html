@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How electric motorcycles work: motor, battery, BMS</title>
+  <meta name="description" content="How an electric motorcycle works: battery pack and BMS, motor controller, PMSM and hub motors, regenerative braking, DC-DC converter and charging.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/articles/how-electric-motorcycles-work/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Moto Zero">
+  <meta property="og:title" content="How electric motorcycles work: motor, battery, BMS">
+  <meta property="og:description" content="How an electric motorcycle works: battery pack and BMS, motor controller, PMSM and hub motors, regenerative braking, DC-DC converter and charging.">
+  <meta property="og:url" content="https://motobike-five.vercel.app/articles/how-electric-motorcycles-work/">
+  <meta property="og:image" content="https://motobike-five.vercel.app/assets/renders/bike_electric_side.webp">
+  <meta property="og:image:alt" content="Rendered electric scrambler motorcycle in side view with battery pack in the frame, mid-mounted motor and chain final drive">
+  <meta property="og:locale" content="en_GB">
+  <meta property="article:published_time" content="2026-11-02">
+  <meta property="article:author" content="Transitions Lab">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How electric motorcycles work: motor, battery, BMS">
+  <meta name="twitter:description" content="How an electric motorcycle works: battery pack and BMS, motor controller, PMSM and hub motors, regenerative braking, DC-DC converter and charging.">
+  <meta name="twitter:image" content="https://motobike-five.vercel.app/assets/renders/bike_electric_side.webp">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css?v=20261101c">
+  <link rel="stylesheet" href="../../assets/articles.css?v=20261101c">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "How electric motorcycles work",
+ "description": "How an electric motorcycle works: battery pack and BMS, motor controller, PMSM and hub motors, regenerative braking, DC-DC converter and charging.",
+ "image": [
+  "https://motobike-five.vercel.app/assets/renders/bike_electric_side.webp"
+ ],
+ "author": {
+  "@type": "Organization",
+  "name": "Transitions Lab",
+  "url": "https://www.transitionslab.org"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Transitions Lab",
+  "url": "https://www.transitionslab.org",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://motobike-five.vercel.app/assets/brand-mark.svg"
+  }
+ },
+ "datePublished": "2026-11-02",
+ "dateModified": "2026-11-02",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://motobike-five.vercel.app/articles/how-electric-motorcycles-work/"
+ },
+ "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "inLanguage": "en-GB",
+ "wordCount": 1281,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Moto Zero",
+  "url": "https://motobike-five.vercel.app/"
+ }
+}
+</script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Do electric motorcycles have gears?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Almost all use a single fixed ratio with no gearbox or clutch. The motor gives full torque from standstill and works across a wide speed range, so gears are not needed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does a BMS do on an electric motorcycle?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It measures every cell group's voltage, the temperatures and the current, estimates state of charge, balances the cells and cuts the current if any limit is exceeded. It also tells the controller and charger how much current they may use."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How efficient is an electric motorcycle?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 80 per cent of the battery's energy reaches the rear wheel. A small petrol engine in town riding converts only about 12 to 20 per cent of its fuel energy into work."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between a hub motor and a mid-drive motor?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A hub motor is built into the wheel and needs no chain or belt. A mid-drive motor sits in the frame and drives the wheel through a chain, belt or gears, keeping weight off the wheel."
+   }
+  }
+ ]
+}
+</script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://motobike-five.vercel.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Articles",
+   "item": "https://motobike-five.vercel.app/articles/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How electric motorcycles work",
+   "item": "https://motobike-five.vercel.app/articles/how-electric-motorcycles-work/"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <main class="mz-art-wrap">
+    <nav class="mz-crumbs" aria-label="Breadcrumb"><ol><li><a href="../../">Home</a></li><li><a href="../">Articles</a></li><li aria-current="page">How electric motorcycles work</li></ol></nav>
+    <header class="mz-art-head">
+      <span class="ute-label">Electric</span>
+      <h1>How electric motorcycles work</h1>
+      <p class="mz-art-lead">An electric motorcycle replaces the tank, engine, clutch and gearbox with a battery, a controller and a motor. Each part is simple to describe, and together they turn about four-fifths of the battery&#x27;s energy into motion at the wheel.</p>
+      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="2026-11-02">2 November 2026</time></span><span>6 min read</span></div>
+    </header>
+    <article class="mz-art">
+      <figure class="is-hero">
+        <img src="../../assets/renders/bike_electric_side.webp" alt="Rendered electric scrambler motorcycle in side view with battery pack in the frame, mid-mounted motor and chain final drive" width="1600" height="1200" fetchpriority="high">
+        <figcaption>An electric scrambler: the battery sits where the engine would be, with the motor and controller below it. Render: Transitions Lab, CC BY-SA 4.0.</figcaption>
+      </figure>
+
+<h2 id="energy-chain">The energy chain</h2>
+<p>A petrol motorcycle turns chemical energy into heat and then into work in the cylinder, and a small air-cooled engine manages only 12 to 20 per cent of that in town riding. An electric motorcycle skips the heat engine. The battery delivers electricity directly, and each step loses only a few per cent: roughly 96 per cent in the battery, 97 per cent in the controller, around 90 per cent in the motor averaged over a real ride, and 96 per cent in the chain or belt. Multiplied together, about 80 per cent of the battery's energy reaches the rear wheel.</p>
+<p>In practice, a 125-equivalent electric commuter uses about 2 to 4 kWh per 100 km at the battery terminals, depending on speed, load and hills. A 125 cc petrol commuter burning 2.5 litres per 100 km uses about 22 kWh of fuel energy for the same distance.</p>
+<figure>
+  <img src="../../assets/illustrations/electrical/F25.png" alt="Block diagram of an electric motorcycle powertrain: battery pack with BMS, main fuse, pre-charge circuit and contactor, motor controller, motor with position sensor, vehicle control unit, DC-DC converter, charge port, CAN bus, throttle and brake inputs and regenerative path" width="2400" height="1500" loading="lazy">
+  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Moto Zero Module 05.</figcaption>
+</figure>
+
+<h2 id="battery">The battery pack</h2>
+<p>The <a href="../../overview/?part=battery">traction battery</a> is built from lithium-ion cells joined in series to raise the voltage and in parallel to raise the capacity. A pack described as 20S10P has 20 groups in series, each made of 10 cells in parallel. With common 21700 cells of 3.6 V and 5.0 Ah, that gives 72 V nominal, 50 Ah and 3.6 kWh from 200 cells weighing about 14 kg, or about 20 kg once holders, busbars, electronics and the case are added. At 3.6 kWh per 100 km that is roughly 100 km of range, which is the scale of a 125-equivalent commuter.</p>
+<p>The cell chemistry matters. Nickel manganese cobalt (NMC) cells store the most energy for their weight. Lithium iron phosphate (LFP) cells are heavier for the same range but last many more charge cycles, contain no cobalt or nickel and are more stable if damaged, so they are spreading in commuter and battery-swap fleets.</p>
+<figure>
+  <img src="../../assets/illustrations/electrical/F26.png" alt="Technical plate of battery pack construction: cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and connector, with an inset section through one cell" width="2400" height="1500" loading="lazy">
+  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Moto Zero Module 05.</figcaption>
+</figure>
+
+<h2 id="bms">The battery management system</h2>
+<p>Every lithium pack has a <strong>battery management system (BMS)</strong>. It measures the voltage of every series group, several temperatures and the pack current. From these it estimates the state of charge shown on the dashboard and the state of health of the pack, it balances cells that have drifted apart, and it protects the pack by cutting the current if any cell goes too high, too low, too hot or too cold. It also tells the controller and charger how much current they may draw or deliver, which is why an electric motorcycle gives less power when the battery is cold, hot or nearly empty.</p>
+
+<h2 id="controller">The motor controller</h2>
+<p>The battery supplies direct current, but the motor needs three-phase alternating current whose frequency follows the wheel speed. The <a href="../../overview/?part=controller">motor controller</a>, also called the inverter, makes that current with six fast power switches: MOSFETs on low-voltage machines, IGBTs or silicon-carbide devices on high-voltage ones. It reads the throttle, the rotor position and the phase currents, and it regulates the motor's torque. Throttle maps and ride modes are simply different instructions to this unit.</p>
+<p>Before the main contactor connects the battery, a <strong>pre-charge circuit</strong> charges the controller's capacitors gently through a resistor. Without it, closing the contactor onto empty capacitors would cause an inrush of thousands of amps that could weld the contactor tips.</p>
+
+<h2 id="motor">The motor</h2>
+<p>The traction <a href="../../overview/?part=motor">motor</a> is almost always a brushless permanent-magnet machine. The copper windings are on the stationary stator, where they can be cooled, and the magnets are on the rotor. Two layouts dominate.</p>
+<ul>
+  <li><strong>Hub motor.</strong> The motor is built into the rear wheel. There is no chain, belt or gearbox to maintain. Hub motors suit electric mopeds and e-bodas such as the machines in the <a href="../../types/#electric-scooter">electric moped and e-boda</a> type.</li>
+  <li><strong>Mid-drive motor.</strong> The motor sits in the frame and drives the wheel through a chain, belt or gear reduction. It keeps weight off the wheel, which helps the suspension, and lets the motor spin faster and smaller. Most full-size <a href="../../types/#electric-motorcycle">electric motorcycles</a> use this layout.</li>
+</ul>
+<figure>
+  <img src="../../assets/renders/motor.webp" alt="Rendered permanent-magnet synchronous motor cut away to show the finned housing, stator teeth with copper windings, rotor magnets, bearings and output shaft" width="1000" height="800" loading="lazy">
+  <figcaption>A permanent-magnet motor cut away: stator with copper windings, rotor with magnets, bearings and shaft. Render: Transitions Lab, CC BY-SA 4.0.</figcaption>
+</figure>
+<p>An electric motor produces full torque from zero speed and keeps a useful spread of torque across a wide speed range, so a single fixed ratio is enough. That is why an electric motorcycle has no clutch and no gearbox.</p>
+
+<h2 id="regen">Regenerative braking</h2>
+<p>When the rider closes the throttle or touches the brake, the controller can reverse the motor's torque so that it works as a generator, sending energy back into the battery. A 250 kg machine and rider at 50 km/h carry about 6.7 Wh of kinetic energy, and perhaps 4 Wh of it comes back after losses in the tyre, drivetrain, motor, controller and battery. In stop-start city riding that adds up to a useful saving and less brake pad wear, but the friction brakes still do the hard stops.</p>
+
+<h2 id="low-voltage">The 12 V system and charging</h2>
+<p>Lights, horn, indicators and the dashboard still run at 12 V, as on a petrol motorcycle. A <strong>DC-DC converter</strong> steps the traction voltage down to about 13.5 to 14.4 V. Charging happens through an on-board charger with a mains inlet, an off-board charger brick, a DC fast-charge port on larger machines, or by swapping the battery. Battery swapping, used by Gogoro in Taiwan and by several operators in East Africa, replaces hours of charging with a stop of a couple of minutes, and separates the cost of the battery from the cost of the motorcycle.</p>
+<div class="mz-art-note"><p>Packs above 60 V DC count as high voltage, and a so-called 72 V pack reaches 84 V when full. Work on traction circuits needs safe isolation, insulated tools and training. Orange cables mark the high-voltage circuit on electric motorcycles.</p></div>
+
+<h2 id="maintenance">What still needs maintenance</h2>
+<p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 05 of the course starts with <a href="../../learn/#m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="../../learn/#m5-batteries">batteries and the BMS</a>.</p>
+
+      <aside class="mz-art-cta" aria-labelledby="cta-h">
+        <span class="ute-label">Try it</span>
+        <h2 id="cta-h">Take an electric motorcycle apart in 3D</h2>
+        <p>The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.</p>
+        <div class="mz-art-cta-links">
+      <a class="ute-linkbtn is-warm" href="../../overview/?part=battery">Explore the battery</a>
+      <a class="ute-linkbtn" href="../../overview/?part=controller">See the controller</a>
+      <a class="ute-linkbtn" href="../../build/">Open the Bike builder</a>
+      <a class="ute-linkbtn" href="../../learn/#m5-architecture">Read Module 05</a>
+        </div>
+      </aside>
+
+      <section class="mz-art-faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Frequently asked questions</h2>
+    <div class="q">
+      <h3>Do electric motorcycles have gears?</h3>
+      <p>Almost all use a single fixed ratio with no gearbox or clutch. The motor gives full torque from standstill and works across a wide speed range, so gears are not needed.</p>
+    </div>
+    <div class="q">
+      <h3>What does a BMS do on an electric motorcycle?</h3>
+      <p>It measures every cell group&#x27;s voltage, the temperatures and the current, estimates state of charge, balances the cells and cuts the current if any limit is exceeded. It also tells the controller and charger how much current they may use.</p>
+    </div>
+    <div class="q">
+      <h3>How efficient is an electric motorcycle?</h3>
+      <p>About 80 per cent of the battery&#x27;s energy reaches the rear wheel. A small petrol engine in town riding converts only about 12 to 20 per cent of its fuel energy into work.</p>
+    </div>
+    <div class="q">
+      <h3>What is the difference between a hub motor and a mid-drive motor?</h3>
+      <p>A hub motor is built into the wheel and needs no chain or belt. A mid-drive motor sits in the frame and drives the wheel through a chain, belt or gears, keeping weight off the wheel.</p>
+    </div>
+      </section>
+
+      <nav class="mz-art-related" aria-labelledby="rel-h">
+        <h2 id="rel-h">Related articles</h2>
+        <ul>
+      <li><a href="../motorcycle-wiring-basics/">Motorcycle wiring basics<span>Harness, earth return, fuses, colour codes, charging and starting circuits, and a method for tracing faults.</span></a></li>
+      <li><a href="../types-of-motorcycles/">Types of motorcycles<span>Sixteen types in five families, from the 1885 Reitwagen to the electric boda, and the parts that define each.</span></a></li>
+      <li><a href="../boda-boda-maintenance-checklist/">Boda boda maintenance checklist<span>Daily, weekly and monthly checks for motorcycle taxi riders: tyres, brakes, chain, oil, lights and electrics.</span></a></li>
+        </ul>
+      </nav>
+
+      <p class="mz-art-licence">Written by Transitions Lab for the Moto Zero open motorcycle course. Text and illustrations are licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>. Figures and values come from the course modules; see <a href="../../sources/">sources and credits</a>.</p>
+    </article>
+  </main>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../assets/site.js"></script>
+</body>
+</html>

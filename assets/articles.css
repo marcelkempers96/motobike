@@ -94,3 +94,5 @@
   .mz-arts-head { padding-top: 32px; }
   .mz-arts { grid-template-columns: minmax(0, 1fr); }
 }
+
+.mz-art figure.is-portrait img { max-width: 420px; }
