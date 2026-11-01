@@ -19,6 +19,7 @@ export const NAV = [
     ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
     ['history/', 'History', 'From steam velocipede to battery swapping'],
     ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
+    ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
     ['progress/', 'My progress', 'Saved in this browser, no login'],
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [
