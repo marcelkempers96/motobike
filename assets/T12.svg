@@ -1,0 +1,560 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="T12" viewBox="0 0 1600 900">
+<title>T12 Electric moped, left side elevation with battery bay cut away</title>
+<desc>Battery-electric moped: rear hub motor with no chain or belt, swappable lithium battery under the seat shown cut away with its handle, motor controller and DC-DC converter under the floor, charge socket, LED headlight with ring DRL, digital display, front disc and rear drum with regenerative braking, step-through floor, twin rear shocks, under-seat storage and 14 in cast wheels.</desc>
+<style>
+#T12 path,#T12 line,#T12 circle,#T12 rect,#T12 ellipse,#T12 polyline,#T12 polygon{stroke-linecap:round;stroke-linejoin:round}
+#T12 .o{stroke:#1E2B5E;stroke-width:2.2}
+#T12 .i{stroke:#1E2B5E;stroke-width:1.3}
+#T12 .f{stroke:#1E2B5E;stroke-width:0.8}
+#T12 .h{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4;fill:none}
+#T12 .c{stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4;fill:none}
+#T12 .ph{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:18 4 3 4 3 4;fill:none}
+#T12 .n{fill:none}
+#T12 .t{fill:#DCE4F2}
+#T12 .t2{fill:#B9C7E3}
+#T12 .w{fill:#FFFFFF}
+#T12 .k{fill:#1E2B5E}
+#T12 .x{fill:url(#T12-hx)}
+#T12 .xb{fill:url(#T12-hxb)}
+#T12 .xr{fill:url(#T12-hxr)}
+#T12 .fl{fill:url(#T12-fl)}
+#T12 .af{fill:#C8502A}
+#T12 .as{stroke:#C8502A}
+#T12 .ld{stroke:#1E2B5E;stroke-width:0.9;fill:none}
+#T12 .dot{fill:#1E2B5E}
+#T12 .dl{stroke:#1E2B5E;stroke-width:0.8;fill:none}
+#T12 .acc{stroke:#C8502A;stroke-width:2.6;fill:none}
+#T12 .acct{stroke:#C8502A;stroke-width:1.6;fill:none}
+#T12 text{fill:#1E2B5E}
+#T12 .l{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:17px;font-weight:600}
+#T12 .ls{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:15px;font-weight:400}
+#T12 .la{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:600;fill:#C8502A}
+#T12 .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
+#T12 .mb{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600}
+#T12 .pt{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.02em}
+#T12 .pl{font-family:'IBM Plex Serif',serif;font-style:italic;font-weight:600;font-size:22px}
+#T12 .num{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:15px;font-weight:500}
+#T12 .sw{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:700;fill:#1E2B5E}
+#T12 .lcd{font-family:'IBM Plex Mono',monospace;font-weight:600;fill:#1E2B5E}
+</style>
+<defs>
+<pattern id="T12-hx" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
+<pattern id="T12-hxb" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(-45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
+<pattern id="T12-hxr" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#DCE4F2"/><line x1="0" y1="0" x2="0" y2="8" stroke="#1E2B5E" stroke-width="0.7"/><line x1="4" y1="0" x2="4" y2="8" stroke="#1E2B5E" stroke-width="0.7" stroke-dasharray="2 2"/></pattern>
+<pattern id="T12-fl" patternUnits="userSpaceOnUse" width="10" height="8"><rect width="10" height="8" fill="#F3D9CE"/><line x1="1" y1="2" x2="5" y2="2" stroke="#C8502A" stroke-width="0.7"/><line x1="6" y1="6" x2="9" y2="6" stroke="#C8502A" stroke-width="0.7"/></pattern>
+<marker id="T12-ar" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 1.5 L10 5 L0 8.5 Z" fill="#1E2B5E"/></marker>
+<marker id="T12-aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="13" markerHeight="13" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#C8502A"/></marker>
+<marker id="T12-ai" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#1E2B5E"/></marker>
+</defs>
+<line x1="70" y1="760" x2="1560" y2="760" class="o"/>
+<g id="T12-rwheel" data-part="Rear wheel" data-category="wheels">
+<path d="M1008.28 616.08 a143.92 143.92 0 1 0 287.84 0 a143.92 143.92 0 1 0 -287.84 0 Z M1052.52 616.08 a99.68 99.68 0 1 0 199.36 0 a99.68 99.68 0 1 0 -199.36 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="1152.2" cy="616.08" r="127.11" class="n f"/>
+<circle cx="1152.2" cy="616.08" r="136.92" class="n f" stroke-dasharray="2 5"/>
+<line x1="1294.12" y1="616.08" x2="1284.94" y2="623.04" class="f"/>
+<line x1="1293.06" y1="633.38" x2="1283.1" y2="639.16" class="f"/>
+<line x1="1289.9" y1="650.41" x2="1279.31" y2="654.94" class="f"/>
+<line x1="1284.69" y1="666.94" x2="1273.63" y2="670.14" class="f"/>
+<line x1="1277.51" y1="682.71" x2="1266.13" y2="684.54" class="f"/>
+<line x1="1268.45" y1="697.48" x2="1256.94" y2="697.91" class="f"/>
+<line x1="1257.67" y1="711.04" x2="1246.19" y2="710.07" class="f"/>
+<line x1="1245.31" y1="723.19" x2="1234.03" y2="720.82" class="f"/>
+<line x1="1231.56" y1="733.74" x2="1220.66" y2="730.01" class="f"/>
+<line x1="1216.63" y1="742.53" x2="1206.26" y2="737.51" class="f"/>
+<line x1="1200.74" y1="749.44" x2="1191.06" y2="743.19" class="f"/>
+<line x1="1184.13" y1="754.36" x2="1175.28" y2="746.98" class="f"/>
+<line x1="1167.03" y1="757.22" x2="1159.16" y2="748.82" class="f"/>
+<line x1="1149.72" y1="757.98" x2="1142.93" y2="748.68" class="f"/>
+<line x1="1132.45" y1="756.62" x2="1126.84" y2="746.56" class="f"/>
+<line x1="1115.47" y1="753.16" x2="1111.13" y2="742.49" class="f"/>
+<line x1="1099.04" y1="747.67" x2="1096.03" y2="736.55" class="f"/>
+<line x1="1083.4" y1="740.21" x2="1081.76" y2="728.8" class="f"/>
+<line x1="1068.78" y1="730.9" x2="1068.55" y2="719.38" class="f"/>
+<line x1="1055.41" y1="719.87" x2="1056.59" y2="708.41" class="f"/>
+<line x1="1043.48" y1="707.3" x2="1046.05" y2="696.07" class="f"/>
+<line x1="1033.18" y1="693.38" x2="1037.09" y2="682.54" class="f"/>
+<line x1="1024.64" y1="678.29" x2="1029.85" y2="668.02" class="f"/>
+<line x1="1018.01" y1="662.28" x2="1024.43" y2="652.72" class="f"/>
+<line x1="1013.38" y1="645.59" x2="1020.92" y2="636.87" class="f"/>
+<line x1="1010.82" y1="628.45" x2="1019.36" y2="620.72" class="f"/>
+<line x1="1010.37" y1="611.13" x2="1019.79" y2="604.5" class="f"/>
+<line x1="1012.03" y1="593.88" x2="1022.18" y2="588.44" class="f"/>
+<line x1="1015.78" y1="576.96" x2="1026.52" y2="572.81" class="f"/>
+<line x1="1021.56" y1="560.63" x2="1032.73" y2="557.81" class="f"/>
+<line x1="1029.29" y1="545.12" x2="1040.72" y2="543.69" class="f"/>
+<line x1="1038.86" y1="530.67" x2="1050.38" y2="530.64" class="f"/>
+<line x1="1050.11" y1="517.49" x2="1061.55" y2="518.87" class="f"/>
+<line x1="1062.89" y1="505.79" x2="1074.07" y2="508.55" class="f"/>
+<line x1="1076.99" y1="495.73" x2="1087.76" y2="499.83" class="f"/>
+<line x1="1092.22" y1="487.46" x2="1102.41" y2="492.84" class="f"/>
+<line x1="1108.34" y1="481.11" x2="1117.8" y2="487.69" class="f"/>
+<line x1="1125.12" y1="476.77" x2="1133.7" y2="484.45" class="f"/>
+<line x1="1142.3" y1="474.51" x2="1149.88" y2="483.18" class="f"/>
+<line x1="1159.63" y1="474.35" x2="1166.09" y2="483.89" class="f"/>
+<line x1="1176.84" y1="476.32" x2="1182.1" y2="486.57" class="f"/>
+<line x1="1193.69" y1="480.36" x2="1197.66" y2="491.18" class="f"/>
+<line x1="1209.92" y1="486.43" x2="1212.54" y2="497.65" class="f"/>
+<line x1="1225.29" y1="494.43" x2="1226.53" y2="505.88" class="f"/>
+<line x1="1239.57" y1="504.25" x2="1239.4" y2="515.76" class="f"/>
+<line x1="1252.55" y1="515.73" x2="1250.98" y2="527.14" class="f"/>
+<line x1="1264.03" y1="528.71" x2="1261.08" y2="539.84" class="f"/>
+<line x1="1273.85" y1="542.99" x2="1269.56" y2="553.68" class="f"/>
+<line x1="1281.85" y1="558.36" x2="1276.29" y2="568.45" class="f"/>
+<line x1="1287.92" y1="574.59" x2="1281.17" y2="583.92" class="f"/>
+<line x1="1291.96" y1="591.44" x2="1284.13" y2="599.88" class="f"/>
+<line x1="1293.93" y1="608.65" x2="1285.12" y2="616.08" class="f"/>
+<path d="M1052.52 616.08 a99.68 99.68 0 1 0 199.36 0 a99.68 99.68 0 1 0 -199.36 0 Z M1063.72 616.08 a88.48 88.48 0 1 0 176.96 0 a88.48 88.48 0 1 0 -176.96 0 Z" class="t o" fill-rule="evenodd"/>
+<circle cx="1152.2" cy="616.08" r="94.68" class="n f"/>
+<circle cx="1152.2" cy="616.08" r="93.48" class="n f"/>
+<path d="M1218.91 675.72 L1189.61 656.2 L1185.21 659.89 L1211.84 682.79 Z" class="t o"/>
+<path d="M1197.21 693.42 L1183.67 661.02 L1178.8 664.06 L1188.31 697.95 Z" class="t o"/>
+<path d="M1190.46 657.83 L1172.91 635.39 L1164.17 641.74 L1180.08 665.37 Z" class="t o"/>
+<path d="M1116.09 697.95 L1125.6 664.06 L1120.73 661.02 L1107.19 693.42 Z" class="t o"/>
+<path d="M1092.56 682.79 L1119.19 659.89 L1114.79 656.2 L1085.49 675.72 Z" class="t o"/>
+<path d="M1124.32 665.37 L1140.23 641.74 L1131.49 635.39 L1113.94 657.83 Z" class="t o"/>
+<path d="M1063.18 607.04 L1098.35 605.61 L1099.74 600.04 L1064.74 597.17 Z" class="t o"/>
+<path d="M1070.33 579.97 L1100.33 598.22 L1102.48 592.9 L1074.86 571.07 Z" class="t o"/>
+<path d="M1096.71 604.79 L1124.1 612.63 L1127.44 602.35 L1100.67 592.6 Z" class="t o"/>
+<path d="M1133.29 528.62 L1145.51 561.63 L1151.24 561.23 L1143.16 527.06 Z" class="t o"/>
+<path d="M1161.24 527.06 L1153.16 561.23 L1158.89 561.63 L1171.11 528.62 Z" class="t o"/>
+<path d="M1145.79 559.82 L1146.8 588.29 L1157.6 588.29 L1158.61 559.82 Z" class="t o"/>
+<path d="M1229.54 571.07 L1201.92 592.9 L1204.07 598.22 L1234.07 579.97 Z" class="t o"/>
+<path d="M1239.66 597.17 L1204.66 600.04 L1206.05 605.61 L1241.22 607.04 Z" class="t o"/>
+<path d="M1203.73 592.6 L1176.96 602.35 L1180.3 612.63 L1207.69 604.79 Z" class="t o"/>
+<circle cx="1152.2" cy="616.08" r="28.31" class="t o"/>
+</g>
+<g id="T12-hubmotor" data-part="Hub motor" data-category="powertrain">
+<circle cx="1152.2" cy="616.08" r="64" class="t2 o"/>
+<circle cx="1152.2" cy="616.08" r="58" class="n f"/>
+<line x1="1199.2" y1="616.08" x2="1209.2" y2="616.08" class="f"/>
+<line x1="1198.17" y1="625.85" x2="1207.95" y2="627.93" class="f"/>
+<line x1="1195.14" y1="635.2" x2="1204.27" y2="639.26" class="f"/>
+<line x1="1190.22" y1="643.71" x2="1198.31" y2="649.58" class="f"/>
+<line x1="1183.65" y1="651.01" x2="1190.34" y2="658.44" class="f"/>
+<line x1="1175.7" y1="656.78" x2="1180.7" y2="665.44" class="f"/>
+<line x1="1166.72" y1="660.78" x2="1169.81" y2="670.29" class="f"/>
+<line x1="1157.11" y1="662.82" x2="1158.16" y2="672.77" class="f"/>
+<line x1="1147.29" y1="662.82" x2="1146.24" y2="672.77" class="f"/>
+<line x1="1137.68" y1="660.78" x2="1134.59" y2="670.29" class="f"/>
+<line x1="1128.7" y1="656.78" x2="1123.7" y2="665.44" class="f"/>
+<line x1="1120.75" y1="651.01" x2="1114.06" y2="658.44" class="f"/>
+<line x1="1114.18" y1="643.71" x2="1106.09" y2="649.58" class="f"/>
+<line x1="1109.26" y1="635.2" x2="1100.13" y2="639.26" class="f"/>
+<line x1="1106.23" y1="625.85" x2="1096.45" y2="627.93" class="f"/>
+<line x1="1105.2" y1="616.08" x2="1095.2" y2="616.08" class="f"/>
+<line x1="1106.23" y1="606.31" x2="1096.45" y2="604.23" class="f"/>
+<line x1="1109.26" y1="596.96" x2="1100.13" y2="592.9" class="f"/>
+<line x1="1114.18" y1="588.45" x2="1106.09" y2="582.58" class="f"/>
+<line x1="1120.75" y1="581.15" x2="1114.06" y2="573.72" class="f"/>
+<line x1="1128.7" y1="575.38" x2="1123.7" y2="566.72" class="f"/>
+<line x1="1137.68" y1="571.38" x2="1134.59" y2="561.87" class="f"/>
+<line x1="1147.29" y1="569.34" x2="1146.24" y2="559.39" class="f"/>
+<line x1="1157.11" y1="569.34" x2="1158.16" y2="559.39" class="f"/>
+<line x1="1166.72" y1="571.38" x2="1169.81" y2="561.87" class="f"/>
+<line x1="1175.7" y1="575.38" x2="1180.7" y2="566.72" class="f"/>
+<line x1="1183.65" y1="581.15" x2="1190.34" y2="573.72" class="f"/>
+<line x1="1190.22" y1="588.45" x2="1198.31" y2="582.58" class="f"/>
+<line x1="1195.14" y1="596.96" x2="1204.27" y2="592.9" class="f"/>
+<line x1="1198.17" y1="606.31" x2="1207.95" y2="604.23" class="f"/>
+<circle cx="1152.2" cy="616.08" r="46" class="t o"/>
+<path d="M1187.36 636.38 L1184.24 638.18 L1181.13 636.38 L1181.13 632.78 L1184.24 630.98 L1187.36 632.78 Z" class="t2 f"/>
+<circle cx="1184.24" cy="634.58" r="1.62" class="w f"/>
+<path d="M1155.32 654.88 L1152.2 656.68 L1149.08 654.88 L1149.08 651.28 L1152.2 649.48 L1155.32 651.28 Z" class="t2 f"/>
+<circle cx="1152.2" cy="653.08" r="1.62" class="w f"/>
+<path d="M1123.27 636.38 L1120.16 638.18 L1117.04 636.38 L1117.04 632.78 L1120.16 630.98 L1123.27 632.78 Z" class="t2 f"/>
+<circle cx="1120.16" cy="634.58" r="1.62" class="w f"/>
+<path d="M1123.27 599.38 L1120.16 601.18 L1117.04 599.38 L1117.04 595.78 L1120.16 593.98 L1123.27 595.78 Z" class="t2 f"/>
+<circle cx="1120.16" cy="597.58" r="1.62" class="w f"/>
+<path d="M1155.32 580.88 L1152.2 582.68 L1149.08 580.88 L1149.08 577.28 L1152.2 575.48 L1155.32 577.28 Z" class="t2 f"/>
+<circle cx="1152.2" cy="579.08" r="1.62" class="w f"/>
+<path d="M1187.36 599.38 L1184.24 601.18 L1181.13 599.38 L1181.13 595.78 L1184.24 593.98 L1187.36 595.78 Z" class="t2 f"/>
+<circle cx="1184.24" cy="597.58" r="1.62" class="w f"/>
+<circle cx="1152.2" cy="616.08" r="19" class="t2 i"/>
+<path d="M1159.13 620.08 L1152.2 624.08 L1145.27 620.08 L1145.27 612.08 L1152.2 608.08 L1159.13 612.08 Z" class="t2 f"/>
+<circle cx="1152.2" cy="616.08" r="3.6" class="w f"/>
+<path d="M1138.2 598.08 C1130.53 594.08 1113.2 578.75 1092.2 574.08 C1071.2 569.41 1035.53 568.08 1012.2 570.08 C988.87 572.08 962.2 583.41 952.2 586.08" class="n o" stroke-width="6"/>
+<path d="M1138.2 598.08 C1130.53 594.08 1113.2 578.75 1092.2 574.08 C1071.2 569.41 1035.53 568.08 1012.2 570.08 C988.87 572.08 962.2 583.41 952.2 586.08" class="n" stroke-width="3" stroke="#C8502A"/>
+</g>
+<g id="T12-regen" data-part="Regenerative braking" data-category="chassis">
+<path d="M1110.83 650.79 A54 54 0 0 1 1110.83 581.37 L1116.96 586.51 A46 46 0 0 0 1116.96 645.65 Z" class="w i"/>
+<path d="M1100.48 611.39 L1040.48 633.39 L1043.92 642.77 L1103.92 620.77 Z" class="t i"/>
+<circle cx="1102.2" cy="616.08" r="4" class="t2 f"/>
+</g>
+<g id="T12-swingarm" data-part="Swingarm" data-category="chassis">
+<path d="M963 577 L1126.2 599.08 L1162.2 604.08 L1162.2 628.08 L1126.2 633.08 L963 607 Z" class="t o"/>
+<path d="M1001.8 598.85 L1091 620.93 L1093.4 611.23 L1004.2 589.15 Z" class="n f"/>
+<circle cx="973" cy="592" r="13" class="t2 o"/>
+<path d="M978.2 595 L973 598 L967.8 595 L967.8 589 L973 586 L978.2 589 Z" class="t2 f"/>
+<circle cx="973" cy="592" r="2.7" class="w f"/>
+</g>
+<g id="T12-shocks" data-part="Twin rear shocks" data-category="chassis">
+<path d="M1098.7 444.57 L1115.34 535.29 L1132.06 532.23 L1115.42 441.51 Z" class="t o"/>
+<path d="M1118.78 534.66 L1127.4 581.7 L1137.24 579.9 L1128.61 532.86 Z" class="w i"/>
+<path d="M1096.13 455.46 L1123.44 460.3" fill="none" stroke="#1E2B5E" stroke-width="6.4" stroke-linecap="round"/>
+<path d="M1096.13 455.46 L1123.44 460.3" fill="none" stroke="#B9C7E3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M1099.62 474.5 L1126.93 479.34" fill="none" stroke="#1E2B5E" stroke-width="6.4" stroke-linecap="round"/>
+<path d="M1099.62 474.5 L1126.93 479.34" fill="none" stroke="#B9C7E3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M1103.11 493.54 L1130.43 498.38" fill="none" stroke="#1E2B5E" stroke-width="6.4" stroke-linecap="round"/>
+<path d="M1103.11 493.54 L1130.43 498.38" fill="none" stroke="#B9C7E3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M1106.6 512.58 L1133.92 517.42" fill="none" stroke="#1E2B5E" stroke-width="6.4" stroke-linecap="round"/>
+<path d="M1106.6 512.58 L1133.92 517.42" fill="none" stroke="#B9C7E3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M1110.09 531.62 L1137.41 536.46" fill="none" stroke="#1E2B5E" stroke-width="6.4" stroke-linecap="round"/>
+<path d="M1110.09 531.62 L1137.41 536.46" fill="none" stroke="#B9C7E3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M1113.58 550.66 L1140.9 555.5" fill="none" stroke="#1E2B5E" stroke-width="6.4" stroke-linecap="round"/>
+<path d="M1113.58 550.66 L1140.9 555.5" fill="none" stroke="#B9C7E3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M1123.44 460.3 L1099.62 474.5" fill="none" stroke="#1E2B5E" stroke-width="6.8" stroke-linecap="round"/>
+<path d="M1123.44 460.3 L1099.62 474.5" fill="none" stroke="#DCE4F2" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M1126.93 479.34 L1103.11 493.54" fill="none" stroke="#1E2B5E" stroke-width="6.8" stroke-linecap="round"/>
+<path d="M1126.93 479.34 L1103.11 493.54" fill="none" stroke="#DCE4F2" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M1130.43 498.38 L1106.6 512.58" fill="none" stroke="#1E2B5E" stroke-width="6.8" stroke-linecap="round"/>
+<path d="M1130.43 498.38 L1106.6 512.58" fill="none" stroke="#DCE4F2" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M1133.92 517.42 L1110.09 531.62" fill="none" stroke="#1E2B5E" stroke-width="6.8" stroke-linecap="round"/>
+<path d="M1133.92 517.42 L1110.09 531.62" fill="none" stroke="#DCE4F2" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M1137.41 536.46 L1113.58 550.66" fill="none" stroke="#1E2B5E" stroke-width="6.8" stroke-linecap="round"/>
+<path d="M1137.41 536.46 L1113.58 550.66" fill="none" stroke="#DCE4F2" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M1140.9 555.5 L1117.07 569.7" fill="none" stroke="#1E2B5E" stroke-width="6.8" stroke-linecap="round"/>
+<path d="M1140.9 555.5 L1117.07 569.7" fill="none" stroke="#DCE4F2" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M1090.44 452.17 L1091.36 457.21 L1126.77 450.71 L1125.85 445.67 Z" class="t2 i"/>
+<path d="M1112.98 569.59 L1113.9 574.63 L1147.35 568.49 L1146.42 563.45 Z" class="t2 i"/>
+<circle cx="1104.6" cy="429.6" r="10" class="t o"/>
+<circle cx="1104.6" cy="429.6" r="4.5" class="w i"/>
+<circle cx="1135.4" cy="597.6" r="10" class="t o"/>
+<circle cx="1135.4" cy="597.6" r="4.5" class="w i"/>
+</g>
+<g id="T12-body" data-part="Rear body" data-category="frame_body">
+<path d="M911.4 575.2 C904.4 545.33 914.2 447.8 919.8 412.8 C925.4 377.8 922.13 373.79 945 365.2 C967.87 356.61 1015 362.87 1057 361.28 C1099 359.69 1157.8 355.68 1197 355.68 C1236.2 355.68 1268.87 358.29 1292.2 361.28 C1315.53 364.27 1330.47 366.88 1337 373.6 C1343.53 380.32 1343.53 394.13 1331.4 401.6 C1319.27 409.07 1288.47 413.73 1264.2 418.4 C1239.93 423.07 1211.93 426.05 1185.8 429.6 C1159.67 433.15 1131.67 428.48 1107.4 439.68 C1083.13 450.88 1057 476.08 1040.2 496.8 C1023.4 517.52 1019.67 548.13 1006.6 564 C993.53 579.87 977.67 590.13 961.8 592 C945.93 593.87 918.4 605.07 911.4 575.2 Z" class="t o"/>
+<path d="M931 401.6 C952 400.67 1012.67 397.87 1057 396 C1101.33 394.13 1155 391.71 1197 390.4 C1239 389.09 1290.33 388.53 1309 388.16" class="n f"/>
+<path d="M1309 368 L1338.12 376.96 L1335.88 392.64 L1307.88 388.16 Z" class="w i"/>
+<line x1="1308.78" y1="372.03" x2="1337.67" y2="380.1" class="acct"/>
+<line x1="1308.44" y1="378.08" x2="1337" y2="384.8" class="acct"/>
+<line x1="1308.1" y1="384.13" x2="1336.33" y2="389.5" class="acct"/>
+<path d="M1174.6 334.4 C1187.67 331.6 1231.53 318.72 1253 317.6 C1274.47 316.48 1295 326 1303.4 327.68" class="n o" stroke-width="7"/>
+<path d="M1174.6 334.4 C1187.67 331.6 1231.53 318.72 1253 317.6 C1274.47 316.48 1295 326 1303.4 327.68" class="n" stroke-width="3.5" stroke="#DCE4F2"/>
+</g>
+<g id="T12-seat" data-part="Seat" data-category="frame_body">
+<path d="M917 361.28 C915.13 357.17 933.8 340.56 961.8 334.4 C989.8 328.24 1042.07 326.75 1085 324.32 C1127.93 321.89 1188.6 319.65 1219.4 319.84 C1250.2 320.03 1260.47 321.33 1269.8 325.44 C1279.13 329.55 1296.87 339.81 1275.4 344.48 C1253.93 349.15 1191.4 351.01 1141 353.44 C1090.6 355.87 1010.33 357.73 973 359.04 C935.67 360.35 918.87 365.39 917 361.28 Z" class="t2 o"/>
+<path d="M950.6 347.84 C973 346.35 1034.6 341.12 1085 338.88 C1135.4 336.64 1225 335.15 1253 334.4" class="n f" stroke-dasharray="3 3"/>
+</g>
+<g id="T12-battery" data-part="Swappable battery" data-category="electrical">
+<path d="M933.8 390.4 L1090.6 387.04 L1096.2 524.8 L1029 558.4 L939.4 547.2 Z" class="w o" stroke-dasharray="7 4"/>
+<path d="M945 401.6 L1082.76 399.36 L1085 519.2 L947.24 521.44 Z" class="t2 o"/>
+<circle cx="964.6" cy="421.2" r="9" class="t i"/>
+<circle cx="964.6" cy="421.2" r="3.5" class="n f"/>
+<circle cx="985.88" cy="421.2" r="9" class="t i"/>
+<circle cx="985.88" cy="421.2" r="3.5" class="n f"/>
+<circle cx="1007.16" cy="421.2" r="9" class="t i"/>
+<circle cx="1007.16" cy="421.2" r="3.5" class="n f"/>
+<circle cx="1028.44" cy="421.2" r="9" class="t i"/>
+<circle cx="1028.44" cy="421.2" r="3.5" class="n f"/>
+<circle cx="1049.72" cy="421.2" r="9" class="t i"/>
+<circle cx="1049.72" cy="421.2" r="3.5" class="n f"/>
+<circle cx="1071" cy="421.2" r="9" class="t i"/>
+<circle cx="1071" cy="421.2" r="3.5" class="n f"/>
+<circle cx="964.6" cy="445.84" r="9" class="t i"/>
+<circle cx="964.6" cy="445.84" r="3.5" class="n f"/>
+<circle cx="985.88" cy="445.84" r="9" class="t i"/>
+<circle cx="985.88" cy="445.84" r="3.5" class="n f"/>
+<circle cx="1007.16" cy="445.84" r="9" class="t i"/>
+<circle cx="1007.16" cy="445.84" r="3.5" class="n f"/>
+<circle cx="1028.44" cy="445.84" r="9" class="t i"/>
+<circle cx="1028.44" cy="445.84" r="3.5" class="n f"/>
+<circle cx="1049.72" cy="445.84" r="9" class="t i"/>
+<circle cx="1049.72" cy="445.84" r="3.5" class="n f"/>
+<circle cx="1071" cy="445.84" r="9" class="t i"/>
+<circle cx="1071" cy="445.84" r="3.5" class="n f"/>
+<circle cx="964.6" cy="470.48" r="9" class="t i"/>
+<circle cx="964.6" cy="470.48" r="3.5" class="n f"/>
+<circle cx="985.88" cy="470.48" r="9" class="t i"/>
+<circle cx="985.88" cy="470.48" r="3.5" class="n f"/>
+<circle cx="1007.16" cy="470.48" r="9" class="t i"/>
+<circle cx="1007.16" cy="470.48" r="3.5" class="n f"/>
+<circle cx="1028.44" cy="470.48" r="9" class="t i"/>
+<circle cx="1028.44" cy="470.48" r="3.5" class="n f"/>
+<circle cx="1049.72" cy="470.48" r="9" class="t i"/>
+<circle cx="1049.72" cy="470.48" r="3.5" class="n f"/>
+<circle cx="1071" cy="470.48" r="9" class="t i"/>
+<circle cx="1071" cy="470.48" r="3.5" class="n f"/>
+<path d="M1073.6 418.4 L1079.6 418.4 L1083.52 496.8 L1077.52 496.8 Z" class="af f"/>
+<text x="1015" y="510.24" class="m" text-anchor="middle">Li-ion 48 V</text>
+</g>
+<g id="T12-handle" data-part="Battery handle" data-category="electrical">
+<path d="M984.2 400.48 C984.2 366.48 1045.8 366.48 1045.8 400.48" class="n o" stroke-width="9"/>
+<path d="M984.2 400.48 C984.2 366.48 1045.8 366.48 1045.8 400.48" class="n" stroke-width="5" stroke="#FFFFFF"/>
+</g>
+<g id="T12-storage" data-part="Under-seat storage" data-category="frame_body">
+<path d="M1104.6 368 L1264.2 364.64 L1253 412.8 L1118.6 429.6 Z" class="n h"/>
+<path d="M1135.4 401.6 C1143.8 398.99 1169 388.16 1185.8 385.92 C1202.6 383.68 1227.8 387.79 1236.2 388.16" class="n f"/>
+</g>
+<g id="T12-socket" data-part="Charge socket" data-category="electrical">
+<circle cx="925.4" cy="468.8" r="13" class="t2 o"/>
+<circle cx="925.4" cy="468.8" r="8" class="w i"/>
+<circle cx="925.4" cy="472.8" r="1.6" class="k"/>
+<circle cx="921.94" cy="466.8" r="1.6" class="k"/>
+<circle cx="928.86" cy="466.8" r="1.6" class="k"/>
+</g>
+<g id="T12-floor" data-part="Step-through floor" data-category="frame_body">
+<path d="M620.2 569.6 L917 569.6 L925.4 586.4 L911.4 636.8 L648.2 640.16 L620.2 608.8 Z" class="t o"/>
+<line x1="637.4" y1="566.6" x2="645.4" y2="566.6" class="o"/>
+<line x1="654.73" y1="566.6" x2="662.73" y2="566.6" class="o"/>
+<line x1="672.07" y1="566.6" x2="680.07" y2="566.6" class="o"/>
+<line x1="689.4" y1="566.6" x2="697.4" y2="566.6" class="o"/>
+<line x1="706.73" y1="566.6" x2="714.73" y2="566.6" class="o"/>
+<line x1="724.07" y1="566.6" x2="732.07" y2="566.6" class="o"/>
+<line x1="741.4" y1="566.6" x2="749.4" y2="566.6" class="o"/>
+<line x1="758.73" y1="566.6" x2="766.73" y2="566.6" class="o"/>
+<line x1="776.07" y1="566.6" x2="784.07" y2="566.6" class="o"/>
+<line x1="793.4" y1="566.6" x2="801.4" y2="566.6" class="o"/>
+<line x1="810.73" y1="566.6" x2="818.73" y2="566.6" class="o"/>
+<line x1="828.07" y1="566.6" x2="836.07" y2="566.6" class="o"/>
+<line x1="845.4" y1="566.6" x2="853.4" y2="566.6" class="o"/>
+<line x1="862.73" y1="566.6" x2="870.73" y2="566.6" class="o"/>
+<line x1="880.07" y1="566.6" x2="888.07" y2="566.6" class="o"/>
+<line x1="897.4" y1="566.6" x2="905.4" y2="566.6" class="o"/>
+</g>
+<g id="T12-controller" data-part="Motor controller" data-category="electrical">
+<path d="M665 592 L782.6 592 L783.72 627.84 L666.12 628.96 Z" class="n h"/>
+<line x1="676.2" y1="594.24" x2="676.2" y2="624.24" class="f"/>
+<line x1="691.88" y1="594.24" x2="691.88" y2="624.24" class="f"/>
+<line x1="707.56" y1="594.24" x2="707.56" y2="624.24" class="f"/>
+<line x1="723.24" y1="594.24" x2="723.24" y2="624.24" class="f"/>
+<line x1="738.92" y1="594.24" x2="738.92" y2="624.24" class="f"/>
+<line x1="754.6" y1="594.24" x2="754.6" y2="624.24" class="f"/>
+<line x1="770.28" y1="594.24" x2="770.28" y2="624.24" class="f"/>
+</g>
+<g id="T12-dcdc" data-part="DC-DC converter" data-category="electrical">
+<path d="M799.4 592 L861 592 L861 626.72 L799.4 627.84 Z" class="n h"/>
+<text x="830.2" y="613.28" class="m" text-anchor="middle" style="font-size:11px">DC-DC</text>
+</g>
+<g id="T12-stand" data-part="Centre stand" data-category="chassis">
+<path d="M967.08 619.02 L945.67 755.19 L955.53 756.81 L978.92 620.98 Z" class="t o"/>
+<path d="M933.8 758.5 L973 758.5 L973 751.5 L933.8 751.5 Z" class="t2 i"/>
+</g>
+<g id="T12-fwheel" data-part="14 in cast wheel" data-category="wheels">
+<path d="M269.08 616.08 a143.92 143.92 0 1 0 287.84 0 a143.92 143.92 0 1 0 -287.84 0 Z M313.32 616.08 a99.68 99.68 0 1 0 199.36 0 a99.68 99.68 0 1 0 -199.36 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="413" cy="616.08" r="127.11" class="n f"/>
+<circle cx="413" cy="616.08" r="136.92" class="n f" stroke-dasharray="2 5"/>
+<line x1="554.92" y1="616.08" x2="545.74" y2="623.04" class="f"/>
+<line x1="553.86" y1="633.38" x2="543.9" y2="639.16" class="f"/>
+<line x1="550.7" y1="650.41" x2="540.11" y2="654.94" class="f"/>
+<line x1="545.49" y1="666.94" x2="534.43" y2="670.14" class="f"/>
+<line x1="538.31" y1="682.71" x2="526.93" y2="684.54" class="f"/>
+<line x1="529.25" y1="697.48" x2="517.74" y2="697.91" class="f"/>
+<line x1="518.47" y1="711.04" x2="506.99" y2="710.07" class="f"/>
+<line x1="506.11" y1="723.19" x2="494.83" y2="720.82" class="f"/>
+<line x1="492.36" y1="733.74" x2="481.46" y2="730.01" class="f"/>
+<line x1="477.43" y1="742.53" x2="467.06" y2="737.51" class="f"/>
+<line x1="461.54" y1="749.44" x2="451.86" y2="743.19" class="f"/>
+<line x1="444.93" y1="754.36" x2="436.08" y2="746.98" class="f"/>
+<line x1="427.83" y1="757.22" x2="419.96" y2="748.82" class="f"/>
+<line x1="410.52" y1="757.98" x2="403.73" y2="748.68" class="f"/>
+<line x1="393.25" y1="756.62" x2="387.64" y2="746.56" class="f"/>
+<line x1="376.27" y1="753.16" x2="371.93" y2="742.49" class="f"/>
+<line x1="359.84" y1="747.67" x2="356.83" y2="736.55" class="f"/>
+<line x1="344.2" y1="740.21" x2="342.56" y2="728.8" class="f"/>
+<line x1="329.58" y1="730.9" x2="329.35" y2="719.38" class="f"/>
+<line x1="316.21" y1="719.87" x2="317.39" y2="708.41" class="f"/>
+<line x1="304.28" y1="707.3" x2="306.85" y2="696.07" class="f"/>
+<line x1="293.98" y1="693.38" x2="297.89" y2="682.54" class="f"/>
+<line x1="285.44" y1="678.29" x2="290.65" y2="668.02" class="f"/>
+<line x1="278.81" y1="662.28" x2="285.23" y2="652.72" class="f"/>
+<line x1="274.18" y1="645.59" x2="281.72" y2="636.87" class="f"/>
+<line x1="271.62" y1="628.45" x2="280.16" y2="620.72" class="f"/>
+<line x1="271.17" y1="611.13" x2="280.59" y2="604.5" class="f"/>
+<line x1="272.83" y1="593.88" x2="282.98" y2="588.44" class="f"/>
+<line x1="276.58" y1="576.96" x2="287.32" y2="572.81" class="f"/>
+<line x1="282.36" y1="560.63" x2="293.53" y2="557.81" class="f"/>
+<line x1="290.09" y1="545.12" x2="301.52" y2="543.69" class="f"/>
+<line x1="299.66" y1="530.67" x2="311.18" y2="530.64" class="f"/>
+<line x1="310.91" y1="517.49" x2="322.35" y2="518.87" class="f"/>
+<line x1="323.69" y1="505.79" x2="334.87" y2="508.55" class="f"/>
+<line x1="337.79" y1="495.73" x2="348.56" y2="499.83" class="f"/>
+<line x1="353.02" y1="487.46" x2="363.21" y2="492.84" class="f"/>
+<line x1="369.14" y1="481.11" x2="378.6" y2="487.69" class="f"/>
+<line x1="385.92" y1="476.77" x2="394.5" y2="484.45" class="f"/>
+<line x1="403.1" y1="474.51" x2="410.68" y2="483.18" class="f"/>
+<line x1="420.43" y1="474.35" x2="426.89" y2="483.89" class="f"/>
+<line x1="437.64" y1="476.32" x2="442.9" y2="486.57" class="f"/>
+<line x1="454.49" y1="480.36" x2="458.46" y2="491.18" class="f"/>
+<line x1="470.72" y1="486.43" x2="473.34" y2="497.65" class="f"/>
+<line x1="486.09" y1="494.43" x2="487.33" y2="505.88" class="f"/>
+<line x1="500.37" y1="504.25" x2="500.2" y2="515.76" class="f"/>
+<line x1="513.35" y1="515.73" x2="511.78" y2="527.14" class="f"/>
+<line x1="524.83" y1="528.71" x2="521.88" y2="539.84" class="f"/>
+<line x1="534.65" y1="542.99" x2="530.36" y2="553.68" class="f"/>
+<line x1="542.65" y1="558.36" x2="537.09" y2="568.45" class="f"/>
+<line x1="548.72" y1="574.59" x2="541.97" y2="583.92" class="f"/>
+<line x1="552.76" y1="591.44" x2="544.93" y2="599.88" class="f"/>
+<line x1="554.73" y1="608.65" x2="545.92" y2="616.08" class="f"/>
+<path d="M313.32 616.08 a99.68 99.68 0 1 0 199.36 0 a99.68 99.68 0 1 0 -199.36 0 Z M324.52 616.08 a88.48 88.48 0 1 0 176.96 0 a88.48 88.48 0 1 0 -176.96 0 Z" class="t o" fill-rule="evenodd"/>
+<circle cx="413" cy="616.08" r="94.68" class="n f"/>
+<circle cx="413" cy="616.08" r="93.48" class="n f"/>
+<path d="M431.91 703.54 L419.69 670.53 L413.96 670.93 L422.04 705.1 Z" class="t o"/>
+<path d="M403.96 705.1 L412.04 670.93 L406.31 670.53 L394.09 703.54 Z" class="t o"/>
+<path d="M419.41 672.34 L418.4 643.87 L407.6 643.87 L406.59 672.34 Z" class="t o"/>
+<path d="M335.66 661.09 L363.28 639.26 L361.13 633.94 L331.13 652.19 Z" class="t o"/>
+<path d="M325.54 634.99 L360.54 632.12 L359.15 626.55 L323.98 625.12 Z" class="t o"/>
+<path d="M361.47 639.56 L388.24 629.81 L384.9 619.53 L357.51 627.37 Z" class="t o"/>
+<path d="M346.29 556.44 L375.59 575.96 L379.99 572.27 L353.36 549.37 Z" class="t o"/>
+<path d="M367.99 538.74 L381.53 571.14 L386.4 568.1 L376.89 534.21 Z" class="t o"/>
+<path d="M374.74 574.33 L392.29 596.77 L401.03 590.42 L385.12 566.79 Z" class="t o"/>
+<path d="M449.11 534.21 L439.6 568.1 L444.47 571.14 L458.01 538.74 Z" class="t o"/>
+<path d="M472.64 549.37 L446.01 572.27 L450.41 575.96 L479.71 556.44 Z" class="t o"/>
+<path d="M440.88 566.79 L424.97 590.42 L433.71 596.77 L451.26 574.33 Z" class="t o"/>
+<path d="M502.02 625.12 L466.85 626.55 L465.46 632.12 L500.46 634.99 Z" class="t o"/>
+<path d="M494.87 652.19 L464.87 633.94 L462.72 639.26 L490.34 661.09 Z" class="t o"/>
+<path d="M468.49 627.37 L441.1 619.53 L437.76 629.81 L464.53 639.56 Z" class="t o"/>
+<circle cx="413" cy="616.08" r="28.31" class="t o"/>
+<path d="M347.28 675.41 L351.11 672.19 L346.99 667.29 L343.16 670.5 Z" class="t2 i"/>
+<path d="M351.88 673.11 L358.77 667.33 L353.12 660.58 L346.22 666.37 Z" class="t i"/>
+</g>
+<g id="T12-disc" data-part="Front disc brake" data-category="chassis">
+<path d="M464 616.08 L464.57 620.14 L465.84 624.45 L466.74 628.98 L466.26 633.38 L464.06 637.23 L460.67 640.37 L457.11 643.11 L454.26 646.06 L452.34 649.68 L450.83 653.91 L448.89 658.11 L445.92 661.38 L441.88 663.2 L437.29 663.75 L432.8 663.87 L428.76 664.58 L425.08 666.38 L421.37 668.92 L417.34 671.18 L413 672.08 L408.66 671.18 L404.63 668.92 L400.92 666.38 L397.24 664.58 L393.2 663.87 L388.71 663.75 L384.12 663.2 L380.08 661.38 L377.11 658.11 L375.17 653.91 L373.66 649.68 L371.74 646.06 L368.89 643.11 L365.33 640.37 L361.94 637.23 L359.74 633.38 L359.26 628.98 L360.16 624.45 L361.43 620.14 L362 616.08 L361.43 612.02 L360.16 607.71 L359.26 603.18 L359.74 598.78 L361.94 594.93 L365.33 591.79 L368.89 589.05 L371.74 586.1 L373.66 582.48 L375.17 578.25 L377.11 574.05 L380.08 570.78 L384.12 568.96 L388.71 568.41 L393.2 568.29 L397.24 567.58 L400.92 565.78 L404.63 563.24 L408.66 560.98 L413 560.08 L417.34 560.98 L421.37 563.24 L425.08 565.78 L428.76 567.58 L432.8 568.29 L437.29 568.41 L441.88 568.96 L445.92 570.78 L448.89 574.05 L450.83 578.25 L452.34 582.48 L454.26 586.1 L457.11 589.05 L460.67 591.79 L464.06 594.93 L466.26 598.78 L466.74 603.18 L465.84 607.71 L464.57 612.02 Z M375 616.08 a38 38 0 1 0 76 0 a38 38 0 1 0 -76 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="462.88" cy="616.08" r="2.4" class="w f"/>
+<circle cx="456.86" cy="625.4" r="2.4" class="w f"/>
+<circle cx="458.57" cy="636.37" r="2.4" class="w f"/>
+<circle cx="449.28" cy="642.44" r="2.4" class="w f"/>
+<circle cx="446.38" cy="653.15" r="2.4" class="w f"/>
+<circle cx="435.42" cy="654.91" r="2.4" class="w f"/>
+<circle cx="428.41" cy="663.52" r="2.4" class="w f"/>
+<circle cx="417.69" cy="660.67" r="2.4" class="w f"/>
+<circle cx="407.79" cy="665.69" r="2.4" class="w f"/>
+<circle cx="399.14" cy="658.73" r="2.4" class="w f"/>
+<circle cx="388.06" cy="659.28" r="2.4" class="w f"/>
+<circle cx="383" cy="649.4" r="2.4" class="w f"/>
+<circle cx="372.65" cy="645.4" r="2.4" class="w f"/>
+<circle cx="372.04" cy="634.32" r="2.4" class="w f"/>
+<circle cx="364.21" cy="626.45" r="2.4" class="w f"/>
+<circle cx="368.16" cy="616.08" r="2.4" class="w f"/>
+<circle cx="364.21" cy="605.71" r="2.4" class="w f"/>
+<circle cx="372.04" cy="597.84" r="2.4" class="w f"/>
+<circle cx="372.65" cy="586.76" r="2.4" class="w f"/>
+<circle cx="383" cy="582.76" r="2.4" class="w f"/>
+<circle cx="388.06" cy="572.88" r="2.4" class="w f"/>
+<circle cx="399.14" cy="573.43" r="2.4" class="w f"/>
+<circle cx="407.79" cy="566.47" r="2.4" class="w f"/>
+<circle cx="417.69" cy="571.49" r="2.4" class="w f"/>
+<circle cx="428.41" cy="568.64" r="2.4" class="w f"/>
+<circle cx="435.42" cy="577.25" r="2.4" class="w f"/>
+<circle cx="446.38" cy="579.01" r="2.4" class="w f"/>
+<circle cx="449.28" cy="589.72" r="2.4" class="w f"/>
+<circle cx="458.57" cy="595.79" r="2.4" class="w f"/>
+<circle cx="456.86" cy="606.76" r="2.4" class="w f"/>
+<circle cx="413" cy="616.08" r="40" class="n f"/>
+<path d="M375 616.08 a38 38 0 1 0 76 0 a38 38 0 1 0 -76 0 Z M382 616.08 a31 31 0 1 0 62 0 a31 31 0 1 0 -62 0 Z" class="t i" fill-rule="evenodd"/>
+<path d="M444.69 620.53 A32 32 0 0 1 442.67 628.07 L429.69 622.82 A18 18 0 0 0 430.82 618.59 Z" class="t i"/>
+<path d="M418.56 647.59 A32 32 0 0 1 410.77 648 L411.74 634.04 A18 18 0 0 0 416.13 633.81 Z" class="t i"/>
+<path d="M384.75 631.1 A32 32 0 0 1 381.95 623.82 L395.53 620.43 A18 18 0 0 0 397.11 624.53 Z" class="t i"/>
+<path d="M389.98 593.85 A32 32 0 0 1 396.04 588.94 L403.46 600.82 A18 18 0 0 0 400.05 603.58 Z" class="t i"/>
+<path d="M427.03 587.32 A32 32 0 0 1 433.57 591.57 L424.57 602.29 A18 18 0 0 0 420.89 599.9 Z" class="t i"/>
+<circle cx="413" cy="616.08" r="15" class="t2 i"/>
+<circle cx="413" cy="616.08" r="9.3" class="w i"/>
+<path d="M418.52 620.71 L411.75 623.17 L406.23 618.54 L407.48 611.45 L414.25 608.99 L419.77 613.62 Z" class="t2 f"/>
+<circle cx="413" cy="616.08" r="3.24" class="w f"/>
+</g>
+<g id="T12-fender" data-part="Front mudguard" data-category="frame_body">
+<path d="M278.84 538.62 A154.92 154.92 0 0 1 531.68 516.5 L526.31 521 A147.92 147.92 0 0 0 284.9 542.12 Z" class="t o"/>
+</g>
+<g id="T12-fork" data-part="Telescopic fork" data-category="chassis">
+<path d="M485.29 486.12 L564.85 322.98 L550.47 315.97 L470.91 479.1 Z" class="w o"/>
+<line x1="482.08" y1="474.45" x2="555.28" y2="324.37" class="f"/>
+<path d="M419.99 626.83 L490.96 476.77 L474.78 468.88 L400.22 617.19 Z" class="t o"/>
+<path d="M489.58 484.17 L493.55 476.01 L473.78 466.37 L469.8 474.52 Z" class="t2 i"/>
+<path d="M400 606.08 L426 602.08 L429 625.08 L403 629.08 Z" class="t o"/>
+<path d="M418.2 619.08 L413 622.08 L407.8 619.08 L407.8 613.08 L413 610.08 L418.2 613.08 Z" class="t2 f"/>
+<circle cx="413" cy="616.08" r="2.7" class="w f"/>
+<path d="M457.53 572.02 L474.43 603.8 L467.48 612.03 L456.77 613.19 L439.87 581.41 L446.82 573.18 Z" class="t2 o"/>
+<path d="M456.4 580.55 L466.73 599.97 L457.9 604.67 L447.57 585.24 Z" class="t i"/>
+<circle cx="457.15" cy="592.61" r="6" class="w i"/>
+</g>
+<g id="T12-cowl" data-part="Front cowl and legshield" data-category="frame_body">
+<path d="M527.8 200 C540.87 195.33 560.93 190.67 575.4 194.4 C589.87 198.13 606.2 204.67 614.6 222.4 C623 240.13 622.53 270.93 625.8 300.8 C629.07 330.67 631.87 366.13 634.2 401.6 C636.53 437.07 639.33 485.6 639.8 513.6 C640.27 541.6 641.2 556.53 637 569.6 C632.8 582.67 621.13 593.87 614.6 592 C608.07 590.13 603.4 578.93 597.8 558.4 C592.2 537.87 589.4 494.93 581 468.8 C572.6 442.67 560.47 424 547.4 401.6 C534.33 379.2 513.05 354.93 502.6 334.4 C492.15 313.87 485.61 297.07 484.68 278.4 C483.75 259.73 489.81 235.47 497 222.4 C504.19 209.33 514.73 204.67 527.8 200 Z" class="t o"/>
+<path d="M597.8 222.4 C599.67 237.33 606.2 278.4 609 312 C611.8 345.6 612.73 384.8 614.6 424 C616.47 463.2 619.27 526.67 620.2 547.2" class="n f"/>
+</g>
+<g id="T12-headlight" data-part="LED headlight with ring DRL" data-category="electrical">
+<ellipse cx="516.6" cy="278.4" rx="20" ry="40" class="w o" transform="rotate(-22 516.6 278.4)"/>
+<ellipse cx="516.6" cy="278.4" rx="15" ry="31" class="n acc" transform="rotate(-22 516.6 278.4)"/>
+<ellipse cx="516.6" cy="278.4" rx="8" ry="16" class="t2 i" transform="rotate(-22 516.6 278.4)"/>
+<path d="M551.48 400.8 L565.48 398.8 L565.48 420.8 L553.48 421.8 Z" class="t2 i"/>
+</g>
+<g id="T12-bar" data-part="Handlebar" data-category="chassis">
+<path d="M589.36 202.26 L576.56 170.26 L559.84 176.94 L572.64 208.94 Z" class="t o"/>
+<path d="M514.2 177.6 C515.53 171.93 524.87 159.93 538.2 155.6 C551.53 151.27 581.53 149.27 594.2 151.6 C606.87 153.93 614.87 163.6 614.2 169.6 C613.53 175.6 604.2 184.27 590.2 187.6 C576.2 190.93 542.87 191.27 530.2 189.6 C517.53 187.93 512.87 183.27 514.2 177.6 Z" class="t o"/>
+<path d="M601.54 172.58 L655.54 176.58 L656.86 158.62 L602.86 154.62 Z" class="t2 o"/>
+<line x1="608.2" y1="155.6" x2="608.2" y2="175.6" class="f"/>
+<line x1="615.2" y1="155.6" x2="615.2" y2="175.6" class="f"/>
+<line x1="622.2" y1="155.6" x2="622.2" y2="175.6" class="f"/>
+<line x1="629.2" y1="155.6" x2="629.2" y2="175.6" class="f"/>
+<line x1="636.2" y1="155.6" x2="636.2" y2="175.6" class="f"/>
+<line x1="643.2" y1="155.6" x2="643.2" y2="175.6" class="f"/>
+<line x1="650.2" y1="155.6" x2="650.2" y2="175.6" class="f"/>
+<path d="M594.2 157.6 C588.2 158.27 567.2 158.27 558.2 161.6 C549.2 164.93 543.2 174.93 540.2 177.6" class="n o" stroke-width="5"/>
+<path d="M576.2 153.6 C575.2 146.93 569.53 124.27 570.2 113.6 C570.87 102.93 578.53 93.6 580.2 89.6" class="n o" stroke-width="4"/>
+<path d="M562.2 89.6 a20 9 -14 1 0 40 -9 a20 9 -14 1 0 -40 9 Z" class="t o"/>
+</g>
+<g id="T12-display" data-part="Digital display" data-category="electrical">
+<path d="M518.2 159.6 L558.2 145.6 L564.2 157.6 L524.2 171.6 Z" class="w o"/>
+<path d="M526.2 158.6 L554.2 148.6 L558.2 156.6 L530.2 166.6 Z" class="t2 f"/>
+</g>
+<g id="T12-labels">
+<g id="T12-headlight-label" data-part="LED headlight with ring DRL" data-category="electrical">
+<polyline points="516.6,268.4 516.6,50" class="ld"/>
+<text x="516.6" y="42" class="l" text-anchor="middle">LED headlight and DRL</text>
+<circle cx="516.6" cy="268.4" r="2.4" class="dot"/>
+</g>
+<g id="T12-display-label" data-part="Digital display" data-category="electrical">
+<polyline points="540.2,155.6 687.4,50" class="ld"/>
+<text x="687.4" y="42" class="l" text-anchor="middle">Digital display</text>
+<circle cx="540.2" cy="155.6" r="2.4" class="dot"/>
+</g>
+<g id="T12-battery-label" data-part="Swappable battery" data-category="electrical">
+<polyline points="973,468.8 973,50" class="ld"/>
+<text x="973" y="42" class="l" text-anchor="middle">Swappable battery</text>
+<circle cx="973" cy="468.8" r="2.4" class="dot"/>
+</g>
+<g id="T12-handle-label" data-part="Battery handle" data-category="electrical">
+<polyline points="1015,387.04 1124.8,50" class="ld"/>
+<text x="1124.8" y="42" class="l" text-anchor="middle">Battery handle</text>
+<circle cx="1015" cy="387.04" r="2.4" class="dot"/>
+</g>
+<g id="T12-shocks-label" data-part="Twin rear shocks" data-category="chassis">
+<polyline points="1119.72,513.6 1272.8,50" class="ld"/>
+<text x="1272.8" y="42" class="l" text-anchor="middle">Twin rear shocks</text>
+<circle cx="1119.72" cy="513.6" r="2.4" class="dot"/>
+</g>
+<g id="T12-storage-label" data-part="Under-seat storage" data-category="frame_body">
+<polyline points="1197,390.4 1436,50" class="ld"/>
+<text x="1436" y="42" class="l" text-anchor="middle">Under-seat storage</text>
+<circle cx="1197" cy="390.4" r="2.4" class="dot"/>
+</g>
+<g id="T12-fwheel-label" data-part="14 in cast wheel" data-category="wheels">
+<polyline points="292.69,546.62 292.69,840" class="ld"/>
+<text x="292.69" y="856" class="l" text-anchor="middle">14 in cast wheel</text>
+<circle cx="292.69" cy="546.62" r="2.4" class="dot"/>
+</g>
+<g id="T12-controller-label" data-part="Motor controller" data-category="electrical">
+<polyline points="726.6,609.92 726.6,840" class="ld"/>
+<text x="726.6" y="856" class="l" text-anchor="middle">Motor controller</text>
+<circle cx="726.6" cy="609.92" r="2.4" class="dot"/>
+</g>
+<g id="T12-floor-label" data-part="Step-through floor" data-category="frame_body">
+<polyline points="771.4,569.6 889.8,840" class="ld"/>
+<text x="889.8" y="856" class="l" text-anchor="middle">Step-through floor</text>
+<circle cx="771.4" cy="569.6" r="2.4" class="dot"/>
+</g>
+<g id="T12-socket-label" data-part="Charge socket" data-category="electrical">
+<polyline points="925.4,468.8 1041.6,840" class="ld"/>
+<text x="1041.6" y="856" class="l" text-anchor="middle">Charge socket</text>
+<circle cx="925.4" cy="468.8" r="2.4" class="dot"/>
+</g>
+<g id="T12-regen-label" data-part="Regenerative braking" data-category="chassis">
+<polyline points="1102.69,623.04 1201,840" class="ld"/>
+<text x="1201" y="856" class="l" text-anchor="middle">Regenerative braking</text>
+<circle cx="1102.69" cy="623.04" r="2.4" class="dot"/>
+</g>
+<g id="T12-hubmotor-label" data-part="Hub motor" data-category="powertrain">
+<polyline points="1182.2,668.04 1345.2,840" class="ld"/>
+<text x="1345.2" y="856" class="l" text-anchor="middle">Hub motor</text>
+<circle cx="1182.2" cy="668.04" r="2.4" class="dot"/>
+</g>
+</g>
+</svg>

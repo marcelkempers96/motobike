@@ -1,0 +1,793 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="T07" viewBox="0 0 1600 900">
+<title>T07 Superbike, left side elevation, fairing cut away over the radiator and cylinder head</title>
+<desc>Litre-class sport bike: full fairing with ram-air intake, twin-spar aluminium frame, liquid-cooled inline-four, upside-down fork, radial calipers on twin discs, aluminium swingarm with monoshock linkage, short side silencer.</desc>
+<style>
+#T07 path,#T07 line,#T07 circle,#T07 rect,#T07 ellipse,#T07 polyline,#T07 polygon{stroke-linecap:round;stroke-linejoin:round}
+#T07 .o{stroke:#1E2B5E;stroke-width:2.2}
+#T07 .i{stroke:#1E2B5E;stroke-width:1.3}
+#T07 .f{stroke:#1E2B5E;stroke-width:0.8}
+#T07 .h{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:6 4;fill:none}
+#T07 .c{stroke:#1E2B5E;stroke-width:0.8;stroke-dasharray:14 4 2 4;fill:none}
+#T07 .ph{stroke:#1E2B5E;stroke-width:1;stroke-dasharray:18 4 3 4 3 4;fill:none}
+#T07 .n{fill:none}
+#T07 .t{fill:#DCE4F2}
+#T07 .t2{fill:#B9C7E3}
+#T07 .w{fill:#FFFFFF}
+#T07 .k{fill:#1E2B5E}
+#T07 .x{fill:url(#T07-hx)}
+#T07 .xb{fill:url(#T07-hxb)}
+#T07 .xr{fill:url(#T07-hxr)}
+#T07 .fl{fill:url(#T07-fl)}
+#T07 .af{fill:#C8502A}
+#T07 .as{stroke:#C8502A}
+#T07 .ld{stroke:#1E2B5E;stroke-width:0.9;fill:none}
+#T07 .dot{fill:#1E2B5E}
+#T07 .dl{stroke:#1E2B5E;stroke-width:0.8;fill:none}
+#T07 .acc{stroke:#C8502A;stroke-width:2.6;fill:none}
+#T07 .acct{stroke:#C8502A;stroke-width:1.6;fill:none}
+#T07 text{fill:#1E2B5E}
+#T07 .l{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:500}
+#T07 .ls{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:15px;font-weight:400}
+#T07 .la{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:16px;font-weight:600;fill:#C8502A}
+#T07 .m{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500}
+#T07 .mb{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600}
+#T07 .pt{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.02em}
+#T07 .pl{font-family:'IBM Plex Serif',serif;font-style:italic;font-weight:600;font-size:22px}
+#T07 .num{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:15px;font-weight:500}
+#T07 .sw{font-family:'IBM Plex Sans Condensed','IBM Plex Sans',sans-serif;font-weight:700;fill:#1E2B5E}
+#T07 .lcd{font-family:'IBM Plex Mono',monospace;font-weight:600;fill:#1E2B5E}
+</style>
+<defs>
+<pattern id="T07-hx" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
+<pattern id="T07-hxb" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(-45)"><rect width="6" height="6" fill="#B9C7E3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#1E2B5E" stroke-width="0.7"/></pattern>
+<pattern id="T07-hxr" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><rect width="8" height="8" fill="#DCE4F2"/><line x1="0" y1="0" x2="0" y2="8" stroke="#1E2B5E" stroke-width="0.7"/><line x1="4" y1="0" x2="4" y2="8" stroke="#1E2B5E" stroke-width="0.7" stroke-dasharray="2 2"/></pattern>
+<pattern id="T07-fl" patternUnits="userSpaceOnUse" width="10" height="8"><rect width="10" height="8" fill="#F3D9CE"/><line x1="1" y1="2" x2="5" y2="2" stroke="#C8502A" stroke-width="0.7"/><line x1="6" y1="6" x2="9" y2="6" stroke="#C8502A" stroke-width="0.7"/></pattern>
+<marker id="T07-ar" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 1.5 L10 5 L0 8.5 Z" fill="#1E2B5E"/></marker>
+<marker id="T07-aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="13" markerHeight="13" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#C8502A"/></marker>
+<marker id="T07-ai" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0.5 L10 5 L0 9.5 L2.5 5 Z" fill="#1E2B5E"/></marker>
+</defs>
+<line x1="70" y1="770" x2="1530" y2="770" class="i"/>
+<line x1="70" y1="771" x2="63" y2="779" class="f"/>
+<line x1="86" y1="771" x2="79" y2="779" class="f"/>
+<line x1="102" y1="771" x2="95" y2="779" class="f"/>
+<line x1="118" y1="771" x2="111" y2="779" class="f"/>
+<line x1="134" y1="771" x2="127" y2="779" class="f"/>
+<line x1="150" y1="771" x2="143" y2="779" class="f"/>
+<line x1="166" y1="771" x2="159" y2="779" class="f"/>
+<line x1="182" y1="771" x2="175" y2="779" class="f"/>
+<line x1="198" y1="771" x2="191" y2="779" class="f"/>
+<line x1="214" y1="771" x2="207" y2="779" class="f"/>
+<line x1="230" y1="771" x2="223" y2="779" class="f"/>
+<line x1="246" y1="771" x2="239" y2="779" class="f"/>
+<line x1="262" y1="771" x2="255" y2="779" class="f"/>
+<line x1="278" y1="771" x2="271" y2="779" class="f"/>
+<line x1="294" y1="771" x2="287" y2="779" class="f"/>
+<line x1="310" y1="771" x2="303" y2="779" class="f"/>
+<line x1="326" y1="771" x2="319" y2="779" class="f"/>
+<line x1="342" y1="771" x2="335" y2="779" class="f"/>
+<line x1="358" y1="771" x2="351" y2="779" class="f"/>
+<line x1="374" y1="771" x2="367" y2="779" class="f"/>
+<line x1="390" y1="771" x2="383" y2="779" class="f"/>
+<line x1="406" y1="771" x2="399" y2="779" class="f"/>
+<line x1="422" y1="771" x2="415" y2="779" class="f"/>
+<line x1="438" y1="771" x2="431" y2="779" class="f"/>
+<line x1="454" y1="771" x2="447" y2="779" class="f"/>
+<line x1="470" y1="771" x2="463" y2="779" class="f"/>
+<line x1="486" y1="771" x2="479" y2="779" class="f"/>
+<line x1="502" y1="771" x2="495" y2="779" class="f"/>
+<line x1="518" y1="771" x2="511" y2="779" class="f"/>
+<line x1="534" y1="771" x2="527" y2="779" class="f"/>
+<line x1="550" y1="771" x2="543" y2="779" class="f"/>
+<line x1="566" y1="771" x2="559" y2="779" class="f"/>
+<line x1="582" y1="771" x2="575" y2="779" class="f"/>
+<line x1="598" y1="771" x2="591" y2="779" class="f"/>
+<line x1="614" y1="771" x2="607" y2="779" class="f"/>
+<line x1="630" y1="771" x2="623" y2="779" class="f"/>
+<line x1="646" y1="771" x2="639" y2="779" class="f"/>
+<line x1="662" y1="771" x2="655" y2="779" class="f"/>
+<line x1="678" y1="771" x2="671" y2="779" class="f"/>
+<line x1="694" y1="771" x2="687" y2="779" class="f"/>
+<line x1="710" y1="771" x2="703" y2="779" class="f"/>
+<line x1="726" y1="771" x2="719" y2="779" class="f"/>
+<line x1="742" y1="771" x2="735" y2="779" class="f"/>
+<line x1="758" y1="771" x2="751" y2="779" class="f"/>
+<line x1="774" y1="771" x2="767" y2="779" class="f"/>
+<line x1="790" y1="771" x2="783" y2="779" class="f"/>
+<line x1="806" y1="771" x2="799" y2="779" class="f"/>
+<line x1="822" y1="771" x2="815" y2="779" class="f"/>
+<line x1="838" y1="771" x2="831" y2="779" class="f"/>
+<line x1="854" y1="771" x2="847" y2="779" class="f"/>
+<line x1="870" y1="771" x2="863" y2="779" class="f"/>
+<line x1="886" y1="771" x2="879" y2="779" class="f"/>
+<line x1="902" y1="771" x2="895" y2="779" class="f"/>
+<line x1="918" y1="771" x2="911" y2="779" class="f"/>
+<line x1="934" y1="771" x2="927" y2="779" class="f"/>
+<line x1="950" y1="771" x2="943" y2="779" class="f"/>
+<line x1="966" y1="771" x2="959" y2="779" class="f"/>
+<line x1="982" y1="771" x2="975" y2="779" class="f"/>
+<line x1="998" y1="771" x2="991" y2="779" class="f"/>
+<line x1="1014" y1="771" x2="1007" y2="779" class="f"/>
+<line x1="1030" y1="771" x2="1023" y2="779" class="f"/>
+<line x1="1046" y1="771" x2="1039" y2="779" class="f"/>
+<line x1="1062" y1="771" x2="1055" y2="779" class="f"/>
+<line x1="1078" y1="771" x2="1071" y2="779" class="f"/>
+<line x1="1094" y1="771" x2="1087" y2="779" class="f"/>
+<line x1="1110" y1="771" x2="1103" y2="779" class="f"/>
+<line x1="1126" y1="771" x2="1119" y2="779" class="f"/>
+<line x1="1142" y1="771" x2="1135" y2="779" class="f"/>
+<line x1="1158" y1="771" x2="1151" y2="779" class="f"/>
+<line x1="1174" y1="771" x2="1167" y2="779" class="f"/>
+<line x1="1190" y1="771" x2="1183" y2="779" class="f"/>
+<line x1="1206" y1="771" x2="1199" y2="779" class="f"/>
+<line x1="1222" y1="771" x2="1215" y2="779" class="f"/>
+<line x1="1238" y1="771" x2="1231" y2="779" class="f"/>
+<line x1="1254" y1="771" x2="1247" y2="779" class="f"/>
+<line x1="1270" y1="771" x2="1263" y2="779" class="f"/>
+<line x1="1286" y1="771" x2="1279" y2="779" class="f"/>
+<line x1="1302" y1="771" x2="1295" y2="779" class="f"/>
+<line x1="1318" y1="771" x2="1311" y2="779" class="f"/>
+<line x1="1334" y1="771" x2="1327" y2="779" class="f"/>
+<line x1="1350" y1="771" x2="1343" y2="779" class="f"/>
+<line x1="1366" y1="771" x2="1359" y2="779" class="f"/>
+<line x1="1382" y1="771" x2="1375" y2="779" class="f"/>
+<line x1="1398" y1="771" x2="1391" y2="779" class="f"/>
+<line x1="1414" y1="771" x2="1407" y2="779" class="f"/>
+<line x1="1430" y1="771" x2="1423" y2="779" class="f"/>
+<line x1="1446" y1="771" x2="1439" y2="779" class="f"/>
+<line x1="1462" y1="771" x2="1455" y2="779" class="f"/>
+<line x1="1478" y1="771" x2="1471" y2="779" class="f"/>
+<line x1="1494" y1="771" x2="1487" y2="779" class="f"/>
+<line x1="1510" y1="771" x2="1503" y2="779" class="f"/>
+<line x1="1526" y1="771" x2="1519" y2="779" class="f"/>
+<g id="T07-rwheel" data-part="Rear wheel" data-category="superbike">
+<path d="M959 584 a186 186 0 1 0 372 0 a186 186 0 1 0 -372 0 Z M1020 584 a125 125 0 1 0 250 0 a125 125 0 1 0 -250 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="1145" cy="584" r="162.82" class="n f"/>
+<circle cx="1145" cy="584" r="179" class="n f" stroke-dasharray="2 5"/>
+<line x1="1329" y1="584" x2="1319.76" y2="593.16" class="f"/>
+<line x1="1327.99" y1="603.23" x2="1317.85" y2="611.38" class="f"/>
+<line x1="1324.98" y1="622.26" x2="1314.04" y2="629.29" class="f"/>
+<line x1="1319.99" y1="640.86" x2="1308.38" y2="646.71" class="f"/>
+<line x1="1313.09" y1="658.84" x2="1300.93" y2="663.45" class="f"/>
+<line x1="1304.35" y1="676" x2="1291.77" y2="679.31" class="f"/>
+<line x1="1293.86" y1="692.15" x2="1281" y2="694.13" class="f"/>
+<line x1="1281.74" y1="707.12" x2="1268.74" y2="707.74" class="f"/>
+<line x1="1268.12" y1="720.74" x2="1255.13" y2="720" class="f"/>
+<line x1="1253.15" y1="732.86" x2="1240.31" y2="730.77" class="f"/>
+<line x1="1237" y1="743.35" x2="1224.45" y2="739.93" class="f"/>
+<line x1="1219.84" y1="752.09" x2="1207.71" y2="747.38" class="f"/>
+<line x1="1201.86" y1="758.99" x2="1190.29" y2="753.04" class="f"/>
+<line x1="1183.26" y1="763.98" x2="1172.38" y2="756.85" class="f"/>
+<line x1="1164.23" y1="766.99" x2="1154.16" y2="758.76" class="f"/>
+<line x1="1145" y1="768" x2="1135.84" y2="758.76" class="f"/>
+<line x1="1125.77" y1="766.99" x2="1117.62" y2="756.85" class="f"/>
+<line x1="1106.74" y1="763.98" x2="1099.71" y2="753.04" class="f"/>
+<line x1="1088.14" y1="758.99" x2="1082.29" y2="747.38" class="f"/>
+<line x1="1070.16" y1="752.09" x2="1065.55" y2="739.93" class="f"/>
+<line x1="1053" y1="743.35" x2="1049.69" y2="730.77" class="f"/>
+<line x1="1036.85" y1="732.86" x2="1034.87" y2="720" class="f"/>
+<line x1="1021.88" y1="720.74" x2="1021.26" y2="707.74" class="f"/>
+<line x1="1008.26" y1="707.12" x2="1009" y2="694.13" class="f"/>
+<line x1="996.14" y1="692.15" x2="998.23" y2="679.31" class="f"/>
+<line x1="985.65" y1="676" x2="989.07" y2="663.45" class="f"/>
+<line x1="976.91" y1="658.84" x2="981.62" y2="646.71" class="f"/>
+<line x1="970.01" y1="640.86" x2="975.96" y2="629.29" class="f"/>
+<line x1="965.02" y1="622.26" x2="972.15" y2="611.38" class="f"/>
+<line x1="962.01" y1="603.23" x2="970.24" y2="593.16" class="f"/>
+<line x1="961" y1="584" x2="970.24" y2="574.84" class="f"/>
+<line x1="962.01" y1="564.77" x2="972.15" y2="556.62" class="f"/>
+<line x1="965.02" y1="545.74" x2="975.96" y2="538.71" class="f"/>
+<line x1="970.01" y1="527.14" x2="981.62" y2="521.29" class="f"/>
+<line x1="976.91" y1="509.16" x2="989.07" y2="504.55" class="f"/>
+<line x1="985.65" y1="492" x2="998.23" y2="488.69" class="f"/>
+<line x1="996.14" y1="475.85" x2="1009" y2="473.87" class="f"/>
+<line x1="1008.26" y1="460.88" x2="1021.26" y2="460.26" class="f"/>
+<line x1="1021.88" y1="447.26" x2="1034.87" y2="448" class="f"/>
+<line x1="1036.85" y1="435.14" x2="1049.69" y2="437.23" class="f"/>
+<line x1="1053" y1="424.65" x2="1065.55" y2="428.07" class="f"/>
+<line x1="1070.16" y1="415.91" x2="1082.29" y2="420.62" class="f"/>
+<line x1="1088.14" y1="409.01" x2="1099.71" y2="414.96" class="f"/>
+<line x1="1106.74" y1="404.02" x2="1117.62" y2="411.15" class="f"/>
+<line x1="1125.77" y1="401.01" x2="1135.84" y2="409.24" class="f"/>
+<line x1="1145" y1="400" x2="1154.16" y2="409.24" class="f"/>
+<line x1="1164.23" y1="401.01" x2="1172.38" y2="411.15" class="f"/>
+<line x1="1183.26" y1="404.02" x2="1190.29" y2="414.96" class="f"/>
+<line x1="1201.86" y1="409.01" x2="1207.71" y2="420.62" class="f"/>
+<line x1="1219.84" y1="415.91" x2="1224.45" y2="428.07" class="f"/>
+<line x1="1237" y1="424.65" x2="1240.31" y2="437.23" class="f"/>
+<line x1="1253.15" y1="435.14" x2="1255.13" y2="448" class="f"/>
+<line x1="1268.12" y1="447.26" x2="1268.74" y2="460.26" class="f"/>
+<line x1="1281.74" y1="460.88" x2="1281" y2="473.87" class="f"/>
+<line x1="1293.86" y1="475.85" x2="1291.77" y2="488.69" class="f"/>
+<line x1="1304.35" y1="492" x2="1300.93" y2="504.55" class="f"/>
+<line x1="1313.09" y1="509.16" x2="1308.38" y2="521.29" class="f"/>
+<line x1="1319.99" y1="527.14" x2="1314.04" y2="538.71" class="f"/>
+<line x1="1324.98" y1="545.74" x2="1317.85" y2="556.62" class="f"/>
+<line x1="1327.99" y1="564.77" x2="1319.76" y2="574.84" class="f"/>
+<path d="M1020 584 a125 125 0 1 0 250 0 a125 125 0 1 0 -250 0 Z M1034 584 a111 111 0 1 0 222 0 a111 111 0 1 0 -222 0 Z" class="t o" fill-rule="evenodd"/>
+<circle cx="1145" cy="584" r="120" class="n f"/>
+<path d="M1143.43 554.04 L1150.32 523.18 L1119.58 473.9 L1141.06 471.07 L1157.72 511.85 L1187.33 479.23 L1206.54 489.23 L1160.8 525.03 L1156.72 556.38 Z" class="t o"/>
+<line x1="1151.25" y1="548.55" x2="1156.56" y2="518.41" class="f"/>
+<line x1="1146.39" y1="504.09" x2="1131.96" y2="477.8" class="f"/>
+<line x1="1171.02" y1="508.43" x2="1193.58" y2="488.66" class="f"/>
+<path d="M1171.73 597.62 L1195.01 619.02 L1253.06 617.04 L1244.77 637.05 L1201.12 631.09 L1214.57 673.05 L1196.3 684.68 L1188.17 627.17 L1163.05 607.96 Z" class="t o"/>
+<line x1="1172.58" y1="607.14" x2="1196.02" y2="626.81" class="f"/>
+<line x1="1213.5" y1="625.16" x2="1243.49" y2="625.81" class="f"/>
+<line x1="1197.43" y1="644.32" x2="1203.28" y2="673.74" class="f"/>
+<path d="M1119.84 600.34 L1089.67 609.8 L1062.36 661.07 L1049.17 643.88 L1076.16 609.06 L1033.1 599.73 L1032.15 578.09 L1086.03 599.8 L1115.22 587.66 Z" class="t o"/>
+<line x1="1111.17" y1="596.31" x2="1082.42" y2="606.78" class="f"/>
+<line x1="1075.1" y1="622.75" x2="1059.55" y2="648.39" class="f"/>
+<line x1="1066.55" y1="599.25" x2="1038.15" y2="589.6" class="f"/>
+<circle cx="1145" cy="584" r="32" class="t o"/>
+<circle cx="1145" cy="584" r="21" class="t2 i"/>
+<path d="M1153.67 590.77 L1143.47 594.89 L1134.8 588.12 L1136.33 577.23 L1146.53 573.11 L1155.2 579.88 Z" class="t2 f"/>
+<circle cx="1145" cy="584" r="4.95" class="w f"/>
+</g>
+<g id="T07-hugger" data-part="Rear hugger" data-category="superbike">
+<path d="M958 515.94 A199 199 0 0 1 1110.44 388.02 L1112.18 397.87 A189 189 0 0 0 967.4 519.36 Z" class="t o"/>
+</g>
+<g id="T07-chain" data-part="Drive chain" data-category="superbike">
+<path d="M1211.5 579.76 A4.2 4.2 0 0 0 1211.5 588.24 L1214.67 587.96 L1214.48 590.46 L1211.38 589.72 A4.2 4.2 0 0 0 1210.12 598.1 L1213.3 598.3 L1212.74 600.75 L1209.79 599.55 A4.2 4.2 0 0 0 1207.29 607.65 L1210.4 608.32 L1209.49 610.66 L1206.75 609.03 A4.2 4.2 0 0 0 1203.07 616.67 L1206.05 617.8 L1204.8 619.97 L1202.33 617.96 A4.2 4.2 0 0 0 1197.55 624.96 L1200.33 626.52 L1198.77 628.48 L1196.63 626.12 A4.2 4.2 0 0 0 1190.86 632.33 L1193.37 634.29 L1191.54 636 L1189.77 633.35 A4.2 4.2 0 0 0 1183.15 638.63 L1185.34 640.94 L1183.27 642.35 L1181.92 639.47 A4.2 4.2 0 0 0 1174.58 643.71 L1176.4 646.32 L1174.14 647.4 L1173.24 644.35 A4.2 4.2 0 0 0 1165.35 647.45 L1166.76 650.3 L1164.37 651.04 L1163.93 647.89 A4.2 4.2 0 0 0 1155.67 649.77 L1156.64 652.8 L1154.16 653.18 L1154.19 649.99 A4.2 4.2 0 0 0 1145.74 650.63 L1146.25 653.77 L1143.75 653.77 L1144.26 650.63 A4.2 4.2 0 0 0 1135.81 649.99 L1135.84 653.18 L1133.36 652.8 L1134.33 649.77 A4.2 4.2 0 0 0 1126.07 647.89 L1125.63 651.04 L1123.24 650.3 L1124.65 647.45 A4.2 4.2 0 0 0 1116.76 644.35 L1115.86 647.4 L1113.6 646.32 L1115.42 643.71 A4.2 4.2 0 0 0 1108.08 639.47 L1106.73 642.35 L1104.66 640.94 L1106.85 638.63 A4.2 4.2 0 0 0 1100.23 633.35 L1098.46 636 L1096.63 634.29 L1099.14 632.33 A4.2 4.2 0 0 0 1093.37 626.12 L1091.23 628.48 L1089.67 626.52 L1092.45 624.96 A4.2 4.2 0 0 0 1087.67 617.96 L1085.2 619.97 L1083.95 617.8 L1086.93 616.67 A4.2 4.2 0 0 0 1083.25 609.03 L1080.51 610.66 L1079.6 608.32 L1082.71 607.65 A4.2 4.2 0 0 0 1080.21 599.55 L1077.26 600.75 L1076.7 598.3 L1079.88 598.1 A4.2 4.2 0 0 0 1078.62 589.72 L1075.52 590.46 L1075.33 587.96 L1078.5 588.24 A4.2 4.2 0 0 0 1078.5 579.76 L1075.33 580.04 L1075.52 577.54 L1078.62 578.28 A4.2 4.2 0 0 0 1079.88 569.9 L1076.7 569.7 L1077.26 567.25 L1080.21 568.45 A4.2 4.2 0 0 0 1082.71 560.35 L1079.6 559.68 L1080.51 557.34 L1083.25 558.97 A4.2 4.2 0 0 0 1086.93 551.33 L1083.95 550.2 L1085.2 548.03 L1087.67 550.04 A4.2 4.2 0 0 0 1092.45 543.04 L1089.67 541.48 L1091.23 539.52 L1093.37 541.88 A4.2 4.2 0 0 0 1099.14 535.67 L1096.63 533.71 L1098.46 532 L1100.23 534.65 A4.2 4.2 0 0 0 1106.85 529.37 L1104.66 527.06 L1106.73 525.65 L1108.08 528.53 A4.2 4.2 0 0 0 1115.42 524.29 L1113.6 521.68 L1115.86 520.6 L1116.76 523.65 A4.2 4.2 0 0 0 1124.65 520.55 L1123.24 517.7 L1125.63 516.96 L1126.07 520.11 A4.2 4.2 0 0 0 1134.33 518.23 L1133.36 515.2 L1135.84 514.82 L1135.81 518.01 A4.2 4.2 0 0 0 1144.26 517.37 L1143.75 514.23 L1146.25 514.23 L1145.74 517.37 A4.2 4.2 0 0 0 1154.19 518.01 L1154.16 514.82 L1156.64 515.2 L1155.67 518.23 A4.2 4.2 0 0 0 1163.93 520.11 L1164.37 516.96 L1166.76 517.7 L1165.35 520.55 A4.2 4.2 0 0 0 1173.24 523.65 L1174.14 520.6 L1176.4 521.68 L1174.58 524.29 A4.2 4.2 0 0 0 1181.92 528.53 L1183.27 525.65 L1185.34 527.06 L1183.15 529.37 A4.2 4.2 0 0 0 1189.77 534.65 L1191.54 532 L1193.37 533.71 L1190.86 535.67 A4.2 4.2 0 0 0 1196.63 541.88 L1198.77 539.52 L1200.33 541.48 L1197.55 543.04 A4.2 4.2 0 0 0 1202.33 550.04 L1204.8 548.03 L1206.05 550.2 L1203.07 551.33 A4.2 4.2 0 0 0 1206.75 558.97 L1209.49 557.34 L1210.4 559.68 L1207.29 560.35 A4.2 4.2 0 0 0 1209.79 568.45 L1212.74 567.25 L1213.3 569.7 L1210.12 569.9 A4.2 4.2 0 0 0 1211.38 578.28 L1214.48 577.54 L1214.67 580.04 Z" class="t2 i"/>
+<path d="M1196.23 596.77 A52.8 52.8 0 0 1 1177.51 625.61 L1163.29 607.4 A29.7 29.7 0 0 0 1173.82 591.19 Z" class="w f"/>
+<path d="M1148.68 636.67 A52.8 52.8 0 0 1 1115.47 627.77 L1128.39 608.62 A29.7 29.7 0 0 0 1147.07 613.63 Z" class="w f"/>
+<path d="M1096.04 603.78 A52.8 52.8 0 0 1 1094.25 569.45 L1116.45 575.81 A29.7 29.7 0 0 0 1117.46 595.13 Z" class="w f"/>
+<path d="M1111.06 543.55 A52.8 52.8 0 0 1 1143.16 531.23 L1143.96 554.32 A29.7 29.7 0 0 0 1125.91 561.25 Z" class="w f"/>
+<path d="M1172.98 539.22 A52.8 52.8 0 0 1 1194.62 565.94 L1172.91 573.84 A29.7 29.7 0 0 0 1160.74 558.81 Z" class="w f"/>
+<circle cx="1145" cy="584" r="26.4" class="t i"/>
+<path d="M770.27 561.59 L1138.56 522.84 L1137.62 513.89 L769.33 552.64 Z" class="t2 i"/>
+<circle cx="778.79" cy="556.17" r="1.6" class="w f"/>
+<circle cx="787.77" cy="555.22" r="1.6" class="w f"/>
+<circle cx="796.75" cy="554.28" r="1.6" class="w f"/>
+<circle cx="805.73" cy="553.33" r="1.6" class="w f"/>
+<circle cx="814.72" cy="552.39" r="1.6" class="w f"/>
+<circle cx="823.7" cy="551.44" r="1.6" class="w f"/>
+<circle cx="832.68" cy="550.5" r="1.6" class="w f"/>
+<circle cx="841.66" cy="549.55" r="1.6" class="w f"/>
+<circle cx="850.65" cy="548.61" r="1.6" class="w f"/>
+<circle cx="859.63" cy="547.66" r="1.6" class="w f"/>
+<circle cx="868.61" cy="546.72" r="1.6" class="w f"/>
+<circle cx="877.59" cy="545.77" r="1.6" class="w f"/>
+<circle cx="886.58" cy="544.83" r="1.6" class="w f"/>
+<circle cx="895.56" cy="543.88" r="1.6" class="w f"/>
+<circle cx="904.54" cy="542.94" r="1.6" class="w f"/>
+<circle cx="913.53" cy="541.99" r="1.6" class="w f"/>
+<circle cx="922.51" cy="541.05" r="1.6" class="w f"/>
+<circle cx="931.49" cy="540.1" r="1.6" class="w f"/>
+<circle cx="940.47" cy="539.16" r="1.6" class="w f"/>
+<circle cx="949.46" cy="538.21" r="1.6" class="w f"/>
+<circle cx="958.44" cy="537.27" r="1.6" class="w f"/>
+<circle cx="967.42" cy="536.32" r="1.6" class="w f"/>
+<circle cx="976.4" cy="535.38" r="1.6" class="w f"/>
+<circle cx="985.39" cy="534.43" r="1.6" class="w f"/>
+<circle cx="994.37" cy="533.49" r="1.6" class="w f"/>
+<circle cx="1003.35" cy="532.54" r="1.6" class="w f"/>
+<circle cx="1012.34" cy="531.6" r="1.6" class="w f"/>
+<circle cx="1021.32" cy="530.65" r="1.6" class="w f"/>
+<circle cx="1030.3" cy="529.7" r="1.6" class="w f"/>
+<circle cx="1039.28" cy="528.76" r="1.6" class="w f"/>
+<circle cx="1048.27" cy="527.81" r="1.6" class="w f"/>
+<circle cx="1057.25" cy="526.87" r="1.6" class="w f"/>
+<circle cx="1066.23" cy="525.92" r="1.6" class="w f"/>
+<circle cx="1075.21" cy="524.98" r="1.6" class="w f"/>
+<circle cx="1084.2" cy="524.03" r="1.6" class="w f"/>
+<circle cx="1093.18" cy="523.09" r="1.6" class="w f"/>
+<circle cx="1102.16" cy="522.14" r="1.6" class="w f"/>
+<circle cx="1111.15" cy="521.2" r="1.6" class="w f"/>
+<circle cx="1120.13" cy="520.25" r="1.6" class="w f"/>
+<circle cx="1129.11" cy="519.31" r="1.6" class="w f"/>
+<path d="M768.52 603.26 L1135.37 653.84 L1136.6 644.92 L769.75 594.35 Z" class="t2 i"/>
+<circle cx="778.08" cy="600.04" r="1.6" class="w f"/>
+<circle cx="787.03" cy="601.27" r="1.6" class="w f"/>
+<circle cx="795.97" cy="602.5" r="1.6" class="w f"/>
+<circle cx="804.92" cy="603.74" r="1.6" class="w f"/>
+<circle cx="813.87" cy="604.97" r="1.6" class="w f"/>
+<circle cx="822.82" cy="606.2" r="1.6" class="w f"/>
+<circle cx="831.77" cy="607.44" r="1.6" class="w f"/>
+<circle cx="840.71" cy="608.67" r="1.6" class="w f"/>
+<circle cx="849.66" cy="609.91" r="1.6" class="w f"/>
+<circle cx="858.61" cy="611.14" r="1.6" class="w f"/>
+<circle cx="867.56" cy="612.37" r="1.6" class="w f"/>
+<circle cx="876.5" cy="613.61" r="1.6" class="w f"/>
+<circle cx="885.45" cy="614.84" r="1.6" class="w f"/>
+<circle cx="894.4" cy="616.07" r="1.6" class="w f"/>
+<circle cx="903.35" cy="617.31" r="1.6" class="w f"/>
+<circle cx="912.29" cy="618.54" r="1.6" class="w f"/>
+<circle cx="921.24" cy="619.77" r="1.6" class="w f"/>
+<circle cx="930.19" cy="621.01" r="1.6" class="w f"/>
+<circle cx="939.14" cy="622.24" r="1.6" class="w f"/>
+<circle cx="948.09" cy="623.48" r="1.6" class="w f"/>
+<circle cx="957.03" cy="624.71" r="1.6" class="w f"/>
+<circle cx="965.98" cy="625.94" r="1.6" class="w f"/>
+<circle cx="974.93" cy="627.18" r="1.6" class="w f"/>
+<circle cx="983.88" cy="628.41" r="1.6" class="w f"/>
+<circle cx="992.82" cy="629.64" r="1.6" class="w f"/>
+<circle cx="1001.77" cy="630.88" r="1.6" class="w f"/>
+<circle cx="1010.72" cy="632.11" r="1.6" class="w f"/>
+<circle cx="1019.67" cy="633.34" r="1.6" class="w f"/>
+<circle cx="1028.61" cy="634.58" r="1.6" class="w f"/>
+<circle cx="1037.56" cy="635.81" r="1.6" class="w f"/>
+<circle cx="1046.51" cy="637.05" r="1.6" class="w f"/>
+<circle cx="1055.46" cy="638.28" r="1.6" class="w f"/>
+<circle cx="1064.4" cy="639.51" r="1.6" class="w f"/>
+<circle cx="1073.35" cy="640.75" r="1.6" class="w f"/>
+<circle cx="1082.3" cy="641.98" r="1.6" class="w f"/>
+<circle cx="1091.25" cy="643.21" r="1.6" class="w f"/>
+<circle cx="1100.2" cy="644.45" r="1.6" class="w f"/>
+<circle cx="1109.14" cy="645.68" r="1.6" class="w f"/>
+<circle cx="1118.09" cy="646.91" r="1.6" class="w f"/>
+<circle cx="1127.04" cy="648.15" r="1.6" class="w f"/>
+<path d="M793.2 573.7 A4.2 4.2 0 0 0 793.2 582.3 L796.5 581.68 L796.05 583.97 L793.23 582.14 A4.2 4.2 0 0 0 789.94 590.08 L793.23 590.78 L791.93 592.72 L790.03 589.95 A4.2 4.2 0 0 0 783.95 596.03 L786.72 597.93 L784.78 599.23 L784.08 595.94 A4.2 4.2 0 0 0 776.14 599.23 L777.97 602.05 L775.68 602.5 L776.3 599.2 A4.2 4.2 0 0 0 767.7 599.2 L768.32 602.5 L766.03 602.05 L767.86 599.23 A4.2 4.2 0 0 0 759.92 595.94 L759.22 599.23 L757.28 597.93 L760.05 596.03 A4.2 4.2 0 0 0 753.97 589.95 L752.07 592.72 L750.77 590.78 L754.06 590.08 A4.2 4.2 0 0 0 750.77 582.14 L747.95 583.97 L747.5 581.68 L750.8 582.3 A4.2 4.2 0 0 0 750.8 573.7 L747.5 574.32 L747.95 572.03 L750.77 573.86 A4.2 4.2 0 0 0 754.06 565.92 L750.77 565.22 L752.07 563.28 L753.97 566.05 A4.2 4.2 0 0 0 760.05 559.97 L757.28 558.07 L759.22 556.77 L759.92 560.06 A4.2 4.2 0 0 0 767.86 556.77 L766.03 553.95 L768.32 553.5 L767.7 556.8 A4.2 4.2 0 0 0 776.3 556.8 L775.68 553.5 L777.97 553.95 L776.14 556.77 A4.2 4.2 0 0 0 784.08 560.06 L784.78 556.77 L786.72 558.07 L783.95 559.97 A4.2 4.2 0 0 0 790.03 566.05 L791.93 563.28 L793.23 565.22 L789.94 565.92 A4.2 4.2 0 0 0 793.23 573.86 L796.05 572.03 L796.5 574.32 Z" class="t2 i"/>
+<circle cx="772" cy="578" r="8.4" class="t i"/>
+</g>
+<g id="T07-swingarm" data-part="Aluminium swingarm" data-category="superbike">
+<path d="M804 528 C820 519.67 865.67 524.67 900 528 C934.33 531.33 975 541.67 1010 548 C1045 554.33 1084.67 562 1110 566 C1135.33 570 1153.33 566.67 1162 572 C1170.67 577.33 1170.67 593 1162 598 C1153.33 603 1137 602 1110 602 C1083 602 1035 600 1000 598 C965 596 932.67 593.33 900 590 C867.33 586.67 820 588.33 804 578 C788 567.67 788 536.33 804 528 Z" class="t o"/>
+<path d="M850 586 C863.33 595 903.33 630 930 640 C956.67 650 983.33 652 1010 646 C1036.67 640 1076.67 611 1090 604" class="n o" style="stroke-width:9;stroke:#1E2B5E"/>
+<path d="M850 586 C863.33 595 903.33 630 930 640 C956.67 650 983.33 652 1010 646 C1036.67 640 1076.67 611 1090 604" class="n" style="stroke-width:5;stroke:#DCE4F2"/>
+<line x1="930" y1="600" x2="930" y2="638" class="i"/>
+<line x1="1010" y1="600" x2="1010" y2="638" class="i"/>
+<path d="M845 540 C862.5 540.33 907.5 536 950 542 C992.5 548 1075 570.33 1100 576" class="n f"/>
+<rect x="1124" y="572" width="30" height="22" rx="3" class="t2 i"/>
+<line x1="1128" y1="583" x2="1150" y2="583" class="f"/>
+<circle cx="812" cy="552" r="17" class="t o"/>
+<path d="M819.79 556.5 L812 561 L804.21 556.5 L804.21 547.5 L812 543 L819.79 547.5 Z" class="t2 f"/>
+<circle cx="812" cy="552" r="4.05" class="w f"/>
+</g>
+<g id="T07-shock" data-part="Monoshock and linkage" data-category="superbike">
+<path d="M829.75 439.61 L846.25 524.31 L862.75 521.09 L846.25 436.39 Z" class="t2 i"/>
+<path d="M848.19 515.94 L863.19 592.94 L872.81 591.06 L857.81 514.06 Z" class="t i"/>
+<path d="M855.34 453.8 L830.56 473.02" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M855.34 453.8 L830.56 473.02" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M858.04 467.66 L833.26 486.88" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M858.04 467.66 L833.26 486.88" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M860.74 481.52 L835.96 500.74" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M860.74 481.52 L835.96 500.74" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M863.44 495.38 L838.66 514.6" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M863.44 495.38 L838.66 514.6" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M866.14 509.24 L841.36 528.46" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M866.14 509.24 L841.36 528.46" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M868.84 523.1 L844.06 542.32" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M868.84 523.1 L844.06 542.32" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M871.54 536.96 L846.76 556.18" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M871.54 536.96 L846.76 556.18" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<path d="M874.24 550.82 L849.46 570.04" class="i n" style="stroke-width:3.4;stroke:#1E2B5E"/>
+<path d="M874.24 550.82 L849.46 570.04" class="n" style="stroke-width:1.6;stroke:#B9C7E3"/>
+<circle cx="838" cy="438" r="7" class="t i"/>
+<circle cx="838" cy="438" r="3" class="w f"/>
+<circle cx="868" cy="592" r="7" class="t i"/>
+<circle cx="868" cy="592" r="3" class="w f"/>
+<path d="M823.71 453.57 L824.91 459.73 L858.29 453.23 L857.09 447.07 Z" class="t2 i"/>
+<path d="M846.51 570.61 L847.71 576.77 L881.09 570.27 L879.89 564.11 Z" class="t2 i"/>
+<path d="M866 592 L912 622 L858 640 Z" class="t2 o"/>
+<circle cx="866" cy="592" r="5" class="w i"/>
+<circle cx="912" cy="622" r="5" class="w i"/>
+<circle cx="858" cy="640" r="5" class="w i"/>
+<path d="M860.73 635.81 L814.73 605.81 L809.27 614.19 L855.27 644.19 Z" class="t i"/>
+<circle cx="870" cy="620" r="0.1" class="n"/>
+</g>
+<g id="T07-headers" data-part="Exhaust headers" data-category="superbike">
+<path d="M588 432 C584.33 446.67 566.5 485.33 566 520 C565.5 554.67 572.67 610.67 585 640 C597.33 669.33 609.17 685.33 640 696 C670.83 706.67 748.33 702.67 770 704" class="n o" style="stroke-width:13;stroke:#1E2B5E"/>
+<path d="M588 432 C584.33 446.67 566.5 485.33 566 520 C565.5 554.67 572.67 610.67 585 640 C597.33 669.33 609.17 685.33 640 696 C670.83 706.67 748.33 702.67 770 704" class="n" style="stroke-width:9;stroke:#B9C7E3"/>
+<path d="M597 432 C593.33 446.67 575.5 485.33 575 520 C574.5 554.67 581.67 610.67 594 640 C606.33 669.33 619.67 684.73 649 696 C678.33 707.27 749.83 705.67 770 707.6" class="n o" style="stroke-width:13;stroke:#1E2B5E"/>
+<path d="M597 432 C593.33 446.67 575.5 485.33 575 520 C574.5 554.67 581.67 610.67 594 640 C606.33 669.33 619.67 684.73 649 696 C678.33 707.27 749.83 705.67 770 707.6" class="n" style="stroke-width:9;stroke:#B9C7E3"/>
+</g>
+<g id="T07-engine" data-part="Inline-four engine" data-category="superbike">
+<path d="M612 566 C621 546.33 634.5 540.67 660 534 C685.5 527.33 740.67 521.67 765 526 C789.33 530.33 798.83 540 806 560 C813.17 580 814 623.67 808 646 C802 668.33 796.33 685.67 770 694 C743.67 702.33 677.33 703 650 696 C622.67 689 612.33 673.67 606 652 C599.67 630.33 603 585.67 612 566 Z" class="t o"/>
+<path d="M616 640 C630 642 669.33 652 700 652 C730.67 652 783.33 642 800 640" class="n f"/>
+<circle cx="720" cy="604" r="46" class="t o"/>
+<circle cx="720" cy="604" r="38" class="n f"/>
+<circle cx="759.6" cy="614.61" r="2.4" class="t2 f"/>
+<circle cx="730.61" cy="643.6" r="2.4" class="t2 f"/>
+<circle cx="691.01" cy="632.99" r="2.4" class="t2 f"/>
+<circle cx="680.4" cy="593.39" r="2.4" class="t2 f"/>
+<circle cx="709.39" cy="564.4" r="2.4" class="t2 f"/>
+<circle cx="748.99" cy="575.01" r="2.4" class="t2 f"/>
+<path d="M640 600 C640 593 654 580 660 580 C666 580 676 593 676 600 C676 607 666 622 660 622 C654 622 640 607 640 600 Z" class="t2 i"/>
+<rect x="628" y="652" width="34" height="30" rx="4" class="t2 i"/>
+<line x1="630" y1="658" x2="660" y2="658" class="f"/>
+<line x1="630" y1="664" x2="660" y2="664" class="f"/>
+<line x1="630" y1="670" x2="660" y2="670" class="f"/>
+<line x1="630" y1="676" x2="660" y2="676" class="f"/>
+<path d="M649.16 573.31 L605.16 497.1 L684.84 451.1 L728.84 527.31 Z" class="t o"/>
+<line x1="649.36" y1="561.65" x2="718.64" y2="521.65" class="f"/>
+<line x1="644.86" y1="553.85" x2="714.14" y2="513.85" class="f"/>
+<line x1="640.36" y1="546.06" x2="709.64" y2="506.06" class="f"/>
+<line x1="635.86" y1="538.27" x2="705.14" y2="498.27" class="f"/>
+<line x1="631.36" y1="530.47" x2="700.64" y2="490.47" class="f"/>
+<line x1="626.86" y1="522.68" x2="696.14" y2="482.68" class="f"/>
+<line x1="622.36" y1="514.88" x2="691.64" y2="474.88" class="f"/>
+<line x1="617.86" y1="507.09" x2="687.14" y2="467.09" class="f"/>
+<line x1="613.36" y1="499.3" x2="682.64" y2="459.3" class="f"/>
+<path d="M598.24 501.1 L573.24 457.8 L582.36 445.6 L655.1 403.6 L688.3 449.1 Z" class="t o"/>
+<path d="M577.16 448.6 L567.63 424.09 L584.68 409.62 L627.98 384.62 L651.64 405.6 Z" class="t2 o"/>
+<path d="M585.7 423.98 L582.75 425.68 L579.81 423.98 L579.81 420.58 L582.75 418.88 L585.7 420.58 Z" class="t2 f"/>
+<circle cx="582.75" cy="422.28" r="1.53" class="w f"/>
+<path d="M603.02 413.98 L600.07 415.68 L597.13 413.98 L597.13 410.58 L600.07 408.88 L603.02 410.58 Z" class="t2 f"/>
+<circle cx="600.07" cy="412.28" r="1.53" class="w f"/>
+<path d="M620.34 403.98 L617.39 405.68 L614.45 403.98 L614.45 400.58 L617.39 398.88 L620.34 400.58 Z" class="t2 f"/>
+<circle cx="617.39" cy="402.28" r="1.53" class="w f"/>
+<path d="M634.19 395.98 L631.25 397.68 L628.3 395.98 L628.3 392.58 L631.25 390.88 L634.19 392.58 Z" class="t2 f"/>
+<circle cx="631.25" cy="394.28" r="1.53" class="w f"/>
+<path d="M679.03 429.05 L706.74 413.05 L694.74 392.26 L665.3 409.26 Z" class="t2 i"/>
+<circle cx="707.67" cy="398.66" r="7" class="t i"/>
+</g>
+<g id="T07-airbox" data-part="Airbox" data-category="superbike">
+<path d="M596 300 L700 300 L772 312 L804 360 L800 420 L760 430 L690 410 L640 388 L606 350 Z" class="t2 o"/>
+<path d="M620 330 L700 322 L780 336" class="n f"/>
+<rect x="650" y="404" width="20" height="44" rx="3" class="t i" transform="rotate(-25 660 426)"/>
+<circle cx="656" cy="404" r="4" class="w f"/>
+<rect x="680" y="410" width="20" height="44" rx="3" class="t i" transform="rotate(-25 690 432)"/>
+<circle cx="686" cy="410" r="4" class="w f"/>
+<rect x="710" y="416" width="20" height="44" rx="3" class="t i" transform="rotate(-25 720 438)"/>
+<circle cx="716" cy="416" r="4" class="w f"/>
+<rect x="740" y="422" width="20" height="44" rx="3" class="t i" transform="rotate(-25 750 444)"/>
+<circle cx="746" cy="422" r="4" class="w f"/>
+<path d="M700 470 C705 455.33 743.33 452 760 452 C776.67 452 791.67 455.33 800 470 C808.33 484.67 811.67 524 810 540 C808.33 556 803.33 566 790 566 C776.67 566 745 556 730 540 C715 524 695 484.67 700 470 Z" class="t o"/>
+<circle cx="772" cy="506" r="16" class="t2 i"/>
+<circle cx="772" cy="506" r="6" class="w f"/>
+<path d="M700 470 C706.67 478.33 723.33 508.33 740 520 C756.67 531.67 790 536.67 800 540" class="n f"/>
+<path d="M610 360 C615 370 625 401.67 640 420 C655 438.33 690 461.67 700 470" class="n o" style="stroke-width:10;stroke:#1E2B5E"/>
+<path d="M610 360 C615 370 625 401.67 640 420 C655 438.33 690 461.67 700 470" class="n" style="stroke-width:6;stroke:#DCE4F2"/>
+</g>
+<g id="T07-radiator" data-part="Radiator" data-category="superbike">
+<path d="M547 336 C550.83 324.33 566.5 316 575 330 C583.5 344 592.83 388.33 598 420 C603.17 451.67 607 494.67 606 520 C605 545.33 598.67 563.67 592 572 C585.33 580.33 570.33 587 566 570 C561.67 553 568.33 498.33 566 470 C563.67 441.67 555.17 422.33 552 400 C548.83 377.67 543.17 347.67 547 336 Z" class="x o"/>
+<path d="M560 345 C563.67 359.17 577.33 394.17 582 430 C586.67 465.83 587 538.33 588 560" class="n i"/>
+<circle cx="600" cy="336" r="7" class="t i"/>
+</g>
+<g id="T07-frame" data-part="Twin-spar aluminium frame" data-category="superbike">
+<path d="M512 280 C523.33 274.33 557 281 580 284 C603 287 626.67 291 650 298 C673.33 305 698 313.67 720 326 C742 338.33 764.33 353 782 372 C799.67 391 815.33 415.33 826 440 C836.67 464.67 842.67 492.33 846 520 C849.33 547.67 852.67 591 846 606 C839.33 621 812.33 624.33 806 610 C799.67 595.67 809.67 543.33 808 520 C806.33 496.67 803.67 487 796 470 C788.33 453 776.67 434 762 418 C747.33 402 728.33 387 708 374 C687.67 361 662.33 348.67 640 340 C617.67 331.33 595.33 325.67 574 322 C552.67 318.33 522.33 325 512 318 C501.67 311 500.67 285.67 512 280 Z" class="t o"/>
+<path d="M530 302 C548.33 305 605.83 310 640 320 C674.17 330 708.33 343.67 735 362 C761.67 380.33 785.5 407 800 430 C814.5 453 818.33 471.67 822 500 C825.67 528.33 822 583.33 822 600" class="n f"/>
+<path d="M560 290 C575 292.67 621.67 297.33 650 306 C678.33 314.67 716.67 336 730 342" class="n f"/>
+<circle cx="690" cy="340" r="3.2" class="w f"/>
+<circle cx="760" cy="390" r="3.2" class="w f"/>
+<circle cx="812" cy="470" r="3.2" class="w f"/>
+<circle cx="826" cy="560" r="3.2" class="w f"/>
+<path d="M503 244 L547 262 L515 344 L475 326 Z" class="t2 o"/>
+<path d="M832.26 415.56 L1102.26 305.56 L1097.74 294.44 L827.74 404.44 Z" class="t i"/>
+<path d="M845.4 474.94 L1063.4 324.94 L1056.6 315.06 L838.6 465.06 Z" class="t i"/>
+</g>
+<g id="T07-tank" data-part="Fuel tank" data-category="superbike">
+<path d="M538 264 L560 216 L604 194 L700 190 L764 210 L800 250 L796 264 L720 280 L630 292 L556 294 Z" class="t o"/>
+<path d="M576 222 L612 204 L700 202 L756 220 L784 252" class="n f"/>
+<path d="M620 270 L690 256 L752 262" class="n f"/>
+<path d="M690 256 L712 230 L760 236" class="n f"/>
+<ellipse cx="650" cy="196" rx="16" ry="5" class="t2 i"/>
+</g>
+<g id="T07-seat" data-part="Rider seat" data-category="superbike">
+<path d="M790 258 C799.33 256.33 818.33 260 840 262 C861.67 264 900.67 267 920 270 C939.33 273 952 276.33 956 280 C960 283.67 960 290.33 944 292 C928 293.67 884.33 291.33 860 290 C835.67 288.67 810.67 287 798 284 C785.33 281 785.33 276.33 784 272 C782.67 267.67 780.67 259.67 790 258 Z" class="t2 o"/>
+</g>
+<g id="T07-tail" data-part="Tail and pillion seat cowl" data-category="superbike">
+<path d="M944 280 L1060 250 L1236 226 L1244 240 L1236 252 L1150 270 L1040 302 L960 328 L896 336 L870 314 L900 294 Z" class="t o"/>
+<path d="M986 266 L1020 244 L1112 230 L1122 240 L1060 254 Z" class="t2 i"/>
+<path d="M930 314 L1040 286 L1170 258" class="n f"/>
+<line x1="1000" y1="300" x2="1014" y2="286" class="f"/>
+<line x1="1022" y1="294" x2="1036" y2="280" class="f"/>
+<line x1="1044" y1="288" x2="1058" y2="274" class="f"/>
+<path d="M1232 234 L1250 236 L1246 252 L1232 250 Z" class="af i"/>
+<path d="M1166.7 286.26 L1218.7 362.26 L1225.3 357.74 L1173.3 281.74 Z" class="t2 i"/>
+<rect x="1206" y="356" width="34" height="52" rx="3" class="w i"/>
+<path d="M1196.72 332.39 L1236.72 320.39 L1235.28 315.61 L1195.28 327.61 Z" class="t i"/>
+<ellipse cx="1240" cy="317" rx="8" ry="5" class="af i"/>
+</g>
+<g id="T07-rearsets" data-part="Rear-sets" data-category="superbike">
+<path d="M842 506 C851.67 500 887.33 512.33 898 520 C908.67 527.67 910.67 543.33 906 552 C901.33 560.67 881 571.33 870 572 C859 572.67 844.67 567 840 556 C835.33 545 832.33 512 842 506 Z" class="t2 o"/>
+<circle cx="852" cy="520" r="3.6" class="w f"/>
+<circle cx="888" cy="534" r="3.6" class="w f"/>
+<circle cx="862" cy="558" r="3.6" class="w f"/>
+<rect x="872" y="528" width="44" height="14" rx="7" class="t i"/>
+<line x1="878" y1="530" x2="878" y2="540" class="f"/>
+<line x1="884" y1="530" x2="884" y2="540" class="f"/>
+<line x1="890" y1="530" x2="890" y2="540" class="f"/>
+<line x1="896" y1="530" x2="896" y2="540" class="f"/>
+<line x1="902" y1="530" x2="902" y2="540" class="f"/>
+<line x1="908" y1="530" x2="908" y2="540" class="f"/>
+<path d="M870.94 548.11 L812.94 534.11 L811.06 541.89 L869.06 555.89 Z" class="t i"/>
+<path d="M815 538 L815 524 L809 524 L809 538 Z" class="t2 i"/>
+<path d="M841.51 556.06 L785.51 570.06 L786.49 573.94 L842.49 559.94 Z" class="t2 f"/>
+</g>
+<g id="T07-fwheel" data-part="Front wheel" data-category="superbike">
+<path d="M156 596 a174 174 0 1 0 348 0 a174 174 0 1 0 -348 0 Z M205 596 a125 125 0 1 0 250 0 a125 125 0 1 0 -250 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="330" cy="596" r="155.38" class="n f"/>
+<circle cx="330" cy="596" r="167" class="n f" stroke-dasharray="2 5"/>
+<line x1="502" y1="596" x2="492.78" y2="604.53" class="f"/>
+<line x1="501.06" y1="613.98" x2="490.99" y2="621.5" class="f"/>
+<line x1="498.24" y1="631.76" x2="487.45" y2="638.19" class="f"/>
+<line x1="493.58" y1="649.15" x2="482.17" y2="654.41" class="f"/>
+<line x1="487.13" y1="665.96" x2="475.23" y2="670" class="f"/>
+<line x1="478.96" y1="682" x2="466.7" y2="684.78" class="f"/>
+<line x1="469.15" y1="697.1" x2="456.67" y2="698.58" class="f"/>
+<line x1="457.82" y1="711.09" x2="445.26" y2="711.26" class="f"/>
+<line x1="445.09" y1="723.82" x2="432.58" y2="722.67" class="f"/>
+<line x1="431.1" y1="735.15" x2="418.78" y2="732.7" class="f"/>
+<line x1="416" y1="744.96" x2="404" y2="741.23" class="f"/>
+<line x1="399.96" y1="753.13" x2="388.41" y2="748.17" class="f"/>
+<line x1="383.15" y1="759.58" x2="372.19" y2="753.45" class="f"/>
+<line x1="365.76" y1="764.24" x2="355.5" y2="756.99" class="f"/>
+<line x1="347.98" y1="767.06" x2="338.53" y2="758.78" class="f"/>
+<line x1="330" y1="768" x2="321.47" y2="758.78" class="f"/>
+<line x1="312.02" y1="767.06" x2="304.5" y2="756.99" class="f"/>
+<line x1="294.24" y1="764.24" x2="287.81" y2="753.45" class="f"/>
+<line x1="276.85" y1="759.58" x2="271.59" y2="748.17" class="f"/>
+<line x1="260.04" y1="753.13" x2="256" y2="741.23" class="f"/>
+<line x1="244" y1="744.96" x2="241.22" y2="732.7" class="f"/>
+<line x1="228.9" y1="735.15" x2="227.42" y2="722.67" class="f"/>
+<line x1="214.91" y1="723.82" x2="214.74" y2="711.26" class="f"/>
+<line x1="202.18" y1="711.09" x2="203.33" y2="698.58" class="f"/>
+<line x1="190.85" y1="697.1" x2="193.3" y2="684.78" class="f"/>
+<line x1="181.04" y1="682" x2="184.77" y2="670" class="f"/>
+<line x1="172.87" y1="665.96" x2="177.83" y2="654.41" class="f"/>
+<line x1="166.42" y1="649.15" x2="172.55" y2="638.19" class="f"/>
+<line x1="161.76" y1="631.76" x2="169.01" y2="621.5" class="f"/>
+<line x1="158.94" y1="613.98" x2="167.22" y2="604.53" class="f"/>
+<line x1="158" y1="596" x2="167.22" y2="587.47" class="f"/>
+<line x1="158.94" y1="578.02" x2="169.01" y2="570.5" class="f"/>
+<line x1="161.76" y1="560.24" x2="172.55" y2="553.81" class="f"/>
+<line x1="166.42" y1="542.85" x2="177.83" y2="537.59" class="f"/>
+<line x1="172.87" y1="526.04" x2="184.77" y2="522" class="f"/>
+<line x1="181.04" y1="510" x2="193.3" y2="507.22" class="f"/>
+<line x1="190.85" y1="494.9" x2="203.33" y2="493.42" class="f"/>
+<line x1="202.18" y1="480.91" x2="214.74" y2="480.74" class="f"/>
+<line x1="214.91" y1="468.18" x2="227.42" y2="469.33" class="f"/>
+<line x1="228.9" y1="456.85" x2="241.22" y2="459.3" class="f"/>
+<line x1="244" y1="447.04" x2="256" y2="450.77" class="f"/>
+<line x1="260.04" y1="438.87" x2="271.59" y2="443.83" class="f"/>
+<line x1="276.85" y1="432.42" x2="287.81" y2="438.55" class="f"/>
+<line x1="294.24" y1="427.76" x2="304.5" y2="435.01" class="f"/>
+<line x1="312.02" y1="424.94" x2="321.47" y2="433.22" class="f"/>
+<line x1="330" y1="424" x2="338.53" y2="433.22" class="f"/>
+<line x1="347.98" y1="424.94" x2="355.5" y2="435.01" class="f"/>
+<line x1="365.76" y1="427.76" x2="372.19" y2="438.55" class="f"/>
+<line x1="383.15" y1="432.42" x2="388.41" y2="443.83" class="f"/>
+<line x1="399.96" y1="438.87" x2="404" y2="450.77" class="f"/>
+<line x1="416" y1="447.04" x2="418.78" y2="459.3" class="f"/>
+<line x1="431.1" y1="456.85" x2="432.58" y2="469.33" class="f"/>
+<line x1="445.09" y1="468.18" x2="445.26" y2="480.74" class="f"/>
+<line x1="457.82" y1="480.91" x2="456.67" y2="493.42" class="f"/>
+<line x1="469.15" y1="494.9" x2="466.7" y2="507.22" class="f"/>
+<line x1="478.96" y1="510" x2="475.23" y2="522" class="f"/>
+<line x1="487.13" y1="526.04" x2="482.17" y2="537.59" class="f"/>
+<line x1="493.58" y1="542.85" x2="487.45" y2="553.81" class="f"/>
+<line x1="498.24" y1="560.24" x2="490.99" y2="570.5" class="f"/>
+<line x1="501.06" y1="578.02" x2="492.78" y2="587.47" class="f"/>
+<path d="M205 596 a125 125 0 1 0 250 0 a125 125 0 1 0 -250 0 Z M219 596 a111 111 0 1 0 222 0 a111 111 0 1 0 -222 0 Z" class="t o" fill-rule="evenodd"/>
+<circle cx="330" cy="596" r="120" class="n f"/>
+<path d="M318.28 568.38 L314.2 537.03 L268.46 501.23 L287.67 491.23 L317.28 523.85 L333.94 483.07 L355.42 485.9 L324.68 535.18 L331.57 566.04 Z" class="t o"/>
+<line x1="323.75" y1="560.55" x2="318.44" y2="530.41" class="f"/>
+<line x1="303.98" y1="520.43" x2="281.42" y2="500.66" class="f"/>
+<line x1="328.61" y1="516.09" x2="343.04" y2="489.8" class="f"/>
+<path d="M359.78 599.66 L388.97 611.8 L442.85 590.09 L441.9 611.73 L398.84 621.06 L425.83 655.88 L412.64 673.07 L385.33 621.8 L355.16 612.34 Z" class="t o"/>
+<line x1="363.83" y1="608.31" x2="392.58" y2="618.78" class="f"/>
+<line x1="408.45" y1="611.25" x2="436.85" y2="601.6" class="f"/>
+<line x1="399.9" y1="634.75" x2="415.45" y2="660.39" class="f"/>
+<path d="M311.95 619.96 L286.83 639.17 L278.7 696.68 L260.43 685.05 L273.88 643.09 L230.23 649.05 L221.94 629.04 L279.99 631.02 L303.27 609.62 Z" class="t o"/>
+<line x1="302.42" y1="619.14" x2="278.98" y2="638.81" class="f"/>
+<line x1="277.57" y1="656.32" x2="271.72" y2="685.74" class="f"/>
+<line x1="261.5" y1="637.16" x2="231.51" y2="637.81" class="f"/>
+<circle cx="330" cy="596" r="32" class="t o"/>
+<circle cx="330" cy="596" r="21" class="t2 i"/>
+<path d="M338.67 602.77 L328.47 606.89 L319.8 600.12 L321.33 589.23 L331.53 585.11 L340.2 591.88 Z" class="t2 f"/>
+<circle cx="330" cy="596" r="4.95" class="w f"/>
+</g>
+<g id="T07-disc" data-part="Twin floating discs" data-category="superbike">
+<path d="M237 596 a93 93 0 1 0 186 0 a93 93 0 1 0 -186 0 Z M264 596 a66 66 0 1 0 132 0 a66 66 0 1 0 -132 0 Z" class="t2 o" fill-rule="evenodd"/>
+<circle cx="414.9" cy="596" r="2.2" class="w f"/>
+<circle cx="404.3" cy="609.1" r="2.2" class="w f"/>
+<circle cx="409.78" cy="625.04" r="2.2" class="w f"/>
+<circle cx="395.34" cy="633.73" r="2.2" class="w f"/>
+<circle cx="395.04" cy="650.57" r="2.2" class="w f"/>
+<circle cx="378.5" cy="653.8" r="2.2" class="w f"/>
+<circle cx="372.45" cy="669.53" r="2.2" class="w f"/>
+<circle cx="355.81" cy="666.9" r="2.2" class="w f"/>
+<circle cx="344.74" cy="679.61" r="2.2" class="w f"/>
+<circle cx="330" cy="671.45" r="2.2" class="w f"/>
+<circle cx="315.26" cy="679.61" r="2.2" class="w f"/>
+<circle cx="304.19" cy="666.9" r="2.2" class="w f"/>
+<circle cx="287.55" cy="669.53" r="2.2" class="w f"/>
+<circle cx="281.5" cy="653.8" r="2.2" class="w f"/>
+<circle cx="264.96" cy="650.57" r="2.2" class="w f"/>
+<circle cx="264.66" cy="633.73" r="2.2" class="w f"/>
+<circle cx="250.22" cy="625.04" r="2.2" class="w f"/>
+<circle cx="255.7" cy="609.1" r="2.2" class="w f"/>
+<circle cx="245.1" cy="596" r="2.2" class="w f"/>
+<circle cx="255.7" cy="582.9" r="2.2" class="w f"/>
+<circle cx="250.22" cy="566.96" r="2.2" class="w f"/>
+<circle cx="264.66" cy="558.27" r="2.2" class="w f"/>
+<circle cx="264.96" cy="541.43" r="2.2" class="w f"/>
+<circle cx="281.5" cy="538.2" r="2.2" class="w f"/>
+<circle cx="287.55" cy="522.47" r="2.2" class="w f"/>
+<circle cx="304.19" cy="525.1" r="2.2" class="w f"/>
+<circle cx="315.26" cy="512.39" r="2.2" class="w f"/>
+<circle cx="330" cy="520.55" r="2.2" class="w f"/>
+<circle cx="344.74" cy="512.39" r="2.2" class="w f"/>
+<circle cx="355.81" cy="525.1" r="2.2" class="w f"/>
+<circle cx="372.45" cy="522.47" r="2.2" class="w f"/>
+<circle cx="378.5" cy="538.2" r="2.2" class="w f"/>
+<circle cx="395.04" cy="541.43" r="2.2" class="w f"/>
+<circle cx="395.34" cy="558.27" r="2.2" class="w f"/>
+<circle cx="409.78" cy="566.96" r="2.2" class="w f"/>
+<circle cx="404.3" cy="582.9" r="2.2" class="w f"/>
+<path d="M265 596 a65 65 0 1 0 130 0 a65 65 0 1 0 -130 0 Z M274 596 a56 56 0 1 0 112 0 a56 56 0 1 0 -112 0 Z" class="t i" fill-rule="evenodd"/>
+<circle cx="394.01" cy="607.29" r="4.2" class="w i"/>
+<circle cx="367.28" cy="649.24" r="4.2" class="w i"/>
+<circle cx="318.71" cy="660.01" r="4.2" class="w i"/>
+<circle cx="276.76" cy="633.28" r="4.2" class="w i"/>
+<circle cx="265.99" cy="584.71" r="4.2" class="w i"/>
+<circle cx="292.72" cy="542.76" r="4.2" class="w i"/>
+<circle cx="341.29" cy="531.99" r="4.2" class="w i"/>
+<circle cx="383.24" cy="558.72" r="4.2" class="w i"/>
+<path d="M385.95 606.88 A57 57 0 0 1 381.66 620.09 L353.56 606.99 A26 26 0 0 0 355.52 600.96 Z" class="t i"/>
+<path d="M336.95 652.58 A57 57 0 0 1 323.05 652.58 L326.83 621.81 A26 26 0 0 0 333.17 621.81 Z" class="t i"/>
+<path d="M278.34 620.09 A57 57 0 0 1 274.05 606.88 L304.48 600.96 A26 26 0 0 0 306.44 606.99 Z" class="t i"/>
+<path d="M291.13 554.31 A57 57 0 0 1 302.37 546.15 L317.39 573.26 A26 26 0 0 0 312.27 576.98 Z" class="t i"/>
+<path d="M357.63 546.15 A57 57 0 0 1 368.87 554.31 L347.73 576.98 A26 26 0 0 0 342.61 573.26 Z" class="t i"/>
+</g>
+<g id="T07-caliper" data-part="Radial caliper" data-category="superbike">
+<path d="M404.6 526.44 A102 102 0 0 1 431.98 594.22 L404.99 594.69 A75 75 0 0 0 384.85 544.85 Z" class="t2 o"/>
+<path d="M404.61 535.59 A96 96 0 0 1 425.63 587.63 L410.69 588.94 A81 81 0 0 0 392.95 545.03 Z" class="n f"/>
+<circle cx="405.06" cy="548.18" r="6" class="t i"/>
+<circle cx="417.21" cy="578.26" r="6" class="t i"/>
+<path d="M415.71 526.5 L412.63 530.44 L407.68 529.74 L405.8 525.11 L408.88 521.17 L413.83 521.86 Z" class="t2 f"/>
+<circle cx="410.75" cy="525.8" r="2.25" class="w f"/>
+<path d="M441.8 591.1 L438.73 595.04 L433.78 594.34 L431.9 589.7 L434.98 585.76 L439.93 586.46 Z" class="t2 f"/>
+<circle cx="436.85" cy="590.4" r="2.25" class="w f"/>
+<circle cx="419.94" cy="559.66" r="2.6" class="w f"/>
+<path d="M433.84 554.04 C439.87 540.04 461.31 499.01 470 470 C478.69 440.99 481 408.33 486 380 C491 351.67 497.67 313.33 500 300" class="n i" style="stroke-width:3"/>
+</g>
+<g id="T07-mudguard" data-part="Front mudguard" data-category="superbike">
+<path d="M166.32 501.5 A189 189 0 0 1 418.73 429.12 L413.57 438.84 A178 178 0 0 0 175.85 507 Z" class="t o"/>
+<path d="M189.81 478.37 A183 183 0 0 1 392.59 424.04" class="n f"/>
+</g>
+<g id="T07-fork" data-part="Upside-down fork" data-category="superbike">
+<path d="M385.95 443.52 L329.85 569.32 L349.95 578.28 L406.05 452.48 Z" class="t i"/>
+<line x1="392.7" y1="455.4" x2="343.2" y2="566.4" class="f"/>
+<path d="M331.04 554.89 L318.54 601.89 L349.46 610.11 L361.96 563.11 Z" class="t2 o"/>
+<circle cx="330" cy="596" r="12" class="t o"/>
+<path d="M336.06 599.5 L330 603 L323.94 599.5 L323.94 592.5 L330 589 L336.06 592.5 Z" class="t2 f"/>
+<circle cx="330" cy="596" r="3.15" class="w f"/>
+<path d="M479.47 219.08 L380.47 441.08 L411.53 454.92 L510.53 232.92 Z" class="t o"/>
+<path d="M382.86 433.27 L379.56 440.67 L412.44 455.33 L415.74 447.93 Z" class="t2 i"/>
+<line x1="487.08" y1="243.76" x2="400.95" y2="436.9" class="f"/>
+<circle cx="499.95" cy="214.9" r="12.92" class="t2 i"/>
+<path d="M469.37 226.23 L537.37 256.23 L544.63 239.77 L476.63 209.77 Z" class="t2 o"/>
+<path d="M524.46 240 L521 242 L517.54 240 L517.54 236 L521 234 L524.46 236 Z" class="t2 f"/>
+<circle cx="521" cy="238" r="1.8" class="w f"/>
+<path d="M436.37 300.23 L504.37 330.23 L511.63 313.77 L443.63 283.77 Z" class="t2 o"/>
+<path d="M491.46 314 L488 316 L484.54 314 L484.54 310 L488 308 L491.46 310 Z" class="t2 f"/>
+<circle cx="488" cy="312" r="1.8" class="w f"/>
+</g>
+<g id="T07-fairing" data-part="Full fairing" data-category="superbike">
+<path d="M350 356 L372 318 L416 292 L456 270 L540 280 L570 302 L612 352 L652 422 L702 502 L760 590 L812 674 L798 706 L662 714 L602 688 L558 612 L532 528 L502 456 L440 420 L382 398 Z M548 336 C553.67 314 570.67 327.67 582 338 C593.33 348.33 607.33 376 616 398 C624.67 420 634.33 445.67 634 470 C633.67 494.33 624.67 529.67 614 544 C603.33 558.33 581 568.33 570 556 C559 543.67 551.67 506.67 548 470 C544.33 433.33 542.33 358 548 336 Z" class="t o" fill-rule="evenodd"/>
+<path d="M548 336 C553.67 314 570.67 327.67 582 338 C593.33 348.33 607.33 376 616 398 C624.67 420 634.33 445.67 634 470 C633.67 494.33 624.67 529.67 614 544 C603.33 558.33 581 568.33 570 556 C559 543.67 551.67 506.67 548 470 C544.33 433.33 542.33 358 548 336 Z" class="h"/>
+<path d="M424 300 L470 352 L520 410 L560 470" class="n i"/>
+<path d="M612 352 L590 330" class="n f"/>
+<path d="M560 600 L640 600 L720 560 L770 600" class="n i"/>
+<path d="M661.45 619.58 L687.45 661.58 L692.55 658.42 L666.55 616.42 Z" class="w f"/>
+<path d="M681.45 621.58 L707.45 663.58 L712.55 660.42 L686.55 618.42 Z" class="w f"/>
+<path d="M701.45 623.58 L727.45 665.58 L732.55 662.42 L706.55 620.42 Z" class="w f"/>
+<path d="M721.45 625.58 L747.45 667.58 L752.55 664.42 L726.55 622.42 Z" class="w f"/>
+<path d="M610 690 L700 700 L796 694" class="n f"/>
+<circle cx="470" cy="300" r="2.6" class="t2 f"/>
+<circle cx="640" cy="700" r="2.6" class="t2 f"/>
+<circle cx="760" cy="700" r="2.6" class="t2 f"/>
+<circle cx="545" cy="520" r="2.6" class="t2 f"/>
+<path d="M358 348 L374 322 L414 298 L426 306 L390 336 L366 356 Z" class="w o"/>
+<path d="M372 334 L412 306" class="n f"/>
+<path d="M398 346 L436 318 L444 328 L404 354 Z" class="t2 i"/>
+<path d="M358 364 L372 358 L394 382 L380 390 Z" class="k"/>
+<line x1="364" y1="366" x2="376" y2="360" class="n" style="stroke:#B9C7E3;stroke-width:1"/>
+<line x1="370" y1="372" x2="382" y2="366" class="n" style="stroke:#B9C7E3;stroke-width:1"/>
+<line x1="376" y1="378" x2="388" y2="372" class="n" style="stroke:#B9C7E3;stroke-width:1"/>
+<path d="M388 380 C396.67 375.33 419.67 363.67 440 352 C460.33 340.33 490 319.67 510 310 C530 300.33 540 295.67 560 294 C580 292.33 618.33 299 630 300" class="h"/>
+<line x1="452" y1="272" x2="432" y2="244" class="o"/>
+<ellipse cx="432" cy="244" rx="24" ry="13" transform="rotate(-10 432 244)" class="t o"/>
+<ellipse cx="435" cy="244" rx="18" ry="8" transform="rotate(-10 432 244)" class="w f"/>
+<ellipse cx="420" cy="250" rx="7" ry="3.5" class="af f"/>
+</g>
+<g id="T07-screen" data-part="Windscreen" data-category="superbike">
+<path d="M438 278 C436.33 270 458.67 235.67 470 222 C481.33 208.33 493.33 198.67 506 196 C518.67 193.33 542.33 195 546 206 C549.67 217 539 251.33 528 262 C517 272.67 495 267.33 480 270 C465 272.67 439.67 286 438 278 Z" class="w o"/>
+<path d="M470 250 C475 244 490 221 500 214 C510 207 525 209 530 208" class="n f"/>
+</g>
+<g id="T07-clipons" data-part="Clip-on bars" data-category="superbike">
+<path d="M504.97 240.89 L580.97 256.89 L583.03 247.11 L507.03 231.11 Z" class="t2 i"/>
+<rect x="546" y="238" width="40" height="16" rx="6" class="t o" transform="rotate(12 566 246)"/>
+<line x1="552" y1="242.26" x2="551" y2="255.26" class="f"/>
+<line x1="557" y1="243.31" x2="556" y2="256.31" class="f"/>
+<line x1="562" y1="244.36" x2="561" y2="257.36" class="f"/>
+<line x1="567" y1="245.41" x2="566" y2="258.41" class="f"/>
+<line x1="572" y1="246.46" x2="571" y2="259.46" class="f"/>
+<line x1="577" y1="247.51" x2="576" y2="260.51" class="f"/>
+<line x1="582" y1="248.56" x2="581" y2="261.56" class="f"/>
+<path d="M545.02 249.17 L493.02 267.17 L494.98 272.83 L546.98 254.83 Z" class="t i"/>
+<circle cx="512" cy="236" r="9" class="t2 i"/>
+</g>
+<g id="T07-silencer" data-part="Short side silencer" data-category="superbike">
+<path d="M770 704 C777 702.33 800 698.67 812 694 C824 689.33 837 679 842 676" class="n o" style="stroke-width:14;stroke:#1E2B5E"/>
+<path d="M770 704 C777 702.33 800 698.67 812 694 C824 689.33 837 679 842 676" class="n" style="stroke-width:10;stroke:#B9C7E3"/>
+<path d="M832 664 L940 612 L966 616 L980 646 L872 700 L842 698 Z" class="t o"/>
+<path d="M940 612 L966 616 L980 646 L958 642 Z" class="t2 i"/>
+<path d="M862 652 L930 622 L940 640 L872 672 Z" class="t2 f"/>
+<circle cx="964" cy="640" r="7" class="k"/>
+<path d="M850.41 676.91 L958.41 628.91 L957.59 627.09 L849.59 675.09 Z" class="n f"/>
+<path d="M873.03 669.75 L870 671.5 L866.97 669.75 L866.97 666.25 L870 664.5 L873.03 666.25 Z" class="t2 f"/>
+<circle cx="870" cy="668" r="1.57" class="w f"/>
+<path d="M933.03 641.75 L930 643.5 L926.97 641.75 L926.97 638.25 L930 636.5 L933.03 638.25 Z" class="t2 f"/>
+<circle cx="930" cy="640" r="1.57" class="w f"/>
+</g>
+<g id="T07-stand" data-part="Side stand" data-category="superbike">
+<path d="M785.78 697.32 L743.78 763.32 L752.22 768.68 L794.22 702.68 Z" class="t2 i"/>
+<rect x="732" y="762" width="30" height="7" rx="2" class="t2 i"/>
+</g>
+<g id="T07-labels">
+<g id="T07-fairing-label" data-part="Full fairing" data-category="superbike">
+<polyline points="376,374 376,56" class="ld"/>
+<text x="376" y="48" class="l" text-anchor="middle">Ram-air intake</text>
+<circle cx="376" cy="374" r="2.4" class="dot"/>
+<polyline points="420,330 496.8,56" class="ld"/>
+<text x="496.8" y="48" class="l" text-anchor="middle">Full fairing</text>
+<circle cx="420" cy="330" r="2.4" class="dot"/>
+</g>
+<g id="T07-screen-label" data-part="Windscreen" data-category="superbike">
+<polyline points="500,214 602.4,56" class="ld"/>
+<text x="602.4" y="48" class="l" text-anchor="middle">Windscreen</text>
+<circle cx="500" cy="214" r="2.4" class="dot"/>
+</g>
+<g id="T07-clipons-label" data-part="Clip-on bars" data-category="superbike">
+<polyline points="566,246 692.8,56" class="ld"/>
+<text x="692.8" y="48" class="l" text-anchor="middle">Clip-ons</text>
+<circle cx="566" cy="246" r="2.4" class="dot"/>
+</g>
+<g id="T07-radiator-label" data-part="Radiator" data-category="superbike">
+<polyline points="566,460 775.6,56" class="ld"/>
+<text x="775.6" y="48" class="l" text-anchor="middle">Radiator</text>
+<circle cx="566" cy="460" r="2.4" class="dot"/>
+</g>
+<g id="T07-engine-label" data-part="Inline-four engine" data-category="superbike">
+<polyline points="612,420 911.6,56" class="ld"/>
+<text x="911.6" y="48" class="l" text-anchor="middle">Inline-four (cut-away)</text>
+<circle cx="612" cy="420" r="2.4" class="dot"/>
+</g>
+<g id="T07-frame-label" data-part="Twin-spar aluminium frame" data-category="superbike">
+<polyline points="720,340 1074.2,56" class="ld"/>
+<text x="1074.2" y="48" class="l" text-anchor="middle">Twin-spar frame</text>
+<circle cx="720" cy="340" r="2.4" class="dot"/>
+</g>
+<g id="T07-tail-label" data-part="Tail and pillion seat cowl" data-category="superbike">
+<polyline points="1060,244 1217.8,56" class="ld"/>
+<text x="1217.8" y="48" class="l" text-anchor="middle">Pillion seat cowl</text>
+<circle cx="1060" cy="244" r="2.4" class="dot"/>
+</g>
+<g id="T07-disc-label" data-part="Twin floating discs" data-category="superbike">
+<polyline points="288,668.75 288,858" class="ld"/>
+<text x="288" y="874" class="l" text-anchor="middle">Twin floating discs</text>
+<circle cx="288" cy="668.75" r="2.4" class="dot"/>
+</g>
+<g id="T07-fork-label" data-part="Upside-down fork" data-category="superbike">
+<polyline points="420.75,392.5 420.75,858" class="ld"/>
+<text x="420.75" y="874" class="l" text-anchor="middle">USD fork</text>
+<circle cx="420.75" cy="392.5" r="2.4" class="dot"/>
+</g>
+<g id="T07-caliper-label" data-part="Radial caliper" data-category="superbike">
+<polyline points="422.72,558.54 526.35,858" class="ld"/>
+<text x="526.35" y="874" class="l" text-anchor="middle">Radial caliper</text>
+<circle cx="422.72" cy="558.54" r="2.4" class="dot"/>
+</g>
+<g id="T07-shock-label" data-part="Monoshock and linkage" data-category="superbike">
+<polyline points="856,520 856,858" class="ld"/>
+<text x="856" y="874" class="l" text-anchor="middle">Monoshock and linkage</text>
+<circle cx="856" cy="520" r="2.4" class="dot"/>
+</g>
+<g id="T07-rearsets-label" data-part="Rear-sets" data-category="superbike">
+<polyline points="900,535 992,858" class="ld"/>
+<text x="992" y="874" class="l" text-anchor="middle">Rear-sets</text>
+<circle cx="900" cy="535" r="2.4" class="dot"/>
+</g>
+<g id="T07-silencer-label" data-part="Short side silencer" data-category="superbike">
+<polyline points="900,650 1120.4,858" class="ld"/>
+<text x="1120.4" y="874" class="l" text-anchor="middle">Short side silencer</text>
+<circle cx="900" cy="650" r="2.4" class="dot"/>
+</g>
+<g id="T07-swingarm-label" data-part="Aluminium swingarm" data-category="superbike">
+<polyline points="1040,590 1283,858" class="ld"/>
+<text x="1283" y="874" class="l" text-anchor="middle">Aluminium swingarm</text>
+<circle cx="1040" cy="590" r="2.4" class="dot"/>
+</g>
+</g>
+</svg>
