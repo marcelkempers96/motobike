@@ -1,0 +1,791 @@
+<title>Moto Zero Wiring Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Interactive motorcycle wiring: the main harness connector by connector, and live starting, charging and ignition circuits you can switch, rev and break.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<style>
+/* Layout: workbench. Drawing sheet left, inspection card right; controls sit under the sheet like a test bench. */
+:root{
+  --bg:#F5F4EF; --card:#FFFFFF; --ink:#1E2B5E; --text:#242833; --muted:#5C6170;
+  --line:#E1DFD6; --line2:#CDCAC0; --accent:#C8502A; --accent-soft:#F7E4DB; --accent-line:#ECC1B0;
+  --btn:#F1F0EB; --btn-h:#E9E7E0; --on-bg:#1E2B5E; --on-fg:#FFFFFF; --ok:#1F7A3A; --ok-soft:#E3F1E7;
+  --sheet:#FFFFFF; --wire:#1E2B5E;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --cond:'IBM Plex Sans Condensed','IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151D; --card:#1A1E29; --ink:#E4E8F3; --text:#D3D7E0; --muted:#98A0B0;
+  --line:#2A3040; --line2:#394054; --accent:#E2733F; --accent-soft:#3A271F; --accent-line:#6B3A26;
+  --btn:#232838; --btn-h:#2B3144; --on-bg:#E4E8F3; --on-fg:#12151D; --ok:#5CC17C; --ok-soft:#1C3324; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151D; --card:#1A1E29; --ink:#E4E8F3; --text:#D3D7E0; --muted:#98A0B0;
+  --line:#2A3040; --line2:#394054; --accent:#E2733F; --accent-soft:#3A271F; --accent-line:#6B3A26;
+  --btn:#232838; --btn-h:#2B3144; --on-bg:#E4E8F3; --on-fg:#12151D; --ok:#5CC17C; --ok-soft:#1C3324; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 var(--sans)}
+.wrap{max-width:1480px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{padding-block:26px 6px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:flex-end;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;margin:0 0 10px;font:600 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.brand svg{width:22px;height:22px;flex:none}
+.brand span{color:var(--muted);font-weight:500}
+h1{font:600 32px/1.1 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing:-.015em;text-wrap:balance}
+.lede{max-width:760px;margin:0;color:var(--muted)}
+.lede b{color:var(--text);font-weight:600}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;padding-block:14px 12px}
+nav.tabs a{font:500 14px/1 var(--sans);color:var(--ink);text-decoration:none;padding:11px 14px;border-radius:9px;border:1px solid var(--line2);background:var(--card);display:flex;gap:9px;align-items:baseline}
+nav.tabs a i{font:500 11px/1 var(--mono);font-style:normal;color:var(--muted);letter-spacing:.04em}
+nav.tabs a:hover{background:var(--btn-h)}
+nav.tabs a[aria-selected="true"]{background:var(--on-bg);color:var(--on-fg);border-color:var(--on-bg)}
+nav.tabs a[aria-selected="true"] i{color:var(--on-fg);opacity:.7}
+nav.tabs a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 370px;gap:20px;align-items:start;padding-bottom:28px}
+.stage{min-width:0;display:grid;gap:10px}
+.sheet{margin:0;background:var(--sheet);border:1px solid var(--line);border-radius:12px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+.sheet svg{display:block;width:100%;height:auto;min-width:760px;user-select:none;-webkit-user-select:none}
+.msgbar{display:flex;gap:12px;align-items:flex-start;min-height:46px;padding:11px 14px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
+.msgbar .dot{width:9px;height:9px;border-radius:50%;background:var(--line2);flex:none;margin-top:6px}
+.msgbar.run .dot{background:var(--ok)}
+.msgbar.warn{border-color:var(--accent-line);background:var(--accent-soft)}
+.msgbar.warn .dot{background:var(--accent)}
+#msg{margin:0;font-size:14px;color:var(--text);max-width:110ch}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.ro{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 11px;min-width:0}
+.ro .k{font:500 11px/1.25 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ro .v{font:600 20px/1.3 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ro .v small{font-size:12px;font-weight:500;color:var(--muted);margin-left:3px}
+.ro.hot .v{color:var(--accent)}
+.deck{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px 18px}
+.grp{min-width:0}
+.grp h3{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.grp.wide{grid-column:1/-1}
+.btns{display:flex;flex-wrap:wrap;gap:6px}
+.deck button,.deck select{font:500 13px/1.1 var(--sans);color:var(--ink);background:var(--btn);border:1px solid var(--line2);border-radius:8px;padding:9px 11px;min-height:38px;cursor:pointer;touch-action:manipulation}
+.deck select{padding-right:28px;max-width:100%}
+.deck button:hover{background:var(--btn-h)}
+.deck button[aria-pressed="true"]{background:var(--on-bg);color:var(--on-fg);border-color:var(--on-bg)}
+.deck button.hold{background:var(--accent);color:#fff;border-color:var(--accent);min-width:150px}
+.deck button.hold.down{filter:brightness(.88)}
+.deck button.link{background:transparent;border-style:dashed}
+.chip{display:inline-flex;align-items:center;gap:7px}
+.sw{display:inline-block;width:22px;height:14px;border-radius:3px;border:1px solid rgba(0,0,0,.35);flex:none}
+.slider{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.slider input{flex:1 1 220px;accent-color:var(--accent);min-width:0}
+.slider output{font:600 14px/1 var(--mono);color:var(--ink);min-width:92px;text-align:right;font-variant-numeric:tabular-nums}
+.swipe{display:none;margin:-4px 4px 0;font-size:12.5px;color:var(--muted)}
+@media (max-width:800px){.swipe{display:block}}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--muted);padding:0 4px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend svg{width:34px;height:10px;flex:none}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;position:sticky;top:max(12px,env(safe-area-inset-top,0px));max-height:calc(100vh - 24px);overflow:auto;min-width:0}
+.panel .eyebrow{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.panel h2{font:600 19px/1.25 var(--sans);color:var(--ink);margin:0 0 8px;text-wrap:balance}
+.panel p{margin:0 0 12px;font-size:14px}
+.panel h4{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.panel ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:4px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 10px}
+.tags span{font:500 11.5px/1 var(--sans);padding:5px 8px;border-radius:20px;background:var(--btn);border:1px solid var(--line);color:var(--ink)}
+table.wires{width:100%;border-collapse:collapse;font-size:13.5px}
+table.wires td{padding:6px 4px;border-top:1px solid var(--line);vertical-align:middle}
+table.wires td:first-child{width:92px;white-space:nowrap;font:600 12.5px/1 var(--mono);color:var(--ink)}
+table.wires .sw{vertical-align:middle;margin-right:7px}
+.plist{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:2px}
+.plist button{display:block;width:100%;text-align:left;font:500 13.5px/1.3 var(--sans);color:var(--text);background:transparent;border:1px solid transparent;border-radius:8px;padding:7px 9px;cursor:pointer}
+.plist button:hover{background:var(--btn)}
+.plist button[aria-current="true"]{background:var(--accent-soft);border-color:var(--accent-line);color:var(--ink)}
+.plist button.dim{opacity:.45}
+hr.sep{border:0;border-top:1px solid var(--line);margin:16px 0 4px}
+footer{padding-block:6px 30px;color:var(--muted);font-size:12.5px}
+footer a{color:var(--ink)}
+
+/* ---------------- drawing behaviour ---------------- */
+.dia .hot{fill:transparent;stroke:none;cursor:pointer;pointer-events:all}
+.dia .hot:hover{fill:rgba(200,80,42,.06);stroke:#C8502A;stroke-width:1.4;stroke-dasharray:5 4}
+.dia .hot.on{fill:rgba(200,80,42,.08);stroke:#C8502A;stroke-width:2;stroke-dasharray:none}
+.dia .seg{stroke:var(--wire)!important;stroke-dasharray:none!important}
+.dia .seg.v{stroke:#E9A88E!important}
+.dia .seg.on{stroke:#C8502A!important;stroke-dasharray:11 8!important;animation:flow .55s linear infinite}
+.dia .seg.on.rev{animation-direction:reverse}
+.dia .seg.on.ac{animation:flow .32s linear infinite alternate}
+.dia .seg.on.slow{animation-duration:1.4s}
+@keyframes flow{to{stroke-dashoffset:-19}}
+.dia .swg circle{fill:#FFFFFF;stroke:#1E2B5E;stroke-width:2}
+.dia .swg path{fill:none;stroke:#1E2B5E;stroke-width:2;stroke-linecap:round}
+.dia .swg.closed path,.dia .blade.closed{stroke:#C8502A}
+.dia .pbcap{transition:transform .08s}
+.dia .swg.closed .pbcap{transform:translateY(11px)}
+.dia #relayArm{transition:transform .07s}
+.dia.relay-on #relayArm{transform:translateY(-8px)}
+.dia.relay-on #relayArm rect:first-child{fill:#F0B79F}
+.dia .gear{transform-box:view-box}
+.dia #gPin{transform-origin:1270px 608px}
+.dia #gRedA,.dia #gRedB{transform-origin:1330px 650px}
+.dia #gDrv{transform-origin:1440px 720px}
+.dia.cranking #gPin{animation:spin .5s linear infinite}
+.dia.cranking #gRedA,.dia.cranking #gRedB{animation:spin 1.5s linear infinite reverse}
+.dia.cranking #gDrv{animation:spin 6.6s linear infinite}
+.dia.cranking #armHatch{animation:hatch .1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes hatch{to{transform:translateX(10px)}}
+.dia #fuse10.blown,.dia #fuse15.blown{stroke:#C8502A;fill:#F7E4DB;stroke-dasharray:4 3}
+.dia .spark{opacity:0}
+.dia .spark.fire{opacity:1}
+.dia .spark .glow{fill:#C8502A;opacity:.28}
+.dia .ht.fire{stroke:#F1A98C}
+.dia #lamp{transition:fill .2s}
+/* harness */
+#WR01 g[data-part]{cursor:pointer}
+#WR01 g.dimmed{opacity:.15;transition:opacity .2s}
+#WR01 g.sel path[style*="stroke-width:12"],#WR01 g.hov path[style*="stroke-width:12"]{stroke:#C8502A!important}
+#WR01 g.sel path[style*="stroke-width:8"]{stroke:#F6D3C4!important}
+#WR01 g.hov path[style*="stroke-width:8"]{stroke:#FBE9E1!important}
+#WR01 g.sel .t,#WR01 g.sel .t2{fill:#F6D3C4}
+#WR01 g.sel text,#WR01 g.hov text{fill:#C8502A}
+#WR01 g.sel .o,#WR01 g.sel .i{stroke:#C8502A}
+@media (prefers-reduced-motion: reduce){
+  .dia .seg.on{animation:none!important;stroke-dasharray:none!important}
+  .dia.cranking .gear,.dia.cranking #armHatch{animation:none!important}
+}
+@media (max-width: 1020px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .panel{position:static;max-height:none}
+}
+@media (max-width: 520px){ h1{font-size:26px} .ro .v{font-size:17px} }
+</style>
+<!--BODY-->
+<div class="wrap">
+<header class="top">
+  <div>
+    <p class="brand"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="60" cy="60" r="9" fill="#C8502A"/></svg>Moto Zero <span>by Transitions Lab</span></p>
+    <h1>Wiring Lab</h1>
+    <p class="lede">The wiring plates from <b>Module 3</b>, made live. Trace every branch of the main harness, then work the switches of the <b>starting</b>, <b>charging</b> and <b>ignition</b> circuits and watch where current flows. Click any part for its job, how to test it and how it fails.</p>
+  </div>
+</header>
+<nav class="tabs" role="tablist" aria-label="Wiring views">
+  <a href="#harness" role="tab" data-tab="harness"><i>WR01</i>Main harness</a>
+  <a href="#starting" role="tab" data-tab="starting"><i>F23</i>Starting circuit</a>
+  <a href="#charging" role="tab" data-tab="charging"><i>F21</i>Charging circuit</a>
+  <a href="#ignition" role="tab" data-tab="ignition"><i>F22</i>Ignition circuits</a>
+</nav>
+<main class="layout">
+  <section class="stage" aria-live="off">
+    <figure class="sheet dia" id="sheet-harness" data-tab="harness"><!--SVG_harness--></figure>
+    <figure class="sheet dia" id="sheet-starting" data-tab="starting" hidden><!--SVG_starting--></figure>
+    <figure class="sheet dia" id="sheet-charging" data-tab="charging" hidden><!--SVG_charging--></figure>
+    <figure class="sheet dia" id="sheet-ignition" data-tab="ignition" hidden><!--SVG_ignition--></figure>
+
+    <p class="swipe">Swipe the drawing sideways to see all of it.</p>
+    <div class="legend" id="legend">
+      <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#C8502A" stroke-width="3" stroke-dasharray="7 5"/></svg>Current flowing</span>
+      <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#E9A88E" stroke-width="3"/></svg>Voltage present, no current</span>
+      <span><svg viewBox="0 0 34 10"><path d="M2 5H32" stroke="#1E2B5E" stroke-width="3"/></svg>No voltage</span>
+      <span id="legend-note"></span>
+    </div>
+    <div class="msgbar" id="msgbar"><span class="dot"></span><p id="msg" role="status"></p></div>
+    <div class="readouts" id="readouts"></div>
+
+    <div class="deck" id="deck-harness" data-tab="harness">
+      <div class="grp wide"><h3>Show one system</h3><div class="btns" id="sysbtns"></div></div>
+      <div class="grp wide"><h3>Find a wire colour</h3><div class="btns" id="colbtns"></div></div>
+    </div>
+
+    <div class="deck" id="deck-starting" data-tab="starting" hidden>
+      <div class="grp"><h3>Key and bars</h3><div class="btns">
+        <button type="button" id="s-ign" data-k="ign">Ignition on</button>
+        <button type="button" id="s-stop" data-k="stop">Engine stop: RUN</button>
+      </div></div>
+      <div class="grp"><h3>Interlocks</h3><div class="btns">
+        <button type="button" id="s-neutral" data-k="neutral">Gear: neutral</button>
+        <button type="button" id="s-clutch" data-k="clutch">Clutch pulled</button>
+        <button type="button" id="s-stand" data-k="stand">Side-stand up</button>
+      </div></div>
+      <div class="grp"><h3>Start button</h3><div class="btns">
+        <button type="button" id="s-start" class="hold">Hold to start</button>
+      </div></div>
+      <div class="grp"><h3>Fault to diagnose</h3>
+        <select id="s-fault" aria-label="Starting fault">
+          <option value="none">No fault</option>
+          <option value="fuse">Blown 10 A fuse</option>
+          <option value="contacts">Burnt relay contacts</option>
+          <option value="weak">Weak battery</option>
+          <option value="neutralsw">Faulty neutral switch</option>
+        </select></div>
+      <div class="grp wide"><div class="btns"><button type="button" class="link" data-goto="start">Show the starting wires on the harness</button></div></div>
+    </div>
+
+    <div class="deck" id="deck-charging" data-tab="charging" hidden>
+      <div class="grp wide"><h3>Engine speed</h3>
+        <div class="slider"><input type="range" id="c-rpm" min="0" max="10000" step="100" value="3500" aria-label="Engine speed in rpm"><output id="c-rpm-out" for="c-rpm">3500 rpm</output></div>
+        <div class="btns" style="margin-top:8px">
+          <button type="button" data-rpm="0">Engine off</button>
+          <button type="button" data-rpm="1400">Idle</button>
+          <button type="button" data-rpm="5000">Cruise</button>
+          <button type="button" data-rpm="9500">Near redline</button>
+        </div></div>
+      <div class="grp"><h3>Loads</h3><div class="btns"><button type="button" id="c-loads">Lights and loads on</button></div></div>
+      <div class="grp"><h3>Battery</h3><div class="btns">
+        <button type="button" id="c-flat">Run it down</button>
+        <button type="button" id="c-full">Fully charge</button>
+      </div></div>
+      <div class="grp"><h3>Fault to diagnose</h3>
+        <select id="c-fault" aria-label="Charging fault">
+          <option value="none">No fault</option>
+          <option value="phase">Open stator phase</option>
+          <option value="reg">Failed regulator</option>
+          <option value="fuse">Blown 15 A fuse</option>
+        </select></div>
+      <div class="grp wide"><div class="btns"><button type="button" class="link" data-goto="charge">Show the charging wires on the harness</button></div></div>
+    </div>
+
+    <div class="deck" id="deck-ignition" data-tab="ignition" hidden>
+      <div class="grp wide"><h3>Engine speed (drawn in slow motion)</h3>
+        <div class="slider"><input type="range" id="i-speed" min="0" max="100" step="1" value="30" aria-label="Engine speed"><output id="i-speed-out" for="i-speed">3000 rpm</output></div></div>
+      <div class="grp"><h3>Switches</h3><div class="btns">
+        <button type="button" id="i-stop">Engine stop: RUN</button>
+        <button type="button" id="i-ign">Ignition on (panel B)</button>
+      </div></div>
+      <div class="grp"><h3>Fault to diagnose</h3>
+        <select id="i-fault" aria-label="Ignition fault">
+          <option value="none">No fault</option>
+          <option value="pulser">Pulser coil open circuit</option>
+          <option value="plug">Fouled spark plug</option>
+        </select></div>
+      <div class="grp wide"><div class="btns"><button type="button" class="link" data-goto="ign">Show the ignition wires on the harness</button></div></div>
+    </div>
+  </section>
+
+  <aside class="panel" aria-label="Part details">
+    <div id="info"></div>
+    <hr class="sep">
+    <h4 id="plist-h">All parts</h4>
+    <ul class="plist" id="plist"></ul>
+  </aside>
+</main>
+<footer>Moto Zero by Transitions Lab. Plates WR01, F21, F22 and F23 from Module 3, released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Wire colours and values are typical of small road machines; always check the service manual for your model.</footer>
+</div>
+
+<script>
+const DATA = /*DATA*/;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const TABS = ["harness", "starting", "charging", "ignition"];
+const TAB_LABEL = {harness: "Main harness · WR01", starting: "Starting circuit · F23", charging: "Charging circuit · F21", ignition: "Ignition circuits · F22"};
+const DEFAULT_SEL = {harness: "fusebox", starting: "relay", charging: "regrec", ignition: "cdi"};
+const IGN_ORDER = ["srcA","flyA","pulserA","stopA","cdi","coilA","plugA","batB","fuseB","ignB","stopB","ecu","pulserB","coilB","plugB"];
+let tab = "harness";
+const sel = {...DEFAULT_SEL};
+const sheet = t => document.getElementById("sheet-" + t);
+
+/* ---------- segment helpers ---------- */
+const segCache = {};
+function segs(t) {
+  if (!segCache[t]) {
+    const m = {};
+    $$("[data-seg]", sheet(t)).forEach(el => (m[el.dataset.seg] ||= []).push(el));
+    segCache[t] = m;
+  }
+  return segCache[t];
+}
+const lastSeg = {};
+function applySegs(t, states) {
+  const key = JSON.stringify(states);
+  if (lastSeg[t] === key) return;
+  lastSeg[t] = key;
+  const m = segs(t);
+  for (const [name, els] of Object.entries(m)) {
+    const st = states[name] || "";
+    els.forEach(el => {
+      el.classList.remove("v", "on", "rev", "ac", "slow");
+      if (st) st.split(" ").forEach(c => el.classList.add(c));
+    });
+  }
+}
+function setBlade(el, closed, openD, closedD) {
+  if (!el) return;
+  el.setAttribute("d", closed ? closedD : openD);
+  el.classList.toggle("closed", closed);
+}
+function setMsg(text, kind) {
+  $("#msg").textContent = text;
+  const b = $("#msgbar");
+  b.classList.toggle("warn", kind === "warn");
+  b.classList.toggle("run", kind === "run");
+}
+let roKeys = "";
+function setReadouts(list) {
+  const box = $("#readouts");
+  const keys = list.map(r => r[0]).join("|");
+  if (keys !== roKeys) {
+    box.innerHTML = list.map((r, i) => `<div class="ro" data-i="${i}"><div class="k">${r[0]}</div><div class="v"></div></div>`).join("");
+    roKeys = keys;
+  }
+  box.hidden = list.length === 0;
+  list.forEach((r, i) => {
+    const el = box.children[i];
+    const v = el.querySelector(".v");
+    const html = `${r[1]}${r[2] ? `<small>${r[2]}</small>` : ""}`;
+    if (v.innerHTML !== html) v.innerHTML = html;
+    el.classList.toggle("hot", !!r[3]);
+  });
+}
+
+/* ---------- info panel ---------- */
+function colourChip(code) {
+  const parts = code.split("/");
+  const a = (DATA.colours[parts[0]] || {hex: "#ccc"}).hex;
+  const b = parts[1] ? (DATA.colours[parts[1]] || {hex: "#ccc"}).hex : a;
+  const bg = parts[1] ? `linear-gradient(135deg, ${a} 0 38%, ${b} 38% 62%, ${a} 62% 100%)` : a;
+  return `<span class="sw" style="background:${bg}"></span>`;
+}
+function colourName(code) {
+  return code.split("/").map(c => (DATA.colours[c] || {name: c}).name.toLowerCase()).join(" with ") ;
+}
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function renderInfo() {
+  const k = sel[tab];
+  const d = DATA[tab][k];
+  if (!d) { $("#info").innerHTML = ""; return; }
+  let h = `<p class="eyebrow">${TAB_LABEL[tab]}</p><h2>${esc(d.name)}</h2>`;
+  if (d.sys) h += `<div class="tags">${d.sys.map(s => `<span>${DATA.systems[s]}</span>`).join("")}</div>`;
+  h += `<p>${esc(d.does)}</p>`;
+  if (d.wires && d.wires.length) {
+    h += `<h4>Wires</h4><table class="wires"><tbody>${d.wires.map(w => `<tr><td>${colourChip(w[0])}${esc(w[0])}</td><td>${esc(w[1])}<br><span style="color:var(--muted);font-size:12px">${colourName(w[0])}</span></td></tr>`).join("")}</tbody></table>`;
+  }
+  h += `<h4>How to test</h4><ul>${d.test.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`;
+  h += `<h4>Common faults</h4><ul>${d.fault.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`;
+  $("#info").innerHTML = h;
+}
+function partKeys(t) {
+  if (t === "ignition") return IGN_ORDER;
+  if (t === "harness") {
+    const order = Object.keys(DATA.systems);
+    return Object.keys(DATA.harness).sort((a, b) => order.indexOf(DATA.harness[a].sys[0]) - order.indexOf(DATA.harness[b].sys[0]));
+  }
+  return Object.keys(DATA[t]);
+}
+function renderList() {
+  const ks = partKeys(tab);
+  $("#plist-h").textContent = tab === "harness" ? `All ${ks.length} harness parts` : `All parts in this circuit`;
+  $("#plist").innerHTML = ks.map(k => `<li><button type="button" data-k="${k}">${esc(DATA[tab][k].name)}</button></li>`).join("");
+  markList();
+}
+function markList() {
+  $$("#plist button").forEach(b => {
+    b.setAttribute("aria-current", b.dataset.k === sel[tab] ? "true" : "false");
+    if (tab === "harness") b.classList.toggle("dim", !inFilter(b.dataset.k));
+    else b.classList.remove("dim");
+  });
+}
+function select(k) {
+  sel[tab] = k;
+  if (tab === "harness") harnessMark();
+  else $$(".hot", sheet(tab)).forEach(h => h.classList.toggle("on", h.dataset.k === k));
+  renderInfo();
+  markList();
+}
+$("#plist").addEventListener("click", e => {
+  const b = e.target.closest("button[data-k]");
+  if (b) select(b.dataset.k);
+});
+
+/* ---------- harness ---------- */
+const HF = {sys: null, col: null};
+function inFilter(k) {
+  const d = DATA.harness[k];
+  if (HF.sys) return d.sys.includes(HF.sys);
+  if (HF.col) return d.wires.some(w => w[0].split("/").includes(HF.col));
+  return true;
+}
+function harnessGroups(k) {
+  return [document.getElementById("WR01-" + k), document.getElementById("WR01-" + k + "-label")].filter(Boolean);
+}
+function harnessMark() {
+  Object.keys(DATA.harness).forEach(k => {
+    const on = inFilter(k);
+    harnessGroups(k).forEach(g => { g.classList.toggle("dimmed", !on); g.classList.toggle("sel", k === sel.harness); });
+  });
+  updateHarnessMsg();
+}
+function updateHarnessMsg() {
+  const n = Object.keys(DATA.harness).filter(inFilter).length;
+  if (HF.sys) setMsg(`${DATA.systems[HF.sys]}: ${n} parts of the loom take part. Click a connector or its label for pins, tests and faults.`);
+  else if (HF.col) setMsg(`${DATA.colours[HF.col].name} appears in ${n} branches, as a main colour or a tracer stripe. Colour use differs between makers, so confirm against the service manual.`);
+  else setMsg("The main loom laid flat, headlight end on the left. Hover a branch to trace it, click it for pin functions, tests and typical faults, or pick a system below.");
+}
+function buildHarnessDeck() {
+  const sb = $("#sysbtns");
+  sb.innerHTML = `<button type="button" data-sys="" aria-pressed="true">All</button>` +
+    Object.entries(DATA.systems).map(([k, v]) => `<button type="button" data-sys="${k}" aria-pressed="false">${v}</button>`).join("");
+  const used = new Set();
+  Object.values(DATA.harness).forEach(d => d.wires.forEach(w => w[0].split("/").forEach(c => used.add(c))));
+  $("#colbtns").innerHTML = Object.entries(DATA.colours).filter(([k]) => used.has(k)).map(([k, v]) =>
+    `<button type="button" class="chip" data-col="${k}" aria-pressed="false"><span class="sw" style="background:${v.hex}"></span>${k} <span style="color:var(--muted)">${v.name}</span></button>`).join("");
+  sb.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    HF.sys = b.dataset.sys || null; HF.col = null; syncHarnessBtns(); harnessMark(); markList();
+  });
+  $("#colbtns").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    HF.col = HF.col === b.dataset.col ? null : b.dataset.col; HF.sys = null; syncHarnessBtns(); harnessMark(); markList();
+  });
+  const svg = sheet("harness");
+  svg.addEventListener("click", e => {
+    const g = e.target.closest("g[id^='WR01-']");
+    if (!g) return;
+    const k = g.id.replace(/^WR01-/, "").replace(/-label$/, "");
+    if (DATA.harness[k]) select(k);
+  });
+  let hov = null;
+  svg.addEventListener("mouseover", e => {
+    const g = e.target.closest("g[id^='WR01-']");
+    const k = g ? g.id.replace(/^WR01-/, "").replace(/-label$/, "") : null;
+    if (k === hov) return;
+    if (hov) harnessGroups(hov).forEach(x => x.classList.remove("hov"));
+    hov = DATA.harness[k] ? k : null;
+    if (hov) harnessGroups(hov).forEach(x => x.classList.add("hov"));
+  });
+  svg.addEventListener("mouseleave", () => { if (hov) harnessGroups(hov).forEach(x => x.classList.remove("hov")); hov = null; });
+}
+function syncHarnessBtns() {
+  $$("#sysbtns button").forEach(b => b.setAttribute("aria-pressed", String((b.dataset.sys || null) === HF.sys)));
+  $$("#colbtns button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.col === HF.col)));
+}
+$$("[data-goto]").forEach(b => b.addEventListener("click", () => {
+  HF.sys = b.dataset.goto; HF.col = null; syncHarnessBtns();
+  location.hash = "harness"; showTab("harness");
+}));
+
+/* ---------- circuit hotspots ---------- */
+["starting", "charging", "ignition"].forEach(t => {
+  const s = sheet(t);
+  s.addEventListener("click", e => {
+    const h = e.target.closest(".hot"); if (!h) return;
+    if (h.dataset.sw && h.dataset.sw !== "start") toggleSwitch(t, h.dataset.sw);
+    select(h.dataset.k);
+  });
+  s.addEventListener("pointerdown", e => {
+    const h = e.target.closest(".hot[data-sw='start']"); if (!h) return;
+    e.preventDefault(); h.setPointerCapture?.(e.pointerId); pressStart(true);
+  });
+  const up = e => { if (ST.start) pressStart(false); };
+  s.addEventListener("pointerup", up); s.addEventListener("pointercancel", up);
+});
+function toggleSwitch(t, k) {
+  if (t === "starting") { ST[k] = !ST[k]; updStarting(); }
+  if (t === "charging" && k === "ignsw") { CH.loads = !CH.loads; syncCh(); }
+  if (t === "ignition") {
+    if (k === "stopA" || k === "stopB") IG.run = !IG.run;
+    if (k === "ignB") IG.ign = !IG.ign;
+    syncIg();
+  }
+}
+
+/* ---------- STARTING (F23) ---------- */
+const ST = {ign: true, stop: true, neutral: true, clutch: false, stand: true, start: false, fault: "none"};
+let chatterT = null, chatterOn = false;
+function pressStart(v) { ST.start = v; $("#s-start").classList.toggle("down", v); updStarting(); }
+function syncStartBtns() {
+  const lab = {ign: ["Ignition on", "Ignition off"], stop: ["Engine stop: RUN", "Engine stop: OFF"], neutral: ["Gear: neutral", "Gear: in gear"],
+               clutch: ["Clutch pulled", "Clutch released"], stand: ["Side-stand up", "Side-stand down"]};
+  Object.entries(lab).forEach(([k, [a, b]]) => { const el = $("#s-" + k); el.textContent = ST[k] ? a : b; el.setAttribute("aria-pressed", String(ST[k])); });
+}
+function updStarting() {
+  syncStartBtns();
+  const svg = sheet("starting");
+  const F = ST.fault;
+  const fuseOK = F !== "fuse";
+  const neutralOK = ST.neutral && F !== "neutralsw";
+  const earth = neutralOK || (ST.clutch && ST.stand);
+  const v2 = ST.ign, v3 = v2 && fuseOK, v4 = v3 && ST.stop, v5 = v4 && ST.start;
+  const flow = v5 && earth;
+  const chatter = flow && F === "weak";
+  if (chatter && !chatterT) chatterT = setInterval(() => { chatterOn = !chatterOn; drawStarting(); }, 120);
+  if (!chatter && chatterT) { clearInterval(chatterT); chatterT = null; chatterOn = false; }
+  ST._ = {v2, v3, v4, v5, flow, earth, neutralOK, chatter};
+  drawStarting();
+}
+function drawStarting() {
+  const svg = sheet("starting");
+  const {v2, v3, v4, v5, flow, earth, neutralOK, chatter} = ST._;
+  const F = ST.fault;
+  const relay = flow && (!chatter || chatterOn);
+  const motor = relay && F !== "contacts" && !chatter;
+  const S = {};
+  const on = "on", V = "v";
+  S.feed = (flow || motor) ? on : V;
+  S.ctl1 = flow ? on : V;
+  S.ctl2 = flow ? on : (v2 ? V : "");
+  S.ctl3 = flow ? on : (v3 ? V : "");
+  S.ctl4 = flow ? on : (v4 ? V : "");
+  S.ctl5 = flow ? on : (v5 ? V : "");
+  S.coilret = flow ? on : (v5 ? V : "");
+  const nFlow = flow && neutralOK, cFlow = flow && ST.clutch && ST.stand;
+  S.neu1 = nFlow ? on : (v5 ? V : ""); S.neu2 = nFlow ? on : (v5 ? V : ""); S.neu3 = nFlow ? on : "";
+  S.cl1 = cFlow ? on : (v5 ? V : ""); S.cl2 = cFlow ? on : (v5 && ST.clutch ? V : ""); S.cl3 = cFlow ? on : "";
+  S.heavyB = motor ? on : V;
+  S.heavyM = motor ? on : (relay ? "" : "");
+  S.earthM = motor ? on : "";
+  S.earthB = (flow || motor) ? "on rev" : "";
+  applySegs("starting", S);
+  // switches
+  $$(".swg", svg).forEach(g => {
+    const k = g.dataset.sw;
+    const closed = k === "start" ? ST.start : !!ST[k] && (k !== "neutral" || ST.neutral);
+    g.classList.toggle("closed", closed);
+    const blade = g.querySelector(".blade");
+    if (blade) blade.setAttribute("d", closed ? "M7,0 L37,0" : "M7,-3 L38,-20");
+  });
+  svg.classList.toggle("relay-on", relay);
+  svg.classList.toggle("cranking", motor);
+  $("#fuse10", svg).classList.toggle("blown", F === "fuse");
+  // readouts
+  const rest = F === "weak" ? 11.9 : 12.7;
+  const volts = motor ? 10.4 : chatter ? (chatterOn ? 7.6 : 11.8) : flow ? rest - 0.1 : rest;
+  setReadouts([
+    ["Battery", volts.toFixed(1), "V", motor || chatter],
+    ["Relay coil", flow && (!chatter || chatterOn) ? "0.6" : "0.0", "A"],
+    ["Starter current", motor ? "≈ 95" : "0", "A", motor],
+    ["Relay", chatter ? "Chattering" : relay ? "Closed" : "Open", "", relay || chatter],
+    ["Starter motor", motor ? "Cranking" : "Stopped", "", motor],
+  ]);
+  // message
+  let m, k = "";
+  if (!ST.ign) m = "Ignition off. Only the heavy feed up to the relay B stud and the junction for the control circuit carry battery voltage.";
+  else if (F === "fuse") { m = "The 10 A fuse is blown, so the stop switch, start button and relay coil get no feed. No click, and no spark either. Find the short before fitting a new fuse."; k = "warn"; }
+  else if (!ST.stop) { m = "Engine stop switch is in OFF, so no feed reaches the start button. Flip it to RUN."; k = "warn"; }
+  else if (!ST.start) m = earth ? "Ready. Hold the start button (on the bench or on the drawing) to energise the relay coil."
+      : "Ready, but the relay coil has no earth path. In gear with the clutch released or the side-stand down, the starter will not work.";
+  else if (!earth) { m = F === "neutralsw" && ST.neutral
+      ? "Start pressed in neutral, but the neutral switch does not earth, so the coil has no return path. The N lamp is also out. Pull the clutch with the stand up to start, then replace the switch."
+      : "Start pressed, but the relay coil has no earth path. Select neutral, or pull the clutch with the side-stand up."; k = "warn"; }
+  else if (chatter) { m = "The relay chatters. The coil pulls in, the starter load drags a weak battery below about 8 V, the coil drops out, the voltage recovers and it pulls in again. Charge or replace the battery."; k = "warn"; }
+  else if (F === "contacts") { m = "The relay clicks but the starter does not turn. The burnt contact disc passes no current, so 12 V stays across the B and M studs. Replace the relay."; k = "warn"; }
+  else { m = "Cranking. About 95 A flows from the battery through the main fuse, the relay contacts and the starter motor to earth, while the coil circuit carries under 1 A."; k = "run"; }
+  if (tab === "starting") setMsg(m, k);
+}
+$$("#deck-starting [data-k]").forEach(b => b.addEventListener("click", () => { ST[b.dataset.k] = !ST[b.dataset.k]; updStarting(); select(b.dataset.k); }));
+$("#s-fault").addEventListener("change", e => { ST.fault = e.target.value; updStarting(); });
+(() => {
+  const b = $("#s-start");
+  b.addEventListener("pointerdown", e => { e.preventDefault(); b.setPointerCapture?.(e.pointerId); pressStart(true); });
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach(ev => b.addEventListener(ev, () => { if (ST.start) pressStart(false); }));
+  b.addEventListener("keydown", e => { if ((e.key === " " || e.key === "Enter") && !ST.start) { e.preventDefault(); pressStart(true); } });
+  b.addEventListener("keyup", e => { if (e.key === " " || e.key === "Enter") pressStart(false); });
+})();
+
+/* ---------- CHARGING (F21) ---------- */
+const CH = {rpm: 3500, loads: true, fault: "none", soc: 0.62, ang: 0};
+const CAP_AH = 5, SPEEDUP = 120;
+function chModel() {
+  const rpm = CH.rpm, F = CH.fault;
+  const phase = F === "phase";
+  const Vll = 0.016 * rpm;
+  const Voc = rpm > 0 ? 1.35 * Vll - 1.4 : 0;
+  const Isc = rpm > 0 ? 15.5 * (1 - Math.exp(-rpm / 2300)) * (phase ? 0.5 : 1) : 0;
+  const Iload = CH.loads ? 7.2 : 0;
+  const OCV = 11.85 + 0.95 * CH.soc;
+  const Rint = 0.045;
+  let Ia = 0, Ib, Vb, Ish = 0;
+  const fuse = F !== "fuse";
+  if (fuse && Voc > OCV + 0.3) Ia = Isc * Math.min(1, (Voc - OCV - 0.3) / 3);
+  const Imax = Math.max(0.2, 11 * Math.pow(1 - CH.soc, 1.4));
+  const net = Ia - Iload;
+  if (net > 0) {
+    if (F === "reg") { Ib = net; Vb = Math.min(Voc, OCV + 0.42 * net + 0.4); }
+    else if (net > Imax) { Ib = Imax; Vb = 14.5; Ish = net - Imax; }
+    else { Ib = net; Vb = OCV + (14.5 - OCV) * (net / Imax); }
+  } else { Ib = net; Vb = OCV + net * Rint; }
+  if (CH.soc <= 0.001 && Ib < 0) { Vb = Math.max(6, Vb - 4); }
+  return {Vll, Voc, Ia, Ib, Vb, Ish, Iload, OCV, fuse, phase};
+}
+function syncCh() {
+  $("#c-rpm").value = CH.rpm; $("#c-rpm-out").textContent = CH.rpm + " rpm";
+  $("#c-loads").textContent = CH.loads ? "Lights and loads on" : "Loads off";
+  $("#c-loads").setAttribute("aria-pressed", String(CH.loads));
+}
+function stepCharging(dt) {
+  const r = chModel();
+  CH.soc = Math.min(1, Math.max(0, CH.soc + r.Ib * dt * SPEEDUP / (CAP_AH * 3600)));
+  CH.ang = (CH.ang + CH.rpm * dt * 0.03) % 360;
+  if (tab !== "charging") return;
+  const svg = sheet("charging");
+  $("#rotor21", svg).setAttribute("transform", `rotate(${CH.ang.toFixed(1)})`);
+  const chg = r.Ia > 0.1, sh = r.Ish > 0.15, on = "on";
+  const S = {};
+  const turning = CH.rpm > 0;
+  S.phU = turning ? "on ac" : ""; S.phV = turning ? "on ac" : ""; S.phW = turning && !r.phase ? "on ac" : "";
+  ["col1", "col2", "col3", "posRail"].forEach(k => S[k] = chg ? on : (r.Vb > 0 && k === "posRail" ? "v" : ""));
+  S.negRail = (chg || sh) ? "on rev" : "";
+  S.regE = (chg || sh) ? "on rev" : "";
+  S.shunt1 = sh ? on : ""; S.shunt2 = sh ? on : ""; S.shunt3 = sh && !r.phase ? on : "";
+  S.sense = "v";
+  S.out1 = chg ? on : (turning && r.fuse ? "v" : (turning ? "v" : ""));
+  S.out2 = chg ? on : (r.fuse ? "v" : "");
+  S.out3 = chg ? on : "v";
+  const ibOn = Math.abs(r.Ib) > 0.1;
+  S.batt = ibOn ? (r.Ib > 0 ? on : "on rev") : "v";
+  S.batE = ibOn ? (r.Ib > 0 ? on : "on rev") : "";
+  S.load1 = CH.loads ? on : "v"; S.load2 = CH.loads ? on : ""; S.load3 = CH.loads ? on : "";
+  applySegs("charging", S);
+  setBlade($("[data-blade='ignsw']", svg), CH.loads, "M1448,248 L1486,228", "M1448,250 L1486,250");
+  const lamp = $("#lamp", svg);
+  const br = CH.loads ? Math.max(0, Math.min(1, (r.Vb - 9) / 5.5)) : 0;
+  lamp.style.fill = br > 0 ? `rgba(255, ${Math.round(196 + 40 * br)}, ${Math.round(90 + 60 * (1 - br))}, ${0.25 + 0.75 * br})` : "#FFFFFF";
+  $("#fuse15", svg).classList.toggle("blown", !r.fuse);
+  setReadouts([
+    ["Engine", CH.rpm, "rpm"],
+    ["Stator AC, unloaded", turning ? r.Vll.toFixed(0) : "0", "V"],
+    ["B+ / battery", r.Vb.toFixed(1), "V", r.Vb > 15 || r.Vb < 12],
+    ["Battery current", (r.Ib >= 0 ? "+" : "−") + Math.abs(r.Ib).toFixed(1), "A", r.Ib < -0.1],
+    ["Shunted to earth", r.Ish.toFixed(1), "A", sh],
+    ["Battery charge", Math.round(CH.soc * 100), "%", CH.soc < 0.2],
+  ]);
+  let m, k = "";
+  if (!r.fuse) { m = "The 15 A fuse is blown. The alternator still turns, but its output cannot reach the battery or loads, so the battery is discharging."; k = "warn"; }
+  else if (CH.soc <= 0.01 && r.Ib < 0) { m = "The battery is flat. Lights dim, the ECU resets and the engine stops. Raise the revs or switch loads off."; k = "warn"; }
+  else if (!turning) m = CH.loads ? "Engine off. The loads run from the battery alone, so its charge falls." : "Engine off and loads off. Nothing flows.";
+  else if (CH.fault === "reg" && r.Vb > 14.8) { m = `The regulator has failed, so nothing caps the voltage. At ${r.Vb.toFixed(1)} V the battery gasses and bulbs blow. Replace the regulator/rectifier.`; k = "warn"; }
+  else if (r.Ib < -0.1) { m = `At ${CH.rpm} rpm the alternator makes ${r.Ia.toFixed(1)} A but the loads need ${r.Iload.toFixed(1)} A, so the battery covers the shortfall.${r.phase ? " One stator phase is open, which halves the output." : ""}`; k = r.phase ? "warn" : ""; }
+  else if (sh) { m = `The battery is nearly full. The regulator holds 14.5 V and shorts ${r.Ish.toFixed(1)} A of stator current to earth through the SCRs, turning it into heat in the regulator and stator.`; k = "run"; }
+  else { m = `Charging. The bridge rectifies three-phase AC to DC and ${r.Ib.toFixed(1)} A flows into the battery at ${r.Vb.toFixed(1)} V.${r.phase ? " One stator phase is open, so output is about half what it should be." : ""}`; k = r.phase ? "warn" : "run"; }
+  setMsg(m, k);
+}
+$("#c-rpm").addEventListener("input", e => { CH.rpm = +e.target.value; syncCh(); });
+$$("[data-rpm]").forEach(b => b.addEventListener("click", () => { CH.rpm = +b.dataset.rpm; syncCh(); }));
+$("#c-loads").addEventListener("click", () => { CH.loads = !CH.loads; syncCh(); select("loads"); });
+$("#c-flat").addEventListener("click", () => { CH.soc = 0.08; });
+$("#c-full").addEventListener("click", () => { CH.soc = 1; });
+$("#c-fault").addEventListener("change", e => { CH.fault = e.target.value; });
+
+/* ---------- IGNITION (F22) ---------- */
+const IG = {speed: 30, run: true, ign: true, fault: "none", a: 200, cap: 0, sparks: 0, ip: 0};
+function syncIg() {
+  $("#i-speed").value = IG.speed;
+  $("#i-speed-out").textContent = (IG.speed * 100) + " rpm";
+  $("#i-stop").textContent = IG.run ? "Engine stop: RUN" : "Engine stop: OFF";
+  $("#i-stop").setAttribute("aria-pressed", String(IG.run));
+  $("#i-ign").textContent = IG.ign ? "Ignition on (panel B)" : "Ignition off (panel B)";
+  $("#i-ign").setAttribute("aria-pressed", String(IG.ign));
+}
+function stepIgnition(dt) {
+  const prev = IG.a;
+  const dps = IG.speed * 3.2;
+  IG.a = (IG.a + dps * dt) % 360;
+  const turning = IG.speed > 0;
+  const crossed = turning && IG.a < prev;
+  const pulserOK = IG.fault !== "pulser";
+  const a = IG.a;
+  const sinceFire = a;
+  const fired = turning && pulserOK && sinceFire < 22;
+  // panel A
+  const S = {};
+  if (!IG.run) {
+    if (turning) { S.srcA1 = "on ac"; S.stopA1 = "on ac"; S.stopA2 = "on ac"; }
+    IG.cap = Math.max(0, IG.cap - dt * 600);
+  } else if (turning) {
+    if (fired && IG.cap > 0) {
+      ["outA1", "outA2", "coilgA", "scrA", "gndA"].forEach(k => S[k] = "on");
+      if (sinceFire > 14) IG.cap = 0;
+    } else if (!fired) {
+      ["srcA1", "srcA2", "srcA3", "chgA"].forEach(k => S[k] = IG.cap < 245 ? "on slow" : "v");
+      IG.cap = Math.min(260, IG.cap + (262 - IG.cap) * Math.min(1, dt * 4.5));
+    }
+    if (pulserOK && sinceFire < 12) { S.pulA = "on"; S.pcA = "on"; S.pulgA = "on"; }
+  }
+  if (IG.run && crossed && pulserOK && IG.cap > 50) IG.sparks++;
+  // panel B
+  const powered = IG.ign && IG.run;
+  if (IG.ign) { S.supB1 = "v"; S.supB2 = "v"; S.batgB = ""; }
+  if (IG.ign && !IG.run) S.supB3 = "v";
+  let dwell = false;
+  if (powered) {
+    ["supB1", "supB2", "supB3", "supB4a", "ecuFeed"].forEach(k => S[k] = "on slow");
+    S.batgB = "on slow rev"; S.supB4b = "v"; S.ecuG = "on slow";
+    const rpm = IG.speed * 100;
+    const dwellDeg = Math.min(120, 40 + rpm / 120);
+    dwell = turning && pulserOK && a > 360 - dwellDeg;
+    if (dwell) {
+      S.supB4b = "on"; S.igB = "on rev"; S.igbtC = "on rev"; S.igbtE = "on"; S.ecuG = "on"; S.gateB = "on";
+      ["supB1", "supB2", "supB3"].forEach(k => S[k] = "on");
+      S.batgB = "on rev";
+      const t = (a - (360 - dwellDeg)) / dwellDeg;
+      IG.ip = 6 * (1 - Math.exp(-t * 3));
+    } else IG.ip = 0;
+    if (turning && pulserOK && sinceFire < 12) { S.pulB = "on"; S.pcB = "on"; S.pulgB = "on"; }
+  } else IG.ip = 0;
+  if (powered && crossed && pulserOK) IG.sparks++;
+  if (tab !== "ignition") return;
+  const svg = sheet("ignition");
+  applySegs("ignition", S);
+  $("#lobeA", svg).setAttribute("transform", `translate(220,290) rotate(${a.toFixed(1)})`);
+  $("#flyA", svg).setAttribute("transform", `rotate(${a.toFixed(1)} 220 290)`);
+  $("#lobeB", svg).setAttribute("transform", `translate(220,350) rotate(${a.toFixed(1)})`);
+  $("#flyB", svg).setAttribute("transform", `rotate(${a.toFixed(1)} 220 350)`);
+  const fouled = IG.fault === "plug";
+  const fireA = IG.run && turning && pulserOK && sinceFire < 14 && IG.cap >= 0;
+  const fireB = powered && turning && pulserOK && sinceFire < 14;
+  $("#htA", svg).classList.toggle("fire", fireA);
+  $("#htB", svg).classList.toggle("fire", fireB);
+  $("#sparkA", svg).classList.toggle("fire", fireA && !fouled);
+  $("#sparkB", svg).classList.toggle("fire", fireB && !fouled);
+  setBlade($("[data-blade='stopA']", svg), !IG.run, "M482,148 L498,180", "M480,148 L480,182");
+  setBlade($("[data-blade='ignB']", svg), IG.ign, "M347,63 L380,46", "M347,66 L380,66");
+  setBlade($("[data-blade='stopB']", svg), IG.run, "M447,63 L480,46", "M447,66 L480,66");
+  const rpm = IG.speed * 100;
+  const adv = Math.round(Math.min(38, 8 + rpm / 300));
+  setReadouts([
+    ["Engine", rpm, "rpm"],
+    ["A: capacitor", Math.round(IG.cap), "V", IG.cap > 200],
+    ["B: coil primary", IG.ip.toFixed(1), "A", IG.ip > 0.5],
+    ["B: advance", powered && turning && pulserOK ? adv : "–", "° BTDC"],
+    ["Ignition pulses", IG.sparks, ""],
+  ]);
+  let m, k = "";
+  if (!turning) m = "Engine stopped. Both systems need the crankshaft turning: panel A has no source coil output, and the ECU in panel B will not switch the coil on without a crank signal, which protects the coil from overheating.";
+  else if (!IG.run) { m = "Engine stop switch in OFF. In panel A it shorts the source coil to earth, so the capacitor never charges. In panel B it opens the feed to the coil and ECU. No spark in either."; k = "warn"; }
+  else if (!pulserOK) { m = "The pulser coil is open circuit, so neither unit knows where the crankshaft is. The CDI capacitor sits fully charged and the ECU never starts a dwell. Measure 100 to 500 Ω across the pulser."; k = "warn"; }
+  else {
+    const A = fired ? "A: the pulser fires the SCR and the capacitor dumps into the coil primary." : `A: the source coil charges the capacitor through diode D (${Math.round(IG.cap)} V).`;
+    const B = !IG.ign ? "B: ignition off, no feed." : dwell ? `B: dwell. The IGBT earths the coil primary and ${IG.ip.toFixed(1)} A builds up.` : sinceFire < 22 ? `B: the IGBT has switched off; the collapsing field fires the plug at ${adv}° before top dead centre.` : "B: waiting for the next dwell.";
+    m = `${A} ${B}${fouled ? " The plug is fouled: the high voltage leaks across carbon to earth and no spark crosses the gap." : ""}`;
+    k = fouled ? "warn" : "run";
+  }
+  setMsg(m, k);
+}
+$("#i-speed").addEventListener("input", e => { IG.speed = +e.target.value; syncIg(); });
+$("#i-stop").addEventListener("click", () => { IG.run = !IG.run; syncIg(); select(IG.run ? "stopB" : "stopA"); });
+$("#i-ign").addEventListener("click", () => { IG.ign = !IG.ign; syncIg(); select("ignB"); });
+$("#i-fault").addEventListener("change", e => { IG.fault = e.target.value; });
+
+/* ---------- tabs + loop ---------- */
+function showTab(t) {
+  if (!TABS.includes(t)) t = "harness";
+  tab = t;
+  $$("nav.tabs a").forEach(a => a.setAttribute("aria-selected", String(a.dataset.tab === t)));
+  $$(".sheet").forEach(s => s.hidden = s.dataset.tab !== t);
+  $$(".deck").forEach(s => s.hidden = s.dataset.tab !== t);
+  $("#legend").hidden = t === "harness";
+  roKeys = ""; lastSeg[t] = null;
+  if (t === "harness") { setReadouts([]); harnessMark(); }
+  if (t === "starting") updStarting();
+  renderList(); select(sel[t]);
+}
+$$("nav.tabs a").forEach(a => a.addEventListener("click", e => {
+  e.preventDefault();
+  try { history.replaceState(null, "", "#" + a.dataset.tab); } catch (_) { location.hash = a.dataset.tab; }
+  showTab(a.dataset.tab);
+}));
+window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
+let last = performance.now();
+function loop(now) {
+  const dt = Math.min(0.1, (now - last) / 1000); last = now;
+  stepCharging(dt); stepIgnition(dt);
+  requestAnimationFrame(loop);
+}
+buildHarnessDeck(); syncCh(); syncIg(); syncStartBtns();
+updStarting();
+showTab(location.hash.slice(1) || "harness");
+requestAnimationFrame(loop);
+</script>
