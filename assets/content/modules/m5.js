@@ -54,7 +54,8 @@ export default {
         { type: "check", q: "m5-03" },
 
         { type: "h3", text: "Component map" },
-        { type: "illus", file: "electrical/F25.svg", caption: "The electric powertrain: battery and BMS, contactor and pre-charge, inverter, motor, VCU, DC-DC converter, charger and CAN bus." },
+        { type: "plate", id: "F25", caption: "The electric powertrain: battery and BMS, contactor and pre-charge, inverter, motor, VCU, DC-DC converter, charger and CAN bus." },
+        { type: "plate", id: "F03", caption: "Electric motorcycle with the battery pack, mid-drive motor and controller shown inside the frame." },
         {
           type: "table",
           head: ["Component", "What it does"],
@@ -146,7 +147,8 @@ export default {
           ],
         },
         { type: "p", html: "In practice the line is blurred: most hub motors sold as BLDC have nearly sinusoidal back-EMF and are driven with sinusoidal control. The machine is the same; the drive strategy decides smoothness and efficiency." },
-        { type: "illus", file: "electrical/F24.svg", caption: "Left: outer-rotor hub motor with surface magnets and Hall sensors. Right: inner-rotor IPM motor with V-shaped buried magnets for mid-drive mounting." },
+        { type: "model", file: "motor", caption: "A permanent-magnet synchronous motor cut away: finned housing, 12-tooth stator with copper windings, rotor with alternating magnets, bearings and output shaft." },
+        { type: "plate", id: "F24", caption: "Left: outer-rotor hub motor with surface magnets and Hall sensors. Right: inner-rotor IPM motor with V-shaped buried magnets for mid-drive mounting." },
 
         { type: "h3", text: "Pole pairs and electrical frequency" },
         { type: "p", html: "The controller must generate <strong>f_e = p × n / 60</strong>. A hub motor with 23 pole pairs at 600 rpm runs at <strong>230 Hz</strong>; a mid-drive with 5 pole pairs at 6,000 rpm at <strong>500 Hz</strong>. Many poles give torque at low speed; few poles keep frequency (and iron loss) in check at high speed." },
@@ -222,6 +224,7 @@ export default {
         },
         { type: "p", html: "Gate drivers turn logic signals into 10–15 V gate pulses. The <strong>DC-link capacitors</strong> supply the switching ripple; electrolytic capacitors dry out with heat and age, a common cause of controller failure after several years. Current is sensed by shunts on cheap controllers and Hall-effect transducers on better ones." },
 
+        { type: "model", file: "controller", caption: "A motor controller with the lid removed: heat sink, six power switches, DC-link capacitors, copper busbars and gate-driver board." },
         { type: "h3", text: "Pulse-width modulation" },
         { type: "p", html: "The battery voltage is fixed, so the controller switches at a fixed frequency (<strong>8–20 kHz</strong> for MOSFET drives, 5–10 kHz for large IGBT drives) and varies the duty cycle D: <strong>V_avg = D × V_DC</strong>. Winding inductance smooths the current. The faint whine of some scooters at low speed is the PWM frequency exciting the laminations." },
         { type: "check", q: "m5-11" },
@@ -257,6 +260,7 @@ export default {
         { type: "p", html: "A Hall throttle reads about <strong>0.8 V</strong> closed and <strong>4.2 V</strong> wide open on a 5 V supply. The dead bands let the controller treat anything below about 0.5 V or above 4.5 V as a broken wire, not a command. Torque-mode throttles feel like a petrol throttle; speed-mode throttles feel like cruise control. Ride modes change the map, torque and power ceilings, top speed and regen strength." },
         { type: "callout", tone: "warm", title: "Instant torque", html: "A 190 N·m mid-drive through a 6:1 reduction can put over <strong>1,100 N·m</strong> on the rear wheel within milliseconds, enough to spin it on a wet road or lift the front. Throttle maps deliberately rate-limit the rise, often 50–200 ms to full torque." },
 
+        { type: "model", file: "instruments_tft", caption: "A TFT dashboard showing ride mode, speed and battery state." },
         { type: "h3", text: "Regenerative braking" },
         { type: "p", html: "Command negative iq and the motor's torque opposes rotation: it becomes a generator and kinetic energy flows back into the battery. Regen is triggered by closing the throttle, by the brake lever switch (often rear only) or by a separate control." },
         {
@@ -326,7 +330,7 @@ export default {
 
         { type: "h3", text: "Pack arithmetic: xSyP" },
         { type: "p", html: "<strong>S</strong> groups in series add voltage; <strong>P</strong> cells in parallel within each group add capacity and current capability." },
-        { type: "illus", file: "electrical/F26.svg", caption: "A 20S10P module of 21700 cells with nickel strips, holders and BMS, and a section through one cell." },
+        { type: "plate", id: "F26", caption: "A 20S10P module of 21700 cells with nickel strips, holders and BMS, and a section through one cell." },
         {
           type: "keys",
           items: [
@@ -374,6 +378,7 @@ export default {
         { type: "p", html: "A <strong>common-port</strong> BMS charges and discharges through the same terminals and switches; a <strong>separate-port</strong> BMS has its own lower-rated charge path. Swap-pack BMSs authenticate with vehicle and station and log cycles, temperatures and faults. Stored packs need a deep-sleep BMS: 10 mA drains 1 Ah in 100 hours." },
         { type: "check", q: "m5-19" },
 
+        { type: "model", file: "battery_hv", caption: "An HV traction battery enclosure with cooling fins, HV connector, orange cable and service disconnect." },
         { type: "h3", text: "Thermal runaway" },
         {
           type: "steps",
@@ -493,6 +498,7 @@ export default {
         { type: "p", html: "A lithium battery shipped alone is dangerous goods <strong>UN 3480</strong> (UN 3481 with or in equipment; a whole vehicle is UN 3171). A replacement pack without a UN 38.3 test summary is a warning sign." },
         { type: "callout", tone: "safety", title: "Charging indoors and DC connectors", html: "Most city battery fires start during charging, often with non-original chargers or damaged packs. Use the specified charger, on a non-combustible surface, away from escape routes, with a smoke alarm. XLR, Anderson and XT60/XT90 connectors are <strong>not rated to break DC current</strong>: the arc does not self-extinguish, so connect and disconnect them only with the charger off." },
 
+        { type: "model", file: "charge_port", caption: "A Type 2 / CCS2-style charging inlet with hinged cap." },
         { type: "h3", text: "Grid and solar" },
         { type: "p", html: "One bike is a small load, but a swap station charging 40 packs at 1 kW draws 40 kW and needs a three-phase supply. Solar is easy because daily needs are small: <strong>E_PV = P_peak × H_peak × PR</strong>. A boda boda doing 120 km at 3.5 kWh/100 km needs about 4.2 kWh at the battery (4.8 kWh from the panels); 1.5 kWp × 5.0 h × 0.75 ≈ <strong>5.6 kWh/day</strong>, from four to five modules on 7–8 m²." },
         { type: "check", q: "m5-24" },
@@ -576,7 +582,7 @@ export default {
             ["Charger won't start", "Pack too cold or hot, BMS fault, communication, wrong charger"],
           ],
         },
-        { type: "illus", file: "electrical/EL02.svg", caption: "Electrical component map: use it to trace a symptom back to the part to test." },
+        { type: "plate", id: "EL02", caption: "Electrical component map: use it to trace a symptom back to the part to test." },
 
         { type: "h3", text: "Maintenance compared with petrol" },
         { type: "p", html: "No engine oil, filters, spark plugs, valve adjustment, exhaust or clutch. What still needs attention:" },

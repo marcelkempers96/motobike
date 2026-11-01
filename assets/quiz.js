@@ -10,7 +10,9 @@ const store = {
 };
 
 const params = new URLSearchParams(location.search);
-let topic = TOPIC_ALIAS[params.get('topic')] || 'all';
+const rawTopic = params.get('topic') || '';
+const mnum = rawTopic.match(/^m(\d)-/);
+let topic = TOPIC_ALIAS[rawTopic] || (mnum && MODULES[+mnum[1] - 1] ? MODULES[+mnum[1] - 1].id : 'all');
 let length = 10;
 let run = null;
 

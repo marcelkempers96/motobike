@@ -14,6 +14,7 @@ export default {
       blocks: [
         { type: 'h3', text: 'From fuel to force' },
         { type: 'p', html: 'A petrol engine is a <strong>heat engine</strong>: it burns air and fuel inside a sealed chamber whose volume changes as the piston moves. Petrol carries about <strong>43 MJ/kg</strong>, and burns cleanly at the stoichiometric ratio of <strong>14.7 kg of air per kg of fuel</strong>.' },
+        { type: 'model', file: 'engine_4t', caption: 'A horizontal single-cylinder four-stroke commuter engine with carburettor, starter motor, clutch cover and kickstart.' },
         { type: 'p', html: 'When it burns, gas temperature jumps from about 600 K to a peak of 2,300–2,600 K and cylinder pressure from 1.5–2 MPa to <strong>4–7 MPa</strong>. That pressure pushes on the piston crown; the connecting rod and crank turn the push into <strong>torque</strong>.' },
         { type: 'keys', items: [
           { l: 'Displacement', v: '124 cm³', p: 'K-Light 125: bore 56.5 mm × stroke 49.5 mm, one cylinder' },
@@ -74,7 +75,7 @@ export default {
           { title: 'Power (360–540°)', html: 'The flame crosses the chamber, pressure peaks just after TDC and drives the piston down. Most useful work is done in the first 60–90°.' },
           { title: 'Exhaust (540–720°)', html: 'Exhaust valve opens before BDC; the first rush (<strong>blowdown</strong>) leaves at near sonic speed. The rising piston pushes out most of the rest, leaving 5–15 % residual gas.' },
         ] },
-        { type: 'illus', file: 'powertrain/F07.svg', caption: 'The four-stroke cycle: valve positions, piston travel, crank angle and gas flow in each stroke.' },
+        { type: 'plate', id: 'F07', caption: 'The four-stroke cycle: valve positions, piston travel, crank angle and gas flow in each stroke.' },
         { type: 'h3', text: 'Valve timing: open early, close late' },
         { type: 'p', html: 'Gas has inertia and valves take time to lift, so cams open each valve early and close it late. The four events are named after the valve and the nearest dead centre.' },
         { type: 'table', head: ['Event', 'Commuter single', 'Sports four (four-valve)'], rows: [
@@ -116,6 +117,7 @@ export default {
       lab: '?mode=2t&part=cylinder',
       blocks: [
         { type: 'p', html: 'The motorcycle two-stroke uses the <strong>underside of the piston and a sealed crankcase</strong> as a pump, and replaces poppet valves with <strong>ports</strong> that the piston uncovers and covers. The full cycle takes <strong>360°</strong>, so it fires every revolution.' },
+        { type: 'model', file: 'engine_2t', caption: 'A 125 cc two-stroke single: finned cylinder with power-valve housing, reed-valve intake and carburettor, clutch and ignition covers.' },
         { type: 'figure', fig: 'cycle-2t', caption: 'Run the cycle slowly. Pause when the exhaust port starts to open and again when the transfers open: the gap between them is the blowdown period.' },
         { type: 'steps', items: [
           { title: 'Upstroke (BDC to TDC)', html: '<strong>Above</strong> the piston: transfers close, then the exhaust; the trapped charge is compressed and fired near TDC. <strong>Below</strong>: crankcase pressure falls to about 0.6–0.8 bar absolute and fresh mixture is drawn in.' },
@@ -123,7 +125,7 @@ export default {
           { title: 'Exhaust port opens', html: 'At roughly 80–100° before BDC the crown uncovers the exhaust; blowdown drops cylinder pressure sharply.' },
           { title: 'Transfers open: scavenging', html: 'A few degrees later the transfers open and the pressurised crankcase charge flows up, pushing burnt gas out of the exhaust.' },
         ] },
-        { type: 'illus', file: 'powertrain/F08.svg', caption: 'The two-stroke cycle: upstroke and downstroke, above and below the piston.' },
+        { type: 'plate', id: 'F08', caption: 'The two-stroke cycle: upstroke and downstroke, above and below the piston.' },
         { type: 'p', html: 'Port events are <strong>symmetrical about BDC</strong>, because the piston opens and closes each port at the same height. So an exhaust port opening 97° before BDC has a duration of 2 × 97 = 194°.' },
         { type: 'table', head: ['Engine type', 'Exhaust duration', 'Transfer duration', 'Blowdown'], rows: [
           ['Moped or road commuter', '160–175°', '115–122°', '20–25°'],
@@ -139,14 +141,17 @@ export default {
         ] },
         { type: 'h3', text: 'Scavenging and the expansion chamber' },
         { type: 'p', html: 'Scavenging, swapping burnt gas for fresh charge while exhaust and transfers are open together, is the central difficulty. Modern engines use <strong>loop (Schnürle) scavenging</strong>: transfers aim the charge away from the exhaust, up the far wall, over the head and down toward the exhaust, sweeping burnt gas ahead. A <strong>boost port</strong> opposite the exhaust fills the region the main streams would leave stagnant.' },
-        { type: 'illus', file: 'powertrain/PT03.svg', caption: 'Two-stroke cylinder ports: exhaust, transfers and boost port.' },
+        { type: 'plate', id: 'PT03', caption: 'Two-stroke cylinder ports: exhaust, transfers and boost port.' },
+        { type: 'model', file: 'port_tr', caption: 'Cylinder cut away through the transfer passages: the channels lead from the crankcase to the windows in the liner.' },
+        { type: 'model', file: 'port_ex', caption: 'Cylinder cut away through the exhaust port, the window the piston uncovers first on the downstroke.' },
         { type: 'p', html: 'Some charge always escapes straight out of the exhaust: <strong>20–40 %</strong> at full throttle in a carburetted engine. The <strong>expansion chamber</strong> fights back with pressure waves travelling at about 500–520 m/s: the diffuser sends a suction wave that helps scavenging, then the baffle cone sends a positive wave that pushes escaped charge back in just before the port closes.' },
         { type: 'keys', items: [
           { l: 'Tuned length', v: 'L ≈ a × θex / (12 × N)', p: 'a ≈ 500 m/s, θex = exhaust duration, N = rpm' },
           { l: '125 MX example', v: '0.70 m', p: '194° duration tuned for 11,500 rpm' },
         ] },
         { type: 'p', html: 'Because the wave timing is fixed in milliseconds, the pipe only works over a band of rpm: the reason for the narrow powerband. A <strong>power valve</strong> (Yamaha YPVS, KTM guillotine, Honda HPP, Kawasaki KIPS, Suzuki AETC) lowers the exhaust port roof at low rpm and opens it fully at high rpm.' },
-        { type: 'illus', file: 'powertrain/PT02.svg', caption: 'Exhaust systems in section, including the expansion chamber with diffuser, belly, baffle cone and stinger.' },
+        { type: 'model', file: 'exhaust_2t', caption: 'A two-stroke expansion chamber built from welded cone segments, ending in the stinger and silencer.' },
+        { type: 'plate', id: 'PT02', caption: 'Exhaust systems in section, including the expansion chamber with diffuser, belly, baffle cone and stinger.' },
         { type: 'callout', tone: 'safety', title: 'Power valves and oil supply', html: 'Carbon from burnt oil seizes power valves: <strong>stuck closed</strong> = will not rev; <strong>stuck open</strong> = no bottom-end torque. And on oil-injected engines, a failed pump or empty oil tank <strong>seizes the engine within minutes</strong>.' },
         { type: 'check', q: 'm2-13' },
         { type: 'h3', text: 'Lubrication: premix or oil injection' },
@@ -164,7 +169,8 @@ export default {
       lab: '?mode=4t&part=cylinder',
       blocks: [
         { type: 'p', html: 'The cylinder head closes the cylinder, carries valves, ports, spark plug and (on overhead-cam engines) the camshafts, and passes heat to the fins or water jacket. It is cast aluminium-silicon alloy with harder inserted seats and guides. The K-Light head face is allowed only <strong>0.05 mm</strong> out of flat.' },
-        { type: 'illus', file: 'powertrain/F09.svg', caption: 'Single-cylinder four-stroke in section: cam chain, camshaft, rockers, valves and springs, plug, piston, rod and crank.' },
+        { type: 'model', file: 'cylinder', caption: 'Cylinder and head in quarter section: liner, combustion chamber, inlet valve and port, and the cooling fins.' },
+        { type: 'plate', id: 'F09', caption: 'Single-cylinder four-stroke in section: cam chain, camshaft, rockers, valves and springs, plug, piston, rod and crank.' },
         { type: 'h3', text: 'Combustion chamber shapes' },
         { type: 'table', head: ['Shape', 'Where', 'Why'], rows: [
           ['Hemispherical / spherical', 'Two-valve singles (K-Light)', 'Large valves, central plug'],
@@ -175,6 +181,8 @@ export default {
         { type: 'check', q: 'm2-16' },
         { type: 'h3', text: 'Valves, seats, guides and springs' },
         { type: 'p', html: 'Exhaust valve heads run at <strong>650–800 °C</strong>, so they use heat-resistant austenitic steel, nickel alloy or bimetallic construction; inlets are cooled by the incoming charge. Seats have a 45° sealing face with 32° and 60° correcting cuts. Twin concentric springs wound in opposite directions resist surge; weak springs let the follower leave the cam (<strong>valve float</strong>).' },
+        { type: 'model', file: 'valve_ex', caption: 'An exhaust valve with a window cut in the stem to show the sodium filling that carries heat from the head to the guide.' },
+        { type: 'model', file: 'valve_in', caption: 'An intake valve with its spring, retainer and collets: the larger head of the pair, running much cooler than the exhaust.' },
         { type: 'table', head: ['K-Light 125 item', 'Standard', 'Limit'], rows: [
           ['Seat contact width', '0.8–1.0 mm', '1.6 mm'],
           ['Inlet stem diameter', '5.44–5.45 mm', '5.40 mm'],
@@ -190,7 +198,7 @@ export default {
           ['DOHC', 'Two cams acting on buckets or finger followers', 'Shims under or on top of buckets'],
         ] },
         { type: 'p', html: 'Push-rod mass limits revs, but that does not matter for a commuter engine peaking at 9,000 rpm; it is cheap, compact and tolerant of neglect. Overhead cams are driven at half crank speed by a chain with a ratchet-type automatic tensioner. A rattling chain at idle means chain, guides, sprockets and tensioner are worn: <strong>renew them as a set</strong>.' },
-        { type: 'illus', file: 'powertrain/F10.svg', caption: 'Valvetrain and valve clearance: rocker adjuster with feeler gauge, and a DOHC bucket-and-shim inset.' },
+        { type: 'plate', id: 'F10', caption: 'Valvetrain and valve clearance: rocker adjuster with feeler gauge, and a DOHC bucket-and-shim inset.' },
         { type: 'h3', text: 'Why valve clearance closes up' },
         { type: 'p', html: 'A small clearance (lash) is left so the valve can expand and still seat fully. The K-Light uses <strong>0.05–0.07 mm</strong> on both valves. On most modern engines the clearance <em>closes up</em> with wear: valve face and seat hammer into each other, the valve sinks into the head (<strong>valve recession</strong>) and its stem tip rises toward the rocker or bucket.' },
         { type: 'callout', tone: 'safety', title: 'Zero clearance burns valves', html: 'A valve with no clearance never fully closes. The usual sequence: <strong>hard hot starting → low compression → burnt exhaust valve</strong>. Check clearances at every specified service.' },
@@ -208,6 +216,7 @@ export default {
       blocks: [
         { type: 'h3', text: 'Piston and rings' },
         { type: 'p', html: 'Pistons are aluminium-silicon alloy: <strong>cast</strong> for most road engines, <strong>forged</strong> (stronger when hot, lighter) for sports and racing. They are <strong>cam-ground</strong> (slightly oval) and <strong>tapered</strong> (smaller at the hotter crown) so they become round and parallel when hot. That is why you always measure at 90° to the pin, at a set height: <strong>11 mm above the skirt bottom</strong> on the K-Light.' },
+        { type: 'model', file: 'piston', caption: 'A piston with its ring pack, gudgeon pin and circlips.' },
         { type: 'steps', items: [
           { title: 'Top compression ring', html: 'Main gas seal; chrome- or nitride-faced; marked to show which side faces up.' },
           { title: 'Second ring', html: 'Completes the gas seal and scrapes oil downward; often a taper-faced or Napier ring with the notch pointing down.' },
@@ -226,7 +235,10 @@ export default {
           ['Lubrication', 'Splash or modest pressure', 'Full pressure feed at 3–6 bar, clean oil'],
           ['Service', 'Replace or rebuild crank assembly', 'Replace shells'],
         ] },
-        { type: 'illus', file: 'powertrain/F09.svg', caption: 'Find the piston, rings, gudgeon pin, connecting rod, crankshaft and balancer in the sectional view.' },
+        { type: 'model', file: 'conrod', caption: 'A forged I-section connecting rod with a caged needle-roller big end and a bronze-bushed small end.' },
+        { type: 'model', file: 'crankshaft_single', caption: 'A built-up single-cylinder crankshaft: two flywheel webs joined by a pressed-in crankpin, as used with a one-piece rod.' },
+        { type: 'model', file: 'crankshaft', caption: 'A one-piece four-cylinder crankshaft with counterweights, crankpins, main journals and the flywheel flange; it needs split rods on plain bearings.' },
+        { type: 'plate', id: 'F09', caption: 'Find the piston, rings, gudgeon pin, connecting rod, crankshaft and balancer in the sectional view.' },
         { type: 'check', q: 'm2-20' },
         { type: 'h3', text: 'Balance: why a single shakes' },
         { type: 'p', html: 'The reciprocating mass stops and restarts twice per revolution. Its <strong>primary force</strong> is <strong>Fp = m × r × ω² × cos θ</strong>. With an assumed 0.20 kg at r = 0.02475 m and 9,000 rpm (ω = 942 rad/s), the peak is about <strong>4.4 kN</strong>, reversing every revolution.' },
@@ -247,7 +259,7 @@ export default {
       blocks: [
         { type: 'h3', text: 'Wet and dry sump' },
         { type: 'p', html: 'In a <strong>wet sump</strong> the oil sits in the bottom of the crankcase, usually shared with the gearbox and wet clutch. A <strong>dry sump</strong> keeps oil in a separate tank, with a scavenge pump returning it; it allows a lower engine and avoids oil surge on steep slopes, at the cost of extra pumps and pipes.' },
-        { type: 'illus', file: 'powertrain/F11.svg', caption: 'Wet-sump circuit: strainer, trochoid pump, filter, crank and big end, head and cam, gearbox, back to the sump.' },
+        { type: 'plate', id: 'F11', caption: 'Wet-sump circuit: strainer, trochoid pump, filter, crank and big end, head and cam, gearbox, back to the sump.' },
         { type: 'steps', items: [
           { title: 'Strainer', html: 'Mesh screen before the pump (behind the drain plug on the K-Light).' },
           { title: 'Trochoid pump', html: 'Inner rotor with one lobe fewer than the outer; relief valve limits pressure (3–6 bar on multis).' },
@@ -332,7 +344,7 @@ export default {
           { title: 'Adjust', html: 'Hold the adjuster, slacken the locknut, set the gap, hold the adjuster still and tighten the locknut to 10–15 N·m. Exhaust first, then inlet.' },
           { title: 'Recheck', html: 'Tightening can turn the adjuster. Rotate two turns, realign T and check both again.' },
         ] },
-        { type: 'illus', file: 'powertrain/F10.svg', caption: 'Rocker adjuster with screw, locknut and feeler gauge.' },
+        { type: 'plate', id: 'F10', caption: 'Rocker adjuster with screw, locknut and feeler gauge.' },
         { type: 'h3', text: 'Cylinder and piston measurement' },
         { type: 'p', html: 'Measure the bore at three heights in two directions (X along the crank, Y across it): six readings. <strong>Out-of-round</strong> = X vs Y at one height; <strong>taper</strong> = top vs bottom in one direction. Wear is greatest at the top of ring travel in Y. <strong>Clearance</strong> = largest bore reading − piston diameter.' },
         { type: 'table', head: ['K-Light 125', 'Standard', 'Limit'], rows: [

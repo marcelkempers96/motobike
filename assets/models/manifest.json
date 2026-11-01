@@ -1,4 +1,0 @@
-{
-  "_readme": "Map part keys to render images (PNG) once they are in the repo. Example: \"engine\": \"assets/renders/powertrain/engine_4t.png\". Paths are relative to the site root.",
-  "renders": {}
-}

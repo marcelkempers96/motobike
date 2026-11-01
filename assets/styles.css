@@ -521,3 +521,103 @@ p { margin: 0 0 10px; }
 .ute-source p { margin: 0; font-size: 13.5px; }
 .ute-source .ute-cite { font-size: 12.5px; color: var(--mute); }
 .ute-source .ute-linkbtn { align-self: flex-start; margin-top: auto; }
+
+/* ==========================================================================
+   Real assets: 3D viewer, course plates, hotspots, cockpit
+   ========================================================================== */
+.ute-moto-stage { position: relative; }
+.ute-moto-wrap.is-3d { background: radial-gradient(ellipse at 50% 40%, #FFFFFF 0%, #F1EEE7 60%, #DDD8CC 100%); }
+.mz3d { position: relative; width: 100%; }
+.mz3d-bike { height: clamp(320px, 52vw, 600px); }
+.mz3d-part { height: 380px; background: radial-gradient(ellipse at 50% 40%, #FFFFFF 0%, #F1EEE7 70%, #E4DFD3 100%); border: 1px solid var(--line); }
+.mz3d-stage { height: clamp(320px, 46vw, 480px); }
+.mz3d-canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; outline: none; }
+.mz3d-canvas:active { cursor: grabbing; }
+.mz3d-status { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; font: 500 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); pointer-events: none; text-align: center; padding: 16px; }
+.mz3d-status[hidden] { display: none; }
+.mz3d-tip { position: absolute; z-index: 4; pointer-events: none; background: var(--ink); color: var(--paper); padding: 6px 9px; font: 600 12px/1.3 var(--sans); max-width: 240px; }
+.mz3d-tip i { font: 600 9.5px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: #F2A27F; font-style: normal; margin-left: 6px; }
+.mz3d-tip small { display: block; font: 500 10px/1.3 var(--mono); color: #CFCBC0; text-transform: uppercase; letter-spacing: .06em; margin-top: 2px; }
+.mz3d-bar { position: absolute; left: 10px; right: 10px; bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; pointer-events: none; }
+.mz3d-bar > * { pointer-events: auto; }
+.mz3d-hint { font: 500 10.5px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); background: rgba(255,255,255,.85); padding: 6px 8px; }
+.ute-cam button { padding: 5px 10px; font-size: 10px; }
+.mz3d-cap { margin: 8px 0 6px; font: 500 11px/1.4 var(--mono); letter-spacing: .04em; color: var(--mute); }
+.mz-variants .ute-seg { flex-wrap: wrap; margin-bottom: 8px; }
+.mz-variants .ute-seg button { padding: 6px 10px; font-size: 10px; }
+.mz-subparts { display: flex; flex-wrap: wrap; gap: 4px; }
+.mz-sub { padding: 4px 8px; background: var(--paper); border: 1px solid var(--line); cursor: pointer; font: 500 11px/1.2 var(--sans); color: var(--ink-soft); }
+.mz-sub:hover, .mz-sub.is-on { border-color: var(--warm); color: var(--warm); background: #FBEDE6; }
+.ute-cview-stage .mz-variants { position: relative; z-index: 2; }
+.ute-cview-stage .mz3d-cap { text-align: center; }
+.ute-cview-stage .mz-subparts { justify-content: center; }
+
+/* Course plate with hotspots */
+.mz-plate { position: relative; width: 100%; background: #FFFFFF; }
+.mz-plate img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; user-select: none; }
+.mz-hot { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; border: 2px solid #FFFFFF; background: var(--brand); box-shadow: 0 0 0 1px var(--brand); cursor: pointer; padding: 0; transition: transform .15s ease, opacity .2s ease, background .15s ease; }
+.mz-hot.is-ix { background: var(--warm); box-shadow: 0 0 0 1px var(--warm); animation: mz-hot-pulse 2s ease-in-out infinite; }
+@keyframes mz-hot-pulse { 0%,100% { box-shadow: 0 0 0 1px var(--warm), 0 0 0 0 rgba(194,80,42,.45); } 50% { box-shadow: 0 0 0 1px var(--warm), 0 0 0 7px rgba(194,80,42,0); } }
+.mz-hot:hover, .mz-hot:focus-visible, .mz-hot.is-hl { transform: scale(1.35); background: var(--warm); outline: none; z-index: 3; }
+.mz-hot-tip { position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%); white-space: nowrap; background: var(--ink); color: var(--paper); font: 600 11px/1 var(--sans); padding: 5px 8px; opacity: 0; pointer-events: none; transition: opacity .12s ease; }
+.mz-hot:hover .mz-hot-tip, .mz-hot:focus-visible .mz-hot-tip, .mz-hot.is-hl .mz-hot-tip { opacity: 1; }
+.mz-plate[data-cat]:not([data-cat="all"]) .mz-hot:not(.in-cat) { opacity: .2; }
+
+/* Parts index under the overview */
+.mz-part-index { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: 10px; }
+.mz-part-index .ute-label { margin-right: 6px; }
+.mz-part { padding: 4px 9px; background: var(--surface); border: 1px solid var(--line); cursor: pointer; font: 500 12px/1.3 var(--sans); color: var(--ink-soft); transition: opacity .2s ease; }
+.mz-part.is-ix { border-color: #E8B9A5; }
+.mz-part.is-ix::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--warm); margin-right: 6px; vertical-align: 1px; }
+.mz-part:hover { border-color: var(--ink); }
+.mz-part.is-hl { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.mz-part-index[data-cat]:not([data-cat="all"]) .mz-part:not(.in-cat) { opacity: .3; }
+
+/* Assets panel in the component view */
+.mz-assets { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; margin-top: 16px; }
+.mz-asset-side { display: grid; gap: 16px; align-content: start; }
+.mz-plate-thumbs { display: grid; gap: 8px; }
+.mz-plate-thumb { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: center; padding: 6px; background: var(--paper); border: 1px solid var(--line); cursor: zoom-in; text-align: left; font: 400 12.5px/1.35 var(--sans); color: var(--ink-soft); }
+.mz-plate-thumb:hover { border-color: var(--warm); }
+.mz-plate-thumb img { width: 96px; height: 64px; object-fit: contain; background: #FFFFFF; border: 1px solid var(--line-soft); }
+.mz-plate-thumb b { font-family: var(--mono); color: var(--brand); margin-right: 4px; }
+
+/* Lightbox */
+.mz-lightbox { position: fixed; inset: 0; z-index: 120; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: rgba(10,10,10,.72); padding: 20px; }
+.mz-lightbox.is-open { display: flex; }
+.mz-lightbox figure { margin: 0; background: #FFFFFF; border: 1px solid var(--ink); padding: 12px; max-width: min(1400px, 100%); max-height: calc(100dvh - 90px); display: flex; flex-direction: column; }
+.mz-lightbox img { max-width: 100%; max-height: calc(100dvh - 150px); object-fit: contain; }
+.mz-lightbox figcaption { font: 500 12px/1.4 var(--mono); color: var(--ink-soft); padding-top: 8px; }
+
+/* Cockpit iframe */
+.mz-cockpit { display: block; width: 100%; min-height: 640px; border: 0; background: transparent; }
+
+/* Learn: plates and 3D blocks */
+.mz-learn-plate { cursor: zoom-in; }
+.mz-learn-plate .ute-figure-stage { background: #FFFFFF; }
+.mz-learn-model .mz3d-part { height: 360px; border: 0; }
+.mz-learn-model .ute-figure-stage { padding: 0; }
+.mz-learn-model .mz-variants { padding: 10px 12px 0; }
+.mz-learn-model .mz-subparts { padding: 0 12px 10px; }
+.mz-learn-model .mz3d-cap { padding: 0 12px; }
+
+/* Model library */
+.mz-lib { display: grid; grid-template-columns: 300px minmax(0, 1fr); flex: 1; min-height: 0; }
+.mz-lib-list { border-right: 1px solid var(--ink); padding: 16px; overflow: auto; max-height: calc(100dvh - 55px); position: sticky; top: 55px; }
+.mz-lib-list h3 { font: 700 11px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin: 16px 0 6px; }
+.mz-lib-list button { display: block; width: 100%; text-align: left; padding: 6px 8px; border: 0; border-left: 2px solid transparent; background: none; cursor: pointer; font: 400 13px/1.35 var(--sans); color: var(--ink-soft); }
+.mz-lib-list button:hover { background: var(--paper-2); }
+.mz-lib-list button.is-on { border-left-color: var(--warm); background: var(--surface); color: var(--ink); font-weight: 600; }
+.mz-lib-main { padding: 16px 20px; min-width: 0; }
+.mz-lib-main .mz3d-part { height: clamp(360px, 62vh, 720px); }
+@media (max-width: 960px) {
+  .mz-assets { grid-template-columns: 1fr; }
+  .mz-lib { grid-template-columns: 1fr; }
+  .mz-lib-list { position: static; max-height: 260px; border-right: 0; border-bottom: 1px solid var(--ink); }
+}
+@media (max-width: 540px) {
+  .mz-hot { width: 18px; height: 18px; margin: -9px 0 0 -9px; }
+  .mz3d-part { height: 300px; }
+  .mz3d-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .mz-hot.is-ix { animation: none; } }

@@ -36,7 +36,7 @@ select{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;fon
   </aside>
 </div>
 <script type="importmap">
-{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+{"imports":{"three":"../vendor/three/build/three.module.js","three/addons/":"../vendor/three/examples/jsm/"}}
 </script>
 <script type="module">
 import * as THREE from 'three';
@@ -46,8 +46,8 @@ import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 // Edit this list to match the files you upload (path relative to this page).
-const MODELS = ['bike_classic_4t','bike_mx_2t','bike_electric','engine_4t','engine_2t','clutch','clutch_exploded','crankshaft','piston','motor','brake','forks_usd','front_wheel_mx','handlebar'];
-const BASE = '../models-compressed/';   // folder holding <name>.glb (any category subfolder flattened, or adjust below)
+const MODELS = ['bike_classic_4t','bike_mx_2t','bike_electric','engine_4t','engine_2t','cylinder','piston','conrod','crankshaft_single','crankshaft','valve_in','valve_ex','spark_plug','carb','throttle_body','air_filter','exhaust_4t','exhaust_2t','port_ex','port_tr','motor','clutch','clutch_exploded','chain_sprockets','rear_sprocket','brake','forks','forks_usd','handlebar','rear_shock','rear_shock_twin','swingarm','frame','frame_cradle','fuel_tank','seat_bench','seat_mx','seat_tracker','front_wheel_spoked','front_wheel_cast','front_wheel_mx','rear_wheel_spoked','rear_wheel_cast','rear_wheel_mx','battery_12v','battery_hv','charge_port','controller','headlight_round','headlight_mx','headlight_led','instruments_analogue','instruments_lcd','instruments_tft','tail_light','wiring_harness'];
+const BASE = '../models/';   // folder holding <name>.glb (any category subfolder flattened, or adjust below)
 const CATS = ['powertrain','transmission','chassis','frame_body','wheels','electrical','wiring'];
 const HL = new THREE.Color('#C8502A');
 

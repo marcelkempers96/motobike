@@ -34,10 +34,12 @@ export default {
         { type: "h3", text: "Air intake and filter" },
         { type: "p", html: "The airbox holds the filter, gives each intake pulse a calm plenum to draw from, and acts as a resonator that tunes intake pressure waves and cuts noise. Road bikes mostly use pleated paper (replaced every 12 000&ndash;18 000 km, sooner on dusty roads); off-road and many small commuters, including the K-Light 125, use oiled foam that is washed, dried and re-oiled." },
         { type: "p", html: "A <strong>blocked filter</strong> raises the depression downstream of it. In a carburettor that depression pulls on every jet, so the engine runs <strong>rich at all openings</strong>. In a speed-density injection system the MAP sensor sees the lower pressure and the ECU cuts fuel, so the symptom is <strong>loss of power</strong> instead. An air leak after the carb (split boot, loose clamp) admits unmetered air and leans the mixture, mostly at idle." },
+        { type: "model", file: "air_filter", caption: "A pleated-paper panel filter seated in the lower half of an airbox." },
         { type: "h3", text: "How a carburettor meters fuel" },
         { type: "p", html: "Air speeds up through the venturi (or under the slide) and its pressure drops (Bernoulli). The float bowl is vented to atmosphere, so atmospheric pressure pushes fuel up through calibrated jets into the low-pressure airstream. The throttle regulates air; the jets regulate fuel." },
         { type: "p", html: "In a <strong>slide carburettor</strong> (Mikuni VM, Keihin PWK) the cable lifts the slide directly: instant response, but snap it open at low rpm and the engine bogs. In a <strong>constant-velocity (CV) carburettor</strong> (Keihin CVK) the cable turns a butterfly and venturi depression lifts a diaphragm piston, so the venturi only opens as fast as the engine can use the air. A torn diaphragm leaves the piston down: the engine runs but will not rev." },
-        { type: "illus", file: "powertrain/PT01.svg", caption: "Slide carburettor in section: venturi, slide and needle, needle jet, main jet, pilot circuit and float bowl." },
+        { type: "model", file: "carb", caption: "The slide carburettor modelled in half section." },
+        { type: "plate", id: "PT01", caption: "Slide carburettor in section: venturi, slide and needle, needle jet, main jet, pilot circuit and float bowl." },
         { type: "h3", text: "Circuits by throttle opening (not rpm)" },
         { type: "table", head: ["Throttle", "Dominant circuit", "Tuning part", "Change"], rows: [
           ["Closed to 1/8", "Pilot", "Pilot jet, fuel or air screw", "Larger pilot jet or fuel screw out: richer"],
@@ -68,7 +70,7 @@ export default {
       lab: "?mode=4t&part=engine",
       blocks: [
         { type: "p", html: "The K-Light 125 carries a complete small-engine system: one port injector, a throttle body with TPS, a combined pressure-and-temperature sensor, stepper-motor idle control, a head temperature sensor, a crank trigger on the flywheel, a heated oxygen sensor, an in-tank pump, a three-way catalyst, and an OBD system with an FI warning lamp. The ECU also controls ignition." },
-        { type: "illus", file: "powertrain/F12.svg", caption: "Electronic fuel injection on a single-cylinder engine: fuel delivery, sensors, ECU, actuators and catalyst." },
+        { type: "plate", id: "F12", caption: "Electronic fuel injection on a single-cylinder engine: fuel delivery, sensors, ECU, actuators and catalyst." },
         { type: "h3", text: "Fuel delivery" },
         { type: "keys", items: [
           { l: "Rail pressure", v: "300 kPa", p: "K-Light at idle; below 270 kPa look for a fault" },
@@ -88,6 +90,7 @@ export default {
         ] },
         { type: "p", html: "One injection per four-stroke cycle (two revolutions): at 9000 rpm a cycle lasts 2 &times; 60 / 9000 = 13.3 ms, so duty cycle is 5.9 / 13.3 &asymp; <strong>44 %</strong>. Injectors are sized to stay below about 80&ndash;85 % at peak power." },
         { type: "check", q: "m3-07" },
+        { type: "model", file: "throttle_body", caption: "An EFI throttle body with butterfly valve, injector and throttle position sensor." },
         { type: "h3", text: "Sensors" },
         { type: "p", html: "Most sensors run from a regulated <strong>5 V reference</strong> and share a sensor ground, so one shorted sensor can drag the reference down and set several codes at once. Temperature sensors are NTC thermistors: resistance and signal voltage fall as temperature rises." },
         { type: "table", head: ["Sensor", "Principle", "K-Light 125 value"], rows: [
@@ -120,6 +123,7 @@ export default {
         { type: "check", q: "m3-09" },
         { type: "h3", text: "Emissions and the catalyst" },
         { type: "p", html: "<strong>CO</strong> comes from too little oxygen (rises steeply rich). <strong>HC</strong> is unburned fuel from crevices, cold walls and misfire. <strong>NOx</strong> forms above about 1800 &deg;C and peaks slightly lean, around &lambda; 1.05&ndash;1.1. A <strong>three-way catalyst</strong> oxidises CO and HC (platinum, palladium) and reduces NOx (rhodium), but both can only happen together within about &plusmn;0.5 % of stoichiometric AFR, which is why closed-loop control is a precondition. It lights off at about 250&ndash;300 &deg;C, so it sits close to the port." },
+        { type: "model", file: "exhaust_4t", caption: "A four-stroke exhaust: header pipe with heat shield and a slash-cut silencer; on Euro 5 bikes the catalyst sits in the header or silencer." },
         { type: "table", head: ["Pollutant", "Euro 5 limit (mg/km)"], rows: [
           ["CO", "1000"], ["THC", "100"], ["NMHC", "68"], ["NOx", "60"], ["PM (direct injection only)", "4.5"],
         ] },
@@ -157,11 +161,12 @@ export default {
           ["TCI / ECU", "Transistor (IGBT) switches an inductive coil; ECU calculates dwell and advance", "Long spark (1&ndash;2 ms) for four-stroke part-load; no adjustment"],
         ] },
         { type: "p", html: "CDI voltage rises in a few microseconds, ten times faster than an inductive system, so the spark fires before energy leaks across an oily insulator. That is why <strong>two-strokes favour CDI</strong>. The price is a short spark of 0.1&ndash;0.3 ms. On points, the spark happens when the points <em>open</em>; because gap and timing are linked, always gap first, time second." },
-        { type: "illus", file: "wiring/F22.svg", caption: "Ignition circuits: AC-CDI with exciter and pulser coils, and DC-TCI or ECU-controlled inductive ignition." },
+        { type: "plate", id: "F22", caption: "Ignition circuits: AC-CDI with exciter and pulser coils, and DC-TCI or ECU-controlled inductive ignition." },
         { type: "h3", text: "Timing and advance" },
         { type: "p", html: "The flame takes a roughly constant 1&ndash;3 ms to burn the charge, and peak pressure should arrive about 10&ndash;15&deg; after TDC. As rpm rises, the same burn time spans more crank angle, so the spark must start earlier. Time for a crank angle is <strong>t = &theta; / (6 &times; n)</strong>: at 9000 rpm, 30&deg; BTDC is only 0.56 ms." },
         { type: "p", html: "Typical advance runs from 5&ndash;15&deg; BTDC at idle to 30&ndash;40&deg; at mid and high rpm part load, with <em>less</em> at full load because the dense charge burns faster and is closer to detonation. Too much advance: pinking, hot head, holed pistons. Too little: lost power, hot exhaust valve and header." },
         { type: "h3", text: "Spark plugs" },
+        { type: "model", file: "spark_plug", caption: "A spark plug: terminal, ceramic insulator, hex shell, sealing washer, centre and earth electrodes." },
         { type: "p", html: "The insulator tip must run between about <strong>450 &deg;C</strong> (below: carbon fouling) and <strong>850 &deg;C</strong> (above: glowing tip and pre-ignition). A hot plug has a long nose for low-load commuting; a cold plug has a short nose for sustained high load. In the NGK scheme <strong>higher number = colder</strong>; Bosch and Champion number the other way." },
         { type: "keys", items: [
           { l: "K-Light plug", v: "D7RTC", p: "D = M12 &times; 1.25 thread, 7 = heat rating, R = resistor, C = copper core" },
@@ -186,6 +191,7 @@ export default {
       lab: "?mode=4t&part=battery",
       blocks: [
         { type: "h3", text: "Battery types" },
+        { type: "model", file: "battery_12v", caption: "A 12 V sealed AGM service battery with its terminals." },
         { type: "p", html: "A lead-acid cell gives a nominal 2.1 V, so a 12 V battery has six in series. <strong>Flooded</strong> batteries have cell caps and are topped up with distilled water; a hydrometer reading of 1.265 or more means fully charged. <strong>AGM (VRLA)</strong> batteries hold the acid in glass mat and are sealed: the K-Light 125 uses a <strong>12 V 6 Ah YTX7A-BS</strong> AGM and must not get a liquid-filled substitute. <strong>LiFePO4</strong> uses four 3.2 V cells (12.8 V), weighs about a third as much, but needs a BMS and must never be charged below about 0 &deg;C, above about 14.6 V or with a desulphation mode." },
         { type: "keys", items: [
           { l: "Ah", v: "6 Ah", p: "at the 10-hour rate: 0.6 A for 10 hours; how long it runs the loads" },
@@ -217,7 +223,7 @@ export default {
           ["Series (MOSFET)", "Opens the circuit stator to battery", "Stator current falls with demand; runs much cooler"],
         ] },
         { type: "p", html: "Too low a voltage leaves the battery undercharged; too high boils electrolyte, dries AGM separators, blows bulbs and can damage the ECU." },
-        { type: "illus", file: "wiring/F21.svg", caption: "Charging circuit: permanent-magnet alternator, shunt regulator/rectifier, fuse, battery and loads." },
+        { type: "plate", id: "F21", caption: "Charging circuit: permanent-magnet alternator, shunt regulator/rectifier, fuse, battery and loads." },
         { type: "check", q: "m3-21" },
         { type: "h3", text: "Electric starting" },
         { type: "p", html: "The starter draws tens to over a hundred amps, far too much for a handlebar switch. So the start button only carries a few hundred milliamps through a <strong>starter relay</strong> coil, and the relay switches the heavy cable. The K-Light circuit has a 20 A main fuse and two 10 A circuit fuses." },
@@ -229,7 +235,7 @@ export default {
           { title: "Engine stop switch", html: "Usually also interrupts the relay supply." },
         ] },
         { type: "p", html: "The <strong>starter clutch</strong> (sprag or roller one-way clutch) drives the crank and freewheels once the engine fires. If it slips, the starter spins and whines without turning the engine. K-Light starter brushes: 12.5 mm new, service limit 8.5 mm." },
-        { type: "illus", file: "wiring/F23.svg", caption: "Electric starting circuit: battery, fuses, switches, interlocks, starter relay, starter motor and starter clutch." },
+        { type: "plate", id: "F23", caption: "Electric starting circuit: battery, fuses, switches, interlocks, starter relay, starter motor and starter clutch." },
       ],
     },
     {
@@ -246,6 +252,9 @@ export default {
           { l: "Tail / brake", v: "P21/5W", p: "plate light W5W, position lamp W3W" },
         ] },
         { type: "p", html: "LED retrofits in a halogen reflector cannot put their emitters exactly where the filament was, so light scatters above the dipped-beam cut-off and dazzles: they are generally not type-approved." },
+        { type: "model", file: "headlight_round", caption: "A seven-inch round chrome headlight with glass lens and reflector." },
+        { type: "models", files: ["headlight_led", "headlight_mx"], caption: "Other headlight styles: an angular LED unit with daytime running light, and a motocross number-plate shroud." },
+        { type: "model", file: "tail_light", caption: "An LED tail light with number-plate light." },
         { type: "h3", text: "Flashers and LED hyper-flash" },
         { type: "p", html: "A thermal flasher's bimetal strip is heated by the lamp current, so when one bulb fails the current halves and the rate changes: a built-in failure warning. Many electronic flashers sense current too and hyper-flash when the load falls." },
         { type: "steps", items: [
@@ -255,11 +264,13 @@ export default {
         ] },
         { type: "callout", tone: "warm", title: "Better fix", html: "Fit a load-independent electronic flasher designed for LEDs: it wastes no power. If you use load resistors, mount them on metal, because each one gets as hot as the bulb it replaces." },
         { type: "check", q: "m3-24" },
+        { type: "plate", id: "EL01", caption: "Instruments and switchgear: twin analogue clocks, a motocross LCD, a TFT dash, and the left and right switch cubes with every switch named." },
         { type: "h3", text: "Fuses, connectors and earths" },
         { type: "p", html: "<strong>A fuse protects the wiring, not the load.</strong> Rate it below the capacity of the smallest wire it protects and above the circuit's normal maximum current. A fuse that blows repeatedly means a short downstream, never a reason to fit a bigger one." },
         { type: "figure", fig: "ohms-law", caption: "Pick a load in watts and the supply voltage to see the current, then the fuse rating that protects its wire." },
         { type: "p", html: "Water and vibration cause most connector faults: fretting corrosion, pins backed out by careless probing, chafing at the steering head. Electronic parts get dedicated earth wires because painted, plastic or rubber-mounted parts give an unreliable frame return, and a few tenths of a volt of earth offset corrupt sensor signals." },
-        { type: "illus", file: "wiring/WR01.svg", caption: "The main wiring harness laid flat: trunk, branches, connectors, fuse box, relays and earth points." },
+        { type: "model", file: "wiring_harness", caption: "A main wiring harness with its branches, multi-pin connectors, fuse box and relays." },
+        { type: "plate", id: "WR01", caption: "The main wiring harness laid flat: trunk, branches, connectors, fuse box, relays and earth points." },
         { type: "h3", text: "Reading a wiring diagram" },
         { type: "p", html: "On the K-Light diagram <strong>R</strong> is battery positive (unswitched), <strong>R/W</strong> is switched supply after the main switch, <strong>B</strong> is earth, and the three <strong>W</strong> wires are the alternator phases. The colour code on the diagram for that exact model is the only authority." },
         { type: "steps", items: [
@@ -273,7 +284,7 @@ export default {
         { type: "h3", text: "CAN bus and accessories" },
         { type: "p", html: "Larger bikes link ECU, dash, ABS and switch gear over a two-wire <strong>CAN bus</strong> at typically 500 kbit/s. Each end has a 120 &Omega; terminator, so with the battery disconnected CAN-H to CAN-L should read about <strong>60 &Omega;</strong>; 120 &Omega; means one terminator or branch is open, near 0 &Omega; means the wires are shorted." },
         { type: "p", html: "A small machine may have only 50&ndash;100 W of alternator surplus. Two 35 W auxiliary lamps draw 70 / 12 &asymp; 5.8 A, likely more than that. Check charging voltage with all loads on, then feed accessories through their own fuse and an ignition-switched relay, never by tapping CAN or sensor wires." },
-        { type: "illus", file: "electrical/EL02.svg", caption: "Where the electrical components sit on a road motorcycle." },
+        { type: "plate", id: "EL02", caption: "Where the electrical components sit on a road motorcycle." },
       ],
     },
     {

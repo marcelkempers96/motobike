@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Under the Engine — the Lab
+   Moto Zero — the Lab
    One page, one app. See moto-spec/01-SPEC.md, 02-DESIGN.md, 03-FUNCTIONS.md.
    ========================================================================== */
 import {
@@ -7,11 +7,15 @@ import {
   wheelRPMFromEngine, kmhFromWheelRPM, clamp, fmt, buildEngine, buildTimingStrip, strokeAt,
 } from './core.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
+import {
+  BIKE_MODEL, OVERVIEW_PLATE, PLATE_RATIO, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
+  partForMesh, BIKE_WHEELS, HOTSPOTS,
+} from './content/assets-map.js';
 
 /* ---------- 1. State ---------- */
 const S = {
   mode: '4t',
-  view: 'diagram',
+  view: '3d',
   category: 'all',
   selected_part: null,
 
@@ -75,6 +79,7 @@ function render() {
         <a href="./" aria-current="page">Lab</a>
         <a href="learn/">Learn</a>
         <a href="quiz/">Quiz</a>
+        <a href="models/">Models</a>
         <a href="sources/">Sources</a>
       </nav>
       <span class="ute-top-spacer"></span>
@@ -95,8 +100,8 @@ function render() {
         </div>
         <div class="ute-head-tools">
           <div class="ute-seg ute-view-toggle" role="group" aria-label="View">
-            <button type="button" data-view="diagram" class="${S.view === 'diagram' ? 'is-on' : ''}">Diagram</button>
-            <button type="button" data-view="3d" class="${S.view === '3d' ? 'is-on' : ''}">3D</button>
+            <button type="button" data-view="3d" class="${S.view === '3d' ? 'is-on' : ''}">3D model</button>
+            <button type="button" data-view="diagram" class="${S.view === 'diagram' ? 'is-on' : ''}">Course plate</button>
           </div>
           <span class="ute-legend"><i></i>= interactive</span>
         </div>
@@ -106,10 +111,9 @@ function render() {
         <button type="button" class="ute-chip is-action" data-open-cv="wiring">Wiring →</button>
       </div>
       <div class="ute-moto-wrap ${S.view === '3d' ? 'is-3d' : ''}">
-        <div class="ute-moto-scroll">
-          <svg id="ute-moto" class="ute-moto-svg" viewBox="0 0 1200 600" role="img" aria-label="${info.name} overview — click a part"></svg>
-        </div>
+        <div id="ute-moto-stage" class="ute-moto-stage" aria-label="${info.name} overview — click a part"></div>
       </div>
+      <div class="mz-part-index" id="ute-part-index"></div>
     </section>
 
     <section class="ute-cview" id="ute-cview-slot" aria-live="polite"></section>
@@ -118,21 +122,11 @@ function render() {
       <div class="ute-section-head">
         <div>
           <h2 id="ride-h">Ride</h2>
-          <p class="ute-sub">Twist the throttle, pull the brake, honk the horn.</p>
+          <p class="ute-sub">The rider’s-eye cockpit: every control works. Key ON, stop switch at RUN, neutral, starter — then clutch, first gear and throttle. It drives the engine views and the dyno.${S.mode === 'elec' ? ' (In Electric mode the throttle drives the motor.)' : ''}</p>
         </div>
+        <a class="ute-linkbtn" href="assets/interactive/controls.html" target="_blank" rel="noopener">Open full screen ↗</a>
       </div>
-      <div class="ute-rider-wrap">
-        <svg id="ute-rider" viewBox="0 0 900 320" role="img" aria-label="Handlebar, top-down"></svg>
-        <div class="ute-toast" id="ute-toast"></div>
-      </div>
-      <div class="ute-dash" id="ute-dash">
-        <div class="cell"><div class="l">Throttle</div><div class="v" data-d="throttle">0 %</div></div>
-        <div class="cell"><div class="l">Brake</div><div class="v" data-d="brake">0 %</div></div>
-        <div class="cell"><div class="l">Clutch</div><div class="v" data-d="clutch">0 %</div></div>
-        <div class="cell"><div class="l">${S.mode === 'elec' ? 'Motor rpm' : 'Engine rpm'}</div><div class="v" data-d="rpm">0</div></div>
-        <div class="cell"><div class="l">Speed</div><div class="v" data-d="kmh">0 km/h</div></div>
-      </div>
-      <p class="ute-rider-hints">Press &amp; hold the right grip (throttle), the right lever (front brake) or the left lever (clutch). Tap horn, kill switch and starter.</p>
+      <iframe id="mz-cockpit" class="mz-cockpit" src="assets/interactive/controls.html?embed=1" title="Interactive motorcycle cockpit" loading="eager"></iframe>
     </section>
 
     <section class="ute-section ute-dyno" aria-labelledby="dyno-h">
@@ -158,19 +152,38 @@ function render() {
     <div class="ute-modal" id="ute-help" role="dialog" aria-modal="true" aria-labelledby="help-h">
       <div class="ute-modal-box">
         <h3 id="help-h">How to use the Lab</h3>
-        <p>Pick a mode at the top. Click any part of the motorcycle to open its close-up below. Parts with a pulsing <b style="color:var(--warm)">orange dot</b> are interactive — hold the big green button to drive them.</p>
+        <p>Pick a bike at the top. Drag the 3D model to look around and click any part — or switch to the course plate and click a hotspot. The close-up below shows a working animation, the part’s own 3D model and its course plates. <b style="color:var(--warm)">Orange</b> marks interactive parts — hold the big green button to drive them.</p>
         <div class="ute-kbd">
           <kbd>Space</kbd><span>Pause / resume the engine animation</span>
           <kbd>Esc</kbd><span>Close the component view</span>
           <kbd>?</kbd><span>Open this help</span>
+          <kbd>1 2 3</kbd><span>Four-stroke · two-stroke · electric</span>
+          <kbd>D</kbd><span>Toggle 3D model / course plate</span>
+        </div>
+        <p><b>Cockpit</b> (anywhere on the page):</p>
+        <div class="ute-kbd">
+          <kbd>K</kbd><span>Ignition key</span>
+          <kbd>X</kbd><span>Stop switch</span>
+          <kbd>S</kbd><span>Starter (hold)</span>
+          <kbd>T</kbd><span>Throttle (hold)</span>
+          <kbd>C</kbd><span>Clutch (hold)</span>
+          <kbd>F / R</kbd><span>Front / rear brake (hold)</span>
+          <kbd>↑ ↓</kbd><span>Shift up / down</span>
+          <kbd>H</kbd><span>Horn (hold)</span>
+          <kbd>Q / E</kbd><span>Indicate left / right</span>
+          <kbd>B · V</kbd><span>High beam · choke</span>
         </div>
         <p>Use <b>Ride</b> to feel the bike and <b>Dyno</b> to record a run. Want the theory first? Head to <a href="learn/">Learn</a>, then try the <a href="quiz/">Quiz</a>.</p>
         <div class="ute-btnrow" style="justify-content:flex-end"><button class="ute-btn is-primary" type="button" data-help-close>Got it</button></div>
       </div>
     </div>
+    <div class="mz-lightbox" id="mz-lightbox" role="dialog" aria-modal="true" aria-label="Course plate">
+      <figure><img alt=""><figcaption></figcaption></figure>
+      <button type="button" class="ute-btn is-primary" data-lb-close>Close ✕</button>
+    </div>
   `;
   wireChrome();
-  mountOverviewSVG();
+  mountOverview();
   renderComponentView();
   mountRider();
   mountDyno();
@@ -183,8 +196,7 @@ function wireChrome() {
     if (v === S.view) return;
     S.view = v;
     $$('.ute-view-toggle button').forEach((x) => x.classList.toggle('is-on', x.dataset.view === v));
-    $('.ute-moto-wrap').classList.toggle('is-3d', v === '3d');
-    mountOverviewSVG();
+    mountOverview();
     syncURL();
   }));
   $$('.ute-chips [data-cat]').forEach((b) => b.addEventListener('click', () => {
@@ -199,6 +211,7 @@ function wireChrome() {
   $('#ute-help').addEventListener('click', (e) => { if (e.target.id === 'ute-help') closeHelp(); });
   $('[data-dyno="start"]').addEventListener('click', toggleDyno);
   $('[data-dyno="reset"]').addEventListener('click', resetDyno);
+  $('#mz-lightbox').addEventListener('click', (e) => { if (e.target.id === 'mz-lightbox' || e.target.closest('[data-lb-close]')) closePlate(); });
 }
 
 function toggleRun() {
@@ -225,548 +238,123 @@ function syncURL() {
   try {
     const u = new URL(location.href);
     u.searchParams.set('mode', S.mode);
-    if (S.view !== 'diagram') u.searchParams.set('view', S.view); else u.searchParams.delete('view');
+    if (S.view !== '3d') u.searchParams.set('view', S.view); else u.searchParams.delete('view');
     if (S.selected_part) u.searchParams.set('part', S.selected_part); else u.searchParams.delete('part');
     history.replaceState(null, '', u);
   } catch (e) { /* file:// or sandboxed */ }
 }
 
 /* ==========================================================================
-   3-4. Overview drawing
+   3-4. Overview — the real 3D bike (GLB) or the course plate with hotspots
    ========================================================================== */
-const laneY = { 1: 28, 2: 70, 3: 530, 4: 570 };
+let V3 = null;
+let v3mod = null;
+let mountToken = 0;
+const load3D = () => v3mod || (v3mod = import('./viewer3d.js'));
 
-function callout({ key, sx, sy, lx, lane, label }) {
-  const ly = laneY[lane];
-  const grp = ns('g', { class: 'ute-callout', 'data-part': key });
-  const d = `M ${sx} ${sy} L ${lx} ${ly + (lane <= 2 ? 10 : -14)}`;
-  grp.appendChild(ns('path', { class: 'ute-callout-leader', d }));
-  grp.appendChild(ns('circle', { class: 'ute-callout-dot', cx: sx, cy: sy, r: 3 }));
-  const t = ns('text', { class: 'ute-callout-label', x: lx, y: ly, 'text-anchor': 'middle' });
-  t.textContent = (label || partName(key)).toUpperCase();
-  grp.appendChild(t);
-  return grp;
+function overviewParts() {
+  const keys = [...new Set(HOTSPOTS[S.mode].map((h) => h[0]))];
+  if (!keys.includes('wiring')) keys.push('wiring');
+  return keys;
 }
 
-/* Palette per view */
-function pal(shaded, mode) {
-  if (!shaded) {
-    return {
-      tank: '#FFFFFF', alu: '#FFFFFF', case: '#EFEAE0', steel: '#FFFFFF', chrome: '#FFFFFF', tyre: '#FFFFFF',
-      rim: '#F6F5F2', seat: '#EFEAE0', lamp: '#FFFFFF', pack: '#EFEAE0', copper: '#FFFFFF', frame: '#FFFFFF',
-      frameW: 9, frameIn: '#F6F5F2', tail: '#F9DECB', fin: '#FFFFFF', disc: '#F6F5F2', dark: '#FFFFFF',
-    };
-  }
-  return {
-    tank: mode === '2t' ? 'url(#m-tank-2t)' : mode === 'elec' ? 'url(#m-tank-el)' : 'url(#m-tank-4t)',
-    alu: 'url(#m-alu)', case: 'url(#m-case)', steel: 'url(#m-steel)', chrome: 'url(#m-chrome)', tyre: 'url(#m-tyre)',
-    rim: '#E9E5DC', seat: 'url(#m-seat)', lamp: mode === 'elec' ? 'url(#m-lamp-led)' : 'url(#m-lamp)', pack: 'url(#m-pack)',
-    copper: 'url(#m-copper)', frame: mode === '2t' ? '#2E5FA8' : mode === 'elec' ? '#2B2F33' : '#1A1816',
-    frameW: 9, frameIn: mode === '2t' ? '#5B86C8' : '#5A5F66', tail: '#D2442E', fin: 'url(#m-alu)', disc: 'url(#m-chrome)', dark: '#2A2826',
-  };
+function mountOverview() {
+  const wrap = $('#ute-moto-stage');
+  if (!wrap) return;
+  const token = ++mountToken;
+  if (V3) { V3.dispose(); V3 = null; }
+  wrap.innerHTML = '';
+  $('.ute-moto-wrap').classList.toggle('is-3d', S.view === '3d');
+  if (S.view === '3d') mount3D(wrap, token); else mountDiagram(wrap);
+  renderPartIndex();
 }
 
-const E = (tag, attrs) => ns(tag, Object.assign({ stroke: '#0A0A0A', 'stroke-width': 2 }, attrs));
-
-function shape(key, els) {
-  const g = ns('g', { class: 'ute-shape', 'data-shape': key, tabindex: 0, role: 'button', 'aria-label': partName(key) });
-  els.flat().forEach((e) => e && g.appendChild(e));
-  return g;
-}
-
-function tube(d, p, w) {
-  return [E('path', { d, fill: 'none', stroke: '#0A0A0A', 'stroke-width': (w || p.frameW), 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }),
-    ns('path', { d, fill: 'none', stroke: p.frameIn, 'stroke-width': (w || p.frameW) - 4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', class: 'no-hl' })];
-}
-
-function quad(T, B, w1, w2) {
-  const dx = B[0] - T[0], dy = B[1] - T[1], len = Math.hypot(dx, dy);
-  const nx = -dy / len, ny = dx / len;
-  return `${T[0] + nx * w1 / 2},${T[1] + ny * w1 / 2} ${B[0] + nx * w2 / 2},${B[1] + ny * w2 / 2} ${B[0] - nx * w2 / 2},${B[1] - ny * w2 / 2} ${T[0] - nx * w1 / 2},${T[1] - ny * w1 / 2}`;
-}
-
-function wheel(key, cx, cy, R, p, opts = {}) {
-  const els = [];
-  els.push(E('circle', { cx, cy, r: R, fill: p.tyre, 'data-fillable': '' }));
-  if (p.tyre === '#FFFFFF') els.push(ns('circle', { cx, cy, r: R - 5, fill: 'none', stroke: '#0A0A0A', 'stroke-width': 0.8, 'stroke-dasharray': opts.knobby ? '3 5' : '1 6', class: 'no-hl' }));
-  else if (opts.knobby) els.push(ns('circle', { cx, cy, r: R - 3, fill: 'none', stroke: '#0A0A0A', 'stroke-width': 6, 'stroke-dasharray': '4 6', class: 'no-hl' }));
-  els.push(E('circle', { cx, cy, r: R - 16, fill: p.rim, 'stroke-width': 1.5 }));
-  const rot = ns('g', { 'data-wheel': key, 'data-cx': cx, 'data-cy': cy, transform: `rotate(0 ${cx} ${cy})` });
-  rot.appendChild(ns('circle', { cx, cy, r: R - 22, fill: 'none', stroke: p.tyre === '#FFFFFF' ? '#0A0A0A' : '#8F959C', 'stroke-width': 3 }));
-  if (opts.cast) {
-    for (let i = 0; i < 5; i++) {
-      const a = i / 5 * Math.PI * 2;
-      rot.appendChild(ns('path', { d: `M ${cx + Math.cos(a) * 16} ${cy + Math.sin(a) * 16} L ${cx + Math.cos(a) * (R - 24)} ${cy + Math.sin(a) * (R - 24)}`, stroke: p.tyre === '#FFFFFF' ? '#0A0A0A' : '#3A3E43', 'stroke-width': 7, 'stroke-linecap': 'round' }));
-    }
-  } else {
-    const n = opts.spokes || 18;
-    for (let i = 0; i < n; i++) {
-      const a = i / n * Math.PI * 2, b = a + 0.35;
-      rot.appendChild(ns('line', { x1: cx + Math.cos(a) * 12, y1: cy + Math.sin(a) * 12, x2: cx + Math.cos(b) * (R - 23), y2: cy + Math.sin(b) * (R - 23), stroke: '#6B6963', 'stroke-width': 0.9 }));
-    }
-  }
-  rot.appendChild(ns('circle', { cx, cy, r: 16, fill: p.alu, stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  rot.appendChild(ns('circle', { cx, cy, r: 5, fill: '#1A1816' }));
-  els.push(rot);
-  return shape(key, els);
-}
-
-function brakeDisc(cx, cy, r, caliper, p) {
-  const rot = ns('g', { 'data-wheel': 'brake', 'data-cx': cx, 'data-cy': cy, transform: `rotate(0 ${cx} ${cy})` });
-  rot.appendChild(E('circle', { cx, cy, r, fill: p.disc, 'fill-opacity': 0.92, 'stroke-width': 1.5 }));
-  rot.appendChild(ns('circle', { cx, cy, r: r * 0.55, fill: 'none', stroke: '#0A0A0A', 'stroke-width': 1 }));
-  for (let i = 0; i < 12; i++) {
-    const a = i / 12 * Math.PI * 2;
-    rot.appendChild(ns('circle', { cx: cx + Math.cos(a) * r * 0.78, cy: cy + Math.sin(a) * r * 0.78, r: 2.6, fill: '#0A0A0A', opacity: 0.6 }));
-  }
-  rot.appendChild(ns('circle', { cx, cy, r: 16, fill: p.alu, stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  const cal = E('rect', { x: caliper[0] - 13, y: caliper[1] - 24, width: 26, height: 48, fill: p.tyre === '#FFFFFF' ? '#FFFFFF' : '#B8322A', 'data-fillable': '', transform: `rotate(${caliper[2] || 0} ${caliper[0]} ${caliper[1]})` });
-  return shape('brake', [rot, cal]);
-}
-
-function chainDrive(O, ro, R, rr, p) {
-  // Tangent points of an open belt between two circles
-  const dx = R[0] - O[0], dy = R[1] - O[1], d = Math.hypot(dx, dy);
-  const a = Math.atan2(dy, dx), b = Math.asin((rr - ro) / d);
-  const t1 = a - Math.PI / 2 - b, t2 = a + Math.PI / 2 + b;
-  const P = (c, r, t) => [c[0] + Math.cos(t) * r, c[1] + Math.sin(t) * r];
-  const [o1, r1, o2, r2] = [P(O, ro, t1), P(R, rr, t1), P(O, ro, t2), P(R, rr, t2)];
-  const dPath = `M ${o1[0]} ${o1[1]} L ${r1[0]} ${r1[1]} A ${rr} ${rr} 0 0 1 ${r2[0]} ${r2[1]} L ${o2[0]} ${o2[1]} A ${ro} ${ro} 0 0 1 ${o1[0]} ${o1[1]} Z`;
-  const chain = shape('chain', [
-    E('path', { d: dPath, fill: 'none', 'stroke-width': 5 }),
-    ns('path', { d: dPath, fill: 'none', stroke: p.tyre === '#FFFFFF' ? '#FFFFFF' : '#8F959C', 'stroke-width': 2.4, 'stroke-dasharray': '3 3', class: 'no-hl ute-chain-hatch' }),
-    E('circle', { cx: O[0], cy: O[1], r: ro, fill: p.steel, 'stroke-width': 1.5 }),
-  ]);
-  const teeth = ns('g', { 'data-wheel': 'rear_sprocket', 'data-cx': R[0], 'data-cy': R[1], transform: `rotate(0 ${R[0]} ${R[1]})` });
-  teeth.appendChild(E('circle', { cx: R[0], cy: R[1], r: rr, fill: p.alu, 'stroke-width': 1.5, 'stroke-dasharray': '5 2.5' }));
-  for (let i = 0; i < 5; i++) {
-    const t = i / 5 * Math.PI * 2;
-    teeth.appendChild(ns('circle', { cx: R[0] + Math.cos(t) * rr * 0.6, cy: R[1] + Math.sin(t) * rr * 0.6, r: rr * 0.18, fill: '#F6F5F2', stroke: '#0A0A0A', 'stroke-width': 1 }));
-  }
-  teeth.appendChild(ns('circle', { cx: R[0], cy: R[1], r: 8, fill: '#1A1816' }));
-  const sprocket = shape('rear_sprocket', [teeth]);
-  return { chain, sprocket, mid: [(r1[0] + o1[0]) / 2, (r1[1] + o1[1]) / 2] };
-}
-
-function shock(top, bot, p, w = 12) {
-  const dx = bot[0] - top[0], dy = bot[1] - top[1], len = Math.hypot(dx, dy);
-  const ang = Math.atan2(dy, dx) * 180 / Math.PI - 90;
-  const g = ns('g', { transform: `translate(${top[0]} ${top[1]}) rotate(${ang})` });
-  g.appendChild(E('rect', { x: -w / 2, y: 0, width: w, height: len * 0.55, fill: p.steel, 'stroke-width': 1.5, 'data-fillable': '' }));
-  g.appendChild(E('rect', { x: -3, y: len * 0.5, width: 6, height: len * 0.5, fill: p.chrome, 'stroke-width': 1.2 }));
-  let d = `M ${-w} ${len * 0.12}`;
-  for (let i = 0; i < 9; i++) d += ` L ${w} ${len * 0.12 + i * len * 0.07 + len * 0.035} L ${-w} ${len * 0.12 + (i + 1) * len * 0.07}`;
-  g.appendChild(ns('path', { d, fill: 'none', stroke: p.tyre === '#FFFFFF' ? '#0A0A0A' : '#C2502A', 'stroke-width': 2 }));
-  g.appendChild(E('circle', { cx: 0, cy: 0, r: 5, fill: p.alu, 'stroke-width': 1.2 }));
-  g.appendChild(E('circle', { cx: 0, cy: len, r: 5, fill: p.alu, 'stroke-width': 1.2 }));
-  return g;
-}
-
-function forks(T, B, p, w = 18) {
-  const M = [T[0] + (B[0] - T[0]) * 0.52, T[1] + (B[1] - T[1]) * 0.52];
-  return shape('forks', [
-    E('polygon', { points: quad(T, M, w - 6, w - 6), fill: p.chrome, 'stroke-width': 1.5 }),
-    E('polygon', { points: quad(M, B, w + 2, w + 2), fill: p.alu, 'stroke-width': 1.5, 'data-fillable': '' }),
-    E('rect', { x: T[0] - 20, y: T[1] - 4, width: 40, height: 10, fill: p.alu, 'stroke-width': 1.5, transform: `rotate(${Math.atan2(B[1] - T[1], B[0] - T[0]) * 180 / Math.PI - 90} ${T[0]} ${T[1]})` }),
-  ]);
-}
-
-function fins(x1, x2, y1, y2, step, p) {
-  const out = [];
-  for (let y = y1; y <= y2; y += step) out.push(E('rect', { x: x1, y, width: x2 - x1, height: step * 0.45, fill: p.fin, 'stroke-width': 1 }));
-  return out;
-}
-
-/* ---------------- Classic 4T ---------------- */
-function drawClassic4T(svg, shaded = false) {
-  const p = pal(shaded, '4t');
-  const F = [254, 395], R = [900, 395], RT = 112;
-  if (shaded) svg.appendChild(ns('ellipse', { cx: 577, cy: 512, rx: 470, ry: 14, fill: '#0A0A0A', opacity: 0.18 }));
-
-  svg.appendChild(wheel('rear_wheel', R[0], R[1], RT, p, { spokes: 20 }));
-  const cd = chainDrive([630, 372], 14, R, 36, p);
-  svg.appendChild(cd.sprocket);
-  svg.appendChild(shape('swingarm', [E('polygon', { points: '660,336 905,384 905,406 660,360', fill: p.steel, 'data-fillable': '' })]));
-  svg.appendChild(cd.chain);
-  svg.appendChild(shape('rear_shock', [shock([800, 222], [850, 384], p)]));
-
-  // Frame
-  svg.appendChild(shape('frame', [
-    tube('M 372 175 L 620 195 L 760 205 L 852 214', p),
-    tube('M 620 195 L 665 345', p),
-    tube('M 372 175 L 430 330 L 468 420 L 622 420 L 665 345', p),
-    tube('M 700 300 L 852 214', p, 7),
-  ]));
-
-  // Exhaust
-  svg.appendChild(shape('exhaust', [
-    ...tube('M 482 250 C 430 262 418 330 446 410 Q 460 438 520 436 L 690 424', { frameIn: shaded ? '#D9DDE1' : '#FFFFFF' }, 14),
-    E('polygon', { points: '680,408 942,360 950,386 688,434', fill: p.chrome, 'data-fillable': '' }),
-    ns('line', { x1: 690, y1: 414, x2: 940, y2: 368, stroke: '#FFFFFF', 'stroke-width': 2, opacity: shaded ? 0.8 : 0, class: 'no-hl' }),
-  ]));
-
-  // Engine
-  svg.appendChild(shape('engine', [
-    E('rect', { x: 456, y: 316, width: 190, height: 102, rx: 16, fill: p.case, 'data-fillable': '' }),
-    E('circle', { cx: 512, cy: 368, r: 34, fill: p.alu, 'stroke-width': 1.5 }),
-    E('circle', { cx: 598, cy: 376, r: 22, fill: p.alu, 'stroke-width': 1.5 }),
-    hexBolt(512, 368, 6), hexBolt(598, 376, 5),
-  ]));
-  svg.appendChild(shape('cylinder', [
-    E('rect', { x: 476, y: 222, width: 80, height: 96, fill: p.alu, 'data-fillable': '' }),
-    ...fins(464, 568, 228, 306, 12, p),
-    E('rect', { x: 470, y: 206, width: 92, height: 18, fill: p.alu }),
-  ]));
-  svg.appendChild(shape('spark_plug', [
-    E('rect', { x: 509, y: 190, width: 12, height: 18, fill: '#F6F5F2', 'stroke-width': 1.5 }),
-    E('rect', { x: 512, y: 182, width: 6, height: 9, fill: p.dark, 'stroke-width': 1 }),
-  ]));
-  svg.appendChild(shape('carb', [
-    E('rect', { x: 562, y: 258, width: 34, height: 28, fill: p.alu, 'data-fillable': '' }),
-    E('rect', { x: 570, y: 286, width: 18, height: 16, fill: p.alu, 'stroke-width': 1.5 }),
-  ]));
-  svg.appendChild(shape('air_filter', [
-    E('path', { d: 'M 598 250 L 646 238 Q 662 270 646 302 L 598 292 Z', fill: p.case, 'data-fillable': '' }),
-    ...[0, 1, 2, 3].map((i) => ns('line', { x1: 606 + i * 10, y1: 252 - i * 2, x2: 606 + i * 10, y2: 290 + i * 2, stroke: '#0A0A0A', 'stroke-width': 0.8, class: 'no-hl' })),
-  ]));
-  svg.appendChild(shape('battery', [
-    E('rect', { x: 676, y: 214, width: 64, height: 58, fill: p.dark === '#FFFFFF' ? '#FFFFFF' : '#2A2826', 'data-fillable': '' }),
-    E('rect', { x: 684, y: 206, width: 10, height: 8, fill: '#C2502A', 'stroke-width': 1 }),
-    E('rect', { x: 722, y: 206, width: 10, height: 8, fill: '#0A0A0A', 'stroke-width': 1 }),
-    txt(708, 248, '12V', 'middle', 11, shaded ? '#F6F5F2' : '#6B6963'),
-  ]));
-  svg.appendChild(shape('seat', [E('path', { d: 'M 594 190 Q 640 172 720 182 L 836 194 Q 858 200 850 214 L 602 212 Z', fill: p.seat, 'data-fillable': '' })]));
-  svg.appendChild(shape('fuel_tank', [
-    E('path', { d: 'M 398 186 Q 414 140 498 140 Q 580 142 612 192 L 594 210 Q 500 218 410 208 Z', fill: p.tank, 'data-fillable': '' }),
-    E('circle', { cx: 470, cy: 143, r: 8, fill: p.chrome, 'stroke-width': 1.5 }),
-    E('path', { d: 'M 446 172 Q 500 160 556 176 L 548 194 Q 500 184 452 192 Z', fill: shaded ? '#F2EEE4' : '#F6F5F2', 'stroke-width': 1, opacity: 0.9 }),
-  ]));
-  // Front end
-  svg.appendChild(wheel('front_wheel', F[0], F[1], RT, p, { spokes: 20 }));
-  svg.appendChild(ns('path', { d: 'M 156 344 Q 200 270 300 268 Q 330 270 348 282', fill: 'none', stroke: '#0A0A0A', 'stroke-width': 2, 'pointer-events': 'none' }));
-  svg.appendChild(brakeDisc(F[0], F[1], 56, [304, 352, 40], p));
-  svg.appendChild(forks([366, 162], [262, 394], p));
-  svg.appendChild(shape('headlight', [
-    E('circle', { cx: 324, cy: 194, r: 28, fill: p.chrome, 'data-fillable': '' }),
-    E('circle', { cx: 318, cy: 194, r: 20, fill: p.lamp, 'stroke-width': 1.2 }),
-  ]));
-  svg.appendChild(ns('path', { d: 'M 380 150 L 362 116 L 440 104', fill: 'none', stroke: '#0A0A0A', 'stroke-width': 5, 'stroke-linecap': 'round', 'pointer-events': 'none' }));
-  svg.appendChild(shape('instruments', [
-    E('circle', { cx: 392, cy: 140, r: 14, fill: p.chrome }),
-    E('circle', { cx: 392, cy: 140, r: 9, fill: '#FFFFFF', 'stroke-width': 1 }),
-  ]));
-  svg.appendChild(shape('tail_light', [E('rect', { x: 848, y: 198, width: 20, height: 13, fill: p.tail, 'data-fillable': '' })]));
-  svg.appendChild(wiringShape('M 686 248 Q 560 228 440 196 L 352 194', null, shaded));
-
-  [
-    { key: 'headlight', sx: 312, sy: 186, lx: 170, lane: 1 },
-    { key: 'instruments', sx: 392, sy: 130, lx: 330, lane: 1 },
-    { key: 'fuel_tank', sx: 500, sy: 150, lx: 500, lane: 1 },
-    { key: 'seat', sx: 720, sy: 186, lx: 700, lane: 1 },
-    { key: 'tail_light', sx: 860, sy: 200, lx: 900, lane: 1 },
-    { key: 'rear_shock', sx: 820, sy: 290, lx: 1060, lane: 1 },
-    { key: 'forks', sx: 318, sy: 280, lx: 200, lane: 2 },
-    { key: 'spark_plug', sx: 515, sy: 186, lx: 450, lane: 2 },
-    { key: 'carb', sx: 578, sy: 270, lx: 590, lane: 2 },
-    { key: 'air_filter', sx: 628, sy: 262, lx: 720, lane: 2 },
-    { key: 'battery', sx: 708, sy: 230, lx: 860, lane: 2 },
-    { key: 'wiring', sx: 600, sy: 230, lx: 1020, lane: 2 },
-    { key: 'front_wheel', sx: 180, sy: 470, lx: 110, lane: 3 },
-    { key: 'frame', sx: 440, sy: 350, lx: 360, lane: 3 },
-    { key: 'cylinder', sx: 520, sy: 290, lx: 560, lane: 3 },
-    { key: 'exhaust', sx: 800, sy: 398, lx: 760, lane: 3 },
-    { key: 'rear_wheel', sx: 960, sy: 480, lx: 1090, lane: 3 },
-    { key: 'brake', sx: 230, sy: 420, lx: 250, lane: 4 },
-    { key: 'engine', sx: 560, sy: 400, lx: 470, lane: 4 },
-    { key: 'chain', sx: cd.mid[0], sy: cd.mid[1], lx: 640, lane: 4 },
-    { key: 'swingarm', sx: 760, sy: 362, lx: 800, lane: 4 },
-    { key: 'rear_sprocket', sx: 900, sy: 372, lx: 960, lane: 4 },
-  ].forEach((c) => svg.appendChild(callout(c)));
-}
-
-function wiringShape(d12, dHV, shaded) {
-  const els = [];
-  els.push(ns('path', { d: d12, fill: 'none', stroke: 'transparent', 'stroke-width': 14, class: 'no-hl' }));
-  els.push(ns('path', { d: d12, fill: 'none', stroke: '#C2502A', 'stroke-width': 1.8, 'stroke-dasharray': '6 4' }));
-  if (dHV) {
-    els.push(ns('path', { d: dHV, fill: 'none', stroke: 'transparent', 'stroke-width': 14, class: 'no-hl' }));
-    els.push(ns('path', { d: dHV, fill: 'none', stroke: '#1D6B55', 'stroke-width': 3, 'stroke-dasharray': '8 4' }));
-  }
-  void shaded;
-  return shape('wiring', els);
-}
-
-/* ---------------- Motocross 2T ---------------- */
-function drawMotocross2T(svg, shaded = false) {
-  const p = pal(shaded, '2t');
-  const F = [250, 392], R = [905, 400];
-  if (shaded) svg.appendChild(ns('ellipse', { cx: 580, cy: 514, rx: 480, ry: 14, fill: '#0A0A0A', opacity: 0.18 }));
-
-  svg.appendChild(wheel('rear_wheel', R[0], R[1], 110, p, { spokes: 24, knobby: true }));
-  const cd = chainDrive([612, 330], 13, R, 34, p);
-  svg.appendChild(cd.sprocket);
-  svg.appendChild(shape('swingarm', [E('polygon', { points: '634,292 910,390 910,410 634,314', fill: p.alu, 'data-fillable': '' })]));
-  svg.appendChild(cd.chain);
-  svg.appendChild(shape('rear_shock', [shock([626, 200], [694, 322], p, 14)]));
-
-  svg.appendChild(shape('frame', [
-    tube('M 388 150 L 560 186 L 640 300', p, 10),
-    tube('M 388 150 L 448 300 L 498 386 L 606 386 L 640 300', p),
-    tube('M 560 186 L 872 172', p, 7),
-    tube('M 640 300 L 772 180', p, 7),
-  ]));
-  // Rear fender (decor)
-  svg.appendChild(ns('path', { d: 'M 836 170 L 1000 146 L 1004 156 L 860 184 Z', fill: shaded ? '#F6F5F2' : '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5, 'pointer-events': 'none' }));
-
-  // Expansion chamber
-  svg.appendChild(shape('exhaust', [
-    E('path', { d: 'M 486 246 C 420 236 380 290 410 330 C 440 366 540 352 600 316 C 640 292 660 272 676 262', fill: 'none', 'stroke-width': 30, 'stroke-linecap': 'round', stroke: '#0A0A0A' }),
-    ns('path', { d: 'M 486 246 C 420 236 380 290 410 330 C 440 366 540 352 600 316 C 640 292 660 272 676 262', fill: 'none', 'stroke-width': 25, 'stroke-linecap': 'round', stroke: shaded ? '#8F959C' : '#FFFFFF', class: 'no-hl' }),
-    E('polygon', { points: '668,250 872,200 880,226 676,276', fill: p.alu, 'data-fillable': '' }),
-  ]));
-
-  svg.appendChild(shape('engine', [
-    E('rect', { x: 478, y: 300, width: 140, height: 86, rx: 14, fill: p.case, 'data-fillable': '' }),
-    E('circle', { cx: 530, cy: 346, r: 26, fill: p.alu, 'stroke-width': 1.5 }),
-    hexBolt(530, 346, 5),
-  ]));
-  svg.appendChild(shape('cylinder', [
-    E('polygon', { points: '494,300 574,300 566,226 486,226', fill: p.alu, 'data-fillable': '' }),
-    ...fins(480, 582, 232, 292, 11, p),
-    E('rect', { x: 480, y: 212, width: 92, height: 16, fill: p.alu }),
-  ]));
-  svg.appendChild(shape('spark_plug', [
-    E('rect', { x: 520, y: 196, width: 12, height: 17, fill: '#F6F5F2', 'stroke-width': 1.5 }),
-    E('rect', { x: 523, y: 188, width: 6, height: 9, fill: p.dark, 'stroke-width': 1 }),
-  ]));
-  svg.appendChild(shape('carb', [E('rect', { x: 580, y: 246, width: 30, height: 26, fill: p.alu, 'data-fillable': '' })]));
-  svg.appendChild(shape('air_filter', [E('rect', { x: 640, y: 198, width: 70, height: 48, fill: p.case, 'data-fillable': '' })]));
-  svg.appendChild(shape('battery', [
-    E('rect', { x: 722, y: 206, width: 40, height: 30, fill: p.dark === '#FFFFFF' ? '#FFFFFF' : '#2A2826', 'data-fillable': '' }),
-    E('rect', { x: 727, y: 200, width: 8, height: 6, fill: '#C2502A', 'stroke-width': 1 }),
-  ]));
-  svg.appendChild(shape('seat', [E('path', { d: 'M 520 160 L 862 166 Q 884 172 872 184 L 532 184 Z', fill: p.seat, 'data-fillable': '' })]));
-  svg.appendChild(shape('fuel_tank', [
-    E('path', { d: 'M 418 166 Q 456 138 540 148 L 574 188 L 440 206 Z', fill: p.tank, 'data-fillable': '' }),
-    E('path', { d: 'M 446 176 L 556 166 L 566 182 L 452 196 Z', fill: shaded ? '#3E6FB7' : '#F6F5F2', 'stroke-width': 1 }),
-  ]));
-  svg.appendChild(wheel('front_wheel', F[0], F[1], 120, p, { spokes: 24, knobby: true }));
-  svg.appendChild(ns('path', { d: 'M 168 214 L 330 178 L 340 190 L 190 226 Z', fill: shaded ? '#F6F5F2' : '#FFFFFF', stroke: '#0A0A0A', 'stroke-width': 1.5, 'pointer-events': 'none' }));
-  svg.appendChild(brakeDisc(F[0], F[1], 48, [298, 352, 40], p));
-  svg.appendChild(forks([382, 134], [258, 392], p, 22));
-  svg.appendChild(shape('headlight', [
-    E('path', { d: 'M 330 142 L 372 132 L 384 236 L 344 248 Z', fill: shaded ? '#F6F5F2' : '#FFFFFF', 'data-fillable': '' }),
-    E('circle', { cx: 356, cy: 204, r: 13, fill: p.lamp, 'stroke-width': 1.2 }),
-  ]));
-  svg.appendChild(ns('path', { d: 'M 392 128 L 378 100 L 460 92', fill: 'none', stroke: '#0A0A0A', 'stroke-width': 5, 'stroke-linecap': 'round', 'pointer-events': 'none' }));
-  svg.appendChild(shape('instruments', [E('rect', { x: 394, y: 112, width: 20, height: 14, fill: p.dark === '#FFFFFF' ? '#FFFFFF' : '#2A2826' })]));
-  svg.appendChild(shape('tail_light', [E('rect', { x: 976, y: 146, width: 16, height: 9, fill: p.tail, 'data-fillable': '' })]));
-  svg.appendChild(wiringShape('M 730 222 Q 560 206 420 168 L 366 190', null, shaded));
-
-  [
-    { key: 'headlight', sx: 360, sy: 170, lx: 200, lane: 1 },
-    { key: 'instruments', sx: 404, sy: 112, lx: 360, lane: 1 },
-    { key: 'fuel_tank', sx: 492, sy: 156, lx: 500, lane: 1 },
-    { key: 'seat', sx: 700, sy: 168, lx: 680, lane: 1 },
-    { key: 'rear_shock', sx: 652, sy: 250, lx: 830, lane: 1 },
-    { key: 'tail_light', sx: 984, sy: 146, lx: 1000, lane: 1 },
-    { key: 'forks', sx: 330, sy: 250, lx: 140, lane: 2 },
-    { key: 'spark_plug', sx: 526, sy: 190, lx: 420, lane: 2 },
-    { key: 'carb', sx: 596, sy: 258, lx: 560, lane: 2 },
-    { key: 'air_filter', sx: 676, sy: 222, lx: 680, lane: 2 },
-    { key: 'battery', sx: 742, sy: 220, lx: 800, lane: 2 },
-    { key: 'wiring', sx: 600, sy: 200, lx: 940, lane: 2 },
-    { key: 'front_wheel', sx: 176, sy: 482, lx: 100, lane: 3 },
-    { key: 'exhaust', sx: 420, sy: 336, lx: 320, lane: 3 },
-    { key: 'engine', sx: 580, sy: 370, lx: 540, lane: 3 },
-    { key: 'swingarm', sx: 780, sy: 354, lx: 760, lane: 3 },
-    { key: 'rear_wheel', sx: 966, sy: 484, lx: 1090, lane: 3 },
-    { key: 'brake', sx: 226, sy: 414, lx: 230, lane: 4 },
-    { key: 'frame', sx: 470, sy: 330, lx: 400, lane: 4 },
-    { key: 'cylinder', sx: 530, sy: 280, lx: 600, lane: 4 },
-    { key: 'chain', sx: cd.mid[0], sy: cd.mid[1], lx: 780, lane: 4 },
-    { key: 'rear_sprocket', sx: 905, sy: 380, lx: 950, lane: 4 },
-  ].forEach((c) => svg.appendChild(callout(c)));
-}
-
-/* ---------------- Electric scrambler ---------------- */
-function drawElectricBike(svg, shaded = false) {
-  const p = pal(shaded, 'elec');
-  const F = [254, 395], R = [900, 395], RT = 112;
-  if (shaded) svg.appendChild(ns('ellipse', { cx: 577, cy: 512, rx: 470, ry: 14, fill: '#0A0A0A', opacity: 0.18 }));
-
-  svg.appendChild(wheel('rear_wheel', R[0], R[1], RT, p, { cast: true, knobby: true }));
-  const cd = chainDrive([652, 366], 16, R, 38, p);
-  svg.appendChild(cd.sprocket);
-  svg.appendChild(shape('swingarm', [E('polygon', { points: '680,338 905,384 905,406 680,360', fill: p.alu, 'data-fillable': '' })]));
-  svg.appendChild(cd.chain);
-  svg.appendChild(shape('rear_shock', [shock([800, 222], [850, 384], p)]));
-
-  svg.appendChild(shape('frame', [
-    tube('M 372 175 L 620 195 L 760 205 L 852 214', p),
-    tube('M 620 195 L 680 345', p),
-    tube('M 372 175 L 424 340 L 466 410 L 630 410 L 680 345', p),
-    tube('M 712 296 L 852 214', p, 7),
-  ]));
-
-  svg.appendChild(shape('battery', [
-    iso3DBox(438, 224, 190, 112, 22, shaded
-      ? { front: '#2B2F33', top: '#4A5056', right: '#1A1D20' }
-      : { front: '#FFFFFF', top: '#EFEAE0', right: '#DDD9CF' }),
-    ...[0, 1, 2, 3, 4, 5, 6, 7].map((i) => ns('line', { x1: 452 + i * 22, y1: 236, x2: 452 + i * 22, y2: 324, stroke: shaded ? '#5A5F66' : '#B9B3A4', 'stroke-width': 1, class: 'no-hl' })),
-    E('rect', { x: 486, y: 266, width: 94, height: 22, fill: shaded ? '#1D6B55' : '#F6F5F2', 'stroke-width': 1.2 }),
-    txt(533, 281, 'HV · 400 V', 'middle', 10, shaded ? '#F6F5F2' : '#1D6B55'),
-  ]));
-  svg.appendChild(shape('controller', [
-    E('rect', { x: 662, y: 236, width: 78, height: 50, fill: p.alu, 'data-fillable': '' }),
-    ...[0, 1, 2, 3, 4, 5].map((i) => E('rect', { x: 668 + i * 12, y: 228, width: 6, height: 8, fill: p.alu, 'stroke-width': 1 })),
-  ]));
-  svg.appendChild(shape('motor', [
-    E('circle', { cx: 652, cy: 366, r: 44, fill: p.alu, 'data-fillable': '' }),
-    ...Array.from({ length: 16 }, (_, i) => {
-      const a = i / 16 * Math.PI * 2;
-      return ns('line', { x1: 652 + Math.cos(a) * 30, y1: 366 + Math.sin(a) * 30, x2: 652 + Math.cos(a) * 42, y2: 366 + Math.sin(a) * 42, stroke: '#0A0A0A', 'stroke-width': 1, class: 'no-hl' });
-    }),
-    E('circle', { cx: 652, cy: 366, r: 24, fill: shaded ? '#1D6B55' : '#F6F5F2', 'stroke-width': 1.5 }),
-    E('circle', { cx: 652, cy: 366, r: 7, fill: p.steel, 'stroke-width': 1.2 }),
-  ]));
-  svg.appendChild(shape('seat', [E('path', { d: 'M 594 190 Q 640 176 720 184 L 836 194 Q 858 200 850 214 L 602 212 Z', fill: p.seat, 'data-fillable': '' })]));
-  // Tank cover (decor)
-  svg.appendChild(ns('path', { d: 'M 398 186 Q 420 146 500 146 Q 576 150 606 192 L 590 210 Q 500 216 410 208 Z', fill: p.tank, stroke: '#0A0A0A', 'stroke-width': 2, 'pointer-events': 'none' }));
-  svg.appendChild(shape('charge_port', [
-    E('rect', { x: 504, y: 156, width: 30, height: 22, fill: p.alu, 'data-fillable': '' }),
-    E('circle', { cx: 519, cy: 167, r: 6, fill: '#1D6B55', 'stroke-width': 1 }),
-  ]));
-  svg.appendChild(wheel('front_wheel', F[0], F[1], RT, p, { cast: true, knobby: true }));
-  svg.appendChild(ns('path', { d: 'M 160 330 Q 210 270 300 270 Q 330 272 346 284', fill: 'none', stroke: '#0A0A0A', 'stroke-width': 2, 'pointer-events': 'none' }));
-  svg.appendChild(brakeDisc(F[0], F[1], 56, [304, 352, 40], p));
-  svg.appendChild(forks([366, 162], [262, 394], p));
-  svg.appendChild(shape('headlight', [
-    E('circle', { cx: 324, cy: 194, r: 28, fill: shaded ? '#2B2F33' : '#FFFFFF', 'data-fillable': '' }),
-    E('circle', { cx: 318, cy: 194, r: 20, fill: p.lamp, 'stroke-width': 1.2 }),
-    ns('circle', { cx: 318, cy: 194, r: 12, fill: 'none', stroke: '#1D6B55', 'stroke-width': 2, class: 'no-hl' }),
-  ]));
-  svg.appendChild(ns('path', { d: 'M 380 150 L 362 116 L 440 104', fill: 'none', stroke: '#0A0A0A', 'stroke-width': 5, 'stroke-linecap': 'round', 'pointer-events': 'none' }));
-  svg.appendChild(shape('instruments', [E('rect', { x: 380, y: 128, width: 28, height: 20, fill: shaded ? '#1A1D20' : '#FFFFFF' })]));
-  svg.appendChild(shape('tail_light', [E('rect', { x: 848, y: 198, width: 20, height: 13, fill: p.tail, 'data-fillable': '' })]));
-  svg.appendChild(wiringShape('M 690 236 Q 560 220 440 196 L 352 194', 'M 628 300 L 662 276', shaded));
-
-  [
-    { key: 'headlight', sx: 312, sy: 186, lx: 170, lane: 1 },
-    { key: 'instruments', sx: 394, sy: 128, lx: 330, lane: 1 },
-    { key: 'charge_port', sx: 519, sy: 160, lx: 500, lane: 1 },
-    { key: 'seat', sx: 720, sy: 186, lx: 700, lane: 1 },
-    { key: 'tail_light', sx: 860, sy: 200, lx: 900, lane: 1 },
-    { key: 'rear_shock', sx: 820, sy: 290, lx: 1060, lane: 1 },
-    { key: 'forks', sx: 318, sy: 280, lx: 200, lane: 2 },
-    { key: 'battery', sx: 560, sy: 236, lx: 480, lane: 2 },
-    { key: 'controller', sx: 700, sy: 236, lx: 720, lane: 2 },
-    { key: 'wiring', sx: 600, sy: 224, lx: 880, lane: 2 },
-    { key: 'front_wheel', sx: 180, sy: 470, lx: 110, lane: 3 },
-    { key: 'frame', sx: 440, sy: 360, lx: 380, lane: 3 },
-    { key: 'swingarm', sx: 790, sy: 366, lx: 820, lane: 3 },
-    { key: 'rear_wheel', sx: 960, sy: 480, lx: 1090, lane: 3 },
-    { key: 'brake', sx: 230, sy: 420, lx: 250, lane: 4 },
-    { key: 'motor', sx: 652, sy: 400, lx: 560, lane: 4 },
-    { key: 'chain', sx: cd.mid[0], sy: cd.mid[1], lx: 740, lane: 4 },
-    { key: 'rear_sprocket', sx: 900, sy: 372, lx: 940, lane: 4 },
-  ].forEach((c) => svg.appendChild(callout(c)));
-}
-
-const drawClassic4T3D = (svg) => drawClassic4T(svg, true);
-const drawMotocross2T3D = (svg) => drawMotocross2T(svg, true);
-const drawElectricBike3D = (svg) => drawElectricBike(svg, true);
-
-function mountOverviewSVG() {
-  const svg = $('#ute-moto');
-  if (!svg) return;
-  svg.innerHTML = '';
-  svg.classList.toggle('is-3d', S.view === '3d');
-  if (S.view === '3d') {
-    if (S.mode === '4t') drawClassic4T3D(svg);
-    else if (S.mode === '2t') drawMotocross2T3D(svg);
-    else drawElectricBike3D(svg);
-  } else {
-    if (S.mode === '4t') drawClassic4T(svg);
-    else if (S.mode === '2t') drawMotocross2T(svg);
-    else drawElectricBike(svg);
-  }
-  wireOverviewClicks(svg);
+function mountDiagram(wrap) {
+  wrap.innerHTML = `
+    <div class="mz-plate" style="aspect-ratio:${PLATE_RATIO[S.mode]}">
+      <img src="assets/illustrations/${OVERVIEW_PLATE[S.mode]}" alt="${MODE_INFO[S.mode].name}: course plate with principal parts labelled" draggable="false">
+      ${HOTSPOTS[S.mode].map(([k, x, y, l]) => `<button type="button" class="mz-hot ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''}" style="left:${x}%;top:${y}%" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}" aria-label="${l}: open ${partName(k)}"><span class="mz-hot-tip">${l}</span></button>`).join('')}
+    </div>`;
+  wrap.querySelectorAll('.mz-hot').forEach((b) => b.addEventListener('click', () => selectPart(b.dataset.part)));
   applyMotoHighlight();
   applyMotoCategory();
-  requestAnimationFrame(() => paintInteractiveDots());
 }
 
-function wireOverviewClicks(svg) {
-  svg.addEventListener('click', (e) => {
-    const el = e.target.closest('[data-shape], .ute-callout');
-    if (!el) return;
-    selectPart(el.getAttribute('data-shape') || el.getAttribute('data-part'));
+async function mount3D(wrap, token) {
+  wrap.innerHTML = `
+    <div class="mz3d mz3d-bike" id="mz3d-bike"></div>
+    <div class="mz3d-tip" id="mz3d-tip" hidden></div>
+    <div class="mz3d-bar">
+      <span class="mz3d-hint">Drag to orbit · scroll to zoom · click a part</span>
+      <div class="ute-seg ute-cam" role="group" aria-label="Camera">
+        <button type="button" data-cam="side" class="is-on">Side</button><button type="button" data-cam="threeq">3/4</button><button type="button" data-cam="front">Front</button>
+      </div>
+    </div>`;
+  let mod;
+  try { mod = await load3D(); } catch (e) { mod = null; }
+  if (token !== mountToken) return;
+  if (!mod || !mod.webglOK()) {
+    S.view = 'diagram';
+    $$('.ute-view-toggle button').forEach((x) => x.classList.toggle('is-on', x.dataset.view === 'diagram'));
+    mountOverview();
+    return;
+  }
+  const tip = $('#mz3d-tip');
+  V3 = mod.createViewer($('#mz3d-bike'), {
+    view: 'side',
+    onPick: (m, name) => { const k = partForMesh(name); if (k) selectPart(k, true); },
+    onHover: (m, name, e) => {
+      const k = partForMesh(name);
+      if (!k || !e) { tip.hidden = true; return; }
+      const r = wrap.getBoundingClientRect();
+      tip.hidden = false;
+      tip.innerHTML = `${partName(k)}${INTERACTIVE_PARTS.has(k) ? ' <i>interactive</i>' : ''}<small>${mod.humanize(name.split('__').slice(1).join(' · '))}</small>`;
+      tip.style.left = Math.min(r.width - 180, e.clientX - r.left + 14) + 'px';
+      tip.style.top = (e.clientY - r.top + 16) + 'px';
+    },
   });
-  svg.addEventListener('keydown', (e) => {
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-    const el = e.target.closest('[data-shape]');
-    if (!el) return;
-    e.preventDefault();
-    e.stopPropagation();
-    selectPart(el.getAttribute('data-shape'));
-  });
+  await V3.load(BIKE_MODEL[S.mode], { view: 'side', wheels: BIKE_WHEELS });
+  if (token !== mountToken) return;
+  applyMotoHighlight();
+  applyMotoCategory();
+  wrap.querySelectorAll('[data-cam]').forEach((b) => b.addEventListener('click', () => {
+    wrap.querySelectorAll('[data-cam]').forEach((x) => x.classList.toggle('is-on', x === b));
+    V3.view(b.dataset.cam);
+  }));
+}
+
+function renderPartIndex() {
+  const box = $('#ute-part-index');
+  if (!box) return;
+  box.innerHTML = `<span class="ute-label">Parts on this bike</span>` + overviewParts().map((k) =>
+    `<button type="button" class="mz-part ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''}" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}">${partName(k)}</button>`).join('');
+  box.querySelectorAll('[data-part]').forEach((b) => b.addEventListener('click', () => selectPart(b.dataset.part)));
+  applyMotoHighlight();
+  applyMotoCategory();
 }
 
 function applyMotoHighlight() {
-  const svg = $('#ute-moto');
-  if (!svg) return;
-  svg.querySelectorAll('.is-hl').forEach((el) => el.classList.remove('is-hl'));
-  if (!S.selected_part) return;
   const k = S.selected_part;
-  svg.querySelectorAll(`[data-shape="${k}"], .ute-callout[data-part="${k}"]`).forEach((el) => el.classList.add('is-hl'));
+  $$('.mz-hot, .mz-part').forEach((el) => el.classList.toggle('is-hl', !!k && el.dataset.part === k));
+  if (V3) V3.setHighlight(k ? (n) => partForMesh(n) === k : null);
 }
 
 function applyMotoCategory() {
-  const svg = $('#ute-moto');
-  if (!svg) return;
-  svg.setAttribute('data-cat', S.category);
-  svg.querySelectorAll('.ute-shape').forEach((el) => el.classList.remove('in-cat'));
-  if (S.category === 'all') return;
-  svg.querySelectorAll('[data-shape]').forEach((el) => {
-    if (PART_CATEGORY[el.getAttribute('data-shape')] === S.category) el.classList.add('in-cat');
-  });
-}
-
-function paintInteractiveDots() {
-  const svg = $('#ute-moto');
-  if (!svg) return;
-  svg.querySelectorAll('.ute-ix-dot').forEach((el) => el.remove());
-  const seen = new Set();
-  svg.querySelectorAll('[data-shape]').forEach((el) => {
-    const k = el.getAttribute('data-shape');
-    if (!k || seen.has(k) || !INTERACTIVE_PARTS.has(k)) return;
-    seen.add(k);
-    try {
-      const b = el.getBBox();
-      if (!b.width) return;
-      svg.appendChild(ns('circle', { class: 'ute-ix-dot', cx: b.x + b.width / 2, cy: b.y + b.height / 2, r: 5, 'data-ix': k }));
-    } catch (e) { /* bbox not ready */ }
-  });
+  const c = S.category;
+  const plate = $('.mz-plate');
+  if (plate) plate.dataset.cat = c;
+  $$('.mz-hot, .mz-part').forEach((el) => el.classList.toggle('in-cat', c !== 'all' && el.dataset.cat === c));
+  const idx = $('#ute-part-index');
+  if (idx) idx.dataset.cat = c;
+  if (V3) V3.setCategory(c);
 }
 
 function updateOverviewTick(dt) {
-  const svg = $('#ute-moto');
-  if (!svg) return;
+  if (!V3 || S.view !== '3d' || S.speed < 0.3) return;
   const wheelRPM = S.speed / 3.6 / (2 * Math.PI * GEAR.wheel_r_m) * 60;
-  const degStep = wheelRPM / 60 * 360 * dt / 6; // 6x slow-mo so spokes stay readable
-  if (!degStep) return;
-  svg.querySelectorAll('[data-wheel]').forEach((g) => {
-    const cur = (parseFloat(g.getAttribute('data-rot') || '0') - degStep) % 360; // bike faces left → wheels turn CCW
-    g.setAttribute('data-rot', cur);
-    g.setAttribute('transform', `rotate(${cur} ${g.getAttribute('data-cx')} ${g.getAttribute('data-cy')})`);
-  });
-  svg.querySelectorAll('.ute-chain-hatch').forEach((h) => {
-    const o = (parseFloat(h.getAttribute('data-off') || '0') + degStep * 0.6) % 600;
-    h.setAttribute('data-off', o);
-    h.setAttribute('stroke-dashoffset', o);
-  });
+  V3.spin(wheelRPM / 60 * 360 * dt / 10); // 10x slow-motion so the spokes stay readable
 }
+
 
 /* ==========================================================================
    5. Component view
@@ -786,9 +374,11 @@ function emptyCViewHTML() {
   return '<div class="ute-cview-empty">No part selected · click one above</div>';
 }
 
+let CV3 = null;
 function renderComponentView() {
   const slot = $('#ute-cview-slot');
   if (!slot) return;
+  if (CV3) { CV3.dispose(); CV3 = null; }
   // Reset local holds so nothing sticks when switching views
   Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false, throttle_hold: false, particles: [] });
   if (!S.selected_part) { slot.innerHTML = emptyCViewHTML(); return; }
@@ -801,9 +391,11 @@ function renderComponentView() {
     <div class="ute-cview-stage ${cfg.hold ? '' : 'no-action'}" id="ute-cview-stage">${cfg.html()}${cfg.hold ? holdHTML(cfg.hold) : ''}</div>
     ${cfg.under ? cfg.under() : ''}
     ${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
+    ${cfg.basic ? '' : assetsPanelHTML(S.selected_part)}
   `;
   S._activeCfg = cfg;
   if (cfg.mount) cfg.mount();
+  mountAssetsPanel(S.selected_part);
   if (cfg.hold) wireHold($('.ute-hold', slot), cfg.hold.flag);
   slot.querySelector('[data-cv-close]').addEventListener('click', () => selectPart(null));
 }
@@ -846,36 +438,109 @@ function setStat(k, v) {
 }
 function card(title, body) { return `<div class="ute-card"><h4>${title}</h4>${body}</div>`; }
 function list(items) { return `<ul>${items.map((i) => `<li>${i}</li>`).join('')}</ul>`; }
-function renderImg(key) {
-  const src = S.assets[key];
-  return src ? `<img class="ute-render" src="${src}" alt="${partName(key)} render" loading="lazy">` : '';
+
+/* ---------- Assets panel: the part's own 3D model + course plates ---------- */
+const chapterFor = (key) => PART_CHAPTER[key] || (PARTS[key] && PARTS[key].chapter) || 'm1-anatomy';
+
+function platesHTML(key) {
+  const ids = platesFor(key, S.mode);
+  if (!ids.length) return '<p>No course plate for this part yet.</p>';
+  return `<div class="mz-plate-thumbs">${ids.map((id) => `<button type="button" class="mz-plate-thumb" data-plate="${id}" aria-label="Enlarge plate ${id}: ${PLATES[id][1]}"><img src="assets/illustrations/${plateSrc(id)}" alt="" loading="lazy"><span><b>${id}</b> ${PLATES[id][1]}</span></button>`).join('')}</div>`;
+}
+function deeperHTML(key) {
+  const ch = chapterFor(key);
+  return `<p>Read the theory, then test yourself.</p><div class="ute-btnrow"><a class="ute-linkbtn is-warm" href="learn/#${ch}">Learn →</a><a class="ute-linkbtn" href="quiz/?topic=${ch}">Quiz →</a><a class="ute-linkbtn" href="models/#${modelsFor(key, S.mode)[0] || BIKE_MODEL[S.mode]}">Model library</a></div>`;
+}
+function viewer3dHTML(stage) {
+  return `<div class="mz-variants" id="mz-variants"></div>
+    <div class="mz3d ${stage ? 'mz3d-stage' : 'mz3d-part'}" id="mz-cv3d"></div>
+    <p class="mz3d-cap" id="mz-cv3d-cap"></p>
+    <div class="mz-subparts" id="mz-subparts" aria-label="Sub-parts"></div>`;
+}
+function assetsPanelHTML(key) {
+  return `<div class="mz-assets">
+    <div class="ute-card mz-asset-3d"><h4>3D model · drag to rotate</h4>${viewer3dHTML(false)}</div>
+    <div class="mz-asset-side">
+      <div class="ute-card"><h4>Course plates</h4>${platesHTML(key)}</div>
+      <div class="ute-card"><h4>Go deeper</h4>${deeperHTML(key)}</div>
+    </div>
+  </div>`;
 }
 
-/* ---------- Basic card (fallback) ---------- */
+async function mountAssetsPanel(key) {
+  $$('#ute-cview-slot [data-plate]').forEach((b) => b.addEventListener('click', () => openPlate(b.dataset.plate)));
+  const el = $('#mz-cv3d');
+  if (!el) return;
+  let mod;
+  try { mod = await load3D(); } catch (e) { mod = null; }
+  if (S.selected_part !== key || !el.isConnected) return;
+  if (!mod || !mod.webglOK()) { el.innerHTML = '<p class="mz3d-status">3D view needs WebGL, which this browser has turned off.</p>'; return; }
+  const cap = $('#mz-cv3d-cap'), subs = $('#mz-subparts'), vbox = $('#mz-variants');
+  const viewer = mod.createViewer(el, {
+    view: 'threeq',
+    onPick: (m, name) => { if (!m) return; viewer.setHighlight((n) => n === name); cap.textContent = mod.humanize(name.split('__').slice(-1)[0]); },
+  });
+  CV3 = viewer;
+  const listSubs = (filter, strip) => {
+    const groups = new Map();
+    viewer.meshes().filter((m) => filter(m.name)).forEach((m) => {
+      const label = mod.humanize(m.name.split('__').slice(strip).join(' ') || m.name);
+      if (!groups.has(label)) groups.set(label, []);
+      groups.get(label).push(m.name);
+    });
+    subs.innerHTML = [...groups.keys()].map((l) => `<button type="button" class="mz-sub" data-sub="${l}">${l}</button>`).join('');
+    subs.querySelectorAll('[data-sub]').forEach((b) => {
+      const names = new Set(groups.get(b.dataset.sub));
+      const on = () => { subs.querySelectorAll('.is-on').forEach((x) => x.classList.remove('is-on')); b.classList.add('is-on'); viewer.setHighlight((n) => names.has(n)); };
+      b.addEventListener('mouseenter', on); b.addEventListener('focus', on); b.addEventListener('click', on);
+    });
+  };
+  const models = modelsFor(key, S.mode);
+  const loadModel = async (name) => {
+    vbox.querySelectorAll('button').forEach((b) => b.classList.toggle('is-on', b.dataset.model === name));
+    await viewer.load(name, { view: 'threeq' });
+    if (CV3 !== viewer) return;
+    cap.textContent = MODELS[name] ? MODELS[name][1] : name;
+    listSubs(() => true, 1);
+  };
+  if (models.length) {
+    vbox.innerHTML = models.length > 1 ? `<div class="ute-seg" role="group" aria-label="Model variants">${models.map((m) => `<button type="button" data-model="${m}">${MODELS[m] ? MODELS[m][1].split(/[,(]/)[0].trim() : m}</button>`).join('')}</div>` : '';
+    vbox.querySelectorAll('[data-model]').forEach((b) => b.addEventListener('click', () => loadModel(b.dataset.model)));
+    loadModel(models[0]);
+  } else {
+    const match = (n) => partForMesh(n) === key;
+    await viewer.load(BIKE_MODEL[S.mode], { view: 'side' });
+    if (CV3 !== viewer) return;
+    viewer.setHighlight(match);
+    viewer.focus(match);
+    cap.textContent = `Shown in place on the ${MODE_INFO[S.mode].name.toLowerCase()}.`;
+    listSubs(match, 2);
+  }
+}
+
+function openPlate(id) {
+  const m = $('#mz-lightbox');
+  if (!m) return;
+  m.querySelector('img').src = `assets/illustrations/${plateSrc(id)}`;
+  m.querySelector('img').alt = `${id}: ${PLATES[id][1]}`;
+  m.querySelector('figcaption').innerHTML = `<b>${id}</b> · ${PLATES[id][1]}`;
+  m.classList.add('is-open');
+  m.querySelector('button').focus();
+}
+function closePlate() { const m = $('#mz-lightbox'); if (m) m.classList.remove('is-open'); }
+
+/* ---------- Basic card: parts without an animation get a big 3D stage ---------- */
 function basicCard(key) {
   const P = PARTS[key] || { name: 'Component', tag: 'Component', desc: '', notes: '' };
   return {
+    basic: true,
     title: P.name,
-    kind: `${P.tag || 'Component'} · Overview`,
-    html: () => `${statusHTML(P.name, P.desc ? P.desc.split('. ')[0] + '.' : 'Static view.', (PART_CATEGORY[key] || '').toUpperCase())}<svg class="ute-cv-svg" id="cv-basic" viewBox="0 0 400 240"></svg>`,
-    sideHTML: () => card('Role', `${renderImg(key)}<p>${P.desc || '—'}</p>`) + card('Note', `<p>${P.notes || '—'}</p>`) +
-      card('Learn more', `<p>Read the theory behind this part, then test yourself.</p><div class="ute-btnrow"><a class="ute-linkbtn" href="learn/#${P.chapter || 'anatomy'}">Learn →</a><a class="ute-linkbtn" href="quiz/?topic=${P.chapter || 'anatomy'}">Quiz →</a></div>`),
-    mount: () => {
-      const out = $('#cv-basic');
-      const src = $(`#ute-moto [data-shape="${key}"]`);
-      if (!out || !src) return;
-      let b;
-      try { b = src.getBBox(); } catch (e) { return; }
-      const pad = Math.max(b.width, b.height) * 0.18 + 8;
-      out.setAttribute('viewBox', `${b.x - pad} ${b.y - pad} ${b.width + pad * 2} ${b.height + pad * 2}`);
-      const clone = src.cloneNode(true);
-      clone.removeAttribute('class');
-      clone.removeAttribute('tabindex');
-      clone.removeAttribute('role');
-      out.appendChild(clone);
-    },
+    kind: `${P.tag || 'Component'} · 3D model`,
+    html: () => `${statusHTML(P.name, P.desc ? P.desc.split('. ')[0] + '.' : '', (CATEGORIES.find((c) => c.k === PART_CATEGORY[key]) || { label: '' }).label.toUpperCase())}${viewer3dHTML(true)}`,
+    sideHTML: () => card('Role', `<p>${P.desc || '—'}</p><p><b>Note.</b> ${P.notes || '—'}</p>`) + card('Course plates', platesHTML(key)) + card('Go deeper', deeperHTML(key)),
   };
 }
+
 
 /* ==========================================================================
    8. Interactive component views
@@ -1610,148 +1275,62 @@ COMPONENT_VIEWS.wiring = {
 };
 
 /* ==========================================================================
-   9. Rider view
+   9. Ride — the Moto Zero cockpit simulator (assets/interactive/controls.html)
+   embedded same-origin; its live state drives the engine views and the dyno.
    ========================================================================== */
+const COCKPIT_KEYS = new Set(['k', 'x', 's', 'c', 't', 'f', 'r', 'h', 'v', 'b', 'q', 'e', 'ArrowUp', 'ArrowDown']);
+
 function mountRider() {
-  defsPackMetals();
-  const svg = $('#ute-rider');
-  if (!svg) return;
-  svg.innerHTML = '';
-  const R = {};
-  // Mirrors
-  [[210, 112, 170, 40], [690, 112, 730, 40]].forEach(([x1, y1, x2, y2]) => {
-    svg.appendChild(ns('line', { x1, y1, x2, y2, stroke: '#0A0A0A', 'stroke-width': 4 }));
-    svg.appendChild(ns('ellipse', { cx: x2, cy: y2 - 6, rx: 36, ry: 16, fill: 'url(#m-chrome)', stroke: '#0A0A0A', 'stroke-width': 2 }));
-  });
-  // Crossbar
-  svg.appendChild(ns('path', { d: 'M 110 122 Q 450 96 790 122', fill: 'none', stroke: '#0A0A0A', 'stroke-width': 14, 'stroke-linecap': 'round' }));
-  svg.appendChild(ns('path', { d: 'M 110 122 Q 450 96 790 122', fill: 'none', stroke: 'url(#m-chrome)', 'stroke-width': 9, 'stroke-linecap': 'round' }));
-  svg.appendChild(ns('rect', { x: 415, y: 96, width: 70, height: 22, fill: 'url(#m-alu)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-
-  // Clutch lever (left)
-  R.clutch = ns('g', { class: 'ute-press', 'data-press': 'clutch' });
-  R.clutchLever = ns('g');
-  R.clutchLever.appendChild(ns('path', { d: 'M 190 104 L 60 78 L 56 88 L 186 116 Z', fill: 'url(#m-alu)', stroke: '#0A0A0A', 'stroke-width': 1.5, class: 'hit-outline' }));
-  R.clutchLever.appendChild(ns('path', { d: 'M 50 70 L 210 70 L 210 120 L 50 120 Z', fill: 'transparent' }));
-  R.clutch.appendChild(R.clutchLever);
-  R.clutch.appendChild(ns('circle', { cx: 190, cy: 110, r: 8, fill: 'url(#m-steel)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  svg.appendChild(R.clutch);
-  // Brake lever (right)
-  R.brake = ns('g', { class: 'ute-press', 'data-press': 'brake' });
-  R.brakeLever = ns('g');
-  R.brakeLever.appendChild(ns('path', { d: 'M 710 104 L 840 78 L 844 88 L 714 116 Z', fill: 'url(#m-alu)', stroke: '#0A0A0A', 'stroke-width': 1.5, class: 'hit-outline' }));
-  R.brakeLever.appendChild(ns('path', { d: 'M 690 70 L 850 70 L 850 120 L 690 120 Z', fill: 'transparent' }));
-  R.brake.appendChild(R.brakeLever);
-  R.brake.appendChild(ns('rect', { x: 690, y: 98, width: 34, height: 22, fill: '#2A2826', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  svg.appendChild(R.brake);
-  // Grips
-  svg.appendChild(ns('rect', { x: 34, y: 108, width: 104, height: 30, rx: 6, fill: 'url(#m-rubber)', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  R.throttle = ns('g', { class: 'ute-press', 'data-press': 'throttle' });
-  R.throttle.appendChild(ns('rect', { x: 762, y: 108, width: 104, height: 30, rx: 6, fill: 'url(#m-rubber)', stroke: '#0A0A0A', 'stroke-width': 1.5, class: 'hit-outline' }));
-  R.twist = ns('rect', { x: 808, y: 108, width: 6, height: 30, fill: '#C2502A' });
-  R.throttle.appendChild(R.twist);
-  R.throttle.appendChild(txt(814, 160, 'THROTTLE', 'middle', 9));
-  svg.appendChild(R.throttle);
-  svg.appendChild(txt(86, 160, 'GRIP', 'middle', 9));
-  svg.appendChild(txt(120, 64, 'CLUTCH', 'middle', 9));
-  svg.appendChild(txt(780, 64, 'FRONT BRAKE', 'middle', 9));
-
-  // Switch cubes
-  svg.appendChild(ns('rect', { x: 196, y: 132, width: 74, height: 50, rx: 5, fill: '#2A2826', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  R.horn = ns('circle', { cx: 218, cy: 157, r: 12, fill: '#C2502A', stroke: '#0A0A0A', 'stroke-width': 1.5, class: 'ute-press', 'data-press': 'horn' });
-  svg.appendChild(R.horn);
-  svg.appendChild(ns('rect', { x: 240, y: 148, width: 22, height: 18, fill: '#6B6963', stroke: '#0A0A0A' }));
-  svg.appendChild(txt(232, 198, 'HORN · TURN', 'middle', 9));
-  svg.appendChild(ns('rect', { x: 630, y: 132, width: 74, height: 50, rx: 5, fill: '#2A2826', stroke: '#0A0A0A', 'stroke-width': 1.5 }));
-  R.kill = ns('rect', { x: 640, y: 144, width: 24, height: 26, fill: '#C2502A', stroke: '#0A0A0A', 'stroke-width': 1.5, class: 'ute-press', 'data-press': 'kill' });
-  svg.appendChild(R.kill);
-  const st = ns('g', { class: 'ute-press', 'data-press': 'starter' });
-  st.appendChild(ns('circle', { cx: 686, cy: 157, r: 12, fill: '#0A0A0A', stroke: '#6B6963', 'stroke-width': 1.5 }));
-  st.appendChild(ns('path', { d: 'M 681 151 L 692 157 L 681 163 Z', fill: '#FFFFFF' }));
-  svg.appendChild(st);
-  svg.appendChild(txt(668, 198, 'KILL · START', 'middle', 9));
-
-  // Gauges
-  const gauge = (cx, label, max, ticks) => {
-    svg.appendChild(ns('circle', { cx, cy: 220, r: 70, fill: 'url(#m-chrome)', stroke: '#0A0A0A', 'stroke-width': 2 }));
-    svg.appendChild(ns('circle', { cx, cy: 220, r: 60, fill: '#1A1816', stroke: '#0A0A0A' }));
-    for (let i = 0; i <= ticks; i++) {
-      const a = (-225 + i / ticks * 270) * Math.PI / 180;
-      svg.appendChild(ns('line', { x1: cx + Math.cos(a) * 50, y1: 220 + Math.sin(a) * 50, x2: cx + Math.cos(a) * 57, y2: 220 + Math.sin(a) * 57, stroke: '#F6F5F2', 'stroke-width': 1.5 }));
-      const tl = txt(cx + Math.cos(a) * 40, 223 + Math.sin(a) * 40, String(Math.round(i / ticks * max)), 'middle', 8, '#F6F5F2');
-      tl.setAttribute('letter-spacing', '0');
-      svg.appendChild(tl);
-    }
-    svg.appendChild(txt(cx, 262, label, 'middle', 8, '#B9B3A4'));
-    const n = ns('line', { x1: cx, y1: 220, x2: cx + 46, y2: 220, stroke: '#C2502A', 'stroke-width': 3, 'stroke-linecap': 'round' });
-    svg.appendChild(n);
-    svg.appendChild(ns('circle', { cx, cy: 220, r: 5, fill: '#C2502A' }));
-    return n;
+  const f = $('#mz-cockpit');
+  if (!f) return;
+  const fit = () => {
+    try {
+      const d = f.contentDocument;
+      if (d && d.body) f.style.height = Math.ceil(d.documentElement.scrollHeight) + 'px';
+    } catch (e) { /* noop */ }
   };
-  R.speedo = gauge(375, 'KM/H', 240, 8);
-  R.tacho = gauge(525, S.mode === 'elec' ? '×1000 RPM · MOTOR' : '×1000 RPM', 10, 10);
-  S._rider = R;
-
-  // Interaction
-  const holdMap = { throttle: 'throttle_hold', brake: 'brake_hold', clutch: 'clutch_hold' };
-  svg.querySelectorAll('[data-press]').forEach((el) => {
-    el.addEventListener('pointerdown', (e) => {
-      e.preventDefault();
-      const k = el.getAttribute('data-press');
-      if (holdMap[k]) {
-        S.rider[holdMap[k]] = true;
-        try { svg.setPointerCapture(e.pointerId); } catch (_) { /* noop */ }
-      } else if (k === 'horn') toast('BEEP!', 500);
-      else if (k === 'kill') {
-        S.rider.kill = !S.rider.kill;
-        R.kill.setAttribute('fill', S.rider.kill ? '#0A0A0A' : '#C2502A');
-        toast(S.rider.kill ? 'ENGINE KILLED' : 'ENGINE LIVE', 900);
-      } else if (k === 'starter') {
-        S.rider.kill = false;
-        R.kill.setAttribute('fill', '#C2502A');
-        toast('STARTED', 700);
-      }
-    });
+  f.addEventListener('load', () => {
+    fit();
+    try { new ResizeObserver(fit).observe(f.contentDocument.documentElement); } catch (e) { setInterval(fit, 1000); }
   });
-  const release = () => { S.rider.throttle_hold = false; S.rider.brake_hold = false; S.rider.clutch_hold = false; };
-  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach((ev) => svg.addEventListener(ev, release));
+  window.addEventListener('message', (e) => {
+    if (e.source !== f.contentWindow || !e.data || e.data.mz !== 'key') return;
+    if (e.data.key === 'Escape') { if ($('#ute-help').classList.contains('is-open')) closeHelp(); else selectPart(null); }
+    else if (e.data.key === '?') openHelp();
+  });
 }
 
-let toastTimer = 0;
-function toast(msg, ms) {
-  const t = $('#ute-toast');
-  if (!t) return;
-  t.textContent = msg;
-  t.classList.add('is-on');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('is-on'), ms);
+function cockpitState() {
+  const f = $('#mz-cockpit');
+  try { return f && f.contentWindow && f.contentWindow.__moto ? f.contentWindow.__moto.state() : null; } catch (e) { return null; }
+}
+
+function forwardKey(type, e) {
+  const f = $('#mz-cockpit');
+  if (!f || !f.contentDocument) return false;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if (!COCKPIT_KEYS.has(k)) return false;
+  try { f.contentDocument.dispatchEvent(new KeyboardEvent(type, { key: e.key, repeat: e.repeat, bubbles: true })); } catch (err) { return false; }
+  return true;
 }
 
 function updateRiderTick(dt) {
   const r = S.rider;
-  r.throttle = r.throttle_hold ? Math.min(1, r.throttle + 1.8 * dt) : Math.max(0, r.throttle - 1.2 * dt);
-  r.brake = r.brake_hold ? Math.min(1, r.brake + 3.0 * dt) : Math.max(0, r.brake - 2.5 * dt);
-  r.clutch = r.clutch_hold ? Math.min(1, r.clutch + 3.0 * dt) : Math.max(0, r.clutch - 2.5 * dt);
-  const R = S._rider;
-  if (!R || !R.twist.isConnected) return;
-  R.twist.setAttribute('transform', `translate(${-r.throttle * 26} 0)`);
-  R.brakeLever.setAttribute('transform', `rotate(${r.brake * 9} 714 110)`);
-  R.clutchLever.setAttribute('transform', `rotate(${-r.clutch * 9} 186 110)`);
-  const shownRPM = S.mode === 'elec' ? S.elec.rpm : S.rpm;
-  const needle = (el, v, max) => {
-    const a = -225 + clamp(v / max, 0, 1) * 270;
-    const cx = parseFloat(el.getAttribute('x1'));
-    el.setAttribute('transform', `rotate(${a} ${cx} 220)`);
-  };
-  needle(R.speedo, S.speed, 240);
-  needle(R.tacho, shownRPM, 10000);
-  const set = (k, v) => { const el = document.querySelector(`[data-d="${k}"]`); if (el && el.textContent !== v) el.textContent = v; };
-  set('throttle', `${Math.round(r.throttle * 100)} %`);
-  set('brake', `${Math.round(r.brake * 100)} %`);
-  set('clutch', `${Math.round(r.clutch * 100)} %`);
-  set('rpm', `${Math.round(shownRPM)}`);
-  set('kmh', `${Math.round(S.speed)} km/h`);
+  // Local holds from component-view buttons ramp a throttle of their own
+  S._localThr = r.throttle_hold ? Math.min(1, (S._localThr || 0) + 1.8 * dt) : Math.max(0, (S._localThr || 0) - 1.2 * dt);
+  const c = cockpitState();
+  S.ck = c;
+  if (c) {
+    r.throttle = Math.max(c.thr, S._localThr);
+    r.brake = Math.max(c.frontP, c.rearP * 0.6);
+    r.clutch = c.clutchP;
+    r.kill = !c.kill;
+    S.gear = ['1', 'N', '2', '3', '4', '5'][c.gi];
+  } else {
+    r.throttle = S._localThr;
+  }
 }
+
 
 /* ==========================================================================
    11. Dyno
@@ -1870,22 +1449,28 @@ function tick(now) {
   S.last_tick_ms = now;
   S._dt = dt;
 
-  if (S.rider.kill) S.rpm = Math.max(0, S.rpm - 1200 * dt);
-  else if (S.rider.throttle > 0.02) {
+  updateRiderTick(dt);            // reads the cockpit: throttle, brakes, clutch, gear
+  const ck = S.ck;
+  const ice = S.mode !== 'elec';
+
+  if (ice && ck && (ck.running || ck.cranking)) {
+    S.rpm = ck.rpm;               // the cockpit's engine model is the source of truth
+  } else if (S.rider.throttle > 0.02) {
     const target = Math.max(S.base_rpm, 900 + S.rider.throttle * 7000);
     S.rpm += (target - S.rpm) * Math.min(1, 2.0 * dt);
   } else {
-    S.rpm += (S.base_rpm - S.rpm) * Math.min(1, 1.0 * dt);
+    S.rpm += (S.base_rpm - S.rpm) * Math.min(1, 1.0 * dt);   // demo idle while the cockpit is off
   }
 
-  if (S.running && !S.rider.kill && S.rpm > 10) {
+  if (S.running && S.rpm > 10) {
     const shaftDegPerSec = (360 * S.rpm / 60) / 60;
     const cycleDeg = S.mode === '2t' ? 360 : 720;
     S.crank_deg = (S.crank_deg + shaftDegPerSec * dt) % cycleDeg;
   }
 
-  if (S.mode === 'elec') {
-    const target = S.rider.kill ? 0 : S.rider.throttle * 10000;
+  // Electric drive (used in Electric mode, and by the motor/controller close-ups)
+  if (!ice) {
+    const target = S.rider.throttle * 10000;
     S.elec.rpm += (target - S.elec.rpm) * Math.min(1, 3.0 * dt);
     const load = S.rider.throttle;
     S.elec.motor_temp += (60 + load * 60 - S.elec.motor_temp) * 0.3 * dt;
@@ -1894,19 +1479,19 @@ function tick(now) {
     S.elec.torque = load * 95;
   }
 
-  // Road speed: driven by throttle unless the clutch is in or the engine is dead
-  const drive = S.rider.throttle > 0.05 && S.rider.clutch < 0.6 && !S.rider.kill;
-  const target = drive
-    ? (S.mode === 'elec' ? kmhFromWheelRPM(S.elec.rpm / 8.5) : kmhFromWheelRPM(wheelRPMFromEngine(S.rpm)))
-    : 0;
-  const accel = target > S.speed ? 0.8 : 0.25 + S.rider.brake * 2.2;
-  S.speed += (target - S.speed) * Math.min(1, accel * dt);
-  S.speed = Math.max(0, S.speed - S.rider.brake * 40 * dt);
+  if (ice && ck) {
+    S.speed = ck.v * 3.6;
+  } else {
+    const drive = S.rider.throttle > 0.05;
+    const target = drive ? (ice ? kmhFromWheelRPM(wheelRPMFromEngine(S.rpm)) : kmhFromWheelRPM(S.elec.rpm / 8.5)) : 0;
+    const accel = target > S.speed ? 0.8 : 0.25 + S.rider.brake * 2.2;
+    S.speed += (target - S.speed) * Math.min(1, accel * dt);
+    S.speed = Math.max(0, S.speed - S.rider.brake * 40 * dt);
+  }
 
   updateOverviewTick(dt);
   const cfg = S.selected_part && (COMPONENT_VIEWS[S.selected_part]);
   if (cfg && cfg.update) cfg.update(dt);
-  updateRiderTick(dt);
 
   if (S.dyno.recording) {
     recordDynoSample(now);
@@ -1918,24 +1503,31 @@ function tick(now) {
 /* ---------- Keyboard ---------- */
 function wireChromeGlobal() {
   document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
     const tag = (e.target && e.target.tagName) || '';
     if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
-    if (e.key === ' ' && !(e.target.closest && e.target.closest('button, [role="button"]'))) { e.preventDefault(); toggleRun(); }
-    else if (e.key === 'Escape') { if ($('#ute-help').classList.contains('is-open')) closeHelp(); else selectPart(null); }
-    else if (e.key === '?' || e.key === '/') { e.preventDefault(); openHelp(); }
+    const lb = $('#mz-lightbox');
+    if (e.key === 'Escape') {
+      if (lb && lb.classList.contains('is-open')) closePlate();
+      else if ($('#ute-help').classList.contains('is-open')) closeHelp();
+      else selectPart(null);
+      return;
+    }
+    if (e.key === '?' || e.key === '/') { e.preventDefault(); openHelp(); return; }
+    if (e.key === ' ') {
+      if (e.target.closest && e.target.closest('button, [role="button"], a, canvas')) return;
+      e.preventDefault(); toggleRun(); return;
+    }
+    if (!e.repeat && ['1', '2', '3'].includes(e.key)) { switchMode(['4t', '2t', 'elec'][+e.key - 1]); return; }
+    if (!e.repeat && (e.key === 'd' || e.key === 'D')) { $(`.ute-view-toggle [data-view="${S.view === '3d' ? 'diagram' : '3d'}"]`).click(); return; }
+    if (forwardKey('keydown', e)) e.preventDefault();
   });
-  // Safety: any pointer release anywhere ends rider holds.
-  window.addEventListener('pointerup', () => { S.rider.throttle_hold = false; S.rider.brake_hold = false; S.rider.clutch_hold = false; });
-  window.addEventListener('blur', () => { S.rider.throttle_hold = false; S.rider.brake_hold = false; S.rider.clutch_hold = false; Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false }); });
+  document.addEventListener('keyup', (e) => { forwardKey('keyup', e); });
+  // Safety: any pointer release anywhere ends local holds.
+  window.addEventListener('pointerup', () => { S.rider.throttle_hold = false; });
+  window.addEventListener('blur', () => { S.rider.throttle_hold = false; Object.assign(S.cv, { carb_hold: false, spark_hold: false, gear_hold: false, brake_hold: false }); });
 }
 
-/* ---------- Assets manifest (renders supplied later) ---------- */
-async function loadManifest() {
-  try {
-    const r = await fetch('assets/models/manifest.json', { cache: 'no-cache' });
-    if (r.ok) S.assets = (await r.json()).renders || {};
-  } catch (e) { /* optional */ }
-}
 
 /* ==========================================================================
    15. Boot
@@ -1944,7 +1536,7 @@ if (document.getElementById('ute-root')) {
   try {
     const q = new URLSearchParams(location.search);
     if (['4t', '2t', 'elec'].includes(q.get('mode'))) S.mode = q.get('mode');
-    if (q.get('view') === '3d') S.view = '3d';
+    if (q.get('view') === 'diagram' || q.get('view') === 'plate') S.view = 'diagram';
     if (q.get('part') && (PARTS[q.get('part')] || COMPONENT_VIEWS[q.get('part')])) S.selected_part = q.get('part');
   } catch (e) { /* noop */ }
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) S.base_rpm = S.rpm = 1200;
@@ -1952,6 +1544,5 @@ if (document.getElementById('ute-root')) {
   render();
   wireChromeGlobal();
   startLoop();
-  loadManifest().then(() => { if (S.selected_part) renderComponentView(); });
-  if (S.selected_part) requestAnimationFrame(() => { applyMotoHighlight(); renderComponentView(); });
+  if (S.selected_part) requestAnimationFrame(() => { applyMotoHighlight(); });
 }

@@ -21,7 +21,9 @@ export default {
         ] },
         { type: "p", html: "Most singles use a <strong>gear primary</strong>: spur teeth are cheap and carry no axial thrust; helical teeth are quieter but push the basket sideways. Large multis often use a chain primary. <strong>Cushion springs</strong> between the primary gear and basket soak up firing pulses; when worn they show as play and a <em>clonk</em> on and off the throttle." },
         { type: "h3", text: "The wet multiplate clutch" },
-        { type: "illus", file: "transmission/F13.svg", caption: "Wet multiplate clutch, exploded: basket, friction and steel plates, hub, pressure plate, springs and release mechanism." },
+        { type: "plate", id: "F13", caption: "Wet multiplate clutch, exploded: basket, friction and steel plates, hub, pressure plate, springs and release mechanism." },
+        { type: "model", file: "clutch", caption: "The assembled wet multiplate clutch: basket with primary driven gear, pressure plate and springs." },
+        { type: "model", file: "clutch_exploded", caption: "The same clutch exploded along its axis: basket, alternating friction and steel plates, hub, pressure plate, springs and bolts." },
         { type: "steps", items: [
           { title: "Clutch basket", html: "Slotted aluminium cup driven by the primary gear, turning freely on the mainshaft." },
           { title: "Friction plates", html: "Lined plates whose <strong>outer tabs</strong> lock into the basket slots: they turn with the engine. Four or five on a 125." },
@@ -75,11 +77,11 @@ export default {
           ["Free", "Turns on a bush or needle bearing", "Carries torque only when dogged to a neighbour"],
           ["Sliding", "Splined: turns with the shaft, slides axially", "Moved by a fork to engage its dogs"],
         ] },
-        { type: "illus", file: "transmission/F14.svg", caption: "Constant-mesh five-speed gearbox: fixed, free and sliding gears, dogs, forks and shift drum." },
+        { type: "plate", id: "F14", caption: "Constant-mesh five-speed gearbox: fixed, free and sliding gears, dogs, forks and shift drum." },
         { type: "h3", text: "Dogs and why gears jump out" },
         { type: "p", html: "Dogs carry the full gear torque on a few square millimetres. Their driving faces are <strong>back-cut by 2–4°</strong> so torque pulls the gears <em>together</em>. Once the edges round off, the force reverses and pushes them apart: rounded dogs are the root cause of almost every case of <strong>jumping out of gear</strong>. Dogs are always replaced in pairs." },
         { type: "h3", text: "From pedal to drum" },
-        { type: "illus", file: "transmission/TR01.svg", caption: "Gear shift mechanism: drum with tracks, forks, shift shaft, ratchet, detent star, stopper arm and neutral switch." },
+        { type: "plate", id: "TR01", caption: "Gear shift mechanism: drum with tracks, forks, shift shaft, ratchet, detent star, stopper arm and neutral switch." },
         { type: "steps", items: [
           { title: "Pedal stroke", html: "The gearshift shaft turns a shift arm whose spring-loaded pawls rotate the drum one step." },
           { title: "Drum tracks move forks", html: "Each fork pin rides a groove; drum rotation slides its gear sideways at the right moment." },
@@ -126,7 +128,9 @@ export default {
           ["525", "15.875 mm", "7.94 mm", "600–1,000 cc road"],
           ["530", "15.875 mm", "9.53 mm", "Large road bikes"],
         ] },
-        { type: "illus", file: "transmission/F15.svg", caption: "Chain final drive: chain section, slack measured at the midpoint of the lower run, and a 20-link wear measurement." },
+        { type: "plate", id: "F15", caption: "Chain final drive: chain section, slack measured at the midpoint of the lower run, and a 20-link wear measurement." },
+        { type: "model", file: "chain_sprockets", caption: "Chain and sprockets: a 15-tooth gearbox sprocket and 42-tooth rear sprocket, a 2.8:1 final drive." },
+        { type: "model", file: "rear_sprocket", caption: "A 42-tooth rear sprocket: check for hooked or thinned teeth whenever the chain is replaced." },
         { type: "keys", items: [
           { l: "Chain", v: "428 × 134 links", p: "K-Light 125, nominal 1,701.8 mm" },
           { l: "Slack", v: "20–40 mm", p: "at the tightest point, lower run" },
@@ -144,9 +148,9 @@ export default {
         { type: "check", q: "m4-09" },
         { type: "h3", text: "Belt and shaft" },
         { type: "p", html: "Toothed belts are quiet, clean and need no lube, and are common on electric bikes, but are wider and cannot be split. A <strong>shaft drive</strong> uses bevel gears in their own oil (typically 80W-90 hypoid) and loses about 2–4 % more power than a clean chain. Its reaction torque lifts the rear on acceleration (<strong>jacking</strong>); BMW’s Paralever and Moto Guzzi’s CARC add a torque arm to cancel it." },
-        { type: "illus", file: "transmission/TR02.svg", caption: "Final drive types: chain and sprockets, toothed belt, and shaft with bevel gears." },
+        { type: "plate", id: "TR02", caption: "Final drive types: chain and sprockets, toothed belt, and shaft with bevel gears." },
         { type: "h3", text: "The scooter CVT" },
-        { type: "illus", file: "transmission/F16.svg", caption: "Scooter CVT at low ratio (pulling away) and high ratio (cruising)." },
+        { type: "plate", id: "F16", caption: "Scooter CVT at low ratio (pulling away) and high ratio (cruising)." },
         { type: "steps", items: [
           { title: "Idle", html: "Drive pulley open (small belt radius), driven pulley closed (large radius): about <strong>2.4–2.8:1</strong>." },
           { title: "Revs rise", html: "Six rollers fly outwards on their ramps and squeeze the variator halves together, so the belt climbs." },
@@ -166,7 +170,8 @@ export default {
       lab: "?mode=4t&part=frame",
       blocks: [
         { type: "h3", text: "Frame types" },
-        { type: "illus", file: "frame_body/FB01.svg", caption: "Motorcycle frame types." },
+        { type: "plate", id: "FB01", caption: "Motorcycle frame types." },
+        { type: "model", file: "frame_cradle", caption: "A classic double-cradle steel frame, the layout of most air-cooled roadsters." },
         { type: "table", head: ["Frame", "Construction", "Where used"], rows: [
           ["Steel tube cradle", "Tubes run under the engine to the pivot; cheap, easy to weld, fatigue tolerant", "Commuters (Honda CG125, K-Light 125)"],
           ["Backbone (spine)", "Single tube or pressed spine with engine hung below", "Step-throughs, small trail bikes"],
@@ -176,7 +181,7 @@ export default {
         ] },
         { type: "p", html: "Aluminium has about <strong>a third of the density and a third of the stiffness</strong> of steel, so beams are bigger with thicker walls and still weigh less. After a crash, measure head to pivot and head to rear axle on both sides: a few millimetres of difference means a twist that makes the bike pull or weave." },
         { type: "h3", text: "Rake, offset and trail" },
-        { type: "illus", file: "chassis/F17.svg", caption: "Steering geometry: rake, trail, offset and wheelbase." },
+        { type: "plate", id: "F17", caption: "Steering geometry: rake, trail, offset and wheelbase." },
         { type: "keys", items: [
           { l: "Rake", v: "25–27°", p: "commuters; sports 23–25°, cruisers 30–34°" },
           { l: "Trail", v: "90–110 mm", p: "commuters; sports 85–100, cruisers 120–150" },
@@ -207,9 +212,11 @@ export default {
       blocks: [
         { type: "h3", text: "Sprung and unsprung mass" },
         { type: "p", html: "<strong>Sprung</strong> mass is everything on the springs (frame, engine, rider, fuel). <strong>Unsprung</strong> mass moves with the wheel (wheel, tyre, brake, fork lowers, about half the swingarm). Less unsprung mass means the tyre follows the road faster and less bump force reaches the chassis." },
+        { type: "model", file: "forks", caption: "Conventional telescopic fork with triple clamps, stanchions and sliders." },
+        { type: "model", file: "forks_usd", caption: "An inverted (USD) fork: the large outer tubes are clamped in the yokes and the slim stanchions carry the axle." },
         { type: "h3", text: "Spring rate and preload" },
         { type: "p", html: "<strong>F = k × x</strong>: rate k is force per millimetre. A fork spring compressed 42 mm by 840 N has k = 20 N/mm. <strong>Preload does not change the rate</strong>; it sets the load at which the suspension starts to move, and so ride height and sag. If correct sag cannot be reached within the adjuster range, the spring rate is wrong." },
-        { type: "illus", file: "chassis/F18.svg", caption: "Telescopic fork, rear shock and sag measurement points." },
+        { type: "plate", id: "F18", caption: "Telescopic fork, rear shock and sag measurement points." },
         { type: "h3", text: "Sag" },
         { type: "table", head: ["Machine", "Front rider sag", "Rear rider sag", "Rear static sag"], rows: [
           ["Road and commuter", "25–35 % of travel", "25–33 % of travel", "5–15 mm"],
@@ -233,6 +240,8 @@ export default {
         ] },
         { type: "p", html: "The K-Light 125 uses a simple <strong>damper-rod fork</strong>. Cartridge forks use shim-stacked pistons; <strong>USD forks</strong> put the big tube in the clamps for stiffness and lower unsprung mass but expose the seals. Fork oil: <strong>46# (ISO VG 46), 285 ± 2 ml per leg</strong>. The air gap acts as a progressive air spring, so a higher oil level resists bottoming more. <strong>Milky oil</strong> means water past the seals." },
         { type: "h3", text: "Rear suspension" },
+        { type: "model", file: "swingarm", caption: "A tapered aluminium box-section swingarm with chain adjusters, pivot and linkage mounts." },
+        { type: "models", files: ["rear_shock", "rear_shock_twin"], caption: "A monoshock with spring, preload collar, damper body and piggyback reservoir, and a classic pair of chrome twin shocks." },
         { type: "p", html: "Twin shocks (as on the K-Light 125) give a nearly linear ratio. A linkage monoshock gives a <strong>rising rate</strong>: soft on small bumps, firm near bottoming. With a motion ratio R, wheel rate ≈ k_shock / R², so a 50 N/mm spring at 2.5:1 gives about <strong>8 N/mm</strong> at the wheel." },
         { type: "callout", tone: "safety", title: "Gas-charged shocks", html: "Many shocks hold nitrogen at 1–2 MPa. Never heat, puncture or dismantle one without first releasing the gas through the Schrader valve or following the maker’s procedure. Never straighten a bent damper rod: replace it." },
         { type: "check", q: "m4-18" },
@@ -246,7 +255,11 @@ export default {
       blocks: [
         { type: "h3", text: "Spoked versus cast" },
         { type: "p", html: "<strong>Spoked</strong> wheels (32–40 spokes in tension) absorb impacts and can be repaired, but need truing and usually a tube. <strong>Cast</strong> wheels are stiff, run tubeless and need no truing, but crack or bend and cannot be repaired. The K-Light 125 has alloy wheels: 1.85 × 17 front, 3.00 × 15 rear." },
-        { type: "illus", file: "wheels/W01.svg", caption: "Wheel types: wire-spoked, motocross with rim lock, and cast alloy." },
+        { type: "plate", id: "W01", caption: "Wheel types: wire-spoked, motocross with rim lock, and cast alloy." },
+        { type: "plate", id: "W02", caption: "Hubs and bearings: exploded front hub with axle, spacers, sealed bearings and seals, and the rear hub with cush drive and sprocket carrier." },
+        { type: "model", file: "rear_wheel_cast", caption: "A cast alloy rear wheel with cush-drive hub and sprocket carrier." },
+        { type: "models", files: ["front_wheel_spoked", "front_wheel_cast", "front_wheel_mx"], caption: "Front wheels: a 19 in wire-spoked roadster wheel, a 17 in cast alloy wheel and a 21 in motocross wheel." },
+        { type: "models", files: ["rear_wheel_spoked", "rear_wheel_mx"], caption: "Rear wheels: an 18 in wire-spoked roadster wheel and a 19 in motocross wheel." },
         { type: "keys", items: [
           { l: "Rim runout", v: "≤ 1.0 mm", p: "standard; 2.0 mm limit, radial and axial" },
           { l: "Axle bend", v: "0.2 mm", p: "limit; never straighten an axle" },
@@ -254,7 +267,7 @@ export default {
         ] },
         { type: "p", html: "<strong>Truing:</strong> tightening a spoke pulls the rim towards the flange it comes from. For a lateral high spot to the left, tighten the spokes to the right flange and loosen those to the left, a quarter to half a turn over several spokes. Wheel bearings are pressed in on the <strong>outer race only</strong>, sealed side out, with the spacer fitted; removed bearings are not reused." },
         { type: "h3", text: "Reading a tyre" },
-        { type: "illus", file: "wheels/F20.svg", caption: "Tyre sidewall markings and tyre section." },
+        { type: "plate", id: "F20", caption: "Tyre sidewall markings and tyre section." },
         { type: "table", head: ["110/70-17 54H", "Meaning"], rows: [
           ["110", "Section width 110 mm"],
           ["70", "Aspect ratio 70 %: sidewall 77 mm"],
@@ -285,7 +298,7 @@ export default {
         { type: "figure", fig: "weight-transfer", caption: "Increase braking deceleration and watch load move onto the front tyre: this is why the front brake does most of the work." },
         { type: "h3", text: "Drum brakes" },
         { type: "p", html: "In a <strong>single leading shoe</strong> drum, only the leading shoe self-servos into the drum. A <strong>twin leading shoe</strong> drum applies both shoes at their leading ends, so both self-servo and forward braking is much stronger. Drums resist water and mud but fade as the hot drum expands away from the shoes." },
-        { type: "illus", file: "chassis/F19.svg", caption: "Hydraulic disc brake and drum brake." },
+        { type: "plate", id: "F19", caption: "Hydraulic disc brake and drum brake." },
         { type: "h3", text: "Hydraulic multiplication" },
         { type: "p", html: "Pressure is equal throughout a confined fluid, so a small master piston drives large caliper pistons with force multiplied by the <strong>area ratio</strong>. The lever multiplies again." },
         { type: "steps", items: [
@@ -298,6 +311,7 @@ export default {
         { type: "figure", fig: "brake-hydraulics", caption: "Change master cylinder and caliper piston sizes and see how clamp force and lever travel trade off." },
         { type: "p", html: "The hydraulic ratio here is about 12, and 48:1 from hand to clamp. The price is travel: a <strong>smaller master cylinder</strong> gives a more powerful but softer lever with more travel." },
         { type: "check", q: "m4-23" },
+        { type: "model", file: "brake", caption: "A floating disc gripped by a four-piston radial caliper, with pads visible in the caliper window." },
         { type: "h3", text: "Calipers, pads and fluid" },
         { type: "p", html: "A <strong>floating</strong> caliper (K-Light 125) has pistons on one side and slides on pins; seized pins cause uneven pad wear. A <strong>fixed</strong> caliper has opposed pistons. Square-section piston seals roll the piston back and make discs self-adjusting. <strong>Organic</strong> pads bite well cold but fade hot; <strong>sintered</strong> pads work wet and hot but wear discs faster." },
         { type: "keys", items: [

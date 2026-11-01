@@ -8,7 +8,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>if(/[?&]embed=1/.test(location.search))document.documentElement.classList.add('embed');</script>
 <style>
+html.embed header.top,html.embed .mz-site{display:none}
+html.embed body{background:transparent}
+html.embed .wrap{padding:0}
+html.embed .layout{padding-bottom:4px}
+.mz-site{display:flex;gap:14px;align-items:center;padding:10px 24px;border-bottom:1px solid var(--line);font:500 12px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.mz-site a{color:var(--ink);text-decoration:none}.mz-site a:hover{color:var(--accent)}
+.mz-site img{width:22px;height:22px;vertical-align:middle;margin-right:6px}
 :root{
   --bg:#F7F6F2; --card:#FFFFFF; --ink:#1E2B5E; --text:#232733; --muted:#5D6270;
   --line:#E2E0D8; --line2:#CFCCC2; --accent:#C8502A; --accent-soft:#F6E3DA;
@@ -92,6 +100,7 @@ h1{font:600 30px/1.15 var(--sans);color:var(--ink);margin:0 0 8px;letter-spacing
 </style>
 </head>
 <body>
+<nav class="mz-site" aria-label="Moto Zero"><a href="../../"><img src="../brand-mark.svg" alt="">Moto Zero</a><a href="../../">Lab</a><a href="../../learn/">Learn</a><a href="../../quiz/">Quiz</a><a href="../../models/">Models</a></nav>
 <header class="top wrap">
   <p class="eyebrow">Moto Zero &middot; Module 01 &middot; Controls</p>
   <h1>Motorcycle controls</h1>
@@ -971,6 +980,10 @@ function frame(t){
 render(true);
 requestAnimationFrame(t=>{ lastT=t; requestAnimationFrame(frame); });
 
+/* embedded in the Lab: hand Esc and ? back to the page */
+if(document.documentElement.classList.contains('embed')){
+  document.addEventListener('keydown',e=>{ if((e.key==='Escape'||e.key==='?')&&window.parent!==window) window.parent.postMessage({mz:'key',key:e.key},'*'); });
+}
 /* test hook */
 window.__moto = { state:()=>S, buildSVG };
 })();
