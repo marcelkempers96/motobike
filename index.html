@@ -24,7 +24,7 @@
     .hm-quick a:hover { background: var(--warm); border-color: var(--warm); color: #FFF; }
     .hm-stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px; font-size: 14px; color: #DDD; }
     .hm-stats b { display: block; font-size: 28px; color: #FFF; line-height: 1.1; }
-    .hm-tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 40px; background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.22); max-width: 1100px; }
+    .hm-tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 40px; background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.22); max-width: 1100px; }
     .hm-tools a { display: block; padding: 14px 16px; background: rgba(17,17,17,.62); color: #FFF; text-decoration: none; transition: background .2s; }
     .hm-tools a:hover { background: var(--warm); }
     .hm-tools b { display: block; font: 700 16px/1.25 var(--sans); }
@@ -39,6 +39,12 @@
     .hm-look div { border: 1px solid var(--line); padding: 18px 18px 20px; }
     .hm-look b { display: block; font: 700 17px/1.3 var(--sans); color: var(--ink); margin-bottom: 6px; }
     .hm-look p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink-soft); }
+    @media (max-width: 720px) {
+      .hm-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 10px; }
+      .hm-facts span:not(.is-key) { display: none; }
+      .hm-facts span.is-key::before { content: none !important; }
+      .hm-facts span.is-key { font-size: 12.5px; line-height: 1.35; }
+    }
     @media (max-width: 900px) { .hm-look { grid-template-columns: 1fr; } .hm-facts { font-size: 13px; } .hm-facts span + span::before { margin-right: 10px; } }
     .hm-section { padding: 64px 0; border-bottom: 1px solid var(--line); }
     .hm-section h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.015em; margin: 6px 0 12px; max-width: 820px; }
@@ -136,15 +142,14 @@
     <section class="hm-hero">
       <video src="assets/video/workshop.mp4" poster="assets/video/workshop-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video>
       <div class="hm-hero-in">
-        <span class="hm-kicker">Open course · free · no login · start with the 15-minute crash course</span>
         <h1>Learn how motorcycles work, and how to work on them.</h1>
         <p class="hm-mission">See every part in 3D, ride it, build it and trace its wiring. A free course for mechanics, students and riders.</p>
         <div class="hm-quick">
           <a class="is-main" href="overview/">Explore the motorcycle in 3D →</a>
           <a href="crash-course/">15-minute crash course</a>
         </div>
-        <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview</b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit</b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder</b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><b>Wiring Lab</b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course</b><span>Five modules from engine to battery</span></a><a href="quiz/"><b>Quiz</b><span>Easy, mixed and hard questions</span></a><a href="types/"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a><a href="engine/"><b>Under the Engine</b><span>Every gear and valve moving, in 3D</span></a></div>
-        <p class="hm-facts"><span>5 modules</span><span>32 chapters</span><span>56 3D models</span><span>38 technical plates</span><span>16 motorcycle types</span><span>148 quiz questions</span></p>
+        <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview</b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit</b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder</b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><b>Wiring Lab</b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course</b><span>Five modules from engine to battery</span></a><a href="engine/"><b>Under the Engine</b><span>Every gear and valve moving, in 3D</span></a></div>
+        <p class="hm-facts"><span class="is-key">32 chapters</span><span class="is-key">56 3D models</span><span class="is-key">38 technical plates</span><span>274 repair guides</span><span>16 motorcycle types</span><span>148 quiz questions</span><span>Thousands of bikes served</span></p>
       </div>
     </section>
 
