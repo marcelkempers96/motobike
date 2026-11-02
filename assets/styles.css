@@ -1132,3 +1132,15 @@ a.ute-btn { text-decoration: none; display: inline-flex; align-items: center; }
 .mz-eng-shot img { display: block; width: 100%; height: auto; }
 .mz-eng-go { position: absolute; right: 12px; bottom: 12px; font: 700 14px/1 var(--sans); padding: 11px 14px; background: var(--ink); color: #FFF; }
 .mz-eng-shot a:hover .mz-eng-go { background: var(--warm); }
+
+/* ---------- Overview: the working animation and its graphs side by side ---------- */
+a.mz-anim-btn { text-decoration: none; display: inline-flex; align-items: center; }
+.mz-cv-work { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; align-items: start; margin-bottom: 20px; }
+.mz-cv-work.is-solo { grid-template-columns: minmax(0, 1fr); }
+.mz-cv-work .mz-anim { max-height: none; overflow: visible; margin: 0; padding: 12px; }
+.mz-cv-work .mz-anim .ute-cview-stage svg.ute-cv-svg { max-height: 360px; }
+.mz-cv-work .mz-anim .ute-cview-side { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 10px 0 0; }
+.mz-cv-work .mz-cv-graphs { margin: 0; border: 1px solid var(--line); padding: 12px; background: #FFFFFF; }
+.mz-cv-work .mz-cv-graphs > :not(.mz-cv-tag) { width: 100%; }
+.mz-cv-work .mz-cv-tag { display: block; margin-bottom: 8px; }
+@media (max-width: 1100px) { .mz-cv-work { grid-template-columns: minmax(0, 1fr); } }

@@ -36,13 +36,12 @@ export const NAV = [
     ['cockpit/', 'Cockpit', 'Ride the bike, start it, run the dyno'],
     ['engine/', 'Under the Engine', '3D engine: gearbox, clutch, starters, valves'],
     ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
-    ['models/', '3D models', 'All 56 models, rotate and inspect'],
     ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
   ] },
-  { key: 'library', title: 'Library', blurb: 'Read: history, types and guides', items: [
+  { key: 'library', title: 'Library', blurb: 'Articles, types and 3D models', items: [
     ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
     ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
-    ['history/', 'History', 'From steam velocipede to battery swapping'],
+    ['models/', '3D models', 'All 56 models, rotate and download'],
   ] },
   { key: 'more', title: 'More', blurb: 'Files, sources and the project', items: [
     ['downloads/', 'Downloads', 'PDF modules, models, plates'],
@@ -76,7 +75,7 @@ export function navHTML() {
             <ul>${g.items.map(([h, t, d]) => `<li><a href="${url(h)}"${isCur(h) ? ' aria-current="page"' : ''}><b>${t}</b><span>${d}</span></a></li>`).join('')}</ul>
           </div>
         </div>`).join('')}
-      <a class="mz-menu-cta" href="${url('progress/')}">My progress</a>
+      ${/\/(overview|cockpit)\/$/.test(location.pathname) ? '' : `<a class="mz-menu-cta" href="${url('progress/')}">My progress</a>`}
     </div>`;
 }
 

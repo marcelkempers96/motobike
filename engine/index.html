@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261102b">
-  <link rel="stylesheet" href="../assets/engine/engine.css?v=4">
+  <link rel="stylesheet" href="../assets/engine/engine.css?v=5">
   <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
 </head>
 <body>
@@ -135,18 +135,36 @@
     <h2>Gearbox ratios</h2>
     <p class="sub">Every gear pair has the same 49-tooth sum at module 2.0, which is what lets all five pairs sit on two shafts 49 mm apart and stay in constant mesh. Road speed assumes a 2.75-18 rear tyre with a rolling circumference of 1.95 m.</p>
     <div class="tbl"><table id="tRatio"></table></div>
+    <details class="ue-why"><summary>What this table means</summary><p><b>Teeth.</b> Each gear pair is a small gear on the mainshaft (driven by the clutch) meshing with a bigger one on the countershaft. <b>Gear ratio</b> = countershaft teeth ÷ mainshaft teeth: 36 ÷ 13 = 2.769, so in 1st the mainshaft turns 2.77 times for each turn of the countershaft. <b>Overall ratio</b> multiplies three steps: primary drive (67 ÷ 18 = 3.722) × gear ratio × final drive (43 ÷ 14 = 3.071). In 1st that is 31.7 engine turns for one turn of the rear wheel, which multiplies torque by the same amount for pulling away. <b>Fixed, splined, free:</b> a fixed gear is part of its shaft; a splined gear turns with the shaft but can slide sideways; a free gear spins on the shaft until a sliding gear's dogs lock it. <b>Locked by</b> names the sliding gear that does that locking.</p></details>
+
   </div>
   <div class="two">
     <div>
       <h2>How the drum selects each gear</h2>
       <p class="sub">Only one dog clutch is ever engaged. Every other gear spins freely on its shaft while staying in mesh.</p>
       <div class="tbl"><table id="tShift"></table></div>
+    <details class="ue-why"><summary>What this table means</summary><p>The shift drum has curved grooves. Each press of the gear pedal turns the drum one step (the star and its spring-loaded stopper hold it there), and the grooves push the three forks sideways. A fork slides one splined gear until its dogs, the square lugs on its side, drop into the holes of the free gear next to it. Only one pair of dogs is engaged at a time, so only one gear pair carries the power. Neutral sits between 1st and 2nd, which is why the pattern is 1-N-2-3-4-5.</p></details>
+
     </div>
     <div>
       <h2>Other gear trains</h2>
       <p class="sub">The trains that feed the crank in and take power out of it.</p>
       <div class="tbl"><table id="tTrains"></table></div>
+    <details class="ue-why"><summary>What this table means</summary><p>The <b>primary drive</b> slows the crank down 3.7 times before the clutch. The <b>cam drive</b> turns the camshaft at half crank speed, because each valve opens once every two turns in a four-stroke. The <b>balancer</b> spins a weight opposite the piston to cancel some vibration. The <b>electric starter</b> needs a big reduction (13.8 : 1) so a small motor can turn the engine over; its one-way roller clutch lets go once the engine runs. The <b>final drive</b> sprockets set how fast the rear wheel turns for a given gearbox speed: try changing them below.</p></details>
+
     </div>
+  </div>
+  <div class="ue-play" id="uePlay">
+    <h2>Try it: change the gearing</h2>
+    <p class="sub">Change the sprockets, the tyre and the engine speed to see the overall ratio and road speed in each gear. A smaller front or bigger rear sprocket gives more pull and less top speed; boda boda riders often fit a bigger rear sprocket for heavy loads and hills.</p>
+    <div class="ue-play-ctl">
+      <label>Front sprocket <input type="range" min="12" max="17" step="1" value="14" data-k="f"><output></output></label>
+      <label>Rear sprocket <input type="range" min="36" max="50" step="1" value="43" data-k="r"><output></output></label>
+      <label>Tyre circumference <input type="range" min="1.80" max="2.10" step="0.01" value="1.95" data-k="c"><output></output></label>
+      <label>Engine speed <input type="range" min="2000" max="10000" step="250" value="8000" data-k="n"><output></output></label>
+    </div>
+    <div class="tbl"><table id="uePlayT"></table></div>
+    <p class="sub" id="uePlayNote"></p>
   </div>
   <div>
     <h2>Data</h2>
@@ -161,6 +179,22 @@
 </div>
 <script type="module" src="../assets/site.js"></script>
 <script type="module" src="../assets/engine/engine.js?v=1"></script>
+<script type="module">/* gearing playground: same tooth counts as the model (engine-spec.json) */
+const G = [[13, 36], [17, 32], [20, 29], [23, 26], [25, 24]], PRI = 67 / 18;
+const box = document.getElementById('uePlay');
+if (box) {
+  const v = (k) => +box.querySelector(`[data-k="${k}"]`).value;
+  const draw = () => {
+    const f = v('f'), r = v('r'), c = v('c'), n = v('n'), fd = r / f;
+    box.querySelectorAll('label').forEach((l) => { const i = l.querySelector('input'); l.querySelector('output').textContent = i.dataset.k === 'c' ? `${(+i.value).toFixed(2)} m` : i.dataset.k === 'n' ? `${(+i.value).toLocaleString('en-GB')} rpm` : `${i.value} T`; });
+    const rows = G.map(([m, k], i) => { const g = k / m, o = PRI * g * fd, kmh = n / o * c * 60 / 1000; const base = n / (PRI * g * (43 / 14)) * 1.95 * 60 / 1000; return `<tr><td>${i + 1}${['st', 'nd', 'rd', 'th', 'th'][i]}</td><td class="num">${g.toFixed(3)}</td><td class="num">${o.toFixed(2)} : 1</td><td class="num">${kmh.toFixed(1)} km/h</td><td class="num">${(kmh - base >= 0 ? '+' : '') + (kmh - base).toFixed(1)} km/h</td></tr>`; }).join('');
+    document.getElementById('uePlayT').innerHTML = `<thead><tr><th>Gear</th><th>Gear ratio</th><th>Overall ratio</th><th>Road speed</th><th>Change vs stock</th></tr></thead><tbody>${rows}</tbody>`;
+    document.getElementById('uePlayNote').textContent = `Final drive ${fd.toFixed(3)} : 1 (stock 14 : 43 = 3.071). Wheel torque in 1st is ${(PRI * (36 / 13) * fd / (PRI * (36 / 13) * (43 / 14)) * 100).toFixed(0)} % of stock. Speeds ignore drag: a 125 runs out of power before the top figures.`;
+  };
+  box.querySelectorAll('input').forEach((i) => i.addEventListener('input', draw));
+  draw();
+}
+</script>
 <script type="module">/* cam-from-hash: /engine/#clutch opens that view */
 const v = location.hash.slice(1);
 const go = () => { const b = document.querySelector(`[data-cam="${v}"]`); if (b) b.click(); };

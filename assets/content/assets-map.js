@@ -114,7 +114,7 @@ export const MODELS = {
 /* Part key → models. A string, a per-mode object, or an array of variants. */
 const PM = {
   engine: { '4t': ['engine_4t'], '2t': ['engine_2t'], elec: ['motor'] },
-  cylinder: { '4t': ['cylinder'], '2t': ['port_ex', 'port_tr'] },
+  cylinder: { '4t': ['cylinder'], '2t': ['engine_2t', 'port_tr'] },
   piston: ['piston'], conrod: ['conrod'], crankshaft: ['crankshaft_single', 'crankshaft'],
   valve_in: ['valve_in', 'valve_ex'], valve_ex: ['valve_ex', 'valve_in'],
   port_ex: ['port_ex', 'port_tr'], port_tr: ['port_tr', 'port_ex'],

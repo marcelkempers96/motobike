@@ -119,3 +119,12 @@ section.data p.sub{margin:0 0 10px;color:var(--muted);max-width:880px}
 .ue{padding-top:8px}
 .ue{min-width:0;width:100%;max-width:1500px;box-sizing:border-box}
 .ue section.data>div,.ue .two>div,.ue .layout>*{min-width:0}.ue .ue-dl{display:flex;flex-wrap:wrap;gap:8px}
+.ue .ue-why{margin-top:8px;border-left:3px solid var(--accent);padding:8px 12px;background:#FAFAFA}
+.ue .ue-why summary{cursor:pointer;font:700 14px/1.3 var(--sans);color:var(--ink)}
+.ue .ue-why p{margin:8px 0 0;font-size:15px;line-height:1.6;max-width:900px}
+.ue .ue-play{border:1.5px solid var(--ink);padding:16px}
+.ue .ue-play-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 24px;margin:6px 0 14px}
+.ue .ue-play-ctl label{display:grid;grid-template-columns:140px minmax(0,1fr) 84px;gap:10px;align-items:center;font:700 14px/1.2 var(--sans);color:var(--ink)}
+.ue .ue-play-ctl input{accent-color:var(--accent);width:100%}
+.ue .ue-play-ctl output{text-align:right}
+@media (max-width:700px){.ue .ue-play-ctl label{grid-template-columns:1fr 84px}.ue .ue-play-ctl label input{grid-column:1/-1;grid-row:2}}

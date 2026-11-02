@@ -418,8 +418,9 @@ function emptyCViewHTML() {
 let CV3 = null;
 const EMBED = /[?&]embed=1/.test(location.search);
 if (EMBED) document.documentElement.classList.add('mz-embed');
-let animOpen = EMBED;
-try { if (!EMBED) animOpen = localStorage.getItem('mz-anim-open') === '1'; } catch (e) { /* noop */ }
+const ENGINE_VIEW = { engine: 'overview', crankshaft: 'overview', piston: 'overview', conrod: 'overview', cylinder: 'top', valve_in: 'top', valve_ex: 'top', clutch: 'clutch', gearbox: 'gearbox', rear_sprocket: 'final', chain: 'final', starter: 'start', charging: 'gen', spark_plug: 'gen' };
+let animOpen = true;
+
 function renderComponentView() {
   const slot = $('#ute-cview-slot');
   const panel = $('#mz-panel');
@@ -442,22 +443,24 @@ function renderComponentView() {
     <div class="mz-panel-head">
       <div><span class="ute-label">${cfg.kind || 'Component'}</span><h2>${cfg.title}</h2></div>
       <div class="mz-panel-actions">
-        ${hasAnim ? `<button type="button" class="mz-anim-btn" data-anim aria-expanded="${animOpen}">${animOpen ? 'Hide animation' : '▶ See animation'}</button>` : ''}
+        ${ENGINE_VIEW[key] ? `<a class="mz-anim-btn" href="engine/#${ENGINE_VIEW[key]}">Under the Engine →</a>` : ''}
         <button class="ute-cview-close" type="button" data-cv-close aria-label="Close the component panel">✕</button>
       </div>
     </div>
-    ${hasAnim ? `<div class="mz-anim" id="mz-anim" ${animOpen ? '' : 'hidden'}>
-      <div class="ute-cview-stage ${cfg.hold ? '' : 'no-action'}" id="ute-cview-stage">${cfg.html()}${cfg.hold ? holdHTML(cfg.hold) : ''}</div>
-      ${cfg.under ? cfg.under() : ''}
-      ${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
-    </div>` : ''}
     <div class="mz-panel-model">${cfg.basic ? '' : ''}${viewer3dHTML(false)}</div>
     ${cfg.basic ? `<p class="mz-panel-lead">${P.desc || ''}</p>` : ''}
   `;
   slot.innerHTML = `
     ${cfg.wide ? `<div class="ute-cview-stage no-action mz-wide-stage" id="ute-cview-stage">${cfg.html()}</div>${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}` : ''}
     <div class="mz-cv-below">
-      ${cfg.graphs ? `<div class="mz-cv-graphs">${cfg.graphs()}</div>` : ''}
+      ${hasAnim ? `<div class="mz-cv-work ${cfg.graphs ? '' : 'is-solo'}">
+        <div class="mz-anim" id="mz-anim"><span class="mz-cv-tag">How it works</span>
+          <div class="ute-cview-stage ${cfg.hold ? '' : 'no-action'}" id="ute-cview-stage">${cfg.html()}${cfg.hold ? holdHTML(cfg.hold) : ''}</div>
+          ${cfg.under ? cfg.under() : ''}
+          ${cfg.sideHTML ? `<div class="ute-cview-side">${cfg.sideHTML()}</div>` : ''}
+        </div>
+        ${cfg.graphs ? `<div class="mz-cv-graphs"><span class="mz-cv-tag">What the numbers do</span>${cfg.graphs()}</div>` : ''}
+      </div>` : (cfg.graphs ? `<div class="mz-cv-graphs">${cfg.graphs()}</div>` : '')}
       <div class="mz-cv-banner">
         <div class="mz-cv-banner-info"><span class="mz-cv-tag">About this part</span><p>${P.desc || ''}</p>${P.notes ? `<p><b>Workshop note.</b> ${P.notes}</p>` : ''}</div>
         <div class="mz-cv-banner-plates"><span class="mz-cv-tag">Related diagrams</span>${platesHTML(key)}</div>
@@ -469,15 +472,7 @@ function renderComponentView() {
   if (cfg.mount) cfg.mount();
   if (cfg.graphsUpdate) cfg.graphsUpdate();
   mountAssetsPanel(key);
-  if (cfg.hold) wireHold($('.ute-hold', panel), cfg.hold.flag);
-  const ab = panel.querySelector('[data-anim]');
-  if (ab) ab.addEventListener('click', () => {
-    animOpen = !animOpen;
-    try { localStorage.setItem('mz-anim-open', animOpen ? '1' : '0'); } catch (e) { /* noop */ }
-    $('#mz-anim').hidden = !animOpen;
-    ab.setAttribute('aria-expanded', String(animOpen));
-    ab.textContent = animOpen ? 'Hide animation' : '▶ See animation';
-  });
+  if (cfg.hold) wireHold($('.ute-hold', slot), cfg.hold.flag);
   panel.querySelector('[data-cv-close]').addEventListener('click', () => selectPart(null));
 }
 
