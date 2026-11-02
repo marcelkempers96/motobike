@@ -1101,6 +1101,10 @@ export default {
           "caption": "Start at 15/41 teeth, then fit a larger rear sprocket: more pull per rpm, less speed per 1000 rpm."
         },
         {
+          "type": "gearing",
+          "caption": "Gears trade engine speed for wheel torque. Change the sprockets and see the speed in each gear. For torque, wheel size and top speed together, open the <a href=\"../build/\">Bike builder</a>."
+        },
+        {
           "type": "h3",
           "text": "Resistance to motion"
         },

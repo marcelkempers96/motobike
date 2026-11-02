@@ -110,6 +110,7 @@ function block(b, mod) {
     }
     case 'animation': return `<figure class="ute-figure mz-learn-anim"><iframe data-src="${ROOT}overview/?embed=1&mode=${b.mode || '4t'}&part=${b.part}" title="Interactive animation: ${b.part}" loading="lazy"></iframe>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption}</figcaption>` : ''}</figure>`;
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
+    case 'gearing': return `<figure class="ute-figure mz-gear" data-gearing><div class="mz-gear-ctl"><label>Front sprocket <input type="range" min="13" max="17" step="1" value="15" data-g="f"><output>15</output></label><label>Rear sprocket <input type="range" min="36" max="52" step="1" value="44" data-g="r"><output>44</output></label></div><svg viewBox="0 0 640 300" role="img" aria-label="Road speed against engine speed in each gear"></svg><p class="mz-gear-out"></p><figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption || 'Change the sprockets and watch the speed in each gear move. The same chart, with torque, top speed and wheel size, is in the <a href="' + ROOT + 'build/">Bike builder</a>.'}</figcaption></figure>`;
     default: void mod; return '';
   }
 }
@@ -118,6 +119,30 @@ function block(b, mod) {
 const FLAT = MODULES.flatMap((m) => [...m.chapters.map((c) => ({ mod: m, chap: c })), { mod: m, chap: null, gloss: true }]);
 const pageHash = (p) => (p.gloss ? `${p.mod.id}-glossary` : p.chap.id);
 const pageTitle = (p) => (p.gloss ? 'Glossary and further reading' : p.chap.title);
+
+/* Gearing chart: road speed against engine speed in each gear, for the course's
+   125 cc roadster (primary 3.35, five gears, 1.95 m rolling circumference, 10,000 r/min). */
+function mountGearing(fig) {
+  const G = [2.77, 1.88, 1.40, 1.13, 0.96], PRI = 3.35, CIRC = 1.95, RED = 10000;
+  const svg = fig.querySelector('svg'), out = fig.querySelector('.mz-gear-out');
+  const W = 640, H = 300, L = 46, B = 34, T = 12, R = 14;
+  const draw = () => {
+    const f = +fig.querySelector('[data-g="f"]').value, r = +fig.querySelector('[data-g="r"]').value;
+    fig.querySelectorAll('label output').forEach((o) => { o.textContent = o.previousElementSibling.value; });
+    const fd = r / f, sp = (g, n) => n / (PRI * g * fd) * CIRC * 60 / 1000;
+    const vmax = 160, x = (n) => L + n / RED * (W - L - R), y = (v) => H - B - v / vmax * (H - B - T);
+    let h = '';
+    for (let v = 0; v <= vmax; v += 40) h += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="#ECECEC"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="#5F6166">${v}</text>`;
+    for (let n = 0; n <= RED; n += 2000) h += `<text x="${x(n)}" y="${H - B + 16}" text-anchor="middle" font-size="11" fill="#5F6166">${n / 1000}k</text>`;
+    h += `<text x="${(L + W) / 2}" y="${H - 4}" text-anchor="middle" font-size="11" fill="#5F6166">engine speed, r/min</text><text x="${L + 8}" y="${T + 14}" font-size="11" fill="#5F6166">road speed, km/h</text>`;
+    G.forEach((g, i) => { const v = sp(g, RED); h += `<line x1="${x(0)}" y1="${y(0)}" x2="${x(RED)}" y2="${y(Math.min(v, vmax))}" stroke="${i === 4 ? '#C2502A' : '#0A0A0A'}" stroke-width="${i === 4 ? 3 : 1.6}"/><text x="${x(RED) - 4}" y="${y(Math.min(v, vmax)) - 5}" text-anchor="end" font-size="12" font-weight="700" fill="${i === 4 ? '#C2502A' : '#0A0A0A'}">${i + 1}</text>`; });
+    svg.innerHTML = h;
+    const top = sp(G[4], RED), first = PRI * G[0] * fd;
+    out.innerHTML = `Final drive <b>${fd.toFixed(2)} : 1</b> · overall in 1st <b>${first.toFixed(1)} : 1</b> · top gear at 10,000 r/min <b>${top.toFixed(0)} km/h</b> (drag usually stops a 125 well before this)`;
+  };
+  fig.querySelectorAll('input').forEach((i) => i.addEventListener('input', draw));
+  draw();
+}
 
 function wireContent() {
   main.querySelectorAll('[data-fig]').forEach((f) => mountFigure(f.dataset.fig, f));
@@ -128,6 +153,7 @@ function wireContent() {
   });
   setupModels();
   setupAnims();
+  main.querySelectorAll('[data-gearing]').forEach(mountGearing);
   main.querySelectorAll('.mz-gloss-filter').forEach((inp) => inp.addEventListener('input', () => {
     const q = inp.value.trim().toLowerCase();
     inp.nextElementSibling.querySelectorAll('div').forEach((d) => { d.hidden = q && !d.textContent.toLowerCase().includes(q); });

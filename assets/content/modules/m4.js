@@ -597,6 +597,9 @@ export default {
           "q": "m4-09"
         },
         {
+          "type": "gearing"
+        },
+        {
           "type": "h3",
           "text": "Belt and shaft"
         },

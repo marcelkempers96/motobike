@@ -1117,3 +1117,12 @@ a.ute-btn { text-decoration: none; display: inline-flex; align-items: center; }
 @media (max-width: 1000px) { .mz-foot { grid-template-columns: 1fr 1fr; } .mz-foot-about { grid-column: 1 / -1; } }
 @media (max-width: 760px) { .mz-footer .mz-sub { grid-template-columns: 1fr; padding: 22px 18px; margin-bottom: 28px; } .mz-sub .mz-sub-msg { grid-column: 1; } }
 @media (max-width: 540px) { .mz-foot { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Learn: gearing chart ---------- */
+.mz-gear { padding: 14px 16px; }
+.mz-gear-ctl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin-bottom: 8px; }
+.mz-gear-ctl label { display: grid; grid-template-columns: 120px minmax(0, 1fr) 30px; gap: 10px; align-items: center; font: 700 14px/1.2 var(--sans); }
+.mz-gear-ctl input { accent-color: var(--warm); width: 100%; }
+.mz-gear svg { width: 100%; height: auto; display: block; }
+.mz-gear-out { font-size: 15px; margin: 6px 0 4px; }
+@media (max-width: 700px) { .mz-gear-ctl { grid-template-columns: 1fr; } }
