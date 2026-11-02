@@ -119,10 +119,6 @@ ${PAGE === 'overview' ? `
       <div class="ute-section-head">
         <div>
           <h2 id="ov-h">${info.name}</h2>
-          <p class="ute-sub">${info.blurb}</p>
-        </div>
-        <div class="ute-head-tools">
-          <span class="ute-legend"><i></i>animation and graphs <i class="is-eng"></i>also in Under the Engine</span>
         </div>
       </div>
       <div class="ute-chips" role="group" aria-label="System categories">
@@ -368,7 +364,7 @@ function renderPartIndex() {
   const box = $('#ute-part-index');
   if (!box) return;
   box.innerHTML = `<span class="ute-label">Parts on this bike</span>` + overviewParts().map((k) =>
-    `<button type="button" class="mz-part ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''} ${ENGINE_VIEW[k] && S.mode !== 'elec' ? 'is-eng' : ''}" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}" title="${INTERACTIVE_PARTS.has(k) ? 'Working animation with graphs' : ''}${ENGINE_VIEW[k] && S.mode !== 'elec' ? (INTERACTIVE_PARTS.has(k) ? '; ' : '') + 'also in Under the Engine' : ''}">${partName(k)}</button>`).join('');
+    `<button type="button" class="mz-part ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''}" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}" title="${INTERACTIVE_PARTS.has(k) ? 'Working animation with graphs' : ''}${ENGINE_VIEW[k] && S.mode !== 'elec' ? (INTERACTIVE_PARTS.has(k) ? '; ' : '') + 'also in Under the Engine' : ''}">${partName(k)}</button>`).join('');
   box.querySelectorAll('[data-part]').forEach((b) => b.addEventListener('click', () => selectPart(b.dataset.part)));
   applyMotoHighlight();
   applyMotoCategory();
