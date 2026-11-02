@@ -1,0 +1,70 @@
+# Wheels and tyres
+
+Problems, repairs and parts for the wheels and tyres.
+
+## Problems
+
+- [Tyre slowly loses air](/moto-zero/repair/problems/slow-puncture)
+- [Flat tyre on a wheel with an inner tube](/moto-zero/repair/problems/puncture-tube)
+- [Flat tyre on a tubeless wheel](/moto-zero/repair/problems/puncture-tubeless)
+- [Air leaking from the tyre valve](/moto-zero/repair/problems/valve-leak)
+- [Air leaking where the tyre meets the rim](/moto-zero/repair/problems/bead-leak)
+- [Tyre worn flat in the centre](/moto-zero/repair/problems/tyre-centre-wear)
+- [Tyre worn into a scalloped or cupped pattern](/moto-zero/repair/problems/tyre-cupping)
+- [Tyre is cracked or old](/moto-zero/repair/problems/tyre-cracked)
+- [Tyre has a bulge or cut](/moto-zero/repair/problems/tyre-bulge)
+- [Wheel is buckled or wobbles](/moto-zero/repair/problems/wheel-buckled)
+- [Spokes are loose or broken](/moto-zero/repair/problems/loose-spokes)
+- [Wheel moves sideways on the axle](/moto-zero/repair/problems/wheel-bearing-play)
+- [Rumbling or grinding from a wheel](/moto-zero/repair/problems/wheel-bearing-noise)
+- [Vibration at certain speeds](/moto-zero/repair/problems/speed-vibration)
+- [Rim is dented or cracked](/moto-zero/repair/problems/rim-damage)
+
+## Repairs in this system
+
+- [Check tyre pressure](/moto-zero/repair/repairs/tyre-pressure-check)
+- [Check and replace a tyre valve](/moto-zero/repair/repairs/valve-check)
+- [Inspect tyres for wear and damage](/moto-zero/repair/repairs/tyre-inspect)
+- [Plug a tubeless tyre puncture](/moto-zero/repair/repairs/tubeless-plug)
+- [Repair a puncture in an inner tube](/moto-zero/repair/repairs/tube-puncture-repair)
+- [Replace a tyre](/moto-zero/repair/repairs/tyre-replace)
+- [Check a wheel for runout](/moto-zero/repair/repairs/wheel-runout-check)
+- [Remove and refit the front wheel](/moto-zero/repair/repairs/wheel-remove-front)
+- [Remove and refit the rear wheel](/moto-zero/repair/repairs/wheel-remove-rear)
+- [Check and tighten spokes](/moto-zero/repair/repairs/spoke-tension)
+- [Check wheel bearings](/moto-zero/repair/repairs/wheel-bearing-check)
+- [Balance a wheel](/moto-zero/repair/repairs/wheel-balance)
+- [Inspect the front forks](/moto-zero/repair/repairs/fork-inspect)
+- [Check the rear shock absorbers](/moto-zero/repair/repairs/rear-shock-check)
+- [Check the steering head bearings](/moto-zero/repair/repairs/steering-bearing-check)
+- [Replace wheel bearings](/moto-zero/repair/repairs/wheel-bearing-replace)
+- [Check the swingarm pivot](/moto-zero/repair/repairs/swingarm-check)
+- [Check hub motor bearings and play](/moto-zero/repair/repairs/ev-hub-motor-check)
+- [Check for brake drag](/moto-zero/repair/repairs/brake-drag-check)
+- [Check and adjust chain slack](/moto-zero/repair/repairs/chain-adjust)
+- [Replace the speedometer cable](/moto-zero/repair/repairs/speedo-cable-replace)
+- [Check the cush drive rubbers](/moto-zero/repair/repairs/cush-drive-check)
+- [Check chassis fasteners](/moto-zero/repair/repairs/fastener-check)
+
+## Parts in this system
+
+- [Tyre valve](/moto-zero/repair/parts/tyre_valve) · [Find this part](/spare-parts/tyre-valve)
+- [Front tyre](/moto-zero/repair/parts/front_tyre) · [Find this part](/spare-parts/front-tyre)
+- [Rear tyre](/moto-zero/repair/parts/rear_tyre) · [Find this part](/spare-parts/rear-tyre)
+- [Inner tube](/moto-zero/repair/parts/inner_tube) · [Find this part](/spare-parts/inner-tube)
+- [Front wheel](/moto-zero/repair/parts/front_wheel) · [Find this part](/spare-parts/front-wheel)
+- [Rear wheel](/moto-zero/repair/parts/rear_wheel) · [Find this part](/spare-parts/rear-wheel)
+- [Spokes and nipples](/moto-zero/repair/parts/spokes) · [Find this part](/spare-parts/spokes)
+- [Front forks](/moto-zero/repair/parts/forks) · [Find this part](/spare-parts/forks)
+- [Rear shock absorbers](/moto-zero/repair/parts/rear_shock) · [Find this part](/spare-parts/rear-shock)
+- [Wheel bearings](/moto-zero/repair/parts/wheel_bearing) · [Find this part](/spare-parts/wheel-bearing)
+- [Steering head bearings](/moto-zero/repair/parts/steering_bearings) · [Find this part](/spare-parts/steering-bearings)
+- [Wheel axle and spacers](/moto-zero/repair/parts/axle) · [Find this part](/spare-parts/axle)
+- [Swingarm and bushes](/moto-zero/repair/parts/swingarm) · [Find this part](/spare-parts/swingarm)
+- [Speedometer cable](/moto-zero/repair/parts/speedo_cable) · [Find this part](/spare-parts/speedo-cable)
+- [Brake pads](/moto-zero/repair/parts/brake_pads) · [Find this part](/spare-parts/brake-pads)
+- [Drive chain](/moto-zero/repair/parts/chain) · [Find this part](/spare-parts/chain)
+- [Cush drive rubbers](/moto-zero/repair/parts/cush_drive) · [Find this part](/spare-parts/cush-drive)
+- [Rear sprocket](/moto-zero/repair/parts/rear_sprocket) · [Find this part](/spare-parts/rear-sprocket)
+- [Engine mounting bolts](/moto-zero/repair/parts/engine_mounts) · [Find this part](/spare-parts/engine-mounts)
+

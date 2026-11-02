@@ -1,45 +1,58 @@
----
-id: wiring
-name: Wiring harness and connectors
-category: electrical
-aliases: [loom, harness, wiring loom, connectors, plugs]
-applies_to: [all]
-sources:
-  - {doc: "K-Light 125 manual", page: 9}
-  - {doc: "K-Light 125 manual", page: 278}
-  - {doc: "MAVCC Motorcycle Mechanic", page: 291}
-  - {doc: "MAVCC Motorcycle Mechanic", page: 318}
----
+# Wiring, fuses and switches
 
-# Wiring harness and connectors
+Problems, repairs and parts for the wiring, fuses and switches.
 
-The wiring harness (loom) is the bundle of coloured wires that runs along the frame and links every electrical part. Plastic connectors join it to each part and to the handlebar switches. Wires follow a colour code shown on the bike's wiring diagram.
+## Problems
 
-## What it does
-The harness carries power from the battery and generator to every load, and signals between switches, sensors and the ECU or CDI. Most electrical faults are here, not in the parts: connectors corrode, pins push back, wires break where the loom bends at the steering head, and insulation chafes through on the frame. Water and pressure washing make it worse.
+- [Fuse keeps blowing](/moto-zero/repair/problems/fuse-keeps-blowing)
+- [Nothing happens when the key is turned on](/moto-zero/repair/problems/no-power-key-on)
+- [Electrical faults come and go](/moto-zero/repair/problems/intermittent-electrical)
+- [Burning smell from the wiring](/moto-zero/repair/problems/burning-smell-wiring)
+- [Handlebar switch does not work properly](/moto-zero/repair/problems/switch-fault)
+- [Ignition switch is stiff or cuts power](/moto-zero/repair/problems/ignition-switch-fault)
+- [Electrical faults after rain or washing](/moto-zero/repair/problems/wet-connectors)
+- [Problems after fitting accessories or an alarm](/moto-zero/repair/problems/accessory-wiring-fault)
 
-## Signs it is worn or failing
-- [Electrical faults come and go](/moto-zero/repair/problems/intermittent-electrical) or [after rain or washing](/moto-zero/repair/problems/wet-connectors).
-- [Burning smell from the wiring](/moto-zero/repair/problems/burning-smell-wiring): stop and disconnect the battery.
-- [Fuse keeps blowing](/moto-zero/repair/problems/fuse-keeps-blowing).
-- [Cuts out on bumps](/moto-zero/repair/problems/cuts-out-bumps).
-- [Problems after fitting accessories or an alarm](/moto-zero/repair/problems/accessory-wiring-fault).
+## Repairs in this system
 
-## When to replace it
-Repair a single damaged wire with a soldered or crimped joint sealed in heat-shrink. Replace the whole harness only if many wires are burnt, or after a fire. Replace a melted or corroded connector with a new one of the same type.
+- [Check fuses and relays](/moto-zero/repair/repairs/fuse-relay-check)
+- [Find a short circuit](/moto-zero/repair/repairs/short-circuit-find)
+- [Wire an accessory safely](/moto-zero/repair/repairs/accessory-wiring)
+- [Find a wiring fault](/moto-zero/repair/repairs/wiring-fault-find)
+- [Test the regulator rectifier](/moto-zero/repair/repairs/regulator-test)
+- [Clean and seal electrical connectors](/moto-zero/repair/repairs/connector-clean)
+- [Test and charge a 12 V battery](/moto-zero/repair/repairs/battery-test-charge)
+- [Clean and tighten battery terminals](/moto-zero/repair/repairs/battery-terminal-clean)
+- [Test the ignition switch](/moto-zero/repair/repairs/ignition-switch-test)
+- [Clean and tighten earth connections](/moto-zero/repair/repairs/earth-clean)
+- [Do a voltage drop test](/moto-zero/repair/repairs/voltage-drop-test)
+- [Clean a handlebar switch](/moto-zero/repair/repairs/switch-clean)
+- [Test the engine stop switch](/moto-zero/repair/repairs/kill-switch-test)
+- [Test a lighting circuit](/moto-zero/repair/repairs/lighting-circuit-test)
+- [Remove, check, gap and fit a spark plug](/moto-zero/repair/repairs/spark-plug-service)
+- [Find what is draining the battery](/moto-zero/repair/repairs/parasitic-drain-test)
+- [Fit LED indicators correctly](/moto-zero/repair/repairs/led-indicator-fit)
+- [Test the charging system](/moto-zero/repair/repairs/charging-system-test)
 
-## What to match when buying
-- Harnesses: match make, model, year and options (injection or carburettor, alarm, indicators).
-- Wire: match or exceed the old wire thickness, and use automotive stranded wire, not solid house wire.
-- Connectors: match pin count, pin size and the locking tab. Waterproof plugs need their rubber seals.
+## Parts in this system
 
-## Fitting notes
-- Home jobs: [Find a wiring fault](/moto-zero/repair/repairs/wiring-fault-find), [Clean and seal electrical connectors](/moto-zero/repair/repairs/connector-clean), [Do a voltage drop test](/moto-zero/repair/repairs/voltage-drop-test).
-- Disconnect the battery negative before cutting or soldering any wire.
-- Route the loom as it was, with clips, slack at the steering head and no contact with hot or sharp parts, as the K-Light routing rules require.
+- [Fuses](/moto-zero/repair/parts/fuse) · [Find this part](/spare-parts/fuse)
+- [Wiring harness and connectors](/moto-zero/repair/parts/wiring) · [Find this part](/spare-parts/wiring)
+- [Regulator rectifier](/moto-zero/repair/parts/regulator) · [Find this part](/spare-parts/regulator)
+- [Tail and brake light](/moto-zero/repair/parts/tail_light) · [Find this part](/spare-parts/tail-light)
+- [Brake light switches](/moto-zero/repair/parts/brake_light_switch) · [Find this part](/spare-parts/brake-light-switch)
+- [Horn](/moto-zero/repair/parts/horn) · [Find this part](/spare-parts/horn)
+- [Starter relay](/moto-zero/repair/parts/starter_relay) · [Find this part](/spare-parts/starter-relay)
+- [12 V battery](/moto-zero/repair/parts/battery) · [Find this part](/spare-parts/battery)
+- [Ignition switch](/moto-zero/repair/parts/ignition_switch) · [Find this part](/spare-parts/ignition-switch)
+- [Earth (ground) connections](/moto-zero/repair/parts/earth_strap) · [Find this part](/spare-parts/earth-strap)
+- [Handlebar switches](/moto-zero/repair/parts/handlebar_switches) · [Find this part](/spare-parts/handlebar-switches)
+- [Stator and flywheel](/moto-zero/repair/parts/stator) · [Find this part](/spare-parts/stator)
+- [Headlight and bulb](/moto-zero/repair/parts/headlight) · [Find this part](/spare-parts/headlight)
+- [Side stand, clutch and neutral switches](/moto-zero/repair/parts/interlock_switches) · [Find this part](/spare-parts/interlock-switches)
+- [Ignition coil and plug cap](/moto-zero/repair/parts/ignition_coil) · [Find this part](/spare-parts/ignition-coil)
+- [Spark plug](/moto-zero/repair/parts/spark_plug) · [Find this part](/spare-parts/spark-plug)
+- [ECU](/moto-zero/repair/parts/ecu) · [Find this part](/spare-parts/ecu)
+- [Indicators](/moto-zero/repair/parts/indicators) · [Find this part](/spare-parts/indicators)
+- [Indicator flasher relay](/moto-zero/repair/parts/flasher) · [Find this part](/spare-parts/flasher)
 
-## Reference (K-Light 125)
-
-| Item | Value | PDF page |
-|---|---|---|
-| Colour code | B black, BL blue, LBL light blue, N brown, G green, O orange, Y yellow, R red, LR pink, W white, P purple, Gr grey, DG dark green | 278 |

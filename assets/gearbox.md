@@ -1,45 +1,64 @@
----
-id: gearbox
-name: Gearbox
-category: transmission
-aliases: [transmission, gear cluster]
-applies_to: [four-stroke, two-stroke, semi-auto]
-sources:
-  - {doc: "K-Light 125 manual", page: 19}
-  - {doc: "K-Light 125 manual", page: 229}
-  - {doc: "K-Light 125 manual", page: 230}
-  - {doc: "Unit 2 The Motorcycle", page: 23}
----
+# Gearbox and gear change
 
-# Gearbox
+Problems, repairs and parts for the gearbox and gear change.
 
-The gearbox sits inside the crankcase, behind the clutch. On most motorcycles it shares the engine oil. It has two shafts (the main shaft from the clutch and the countershaft that drives the front sprocket), pairs of gears, shift forks and a shift drum.
+## Problems
 
-## What it does
-All gears are always in mesh. Some gears turn freely on their shaft until a sliding gear moves sideways and locks to them with small teeth called dogs. The shift forks, guided by grooves in the shift drum, move these sliding gears when you press the gear lever. Low gears give more pulling force; high gears give more speed. Wear comes from rounded dogs, bent forks, worn drum grooves and low or old oil.
+- [Gears are hard to select](/moto-zero/repair/problems/hard-gear-change)
+- [Finds false neutrals between gears](/moto-zero/repair/problems/false-neutral)
+- [Jumps out of gear under load](/moto-zero/repair/problems/jumps-out-of-gear)
+- [Gear lever does not spring back](/moto-zero/repair/problems/gear-lever-no-return)
+- [Gear lever is loose, bent or slipping on its shaft](/moto-zero/repair/problems/gear-lever-loose)
+- [Whining noise in one or more gears](/moto-zero/repair/problems/gearbox-whine)
+- [Neutral light does not work or stays on in gear](/moto-zero/repair/problems/neutral-light-fault)
+- [Loud clunk when selecting first gear](/moto-zero/repair/problems/clunk-into-first)
+- [Stuck in one gear](/moto-zero/repair/problems/stuck-in-gear)
 
-## Signs it is worn or failing
-- Gears hard to select: [Hard gear change](/moto-zero/repair/problems/hard-gear-change).
-- Neutral between gears: [False neutrals](/moto-zero/repair/problems/false-neutral).
-- Pops out under load: [Jumps out of gear](/moto-zero/repair/problems/jumps-out-of-gear). Stop using that gear hard; it damages the dogs more.
-- Whine in some gears: [Gearbox whine](/moto-zero/repair/problems/gearbox-whine).
-- Locked in one gear: [Stuck in gear](/moto-zero/repair/problems/stuck-in-gear).
+## Repairs in this system
 
-## When to replace it
-People rarely buy a whole gearbox. Rule out the clutch, the lever and the external shift linkage first. Internal parts are replaced only after the workshop opens the crankcase and measures them.
+- [Adjust clutch lever free play](/moto-zero/repair/repairs/clutch-cable-adjust)
+- [Check the gear lever and shift linkage](/moto-zero/repair/repairs/gearshift-check)
+- [Service footpegs and foot pedals](/moto-zero/repair/repairs/pedal-peg-service)
+- [Check the engine oil level](/moto-zero/repair/repairs/oil-level-check)
+- [Change the engine oil and clean the strainer](/moto-zero/repair/repairs/engine-oil-service)
+- [Inspect and replace clutch plates and springs](/moto-zero/repair/repairs/clutch-plate-service)
+- [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment)
+- [Refit or replace the gear lever](/moto-zero/repair/repairs/gear-lever-replace)
+- [Trace an oil leak](/moto-zero/repair/repairs/oil-leak-trace)
+- [Road test to diagnose a fault](/moto-zero/repair/repairs/road-test)
+- [Inspect drained oil for clues](/moto-zero/repair/repairs/oil-inspect)
+- [Check and adjust chain slack](/moto-zero/repair/repairs/chain-adjust)
+- [Clean and lubricate the chain](/moto-zero/repair/repairs/chain-clean-lube)
+- [Check wheel bearings](/moto-zero/repair/repairs/wheel-bearing-check)
+- [Test the neutral switch](/moto-zero/repair/repairs/neutral-switch-test)
+- [Check power to the instruments](/moto-zero/repair/repairs/dash-power-check)
+- [Replace a bulb](/moto-zero/repair/repairs/bulb-replace)
+- [Clean and seal electrical connectors](/moto-zero/repair/repairs/connector-clean)
+- [Find a wiring fault](/moto-zero/repair/repairs/wiring-fault-find)
+- [Test the side stand, clutch and neutral switches](/moto-zero/repair/repairs/interlock-switch-test)
+- [Bleed a hydraulic clutch](/moto-zero/repair/repairs/clutch-bleed)
+- [Check the cush drive rubbers](/moto-zero/repair/repairs/cush-drive-check)
+- [Check engine mounting bolts](/moto-zero/repair/repairs/engine-mount-check)
+- [Replace the clutch cable](/moto-zero/repair/repairs/clutch-cable-replace)
 
-## What to match when buying
-- What people usually buy: a [Gear lever](/moto-zero/repair/parts/gear_lever), parts of the [Gear shift mechanism](/moto-zero/repair/parts/shift_mechanism), crankcase [gaskets](/moto-zero/repair/parts/gaskets), [oil seals](/moto-zero/repair/parts/oil_seals) and bearings, or a single gear pair with its partner.
-- Match engine code, gearbox type (4 or 5 speed) and the part number stamped on the old part.
-- Replace a damaged gear together with the gear it meshes with.
+## Parts in this system
 
-## Fitting notes
-- Opening the gearbox means splitting the crankcase: workshop job. See [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment).
-- Check the outside first: [Check the gear lever and shift linkage](/moto-zero/repair/repairs/gearshift-check).
+- [Clutch cable](/moto-zero/repair/parts/clutch_cable) · [Find this part](/spare-parts/clutch-cable)
+- [Gear lever](/moto-zero/repair/parts/gear_lever) · [Find this part](/spare-parts/gear-lever)
+- [Gear shift mechanism](/moto-zero/repair/parts/shift_mechanism) · [Find this part](/spare-parts/shift-mechanism)
+- [Engine oil](/moto-zero/repair/parts/engine_oil) · [Find this part](/spare-parts/engine-oil)
+- [Clutch plates and springs](/moto-zero/repair/parts/clutch_plates) · [Find this part](/spare-parts/clutch-plates)
+- [Gearbox](/moto-zero/repair/parts/gearbox) · [Find this part](/spare-parts/gearbox)
+- [Footpegs and foot pedals](/moto-zero/repair/parts/footpegs) · [Find this part](/spare-parts/footpegs)
+- [Engine oil seals](/moto-zero/repair/parts/oil_seals) · [Find this part](/spare-parts/oil-seals)
+- [Drive chain](/moto-zero/repair/parts/chain) · [Find this part](/spare-parts/chain)
+- [Wheel bearings](/moto-zero/repair/parts/wheel_bearing) · [Find this part](/spare-parts/wheel-bearing)
+- [Front sprocket](/moto-zero/repair/parts/front_sprocket) · [Find this part](/spare-parts/front-sprocket)
+- [Side stand, clutch and neutral switches](/moto-zero/repair/parts/interlock_switches) · [Find this part](/spare-parts/interlock-switches)
+- [Wiring harness and connectors](/moto-zero/repair/parts/wiring) · [Find this part](/spare-parts/wiring)
+- [Instruments](/moto-zero/repair/parts/instruments) · [Find this part](/spare-parts/instruments)
+- [Fuses](/moto-zero/repair/parts/fuse) · [Find this part](/spare-parts/fuse)
+- [Cush drive rubbers](/moto-zero/repair/parts/cush_drive) · [Find this part](/spare-parts/cush-drive)
+- [Engine mounting bolts](/moto-zero/repair/parts/engine_mounts) · [Find this part](/spare-parts/engine-mounts)
+- [Clutch assembly](/moto-zero/repair/parts/clutch) · [Find this part](/spare-parts/clutch)
 
-## Reference (K-Light 125)
-| Item | Standard | Limit | PDF page |
-|---|---|---|---|
-| Gearbox | Five-speed, two shift forks | | 19, 229 |
-| Shift fork claw thickness | 4.93 to 5.0 mm | 4.7 mm | 230 |
-| Shift drum groove width | 7.05 to 7.15 mm | 7.3 mm | 230 |
