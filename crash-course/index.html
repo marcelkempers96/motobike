@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Zero · Crash course: the motorcycle in 15 minutes</title>
+  <meta name="description" content="A free 15-minute crash course on how a motorcycle works: every part and how they fit together, how the engine, ignition, clutch, chain, brakes and electric drive work, and the basics of finding and fixing faults.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/crash-course/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../assets/crash.css?v=1">
+</head>
+<body>
+<div class="ute-page cc">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <div class="cc-progress" aria-hidden="true"><i id="cc-bar"></i></div>
+
+  <section class="cc-hero">
+    <div class="cc-hero-in">
+      <span class="ute-label">Crash course · 15 minutes · free</span>
+      <h1>The motorcycle in 15 minutes</h1>
+      <p class="cc-lead">Three short parts. By the end you will know every part of a motorcycle, how the main ones work, and how a mechanic finds a fault.</p>
+      <ol class="cc-parts" id="cc-parts">
+        <li><a href="#part-1"><b>1</b><span><strong>The whole bike</strong>Every part and how it fits</span><em>5 min</em></a></li>
+        <li><a href="#part-2"><b>2</b><span><strong>How the key parts work</strong>Engine, spark, clutch, chain, brakes, electric</span><em>5 min</em></a></li>
+        <li><a href="#part-3"><b>3</b><span><strong>Repair fundamentals</strong>Safety, checks, finding faults</span><em>5 min</em></a></li>
+      </ol>
+    </div>
+    <figure class="cc-hero-img"><img src="../assets/photos/home-ov-elec-3q.webp" alt="A classic motorcycle with a see-through shell; the electrical parts are highlighted inside"></figure>
+  </section>
+
+  <!-- ============================== PART 1 ============================== -->
+  <article class="cc-part" id="part-1" data-part="1">
+    <header class="cc-part-head"><span>Part 1 of 3 · 5 minutes</span><h2>The whole bike</h2></header>
+
+    <p class="cc-big">A motorcycle turns stored energy into a push at the rear tyre, then lets the rider steer, stop and control it. Everything on it belongs to one of six systems.</p>
+
+    <figure class="cc-fig"><img src="../assets/illustrations/overview/F01.png" alt="Plate F01: a four-stroke road motorcycle with its principal parts labelled" loading="lazy"><figcaption>A four-stroke road motorcycle and its main parts. <a href="../overview/">Turn it round in 3D →</a></figcaption></figure>
+
+    <div class="cc-systems" id="cc-systems">
+      <button type="button" data-s="power" aria-pressed="true"><b>1</b>Power unit</button>
+      <button type="button" data-s="fuel" aria-pressed="false"><b>2</b>Fuel and air</button>
+      <button type="button" data-s="elec" aria-pressed="false"><b>3</b>Ignition and electrics</button>
+      <button type="button" data-s="trans" aria-pressed="false"><b>4</b>Transmission</button>
+      <button type="button" data-s="chassis" aria-pressed="false"><b>5</b>Chassis</button>
+      <button type="button" data-s="controls" aria-pressed="false"><b>6</b>Controls</button>
+    </div>
+    <div class="cc-sys-panel" id="cc-sys-panel" aria-live="polite"></div>
+
+    <h3>Follow the energy</h3>
+    <p>The easiest way to understand how the parts fit is to follow the energy from the tank to the road.</p>
+    <ol class="cc-flow">
+      <li><img src="../assets/renders/fuel_tank.webp" alt="" loading="lazy"><b>Tank</b><span>Petrol stores about 43 MJ per kg.</span></li>
+      <li><img src="../assets/renders/carb.webp" alt="" loading="lazy"><b>Carburettor or injector</b><span>Mixes fuel with air, about 14.7 to 1 by mass.</span></li>
+      <li><img src="../assets/renders/engine_4t.webp" alt="" loading="lazy"><b>Engine</b><span>Burns the mixture and turns the crankshaft.</span></li>
+      <li><img src="../assets/renders/clutch.webp" alt="" loading="lazy"><b>Clutch and gearbox</b><span>Connect the engine and choose the ratio.</span></li>
+      <li><img src="../assets/renders/chain_sprockets.webp" alt="" loading="lazy"><b>Chain</b><span>Carries the drive to the rear wheel.</span></li>
+      <li><img src="../assets/renders/rear_wheel_spoked.webp" alt="" loading="lazy"><b>Rear tyre</b><span>Pushes on the road through a patch smaller than a credit card.</span></li>
+    </ol>
+    <p>Only about a fifth of the energy in the fuel reaches the road. A small air-cooled engine turns at best about 30 % of it into work at the crankshaft, and the clutch, gearbox and chain lose a little more. The rest leaves as heat through the exhaust, the cylinder fins and the oil.</p>
+
+    <div class="cc-side">
+      <div>
+        <h3>The electric version</h3>
+        <p>An electric motorcycle swaps the tank, engine, clutch and gearbox for three parts: a <b>battery pack</b> that stores the energy, a <b>controller</b> that turns the battery's direct current into three-phase current, and a <b>motor</b> that turns. The chassis, wheels and brakes are the same. About 80 to 88 % of the battery's energy reaches the wheel, but a battery stores far less energy per kilo than petrol, so range is shorter.</p>
+        <p><a class="cc-link" href="../overview/?mode=elec">See the electric bike in 3D →</a></p>
+      </div>
+      <figure class="cc-fig is-tight"><img src="../assets/illustrations/overview/F03.png" alt="Plate F03: electric motorcycle with the battery pack, motor and controller shown" loading="lazy"></figure>
+    </div>
+
+    <h3>Three bikes, one layout</h3>
+    <div class="cc-three">
+      <a href="../overview/?mode=4t"><img src="../assets/renders/bike_classic_4t_side.webp" alt="Classic four-stroke roadster, side view" loading="lazy"><b>Four-stroke roadster</b><span>Commuter and taxi bikes</span></a>
+      <a href="../overview/?mode=2t"><img src="../assets/renders/bike_mx_2t_side.webp" alt="Two-stroke motocross bike, side view" loading="lazy"><b>Two-stroke motocross</b><span>Light, simple, powerful</span></a>
+      <a href="../overview/?mode=elec"><img src="../assets/renders/bike_electric_side.webp" alt="Electric scrambler, side view" loading="lazy"><b>Electric scrambler</b><span>Battery, controller, motor</span></a>
+    </div>
+    <p>All three put the heaviest part low and between the wheels, a layout settled by the Werner brothers in 1901. Want to see how they differ part by part? <a href="../build/">Build one in the Bike builder</a>, or compare <a href="../types/">sixteen motorcycle types</a>.</p>
+
+    <div class="cc-recap"><b>Remember</b><ul><li>Six systems: power unit, fuel and air, ignition and electrics, transmission, chassis, controls.</li><li>Energy flows tank, engine, clutch, gearbox, chain, tyre.</li><li>Electric: battery, controller, motor; the rest stays the same.</li></ul></div>
+    <p class="cc-next"><a href="#part-2">Next: how the key parts work →</a></p>
+  </article>
+
+  <!-- ============================== PART 2 ============================== -->
+  <article class="cc-part" id="part-2" data-part="2">
+    <header class="cc-part-head"><span>Part 2 of 3 · 5 minutes</span><h2>How the key parts work</h2></header>
+
+    <h3>The four-stroke engine</h3>
+    <p>A four-stroke engine needs two turns of the crankshaft (720°) for one working cycle. The piston goes down, up, down, up:</p>
+    <ol class="cc-strokes">
+      <li><b>Intake</b>The inlet valve opens and the falling piston draws in air and fuel.</li>
+      <li><b>Compression</b>Both valves close and the rising piston squeezes the mixture. On a K-Light 125 the pressure reaches 1.0 to 1.2 MPa when cranking.</li>
+      <li><b>Power</b>The spark plug fires just before the top. The burning gas pushes the piston down. This is the only stroke that does work.</li>
+      <li><b>Exhaust</b>The exhaust valve opens and the rising piston pushes the burnt gas out.</li>
+    </ol>
+    <div class="cc-anim" data-src="../overview/?embed=1&mode=4t&part=engine"><img src="../assets/illustrations/powertrain/F07.png" alt="Plate F07: the four strokes of a four-stroke engine" loading="lazy"><button type="button">▶ Run the engine animation, with torque and power graphs</button></div>
+    <p>A <b>two-stroke</b> does the same job in one turn: ports in the cylinder wall replace the valves, so it fires every revolution. It is lighter and more powerful for its size, but burns oil with the fuel and pollutes more. <a class="cc-link" href="../overview/?mode=2t&part=engine">See it in 3D →</a></p>
+
+    <h3>Torque, power and a little maths</h3>
+    <p><b>Torque</b> is the turning force at the crankshaft, in newton metres. <b>Power</b> is how fast that work is done: torque times rotational speed.</p>
+    <p class="cc-eq">P (kW) = T (N·m) × 2π × n (rpm) ÷ 60 ÷ 1000</p>
+    <div class="cc-calc" id="cc-calc">
+      <label>Torque <input type="range" id="cc-t" min="2" max="20" step="0.1" value="8.9"><output id="cc-to">8.9 N·m</output></label>
+      <label>Engine speed <input type="range" id="cc-n" min="1000" max="12000" step="100" value="7500"><output id="cc-no">7,500 rpm</output></label>
+      <p class="cc-calc-out">Power <b id="cc-p">7.0 kW</b> <span id="cc-ps">(9.5 PS)</span></p>
+      <p class="cc-calc-note">The K-Light 125 makes 8.9 N·m at 7,500 rpm, which is 7.0 kW. Its peak power, 7.8 kW, comes higher up at 9,000 rpm.</p>
+    </div>
+
+    <h3>Fuel and spark</h3>
+    <div class="cc-side">
+      <div>
+        <p>The <b>carburettor</b> uses the fast air through a narrow throat (the venturi) to draw fuel from a jet. The throttle opens a slide or butterfly to let more mixture in. Fuel injection does the same with a pump, an injector and a computer.</p>
+        <p>The <b>ignition</b> turns 12 V into a spark of 10,000 to 30,000 V. A pickup on the crankshaft tells the CDI or ECU where the piston is; it switches the coil, and the spark jumps the plug's gap at the right moment, 10 to 40° before the top.</p>
+        <p class="cc-btns"><button type="button" class="cc-mini" data-anim="../overview/?embed=1&mode=4t&part=carb">▶ Carburettor</button><button type="button" class="cc-mini" data-anim="../overview/?embed=1&mode=4t&part=spark_plug">▶ Ignition</button></p>
+      </div>
+      <figure class="cc-fig is-tight"><img src="../assets/illustrations/wiring/F22.png" alt="Plate F22: CDI and ECU ignition circuits" loading="lazy"></figure>
+    </div>
+
+    <h3>Clutch, gearbox and chain</h3>
+    <p>The <b>clutch</b> is a stack of friction and steel plates squeezed by springs. Pull the lever and the plates separate, so the engine turns without driving the wheel. The <b>gearbox</b> gives five or six ratios: first multiplies torque for pulling away and climbing, top gives speed. The <b>chain</b> adds the final reduction. A 15-tooth front sprocket driving a 41-tooth rear turns the wheel 2.7 times slower than the gearbox output.</p>
+    <p class="cc-eq">Overall ratio = primary × gear × (rear teeth ÷ front teeth)</p>
+    <p>In first gear on a 125 the overall ratio is about 25 to 1, so 8.9 N·m at the engine becomes about 200 N·m at the rear wheel.</p>
+    <div class="cc-anim" data-src="../overview/?embed=1&mode=4t&part=chain"><img src="../assets/renders/chain_sprockets.webp" alt="Chain and sprockets" loading="lazy"><button type="button">▶ Run the chain animation, with road speed in each gear</button></div>
+
+    <h3>Brakes and suspension</h3>
+    <div class="cc-side">
+      <div>
+        <p>Squeeze the lever and a small piston pushes brake fluid down the hose. Because fluid does not compress, a bigger piston in the caliper clamps the <b>pads</b> onto the <b>disc</b>. The bike's movement turns into heat. Most stopping power is at the front, because the weight moves forward when you brake.</p>
+        <p>The <b>fork</b> and rear <b>shock</b> each have a spring to carry the weight and a damper, oil forced through small holes, to stop the bounce.</p>
+        <p class="cc-btns"><button type="button" class="cc-mini" data-anim="../overview/?embed=1&mode=4t&part=brake">▶ Brake animation</button></p>
+      </div>
+      <figure class="cc-fig is-tight"><img src="../assets/illustrations/chassis/F19.png" alt="Plate F19: hydraulic disc brake and drum brake" loading="lazy"></figure>
+    </div>
+
+    <h3>Electric drive</h3>
+    <p>The motor's magnets follow a magnetic field that the controller rotates by switching six transistors on and off thousands of times a second. Full torque is there from standstill, so there is no clutch and usually one fixed ratio. When you brake, the motor can work as a generator and put some energy back in the battery (regenerative braking). The <b>BMS</b> watches every cell and cuts the power if a cell is too hot, too full or too empty.</p>
+    <div class="cc-anim" data-src="../overview/?embed=1&mode=elec&part=motor"><img src="../assets/renders/motor.webp" alt="Electric motor" loading="lazy"><button type="button">▶ Run the motor animation, with its torque curve</button></div>
+
+    <div class="cc-recap"><b>Remember</b><ul><li>Four strokes: intake, compression, power, exhaust; only power does work.</li><li>Power = torque × speed. Gears trade speed for torque.</li><li>An engine needs fuel and air, a spark at the right time, and compression.</li></ul></div>
+    <p class="cc-next"><a href="#part-3">Next: repair fundamentals →</a></p>
+  </article>
+
+  <!-- ============================== PART 3 ============================== -->
+  <article class="cc-part" id="part-3" data-part="3">
+    <header class="cc-part-head"><span>Part 3 of 3 · 5 minutes</span><h2>Repair fundamentals</h2></header>
+
+    <h3>Safety first</h3>
+    <ul class="cc-rules">
+      <li><b>Engine off, key out, bike on its stand.</b> Run engines only outside or with the exhaust piped away: exhaust gas contains carbon monoxide.</li>
+      <li><b>No flames near petrol or batteries.</b> A charging battery gives off explosive gas.</li>
+      <li><b>Hot parts burn.</b> Let the exhaust and engine cool.</li>
+      <li><b>Electric bikes:</b> packs above 60 V DC are high voltage, and many 60 to 96 V scooter packs are. Only trained people open them, after isolating and checking for zero volts.</li>
+    </ul>
+
+    <h3>Four rules of fault finding</h3>
+    <ol class="cc-four">
+      <li><b>Ask and look.</b> When did it start? What changed? Look for leaks, loose wires and damage.</li>
+      <li><b>Cheapest and easiest first.</b> Fuel in the tank, kill switch at RUN, fuses, battery, connections. Then the harder checks.</li>
+      <li><b>Measure, do not guess.</b> A multimeter, a tyre gauge and a ruler settle most arguments.</li>
+      <li><b>Change one thing at a time,</b> then test again, so you know what fixed it.</li>
+    </ol>
+
+    <h3>Engine will not start? Work down the list</h3>
+    <p>An engine needs three things: <b>the right mixture</b>, <b>a spark at the right time</b> and <b>compression</b>. Check them in this order.</p>
+    <ol class="cc-tree" id="cc-tree">
+      <li><details><summary><b>Does it crank?</b> Press the starter.</summary><p>No sound: check the kill switch, side stand, neutral or clutch, fuses, then the battery. Clicks only: battery flat or the starter relay. <a href="../repair/problems/">Starting problems →</a></p></details></li>
+      <li><details><summary><b>Battery healthy?</b> Measure with a multimeter.</summary><p>Rested battery: 12.8 V or more is charged, 12.3 V or less needs charging. While cranking it should stay above about 9.6 V. Running at 5,000 rpm, the charging system should give 14.0 to 15.0 V. <a href="../repair/parts/#battery">Battery repairs →</a></p></details></li>
+      <li><details><summary><b>Fuel getting through?</b></summary><p>Fuel in the tank, tap on, tank vent clear, fuel reaching the carburettor or injector. Old fuel and a blocked jet are common after storage. <a href="../repair/parts/#carb">Carburettor repairs →</a></p></details></li>
+      <li><details><summary><b>Spark?</b> Test with the plug earthed on the engine.</summary><p>A strong blue spark is good; weak orange or none points to the plug, cap, coil, pickup or CDI. Read the plug: light brown is healthy, black and sooty is rich, white is lean. <a href="../repair/parts/#spark_plug">Spark plug repairs →</a></p></details></li>
+      <li><details><summary><b>Compression?</b> Last, because it needs a gauge.</summary><p>K-Light 125: 1.0 to 1.2 MPa when cranking. Low compression means valves not closing (check the clearance) or worn rings. <a href="../repair/">All repairs →</a></p></details></li>
+    </ol>
+
+    <h3>Read the smoke</h3>
+    <div class="cc-smoke">
+      <div><i style="background:#6E8BB5"></i><b>Blue</b><span>Burning oil: worn rings, valve guides or seals, or too much oil.</span></div>
+      <div><i style="background:#1A1A1A"></i><b>Black</b><span>Too rich: blocked air filter, choke on, leaking injector or carburettor.</span></div>
+      <div><i style="background:#E7E7E7;border:1px solid #CCC"></i><b>White that stays when warm</b><span>Coolant burning on liquid-cooled engines: head gasket.</span></div>
+    </div>
+
+    <h3>Check before every ride: T-CLOCS</h3>
+    <div class="cc-tclocs">
+      <div><b>T</b><span>Tyres and wheels: pressure cold, tread, damage, brakes working</span></div>
+      <div><b>C</b><span>Controls: levers, cables, throttle snaps shut</span></div>
+      <div><b>L</b><span>Lights and electrics: beams, brake light, indicators, horn</span></div>
+      <div><b>O</b><span>Oil and fluids: engine oil, brake fluid, fuel, leaks</span></div>
+      <div><b>C</b><span>Chassis: suspension, chain slack and oil, bolts</span></div>
+      <div><b>S</b><span>Stands: spring back; side-stand switch cuts the engine</span></div>
+    </div>
+
+    <h3>Three jobs every rider can learn</h3>
+    <div class="cc-jobs">
+      <a href="../repair/parts/#chain"><img src="../assets/illustrations/transmission/F15.png" alt="" loading="lazy"><b>Chain slack</b><span>Typically 20 to 40 mm at the tightest point; check your manual.</span></a>
+      <a href="../repair/parts/#battery"><img src="../assets/renders/battery_12v.webp" alt="" loading="lazy"><b>Battery test</b><span>12.8 V rested is full; 14.0 to 15.0 V when charging.</span></a>
+      <a href="../repair/parts/#brake"><img src="../assets/illustrations/chassis/F19.png" alt="" loading="lazy"><b>Brake pads</b><span>Replace before the friction layer reaches the wear mark.</span></a>
+    </div>
+
+    <div class="cc-recap"><b>Remember</b><ul><li>Safety, then the cheapest checks first.</li><li>No start: crank, battery, fuel, spark, compression.</li><li>Measure, change one thing, test again.</li></ul></div>
+
+    <div class="cc-done" id="cc-done">
+      <h3>You have finished the crash course</h3>
+      <p>You now know the parts, how the main ones work and how a mechanic finds a fault. Go deeper:</p>
+      <div class="cc-done-links">
+        <a href="../learn/"><b>The full course</b><span>Five modules, 32 chapters</span></a>
+        <a href="../repair/"><b>Repair</b><span>Find a fault, fix it step by step</span></a>
+        <a href="../cockpit/"><b>Cockpit</b><span>Start the bike and ride it</span></a>
+        <a href="../quiz/"><b>Quiz</b><span>Test what you know</span></a>
+      </div>
+    </div>
+  </article>
+
+  <footer data-mz-footer></footer>
+</div>
+
+<div class="cc-modal" id="cc-modal" hidden role="dialog" aria-modal="true" aria-label="Animation"><div class="cc-modal-box"><button type="button" class="cc-x" aria-label="Close">×</button><iframe title="Animation"></iframe></div></div>
+
+<script type="module" src="../assets/site.js"></script>
+<script type="module" src="../assets/crash.js?v=1"></script>
+</body>
+</html>

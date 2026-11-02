@@ -15,6 +15,7 @@ const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
 export const MAIN = [['overview/', 'Overview']];
 export const NAV = [
   { key: 'course', title: 'Course', blurb: 'Five modules, quizzes and your progress', items: [
+    ['crash-course/', 'Crash course', 'The whole motorcycle in 15 minutes'],
     ['learn/', 'Course overview', 'How the course works, where to start'],
     ['learn/#foundations', '01 Foundations', 'Anatomy, physics, workshop'],
     ['learn/#engine', '02 The engine', 'Four-stroke and two-stroke'],
