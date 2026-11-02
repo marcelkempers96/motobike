@@ -264,6 +264,7 @@ function procDetail(el, p) {
       ${p.done ? `<p class="rp-donebox"><span>Done when</span>${esc(p.done)}</p>` : ''}
       <p><button type="button" class="rp-btn" id="rp-reset">Clear ticks</button></p>
     </section>
+    <section class="rp-sec" id="rp-parts" hidden></section>
     ${probs.length ? `<section class="rp-sec"><h2>Fixes these problems</h2><ul class="rp-list">${probs.map(probRow).join('')}</ul></section>` : ''}
     <section class="rp-sec">${srcLine(p.sources)}</section>`;
   const steps = el.querySelectorAll('.rp-steps li');
@@ -276,6 +277,14 @@ function procDetail(el, p) {
   }));
   $('#rp-reset', el).addEventListener('click', () => { done = []; steps.forEach((li) => { li.classList.remove('is-done'); $('.rp-tick', li).setAttribute('aria-pressed', 'false'); }); save(); });
   count();
+  // Parts for this job (from the spare parts section)
+  import('./content/spare-parts.js').then(({ default: D }) => {
+    const ps = D.parts.filter((x) => x.procs.includes(p.id));
+    const box = el.querySelector('#rp-parts');
+    if (!ps.length || !box) return;
+    box.hidden = false;
+    box.innerHTML = `<h2>Parts for this job</h2><div class="rp-parts">${ps.map((x) => `<a href="${href(x.url.replace(/^\//, ''))}"><span class="rp-pimg"><img src="${asset(x.img)}" alt="" loading="lazy"></span><b>${esc(x.name)}</b><span>Prices, intervals and shops by bike</span></a>`).join('')}</div>`;
+  }).catch(() => {});
 }
 
 const el = document.getElementById('rp');

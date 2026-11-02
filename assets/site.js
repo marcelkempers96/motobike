@@ -25,11 +25,12 @@ export const NAV = [
     ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
     ['progress/', 'My progress', 'Saved in this browser, no login'],
   ] },
-  { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it step by step', items: [
+  { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it, get the part', items: [
     ['repair/', 'Repair home', 'Search any problem, part or job'],
     ['repair/problems/', 'By problem', 'Start from what you see, hear or feel'],
     ['repair/parts/', 'By part', 'Start from the part you want to check'],
     ['repair/fix/', 'All repairs', 'Every step-by-step job'],
+    ['parts/', 'Spare parts', 'What wears, when, where to buy'],
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [
     ['cockpit/', 'Cockpit', 'Ride the bike, start it, run the dyno'],
