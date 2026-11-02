@@ -128,3 +128,4 @@ section.data p.sub{margin:0 0 10px;color:var(--muted);max-width:880px}
 .ue .ue-play-ctl input{accent-color:var(--accent);width:100%}
 .ue .ue-play-ctl output{text-align:right}
 @media (max-width:700px){.ue .ue-play-ctl label{grid-template-columns:1fr 84px}.ue .ue-play-ctl label input{grid-column:1/-1;grid-row:2}}
+.ue .ue-short{font-size:17px;line-height:1.5;color:var(--text);margin:0 0 4px;max-width:760px}

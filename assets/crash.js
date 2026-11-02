@@ -79,3 +79,52 @@ function progress() {
 }
 
 systems(); calc(); anims(); progress();
+
+/* Gear pair: the small (driving) gear turns at a steady speed; the big one follows at speed ÷ ratio. */
+function gears() {
+  const box = document.getElementById('cc-gears');
+  if (!box) return;
+  const G = [[13, 36], [17, 32], [20, 29], [23, 26], [25, 24]];   // same tooth counts as Under the Engine
+  const PRI = 67 / 18, FD = 43 / 14, CIRC = 1.95, T = 8.9;
+  const NOTE = ['Low gear: lots of force for pulling away and climbing, but the wheel turns slowly.', 'Still strong, a little faster.', 'The middle: town riding.', 'Close to 1 : 1: both gears turn at nearly the same speed.', 'Top gear: the driven gear is smaller, so it turns faster than the driver. Least force, most speed.'];
+  const gearPath = (teeth, r) => {
+    const out = r + 7, inn = r - 6, step = (Math.PI * 2) / teeth; let d = '';
+    for (let i = 0; i < teeth; i++) {
+      const a = i * step, pts = [[inn, a], [out, a + step * 0.2], [out, a + step * 0.5], [inn, a + step * 0.7]];
+      pts.forEach(([rr, aa], k) => { d += `${i === 0 && k === 0 ? 'M' : 'L'}${(rr * Math.cos(aa)).toFixed(1)},${(rr * Math.sin(aa)).toFixed(1)}`; });
+    }
+    return d + 'Z';
+  };
+  const g1 = document.getElementById('cc-g1'), g2 = document.getElementById('cc-g2');
+  let cur = 0, a1 = 0, a2 = 0, r1 = 0, r2 = 0, x1 = 0, x2 = 0, last = 0;
+  const draw = (k) => {
+    cur = k;
+    const [m, c] = G[k], scale = 2.6, CD = 49 * scale;   // pitch radii in proportion to the teeth, same centre distance
+    r1 = m / 49 * CD; r2 = c / 49 * CD; x1 = 260 - (r1 + r2 + 3) / 2; x2 = x1 + r1 + r2 + 3;
+    g1.innerHTML = `<path d="${gearPath(m, r1)}" fill="#C2502A"/><circle r="8" fill="#FFF"/>`;
+    g2.innerHTML = `<path d="${gearPath(c, r2)}" fill="#0A0A0A"/><circle r="10" fill="#FFF"/><line x1="0" y1="0" x2="${r2 - 14}" y2="0" stroke="#FFF" stroke-width="4"/>`;
+    document.getElementById('cc-gl').innerHTML = `<text x="${x1 + r1 * 0.3}" y="232" text-anchor="end" font-size="14" font-weight="700" fill="#C2502A">${m} teeth (engine side)</text><text x="${x2 - r2 * 0.6}" y="232" text-anchor="start" font-size="14" font-weight="700" fill="#0A0A0A">${c} teeth (to the wheel)</text>`;
+    box.querySelectorAll('[data-g]').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.g === k)));
+    const gr = c / m, ov = PRI * gr * FD, tq = T * ov * 0.9, kmh = 8000 / ov * CIRC * 60 / 1000;
+    document.getElementById('cc-gt').textContent = `${m} : ${c}`;
+    document.getElementById('cc-gr').textContent = `${gr.toFixed(2)} : 1`;
+    document.getElementById('cc-gf').textContent = `${Math.round(tq)} N·m`;
+    document.getElementById('cc-gs').textContent = `${Math.round(kmh)} km/h`;
+    document.getElementById('cc-gfb').style.width = `${Math.min(100, tq / 240 * 100)}%`;
+    document.getElementById('cc-gsb').style.width = `${Math.min(100, kmh / 90 * 100)}%`;
+    document.getElementById('cc-gn').textContent = NOTE[k];
+  };
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tick = (t) => {
+    const dt = last ? Math.min(0.05, (t - last) / 1000) : 0; last = t;
+    const w = reduce ? 0 : 1.6;                 // driving gear, radians per second
+    const [m, c] = G[cur];
+    a1 += w * dt; a2 -= w * dt * m / c;
+    g1.setAttribute('transform', `translate(${x1},110) rotate(${a1 * 57.3})`);
+    g2.setAttribute('transform', `translate(${x2},110) rotate(${a2 * 57.3 + 180 / c})`);
+    requestAnimationFrame(tick);
+  };
+  box.querySelector('.cc-gears-ctl').addEventListener('click', (e) => { const b = e.target.closest('[data-g]'); if (b) draw(+b.dataset.g); });
+  draw(0); requestAnimationFrame(tick);
+}
+gears();

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261102c">
-  <link rel="stylesheet" href="../assets/crash.css?v=1">
+  <link rel="stylesheet" href="../assets/crash.css?v=2">
 </head>
 <body>
 <div class="ute-page cc">
@@ -125,8 +125,25 @@
     <h3>Clutch, gearbox and chain</h3>
     <figure class="cc-fig"><a href="../engine/#gearbox"><img src="../assets/engine/shots/02-gearbox-function-colours.webp" alt="The five-speed gearbox in function colours" loading="lazy"></a><figcaption>The five-speed gearbox: red gears slide, blue gears spin free. <a href="../engine/#gearbox">Shift it yourself →</a></figcaption></figure>
     <p>The <b>clutch</b> is a stack of friction and steel plates squeezed by springs. Pull the lever and the plates separate, so the engine turns without driving the wheel. The <b>gearbox</b> gives five or six ratios: first multiplies torque for pulling away and climbing, top gives speed. The <b>chain</b> adds the final reduction. A 15-tooth front sprocket driving a 41-tooth rear turns the wheel 2.7 times slower than the gearbox output.</p>
-    <p class="cc-eq">Overall ratio = primary × gear × (rear teeth ÷ front teeth)</p>
-    <p>In first gear on a 125 the overall ratio is about 25 to 1, so 8.9 N·m at the engine becomes about 200 N·m at the rear wheel.</p>
+    <h3 class="cc-h4">What a gear ratio does</h3>
+    <p>When a <b>small gear drives a big gear</b>, the big one turns more slowly but with more force. Count the teeth: a 13-tooth gear driving a 36-tooth gear must turn 36 ÷ 13 = <b>2.8 times</b> for the big gear to turn once. That number is the <b>gear ratio</b>. You trade speed for force, like using a long spanner on a tight bolt.</p>
+    <div class="cc-gears" id="cc-gears">
+      <svg viewBox="0 -10 520 252" role="img" aria-label="Two gears in mesh">
+        <g id="cc-g1"></g><g id="cc-g2"></g><g id="cc-gl"></g>
+      </svg>
+      <div class="cc-gears-ctl" role="group" aria-label="Choose a gear">
+        <button type="button" data-g="0" aria-pressed="true">1st</button><button type="button" data-g="1">2nd</button><button type="button" data-g="2">3rd</button><button type="button" data-g="3">4th</button><button type="button" data-g="4">5th</button>
+      </div>
+      <div class="cc-gears-out">
+        <div><span>Teeth</span><b id="cc-gt">13 : 36</b></div>
+        <div><span>Gear ratio</span><b id="cc-gr">2.77 : 1</b></div>
+        <div><span>Force at the wheel</span><b id="cc-gf">197 N·m</b><i><em id="cc-gfb"></em></i></div>
+        <div><span>Speed at 8,000 rpm</span><b id="cc-gs">30 km/h</b><i><em id="cc-gsb"></em></i></div>
+      </div>
+      <p class="cc-gears-note" id="cc-gn"></p>
+    </div>
+    <p>A motorcycle has three of these steps in a row. The <b>primary drive</b> (crank to clutch) slows the engine about 3.7 times, the <b>gearbox</b> adds the ratio you choose with your foot, and the <b>chain</b> sprockets add about 3 more. Multiply them and in 1st the engine turns about <b>32 times</b> for each turn of the rear wheel, so 8.9 N·m at the crank becomes about 250 N·m at the tyre. In 5th it is about 11 times: less force, much more speed.</p>
+    <p class="cc-tip"><b>Try it:</b> a bigger rear sprocket works like a lower gear in every gear: more pull for loads and hills, less top speed. Change the sprockets in <a href="../engine/#final">Under the Engine</a> or the <a href="../build/">Bike builder</a>.</p>
     <div class="cc-anim" data-src="../overview/?embed=1&mode=4t&part=chain"><img src="../assets/renders/chain_sprockets.webp" alt="Chain and sprockets" loading="lazy"><button type="button">▶ Run the chain animation, with road speed in each gear</button></div>
 
     <h3>Brakes and suspension</h3>
@@ -221,6 +238,6 @@
 <div class="cc-modal" id="cc-modal" hidden role="dialog" aria-modal="true" aria-label="Animation"><div class="cc-modal-box"><button type="button" class="cc-x" aria-label="Close">×</button><iframe title="Animation"></iframe></div></div>
 
 <script type="module" src="../assets/site.js"></script>
-<script type="module" src="../assets/crash.js?v=1"></script>
+<script type="module" src="../assets/crash.js?v=4"></script>
 </body>
 </html>
