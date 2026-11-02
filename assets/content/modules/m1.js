@@ -907,6 +907,12 @@ export default {
           ]
         },
         {
+          "type": "callout",
+          "tone": "warm",
+          "title": "Try every control in the Cockpit",
+          "html": "Turn the key, flick the stop switch to RUN, pull the clutch, press the starter and twist the throttle: every control on this page works in the <a href=\"../cockpit/\">Cockpit</a>, with live instruments, engine sound and a dyno. <a href=\"../cockpit/\">Open the Cockpit →</a>"
+        },
+        {
           "type": "p",
           "html": "The <strong>MIL</strong> (malfunction indicator lamp) lights briefly at key-on as a bulb check and stays lit when the ECU stores a fault."
         },
@@ -970,6 +976,10 @@ export default {
         {
           "type": "p",
           "html": "<strong>Downshift:</strong> clutch in, press the lever down, <em>blip</em> the throttle to raise engine speed for the lower gear, then release the clutch smoothly. An abrupt release at low engine speed can lock the rear wheel."
+        },
+        {
+          "type": "p",
+          "html": "Practise the shift pattern and a rev-matched downshift in the <a href=\"../cockpit/\">Cockpit</a>: hold C for the clutch, use the arrow keys for the gear lever and T for the throttle (or tap the on-screen controls on a phone)."
         },
         {
           "type": "h3",
