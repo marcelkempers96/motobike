@@ -34,24 +34,69 @@ const LEARN = {
   'electric-scooter': ['m5-batteries', 'Module 05'],
 };
 
-let TYPES = [], FAMILIES = {}, filter = null, current = -1, view = 'plate', lastFocus = null;
+let TYPES = [], FAMILIES = {}, filter = null, current = -1, view = 'plate', lastFocus = null, look = 'plate', photoIx = 0;
+try { if (localStorage.getItem('mz-types-look') === 'photo') look = 'photo'; } catch (e) { /* ignore */ }
+
+/* Photographs: a list per type (t.photos), or the older photo/photo2 fields.
+   A photo may carry a local file (self-hosted copy) or a Wikimedia src. */
+const photosOf = (t) => (t.photos && t.photos.length ? t.photos : [t.photo, t.photo2].filter(Boolean));
+const photoSrc = (p, w = 1600) => (p.file ? at(p.file) : String(p.src || '').replace(/width=\d+/, 'width=' + w));
+const lookSrc = (t, w) => { const p = photosOf(t)[0]; return look === 'photo' && p ? photoSrc(p, w) : at(t.thumb); };
+const credit = (p) => (p.verified
+  ? `${esc(p.subject)}. Photo: ${esc(p.author)}, <a href="${esc(p.licence_url)}" target="_blank" rel="noopener">${esc(p.licence)}</a>${p.page ? `, via <a href="${esc(p.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>` : ''}.`
+  : `${esc(p.subject)}. Photo via <a href="${esc(p.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>; author and licence on the file page.`);
+/* if a photograph cannot load, fall back to the plate thumbnail */
+const fallbackImg = (img, t) => img.addEventListener('error', () => { if (!img.dataset.fb) { img.dataset.fb = '1'; img.src = at(t.thumb); img.closest('[data-i]')?.classList.add('no-photo'); } }, { once: false });
+
 const plateCache = new Map();
 
 function buildRail() {
-  const rail = $('#rail'), y0 = 1880, y1 = 2030;
-  const pos = (y) => ((y - y0) / (y1 - y0)) * 100;
-  let h = '<div class="axis"></div>';
-  for (let y = y0; y <= y1; y += 10) h += `<span class="tick" style="left:${pos(y)}%">${y}</span>`;
-  const rows = [];
-  TYPES.map((t, i) => ({ t, i })).sort((a, b) => a.t.start - b.t.start).forEach(({ t, i }) => {
-    const x = pos(t.start);
-    let r = 0;
-    while (rows[r] !== undefined && x - rows[r] < 8.5) r++;
-    rows[r] = x;
-    h += `<button type="button" data-i="${i}" style="left:${x}%;top:${4 + r * 26}px;bottom:24px;--fam:${famVar(t.family)}" aria-label="${esc(t.name)}, ${t.start}"><span>${esc(t.name.replace(/ and .*/, ''))} · ${t.start}</span><i></i><span class="stem"></span></button>`;
-  });
-  rail.innerHTML = h;
+  const rail = $('#rail');
+  const draw = () => {
+    const W = rail.clientWidth || 1200, y0 = 1880, y1 = 2030;
+    const px = (y) => ((y - y0) / (y1 - y0)) * W;
+    let h = '<div class="axis"></div>';
+    for (let y = y0; y <= y1; y += 10) h += `<span class="tick" style="left:${px(y)}px">${y}</span>`;
+    const rows = [];           // right edge (px) of the last item in each row
+    const ROW = 94, ITEM = 112; // row height and item width, so nothing overlaps
+    TYPES.map((t, i) => ({ t, i })).sort((a, b) => a.t.start - b.t.start).forEach(({ t, i }) => {
+      const x = px(t.start), left = x - ITEM / 2;
+      let r = 0;
+      while (rows[r] !== undefined && left < rows[r] + 6) r++;
+      rows[r] = left + ITEM;
+      h += `<button type="button" data-i="${i}" style="left:${x}px;top:${r * ROW}px;bottom:24px;--fam:${famVar(t.family)}" aria-label="${esc(t.name)}, ${t.start}">
+        <span class="th"><img src="${lookSrc(t, 240)}" alt="" loading="lazy"></span><span class="lb">${esc(t.name.replace(/ and .*/, ''))} · ${t.start}</span><i></i><span class="stem"></span></button>`;
+    });
+    const H = Math.max(rows.length, 1) * ROW + 60;
+    rail.style.height = H + 'px';
+    rail.innerHTML = h;
+    rail.querySelectorAll('button[data-i] img').forEach((img) => fallbackImg(img, TYPES[+img.closest('[data-i]').dataset.i]));
+    applyFilter();
+  };
+  draw();
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(draw, 150); });
   rail.addEventListener('click', (e) => { const b = e.target.closest('button[data-i]'); if (b) open(+b.dataset.i); });
+  /* hover a timeline item: light up its card, and the other way round */
+  const hot = (i, on) => { $$(`[data-i="${i}"]`).forEach((x) => x.classList.toggle('is-hot', on)); };
+  ['mouseover', 'focusin'].forEach((ev) => document.addEventListener(ev, (e) => { const b = e.target.closest?.('#rail button[data-i], .mz-ty-card'); if (b) hot(b.dataset.i, true); }));
+  ['mouseout', 'focusout'].forEach((ev) => document.addEventListener(ev, (e) => { const b = e.target.closest?.('#rail button[data-i], .mz-ty-card'); if (b) hot(b.dataset.i, false); }));
+  buildRail.redraw = draw;
+}
+
+function buildLook() {
+  const box = $('#look');
+  if (!box) return;
+  box.innerHTML = `<span>Show</span><button type="button" data-l="plate">Diagrams</button><button type="button" data-l="photo">Photos</button>`;
+  const set = (l) => {
+    look = l;
+    try { localStorage.setItem('mz-types-look', l); } catch (e) { /* ignore */ }
+    box.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.l === l)));
+    document.documentElement.classList.toggle('mz-look-photo', l === 'photo');
+    $$('.mz-ty-card').forEach((c) => { const t = TYPES[+c.dataset.i], img = $('.pic img', c); c.classList.remove('no-photo'); delete img.dataset.fb; img.src = lookSrc(t, 720); });
+    buildRail.redraw?.();
+  };
+  box.addEventListener('click', (e) => { const b = e.target.closest('button[data-l]'); if (b) set(b.dataset.l); });
+  set(look);
 }
 
 function buildFilters() {
@@ -71,7 +116,7 @@ function buildGrid() {
   const g = $('#grid');
   g.innerHTML = TYPES.map((t, i) => `
     <button type="button" class="mz-ty-card" data-i="${i}" data-f="${t.family}" style="--fam:${famVar(t.family)}" aria-label="${esc(t.name)}, ${esc(t.era)}. Open details">
-      <span class="pic"><span class="no">${pad(i + 1)}</span><img src="${at(t.thumb)}" alt="" loading="lazy" width="720" height="405"></span>
+      <span class="pic"><span class="no">${pad(i + 1)}</span><img src="${lookSrc(t, 720)}" alt="" loading="lazy" width="720" height="405"></span>
       <span class="body">
         <span class="mz-ty-era"><i></i>${esc(t.era)} · ${esc(FAMILIES[t.family])}</span>
         <h3>${esc(t.name)}</h3>
@@ -79,6 +124,7 @@ function buildGrid() {
         <span class="more">Open →</span>
       </span>
     </button>`).join('');
+  g.querySelectorAll('.mz-ty-card .pic img').forEach((img) => fallbackImg(img, TYPES[+img.closest('[data-i]').dataset.i]));
   g.addEventListener('click', (e) => { const c = e.target.closest('.mz-ty-card'); if (c) open(+c.dataset.i); });
 }
 
@@ -86,13 +132,13 @@ function applyFilter() {
   let n = 0;
   $$('.mz-ty-card').forEach((c) => { const on = !filter || c.dataset.f === filter; c.hidden = !on; if (on) n++; });
   $$('#rail button').forEach((b) => b.classList.toggle('dim', !!filter && TYPES[+b.dataset.i].family !== filter));
-  $('#count').textContent = `${n} of ${TYPES.length} types`;
+  const cnt = $('#count'); if (cnt) cnt.textContent = `${n} of ${TYPES.length} types`;
 }
 
 function viewsFor(t) {
   const v = [['plate', 'Labelled plate']];
-  if (t.photo) v.push(['photo', 'Photograph']);
-  if (t.photo2) v.push(['photo2', t.photo2.label || 'Second photograph']);
+  const n = photosOf(t).length;
+  if (n) v.push(['photos', n > 1 ? `Photos (${n})` : 'Photograph']);
   if (t.workshop_photo) v.push(['own', 'Workshop photograph']);
   if (t.render) v.push(['render', '3D render']);
   return v;
@@ -113,14 +159,19 @@ async function renderStage(t) {
     cr.innerHTML = `Plate ${esc(t.plate)}, Moto Zero, CC BY-SA 4.0. <a href="${at(t.plate_svg)}" target="_blank" rel="noopener">Open full size (SVG)</a> · <a href="${at(t.plate_png)}" download>Download PNG</a>. On a phone, scroll the plate sideways.`;
     const svg = await plateSVG(t);
     if (svg && current >= 0 && TYPES[current] === t && view === 'plate') st.querySelector('.plate').innerHTML = svg;
-  } else if (view === 'photo' || view === 'photo2') {
-    const p = t[view];
-    st.innerHTML = `<div class="photo"><img alt="${esc(p.subject)}" src="${esc(p.src)}"><div class="fallback" hidden>The photograph is hosted on Wikimedia Commons and could not load here. <a href="${esc(p.page)}" target="_blank" rel="noopener">Open it on Wikimedia Commons</a>.</div></div>`;
-    const img = st.querySelector('img');
+  } else if (view === 'photos') {
+    const ps = photosOf(t), k = Math.min(photoIx, ps.length - 1), p = ps[k];
+    st.innerHTML = `<div class="photo"><img alt="${esc(p.subject)}" src="${esc(photoSrc(p))}"><div class="fallback" hidden>This photograph could not load here. <a href="${esc(p.page)}" target="_blank" rel="noopener">Open it on Wikimedia Commons</a>.</div>
+      ${ps.length > 1 ? `<button type="button" class="gal-nav is-prev" aria-label="Previous photograph">←</button><button type="button" class="gal-nav is-next" aria-label="Next photograph">→</button>` : ''}</div>
+      ${ps.length > 1 ? `<div class="gal-strip">${ps.map((q, j) => `<button type="button" data-p="${j}" aria-label="Photograph ${j + 1}: ${esc(q.subject)}" aria-pressed="${j === k}"><img src="${esc(photoSrc(q, 320))}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}`;
+    const img = st.querySelector('.photo img');
     img.addEventListener('error', () => { img.hidden = true; st.querySelector('.fallback').hidden = false; });
-    cr.innerHTML = p.verified
-      ? `${esc(p.subject)}. Photo: ${esc(p.author)}, <a href="${esc(p.licence_url)}" target="_blank" rel="noopener">${esc(p.licence)}</a>, via <a href="${esc(p.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>.`
-      : `${esc(p.subject)}. Photo via <a href="${esc(p.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>; author and licence on the file page.`;
+    st.querySelectorAll('.gal-strip img').forEach((im) => im.addEventListener('error', () => { im.closest('button').hidden = true; }));
+    const go = (j) => { photoIx = (j + ps.length) % ps.length; renderStage(t); };
+    st.querySelector('.is-prev')?.addEventListener('click', () => go(k - 1));
+    st.querySelector('.is-next')?.addEventListener('click', () => go(k + 1));
+    st.querySelector('.gal-strip')?.addEventListener('click', (e) => { const b = e.target.closest('button[data-p]'); if (b) go(+b.dataset.p); });
+    cr.innerHTML = `${ps.length > 1 ? `${k + 1} of ${ps.length}. ` : ''}${credit(p)}`;
   } else {
     const p = view === 'own' ? t.workshop_photo : t.render;
     st.innerHTML = `<div class="photo"><img alt="${esc(p.caption)}" src="${at(p.file)}"></div>`;
@@ -133,6 +184,8 @@ function open(i) {
   current = i;
   const t = TYPES[i];
   const vs = viewsFor(t);
+  photoIx = 0;
+  if (look === 'photo' && vs.some((v) => v[0] === 'photos')) view = 'photos';
   if (!vs.some((v) => v[0] === view)) view = 'plate';
   $('#lb-box').style.setProperty('--fam', famVar(t.family));
   $('#lb-era').innerHTML = `<i></i>${esc(t.era)} · ${esc(FAMILIES[t.family])} · ${pad(i + 1)} of ${TYPES.length}`;
@@ -205,6 +258,6 @@ async function init() {
     $('#grid').innerHTML = '<p>The motorcycle types could not load. Please refresh the page.</p>';
     return;
   }
-  buildRail(); buildFilters(); buildGrid(); applyFilter(); wire();
+  buildFilters(); buildGrid(); buildRail(); buildLook(); applyFilter(); wire();
 }
 init();

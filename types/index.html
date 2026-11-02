@@ -22,7 +22,27 @@
 /* timeline */
 .mz-rail { border: 1px solid var(--line); background: #FFFFFF; padding: 14px 16px 10px; overflow-x: auto; }
 .mz-rail-cap { font: 700 12px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); margin: 0 0 6px; }
-.mz-rail-in { position: relative; min-width: 900px; height: 150px; margin: 0 70px; }
+.mz-rail-in { position: relative; min-width: 1150px; height: 200px; margin: 0 60px; }
+.mz-rail button .th { display: block; width: 96px; height: 54px; background: #FFFFFF; border: 1px solid var(--line); overflow: hidden; transition: transform .18s, border-color .18s; }
+.mz-rail button .th img { width: 100%; height: 100%; object-fit: contain; display: block; }
+html.mz-look-photo .mz-rail button .th img, html.mz-look-photo .mz-ty-card .pic img { object-fit: cover; }
+.mz-rail button .lb { display: block; padding: 2px 4px; background: #FFFFFF; }
+.mz-rail button:hover .th, .mz-rail button.is-hot .th { transform: scale(1.12); border-color: var(--fam); }
+.mz-rail button.is-hot .lb { color: var(--warm); }
+.mz-ty-card.is-hot { border-color: var(--warm); box-shadow: 0 0 0 2px var(--warm); }
+.mz-ty-card.no-photo .pic img { object-fit: contain !important; }
+.mz-look { display: inline-flex; align-items: center; gap: 0; margin: 0 0 12px; }
+.mz-look span { font: 700 12px/1 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--mute); margin-right: 10px; }
+.mz-look button { font: 700 14px/1 var(--sans); padding: 10px 14px; border: 1.5px solid var(--ink); background: #FFFFFF; color: var(--ink); cursor: pointer; }
+.mz-look button + button { border-left: 0; }
+.mz-look button[aria-pressed="true"] { background: var(--ink); color: #FFFFFF; }
+.mz-lb .photo { position: relative; }
+.mz-lb .gal-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 1.5px solid var(--ink); background: rgba(255,255,255,.92); font: 700 18px/1 var(--sans); cursor: pointer; }
+.mz-lb .gal-nav.is-prev { left: 10px; } .mz-lb .gal-nav.is-next { right: 10px; }
+.mz-lb .gal-strip { display: flex; gap: 6px; padding: 8px; overflow-x: auto; background: #FFFFFF; border-top: 1px solid var(--line); }
+.mz-lb .gal-strip button { flex: none; width: 88px; height: 58px; padding: 0; border: 2px solid transparent; background: #F5F5F5; cursor: pointer; }
+.mz-lb .gal-strip button[aria-pressed="true"] { border-color: var(--warm); }
+.mz-lb .gal-strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .mz-rail .axis { position: absolute; left: 0; right: 0; bottom: 24px; border-top: 1.5px solid var(--ink); }
 .mz-rail .tick { position: absolute; bottom: 4px; transform: translateX(-50%); font: 400 11px/1 var(--sans); color: var(--mute); }
 .mz-rail .tick::before { content: ""; position: absolute; left: 50%; bottom: 16px; height: 6px; border-left: 1px solid var(--ink); }
@@ -134,7 +154,7 @@ html.mz-locked { overflow: hidden; }
   </header>
 
   <section class="mz-ty-hero">
-    <span class="ute-label">Course · Motorcycle types</span>
+    <span class="ute-label">Library · Motorcycle types</span>
     <h1>Motorcycle types through the ages</h1>
     <p>From Daimler's wooden <b>Reitwagen</b> of 1885 to the battery-swapping <b>e-boda</b>, motorcycles have been reshaped again and again by roads, money, sport and fuel. Each of the sixteen types has a labelled plate of the parts that define it, a photograph, its typical figures and the story of how it came to be.</p>
     <div class="ute-chapter-foot">
@@ -145,6 +165,7 @@ html.mz-locked { overflow: hidden; }
   </section>
 
   <section class="mz-ty-sec" aria-label="Timeline">
+    <div class="mz-look" id="look" role="group" aria-label="Show diagrams or photos"></div>
     <div class="mz-rail">
       <p class="mz-rail-cap">When each type appeared</p>
       <div class="mz-rail-in" id="rail"></div>

@@ -12,7 +12,7 @@ const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split(
 export const SUBSCRIBE_ENDPOINT = '';
 const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
 
-export const MAIN = [['overview/', 'Overview'], ['cockpit/', 'Cockpit']];
+export const MAIN = [['overview/', 'Overview']];
 export const NAV = [
   { key: 'course', title: 'Course', blurb: 'Five modules, quizzes and your progress', items: [
     ['learn/', 'Course overview', 'How the course works, where to start'],
@@ -31,6 +31,7 @@ export const NAV = [
     ['repair/fix/', 'All repairs', 'Every step-by-step job'],
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [
+    ['cockpit/', 'Cockpit', 'Ride the bike, start it, run the dyno'],
     ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
     ['models/', '3D models', 'All 56 models, rotate and inspect'],
     ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
@@ -78,7 +79,7 @@ export function navHTML() {
 
 export function footerHTML() {
   const G = (k) => NAV.find((g) => g.key === k);
-  const explore = { title: 'Explore', items: [['', 'Home'], ['overview/', 'Overview'], ['cockpit/', 'Cockpit'], ...G('tools').items, ['repair/', 'Repair']] };
+  const explore = { title: 'Explore', items: [['', 'Home'], ['overview/', 'Overview'], ...G('tools').items, ['repair/', 'Repair']] };
   const col = (g) => `<div><h4>${g.title}</h4><ul>${g.items.map(([h, t]) => `<li><a href="${url(h)}">${t}</a></li>`).join('')}</ul></div>`;
   return `
     <form class="mz-sub" novalidate>
