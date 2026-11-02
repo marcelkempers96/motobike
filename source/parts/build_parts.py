@@ -60,6 +60,40 @@ P = {
 REAL = {'assets/photos/scooter-cvt-workshop.jpg', 'assets/photos/honda-air-cooled.jpg'}
 ELEC = {'controller', 'charge_port', 'motor'}
 
+# ---------------------------------------------------------------------------
+# Real photos from Wikimedia Commons, collected by download_part_photos.py into
+# source/parts/images/ (manifest.csv + images/<part>/...). If a 'keep' column is
+# present only rows marked yes/1/x/true are used. Up to 4 per part are copied
+# into assets/parts-photos/<part>/ and credited on every page that shows them.
+# ---------------------------------------------------------------------------
+import csv
+PHOTOS = {}
+IMGDIR = os.path.join(ROOT, 'source/parts/images')
+DEST = os.path.join(ROOT, 'assets/parts-photos')
+def load_photos():
+  man = os.path.join(IMGDIR, 'manifest.csv')
+  if not os.path.exists(man): return
+  if os.path.isdir(DEST): shutil.rmtree(DEST)
+  with open(man, encoding='utf-8') as fh:
+    rows_ = list(csv.DictReader(fh))
+  has_keep = rows_ and 'keep' in rows_[0]
+  for r in rows_:
+    if has_keep and str(r.get('keep', '')).strip().lower() not in ('yes', 'y', '1', 'x', 'true', 'keep'): continue
+    pid = r['part_id']; lst = PHOTOS.setdefault(pid, [])
+    if len(lst) >= 4 or not r.get('local_file'): continue
+    src = r['local_file']
+    if not os.path.isabs(src): src = os.path.join(IMGDIR, os.path.relpath(src, 'images') if src.startswith('images') else src)
+    if not os.path.exists(src): continue
+    os.makedirs(os.path.join(DEST, pid), exist_ok=True)
+    name = os.path.basename(src); shutil.copy(src, os.path.join(DEST, pid, name))
+    lst.append({'src': f'assets/parts-photos/{pid}/{name}', 'alt': r.get('alt_text') or '', 'credit': r.get('credit_line') or '',
+                'author': (r.get('author') or 'unknown author')[:80], 'licence': r.get('licence') or '', 'page': r.get('file_page_url') or '',
+                'restricted': bool((r.get('restrictions') or '').strip())})
+  # people or trademarks flagged by Commons: keep them, but never as the first (hero) photo
+  for pid, lst in PHOTOS.items(): lst.sort(key=lambda x: x['restricted'])
+load_photos()
+def hero_src(pid): return PHOTOS[pid][0]['src'] if PHOTOS.get(pid) else P[pid][3]
+
 # Shops by market (from the Shops sheet). Marketplaces with per-page search links
 # (Google Shopping, eBay, AliExpress, Amazon, local) come from each row instead.
 MARKET_SHOPS = {
@@ -158,9 +192,18 @@ def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
   open(os.path.join(d, 'index.html'), 'w').write(doc)
 
 def img(pid, alt, cls='sp-img'):
+  if PHOTOS.get(pid):
+    ph = PHOTOS[pid][0]
+    cap = f'<figcaption>Typical {e(lc_part(PARTS[pid]))}, not the exact part for every model. Photo: {e(ph["author"])}, <a href="{e(ph["page"])}" target="_blank" rel="noopener">{e(ph["licence"])} via Wikimedia Commons</a></figcaption>' if cls == 'sp-img' else ''
+    return f'<figure class="{cls}"><img src="{{R}}{ph["src"]}" alt="{e(alt or ph["alt"])}" title="{e(ph["credit"])}" loading="lazy">{cap}</figure>'
   src = P[pid][3]
   tag = '<span class="sp-imgtag">Photo</span>' if src in REAL else ('<span class="sp-imgtag">Plate</span>' if '/illustrations/' in src else '<span class="sp-imgtag">3D render</span>')
   return f'<figure class="{cls}"><img src="{{R}}{src}" alt="{e(alt)}" loading="lazy">{tag}</figure>'
+
+def gallery(pid):
+  ph = PHOTOS.get(pid) or []
+  if len(ph) < 2: return ''
+  return '<section class="sp-sec"><h2>Photos</h2><div class="sp-gal">' + ''.join(f'<figure><img src="{{R}}{x["src"]}" alt="{e(x["alt"])}" loading="lazy"><figcaption>{e(x["author"])}, <a href="{e(x["page"])}" target="_blank" rel="noopener">{e(x["licence"])}</a></figcaption></figure>' for x in ph) + '</div><p class="sp-note">Photos show the part type, not the exact version for each model. From Wikimedia Commons under the licences shown.</p></section>'
 
 def facts(p):
   dif = p['DIY difficulty (1-5)']
@@ -316,6 +359,7 @@ for pid, p in PARTS.items():
       </div>
       {img(pid, p['Part'])}
     </section>
+    {gallery(pid)}
     <section class="sp-sec sp-cols">
       <div>
         <h2>Pick your bike</h2>
@@ -362,7 +406,7 @@ indexed.insert(0, '/parts/')
 
 # index for search and for Repair cross-links
 idx = {
-  'parts': [{'id': pid, 'name': p['Part'], 'cat': p['Category'], 'img': P[pid][3], 'procs': P[pid][0], 'url': url_part(pid), 'syn': str(p.get('Synonyms (keyword variants)') or '')} for pid, p in PARTS.items()],
+  'parts': [{'id': pid, 'name': p['Part'], 'cat': p['Category'], 'img': hero_src(pid), 'photos': PHOTOS.get(pid, []), 'procs': P[pid][0], 'url': url_part(pid), 'syn': str(p.get('Synonyms (keyword variants)') or '')} for pid, p in PARTS.items()],
   'models': [{'id': mid, 'brand': m['Brand'], 'model': m['Model'], 'url': url_model(m)} for mid, m in MODELS.items()],
   'pages': [[r['Model ID'], r['Part ID'], url_mp(MODELS[r['Model ID']], r['Part ID'])] for r in PAGES],
 }
@@ -374,4 +418,4 @@ s = re.sub(r'\s*<url><loc>https://motobike-five\.vercel\.app/parts/[^<]*</loc>[^
 add = ''.join(f'\n  <url><loc>{SITE}{u}</loc><lastmod>2026-11-02</lastmod></url>' for u in indexed)
 s = s.replace('</urlset>', add.lstrip('\n') + '\n</urlset>') if '</urlset>' in s else s
 open(sm, 'w').write(s)
-print(f'{len(PAGES)} model-part pages, {len(MODELS)} model hubs, {len(PARTS)} part pages; {len(indexed)} indexed')
+print(f'{sum(len(v) for v in PHOTOS.values())} photos for {len(PHOTOS)} parts; {len(PAGES)} model-part pages, {len(MODELS)} model hubs, {len(PARTS)} part pages; {len(indexed)} indexed')
