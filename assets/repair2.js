@@ -63,3 +63,74 @@ if (art) {
     });
   }
 }
+
+/* ---------- Diagnostics tool (/repair/diagnose/): bike, system, symptom, result.
+   State lives in the URL hash so a result can be shared: #bike=petrol&sys=brakes&p=spongy-brake ---------- */
+const dg = document.getElementById('dg');
+if (dg) {
+  import('./content/repair-index.js').then(({ default: D }) => {
+    const U = { 'ok-to-ride': ['OK to ride', 'ok', 'You can ride carefully to a safe place or workshop, but fix it soon.'], 'ride-with-care': ['Ride with care', 'care', 'Ride gently and only as far as you need to. Check it before a long trip.'], 'do-not-ride': ['Do not ride', 'stop', 'Do not ride until this is fixed. It can cause a crash or serious damage.'], 'stop-now': ['Stop now', 'now', 'Stop as soon as it is safe and switch off. Riding on can be dangerous.'] };
+    const R = Object.fromEntries(D.r.map(([id, t, l]) => [id, { t, l }]));
+    const T = Object.fromEntries(D.t.map(([id, t]) => [id, t]));
+    const P = D.p.map(([id, t, also, sysName, u, sys, reps, parts]) => ({ id, t, also, sysName, u, sys, reps, parts }));
+    const BIKES = {
+      petrol: { t: 'Petrol motorcycle', d: 'Manual gears and a clutch, chain drive', hide: ['cvt', 'ev-drive', 'ev-battery'] },
+      scooter: { t: 'Petrol scooter', d: 'Twist and go, automatic drive', hide: ['clutch', 'gearbox', 'chain', 'ev-drive', 'ev-battery'] },
+      electric: { t: 'Electric motorcycle or scooter', d: 'Battery, controller and motor', hide: ['starting', 'running', 'fuel', 'ignition', 'engine', 'smoke', 'oil', 'cooling', 'clutch', 'gearbox', 'cvt', 'power'] },
+    };
+    const L = { rider: 'Rider job', home: 'Home workshop', workshop: 'Workshop job' };
+    const q = () => Object.fromEntries(new URLSearchParams(location.hash.slice(1)));
+    const go = (o) => { location.hash = new URLSearchParams(o).toString(); };
+    const steps = (n) => `<div class="dg-steps">${['Your bike', 'Where', 'What you notice', 'Result'].map((x, i) => `<span class="${i === n ? 'is-on' : i < n ? 'is-done' : ''}">${i + 1}. ${x}</span>`).join('')}</div>`;
+    const card = (p, st) => `<button type="button" data-p="${p.id}"><b>${esc(p.t)}</b><i class="ru is-${(U[p.u] || [])[1] || ''}">${(U[p.u] || [''])[0]}</i></button>`;
+    const render = () => {
+      const s = q();
+      if (s.p) {
+        const p = P.find((x) => x.id === s.p); if (!p) return go({});
+        const u = U[p.u] || ['', '', ''];
+        dg.innerHTML = `${steps(3)}<button class="dg-back" data-back="sys">← Back</button><div class="dg-res">
+          <span class="ute-label">${esc(p.sysName)}</span><h3>${esc(p.t)}</h3>
+          <p class="dg-safe is-${u[1]}"><b>${u[0]}.</b> ${u[2]}</p>
+          <div class="dg-cols">
+            <div><h4>Most likely fixes</h4><ul class="r-list">${p.reps.filter((x) => R[x]).map((x) => `<li><a href="${ROOT}repair/repairs/${x}/"><b>${esc(R[x].t)}</b><span>${L[R[x].l] || ''}</span></a></li>`).join('')}</ul></div>
+            <div><h4>Parts to check</h4><ul class="r-list">${p.parts.filter((x) => T[x]).map((x) => `<li><a href="${ROOT}repair/parts/${x}/"><b>${esc(T[x])}</b></a></li>`).join('')}</ul></div>
+          </div>
+          <a class="dg-go" href="${ROOT}repair/problems/${p.id}/">Start the step-by-step diagnosis →</a><button class="dg-again" data-again>Check another problem</button>
+        </div>`;
+      } else if (s.sys && s.bike) {
+        const list = P.filter((x) => x.sys === s.sys);
+        dg.innerHTML = `${steps(2)}<button class="dg-back" data-back="bike">← Back</button><h2>What do you notice?</h2><div class="dg-opts">${list.map((p) => card(p)).join('')}</div>`;
+      } else if (s.bike) {
+        const B = BIKES[s.bike]; if (!B) return go({});
+        const sys = Object.entries(D.s).filter(([k]) => !B.hide.includes(k)).map(([k, n]) => [k, n, P.filter((x) => x.sys === k).length]).filter((x) => x[2]);
+        dg.innerHTML = `${steps(1)}<button class="dg-back" data-back="">← Back</button><h2>Where is the problem?</h2>
+          <div class="dg-search r-search"><label class="r-sr" for="dg-q">Or describe it</label><input id="dg-q" type="search" placeholder="Or type it: for example, brakes squeal" autocomplete="off"><ul class="r-results" hidden></ul></div>
+          <div class="dg-opts">${sys.map(([k, n, c]) => `<button type="button" data-sys="${k}"><b>${esc(n)}</b><span>${c} problems</span></button>`).join('')}</div>`;
+        const inp = dg.querySelector('#dg-q'), ul = dg.querySelector('.r-results');
+        inp.addEventListener('input', () => {
+          const w = inp.value.toLowerCase().split(/\s+/).filter((x) => x.length > 1);
+          ul.hidden = !w.length; if (!w.length) return;
+          const r = P.filter((x) => !B.hide.includes(x.sys)).filter((x) => w.every((k) => `${x.t} ${x.also} ${x.sysName}`.toLowerCase().includes(k))).slice(0, 15);
+          ul.innerHTML = r.length ? r.map((x) => `<li><a href="#bike=${s.bike}&sys=${x.sys}&p=${x.id}"><span>Problem</span><b>${esc(x.t)}</b><em>${esc(x.sysName)}</em></a></li>`).join('') : '<li class="none">Nothing found. Pick an area below.</li>';
+        });
+      } else {
+        dg.innerHTML = `${steps(0)}<h2>What are you riding?</h2><div class="dg-opts is-big">${Object.entries(BIKES).map(([k, b]) => `<button type="button" data-bike="${k}"><b>${b.t}</b><span>${b.d}</span></button>`).join('')}</div>`;
+      }
+      dg.scrollIntoView({ block: 'nearest' });
+    };
+    dg.addEventListener('click', (e) => {
+      const s = q(), b = e.target.closest('button'); if (!b) return;
+      if (b.dataset.bike) go({ bike: b.dataset.bike });
+      else if (b.dataset.sys) go({ bike: s.bike, sys: b.dataset.sys });
+      else if (b.dataset.p) go({ bike: s.bike, sys: s.sys, p: b.dataset.p });
+      else if (b.dataset.again !== undefined) go({ bike: s.bike });
+      else if (b.dataset.back !== undefined) { const k = b.dataset.back; go(k === 'sys' ? { bike: s.bike, sys: s.sys } : k === 'bike' ? { bike: s.bike } : {}); }
+    });
+    window.addEventListener('hashchange', render);
+    render();
+  });
+}
+
+/* ?q= on the Repair home fills the search (used by the site search in Google results) */
+const qq = new URLSearchParams(location.search).get('q');
+if (qq && box) { const i = box.querySelector('input'); i.value = qq; setTimeout(() => i.dispatchEvent(new Event('input')), 400); }

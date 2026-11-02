@@ -46,6 +46,25 @@
       .hm-facts span.is-key { font-size: 12.5px; line-height: 1.35; }
     }
     @media (max-width: 900px) { .hm-look { grid-template-columns: 1fr; } .hm-facts { font-size: 13px; } .hm-facts span + span::before { margin-right: 10px; } }
+    .hm-fix { background: #F7F7F7; }
+    .hm-fix-search { display: flex; max-width: 720px; margin: 0 0 18px; }
+    .hm-fix-search input { flex: 1; min-width: 0; font: 400 18px/1.2 var(--sans); padding: 15px 16px; border: 2px solid var(--ink); border-right: 0; border-radius: 0; background: #FFF; }
+    .hm-fix-search button { font: 700 16px/1 var(--sans); padding: 0 22px; background: var(--ink); color: #FFF; border: 2px solid var(--ink); cursor: pointer; border-radius: 0; }
+    .hm-fix-ways { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .hm-fix-ways a { display: flex; flex-direction: column; gap: 4px; padding: 16px; border: 1.5px solid var(--ink); background: #FFF; color: var(--ink); text-decoration: none; }
+    .hm-fix-ways a:hover { background: var(--ink); color: #FFF; }
+    .hm-fix-ways a.is-main { background: var(--warm); border-color: var(--warm); color: #FFF; }
+    .hm-fix-ways b { font: 900 18px/1.2 var(--sans); } .hm-fix-ways span { font-size: 14px; }
+    .hm-fix-h { font-size: 18px; margin: 26px 0 10px; }
+    .hm-fix-common { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+    .hm-fix-common a { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 14px; background: #FFF; border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+    .hm-fix-common a:hover { border-color: var(--ink); }
+    .hm-fix-common b { font: 700 15.5px/1.3 var(--sans); }
+    .hm-fix .ru { font: 700 11px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; padding: 6px 8px; font-style: normal; }
+    .hm-fix .ru.is-ok { background: #E6F2EB; color: #1E6B44; } .hm-fix .ru.is-care { background: #FFF3D6; color: #7A5300; } .hm-fix .ru.is-stop { background: #FCE4E2; color: #9E1F17; } .hm-fix .ru.is-now { background: #9E1F17; color: #FFF; }
+    .r-sr { position: absolute; left: -9999px; }
+    @media (max-width: 1000px) { .hm-fix-ways { grid-template-columns: 1fr 1fr; } .hm-fix-ways a.is-main { grid-column: 1 / -1; } .hm-fix-common { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px) { .hm-fix-common { grid-template-columns: 1fr; } }
     .hm-section { padding: 64px 0; border-bottom: 1px solid var(--line); }
     .hm-section h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.015em; margin: 6px 0 12px; max-width: 820px; }
     .hm-section .hm-lead { font-size: 18px; max-width: 760px; color: var(--ink-soft); margin: 0 0 28px; }
@@ -130,6 +149,7 @@
       .hm-soon-imgs { grid-template-columns: repeat(4, 1fr); }
     }
   </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Moto Zero", "url": "https://motobike-five.vercel.app/", "publisher": {"@type": "Organization", "name": "Transitions Lab", "url": "https://www.transitionslab.org"}, "potentialAction": {"@type": "SearchAction", "target": "https://motobike-five.vercel.app/repair/?q={search_term_string}", "query-input": "required name=search_term_string"}}, {"@type": "Organization", "name": "Transitions Lab", "url": "https://www.transitionslab.org"}]}</script>
 </head>
 <body>
 <div class="ute-page">
@@ -146,7 +166,7 @@
         <p class="hm-mission">See every part in 3D, ride it, build it and trace its wiring. A free course for mechanics, students and riders.</p>
         <div class="hm-quick">
           <a class="is-main" href="overview/">Explore the motorcycle in 3D →</a>
-          <a href="crash-course/">15-minute crash course</a>
+          <a href="repair/diagnose/">Diagnose a problem</a>
         </div>
         <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview</b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit</b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder</b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><b>Wiring Lab</b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course</b><span>Five modules from engine to battery</span></a><a href="engine/"><b>Under the Engine</b><span>Every gear and valve moving, in 3D</span></a></div>
         <p class="hm-facts"><span class="is-key">32 chapters</span><span class="is-key">56 3D models</span><span class="is-key">38 technical plates</span><span>274 repair guides</span><span>16 motorcycle types</span><span>148 quiz questions</span><span>Thousands of bikes served</span></p>
@@ -201,6 +221,24 @@
             <a class="ute-btn is-primary" href="engine/">Open Under the Engine →</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="hm-section hm-fix">
+      <div class="hm-wrap">
+        <span class="hm-label">Repair</span>
+        <h2>What is wrong with your bike?</h2>
+        <p class="hm-lead">274 problems, 185 step-by-step repairs and 134 parts, for petrol motorcycles, scooters and electric bikes.</p>
+        <form class="hm-fix-search" action="repair/" method="get" role="search"><label class="r-sr" for="hm-q">Search repairs</label><input id="hm-q" name="q" type="search" placeholder="Describe it: for example, will not start" autocomplete="off"><button type="submit">Search</button></form>
+        <div class="hm-fix-ways">
+          <a href="repair/diagnose/" class="is-main"><b>Diagnose a problem</b><span>Three questions to the likely fault and the fix</span></a>
+          <a href="repair/problems/"><b>By problem</b><span>Start from what you see, hear or feel</span></a>
+          <a href="repair/repairs/"><b>By repair</b><span>Step-by-step jobs, rider to workshop</span></a>
+          <a href="repair/parts/"><b>By part</b><span>What each part does and how it fails</span></a>
+          <a href="parts/"><b>Spare parts</b><span>Prices and shops for 41 popular bikes</span></a>
+        </div>
+        <h3 class="hm-fix-h">Common problems</h3>
+        <div class="hm-fix-common"><a href="repair/problems/cranks-no-start/"><b>Engine turns over but will not start</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/battery-flat/"><b>Battery goes flat after the bike is parked</b><i class="ru is-care">Ride with care</i></a><a href="repair/problems/spongy-brake/"><b>Brake lever or pedal feels spongy</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/chain-noise/"><b>Chain is noisy, clattering or slapping</b><i class="ru is-care">Ride with care</i></a><a href="repair/problems/overheating-air/"><b>Air-cooled engine overheats</b><i class="ru is-now">Stop now</i></a><a href="repair/problems/sudden-power-loss/"><b>Sudden loss of power while riding</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/puncture-tube/"><b>Flat tyre on a wheel with an inner tube</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/brake-squeal/"><b>Brakes squeal</b><i class="ru is-care">Ride with care</i></a></div>
       </div>
     </section>
 

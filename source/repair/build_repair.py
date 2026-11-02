@@ -201,7 +201,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None):
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="{rel}assets/site.js"></script>
-<script type="module" src="{rel}assets/repair2.js?v=1"></script>
+<script type="module" src="{rel}assets/repair2.js?v=2"></script>
 </body>
 </html>
 '''
@@ -367,13 +367,14 @@ page('repair/parts/', 'Motorcycle parts: what they do and how they fail | Moto Z
 # repair home
 rel = '../'
 start = [x for x in ('pre-ride-check', 'service-schedule', 'road-test', 'pre-delivery-inspection') if x in REP]
-common = [x for x in ('cranks-no-start', 'no-crank-no-sound', 'battery-flat', 'spongy-brake', 'chain-noise', 'overheating', 'loss-of-power', 'flat-tyre', 'ev-wont-power-on', 'white-smoke') if x in PROB]
+common = [x for x in ('cranks-no-start', 'battery-flat', 'spongy-brake', 'chain-noise', 'overheating-air', 'sudden-power-loss', 'puncture-tube', 'ev-wont-charge', 'white-smoke', 'brake-squeal') if x in PROB]
 html_ = f'''    <header class="r-head is-home">
       <span class="ute-label">Repair</span>
       <h1>Find the fault. Fix it. Get the part.</h1>
       <p class="r-lead">For commuter motorcycles, scooters and electric bikes: {len(PROB)} problems, {len(REP)} repairs and {len(PART)} parts.</p>
       {search_box()}
       <div class="r-ways">
+        <a href="{rel}repair/diagnose/" class="is-main"><b>Diagnose it</b><span>Three questions to the likely fault</span></a>
         <a href="{rel}repair/problems/"><b>By problem</b><span>Start from what you see, hear or feel</span></a>
         <a href="{rel}repair/repairs/"><b>By repair</b><span>Step-by-step jobs, rider to workshop</span></a>
         <a href="{rel}repair/parts/"><b>By part</b><span>What each part does and how it fails</span></a>
@@ -394,8 +395,29 @@ html_ = f'''    <header class="r-head is-home">
 page('repair/', 'Motorcycle repair: find the fault, fix it, get the part | Moto Zero', f'Diagnose {len(PROB)} motorcycle, scooter and electric bike problems, follow {len(REP)} step-by-step repairs and find the right parts.', html_, [('Repair', 'repair/')], rel)
 urls = ['repair/', 'repair/problems/', 'repair/repairs/', 'repair/parts/'] + urls
 
+# diagnostics tool
+rel = '../../'
+html_ = f'''    <header class="r-head is-home">
+      <span class="ute-label">Repair · Diagnostics</span>
+      <h1>Motorcycle diagnostics: what is wrong with your bike?</h1>
+      <p class="r-lead">Answer three quick questions to find the likely fault, whether it is safe to ride, and the step-by-step fix. Free, no login, for petrol motorcycles, scooters and electric bikes.</p>
+    </header>
+    <section class="r-sec dg" id="dg" aria-live="polite"><p>Loading…</p></section>
+    <section class="r-sec r-safe"><h2>How this works</h2><ul>
+      <li>Pick your bike, where the problem is, and what you notice. The tool lists the {len(PROB)} problems in this guide, sorted by system.</li>
+      <li>Each answer opens a full diagnosis: is it safe to ride, two-minute checks, then yes/no steps that end at a repair, a part or a workshop.</li>
+      <li>Brakes, steering, tyres, fuel leaks and high-voltage faults are marked Do not ride or Stop now. Fix them before riding.</li>
+    </ul><p class="r-note">Prefer to browse? <a href="{rel}repair/problems/">All problems</a> · <a href="{rel}repair/repairs/">All repairs</a> · <a href="{rel}repair/parts/">All parts</a> · <a href="{rel}parts/">Spare parts</a></p></section>'''
+ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": "Moto Zero motorcycle diagnostics", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": SITE + '/repair/diagnose/', "publisher": {"@type": "Organization", "name": "Transitions Lab"},
+      "description": f"Free motorcycle diagnostics: find the fault from {len(PROB)} symptoms, check if it is safe to ride and follow the step-by-step repair."}
+page('repair/diagnose/', 'Motorcycle diagnostics tool: find what is wrong with your bike | Moto Zero', f'Free motorcycle diagnostics tool. Pick your bike and the symptom to find the likely fault, whether it is safe to ride and the step-by-step repair. {len(PROB)} problems covered.', html_,
+     [('Repair', 'repair/'), ('Diagnostics', 'repair/diagnose/')], rel, extra_ld=ld)
+urls.insert(1, 'repair/diagnose/')
+
 # search index
-idx = {'p': [[x['id'], x['title'], ' '.join(x.get('also_called', [])), SYS.get(x['system'], ''), x.get('urgency', '')] for x in PROB.values()],
+idx = {'p': [[x['id'], x['title'], ' '.join(x.get('also_called', [])), SYS.get(x['system'], ''), x.get('urgency', ''), x['system'], x.get('repairs', [])[:3], x.get('parts', [])[:4]] for x in PROB.values()],
+       's': SYS,
        'r': [[x['id'], x['title'], x.get('level', '')] for x in REP.values()],
        't': [[x['id'], x['name'], ' '.join(x.get('aliases', []))] for x in PART.values()]}
 open(os.path.join(ROOT, 'assets/content/repair-index.js'), 'w', encoding='utf-8').write('/* Generated by source/repair/build_repair.py. */\nexport default ' + json.dumps(idx, ensure_ascii=False) + ';\n')

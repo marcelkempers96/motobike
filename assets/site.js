@@ -26,6 +26,7 @@ export const NAV = [
     ['progress/', 'My progress', 'Saved in this browser, no login'],
   ] },
   { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it, get the part', items: [
+    ['repair/diagnose/', 'Diagnose a problem', 'Three questions to the likely fault'],
     ['repair/', 'Repair home', 'Search any problem, part or job'],
     ['repair/problems/', 'By problem', '274 problems, step-by-step checks'],
     ['repair/repairs/', 'By repair', '185 jobs, rider to workshop'],
