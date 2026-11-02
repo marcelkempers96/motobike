@@ -1150,3 +1150,11 @@ a.mz-anim-btn { text-decoration: none; display: inline-flex; align-items: center
 /* Overview: second marker for parts that open in Under the Engine */
 .mz-part.is-eng::after { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2A4FE0; margin-left: 6px; vertical-align: 1px; }
 .ute-legend i.is-eng { background: #2A4FE0 !important; border-color: #2A4FE0 !important; margin-left: 10px; }
+
+/* Overview on phones: the panel stacks under the bike, with a clear close button that stays in reach */
+@media (max-width: 960px) {
+  .mz-pagebar ~ .mz-split, .mz-split, .mz-split[data-open="1"] { height: auto !important; min-height: 0 !important; }
+  .mz-split[data-open="1"] .mz-panel { border-top: 2px solid var(--ink); }
+  .mz-panel-head { position: sticky; top: 56px; z-index: 30; background: #FFFFFF; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+  .mz-panel-head .ute-cview-close { width: 44px; height: 44px; font-size: 22px; font-weight: 700; border: 2px solid var(--ink); background: #FFFFFF; color: var(--ink); display: grid; place-items: center; }
+}

@@ -19,7 +19,7 @@
 .mz-icon svg { width: 15px; height: 15px; display: block; }
 html.mz-embed .mz-pagebar { display: none !important; }
 /* the Overview keeps to one screen with the bar in place */
-.mz-pagebar ~ .mz-split { height: calc(100vh - 61px - 49px); }
+@media (min-width: 961px) { .mz-pagebar ~ .mz-split { height: calc(100vh - 61px - 49px); } }
 .mz-pagebar ~ .mz-split .ute-section-head h2 { font-size: 19px; }
 @media (max-width: 600px) {
   .mz-pagebar { padding: 6px 14px; gap: 8px; min-height: 46px; }

@@ -18,7 +18,7 @@ XLSX = os.path.join(ROOT, 'source/parts/motorcycle-spare-parts-research.xlsx')
 OUT = os.path.join(ROOT, 'parts')
 SITE = 'https://motobike-five.vercel.app'
 INDEX_FROM = 12          # priority score from which model-part pages are indexed
-CSSV = '20261102b'
+CSSV = '20261102c'
 
 e = lambda s: html.escape(str(s if s is not None else ''), quote=True)
 slug = lambda s: re.sub(r'[^a-z0-9]+', '-', str(s).lower()).strip('-')
