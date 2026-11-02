@@ -132,6 +132,7 @@ def link_rewrite(h, rel):
   h = re.sub(r'href="/moto-zero/repair/(problems|repairs|parts)"', lambda m: f'href="{rel}repair/{m.group(1)}/"', h)
   h = re.sub(r'href="/spare-parts/([a-z0-9-]+)"', lambda m: f'href="{rel}{shop_url(m.group(1).replace("-", "_"))}"', h)
   h = re.sub(r'href="/overview/', f'href="{rel}overview/', h)
+  h = re.sub(r'href="/(engine|wiring|crash-course|learn|cockpit|build|parts)/', lambda m: f'href="{rel}{m.group(1)}/', h)
   h = re.sub(r'href="(https?://[^"]+)"', r'href="\1" target="_blank" rel="noopener"', h)
   return h
 

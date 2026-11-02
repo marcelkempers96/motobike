@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moto Zero · Wiring Lab</title>
+  <link rel="canonical" href="https://motobike-five.vercel.app/wiring/">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Moto Zero"><meta property="og:title" content="Moto Zero · Wiring Lab"><meta property="og:description" content="The Module 3 wiring plates made live: trace the main harness and work the starting, charging and ignition circuits, with faults to diagnose."><meta property="og:url" content="https://motobike-five.vercel.app/wiring/"><meta property="og:image" content="https://motobike-five.vercel.app/assets/photos/home-ov-all-3q.webp"><meta name="twitter:card" content="summary_large_image">
   <meta name="description" content="The Module 3 wiring plates made live: trace the main harness and work the starting, charging and ignition circuits, with faults to diagnose.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,12 +81,12 @@
       <div class="wb-out">
         <svg viewBox="0 0 640 300" id="wb-svg" role="img" aria-label="Circuit diagram"></svg>
         <div class="ute-stats wb-stats">
-          <div class="stat"><div class="stat-l">Current</div><div class="stat-v"><span data-s="i">–</span><small>A</small></div></div>
-          <div class="stat"><div class="stat-l">Voltage at the loads</div><div class="stat-v"><span data-s="vl">–</span><small>V</small></div></div>
-          <div class="stat"><div class="stat-l">Voltage lost in wiring</div><div class="stat-v"><span data-s="drop">–</span><small>%</small></div></div>
-          <div class="stat"><div class="stat-l">Heat in wire and earth</div><div class="stat-v"><span data-s="heat">–</span><small>W</small></div></div>
-          <div class="stat"><div class="stat-l">Headlight brightness</div><div class="stat-v"><span data-s="lum">–</span><small>%</small></div></div>
-          <div class="stat"><div class="stat-l">Wire load</div><div class="stat-v"><span data-s="amp">–</span><small>% of rating</small></div></div>
+          <div class="stat"><div class="stat-l">Current</div><div class="stat-v"><span data-s="i">0</span><small>A</small></div></div>
+          <div class="stat"><div class="stat-l">Voltage at the loads</div><div class="stat-v"><span data-s="vl">0</span><small>V</small></div></div>
+          <div class="stat"><div class="stat-l">Voltage lost in wiring</div><div class="stat-v"><span data-s="drop">0</span><small>%</small></div></div>
+          <div class="stat"><div class="stat-l">Heat in wire and earth</div><div class="stat-v"><span data-s="heat">0</span><small>W</small></div></div>
+          <div class="stat"><div class="stat-l">Headlight brightness</div><div class="stat-v"><span data-s="lum">0</span><small>%</small></div></div>
+          <div class="stat"><div class="stat-l">Wire load</div><div class="stat-v"><span data-s="amp">0</span><small>% of rating</small></div></div>
         </div>
         <p class="wb-msg" id="wb-msg" aria-live="polite"></p>
         <details class="wb-try"><summary>Things to try</summary><ul>
@@ -188,7 +190,7 @@
     phase = (phase + dt * Math.min(3, I / 6)) % 1;
     draw(r);
     setS('i', r.i.toFixed(1)); setS('vl', r.vl.toFixed(2)); setS('drop', r.drop.toFixed(1)); setS('heat', r.heat.toFixed(1));
-    setS('lum', head && r.closed ? Math.round(lum * 100) : '–'); setS('amp', r.closed ? Math.round(r.amp) : 0);
+    setS('lum', head && r.closed ? Math.round(lum * 100) : 0); setS('amp', r.closed ? Math.round(r.amp) : 0);
     var msg = $('#wb-msg'), m = '', cls = 'is-ok';
     if (blown) { m = 'The fuse has blown: the current went above ' + r.fuse + ' A. Find the cause before fitting a new fuse, then use "Replace the fuse".'; cls = 'is-warn'; }
     else if (!val('sw')) { m = 'Ignition switch off: no current flows.'; cls = ''; }

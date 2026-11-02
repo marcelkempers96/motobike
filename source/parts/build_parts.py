@@ -246,11 +246,12 @@ def shop_rows(row, m):
   if m['Brand'] in BRAND_OEM: names.append(BRAND_OEM[m['Brand']])
   for code in re.split(r'[/ ,]+', str(m['Primary markets'])):
     names += MARKET_SHOPS.get(code, [])
-  seen = set()
+  seen = set(); hosts = {h for *_x, h in out}
   for n in names:
     if n in seen or n not in SHOPS: continue
     seen.add(n); s = SHOPS[n]
     u = CONSUMER_URL.get(n, s['URL'])
+    if re.sub(r'^https?://(www\.)?', '', u).split('/')[0] in hosts: continue
     out.append((n, u, s['Type'] + ': ' + str(s['Strengths for this project']).split(';')[0], re.sub(r'^https?://(www\.)?', '', u).split('/')[0]))
   return out[:9]
 
@@ -331,7 +332,7 @@ for mid, m in MODELS.items():
   rs = by_model.get(mid, [])
   cats = {}
   for r in rs: cats.setdefault(PARTS[r['Part ID']]['Category'], []).append(r)
-  sched = ''.join(f'<tr><td><a href="{{R}}{url_mp(m, r["Part ID"]).lstrip("/")}">{e(PARTS[r["Part ID"]]["Part"])}</a></td><td>{e(PARTS[r["Part ID"]]["Typical interval (indicative)"])}</td><td>{"".join(f"""<a href="{{R}}repair/repairs/{x}/">{e(PROC[x]["title"])}</a>""" for x in P[r["Part ID"]][0][:1]) or "–"}</td></tr>' for r in sorted(rs, key=lambda x: -int(x['Priority score'] or 0)))
+  sched = ''.join(f'<tr><td><a href="{{R}}{url_mp(m, r["Part ID"]).lstrip("/")}">{e(PARTS[r["Part ID"]]["Part"])}</a></td><td>{e(PARTS[r["Part ID"]]["Typical interval (indicative)"])}</td><td>{"".join(f"""<a href="{{R}}repair/repairs/{x}/">{e(PROC[x]["title"])}</a>""" for x in P[r["Part ID"]][0][:1]) or "See manual"}</td></tr>' for r in sorted(rs, key=lambda x: -int(x['Priority score'] or 0)))
   body = f'''
     <section class="sp-head is-model">
       <div>
