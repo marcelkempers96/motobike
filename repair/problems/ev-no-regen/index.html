@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regenerative braking does not work: causes and step-by-step checks | Moto Zero</title>
+  <meta name="description" content="Regenerative braking does not work on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/problems/ev-no-regen/">
+  <meta property="og:title" content="Regenerative braking does not work: causes and step-by-step checks | Moto Zero"><meta property="og:description" content="Regenerative braking does not work on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each."><meta property="og:url" content="https://motobike-five.vercel.app/repair/problems/ev-no-regen/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Problems", "item": "https://motobike-five.vercel.app/repair/problems/"}, {"@type": "ListItem", "position": 3, "name": "Electric drive", "item": "https://motobike-five.vercel.app/repair/systems/ev-drive/"}, {"@type": "ListItem", "position": 4, "name": "Regenerative braking does not work", "item": "https://motobike-five.vercel.app/repair/problems/ev-no-regen/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/problems/">Problems</a> / <a href="../../../repair/systems/ev-drive/">Electric drive</a> / Regenerative braking does not work</p>
+    <header class="r-head">
+      <span class="ute-label">Electric drive</span>
+      <h1>Regenerative braking does not work</h1>
+      <p class="r-meta"><i class="ru is-ok">OK to ride</i><span>Also called: no regen, engine braking missing electric, regen weak</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-problem"><p>When you close the throttle or touch the brake, you no longer feel the gentle slowing you used to feel, or the regen bar on the dash does not move. <strong>Regenerative braking</strong> turns the motor into a generator that slows the bike and puts a little charge back in the battery. It is limited on purpose when the battery is full or cold (Harley-Davidson), so missing regen is often normal. If it is missing all the time, a setting, a switch or a fault code is usually the reason.</p>
+<h2>Is it safe to ride?</h2>
+<p>Yes, the friction brakes still work. Remember regen never replaces the brakes. Expect the bike to roll further when you close the throttle, and brake earlier.</p>
+<h2>Quick checks first</h2>
+<ul>
+<li>Is the battery nearly full? Regen is reduced near 100%.</li>
+<li>Is it a cold morning?</li>
+<li>Is regen switched on in the mode or menu?</li>
+<li>Does your bike have regen at all? Check the manual.</li>
+</ul>
+<h2>Diagnose it step by step</h2>
+<p class="rq"><b>1</b><span>Does your model have regen, and is it switched on?</span></p>
+<ul>
+<li>No regen on this model: nothing to fix.</li>
+<li>Switched off: turn it on as the manual says. Done.</li>
+<li>Yes and on: go to step 2.</li>
+</ul>
+<p class="rq"><b>2</b><span>Is the SoC near full (just charged or just swapped)?</span></p>
+<ul>
+<li>Yes: ride until the SoC falls and test again. Normal behaviour.</li>
+<li>No: go to step 3.</li>
+</ul>
+<p class="rq"><b>3</b><span>Is the battery cold (cold morning, bike parked outside)?</span></p>
+<ul>
+<li>Yes: regen may be limited until the battery warms (Harley-Davidson). Cold lithium cells must not be charged hard (Battery University). Test again after riding.</li>
+<li>No: go to step 4.</li>
+</ul>
+<p class="rq"><b>4</b><span>If your bike starts regen from the brake lever, does the brake light work with each lever?</span></p>
+<ul>
+<li>No: a brake switch fault. <a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a>.</li>
+<li>Yes or not applicable: go to step 5.</li>
+</ul>
+<p class="rq"><b>5</b><span>Does the throttle return fully closed?</span></p>
+<ul>
+<li>No: <a href="../../../repair/repairs/ev-interlock-check/">Check the throttle, brake and stand interlocks</a>.</li>
+<li>Yes: go to step 6.</li>
+</ul>
+<p><strong>6. Is there a code or warning?</strong> <a href="../../../repair/repairs/ev-error-read/">Read electric drive error codes</a>.</p>
+<ul>
+<li>Yes: many bikes turn off regen when there is a battery, motor or controller fault. Follow the code.</li>
+<li>No: full check: <a href="../../../repair/repairs/ev-regen-check/">Check regenerative braking</a>, then the dealer or fleet workshop if still missing.</li>
+</ul>
+<h2>Causes, most likely first</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>How to confirm</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Battery full</td>
+<td>SoC near 100%</td>
+<td>Normal; ride and retest</td>
+</tr>
+<tr>
+<td>Battery cold</td>
+<td>Cold weather</td>
+<td>Normal; retest when warm</td>
+</tr>
+<tr>
+<td>Regen setting off</td>
+<td>Menu or mode</td>
+<td>Switch on</td>
+</tr>
+<tr>
+<td>Brake switch fault</td>
+<td>Brake light dead</td>
+<td><a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a></td>
+</tr>
+<tr>
+<td>Fault code disables regen</td>
+<td>Code shown</td>
+<td><a href="../../../repair/repairs/ev-error-read/">Read electric drive error codes</a></td>
+</tr>
+<tr>
+<td>Controller fault</td>
+<td>All above good</td>
+<td><a href="../../../repair/repairs/ev-controller-diagnosis/">Diagnose a controller fault</a></td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Repairs for this problem</h2><ul class="r-list"><li><a href="../../../repair/repairs/ev-regen-check/"><b>Check regenerative braking</b><span>Home workshop · 15 to 30 min</span></a></li><li><a href="../../../repair/repairs/ev-error-read/"><b>Read electric drive error codes</b><span>Home workshop · 10 to 20 min</span></a></li><li><a href="../../../repair/repairs/ev-interlock-check/"><b>Check the throttle, brake and stand interlocks</b><span>Home workshop · 15 to 30 min</span></a></li><li><a href="../../../repair/repairs/ev-controller-diagnosis/"><b>Diagnose a controller fault</b><span>Workshop job · 30 to 60 min first assessment</span></a></li><li><a href="../../../repair/repairs/brake-switch-test/"><b>Test and adjust the brake light switches</b><span>Home workshop · 15 to 30 min</span></a></li></ul></section>
+        <section><h2>Parts you may need</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/controller/"><span class="rpc-img"><img src="../../../assets/renders/controller.webp" alt="" loading="lazy"></span><b>Motor controller</b></a><a class="rpc-shop" href="../../../parts/part/ev-controller/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/brake_light_switch/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/EL02.png" alt="" loading="lazy"></span><b>Brake light switches</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/throttle_sensor/"><span class="rpc-img"><img src="../../../assets/renders/controller.webp" alt="" loading="lazy"></span><b>Electric throttle sensor</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/traction_battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_hv.webp" alt="" loading="lazy"></span><b>Traction battery pack</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/bms/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/F26.png" alt="" loading="lazy"></span><b>Battery management system</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Related problems</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/ev-cold-weather/"><b>Poor range or slow charging in the cold</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/ev-error-code/"><b>Error code or warning on the dashboard</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-range-drop/"><b>Range has dropped</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/brake-light-dead/"><b>Brake light does not work</b><i class="ru is-stop">Do not ride</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li><a href="https://serviceinfo.harley-davidson.com/sip/service/procedure/2140462551782999685/BLAISE/2015105/en_US?nid=54502" target="_blank" rel="noopener">Harley-Davidson service information: Regenerative braking</a></li><li><a href="https://batteryuniversity.com/article/bu-410-charging-at-high-and-low-temperatures" target="_blank" rel="noopener">Battery University BU-410: Charging at high and low temperatures</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

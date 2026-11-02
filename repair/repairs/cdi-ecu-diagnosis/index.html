@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diagnose a suspected CDI or ECU fault: step by step | Moto Zero</title>
+  <meta name="description" content="Diagnose a suspected CDI or ECU fault: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/cdi-ecu-diagnosis/">
+  <meta property="og:title" content="Diagnose a suspected CDI or ECU fault: step by step | Moto Zero"><meta property="og:description" content="Diagnose a suspected CDI or ECU fault: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/cdi-ecu-diagnosis/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Diagnose a suspected CDI or ECU fault", "item": "https://motobike-five.vercel.app/repair/repairs/cdi-ecu-diagnosis/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Diagnose a suspected CDI or ECU fault</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Diagnose a suspected CDI or ECU fault</h1>
+      <p class="r-meta"><i class="rl is-workshop">Workshop job</i><span>Check safely, then hand it to a workshop</span><span>Time: 1 to 2 h assessment (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="cdi-ecu-diagnosis"><p>The CDI (capacitor discharge ignition unit) on carburettor bikes, or the ECU (engine control unit) on fuel-injected bikes, decides when to fire the spark. These units are expensive and rarely the real fault. Most "dead CDI" bikes have a bad connector, earth, switch, pick-up or coil. This page lists the checks to finish first, then what a workshop does to prove the unit is faulty. Test the module last.</p>
+<h2>Safety</h2>
+<ul>
+<li>Key OFF before unplugging the CDI or ECU. Unplugging with power on can damage it (K-Light 125 manual).</li>
+<li>Never use a test lamp on ECU sensor wires; it can draw too much current. Use a digital meter.</li>
+<li>Never probe the back of an ECU connector with a sharp pin that can spread the terminal.</li>
+</ul>
+<h2>Checks to finish first (home)</h2>
+<ol>
+<li><strong>Battery.</strong> Charged and terminals tight. A low battery gives weak spark and confuses an ECU. <strong>K-Light 125: the ECU works from 9 to 16 V; a diagnostic tool needs at least 8.5 V at the battery.</strong> See <a href="../../../repair/repairs/battery-test-charge/">Test and charge a 12 V battery</a>.</li>
+<li><strong>Fuses and earths.</strong> All fuses, the main earth and the ECU or CDI earth wire clean and tight: <a href="../../../repair/repairs/fuse-relay-check/">Check fuses and relays</a>, <a href="../../../repair/repairs/earth-clean/">Clean and tighten earth connections</a>.</li>
+<li><strong>Switches.</strong> Key switch and engine stop switch: <a href="../../../repair/repairs/kill-switch-test/">Test the engine stop switch</a>. Side stand and neutral switches: <a href="../../../repair/repairs/interlock-switch-test/">Test the side stand, clutch and neutral switches</a>.</li>
+<li><strong>Connectors.</strong> Unplug the CDI or ECU connector (key OFF). Look for green corrosion, water, pushed-back pins. MAVCC notes dirty connections are a common electronic ignition fault.</li>
+<li><strong>Pick-up.</strong> <a href="../../../repair/repairs/pickup-test/">Test the ignition pick-up</a>.</li>
+<li><strong>Coil and cap.</strong> <a href="../../../repair/repairs/ignition-coil-test/">Test the ignition coil and plug cap</a>.</li>
+<li><strong>Fault codes (fuel injection).</strong> Key ON: the engine warning lamp (MIL) should light briefly. If it never lights, check its fuse, earth and the ECU plug (K-Light 125 manual). Read codes: <a href="../../../repair/repairs/efi-code-read/">Read engine fault codes (fuel injection)</a>.</li>
+<li><strong>Battery-powered CDI (DC-CDI).</strong> Check that battery voltage reaches the CDI power wire with the key ON.</li>
+<li><strong>Magneto CDI (AC-CDI, many two-strokes and kickstart bikes).</strong> The CDI is charged by a source (exciter) coil in the stator. Test that coil's resistance to your manual's value: <a href="../../../repair/repairs/stator-test/">Test the stator (generator coils)</a>.</li>
+</ol>
+<h2>What the workshop will do</h2>
+<ul>
+<li>Check power and earth at the unit's connector pins with the wiring diagram and the correct pin chart. This page gives no universal pin values: each bike differs.</li>
+<li>Read live data (engine speed while cranking, battery voltage) on a fuel-injected bike. No engine speed signal while cranking points to the pick-up circuit.</li>
+<li>Fit a known good unit with the <strong>same part number</strong> and test. The K-Light 125 troubleshooting uses this swap method. Some ECUs are coded to the key (immobiliser) and need dealer programming; ask before buying a second-hand unit.</li>
+<li>Check ignition timing if the unit works but the engine runs badly: <a href="../../../repair/repairs/ignition-timing-check/">Check the ignition timing</a>.</li>
+</ul>
+<p>Ask for: what was tested before the unit was condemned, and whether the old unit can be returned if the new one does not fix it.</p>
+<h2>Check your work</h2>
+<ul>
+<li>Strong spark on every turn, steady idle, no warning lamp after the repair.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Faults that come and go with vibration or rain: <a href="../../../repair/repairs/wiring-fault-find/">Find a wiring fault</a>.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ECU working supply voltage</td>
+<td>9 to 16 V DC</td>
+<td>255</td>
+</tr>
+<tr>
+<td>Minimum battery voltage for the diagnostic tool</td>
+<td>8.5 V</td>
+<td>274</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>wiring diagram</li><li>diagnostic tool for your bike (fuel injection)</li><li>spark tester</li><li>a known good unit of the same part number if available</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>contact cleaner</li><li>dielectric grease</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/cdi/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F22.png" alt="" loading="lazy"></span><b>CDI unit</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ecu/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>ECU</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/pickup/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F22.png" alt="" loading="lazy"></span><b>Ignition pick-up</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ignition_coil/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F22.png" alt="" loading="lazy"></span><b>Ignition coil and plug cap</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/earth_strap/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Earth (ground) connections</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_12v.webp" alt="" loading="lazy"></span><b>12 V battery</b></a><a class="rpc-shop" href="../../../parts/part/battery/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/cdi-ecu-suspect/"><b>CDI or ECU suspected faulty</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/coil-fails-hot/"><b>Ignition cuts out when hot and returns when cool</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/engine-warning-light/"><b>Engine warning light (check engine, MIL) is on or flashing</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ignition-timing-suspect/"><b>Ignition timing suspected wrong</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/kickstart-kickback/"><b>Kickstarter kicks back against my foot</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/no-spark/"><b>No spark at the spark plug</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/weak-spark/"><b>Weak, thin or orange spark</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/cuts-out-random/"><b>Cuts out randomly, then restarts</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 85, 86, 255, 274, 275</li><li>MAVCC Motorcycle Mechanic, PDF page 628</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

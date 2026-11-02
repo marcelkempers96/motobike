@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard is on but the bike will not go to ready: causes and step-by-step checks | Moto Zero</title>
+  <meta name="description" content="Dashboard is on but the bike will not go to ready on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/problems/ev-no-ready/">
+  <meta property="og:title" content="Dashboard is on but the bike will not go to ready: causes and step-by-step checks | Moto Zero"><meta property="og:description" content="Dashboard is on but the bike will not go to ready on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each."><meta property="og:url" content="https://motobike-five.vercel.app/repair/problems/ev-no-ready/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Problems", "item": "https://motobike-five.vercel.app/repair/problems/"}, {"@type": "ListItem", "position": 3, "name": "Electric drive", "item": "https://motobike-five.vercel.app/repair/systems/ev-drive/"}, {"@type": "ListItem", "position": 4, "name": "Dashboard is on but the bike will not go to ready", "item": "https://motobike-five.vercel.app/repair/problems/ev-no-ready/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/problems/">Problems</a> / <a href="../../../repair/systems/ev-drive/">Electric drive</a> / Dashboard is on but the bike will not go to ready</p>
+    <header class="r-head">
+      <span class="ute-label">Electric drive</span>
+      <h1>Dashboard is on but the bike will not go to ready</h1>
+      <p class="r-meta"><i class="ru is-stop">Do not ride</i><span>Also called: no ready light, won&#x27;t go into drive mode, P mode stuck, will not start electric</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-problem"><p>The dash lights up but the <strong>ready</strong> symbol (often a green "READY", a "P" that changes to a riding mode, or a motor symbol) never appears. "Ready" means the controller has checked the safety switches and the battery, closed the main contactor (the heavy switch that connects the battery to the controller), and is waiting for throttle. Most often a safety condition is not met: side stand down, no brake held during start, throttle not closed, or the battery not recognised. Less often, a fault code blocks it.</p>
+<h2>Is it safe to ride?</h2>
+<p>It cannot drive. Do not try to bypass switches to make it go.</p>
+<h2>Quick checks first</h2>
+<ul>
+<li>Side stand fully up. Seat closed (some scooters).</li>
+<li>Follow the start steps in your manual exactly: many bikes need a brake held while you press the start or mode button.</li>
+<li>Hands off the throttle when switching on.</li>
+<li>Kill or run switch in the run position.</li>
+<li>Look for a warning symbol or code on the dash.</li>
+</ul>
+<h2>Diagnose it step by step</h2>
+<p class="rq"><b>1</b><span>Is there an error code or warning symbol?</span></p>
+<ul>
+<li>Yes: record and look it up: <a href="../../../repair/repairs/ev-error-read/">Read electric drive error codes</a>. Follow what your manual says for that code. Then go to step 2 if it points to a switch, or <a href="../../../repair/problems/ev-error-code/">Error code or warning on the dashboard</a> for other codes.</li>
+<li>No: go to step 2.</li>
+</ul>
+<p class="rq"><b>2</b><span>With the bike on its stand, do the stand and brake symbols change when you move the stand and pull each brake?</span></p>
+<ul>
+<li>No: a switch is faulty or dirty: <a href="../../../repair/repairs/ev-interlock-check/">Check the throttle, brake and stand interlocks</a>.</li>
+<li>Yes: go to step 3.</li>
+</ul>
+<p class="rq"><b>3</b><span>Does the throttle snap back fully when you let go?</span></p>
+<ul>
+<li>No: a part-open throttle at start-up blocks ready on many bikes. See <a href="../../../repair/problems/throttle-sticks/">Throttle sticks or does not snap shut</a>.</li>
+<li>Yes: go to step 4.</li>
+</ul>
+<p class="rq"><b>4</b><span>Does the dash show the battery and a normal SoC?</span></p>
+<ul>
+<li>No or shows zero: battery not recognised or empty. On a swap bike: <a href="../../../repair/problems/ev-swap-not-recognised/">Swapped battery is not recognised</a>. Fixed battery: charge it and see <a href="../../../repair/problems/ev-wont-charge/">Battery will not charge</a> if needed.</li>
+<li>Yes: go to step 5.</li>
+</ul>
+<p class="rq"><b>5</b><span>Is the dash dim, flickering, or does it reset when you press start?</span></p>
+<ul>
+<li>Yes: low 12 V supply can stop the contactor closing (SolarQuotes). <a href="../../../repair/repairs/ev-aux-check/">Check the 12 V auxiliary system</a>.</li>
+<li>No: go to step 6.</li>
+</ul>
+<p class="rq"><b>6</b><span>Do you hear a click from the contactor when you press start, then nothing?</span></p>
+<ul>
+<li>Click then no ready, or no click at all: a contactor, pre-charge or controller fault. This is workshop work: <a href="../../../repair/repairs/ev-controller-diagnosis/">Diagnose a controller fault</a>. Call the dealer or fleet support line.</li>
+</ul>
+<p><em>What happens if you keep pressing start many times:</em> you may store more fault codes and drain a weak 12 V battery. Stop after two or three tries.</p>
+<h2>Causes, most likely first</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>How to confirm</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Side stand down or switch fault</td>
+<td>Stand symbol stays on</td>
+<td><a href="../../../repair/repairs/ev-interlock-check/">Check the throttle, brake and stand interlocks</a></td>
+</tr>
+<tr>
+<td>Start steps not followed (brake not held)</td>
+<td>Works when done as manual says</td>
+<td>Follow the manual</td>
+</tr>
+<tr>
+<td>Brake switch fault</td>
+<td>Brake light does not come on</td>
+<td><a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a></td>
+</tr>
+<tr>
+<td>Throttle not closed or sensor fault</td>
+<td>Throttle sticks, or code</td>
+<td><a href="../../../repair/repairs/ev-interlock-check/">Check the throttle, brake and stand interlocks</a></td>
+</tr>
+<tr>
+<td>Battery not recognised</td>
+<td>No SoC shown</td>
+<td><a href="../../../repair/repairs/ev-swap-contact-check/">Check swap battery contacts and latch</a></td>
+</tr>
+<tr>
+<td>Low 12 V supply</td>
+<td>Dim dash, low reading</td>
+<td><a href="../../../repair/repairs/ev-aux-check/">Check the 12 V auxiliary system</a></td>
+</tr>
+<tr>
+<td>Contactor, pre-charge or controller fault</td>
+<td>Code; all switches good</td>
+<td><a href="../../../repair/repairs/ev-controller-diagnosis/">Diagnose a controller fault</a></td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Repairs for this problem</h2><ul class="r-list"><li><a href="../../../repair/repairs/ev-interlock-check/"><b>Check the throttle, brake and stand interlocks</b><span>Home workshop · 15 to 30 min</span></a></li><li><a href="../../../repair/repairs/ev-error-read/"><b>Read electric drive error codes</b><span>Home workshop · 10 to 20 min</span></a></li><li><a href="../../../repair/repairs/ev-swap-contact-check/"><b>Check swap battery contacts and latch</b><span>Rider job · 5 to 10 min</span></a></li><li><a href="../../../repair/repairs/ev-aux-check/"><b>Check the 12 V auxiliary system</b><span>Home workshop · 20 to 40 min</span></a></li><li><a href="../../../repair/repairs/ev-controller-diagnosis/"><b>Diagnose a controller fault</b><span>Workshop job · 30 to 60 min first assessment</span></a></li><li><a href="../../../repair/repairs/brake-switch-test/"><b>Test and adjust the brake light switches</b><span>Home workshop · 15 to 30 min</span></a></li></ul></section>
+        <section><h2>Parts you may need</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/interlock_switches/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F23.png" alt="" loading="lazy"></span><b>Side stand, clutch and neutral switches</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/side_stand/"><span class="rpc-img"><img src="../../../assets/illustrations/frame_body/FB02.png" alt="" loading="lazy"></span><b>Side stand and spring</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/brake_light_switch/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/EL02.png" alt="" loading="lazy"></span><b>Brake light switches</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/throttle_sensor/"><span class="rpc-img"><img src="../../../assets/renders/controller.webp" alt="" loading="lazy"></span><b>Electric throttle sensor</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/traction_battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_hv.webp" alt="" loading="lazy"></span><b>Traction battery pack</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/contactor/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/F25.png" alt="" loading="lazy"></span><b>Main contactor and pre-charge</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/controller/"><span class="rpc-img"><img src="../../../assets/renders/controller.webp" alt="" loading="lazy"></span><b>Motor controller</b></a><a class="rpc-shop" href="../../../parts/part/ev-controller/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/aux_battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_12v.webp" alt="" loading="lazy"></span><b>12 V auxiliary battery (electric)</b></a><a class="rpc-shop" href="../../../parts/part/battery/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Related problems</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/ev-error-code/"><b>Error code or warning on the dashboard</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-dash-dark/"><b>Dashboard is dark and the bike seems dead</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/ev-ready-no-drive/"><b>Bike shows ready but will not move</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/ev-swap-not-recognised/"><b>Swapped battery is not recognised</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/start-blocked-interlock/"><b>Will not start in gear, on the side stand or without the clutch pulled</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/throttle-sticks/"><b>Throttle sticks or does not snap shut</b><i class="ru is-now">Stop now</i></a></li><li><a href="../../../repair/problems/ev-wont-charge/"><b>Battery will not charge</b><i class="ru is-stop">Do not ride</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li><a href="https://gogoro.com/product-information" target="_blank" rel="noopener">Gogoro Smart Battery and GoStation safety information</a></li><li><a href="https://www.solarquotes.com.au/blog/ev-12-volt-battery/" target="_blank" rel="noopener">SolarQuotes: Your EV has a 12 volt battery</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

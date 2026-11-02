@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fit LED indicators correctly: step by step | Moto Zero</title>
+  <meta name="description" content="Fit LED indicators correctly: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/led-indicator-fit/">
+  <meta property="og:title" content="Fit LED indicators correctly: step by step | Moto Zero"><meta property="og:description" content="Fit LED indicators correctly: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/led-indicator-fit/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Fit LED indicators correctly", "item": "https://motobike-five.vercel.app/repair/repairs/led-indicator-fit/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Fit LED indicators correctly</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Fit LED indicators correctly</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 45 to 90 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="led-indicator-fit"><p><strong>Home mechanic (basic tools)</strong> · Time: 45 to 90 min (estimate)</p>
+<p>LED indicators draw much less current than bulbs. A flasher made for bulbs senses current, so with LEDs it thinks a bulb has blown and flashes too fast (often called hyperflash), or does not flash at all. Bikes with a CAN-bus dashboard or lamp monitoring may also show a warning. This page shows the two safe fixes: a flasher made for LEDs, or load resistors. It also covers wiring the new lamps so they last.</p>
+<h2>Safety</h2>
+<ul>
+<li>Disconnect the battery negative (-) terminal before cutting or joining wires.</li>
+<li><strong>Load resistors get very hot</strong> in use: they turn the power a bulb would have used into heat. Mount them on bare metal, away from plastic, fuel lines and wires.</li>
+<li>On a bike with CAN-bus lighting or lamp monitoring, do not cut, splice or tap into the factory harness. Use plug-in adapters made for that model, or ask a dealer. Wrong parts can set fault codes or disable functions.</li>
+<li>Indicators must be legal where you ride: check approval marks, colour, spacing and flash rate rules in your country.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>LED indicators with an approval mark for road use. Note their wires: usually two (power and earth). Some have three (indicator, running light and earth).</li>
+<li><strong>Either</strong> an LED-compatible or load-independent flasher with the same plug and pin layout as yours, <strong>or</strong> one load resistor per indicator matched to the bulb it replaces. Resistor sellers list values by bulb wattage (for example, one maker lists different resistors for 10 W and 21 W bulbs). Check the old bulb: the K-Light 125 uses <strong>R10W</strong> indicator bulbs (PDF p. 99).</li>
+<li>On bikes with the flasher built into the dashboard or a control unit, there is no flasher to swap. Use the indicator maker's adapter for your model, or load resistors if the maker says that is correct for your bike.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Test the old indicators work, so you know the switch and wiring are good.</li>
+<li>Disconnect the battery negative.</li>
+<li>Remove one old indicator. Note which wire is power (often the colour from the switch side) and which is earth (often black, or the indicator bolts to the frame for earth). On bulb indicators that earth through their metal stalk, the LED unit will need an earth wire.</li>
+<li>Fit the new indicator. Route its wire away from sharp edges, hot exhaust and moving suspension. Use the factory grommets.</li>
+<li>Join the wires with insulated crimp connectors, or the plug adapter. Pull each crimp firmly to test it. Cover joins with adhesive-lined heat-shrink so water cannot enter. If you solder, support the wire with a cable tie close to the joint: vibration cracks stiff soldered wire next to the joint (splicing method: MAVCC PDF p. 319).</li>
+<li>Repeat for the other indicators.</li>
+<li><strong>Fix the flash rate. Choose one:</strong>
+   - <strong>Option A, new flasher.</strong> Unplug the old flasher. Check the new one has the same pins in the same places; check its earth if it has three pins. Plug it in.
+   - <strong>Option B, load resistors.</strong> Wire one resistor across each LED indicator: one resistor lead to the indicator power wire, the other to earth. Bolt the resistor to bare metal frame with clearance from plastic.</li>
+<li>Reconnect the battery. Test left, right and hazard. Check the dashboard indicator lamp.</li>
+<li>Tidy the wires with cable ties and refit any panels.</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>Both sides flash at normal speed and the dash lamp flashes with them.</li>
+<li>Only one side flashes at a time; no faint glow on the side that should be off (some flashers need both sides connected to stop this).</li>
+<li>After 5 minutes of flashing, the resistors are hot but nothing near them is melting.</li>
+<li>No warning message on the dashboard.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Still fast or steady: <a href="../../../repair/problems/indicators-fast/">Indicators flash too fast</a> or <a href="../../../repair/problems/indicators-steady/">Indicators stay on and do not flash</a>.</li>
+<li>Dashboard warning on a CAN-bus bike: refit the original lamps and check whether the warning clears. If it does, the new lamps are not accepted by that bike; ask a dealer for approved parts.</li>
+<li>Other faults began after this job: <a href="../../../repair/problems/accessory-wiring-fault/">Problems after fitting accessories or an alarm</a>.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original indicator bulb</td>
+<td>R10W</td>
+<td>PDF p. 99</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>crimp tool</li><li>wire stripper</li><li>heat gun or lighter for heat-shrink</li><li>screwdrivers</li><li>spanners</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>insulated crimp connectors</li><li>adhesive-lined heat-shrink tube</li><li>cable ties</li><li>dielectric grease</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/indicators/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/EL01.png" alt="" loading="lazy"></span><b>Indicators</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/flasher/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/EL01.png" alt="" loading="lazy"></span><b>Indicator flasher relay</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/accessory-wiring-fault/"><b>Problems after fitting accessories or an alarm</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/indicators-fast/"><b>Indicators flash too fast</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/indicators-steady/"><b>Indicators stay on and do not flash</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF page 99</li><li>MAVCC Motorcycle Mechanic, PDF page 319</li><li><a href="https://www.kellermann-online.com/en/shop/electronic-accessories/i.load/" target="_blank" rel="noopener">Kellermann i.LOAD load resistors</a></li><li><a href="https://www.kellermann-online.com/en/electronic/elektronik/blinkrelais/" target="_blank" rel="noopener">Kellermann flasher relays</a></li><li><a href="https://www.hella.com/techworld/sg/lounge/can-bus-vehicle-lighting-bulb-replacement-workshop" target="_blank" rel="noopener">HELLA Tech World: CAN bus and vehicle lighting</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

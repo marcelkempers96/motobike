@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reset the idle after throttle body work: step by step | Moto Zero</title>
+  <meta name="description" content="Reset the idle after throttle body work: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/idle-relearn/">
+  <meta property="og:title" content="Reset the idle after throttle body work: step by step | Moto Zero"><meta property="og:description" content="Reset the idle after throttle body work: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/idle-relearn/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Reset the idle after throttle body work", "item": "https://motobike-five.vercel.app/repair/repairs/idle-relearn/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Reset the idle after throttle body work</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Reset the idle after throttle body work</h1>
+      <p class="r-meta"><i class="rl is-workshop">Workshop job</i><span>Check safely, then hand it to a workshop</span><span>Time: 15 to 45 min at a workshop with the right tool (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="idle-relearn"><p>The ECU (engine control unit) learns small corrections over time: how far to open the idle air passage, what the throttle position sensor reads with the throttle closed, and how much fuel to trim. When you clean a dirty throttle body, replace a throttle position sensor, or disconnect the battery, those learned values no longer fit. The engine may idle too high, hunt, or stall when you close the throttle. Many bikes relearn on their own; some need a set procedure or a scan tool. This page is an <strong>assessment and hand-off</strong>.</p>
+<h2>Safety</h2>
+<ul>
+<li>Run the engine outdoors only; exhaust gas contains carbon monoxide.</li>
+<li>Keep the bike on its stand in neutral while it idles, and keep hands clear of the hot exhaust.</li>
+<li>Key OFF before touching any connector on the throttle body.</li>
+</ul>
+<h2>What you can check safely</h2>
+<ol>
+<li>Make sure the basics are right first: no air leaks, throttle cable with free play so the plate closes fully, clean air filter, battery fully charged. See <a href="../../../repair/repairs/intake-leak-test/">Find an intake air leak</a> and <a href="../../../repair/repairs/throttle-cable-adjust/">Adjust throttle free play</a>.</li>
+<li>Turn the key ON and wait a few seconds before starting, so the idle motor can move to its start position.</li>
+<li>Start from cold and let the engine warm up fully at idle without touching the throttle. A higher idle while cold is normal (K-Light 125: below 68 °C).</li>
+<li>Ride normally for 10 to 20 minutes, including some stops at idle. Many bikes settle during this ride.</li>
+<li>Read codes: an idle motor or throttle sensor code means a circuit fault, not a learning problem. See <a href="../../../repair/repairs/efi-code-read/">Read engine fault codes</a>.</li>
+</ol>
+<h2>What not to do</h2>
+<ul>
+<li>Do not turn the idle stop screw on the throttle body to "fix" idle. The K-Light 125 manual says idle is controlled by the ECU and the screw should not be forced. Turning it changes the closed-throttle reading the ECU expects and can make things worse.</li>
+<li>Do not loosen and twist the throttle position sensor unless your manual gives a procedure and a reading to set it to.</li>
+</ul>
+<h2>What the workshop will do</h2>
+<ul>
+<li>Connect a scan tool and run the bike's own idle or throttle reset routine, if it has one. Some bikes use a key-on and throttle sequence instead; the workshop follows the model manual.</li>
+<li>Check live data: closed-throttle sensor reading, idle motor steps, engine temperature and idle speed against the target.</li>
+<li>On the K-Light 125, measure the idle stepper motor windings (50 ± 10 % Ω between each pair at 20 to 30 °C) and its wiring if it does not respond.</li>
+<li>If the ECU software is suspect, refresh it with the manufacturer's tool. The K-Light 125 manual says the ECU itself cannot be repaired.</li>
+</ul>
+<h2>What to ask for</h2>
+<ul>
+<li>"Please read codes and live data, run the idle or throttle reset for this model, and show me the idle speed when warm."</li>
+</ul>
+<h2>Check your work</h2>
+<ul>
+<li>Warm idle at the manual speed (K-Light 125: 1500 ± 100 rpm), steady, and clean return to idle after blipping the throttle.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Idle speed</td>
+<td>1500 ± 100 rpm</td>
+<td>49</td>
+</tr>
+<tr>
+<td>ECU fast idle</td>
+<td>Below 68 °C</td>
+<td>276</td>
+</tr>
+<tr>
+<td>Idle stepper winding resistance (workshop)</td>
+<td>50 ± 10 % Ω at 20 to 30 °C</td>
+<td>266</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>diagnostic scan tool for your bike</li><li>battery charger</li></ul></section>
+        
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/throttle_body/"><span class="rpc-img"><img src="../../../assets/renders/throttle_body.webp" alt="" loading="lazy"></span><b>Throttle body</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/efi_sensors/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>Engine sensors (TPS, MAP, temperature)</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ecu/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>ECU</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_12v.webp" alt="" loading="lazy"></span><b>12 V battery</b></a><a class="rpc-shop" href="../../../parts/part/battery/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/cvt-creeps/"><b>Scooter creeps forward at idle or the rear wheel turns on the stand</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/dirty-throttle-body/"><b>Unstable idle after cleaning or battery disconnection (fuel-injected)</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/hanging-revs/"><b>Revs hang or drop slowly after closing the throttle</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/high-idle/"><b>Idle speed is too high</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/hunting-idle/"><b>Idle speed rises and falls on its own</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/stalls-at-idle/"><b>Engine stalls at idle or at junctions</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/starts-only-with-choke/"><b>Starts only with the choke on or the throttle held open</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/rough-idle/"><b>Rough, lumpy or uneven idle</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 49, 258, 266, 274, 276</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

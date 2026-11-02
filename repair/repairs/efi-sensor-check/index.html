@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check the engine sensors (TPS, MAP, temperature): step by step | Moto Zero</title>
+  <meta name="description" content="Check the engine sensors (TPS, MAP, temperature): safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/efi-sensor-check/">
+  <meta property="og:title" content="Check the engine sensors (TPS, MAP, temperature): step by step | Moto Zero"><meta property="og:description" content="Check the engine sensors (TPS, MAP, temperature): safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/efi-sensor-check/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Check the engine sensors (TPS, MAP, temperature)", "item": "https://motobike-five.vercel.app/repair/repairs/efi-sensor-check/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Check the engine sensors (TPS, MAP, temperature)</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Check the engine sensors (TPS, MAP, temperature)</h1>
+      <p class="r-meta"><i class="rl is-workshop">Workshop job</i><span>Check safely, then hand it to a workshop</span><span>Time: 10 min for home checks; 30 to 90 min at a workshop (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="efi-sensor-check"><p>The ECU decides how much fuel to inject from a few sensors:</p>
+<ul>
+<li><strong>Throttle position sensor (TPS):</strong> on the throttle body; tells the ECU how far the throttle is open.</li>
+<li><strong>Intake pressure sensor (MAP)</strong>, often combined with the <strong>intake air temperature sensor</strong>: measures the vacuum and air temperature in the intake, which tells the ECU how much air the engine is taking in.</li>
+<li><strong>Engine temperature sensor:</strong> in the cylinder head on air-cooled bikes, in the coolant on liquid-cooled bikes. Cold engines get more fuel and a faster idle.</li>
+<li><strong>Crankshaft position sensor</strong> (pick-up): engine speed and position; covered in <a href="../../../repair/repairs/pickup-test/">Test the ignition pick-up</a>.</li>
+</ul>
+<p>A faulty sensor or its wiring gives wrong fuelling: hard cold starts, high idle, hesitation, a flat spot, poor economy. Most faults are in connectors and wires, not the sensor. Sensors are sealed parts; they are replaced, not repaired. This page is an <strong>assessment and hand-off</strong>.</p>
+<h2>Safety</h2>
+<ul>
+<li>Key OFF before unplugging any sensor or ECU connector.</li>
+<li>Do not push meter probes into the front of connectors; it spreads the terminals and makes new faults. A workshop uses back-probe pins.</li>
+</ul>
+<h2>What you can check safely</h2>
+<ol>
+<li><strong>Read codes</strong> first: <a href="../../../repair/repairs/efi-code-read/">Read engine fault codes</a>. "High" codes often mean an open circuit or broken earth; "low" codes often mean a short to earth.</li>
+<li><strong>Look at each connector:</strong> fully clicked in, no green corrosion, no water, no pulled wires. Clean with contact cleaner: <a href="../../../repair/repairs/connector-clean/">Clean and seal electrical connectors</a>.</li>
+<li><strong>MAP sensor pipe</strong> (if it has one): not split, kinked or off. A leak here reads like a big throttle opening.</li>
+<li><strong>Temperature sensor wire</strong> near the hot engine: not melted or chafed.</li>
+<li><strong>Earths:</strong> a poor engine or ECU earth upsets every sensor reading at once. See <a href="../../../repair/repairs/earth-clean/">Clean and tighten earth connections</a>.</li>
+<li><strong>Throttle cable:</strong> must let the throttle close fully, or the TPS never reads "closed". See <a href="../../../repair/repairs/throttle-cable-adjust/">Adjust throttle free play</a>.</li>
+</ol>
+<h2>What the workshop will do</h2>
+<ul>
+<li>Watch live data on a scan tool: does the TPS read smoothly from closed to wide open with no jumps? Does engine temperature rise steadily as the engine warms? Does intake pressure make sense at idle and when stopped?</li>
+<li>Measure supply voltage, signal and sensor resistance at the right pins against the model's table (examples below).</li>
+<li>Check each wire from sensor to ECU for continuity.</li>
+<li>Replace a sensor only after the wiring and supply are proved good, then run any reset needed: <a href="../../../repair/repairs/idle-relearn/">Reset the idle after throttle body work</a>.</li>
+</ul>
+<h2>What to ask for</h2>
+<ul>
+<li>"Please show me the live data for TPS, MAP and engine temperature, and check the connectors and earth before replacing a sensor."</li>
+</ul>
+<h2>Reference values (K-Light 125, for the workshop)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TPS and MAP reference supply</td>
+<td>5 ± 0.1 V</td>
+<td>259, 263</td>
+</tr>
+<tr>
+<td>TPS output, throttle closed</td>
+<td>14 ± 5 % of the reference voltage</td>
+<td>259</td>
+</tr>
+<tr>
+<td>TPS output, throttle fully open</td>
+<td>70 to 80 % of the reference voltage</td>
+<td>259</td>
+</tr>
+<tr>
+<td>Engine (head) temperature sensor</td>
+<td>1.9 to 2.1 kΩ at 25 °C; 0.179 to 0.187 kΩ at 100 °C</td>
+<td>262</td>
+</tr>
+<tr>
+<td>Intake air temperature sensor</td>
+<td>2.0 kΩ at 25 °C</td>
+<td>262</td>
+</tr>
+<tr>
+<td>MAP signal, engine stopped, 100 kPa air pressure</td>
+<td>4.25 to 4.75 V</td>
+<td>263</td>
+</tr>
+<tr>
+<td>Sensor "high" / "low" fault limits</td>
+<td>Above 4.9 V / below 0.1 V</td>
+<td>269</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>torch</li><li>contact cleaner</li><li>scan tool (workshop)</li><li>multimeter with fine probes (workshop)</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>electrical contact cleaner</li><li>dielectric grease if the maker allows</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/efi_sensors/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>Engine sensors (TPS, MAP, temperature)</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/throttle_body/"><span class="rpc-img"><img src="../../../assets/renders/throttle_body.webp" alt="" loading="lazy"></span><b>Throttle body</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/earth_strap/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Earth (ground) connections</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ecu/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>ECU</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/pickup/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F22.png" alt="" loading="lazy"></span><b>Ignition pick-up</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/black-smoke/"><b>Black smoke from the exhaust</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/choke-stuck/"><b>Choke is stuck on or will not work</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/dirty-throttle-body/"><b>Unstable idle after cleaning or battery disconnection (fuel-injected)</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/engine-warning-light/"><b>Engine warning light (check engine, MIL) is on or flashing</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/flat-spot/"><b>Flat spot in the middle of the rev range</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/hard-cold-start/"><b>Hard to start when the engine is cold</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/hard-hot-start/"><b>Hard to start when the engine is hot</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/hesitation/"><b>Hesitates or stumbles when opening the throttle</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/hunting-idle/"><b>Idle speed rises and falls on its own</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/runs-rich/"><b>Engine runs rich, smells of fuel and smokes black</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/stalls-when-hot/"><b>Engine stalls once it is fully warm</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/starts-only-with-choke/"><b>Starts only with the choke on or the throttle held open</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/temp-gauge-high/"><b>Temperature gauge reads high or the warning light is on</b><i class="ru is-now">Stop now</i></a></li><li><a href="../../../repair/problems/high-idle/"><b>Idle speed is too high</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/runs-lean/"><b>Engine runs hot and lean, pops and pinks</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/high-fuel-use/"><b>Uses more fuel than normal</b><i class="ru is-ok">OK to ride</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 259, 260, 261, 262, 263, 269, 274</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

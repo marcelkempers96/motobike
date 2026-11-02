@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check the oxygen sensor: step by step | Moto Zero</title>
+  <meta name="description" content="Check the oxygen sensor: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/o2-sensor-check/">
+  <meta property="og:title" content="Check the oxygen sensor: step by step | Moto Zero"><meta property="og:description" content="Check the oxygen sensor: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/o2-sensor-check/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Check the oxygen sensor", "item": "https://motobike-five.vercel.app/repair/repairs/o2-sensor-check/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Check the oxygen sensor</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Check the oxygen sensor</h1>
+      <p class="r-meta"><i class="rl is-workshop">Workshop job</i><span>Check safely, then hand it to a workshop</span><span>Time: 10 min for home checks; 30 to 60 min at a workshop (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="o2-sensor-check"><p>The oxygen sensor (O2 or lambda sensor) screws into the exhaust pipe near the engine. It measures how much oxygen is left in the exhaust. The ECU uses it to keep the mixture close to the ideal ratio of 14.7 parts air to 1 part fuel by weight. When the sensor works, its signal swings quickly between low (lean, less than about 0.1 V) and high (rich, more than about 0.75 V). A dead, loose or poisoned sensor makes the ECU guess: fuel use rises, idle may hunt and the warning light may come on. Most commuter sensors have a small heater so they work soon after a cold start.</p>
+<h2>Safety</h2>
+<ul>
+<li>The exhaust and sensor are extremely hot after running. Check them cold.</li>
+<li>Do not ride for long with a known exhaust leak near the sensor; it also blows hot gas onto wiring.</li>
+</ul>
+<h2>What you can check safely</h2>
+<ol>
+<li><strong>Codes:</strong> read the ECU. K-Light 125 codes P0131 (lean too long), P0132 (rich too long), P0134 (no activity) and P0030 to P0032 (heater circuit) point here. See <a href="../../../repair/repairs/efi-code-read/">Read engine fault codes</a>.</li>
+<li><strong>Tightness:</strong> with the exhaust cold, check the sensor is fully screwed in. The K-Light 125 manual says a loose sensor reads air as "lean", so the ECU adds fuel and consumption becomes very high.</li>
+<li><strong>Exhaust leaks:</strong> a leak at the header gasket before the sensor lets outside air in and gives the same false lean reading. Look for black soot marks at the joint and listen for ticking. See <a href="../../../repair/repairs/exhaust-leak-check/">Find and fix an exhaust leak</a>.</li>
+<li><strong>Wiring:</strong> follow the sensor lead. It runs near the hot exhaust; look for melted insulation, chafing and a loose or wet connector.</li>
+<li><strong>Oil burning:</strong> blue smoke and oil use can coat ("poison") the sensor and block the catalytic converter. Fix the cause first: <a href="../../../repair/repairs/smoke-diagnosis/">Diagnose exhaust smoke by colour</a>.</li>
+</ol>
+<h2>What the workshop will do</h2>
+<ul>
+<li>With the engine fully warm and running steadily, watch the sensor signal on a scan tool or meter. K-Light 125 test: engine at about 80 °C, idle or steady 3000 to 5000 rpm for more than 2 minutes; the voltage must keep changing between 0 and 1 V. A flat signal means the sensor has failed or something upstream is wrong.</li>
+<li>Measure the heater resistance with the sensor unplugged. K-Light 125: 9.6 ± 1.5 Ω at 21 °C.</li>
+<li>If the signal stays high (rich) when warm, check for a leaking injector or high fuel pressure before changing the sensor. The K-Light 125 manual links a reading always above 500 mV to injector leakage.</li>
+<li>Replace the sensor with the correct part, using a special socket that clears the wire.</li>
+</ul>
+<h2>What to ask for</h2>
+<ul>
+<li>"Please check the O2 signal and heater, look for exhaust leaks before the sensor, and confirm the injector is not leaking before replacing the sensor."</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target air-fuel ratio</td>
+<td>14.7 : 1</td>
+<td>264</td>
+</tr>
+<tr>
+<td>Rich limit / lean limit</td>
+<td>Above 750 mV / below 120 mV</td>
+<td>264</td>
+</tr>
+<tr>
+<td>Heater resistance</td>
+<td>9.6 ± 1.5 Ω at 21 °C</td>
+<td>264</td>
+</tr>
+<tr>
+<td>Live test</td>
+<td>Swings 0 to 1 V, warm engine, over 2 min</td>
+<td>264</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>torch</li><li>spanner for checking tightness (cold engine)</li><li>scan tool (workshop)</li><li>multimeter (workshop)</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>anti-seize suitable for oxygen sensors (workshop</li><li>if the maker allows)</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/o2_sensor/"><span class="rpc-img"><img src="../../../assets/renders/exhaust_4t.webp" alt="" loading="lazy"></span><b>Oxygen sensor</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/exhaust/"><span class="rpc-img"><img src="../../../assets/renders/exhaust_4t.webp" alt="" loading="lazy"></span><b>Exhaust and silencer</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/exhaust_gasket/"><span class="rpc-img"><img src="../../../assets/renders/exhaust_4t.webp" alt="" loading="lazy"></span><b>Exhaust gasket</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/injector/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>Fuel injector</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ecu/"><span class="rpc-img"><img src="../../../assets/illustrations/powertrain/F12.png" alt="" loading="lazy"></span><b>ECU</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/engine-warning-light/"><b>Engine warning light (check engine, MIL) is on or flashing</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/exhaust-leak/"><b>Ticking or puffing from an exhaust leak</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/high-fuel-use/"><b>Uses more fuel than normal</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/hunting-idle/"><b>Idle speed rises and falls on its own</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/injector-fault/"><b>Fuel injector suspected blocked or leaking</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/plug-black-sooty/"><b>Spark plug is black and sooty</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/runs-lean/"><b>Engine runs hot and lean, pops and pinks</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/runs-rich/"><b>Engine runs rich, smells of fuel and smokes black</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/surging-cruise/"><b>Surges or jerks at steady cruising speed</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/black-smoke/"><b>Black smoke from the exhaust</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 264, 270, 274, 276</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

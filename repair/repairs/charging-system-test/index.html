@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test the charging system: step by step | Moto Zero</title>
+  <meta name="description" content="Test the charging system: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/charging-system-test/">
+  <meta property="og:title" content="Test the charging system: step by step | Moto Zero"><meta property="og:description" content="Test the charging system: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/charging-system-test/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Test the charging system", "item": "https://motobike-five.vercel.app/repair/repairs/charging-system-test/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Test the charging system</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Test the charging system</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 to 30 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="charging-system-test"><p><strong>Home mechanic (basic tools)</strong> · Time: 20 to 30 min (estimate)</p>
+<p>While the engine runs, the stator (the generator coils behind the flywheel) makes AC power. The regulator rectifier turns it into DC and holds the voltage at a safe level to charge the battery. This test measures that voltage at the battery and tells you whether the system charges too little, too much, or correctly.</p>
+<h2>Safety</h2>
+<ul>
+<li>Run the engine outdoors only. Exhaust gas kills.</li>
+<li>Keep hands, leads and clothes away from the chain, wheel and hot exhaust.</li>
+<li>Put the bike on the centre stand in neutral, or ask a helper to hold it.</li>
+<li>Do not unplug the battery or any connector while the engine runs. This can destroy the regulator and the ECU (K-Light 125 manual).</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>A digital multimeter on DC volts (20 V range on a manual meter).</li>
+<li>A rev counter. If the bike has none, a workshop can measure engine speed.</li>
+<li>A fully charged battery. A flat battery gives a false low reading. Charge it first with <a href="../../../repair/repairs/battery-test-charge/">Test and charge a 12 V battery</a>.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Check the main fuse first. K-Light 125: <strong>20 A main fuse</strong> between the regulator and the battery. A blown main fuse means no charging at all. See <a href="../../../repair/repairs/fuse-relay-check/">Check fuses and relays</a>.</li>
+<li>Warm the engine to normal temperature.</li>
+<li>Connect the red probe to battery + and the black probe to battery −. Note the reading with the engine off.</li>
+<li>Start the engine and let it idle. The voltage should be a little higher than with the engine off.</li>
+<li>Raise the engine speed slowly to the test speed in your manual. <strong>K-Light 125: 5000 rpm.</strong></li>
+<li>Read the voltage. <strong>K-Light 125: 14.5 ± 0.5 V at 5000 rpm.</strong> Other bikes: use your manual's value and test speed.</li>
+<li>Switch the headlight on and read again. The voltage may fall a little with the lights on; that is normal (K-Light 125 manual).</li>
+<li>Let the engine return to idle and switch it off.</li>
+</ol>
+<h2>What the result means</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Reading at test speed</th>
+<th>Meaning</th>
+<th>Next step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Within the manual range</td>
+<td>Charging system works</td>
+<td>If the battery still goes flat, look for a drain: <a href="../../../repair/repairs/parasitic-drain-test/">Find what is draining the battery</a>, or replace a worn battery</td>
+</tr>
+<tr>
+<td>No rise above the engine-off reading</td>
+<td>Not charging</td>
+<td>Check fuse and connectors, then <a href="../../../repair/repairs/stator-test/">Test the stator</a> and <a href="../../../repair/repairs/regulator-test/">Test the regulator rectifier</a></td>
+</tr>
+<tr>
+<td>Rises a little but stays below range</td>
+<td>Weak charging</td>
+<td>Check the regulator connector and earth, then test stator and regulator</td>
+</tr>
+<tr>
+<td>Above range and still rising with revs</td>
+<td>Overcharging, usually the regulator or its earth</td>
+<td>Stop riding. <a href="../../../repair/repairs/regulator-test/">Test the regulator rectifier</a> and <a href="../../../repair/repairs/earth-clean/">Clean and tighten earth connections</a></td>
+</tr>
+<tr>
+<td>Jumps up and down</td>
+<td>Loose connection or failing regulator</td>
+<td><a href="../../../repair/repairs/connector-clean/">Clean and seal electrical connectors</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>The old MAVCC course used "about 15 V" as a pass value for all bikes. Do not use one number for every bike: use your model's value.</p>
+<h2>Check your work</h2>
+<ul>
+<li>After a repair, repeat the test and get a reading inside the range.</li>
+<li>Ride for a few days and confirm the battery stays charged.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Not charging and the regulator connector is brown or melted: <a href="../../../repair/problems/regulator-hot/">Regulator is very hot or the connector has melted</a>.</li>
+<li>Burnt smell from the engine side cover: <a href="../../../repair/problems/stator-burnt/">Burnt smell from the generator or a dark stator connector</a>.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charging voltage</td>
+<td>14.5 ± 0.5 V at 5000 rpm</td>
+<td>78</td>
+</tr>
+<tr>
+<td>Main fuse</td>
+<td>20 A</td>
+<td>74</td>
+</tr>
+<tr>
+<td>Regulator type</td>
+<td>Three-phase full-wave regulator rectifier</td>
+<td>76</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>tachometer or rev counter on the dashboard</li><li>safety glasses</li></ul></section>
+        
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_12v.webp" alt="" loading="lazy"></span><b>12 V battery</b></a><a class="rpc-shop" href="../../../parts/part/battery/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/regulator/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F21.png" alt="" loading="lazy"></span><b>Regulator rectifier</b></a><a class="rpc-shop" href="../../../parts/part/regulator-rectifier/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/stator/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F21.png" alt="" loading="lazy"></span><b>Stator and flywheel</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/accessory-wiring-fault/"><b>Problems after fitting accessories or an alarm</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/all-lights-out/"><b>All lights stop working</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/battery-corrosion/"><b>Battery terminals are corroded</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/battery-flat/"><b>Battery goes flat after the bike is parked</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/battery-swollen/"><b>Battery is boiling, swollen or leaking</b><i class="ru is-now">Stop now</i></a></li><li><a href="../../../repair/problems/bulbs-blow-often/"><b>Bulbs keep blowing</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/cuts-out-random/"><b>Cuts out randomly, then restarts</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/dim-lights-idle/"><b>Lights go dim at idle</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/headlight-dim/"><b>Headlight is dim</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/headlight-flicker/"><b>Headlight flickers</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/new-battery-dies/"><b>A new battery goes flat quickly</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/not-charging/"><b>Battery is not charging while riding</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/overcharging/"><b>Battery overcharges and bulbs blow</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/regulator-hot/"><b>Regulator is very hot or the connector has melted</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/stator-burnt/"><b>Burnt smell from the generator or a dark stator connector</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/warning-lights-flicker/"><b>Warning lights flicker or come on wrongly</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 34, 74, 76, 78</li><li>MAVCC Motorcycle Mechanic, PDF page 309</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

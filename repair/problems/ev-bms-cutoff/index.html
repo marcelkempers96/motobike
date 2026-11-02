@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battery shuts off suddenly (BMS protection): causes and step-by-step checks | Moto Zero</title>
+  <meta name="description" content="Battery shuts off suddenly (BMS protection) on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/problems/ev-bms-cutoff/">
+  <meta property="og:title" content="Battery shuts off suddenly (BMS protection): causes and step-by-step checks | Moto Zero"><meta property="og:description" content="Battery shuts off suddenly (BMS protection) on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each."><meta property="og:url" content="https://motobike-five.vercel.app/repair/problems/ev-bms-cutoff/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Problems", "item": "https://motobike-five.vercel.app/repair/problems/"}, {"@type": "ListItem", "position": 3, "name": "Electric battery and charging", "item": "https://motobike-five.vercel.app/repair/systems/ev-battery/"}, {"@type": "ListItem", "position": 4, "name": "Battery shuts off suddenly (BMS protection)", "item": "https://motobike-five.vercel.app/repair/problems/ev-bms-cutoff/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/problems/">Problems</a> / <a href="../../../repair/systems/ev-battery/">Electric battery and charging</a> / Battery shuts off suddenly (BMS protection)</p>
+    <header class="r-head">
+      <span class="ute-label">Electric battery and charging</span>
+      <h1>Battery shuts off suddenly (BMS protection)</h1>
+      <p class="r-meta"><i class="ru is-stop">Do not ride</i><span>Also called: battery cuts out, bike switches off while riding, BMS trip, battery protection mode</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-problem"><p>While riding (or charging), the whole bike goes dead: dash off, no drive. After a short wait or a restart it may come back. This is usually the <strong>BMS</strong> opening the battery's output to protect the cells. The BMS prevents over-charging, over-discharging and overheating (Microchip), and UN Regulation 136 tests battery protection against over-discharge, over-temperature, over-current and short circuit. So a cut-off means the BMS saw something it did not like: a cell voltage too low under load, too much current, too high or too low a temperature, or a fault. A loose swap battery can look the same.</p>
+<h2>Is it safe to ride?</h2>
+<p>Do not ride until you know the cause. Cutting out in traffic is dangerous. If the battery is hot, hissing or smells, stop and see <a href="../../../repair/problems/ev-pack-hot-smell/">Battery pack is hot, hissing or smells</a>.</p>
+<h2>Quick checks first</h2>
+<ul>
+<li>What was the SoC when it cut? Was it low?</li>
+<li>Hard acceleration, steep hill or heavy load at the moment it cut?</li>
+<li>Hot day after a long climb, or a cold morning?</li>
+<li>Bump or pothole at the moment it cut (swap battery loose)?</li>
+<li>Battery hot, smelling or damaged?</li>
+</ul>
+<h2>Diagnose it step by step</h2>
+<p class="rq"><b>1</b><span>Is the battery hot, swollen, smelling or hissing?</span></p>
+<ul>
+<li>Yes: stop. <a href="../../../repair/repairs/ev-damaged-pack/">Handle a damaged battery pack</a>.</li>
+<li>No: go to step 2.</li>
+</ul>
+<p class="rq"><b>2</b><span>Did it cut on a bump, and is it a swap battery?</span></p>
+<ul>
+<li>Yes: <a href="../../../repair/repairs/ev-swap-contact-check/">Check swap battery contacts and latch</a>.</li>
+<li>No: go to step 3.</li>
+</ul>
+<p class="rq"><b>3</b><span>Was the SoC low, and did it cut under hard load?</span></p>
+<ul>
+<li>Yes: under-voltage protection. Charge earlier and ride gently when low. If this happens at a higher SoC than before, the battery is ageing or has a weak cell group: go to step 6.</li>
+<li>No: go to step 4.</li>
+</ul>
+<p class="rq"><b>4</b><span>Was the battery very hot (long climb, hot day, charging straight after riding) or very cold?</span></p>
+<ul>
+<li>Yes: temperature protection. Let the battery reach normal temperature. Cold cells sag more under load (Battery University). See <a href="../../../repair/repairs/ev-thermal-check/">Check cooling of the motor and controller</a> and <a href="../../../repair/problems/ev-cold-weather/">Poor range or slow charging in the cold</a>.</li>
+<li>No: go to step 5.</li>
+</ul>
+<p><strong>5. Is there a code?</strong> <a href="../../../repair/repairs/ev-error-read/">Read electric drive error codes</a>.</p>
+<ul>
+<li>Over-current or short-circuit code: something in the controller, motor or wiring draws too much. Workshop. Do not keep restarting.</li>
+<li>Cell or BMS code: go to step 6.</li>
+<li>No code: go to step 6.</li>
+</ul>
+<p><strong>6. Check the battery's record:</strong> <a href="../../../repair/repairs/ev-pack-state/">Check battery state and health</a>. Hand the bike or battery to the dealer or fleet battery team with your notes (SoC, load, temperature, time). On swap networks, report the battery ID and swap it.</p>
+<p><em>What happens if you keep restarting after repeated cut-offs:</em> you force a battery that is protecting itself, and you may be cut off again in a dangerous place.</p>
+<h2>Causes, most likely first</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>How to confirm</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loose swap battery</td>
+<td>Cuts on bumps</td>
+<td><a href="../../../repair/repairs/ev-swap-contact-check/">Check swap battery contacts and latch</a></td>
+</tr>
+<tr>
+<td>Low SoC under hard load</td>
+<td>Low SoC at cut</td>
+<td>Charge earlier</td>
+</tr>
+<tr>
+<td>Battery too hot or cold</td>
+<td>Weather, climbs</td>
+<td>Let battery reach normal temperature</td>
+</tr>
+<tr>
+<td>Weak cell group or ageing pack</td>
+<td>Cuts at rising SoC</td>
+<td>Dealer or fleet battery check</td>
+</tr>
+<tr>
+<td>Over-current from motor or controller fault</td>
+<td>Over-current code</td>
+<td><a href="../../../repair/repairs/ev-controller-diagnosis/">Diagnose a controller fault</a></td>
+</tr>
+<tr>
+<td>BMS fault</td>
+<td>BMS code</td>
+<td>Dealer or fleet</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Repairs for this problem</h2><ul class="r-list"><li><a href="../../../repair/repairs/ev-pack-state/"><b>Check battery state and health</b><span>Home workshop · 15 to 30 min</span></a></li><li><a href="../../../repair/repairs/ev-swap-contact-check/"><b>Check swap battery contacts and latch</b><span>Rider job · 5 to 10 min</span></a></li><li><a href="../../../repair/repairs/ev-error-read/"><b>Read electric drive error codes</b><span>Home workshop · 10 to 20 min</span></a></li><li><a href="../../../repair/repairs/ev-thermal-check/"><b>Check cooling of the motor and controller</b><span>Home workshop · 20 to 40 min</span></a></li><li><a href="../../../repair/repairs/ev-damaged-pack/"><b>Handle a damaged battery pack</b><span>Rider job · 5 to 15 min to make safe; then hand over</span></a></li><li><a href="../../../repair/repairs/ev-controller-diagnosis/"><b>Diagnose a controller fault</b><span>Workshop job · 30 to 60 min first assessment</span></a></li></ul></section>
+        <section><h2>Parts you may need</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/bms/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/F26.png" alt="" loading="lazy"></span><b>Battery management system</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/traction_battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_hv.webp" alt="" loading="lazy"></span><b>Traction battery pack</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/contactor/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/F25.png" alt="" loading="lazy"></span><b>Main contactor and pre-charge</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/controller/"><span class="rpc-img"><img src="../../../assets/renders/controller.webp" alt="" loading="lazy"></span><b>Motor controller</b></a><a class="rpc-shop" href="../../../parts/part/ev-controller/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/charge_port/"><span class="rpc-img"><img src="../../../assets/renders/charge_port.webp" alt="" loading="lazy"></span><b>Charge port</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Related problems</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/ev-cuts-out-accel/"><b>Power cuts out when accelerating hard</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-charge-jumps/"><b>Battery percentage jumps or drops suddenly</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-dash-dark/"><b>Dashboard is dark and the bike seems dead</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/ev-cold-weather/"><b>Poor range or slow charging in the cold</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/ev-pack-hot-smell/"><b>Battery pack is hot, hissing or smells</b><i class="ru is-now">Stop now</i></a></li><li><a href="../../../repair/problems/ev-limp-mode/"><b>Bike is in reduced power or limp mode</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li><a href="https://developerhelp.microchip.com/xwiki/bin/view/applications/power/fundamental-understanding-of-battery-management-system/" target="_blank" rel="noopener">Microchip Developer Help: Fundamental understanding of a battery management system</a></li><li><a href="https://www.batterydesign.net/legislation-rules-and-regulations/ece-r136/" target="_blank" rel="noopener">UN Regulation No. 136 summary (batterydesign.net)</a></li><li><a href="https://batteryuniversity.com/article/bu-410-charging-at-high-and-low-temperatures" target="_blank" rel="noopener">Battery University BU-410: Charging at high and low temperatures</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

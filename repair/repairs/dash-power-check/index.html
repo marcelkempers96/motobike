@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check power to the instruments: step by step | Moto Zero</title>
+  <meta name="description" content="Check power to the instruments: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/dash-power-check/">
+  <meta property="og:title" content="Check power to the instruments: step by step | Moto Zero"><meta property="og:description" content="Check power to the instruments: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/dash-power-check/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Check power to the instruments", "item": "https://motobike-five.vercel.app/repair/repairs/dash-power-check/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Check power to the instruments</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Check power to the instruments</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 to 40 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="dash-power-check"><p><strong>Home mechanic (basic tools)</strong> · Time: 20 to 40 min (estimate)</p>
+<p>The instrument panel (dashboard or meter) needs a power feed when the key is on, an earth, and on most digital dashboards a second, permanent feed from the battery that keeps the clock and trip memory alive. Modern dashboards may also talk to the ECU and other units over a data network called the CAN-bus. This check finds out whether the dashboard is getting what it needs before you blame the dashboard itself, which is usually an expensive part.</p>
+<h2>Safety</h2>
+<ul>
+<li>Key off before unplugging the dashboard. Unplugging units with the power on can damage them (the K-Light manual warns of this for the ECU).</li>
+<li>Use a digital multimeter only. Never use a bulb test light or a jumper wire on dashboard or CAN-bus wires: you can damage the units.</li>
+<li>On an electric motorcycle, the dashboard runs from the 12 V system. Do not open high-voltage parts. If the whole bike is dead, start at <a href="../../../repair/problems/ev-dash-dark/">Dashboard is dark and the bike seems dead</a>.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>The wiring diagram, to find the dashboard feed, permanent feed, earth and signal wires. On the K-Light 125 the meter is shown at top left of the diagram (PDF p. 278).</li>
+<li>A charged battery. Check this first, as the K-Light manual advises for all lighting and meter faults (PDF p. 97): <a href="../../../repair/repairs/battery-test-charge/">Test and charge a 12 V battery</a>.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li><strong>Watch the key-on test.</strong> Turn the key on. Most dashboards sweep the needles or light all segments, and warning lamps glow for a few seconds. On the K-Light 125 the FI (engine) lamp lights at key on to show the injection system has power, then goes out once the engine runs (PDF p. 269). If none of this happens, go on.</li>
+<li><strong>Check other key-on items.</strong> Do the indicators, horn or fuel pump prime work? If nothing works at all, the fault is before the dashboard: go to <a href="../../../repair/problems/no-power-key-on/">Nothing happens when the key is turned on</a>.</li>
+<li><strong>Check the fuses</strong> for the dashboard and the ignition feed: <a href="../../../repair/repairs/fuse-relay-check/">Check fuses and relays</a>.</li>
+<li><strong>Reach the dashboard plug.</strong> Remove the covers. On the K-Light 125, the meter comes out after removing the upper cover screw, the holder and the rear cover (PDF p. 100). Do not unplug yet.</li>
+<li><strong>Test the switched feed.</strong> Key on. Meter on DC volts (V with a straight line, 20 V range). Black probe on the battery negative. Back-probe the switched feed wire in the dashboard plug with a thin pin and touch the red probe to it. It should read close to battery voltage. Do not pierce the insulation.</li>
+<li><strong>Test the permanent feed</strong> (digital dashboards). Key off. Same test on the permanent feed wire: close to battery voltage.</li>
+<li><strong>Test the earth.</strong> Key on. Red probe on battery positive, black probe on the dashboard earth wire (back-probed). It should read close to battery voltage. A low reading means a poor earth: <a href="../../../repair/repairs/earth-clean/">Clean and tighten earth connections</a>.</li>
+<li><strong>Check the plug.</strong> Key off. Unplug the dashboard. Look for green corrosion, water, bent or pushed-back pins. Clean and refit: <a href="../../../repair/repairs/connector-clean/">Clean and seal electrical connectors</a>.</li>
+<li><strong>If feeds and earth are good</strong> but the dashboard stays dark, the dashboard itself, or (on CAN-bus bikes) the network, is at fault. On CAN-bus bikes a dashboard may stay dark or show errors if the ECU or another unit is not talking to it. Take it to a dealer with the correct diagnostic tool. The K-Light manual notes its diagnostic tool needs a battery of at least 8.5 V (PDF p. 274), so charge the battery before the visit.</li>
+<li>Refit the dashboard. K-Light 125 meter holder screw: <strong>10 to 12 N·m</strong> (PDF p. 101).</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>The key-on sweep or lamp test works every time.</li>
+<li>The dashboard stays on over bumps and with the handlebar at full lock both ways.</li>
+<li>Clock and trip memory survive a night with the key off.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Only the speedometer is wrong: <a href="../../../repair/repairs/speed-sensor-check/">Check the speed sensor</a>.</li>
+<li>Warning lamps flicker or come on wrongly: <a href="../../../repair/problems/warning-lights-flicker/">Warning lights flicker or come on wrongly</a>.</li>
+<li>Only the fuel gauge is wrong: <a href="../../../repair/problems/fuel-gauge-wrong/">Fuel gauge reads wrong or does not move</a>.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meter holder mounting screw</td>
+<td>10 to 12 N·m</td>
+<td>PDF p. 101</td>
+</tr>
+<tr>
+<td>Minimum battery voltage for diagnostic tool</td>
+<td>8.5 V</td>
+<td>PDF p. 274</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>thin pin for back-probing</li><li>screwdrivers</li><li>Allen keys</li><li>wiring diagram</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>electrical contact cleaner</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/instruments/"><span class="rpc-img"><img src="../../../assets/renders/instruments_analogue.webp" alt="" loading="lazy"></span><b>Instruments</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/earth_strap/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Earth (ground) connections</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_12v.webp" alt="" loading="lazy"></span><b>12 V battery</b></a><a class="rpc-shop" href="../../../parts/part/battery/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ignition_switch/"><span class="rpc-img"><img src="../../../assets/renders/instruments_analogue.webp" alt="" loading="lazy"></span><b>Ignition switch</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/dash-dead/"><b>Instruments or dashboard are dead</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/fuel-gauge-wrong/"><b>Fuel gauge reads wrong or does not move</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/neutral-light-fault/"><b>Neutral light does not work or stays on in gear</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/speedo-dead/"><b>Speedometer or odometer does not work</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/warning-lights-flicker/"><b>Warning lights flicker or come on wrongly</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 97, 100, 101, 269, 274, 278</li><li><a href="https://www.hella.com/techworld/sg/lounge/can-bus-vehicle-lighting-bulb-replacement-workshop" target="_blank" rel="noopener">HELLA Tech World: CAN bus and vehicle lighting</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

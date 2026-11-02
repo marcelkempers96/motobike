@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test the starter relay: step by step | Moto Zero</title>
+  <meta name="description" content="Test the starter relay: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/starter-relay-test/">
+  <meta property="og:title" content="Test the starter relay: step by step | Moto Zero"><meta property="og:description" content="Test the starter relay: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/starter-relay-test/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Test the starter relay", "item": "https://motobike-five.vercel.app/repair/repairs/starter-relay-test/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Test the starter relay</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Test the starter relay</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 to 30 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="starter-relay-test"><p><strong>Home mechanic (basic tools)</strong> · Time: 20 to 30 min (estimate)</p>
+<p>The starter relay (also called the solenoid) is a magnetic switch. A small current through its coil pulls heavy contacts together so the big current can reach the starter motor. Relays fail in three ways: the coil stops working (no click), the contacts burn (click but no crank), or the contacts weld shut (starter will not stop). On many bikes the main fuse sits in the relay body.</p>
+<h2>Safety</h2>
+<ul>
+<li>Key OFF and battery negative (−) disconnected before you remove the relay.</li>
+<li>Do the function test with the relay off the bike, on a bench. Never bridge relay terminals on the bike.</li>
+<li>Keep the test battery leads apart. Do not touch the two battery terminals together.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>A meter on continuity or the lowest ohms range.</li>
+<li>A charged 12 V battery and two leads with clips.</li>
+<li>Your wiring diagram for the coil wire colours. K-Light 125: the text names black and green/yellow, but the circuit drawing labels green/yellow and orange/red. Trust what you find on your own bike and diagram.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li><strong>Click test on the bike.</strong> Key ON, neutral, clutch pulled. Press start and listen or put a finger on the relay. A click means the coil works. No click: carry on to step 2.</li>
+<li><strong>Coil supply on the bike.</strong> Unplug the small connector. Key ON, clutch pulled (or brake lever pulled on a scooter). Measure from the coil feed wire to earth: you should read battery voltage when start is pressed. No voltage: the fault is upstream (switches, fuse, wiring). See <a href="../../../repair/repairs/starter-circuit-test/">Test the starter circuit</a>.</li>
+<li><strong>Coil earth on the bike.</strong> Measure from the coil earth wire to the frame: you should have continuity when the start button is pressed and the bike is in neutral or the clutch is pulled. No continuity: <a href="../../../repair/repairs/interlock-switch-test/">Test the side stand, clutch and neutral switches</a>.</li>
+<li><strong>Remove the relay.</strong> Battery negative off. Remove the two heavy cables (note which is which) and the small connector. Check for a fuse in the relay body and test it.</li>
+<li><strong>Coil test.</strong> Measure across the two small coil terminals. An open reading means a broken coil: replace the relay.</li>
+<li><strong>Function test (K-Light 125 method).</strong> Connect the meter across the two heavy terminals. Using your test leads, connect the charged battery across the two small coil terminals. The relay should click and the meter should read near zero ohms. Disconnect: the reading must go back to open.
+   - Clicks but still open: contacts burnt. Replace the relay.
+   - Reads near zero even with no power to the coil: contacts welded. Replace the relay. This is the usual cause of a starter that keeps running.
+   - Some relays have a diode inside and must be powered with the correct polarity. Check the diagram.</li>
+<li>Clean the heavy terminals and cable ends to bright metal.</li>
+<li>Fit the new or tested relay. Tighten the heavy cable nuts firmly and fit their rubber covers. A loose nut here heats up and causes slow cranking.</li>
+<li>Reconnect the battery, positive first, negative last.</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>The relay clicks and the engine cranks with the button pressed, and stops at once when you let go.</li>
+<li>The rubber covers are on both heavy terminals.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Relay is good but the starter still does not turn: <a href="../../../repair/repairs/starter-motor-service/">Remove and inspect the starter motor</a>.</li>
+<li>Starter still runs on after release with a good relay: suspect a stuck start button or a shorted wire. See <a href="../../../repair/repairs/switch-clean/">Clean a handlebar switch</a> and <a href="../../../repair/repairs/short-circuit-find/">Find a short circuit</a>.</li>
+</ul></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>two short test leads with crocodile clips</li><li>a charged 12 V battery</li><li>screwdriver</li><li>spanner set</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>contact cleaner</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/starter_relay/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F23.png" alt="" loading="lazy"></span><b>Starter relay</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/starter-clicks/"><b>Starter relay clicks but the engine does not turn</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/starter-grinding/"><b>Grinding or screeching noise when starting</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/starter-keeps-running/"><b>Starter keeps turning after I let go of the button</b><i class="ru is-now">Stop now</i></a></li><li><a href="../../../repair/problems/starter-silent/"><b>Nothing happens when I press the starter button</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 90, 93, 94</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

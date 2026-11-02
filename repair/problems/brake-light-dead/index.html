@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brake light does not work: causes and step-by-step checks | Moto Zero</title>
+  <meta name="description" content="Brake light does not work on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/problems/brake-light-dead/">
+  <meta property="og:title" content="Brake light does not work: causes and step-by-step checks | Moto Zero"><meta property="og:description" content="Brake light does not work on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each."><meta property="og:url" content="https://motobike-five.vercel.app/repair/problems/brake-light-dead/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Problems", "item": "https://motobike-five.vercel.app/repair/problems/"}, {"@type": "ListItem", "position": 3, "name": "Lights, horn and instruments", "item": "https://motobike-five.vercel.app/repair/systems/lighting/"}, {"@type": "ListItem", "position": 4, "name": "Brake light does not work", "item": "https://motobike-five.vercel.app/repair/problems/brake-light-dead/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/problems/">Problems</a> / <a href="../../../repair/systems/lighting/">Lights, horn and instruments</a> / Brake light does not work</p>
+    <header class="r-head">
+      <span class="ute-label">Lights, horn and instruments</span>
+      <h1>Brake light does not work</h1>
+      <p class="r-meta"><i class="ru is-stop">Do not ride</i><span>Also called: stop light not working, no brake light</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-problem"><p>The brake light stays off when you pull the front lever or press the rear pedal. Drivers behind you get no warning that you are slowing, so this is a common cause of rear-end crashes. The fault is usually a blown bulb filament, a faulty or badly adjusted switch, a blown fuse, or a broken wire or earth near the tail light.</p>
+<h2>Is it safe to ride?</h2>
+<p>No, not in traffic. If you must move the bike, ride slowly, by day, keep well clear of traffic behind and use hand signals. Fix it first. The brakes themselves may be fine: this is a lighting fault.</p>
+<h2>Quick checks first</h2>
+<ul>
+<li>Does the brake light fail with <strong>both</strong> the lever and the pedal, or only with one?</li>
+<li>Does the tail light (the dimmer running light) work?</li>
+<li>Key on? Most brake lights only work with the key on.</li>
+<li>Is the lens cracked or full of water?</li>
+<li>Do the horn and indicators work? If they share a dead fuse, they fail too (MAVCC brake-light tracing exercise, PDF p. 295).</li>
+</ul>
+<h2>Diagnose it step by step</h2>
+<p class="rq"><b>1</b><span>Does it fail with only one control?</span></p>
+<ul>
+<li>Only the lever or only the pedal: the bulb and wiring to the lamp are good. The switch for that control is at fault. Go to <a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a>.</li>
+<li>Both: go to step 2.</li>
+</ul>
+<p><strong>2. Is the brake filament broken?</strong> Remove the lens and bulb (<a href="../../../repair/repairs/bulb-replace/">Replace a bulb</a>). The K-Light fault chart starts here (PDF p. 47). K-Light 125 bulb: P21/5W, a twin-filament bulb (PDF p. 99). Set the multimeter to continuity (beep) and probe the base and each contact on the bottom.</p>
+<ul>
+<li>Brake filament (the thicker one) broken: replace the bulb, fitting it the correct way round.</li>
+<li>LED tail light unit: no bulb to test. Go to step 3.</li>
+<li>Bulb good: go to step 3.</li>
+</ul>
+<p><strong>3. Does power reach the lamp when you brake?</strong> Bulb out. Key on. Meter on DC volts (V with a straight line), black probe on frame metal, red probe on the brake contact in the holder. Helper holds the lever.</p>
+<ul>
+<li>Close to battery voltage: power arrives, so the lamp earth is bad. Move the black probe to the lamp housing or earth wire and test again. If the reading drops to 0, the earth is broken: <a href="../../../repair/repairs/earth-clean/">Clean and tighten earth connections</a>. (Same logic as MAVCC JS4, PDF p. 315.)</li>
+<li>0: go to step 4.</li>
+</ul>
+<p><strong>4. Is the fuse good?</strong> Test it with the meter, not by eye (MAVCC PDF p. 312): <a href="../../../repair/repairs/fuse-relay-check/">Check fuses and relays</a>.</p>
+<ul>
+<li>Blown: replace once. If it blows again: <a href="../../../repair/problems/fuse-keeps-blowing/">Fuse keeps blowing</a>.</li>
+<li>Good: go to step 5.</li>
+</ul>
+<p><strong>5. Is power going into and out of each switch?</strong> Meter on DC volts. Back-probe both wires at the rear switch, then the front switch, while a helper brakes.</p>
+<ul>
+<li>Power in, no power out: the switch has failed or is out of adjustment: <a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a>.</li>
+<li>Power in and out at a switch, but none at the lamp: the wire from the switches to the lamp is broken, often under the rear mudguard or seat: <a href="../../../repair/repairs/lighting-circuit-test/">Test a lighting circuit</a>.</li>
+<li>No power into either switch: the feed from the fuse is broken. Check connectors between the fuse and the switches, starting at the fuse (MAVCC PDF p. 316): <a href="../../../repair/repairs/connector-clean/">Clean and seal electrical connectors</a>.</li>
+</ul>
+<p><strong>6. Switch works but light comes on late?</strong> The K-Light manual says the brake light should come on at about 15 mm of front lever travel (PDF p. 67). Adjust the rear switch so it comes on as the brake starts to work.</p>
+<h2>Causes, most likely first</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>How to confirm</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brake filament broken</td>
+<td>No continuity</td>
+<td><a href="../../../repair/repairs/bulb-replace/">Replace a bulb</a></td>
+</tr>
+<tr>
+<td>Switch faulty or out of adjustment (fails with one control)</td>
+<td>No continuity when operated</td>
+<td><a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a></td>
+</tr>
+<tr>
+<td>Poor lamp earth or corroded holder</td>
+<td>Power at holder, no light</td>
+<td><a href="../../../repair/repairs/earth-clean/">Clean and tighten earth connections</a></td>
+</tr>
+<tr>
+<td>Blown fuse</td>
+<td>Meter test</td>
+<td><a href="../../../repair/repairs/fuse-relay-check/">Check fuses and relays</a></td>
+</tr>
+<tr>
+<td>Broken wire under mudguard or seat</td>
+<td>Power at switch, none at lamp</td>
+<td><a href="../../../repair/repairs/lighting-circuit-test/">Test a lighting circuit</a></td>
+</tr>
+<tr>
+<td>Failed LED tail unit</td>
+<td>Power and earth good</td>
+<td>Replace unit</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brake light comes on at front lever travel of</td>
+<td>about 15 mm</td>
+<td>PDF p. 67</td>
+</tr>
+<tr>
+<td>Tail and brake bulb</td>
+<td>P21/5W</td>
+<td>PDF p. 99</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Repairs for this problem</h2><ul class="r-list"><li><a href="../../../repair/repairs/bulb-replace/"><b>Replace a bulb</b><span>Rider job · 10 to 30 min</span></a></li><li><a href="../../../repair/repairs/brake-switch-test/"><b>Test and adjust the brake light switches</b><span>Home workshop · 15 to 30 min</span></a></li><li><a href="../../../repair/repairs/fuse-relay-check/"><b>Check fuses and relays</b><span>Rider job · 10 to 30 min</span></a></li><li><a href="../../../repair/repairs/lighting-circuit-test/"><b>Test a lighting circuit</b><span>Home workshop · 20 to 45 min</span></a></li><li><a href="../../../repair/repairs/earth-clean/"><b>Clean and tighten earth connections</b><span>Home workshop · 20 to 45 min</span></a></li><li><a href="../../../repair/repairs/connector-clean/"><b>Clean and seal electrical connectors</b><span>Home workshop · 15 to 45 min</span></a></li></ul></section>
+        <section><h2>Parts you may need</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/tail_light/"><span class="rpc-img"><img src="../../../assets/renders/tail_light.webp" alt="" loading="lazy"></span><b>Tail and brake light</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/brake_light_switch/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/EL02.png" alt="" loading="lazy"></span><b>Brake light switches</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/earth_strap/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Earth (ground) connections</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Related problems</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/tail-light-out/"><b>Tail light does not work</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/brake-light-stuck-on/"><b>Brake light stays on</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/all-lights-out/"><b>All lights stop working</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/fuse-keeps-blowing/"><b>Fuse keeps blowing</b><i class="ru is-stop">Do not ride</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 47, 67, 99</li><li>MAVCC Motorcycle Mechanic, PDF pages 295, 312, 315, 316</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

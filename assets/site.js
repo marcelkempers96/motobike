@@ -27,9 +27,9 @@ export const NAV = [
   ] },
   { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it, get the part', items: [
     ['repair/', 'Repair home', 'Search any problem, part or job'],
-    ['repair/problems/', 'By problem', 'Start from what you see, hear or feel'],
-    ['repair/parts/', 'By part', 'Start from the part you want to check'],
-    ['repair/fix/', 'All repairs', 'Every step-by-step job'],
+    ['repair/problems/', 'By problem', '274 problems, step-by-step checks'],
+    ['repair/repairs/', 'By repair', '185 jobs, rider to workshop'],
+    ['repair/parts/', 'By part', 'What each part does and how it fails'],
     ['parts/', 'Spare parts', 'What wears, when, where to buy'],
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [

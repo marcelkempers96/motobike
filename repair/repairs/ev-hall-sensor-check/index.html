@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check motor position (Hall) sensors: step by step | Moto Zero</title>
+  <meta name="description" content="Check motor position (Hall) sensors: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/ev-hall-sensor-check/">
+  <meta property="og:title" content="Check motor position (Hall) sensors: step by step | Moto Zero"><meta property="og:description" content="Check motor position (Hall) sensors: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/ev-hall-sensor-check/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Check motor position (Hall) sensors", "item": "https://motobike-five.vercel.app/repair/repairs/ev-hall-sensor-check/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Check motor position (Hall) sensors</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Check motor position (Hall) sensors</h1>
+      <p class="r-meta"><i class="rl is-workshop">Workshop job</i><span>Check safely, then hand it to a workshop</span><span>Time: 30 to 60 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="ev-hall-sensor-check"><p><strong>Hall sensors</strong> are three small magnetic sensors inside the motor. As the magnets pass, each sensor switches on and off. The controller uses these signals to know where the rotor is, so it can switch current to the right phase at the right time. When a sensor, its wire or its pin fails, the motor jerks instead of starting smoothly, stutters at low speed, growls, or only starts once the wheel is already moving (em3ev). This is a <strong>workshop check</strong>.</p>
+<h2>Safety</h2>
+<ul>
+<li>The Hall cable is low voltage, but it runs next to the high-voltage phase wires. Only trained people should test with the system powered, following the manufacturer's procedure.</li>
+<li>Lift the drive wheel off the ground. Do not command the motor (do not open the throttle) while probing.</li>
+<li>Keep hands away from the wheel and chain or belt.</li>
+</ul>
+<h2>Why this is not a home job</h2>
+<ul>
+<li>Wire colours, pinouts, supply voltage, signal levels, the switching sequence and the meaning of error codes <strong>differ between motors and controllers</strong> (em3ev). Using values from another bike can give a wrong result or damage the controller.</li>
+<li>A stuck signal does not prove the sensor inside the motor has failed (em3ev). The fault is often the cable or a pin, and the harness must be checked before the motor is opened.</li>
+</ul>
+<h2>Steps (workshop)</h2>
+<ol>
+<li>Read the fault history. Many controllers log a Hall or position fault.</li>
+<li>Power down and inspect the Hall connector and cable: corrosion, pushed-back pins, crushed cable near the axle, rubbed insulation, sharp bends (em3ev).</li>
+<li>Find the pinout and expected values in the manufacturer's documentation.</li>
+<li>Power up as the manual says, motor not commanded. Measure the Hall supply against Hall ground and compare with the manual.</li>
+<li>Turn the wheel slowly by hand in the drive direction and watch each signal switch between low and high. A geared hub may freewheel one way and not turn the rotor (em3ev).</li>
+<li>A signal stuck high or low on every position points to the sensor, wire or pin. Check the harness end to end before blaming the sensor.</li>
+<li>If the controller has live data, compare the Hall states it reports with your meter.</li>
+<li>Repair the harness or connector, or replace the sensor set or motor as the manufacturer allows. Some controllers need a learning or calibration step after a sensor or motor change.</li>
+<li>Test ride: smooth start from rest, no growl, no code.</li>
+</ol>
+<h2>What to ask for</h2>
+<ul>
+<li>Which channel failed, and whether it was the sensor, cable or connector.</li>
+<li>Whether a learning step was done after the repair.</li>
+</ul>
+<h2>Check your work</h2>
+<ul>
+<li>Smooth pull-away from standstill, no judder, and no Hall or position code on a test ride.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li><a href="../../../repair/repairs/ev-phase-connector-check/">Check motor phase connectors</a>: phase faults cause similar symptoms (em3ev).</li>
+<li><a href="../../../repair/repairs/ev-controller-diagnosis/">Diagnose a controller fault</a></li>
+</ul></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>model service manual with pinout</li><li>multimeter</li><li>stand to lift drive wheel</li><li>diagnostic tool if available</li></ul></section>
+        
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/motor_sensor/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/F24.png" alt="" loading="lazy"></span><b>Motor position sensor</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/motor/"><span class="rpc-img"><img src="../../../assets/renders/motor.webp" alt="" loading="lazy"></span><b>Electric motor</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/controller/"><span class="rpc-img"><img src="../../../assets/renders/controller.webp" alt="" loading="lazy"></span><b>Motor controller</b></a><a class="rpc-shop" href="../../../parts/part/ev-controller/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/ev-judder/"><b>Bike judders or jerks when pulling away</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-motor-noise/"><b>Grinding, clicking or growling from the motor</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-ready-no-drive/"><b>Bike shows ready but will not move</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/ev-error-code/"><b>Error code or warning on the dashboard</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li><a href="https://em3ev.com/?p=43276" target="_blank" rel="noopener">em3ev: How to test e-bike motor Hall sensors</a></li><li><a href="https://letrigo.com/blogs/knowledge/how-to-test-ebike-motor" target="_blank" rel="noopener">Letrigo: How to test an e-bike motor</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test the ignition pick-up: step by step | Moto Zero</title>
+  <meta name="description" content="Test the ignition pick-up: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/pickup-test/">
+  <meta property="og:title" content="Test the ignition pick-up: step by step | Moto Zero"><meta property="og:description" content="Test the ignition pick-up: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/pickup-test/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Test the ignition pick-up", "item": "https://motobike-five.vercel.app/repair/repairs/pickup-test/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Test the ignition pick-up</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Test the ignition pick-up</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 to 30 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="pickup-test"><p><strong>Home mechanic (basic tools)</strong> · Time: 20 to 30 min (estimate)</p>
+<p>The pick-up (also called pulser coil, trigger or crank position sensor) sits next to the flywheel. A bump on the flywheel passes it once each turn and makes a small pulse that tells the CDI or ECU when to fire the plug. On fuel-injected bikes the ECU also uses it to run the fuel pump and injector. If the pick-up fails, there is no spark and often no fuel pump either.</p>
+<h2>Safety</h2>
+<ul>
+<li>Key OFF and battery negative disconnected before unplugging connectors.</li>
+<li>Keep fingers clear of the flywheel when cranking for the peak voltage test.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>A multimeter on ohms. For the running test, a peak-voltage adaptor (the pulse is too short for an ordinary meter).</li>
+<li>The wire colours. K-Light 125: blue/white and green/white at the stator connector. The manual's drawing says white/blue; follow the wires on your bike.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Find the pick-up wires. On the K-Light 125 the pick-up is built into the stator and its wires come out in the same bundle as the charging coils (PDF page 87).</li>
+<li>Unplug the connector and check the pins for corrosion, bent pins or water.</li>
+<li><strong>Resistance.</strong> Measure between the two pick-up wires. <strong>K-Light 125: 150 ± 10 Ω at 20 °C.</strong> Higher or open means a broken coil; lower means a shorted coil. Either way, replace it (K-Light 125 manual). Other bikes: use your manual's value. A hot engine reads a little higher than a cold one.</li>
+<li><strong>Short to earth.</strong> Measure from each pick-up wire to engine metal. There should be no continuity.</li>
+<li><strong>Peak voltage (if you have the adaptor).</strong> Reconnect where the manual says, crank the engine and read the peak. <strong>K-Light 125: above 1.7 V.</strong> A low reading can also come from a large gap between the pick-up and the flywheel, or a loose flywheel (K-Light 125 troubleshooting, PDF page 275).</li>
+<li><strong>Fault code.</strong> On fuel-injected bikes, a crank position sensor code (K-Light 125: P0335) points to this circuit. See <a href="../../../repair/repairs/efi-code-read/">Read engine fault codes (fuel injection)</a>.</li>
+<li><strong>Wiring.</strong> Check the wires from the engine to the CDI or ECU for chafing, especially where they pass the frame and near the chain.</li>
+<li>Replacing a pick-up that is built into the stator, or setting its air gap, means removing the side cover. Many owners hand this to a workshop.</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>After repair, a strong spark at every turn: <a href="../../../repair/repairs/spark-test/">Check for a spark safely</a>.</li>
+<li>On fuel-injected bikes, the fuel pump runs while cranking.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Pick-up, coil and wiring all good: <a href="../../../repair/repairs/cdi-ecu-diagnosis/">Diagnose a suspected CDI or ECU fault</a>.</li>
+<li>Fault only when hot: test the resistance again straight after the fault appears, and compare.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pick-up resistance</td>
+<td>150 ± 10 Ω at 20 °C</td>
+<td>87</td>
+</tr>
+<tr>
+<td>Pick-up peak voltage</td>
+<td>above 1.7 V</td>
+<td>85</td>
+</tr>
+<tr>
+<td>Crank position sensor fault code</td>
+<td>P0335</td>
+<td>270</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>peak-voltage adaptor for the meter (optional)</li><li>wiring diagram</li><li>torch</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>contact cleaner</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/pickup/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F22.png" alt="" loading="lazy"></span><b>Ignition pick-up</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/stator/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F21.png" alt="" loading="lazy"></span><b>Stator and flywheel</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/backfire-on-start/"><b>Pops or bangs when trying to start</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/cdi-ecu-suspect/"><b>CDI or ECU suspected faulty</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/coil-fails-hot/"><b>Ignition cuts out when hot and returns when cool</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/fuel-pump-silent/"><b>No buzz from the fuel pump when the key is turned on</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/hard-hot-start/"><b>Hard to start when the engine is hot</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ignition-timing-suspect/"><b>Ignition timing suspected wrong</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/kickstart-kickback/"><b>Kickstarter kicks back against my foot</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/misfire-high-rpm/"><b>Misfires only at high revs</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/no-spark/"><b>No spark at the spark plug</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/weak-spark/"><b>Weak, thin or orange spark</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/cuts-out-random/"><b>Cuts out randomly, then restarts</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 85, 86, 87, 270, 275</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

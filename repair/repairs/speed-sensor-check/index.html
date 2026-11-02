@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check the speed sensor: step by step | Moto Zero</title>
+  <meta name="description" content="Check the speed sensor: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/speed-sensor-check/">
+  <meta property="og:title" content="Check the speed sensor: step by step | Moto Zero"><meta property="og:description" content="Check the speed sensor: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/speed-sensor-check/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Check the speed sensor", "item": "https://motobike-five.vercel.app/repair/repairs/speed-sensor-check/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Check the speed sensor</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Check the speed sensor</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 to 40 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="speed-sensor-check"><p><strong>Home mechanic (basic tools)</strong> · Time: 20 to 40 min (estimate)</p>
+<p>The speedometer and odometer get their signal in one of three ways: a <strong>cable</strong> turned by a gear at the front wheel or gearbox; an <strong>electronic speed sensor</strong> that reads a toothed ring, magnet or gearbox shaft; or, on many ABS bikes, the <strong>ABS wheel speed sensor</strong>, with the dashboard getting the speed over the CAN-bus. This page checks the electronic sensor. Cable speedometers are covered in <a href="../../../repair/repairs/speedo-cable-replace/">Replace the speedometer cable</a>.</p>
+<h2>Safety</h2>
+<ul>
+<li>A wrong or dead speedometer means you cannot judge your speed. Ride with extra care until it is fixed.</li>
+<li>On an ABS bike, the same sensor may tell the ABS unit wheel speed. If the ABS lamp is also on, assume ABS may not work and see <a href="../../../repair/problems/abs-light/">ABS warning light is on</a>.</li>
+<li>Support the bike so the wheel you test can turn freely and the bike cannot fall.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>To know which system you have. Look at the back of the speedometer for a cable, and at the front hub, rear hub or gearbox sprocket cover for a sensor with a wire. The K-Light 125 wiring diagram shows a speed sensor wired to the meter (PDF p. 278), but its front wheel drawing also shows a speedometer gear housing in the hub (PDF p. 130). Check your own bike.</li>
+<li>A multimeter: DC volts (V with a straight line, 20 V range), AC volts (V with a wavy line), and continuity (beep).</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li><strong>Look at the sensor.</strong> Follow the wire from the sensor. Check that the sensor is tight in its mount, that the wire is not cut or chafed by the wheel or chain, and that the plug is fully pushed in.</li>
+<li><strong>Clean the tip and the ring.</strong> Metal dust, mud and chain grease on the sensor tip or the toothed ring or magnet weaken the signal. Wipe both clean. Check the ring for bent or missing teeth.</li>
+<li><strong>Check the gap.</strong> The sensor tip sits close to the ring. If the sensor has been knocked, or the wheel was refitted wrongly, the gap may be too wide. Use the gap in your manual; this page does not give one.</li>
+<li><strong>Check the drive after wheel work.</strong> If the speedometer stopped after the front wheel was removed, the speedometer drive may not be engaged. The K-Light manual warns that the speedometer drive housing is bent if it is not located correctly when the axle goes in, and says to turn the wheel after fitting the axle to check the drive shaft turns (PDF p. 140). Refit the wheel: <a href="../../../repair/repairs/wheel-remove-front/">Remove and refit the front wheel</a>.</li>
+<li><strong>Count the wires.</strong>
+   - <strong>Three wires (Hall-type sensor):</strong> power, earth and signal. Key on. Meter on DC volts, black probe on battery negative. Back-probe the power wire: it should show a supply voltage (check your manual for the value). Back-probe the earth wire with red probe on battery positive and black on the earth wire: close to battery voltage means a good earth. Back-probe the signal wire and turn the wheel slowly by hand: the reading should switch between a low and a high value as each tooth or magnet passes.
+   - <strong>Two wires (magnetic pickup):</strong> unplug the sensor. Meter on AC volts on the sensor's two pins. Spin the wheel by hand: you should see a small reading that rises with speed. No reading: the sensor or its gap is faulty.</li>
+<li><strong>Check the wires to the dashboard.</strong> Key off, sensor and dashboard unplugged. Continuity along each wire. Then check each wire to the frame: there should be no beep.</li>
+<li><strong>ABS bikes.</strong> If the speed comes from the ABS sensor and the ABS lamp is on, go to <a href="../../../repair/repairs/abs-check/">Diagnose an ABS warning light</a>. A dealer tool can show the speed reading each sensor gives.</li>
+<li>If the sensor, gap and wires are good, the dashboard input may be faulty: <a href="../../../repair/repairs/dash-power-check/">Check power to the instruments</a>, then a dealer.</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>On a test ride the speedometer reads smoothly from walking pace upwards, with no jumping.</li>
+<li>The odometer counts.</li>
+<li>No ABS or engine warning lamps are on.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Cable type: <a href="../../../repair/problems/speedo-cable-fault/">Speedometer cable is noisy or broken</a>.</li>
+<li>The reading drops out over bumps: <a href="../../../repair/repairs/wiring-fault-find/">Find a wiring fault</a>.</li>
+</ul></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter</li><li>thin pin for back-probing</li><li>screwdrivers</li><li>spanners</li><li>torch</li><li>clean cloth</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>electrical contact cleaner</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/speed_sensor/"><span class="rpc-img"><img src="../../../assets/renders/instruments_tft.webp" alt="" loading="lazy"></span><b>Speed sensor</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/instruments/"><span class="rpc-img"><img src="../../../assets/renders/instruments_analogue.webp" alt="" loading="lazy"></span><b>Instruments</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/speedo_cable/"><span class="rpc-img"><img src="../../../assets/renders/instruments_analogue.webp" alt="" loading="lazy"></span><b>Speedometer cable</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/abs/"><span class="rpc-img"><img src="../../../assets/renders/brake.webp" alt="" loading="lazy"></span><b>ABS sensor and unit</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/speedo-cable-fault/"><b>Speedometer cable is noisy or broken</b><i class="ru is-ok">OK to ride</i></a></li><li><a href="../../../repair/problems/speedo-dead/"><b>Speedometer or odometer does not work</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 130, 140, 278</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

@@ -129,10 +129,20 @@ PARTS = {p['Part ID']: p for p in rows('Parts')}
 PAGES = rows('Model x Part')
 SHOPS = {s['Shop']: s for s in rows('Shops')}
 
-import subprocess
-PROCS = json.loads(subprocess.check_output(['node', '-e', "import('./assets/content/repair/procedures.js').then(m=>console.log(JSON.stringify(m.PROCEDURES.map(p=>({id:p.id,title:p.title,level:p.level,time:p.time})))))"], cwd=ROOT))
-PROC = {p['id']: p for p in PROCS}
-LEVEL = {'basic': 'Basic', 'intermediate': 'Intermediate', 'advanced': 'Workshop'}
+# Repair jobs come from the Repair section data (source/repair/repair-data.json); old
+# procedure ids used in P are translated through source/repair/old-to-new.json.
+_RD = json.load(open(os.path.join(ROOT, 'source/repair/repair-data.json'), encoding='utf-8'))
+_O2N = json.load(open(os.path.join(ROOT, 'source/repair/old-to-new.json'), encoding='utf-8'))
+PROC = {r['id']: {'id': r['id'], 'title': r['title'], 'level': r.get('level'), 'time': (r.get('time') or '').replace(' (editorial estimate)', '')} for r in _RD['repairs']}
+LEVEL = {'rider': 'Rider job', 'home': 'Home workshop', 'workshop': 'Workshop job'}
+_NEWJOBS = {'drive-belt': ['cvt-belt-replace'], 'roller-weights': ['cvt-roller-check'], 'cvt-clutch-shoes': ['cvt-clutch-check'], 'gear-oil': ['scooter-gear-oil'],
+            'mirrors': ['mirror-fix'], 'brake-disc': ['brake-disc-check', 'brake-pad-replace'], 'oil-filter': ['engine-oil-service'], 'wheel-bearings': ['wheel-bearing-check', 'wheel-bearing-replace'],
+            'regulator-rectifier': ['regulator-test', 'charging-system-test'], 'ev-controller': ['ev-controller-diagnosis', 'ev-error-read'], 'ev-charger': ['ev-charger-check', 'ev-charge-diagnosis'],
+            'tyres': ['tyre-inspect', 'tyre-pressure-check', 'tyre-replace', 'tube-puncture-repair'], 'brake-shoes': ['drum-brake-service', 'drum-brake-adjust'], 'brake-pads': ['brake-pad-check', 'brake-pad-replace']}
+for _k, (_procs, *_r) in list(P.items()):
+  _new = [_O2N.get(x, x) for x in _procs]
+  _new = _NEWJOBS.get(_k, _new)
+  P[_k] = ([x for x in dict.fromkeys(_new) if x in PROC],) + tuple(_r)
 for pid, (procs, *_rest) in P.items():
   for x in procs: assert x in PROC, (pid, x)
   assert pid in PARTS, pid
@@ -216,7 +226,7 @@ def facts(p):
 
 def repair_cards(pid, model_label=None):
   procs, ov, learn, _ = P[pid]
-  cards = ''.join(f'<a class="sp-job" href="{{R}}repair/fix/#{x}"><b>{e(PROC[x]["title"])}</b><span>{LEVEL.get(PROC[x]["level"], "")}{" · " + e(PROC[x]["time"]) if PROC[x].get("time") else ""}</span></a>' for x in procs)
+  cards = ''.join(f'<a class="sp-job" href="{{R}}repair/repairs/{x}/"><b>{e(PROC[x]["title"])}</b><span>{LEVEL.get(PROC[x]["level"], "")}{" · " + e(PROC[x]["time"]) if PROC[x].get("time") else ""}</span></a>' for x in procs)
   if not cards:
     cards = f'<p class="sp-soon">A step-by-step guide for this job is being written. Until then, <a href="{{R}}learn/#{learn}">read how it works in the course</a> and check the service manual for your model.</p>'
   links = []
@@ -321,7 +331,7 @@ for mid, m in MODELS.items():
   rs = by_model.get(mid, [])
   cats = {}
   for r in rs: cats.setdefault(PARTS[r['Part ID']]['Category'], []).append(r)
-  sched = ''.join(f'<tr><td><a href="{{R}}{url_mp(m, r["Part ID"]).lstrip("/")}">{e(PARTS[r["Part ID"]]["Part"])}</a></td><td>{e(PARTS[r["Part ID"]]["Typical interval (indicative)"])}</td><td>{"".join(f"""<a href="{{R}}repair/fix/#{x}">{e(PROC[x]["title"])}</a>""" for x in P[r["Part ID"]][0][:1]) or "–"}</td></tr>' for r in sorted(rs, key=lambda x: -int(x['Priority score'] or 0)))
+  sched = ''.join(f'<tr><td><a href="{{R}}{url_mp(m, r["Part ID"]).lstrip("/")}">{e(PARTS[r["Part ID"]]["Part"])}</a></td><td>{e(PARTS[r["Part ID"]]["Typical interval (indicative)"])}</td><td>{"".join(f"""<a href="{{R}}repair/repairs/{x}/">{e(PROC[x]["title"])}</a>""" for x in P[r["Part ID"]][0][:1]) or "–"}</td></tr>' for r in sorted(rs, key=lambda x: -int(x['Priority score'] or 0)))
   body = f'''
     <section class="sp-head is-model">
       <div>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find what is draining the battery: step by step | Moto Zero</title>
+  <meta name="description" content="Find what is draining the battery: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/parasitic-drain-test/">
+  <meta property="og:title" content="Find what is draining the battery: step by step | Moto Zero"><meta property="og:description" content="Find what is draining the battery: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/parasitic-drain-test/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Find what is draining the battery", "item": "https://motobike-five.vercel.app/repair/repairs/parasitic-drain-test/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Find what is draining the battery</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Find what is draining the battery</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 30 to 60 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="parasitic-drain-test"><p><strong>Home mechanic (basic tools)</strong> · Time: 30 to 60 min (estimate)</p>
+<p>Some current flows even with the key off: a clock, an alarm or the ECU memory. If something else stays on, the battery goes flat in a few days. This test measures the current with the key off and then finds which circuit takes it.</p>
+<h2>Safety</h2>
+<ul>
+<li>Key OFF for the whole test. Do not press the starter or turn the key ON while the meter is in the circuit. The starter current will blow the meter's fuse or damage the meter.</li>
+<li>Glasses on when working at the battery.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>A multimeter with a DC current (A or mA) range. Start on the highest current range, then switch down.</li>
+<li>A charged battery.</li>
+<li>The fuse layout for your bike.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Quick check first: with the key OFF, look at the brake light. If it is lit, the brake light switch is stuck on. The K-Light 125 manual names this first. See <a href="../../../repair/repairs/brake-switch-test/">Test and adjust the brake light switches</a>.</li>
+<li>Check that the key is fully OFF and that no accessory (USB charger, alarm, phone holder light, extra lamp) is wired straight to the battery.</li>
+<li>Undo the battery negative (−) cable.</li>
+<li>Set the meter to its highest DC current range. Put the red probe in the current socket of the meter (often marked A or 10A).</li>
+<li>Connect one meter probe to the battery negative (−) post and the other to the loose negative cable. The current now flows through the meter.</li>
+<li>Wait a minute: some ECUs and alarms draw more for a short time after the key goes off.</li>
+<li>Read the current. Switch down to a lower range for a clearer reading if it is small. <strong>K-Light 125 limit: 1 mA or less.</strong> Other bikes: use your manual's limit. Bikes with an alarm or clock may draw more by design.</li>
+<li>If the reading is above the limit, pull one fuse at a time and watch the meter. When the current drops, that fuse feeds the drain. Refit each fuse before pulling the next.</li>
+<li>If no fuse changes the reading, the drain is on an unfused wire: often the regulator, the starter relay wiring or the ignition switch. The K-Light 125 manual lists a short in the regulator, battery or ignition switch wiring. Unplug the regulator connector and watch the reading. If it drops, see <a href="../../../repair/repairs/regulator-test/">Test the regulator rectifier</a>.</li>
+<li>Follow the circuit you found with the wiring diagram. Split it in half and test the middle, then keep halving (MAVCC method). See <a href="../../../repair/repairs/short-circuit-find/">Find a short circuit</a>.</li>
+<li>Remove the meter and reconnect the negative cable.</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>The key-off current is at or below the manual's limit.</li>
+<li>The battery keeps its charged voltage after several days parked.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>Current is normal but the battery still goes flat: the battery itself may self-discharge. <a href="../../../repair/repairs/battery-test-charge/">Test and charge a 12 V battery</a>, and check charging with <a href="../../../repair/repairs/charging-system-test/">Test the charging system</a>.</li>
+<li>Drain comes from added accessories: <a href="../../../repair/repairs/accessory-wiring/">Wire an accessory safely</a>.</li>
+<li>Drain comes from the key switch: <a href="../../../repair/repairs/ignition-switch-test/">Test the ignition switch</a>.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leakage current, key off</td>
+<td>1 mA or less</td>
+<td>36</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>digital multimeter that can measure DC current</li><li>wiring diagram</li><li>fuse puller</li><li>spanner for the battery terminal</li></ul></section>
+        
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/battery/"><span class="rpc-img"><img src="../../../assets/renders/battery_12v.webp" alt="" loading="lazy"></span><b>12 V battery</b></a><a class="rpc-shop" href="../../../parts/part/battery/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/regulator/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/F21.png" alt="" loading="lazy"></span><b>Regulator rectifier</b></a><a class="rpc-shop" href="../../../parts/part/regulator-rectifier/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/ignition_switch/"><span class="rpc-img"><img src="../../../assets/renders/instruments_analogue.webp" alt="" loading="lazy"></span><b>Ignition switch</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/brake_light_switch/"><span class="rpc-img"><img src="../../../assets/illustrations/electrical/EL02.png" alt="" loading="lazy"></span><b>Brake light switches</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/accessory-wiring-fault/"><b>Problems after fitting accessories or an alarm</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/battery-flat/"><b>Battery goes flat after the bike is parked</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/ev-aux-battery-flat/"><b>Small 12 V battery is flat</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/new-battery-dies/"><b>A new battery goes flat quickly</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/parasitic-drain/"><b>Something drains the battery with the key off</b><i class="ru is-care">Ride with care</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 36, 76</li><li>MAVCC Motorcycle Mechanic, PDF page 292</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>

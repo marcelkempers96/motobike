@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test the fuel level sender: step by step | Moto Zero</title>
+  <meta name="description" content="Test the fuel level sender: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/fuel-sender-test/">
+  <meta property="og:title" content="Test the fuel level sender: step by step | Moto Zero"><meta property="og:description" content="Test the fuel level sender: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/fuel-sender-test/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102b">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Test the fuel level sender", "item": "https://motobike-five.vercel.app/repair/repairs/fuel-sender-test/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Test the fuel level sender</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Test the fuel level sender</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 to 30 min for checks on the bike; 1 to 2 h if the sender is removed (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="fuel-sender-test"><p><strong>Home mechanic (basic tools)</strong> · Time: 20 to 30 min for checks on the bike; 1 to 2 h if the sender is removed (estimate) (estimate)</p>
+<p>Most fuel gauges are worked by a <strong>sender</strong> inside the tank: a float on an arm moves a contact across a resistor, so the resistance changes with the fuel level. The gauge on the dashboard reads that resistance. Some small bikes have only a low-fuel warning light worked by a level switch, and many have no gauge at all, just a reserve tap. A gauge that reads wrong is a nuisance, but it can leave you stranded.</p>
+<h2>Safety</h2>
+<ul>
+<li>Removing the sender opens the tank. Work outdoors, engine cold, no flames, extinguisher near you, and drain the fuel first.</li>
+<li>Key OFF before unplugging anything.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>Your manual's sender resistance at empty and full, and the wiring diagram. Values differ between bikes.</li>
+<li>A new rubber seal for the sender if you remove it.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li><strong>Check the fuel level for real.</strong> Look into the tank with a torch. Fill a known amount and see if the gauge moves.</li>
+<li><strong>Check other instruments.</strong> If the whole dashboard is dead or flickers, the problem is power to the instruments, not the sender: see <a href="../../../repair/problems/dash-dead/">Instruments or dashboard are dead</a>.</li>
+<li><strong>Fuse:</strong> check the fuse for the instruments: <a href="../../../repair/repairs/fuse-relay-check/">Check fuses and relays</a>.</li>
+<li><strong>Connector:</strong> find the sender plug on top of or under the tank (K-Light 125: on the tank, unplugged when removing the tank). Look for corrosion or a pulled wire; clean and refit it.</li>
+<li><strong>Gauge test:</strong> key ON, unplug the sender. Most gauges then go to one end of the scale. Join the two harness-side terminals with a short wire: most gauges go to the other end. If the needle or bars move fully both ways, the gauge and wiring work and the sender is at fault. If nothing moves, check the wiring and earth back to the dashboard: <a href="../../../repair/repairs/wiring-fault-find/">Find a wiring fault</a>. Check your manual first; some electronic dashboards show a fault instead.</li>
+<li><strong>Sender resistance on the bike:</strong> key OFF, sender unplugged. Measure across its two terminals with the multimeter on ohms. Compare with your manual at the current fuel level. An open circuit (no reading) or a reading that jumps means a worn or broken sender.</li>
+<li><strong>Remove and test (home, careful):</strong> drain the tank, remove the tank if needed, then undo the sender nuts and lift it out without bending the float arm. Move the float slowly from bottom to top while watching the meter: the reading should change smoothly with no gaps. Shake the float: fuel inside means it sinks; replace the sender.</li>
+<li>Refit with a new rubber seal, tighten the nuts evenly (K-Light 125: 5 to 9 N·m), refill and check for leaks around the sender.</li>
+</ol>
+<h2>Check your work</h2>
+<ul>
+<li>The gauge follows the fuel level from full to low, and no fuel smell or wet mark at the sender.</li>
+</ul>
+<h2>Reference values (K-Light 125)</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>PDF page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel level sensor mounting nut</td>
+<td>5 to 9 N·m</td>
+<td>187</td>
+</tr>
+</tbody>
+</table></div></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>multimeter</li><li>screwdrivers</li><li>torch</li><li>fuel can</li><li>rags</li><li>safety glasses</li><li>fire extinguisher</li></ul></section>
+        <section><h2>Consumables</h2><ul class="r-plain"><li>new sender rubber seal if removed</li></ul></section>
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuel_sender/"><span class="rpc-img"><img src="../../../assets/renders/fuel_tank.webp" alt="" loading="lazy"></span><b>Fuel level sender</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/instruments/"><span class="rpc-img"><img src="../../../assets/renders/instruments_analogue.webp" alt="" loading="lazy"></span><b>Instruments</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/wiring/"><span class="rpc-img"><img src="../../../assets/renders/wiring_harness.webp" alt="" loading="lazy"></span><b>Wiring harness and connectors</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/earth_strap/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Earth (ground) connections</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuse/"><span class="rpc-img"><img src="../../../assets/illustrations/wiring/WR01.png" alt="" loading="lazy"></span><b>Fuses</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div><div class="rpc"><a class="rpc-main" href="../../../repair/parts/fuel_tank/"><span class="rpc-img"><img src="../../../assets/renders/fuel_tank.webp" alt="" loading="lazy"></span><b>Fuel tank</b></a><a class="rpc-shop" href="../../../parts/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/fuel-gauge-wrong/"><b>Fuel gauge reads wrong or does not move</b><i class="ru is-ok">OK to ride</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li>K-Light 125 manual, PDF pages 180, 183, 187, 278</li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=1"></script>
+</body>
+</html>
