@@ -28,7 +28,7 @@ const BIKES = {
     rim: { f: 19, r: 18 }, circ: 1.95, sprF: 15, sprR: 44, rangeF: [13, 17], rangeR: [36, 52],
     primary: 3.35, gears: [2.77, 1.88, 1.40, 1.13, 0.96], redline: 10000, rpk: 6500, tk: 1.2,
     bore: 56.5, stroke: 49.5, cr: 9.5, crRange: [8, 12], bmep: 10e5, strokes: 4, eta: 0.27,
-    presets: [[125, 56.5, 49.5], [250, 72, 61.2], [400, 85, 70.5]],
+    presets: [[100, 50.7, 49.5], [125, 56.5, 49.5], [250, 72, 61.2], [400, 85, 70.5]],
     mass: 150, cda: 0.60, rake: 27, trail: 100, speedo: 'front', drive: '428 chain',
     paint: ['tank_paint'], frameNames: ['frame_body__frame__tubes', 'frame_body__frame__head_tube'],
     stockLabel: 'Classic red',
@@ -38,7 +38,7 @@ const BIKES = {
     rim: { f: 21, r: 19 }, circ: 2.07, sprF: 13, sprR: 50, rangeF: [12, 15], rangeR: [44, 54],
     primary: 3.47, gears: [2.15, 1.73, 1.44, 1.24, 1.09, 0.96], redline: 12500, rpk: 10500, tk: 5,
     bore: 54, stroke: 54.5, cr: 12, crRange: [9, 14], bmep: 8e5, strokes: 2, eta: 0.2,
-    presets: [[125, 54, 54.5], [250, 66.4, 72], [400, 80, 79.5]],
+    presets: [[100, 50, 50.8], [125, 54, 54.5], [250, 66.4, 72], [400, 80, 79.5]],
     mass: 90, cda: 0.70, rake: 26.5, trail: 112, speedo: 'front', drive: '520 chain',
     paint: ['mx_red'], frameNames: ['frame_body__frame', 'frame_body__subframe'],
   },
@@ -833,7 +833,8 @@ function wheelScale(which, c = cfg) {
 function engScale(c = cfg) {
   if (!c) return 1;
   const r = B.kind === 'elec' ? c.kw / B.kw : ccOf(c.bore, c.stroke) / ccOf(B.bore, B.stroke);
-  return Math.round(Math.min(1.1, Math.max(0.9, Math.cbrt(r))) * 1000) / 1000;
+  // a quarter power keeps the engine inside the frame but makes 100, 125, 250 and 400 cc clearly different
+  return Math.round(Math.min(1.4, Math.max(0.85, Math.pow(r, 0.25))) * 1000) / 1000;
 }
 function battScale(c = cfg) {
   if (!c || B.kind !== 'elec') return 1;
@@ -1179,6 +1180,28 @@ $('bb-compare').addEventListener('change', (e) => { cfg.compare = e.target.check
 $('bb-stock').addEventListener('click', async () => { const cmp = cfg.compare; cfg = stockCfg(); cfg.compare = cmp; for (const k of Object.keys(swaps)) await applySwap(k, null); setupConfigUI(); applyCfg(); syncOutputs(); });
 
 /* Tabs */
+/* Configure: click a part on the bike to jump to its options (swap or colour) */
+const _ray = new THREE.Raycaster(), _ndc = new THREE.Vector2();
+let _down = null;
+canvas.addEventListener('pointerdown', (e) => { _down = [e.clientX, e.clientY]; });
+canvas.addEventListener('pointerup', (e) => {
+  if (!_down || Math.hypot(e.clientX - _down[0], e.clientY - _down[1]) > 6) return;
+  if ($('bb-pc').hidden) return;
+  const r = canvas.getBoundingClientRect();
+  _ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+  _ray.setFromCamera(_ndc, camera);
+  const hit = _ray.intersectObjects(meshes.filter((m) => m.visible), false)[0];
+  if (!hit) return;
+  const m = hit.object, key = m.userData.part, grp = colourGroup(m);
+  let target = document.querySelector(`#bb-swap button[data-slot="${key}"]`)?.closest('.bb-swap-row');
+  if (!target && grp) target = $({ body: 'bb-c-body', frame: 'bb-c-frame', wheel: 'bb-c-wheel' }[grp]);
+  if (!target) target = $('bb-colours');
+  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  target.classList.remove('bb-flash'); void target.offsetWidth; target.classList.add('bb-flash');
+  const part = partsByKey[key];
+  note(`<b>${part ? part.label : 'Part'}</b> selected: its options are highlighted on the right.`);
+});
+
 function setTab(t) {
   const a = t === 'a';
   $('bb-tab-a').setAttribute('aria-selected', String(a)); $('bb-tab-c').setAttribute('aria-selected', String(!a));

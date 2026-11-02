@@ -9,6 +9,7 @@ import {
 import { mountSite } from './site.js';
 import { recordTool } from './progress.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
+const ENGINE_VIEW = { engine: 'overview', crankshaft: 'overview', piston: 'overview', conrod: 'overview', cylinder: 'top', valve_in: 'top', valve_ex: 'top', clutch: 'clutch', gearbox: 'gearbox', rear_sprocket: 'final', chain: 'final', starter: 'start', charging: 'gen', spark_plug: 'gen' };
 import {
   BIKE_MODEL, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
   partForMesh, BIKE_WHEELS, HOTSPOTS,
@@ -121,7 +122,7 @@ ${PAGE === 'overview' ? `
           <p class="ute-sub">${info.blurb}</p>
         </div>
         <div class="ute-head-tools">
-          <span class="ute-legend"><i></i>= interactive close-up</span>
+          <span class="ute-legend"><i></i>animation and graphs <i class="is-eng"></i>also in Under the Engine</span>
         </div>
       </div>
       <div class="ute-chips" role="group" aria-label="System categories">
@@ -367,7 +368,7 @@ function renderPartIndex() {
   const box = $('#ute-part-index');
   if (!box) return;
   box.innerHTML = `<span class="ute-label">Parts on this bike</span>` + overviewParts().map((k) =>
-    `<button type="button" class="mz-part ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''}" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}">${partName(k)}</button>`).join('');
+    `<button type="button" class="mz-part ${INTERACTIVE_PARTS.has(k) ? 'is-ix' : ''} ${ENGINE_VIEW[k] && S.mode !== 'elec' ? 'is-eng' : ''}" data-part="${k}" data-cat="${PART_CATEGORY[k] || ''}" title="${INTERACTIVE_PARTS.has(k) ? 'Working animation with graphs' : ''}${ENGINE_VIEW[k] && S.mode !== 'elec' ? (INTERACTIVE_PARTS.has(k) ? '; ' : '') + 'also in Under the Engine' : ''}">${partName(k)}</button>`).join('');
   box.querySelectorAll('[data-part]').forEach((b) => b.addEventListener('click', () => selectPart(b.dataset.part)));
   applyMotoHighlight();
   applyMotoCategory();
@@ -418,7 +419,6 @@ function emptyCViewHTML() {
 let CV3 = null;
 const EMBED = /[?&]embed=1/.test(location.search);
 if (EMBED) document.documentElement.classList.add('mz-embed');
-const ENGINE_VIEW = { engine: 'overview', crankshaft: 'overview', piston: 'overview', conrod: 'overview', cylinder: 'top', valve_in: 'top', valve_ex: 'top', clutch: 'clutch', gearbox: 'gearbox', rear_sprocket: 'final', chain: 'final', starter: 'start', charging: 'gen', spark_plug: 'gen' };
 let animOpen = true;
 
 function renderComponentView() {

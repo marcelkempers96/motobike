@@ -108,6 +108,7 @@ p { margin: 0 0 10px; }
   font: 500 10.5px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute);
 }
 .ute-legend i { width: 10px; height: 10px; border-radius: 50%; background: var(--warm); display: inline-block; border: 1.5px solid var(--surface); box-shadow: 0 0 0 1px var(--warm); }
+.ute-legend i.is-eng { box-shadow: 0 0 0 1px #2A4FE0; }
 
 /* Chips */
 .ute-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
@@ -761,6 +762,7 @@ p { margin: 0 0 10px; }
 .mz-gal-card { display: flex; flex-direction: column; gap: 8px; padding: 10px; background: var(--surface); border: 1px solid var(--ink); text-decoration: none; color: var(--ink); font: 600 13px/1.35 var(--sans); }
 .mz-gal-card img { width: 100%; aspect-ratio: 5 / 4; object-fit: contain; background: #FFFFFF; }
 .mz-gal-card:hover { border-color: var(--warm); box-shadow: 0 0 0 1px var(--warm); }
+.ute-legend i.is-eng { box-shadow: 0 0 0 1px #2A4FE0; }
 .mz-lib-page { flex: 1; }
 .mz-lib-detail { max-width: 1280px; margin: 0 auto; padding: 24px 32px 48px; }
 .mz-lib-title { font-size: 28px; letter-spacing: -0.02em; margin: 4px 0; }
@@ -1144,3 +1146,7 @@ a.mz-anim-btn { text-decoration: none; display: inline-flex; align-items: center
 .mz-cv-work .mz-cv-graphs > :not(.mz-cv-tag) { width: 100%; }
 .mz-cv-work .mz-cv-tag { display: block; margin-bottom: 8px; }
 @media (max-width: 1100px) { .mz-cv-work { grid-template-columns: minmax(0, 1fr); } }
+
+/* Overview: second marker for parts that open in Under the Engine */
+.mz-part.is-eng::after { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2A4FE0; margin-left: 6px; vertical-align: 1px; }
+.ute-legend i.is-eng { background: #2A4FE0 !important; border-color: #2A4FE0 !important; margin-left: 10px; }

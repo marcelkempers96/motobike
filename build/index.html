@@ -180,6 +180,13 @@
 .bb-swap-row button + button { border-left: 0; }
 .bb-swap-row button[aria-pressed="true"] { background: var(--ink); color: #FFF; border-color: var(--ink); }
 .bb-swap-row button:disabled { opacity: .35; cursor: default; }
+/* keep the 3D and the controls on one screen: the side panel scrolls on its own */
+@media (min-width: 981px) {
+  .bb-side { position: sticky; top: 72px; max-height: calc(100vh - 84px); overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
+}
+.bb-tipline { margin: 0; font-size: 13px; color: var(--bb-mute, #5F6166); }
+.bb-flash { animation: bbflash 1.4s ease-out; }
+@keyframes bbflash { 0% { box-shadow: 0 0 0 3px #C2502A; } 100% { box-shadow: 0 0 0 0 transparent; } }
 </style>
 </head>
 <body>
@@ -229,6 +236,18 @@
           </div>
         </div>
         <div class="bb-panel" id="bb-pc" role="tabpanel" aria-labelledby="bb-tab-c" hidden>
+          <p class="bb-tipline">Tip: click a part on the bike to jump to its options.</p>
+          <div class="bb-box" id="bb-colours">
+            <h2>Colours</h2>
+            <h3 id="bb-c-body-t">Tank and bodywork</h3><div class="bb-sw" id="bb-c-body"></div>
+            <h3>Frame</h3><div class="bb-sw" id="bb-c-frame"></div>
+            <h3>Wheels</h3><div class="bb-sw" id="bb-c-wheel"></div>
+          </div>
+          <div class="bb-box" id="bb-swapbox">
+            <h2>Swap parts</h2>
+            <p class="bb-small">Fit parts from the other two bikes. Each part is scaled to fit where the original sat.</p>
+            <div id="bb-swap" class="bb-swap"></div>
+          </div>
           <div class="bb-box" id="bb-eng"></div>
           <div class="bb-box">
             <h2>Wheels</h2>
@@ -241,17 +260,6 @@
             <p class="bb-small" id="bb-fd-s">Teeth on the gearbox sprocket and the wheel sprocket. Fewer front or more rear teeth means lower gearing: more pull, less top speed.</p>
             <div class="bb-ctl"><label for="bb-sf" id="bb-sf-l">Front sprocket</label><output id="bb-sf-o"></output><input type="range" id="bb-sf" step="1"></div>
             <div class="bb-ctl"><label for="bb-sr" id="bb-sr-l">Rear sprocket</label><output id="bb-sr-o"></output><input type="range" id="bb-sr" step="1"></div>
-          </div>
-          <div class="bb-box">
-            <h2>Swap parts</h2>
-            <p class="bb-small">Fit parts from the other two bikes. Each part is scaled to fit where the original sat.</p>
-            <div id="bb-swap" class="bb-swap"></div>
-          </div>
-          <div class="bb-box">
-            <h2>Colours</h2>
-            <h3 id="bb-c-body-t">Tank and bodywork</h3><div class="bb-sw" id="bb-c-body"></div>
-            <h3>Frame</h3><div class="bb-sw" id="bb-c-frame"></div>
-            <h3>Wheels</h3><div class="bb-sw" id="bb-c-wheel"></div>
           </div>
           <div class="bb-box">
             <label class="bb-toggle"><input type="checkbox" id="bb-compare"> Compare with stock</label>
