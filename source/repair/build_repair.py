@@ -74,6 +74,14 @@ IMG = {'engine': 'renders/engine_4t.webp', 'cylinder': 'renders/cylinder.webp', 
        'aux_battery': 'renders/battery_12v.webp', 'charger': 'renders/charge_port.webp', 'charge_port': 'renders/charge_port.webp', 'motor': 'renders/motor.webp', 'controller': 'renders/controller.webp',
        'contactor': 'illustrations/electrical/F25.png', 'dc_dc': 'illustrations/electrical/F25.png', 'throttle_sensor': 'renders/controller.webp', 'motor_sensor': 'illustrations/electrical/F24.png',
        'radiator': 'renders/engine_2t.webp', 'coolant': 'renders/engine_2t.webp', 'cooling_fan': 'renders/engine_2t.webp', 'thermostat': 'renders/engine_2t.webp', 'water_pump': 'renders/engine_2t.webp'}
+# Under the Engine renders for engine-internal parts, with the view to open
+ENG_SHOT = {'engine': ('01-whole-engine', 'overview'), 'crankshaft': ('01-whole-engine', 'overview'), 'piston': ('07-valvetrain', 'top'), 'piston_rings': ('07-valvetrain', 'top'),
+  'camshaft': ('07-valvetrain', 'top'), 'valves': ('07-valvetrain', 'top'), 'valve_springs': ('07-valvetrain', 'top'), 'rocker_arms': ('07-valvetrain', 'top'), 'pushrods': ('07-valvetrain', 'top'),
+  'cam_chain': ('07-valvetrain', 'top'), 'cam_tensioner': ('07-valvetrain', 'top'), 'clutch': ('03-clutch-cutaway-pulled', 'clutch'), 'clutch_plates': ('03-clutch-cutaway-pulled', 'clutch'),
+  'clutch_cable': ('03-clutch-cutaway-pulled', 'clutch'), 'gearbox': ('02-gearbox-function-colours', 'gearbox'), 'shift_mechanism': ('04-shift-drum-star-detent', 'shift'), 'gear_lever': ('04-shift-drum-star-detent', 'shift'),
+  'kickstarter': ('06-kickstart', 'start'), 'starter': ('05-generator-electric-start', 'start'), 'starter_clutch': ('05-generator-electric-start', 'start'), 'stator': ('05-generator-electric-start', 'gen'),
+  'pickup': ('05-generator-electric-start', 'gen'), 'cdi': ('05-generator-electric-start', 'gen'), 'ignition_coil': ('05-generator-electric-start', 'gen'), 'front_sprocket': ('01-whole-engine', 'final')}
+for _k, (_f, _v) in ENG_SHOT.items(): IMG[_k] = f'engine/shots/{_f}.webp'
 SP = {}
 try:
   sp = open(os.path.join(ROOT, 'assets/content/spare-parts.js'), encoding='utf-8').read()
@@ -294,7 +302,7 @@ for i, p in PART.items():
         <span class="ute-label">{e(CATNAME.get(p["category"], p["category"].replace("-", " ").capitalize()))}</span>
         <h1>{e(p["name"])}</h1>
         {f'<p class="r-meta"><span>Also called: {e(", ".join(p["aliases"]))}</span></p>' if p.get("aliases") else ''}
-        <p class="r-btns"><a class="r-btn is-shop" href="{rel}{shop_url(i)}">Find this part →</a>{f'<a class="r-btn is-3d" href="{rel}{ov}">See it in 3D</a>' if ov else ''}</p>
+        <p class="r-btns"><a class="r-btn is-shop" href="{rel}{shop_url(i)}">Find this part →</a>{f'<a class="r-btn is-3d" href="{rel}{ov}">See it in 3D</a>' if ov else ''}{f'<a class="r-btn is-3d" href="{rel}engine/#{ENG_SHOT[i][1]}">See it in Under the Engine</a>' if i in ENG_SHOT else ''}</p>
       </div>
       <figure class="r-fig"><img src="{rel}{src}" alt="{e(p["name"])}">{cap}</figure>
     </header>

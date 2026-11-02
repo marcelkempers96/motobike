@@ -243,6 +243,12 @@ export default {
           "caption": "Step through all four strokes. Watch which valve is open in each, and confirm that after 720° of crank the cam has turned only 360°."
         },
         {
+          "type": "engine",
+          "shot": "07-valvetrain",
+          "view": "top",
+          "caption": "The valvetrain moving in time with the crank: cam chain, camshaft, rockers and valves. The dial shows where you are in the 720° cycle."
+        },
+        {
           "type": "steps",
           "items": [
             {
@@ -927,6 +933,12 @@ export default {
           "type": "photo",
           "src": "render-crank.jpg",
           "caption": "Pressed-up single-cylinder crank assembly: two full-circle flywheel webs with balance holes drilled opposite the crankpin, a roller-bearing big end on a forged I-section connecting rod, bronze-bushed small end, and a slipper-skirt piston with two compression rings and a three-piece oil ring. The splined left shaft carries the primary drive gear; the right shaft carries the cam-chain sprocket, the keyed taper for the alternator rotor and the rotor nut thread."
+        },
+        {
+          "type": "engine",
+          "shot": "01-whole-engine",
+          "view": "overview",
+          "caption": "Crank, rod and piston at the heart of the whole unit: generator on the left, clutch and gearbox on the right, all driven from one crankshaft."
         },
         {
           "type": "model",

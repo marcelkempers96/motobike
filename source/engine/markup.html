@@ -1,0 +1,133 @@
+<!-- Under the Engine: page markup. Every id and data-* attribute here is read by engine.js (see docs/README.md, DOM contract). -->
+<div class="wrap">
+<header class="top">
+  <p class="brand"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="60" cy="60" r="9" fill="#C8502A"/></svg>Moto Zero <span>by Transitions Lab</span></p>
+  <h1>Under the Engine</h1>
+  <p class="lede">Everything on this stand is one engine: a <b>125 cc air-cooled single-cylinder four-stroke</b> of the unit-construction type that powers most commuter and boda boda motorcycles, where crankshaft, generator, both starters, clutch and the <b>five-speed constant-mesh gearbox</b> share one crankcase. The cases and covers are removed so every gear, chain, fork and roller moves in sync with the crank. Start it, pull the clutch, shift through the box and click any part for its job and tooth count.</p>
+</header>
+
+<main class="layout">
+  <section class="stage">
+    <div class="views" role="group" aria-label="Camera views">
+      <span class="lab">View</span>
+      <button data-cam="overview" aria-pressed="true">Whole engine</button>
+      <button data-cam="gearbox">Gearbox</button>
+      <button data-cam="clutch">Clutch</button>
+      <button data-cam="shift">Shift drum &amp; star</button>
+      <button data-cam="top">Valvetrain</button>
+      <button data-cam="gen">Generator</button>
+      <button data-cam="start">Starting</button>
+      <button data-cam="final">Final drive</button>
+    </div>
+    <div class="view" id="view">
+      <div class="tags" id="tags" hidden></div>
+      <div class="stroke" aria-hidden="true">
+        <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="18" fill="none" stroke="var(--line2)" stroke-width="5"/><path id="strokeArc" fill="none" stroke="var(--accent)" stroke-width="5" d=""/><line id="strokeHand" x1="23" y1="23" x2="23" y2="6" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg>
+        <div><div class="k">Four-stroke cycle</div><div class="v" id="strokeName">Intake</div><div class="k" id="strokeDeg">0° of 720°</div></div>
+      </div>
+      <div class="tip" id="tip" hidden></div>
+      <div class="focus" id="focusPill" hidden><span></span><button id="showAll">Show whole engine</button></div>
+      <p class="hint">Drag to orbit, scroll or pinch to zoom, right-drag to pan. Click a part.</p>
+    </div>
+    <div class="readouts">
+      <div class="ro hot"><div class="k">Engine</div><div class="v" id="roRpm">0<small>rpm</small></div></div>
+      <div class="ro"><div class="k">Gear</div><div class="v" id="roGear">N</div></div>
+      <div class="ro"><div class="k">Clutch</div><div class="v" id="roClutch">Engaged</div></div>
+      <div class="ro"><div class="k">Mainshaft</div><div class="v" id="roMain">0<small>rpm</small></div></div>
+      <div class="ro"><div class="k">Countershaft</div><div class="v" id="roCounter">0<small>rpm</small></div></div>
+      <div class="ro"><div class="k">Road speed</div><div class="v" id="roSpeed">0<small>km/h</small></div></div>
+    </div>
+    <div class="msgbar" id="msgbar"><span class="dot"></span><p id="msg">Engine stopped, gearbox in neutral. Kick it or press the starter button.</p></div>
+    <div class="deck">
+      <div class="grp">
+        <h3>Start and stop</h3>
+        <div class="btns">
+          <button id="bKick" class="go">Kick start</button>
+          <button id="bElec">Starter button</button>
+          <button id="bKill">Kill switch</button>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Throttle</h3>
+        <div class="slider"><input id="throttle" type="range" min="0" max="100" value="0" aria-label="Throttle"><output id="throttleOut">idle</output></div>
+      </div>
+      <div class="grp">
+        <h3>Clutch lever</h3>
+        <div class="btns">
+          <button id="bClutch" class="hold">Hold to pull</button>
+          <label class="chk"><input type="checkbox" id="clutchLatch"> Keep pulled</label>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Gear pedal</h3>
+        <div class="btns">
+          <div class="gears" id="gearChips"></div>
+          <button id="bDown" aria-label="Shift down">▼ Down</button>
+          <button id="bUp" aria-label="Shift up">Up ▲</button>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Animation speed</h3>
+        <div class="btns" id="speedBtns">
+          <button data-ts="0.02">1/50</button>
+          <button data-ts="0.05" aria-pressed="true">1/20</button>
+          <button data-ts="0.2">1/5</button>
+          <button data-ts="1">Real time</button>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Exploded view</h3>
+        <div class="slider"><input id="explode" type="range" min="0" max="100" value="0" aria-label="Explode"><output id="explodeOut">assembled</output></div>
+      </div>
+      <div class="grp" style="grid-column:1/-1">
+        <h3>Show</h3>
+        <div class="btns">
+          <label class="chk"><input type="checkbox" id="optCut" checked> Cutaway covers</label>
+          <label class="chk"><input type="checkbox" id="optShell" checked> Cylinder and head</label>
+          <label class="chk"><input type="checkbox" id="optPath" checked> Power path</label>
+          <label class="chk"><input type="checkbox" id="optFunc"> Function colours</label>
+          <label class="chk"><input type="checkbox" id="optTags"> Labels</label>
+        </div>
+        <div class="legend" id="funcLegend" hidden>
+          <span><i class="sw" style="background:var(--c-spl)"></i>Splined to its shaft, slides sideways</span>
+          <span><i class="sw" style="background:var(--c-free)"></i>Freewheeling, cannot slide</span>
+          <span><i class="sw" style="background:var(--c-fix)"></i>Fixed, part of the shaft</span>
+          <span><i class="sw" style="background:var(--c-shaft)"></i>Shafts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="panel" aria-live="polite">
+    <div id="info">
+      <p class="eyebrow">Reference engine</p>
+      <h2>125 cc OHC single, five speeds</h2>
+      <p>Bore 56.5 mm, stroke 49.5 mm, chain-driven overhead cam with two valves, magneto flywheel with AC CDI ignition, wet multi-plate clutch and a return-shift five-speed box (1-N-2-3-4-5). Tooth counts are chosen to give ratios typical of this class of engine; the tables below list every one.</p>
+      <p>Click any part in the model or in the list below.</p>
+    </div>
+    <h4>Parts by system</h4>
+    <div id="plist"></div>
+  </aside>
+</main>
+
+<section class="data" aria-label="Gear train data">
+  <div>
+    <h2>Gearbox ratios</h2>
+    <p class="sub">Every gear pair has the same 49-tooth sum at module 2.0, which is what lets all five pairs sit on two shafts 49 mm apart and stay in constant mesh. Road speed assumes a 2.75-18 rear tyre with a rolling circumference of 1.95 m.</p>
+    <div class="tbl"><table id="tRatio"></table></div>
+  </div>
+  <div class="two">
+    <div>
+      <h2>How the drum selects each gear</h2>
+      <p class="sub">Only one dog clutch is ever engaged. Every other gear spins freely on its shaft while staying in mesh.</p>
+      <div class="tbl"><table id="tShift"></table></div>
+    </div>
+    <div>
+      <h2>Other gear trains</h2>
+      <p class="sub">The trains that feed the crank in and take power out of it.</p>
+      <div class="tbl"><table id="tTrains"></table></div>
+    </div>
+  </div>
+</section>
+<footer>Moto Zero is an openly licensed motorcycle technology programme by Transitions Lab. The mechanism follows a typical Honda-pattern 125 cc commuter engine; dimensions and tooth counts are representative rather than taken from one manufacturer's drawings. Clearances in the clutch and dog gaps are exaggerated so the movement is visible.</footer>
+</div>

@@ -838,6 +838,12 @@ export default {
           "caption": "Body parts by type: bench, motocross and flat-tracker seats; round, number-plate and LED headlights; tail light, mudguards and side panel."
         },
         {
+          "type": "engine",
+          "shot": "08-exploded",
+          "view": "overview",
+          "caption": "The engine of a 125 cc commuter, pulled apart on the stand: every part in its place. Open it, drag the Exploded view slider and click any part."
+        },
+        {
           "type": "models",
           "files": [
             "seat_bench",

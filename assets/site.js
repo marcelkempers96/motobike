@@ -34,6 +34,7 @@ export const NAV = [
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [
     ['cockpit/', 'Cockpit', 'Ride the bike, start it, run the dyno'],
+    ['engine/', 'Under the Engine', '3D engine: gearbox, clutch, starters, valves'],
     ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
     ['models/', '3D models', 'All 56 models, rotate and inspect'],
     ['build/', 'Bike builder', 'Assemble a bike and change its specification'],

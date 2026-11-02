@@ -601,6 +601,12 @@ export default {
           "caption": "Change the primary voltage and the turns ratio and watch the secondary voltage. Try 300 V with a 100:1 ratio."
         },
         {
+          "type": "engine",
+          "shot": "05-generator-electric-start",
+          "view": "gen",
+          "caption": "The pick-up reads the flywheel and the CDI fires the coil. Start the engine and watch the spark follow the crank."
+        },
+        {
           "type": "steps",
           "items": [
             {
@@ -955,6 +961,12 @@ export default {
           "type": "plate",
           "id": "F21",
           "caption": "Charging circuit: permanent-magnet alternator, shunt regulator/rectifier, fuse, battery and loads."
+        },
+        {
+          "type": "engine",
+          "shot": "05-generator-electric-start",
+          "view": "gen",
+          "caption": "The flywheel magneto and stator during an electric start: the starter turns the crank through a one-way roller clutch."
         },
         {
           "type": "wiring",

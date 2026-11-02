@@ -1,0 +1,71 @@
+{
+  "name": "Under the Engine",
+  "programme": "Moto Zero by Transitions Lab",
+  "engine": {
+    "type": "Air-cooled single-cylinder four-stroke, unit construction (crank, generator, starters, clutch and gearbox in one crankcase)",
+    "displacement_cc": 124.1,
+    "bore_mm": 56.5,
+    "stroke_mm": 49.5,
+    "crankThrow_mm": 24.75,
+    "conrodCentres_mm": 100,
+    "valvetrain": "Chain-driven single overhead cam, two valves, rocker arms with screw adjusters",
+    "ignition": "Magneto flywheel, exciter coil, pickup coil, AC-CDI, ignition coil",
+    "starting": ["Kickstarter (helical spline, kick idle gear lugged to clutch basket)", "Electric starter via reduction gear and roller one-way clutch"],
+    "clutch": "Wet multi-plate, 5 friction plates, 4 steel plates, 4 springs, cable lifter and push rod through the mainshaft",
+    "gearbox": "5-speed constant mesh, return shift 1-N-2-3-4-5, shift drum with 3 channels, 3 forks, star detent with ground neutral ridge",
+    "note": "Tooth counts and dimensions are representative of 125 cc commuter engines, not one manufacturer's drawings. Clutch lift and dog travel are exaggerated in the animation."
+  },
+  "gearbox": {
+    "module_mm": 2,
+    "toothSum": 49,
+    "centreDistance_mm": 49,
+    "pairs": [
+      {"gear": 1, "main": {"id": "M1", "teeth": 13, "type": "fixed"},  "counter": {"id": "C1", "teeth": 36, "type": "free"},   "ratio": 2.769, "lockedBy": "C5 slides +x into C1"},
+      {"gear": 2, "main": {"id": "M2", "teeth": 17, "type": "splined"}, "counter": {"id": "C2", "teeth": 32, "type": "free"},   "ratio": 1.882, "lockedBy": "C4 slides -x into C2"},
+      {"gear": 3, "main": {"id": "M3", "teeth": 20, "type": "slider"},  "counter": {"id": "C3", "teeth": 29, "type": "free"},   "ratio": 1.450, "lockedBy": "C4 slides +x into C3"},
+      {"gear": 4, "main": {"id": "M4", "teeth": 23, "type": "free"},    "counter": {"id": "C4", "teeth": 26, "type": "slider"}, "ratio": 1.130, "lockedBy": "M3 slides -x into M4"},
+      {"gear": 5, "main": {"id": "M5", "teeth": 25, "type": "free"},    "counter": {"id": "C5", "teeth": 24, "type": "slider"}, "ratio": 0.960, "lockedBy": "M3 slides +x into M5"}
+    ],
+    "columnOrderFromClutchSide": ["1 (M1/C1)", "5 (M5/C5)", "3 (M3/C3)", "4 (M4/C4)", "2 (M2/C2)"],
+    "dogs": {"perFace": 4, "length_mm": 4.5, "windowsPerFreeGear": 4, "windowSpan_deg": 52, "dogSpan_deg": 22, "engageThreshold_mm": 3.4, "travel_mm": 5}
+  },
+  "trains": {
+    "primary": {"driver": 18, "driven": 67, "module_mm": 1.75, "ratio": 3.722},
+    "camChain": {"driver": 16, "driven": 32, "pitch_mm": 6.35, "ratio": 2.0},
+    "balancer": {"driver": 28, "driven": 28, "module_mm": 1.75, "ratio": 1.0, "direction": "opposite to crank"},
+    "starter": {"pinion": 10, "reductionLarge": 42, "reductionSmall": 14, "drivenGear": 46, "module_mm": 1.25, "overallRatio": 13.8},
+    "kick": {"kickGear": 30, "kickIdle": 22, "module_mm": 2, "spindleToCrank": 5.076, "leverTravel_deg": 105, "crankTurnsPerKick": 1.48},
+    "finalDrive": {"front": 14, "rear": 43, "pitch_mm": 15.875, "ratio": 3.071}
+  },
+  "overallRatios": {"1": 31.66, "2": 21.52, "3": 16.58, "4": 12.92, "5": 10.98},
+  "roadSpeedAt8000rpm_kmh": {"1": 29.6, "2": 43.5, "3": 56.5, "4": 72.4, "5": 85.3},
+  "tyreCircumference_m": 1.95,
+  "shiftDrum": {
+    "positions_deg": {"1": 0, "N": 30, "2": 60, "3": 120, "4": 180, "5": 240},
+    "neutral": "Half step (30 deg) between 1st and 2nd, held by a ground-flat ridge on the star cam",
+    "pattern": "1 down, 4 up"
+  },
+  "valveTiming_crankDeg": {
+    "cycle": "0 = TDC at start of intake; 0-180 intake, 180-360 compression, 360-540 power, 540-720 exhaust",
+    "intake": {"opens": -10, "peak": 110, "closes": 230},
+    "exhaust": {"opens": 490, "peak": 610, "closes": 730},
+    "lift_mm": 6.5,
+    "window_deg": 240,
+    "spark": 345
+  },
+  "ignition": {
+    "sparkVoltage_kV": "20-30",
+    "exciterCoil_V": "100-250 AC",
+    "pickupPulse_V": "1-3",
+    "coilStepUp": "up to about 200 x",
+    "pickupAngle_deg": 105,
+    "reluctorLead_deg": 15
+  },
+  "sources": [
+    "Video 1 transcript: kickstarter, self-starter and one-way roller clutch, stator, exciter coil, CDI, pickup coil, ignition coil, timing chain, counterbalance, clutch, transmission",
+    "Video 2 transcript: clutch basket, inner hub, friction and steel plates, pressure plate, springs and bolts, actuator arm, push rod through the input shaft",
+    "Video 3 transcript: gear lever, shifter shaft, ratchet, shift drum channels, forks, dog clutches, splined/freewheeling/fixed gears, numbering 1-5, star detent with ground ridge for neutral, constant mesh vs sliding mesh",
+    "Video 4 transcript: unusable auto-captions, nothing taken from it",
+    "16 reference screenshots in reference/screenshots"
+  ]
+}

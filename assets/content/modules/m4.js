@@ -59,6 +59,18 @@ export default {
           "caption": "Wet multiplate clutch, exploded: basket, friction and steel plates, hub, pressure plate, springs and release mechanism."
         },
         {
+          "type": "engine",
+          "shot": "03-clutch-cutaway-pulled",
+          "view": "clutch",
+          "caption": "The clutch cut away with the lever pulled: the pressure plate lifts and the friction and steel plates separate. Hold the clutch and watch them part."
+        },
+        {
+          "type": "engine",
+          "shot": "06-kickstart",
+          "view": "start",
+          "caption": "Kick starting: the kick shaft turns the crank through the kick idle gear and the clutch basket."
+        },
+        {
           "type": "model",
           "file": "clutch",
           "caption": "The assembled wet multiplate clutch: basket with primary driven gear, pressure plate and springs."
@@ -287,6 +299,18 @@ export default {
           "type": "plate",
           "id": "F14",
           "caption": "Constant-mesh five-speed gearbox: fixed, free and sliding gears, dogs, forks and shift drum."
+        },
+        {
+          "type": "engine",
+          "shot": "02-gearbox-function-colours",
+          "view": "gearbox",
+          "caption": "The five-speed constant-mesh gearbox in function colours: red gears slide on splines, blue gears spin free, orange gears are fixed. Shift through 1-N-2-3-4-5."
+        },
+        {
+          "type": "engine",
+          "shot": "04-shift-drum-star-detent",
+          "view": "shift",
+          "caption": "The shift drum and star detent: each press of the gear pedal turns the drum one step and the forks slide the dog gears."
         },
         {
           "type": "h3",
