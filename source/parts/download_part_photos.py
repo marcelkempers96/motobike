@@ -153,10 +153,11 @@ def search(session, query, width, limit, delay):
               "generator": "search", "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": "6",
               "gsrlimit": str(limit), "prop": "imageinfo",
               "iiprop": "url|size|mime|extmetadata", "iiurlwidth": str(width)}
-    for attempt in range(4):
+    for attempt in range(8):
         r = session.get(API, params=params, timeout=60)
         if r.status_code == 429 or "maxlag" in r.text[:200]:
-            time.sleep(5 * (attempt + 1)); continue
+            wait = int(r.headers.get("Retry-After", "0") or 0) or 30 * (attempt + 1)
+            print(f"rate limited, waiting {wait}s", flush=True); time.sleep(wait); continue
         r.raise_for_status()
         time.sleep(delay)
         return r.json().get("query", {}).get("pages", [])

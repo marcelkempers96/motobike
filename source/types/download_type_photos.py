@@ -43,9 +43,11 @@ def search(s, q, width, delay):
   p = {"action": "query", "format": "json", "formatversion": "2", "maxlag": "5", "generator": "search",
        "gsrsearch": f"{q} filetype:bitmap", "gsrnamespace": "6", "gsrlimit": "40", "prop": "imageinfo",
        "iiprop": "url|size|mime|extmetadata", "iiurlwidth": str(width)}
-  for k in range(4):
+  for k in range(8):
     r = s.get(API, params=p, timeout=60)
-    if r.status_code == 429 or "maxlag" in r.text[:200]: time.sleep(5 * (k + 1)); continue
+    if r.status_code == 429 or "maxlag" in r.text[:200]:
+      wait = int(r.headers.get("Retry-After", "0") or 0) or 30 * (k + 1)
+      print(f"rate limited, waiting {wait}s", flush=True); time.sleep(wait); continue
     r.raise_for_status(); time.sleep(delay)
     return r.json().get("query", {}).get("pages", [])
   return []

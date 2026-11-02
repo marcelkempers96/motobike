@@ -2,3 +2,5 @@
 node_modules/
 .vercel/
 *.log
+source/parts/images/
+source/types/photos/
