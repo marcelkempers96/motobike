@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Moto Zero: page bar (Overview and Cockpit) and the one-screen Cockpit
+   with its step strip and dyno. Loaded after styles.css.
+   ========================================================================== */
+
+/* ---------- Page bar: title, bike type, pause and help, one row under the site nav ---------- */
+.mz-pagebar { display: flex; align-items: center; gap: 12px; padding: 8px 24px; min-height: 48px; background: #FFFFFF; border-bottom: 1px solid #E5E5E5; }
+.mz-pagebar-title { margin: 0 auto 0 0; font: 700 18px/1.2 var(--sans); letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
+.mz-modes { display: inline-flex; border: 1px solid var(--ink); background: #FFFFFF; }
+.mz-modes button { appearance: none; -webkit-appearance: none; margin: 0; border: 0; border-left: 1px solid var(--ink); background: #FFFFFF; color: var(--ink); font: 700 12.5px/1 var(--sans); letter-spacing: 0; text-transform: none; height: 30px; padding: 0 12px; cursor: pointer; white-space: nowrap; }
+.mz-modes button:first-child { border-left: 0; }
+.mz-modes button:hover { background: var(--paper-2); }
+.mz-modes button.is-on { background: var(--ink); color: #FFFFFF; }
+.mz-modes button:focus-visible, .mz-icon:focus-visible { outline: 2px solid var(--warm); outline-offset: 2px; }
+.mz-modes .l-short { display: none; }
+.mz-pagebar-actions { display: flex; gap: 4px; }
+.mz-icon { width: 32px; height: 32px; display: grid; place-items: center; padding: 0; border: 1px solid var(--line); background: #FFFFFF; cursor: pointer; }
+.mz-icon:hover { border-color: var(--ink); }
+.mz-icon svg { width: 15px; height: 15px; display: block; }
+html.mz-embed .mz-pagebar { display: none !important; }
+/* the Overview keeps to one screen with the bar in place */
+.mz-pagebar ~ .mz-split { height: calc(100vh - 61px - 49px); }
+.mz-pagebar ~ .mz-split .ute-section-head h2 { font-size: 19px; }
+@media (max-width: 600px) {
+  .mz-pagebar { padding: 6px 14px; gap: 8px; min-height: 46px; }
+  .mz-pagebar-title { font-size: 16px; }
+  .mz-modes .l-long { display: none; }
+  .mz-modes .l-short { display: inline; }
+  .mz-modes button { height: 34px; min-width: 42px; padding: 0 10px; }
+  .mz-icon { width: 34px; height: 34px; }
+}
+
+/* ---------- Cockpit area ---------- */
+.mz-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
+.mz-ck { padding: 10px 24px 14px; border-bottom: 1px solid #E5E5E5; }
+.mz-ck-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.mz-ck-left { min-width: 0; }
+.mz-ck-bar { position: relative; z-index: 5; display: flex; align-items: center; gap: 8px; min-height: 32px; margin-bottom: 6px; }
+.mz-ck-full { margin-left: auto; height: 32px; display: inline-flex; align-items: center; gap: 5px; padding: 0 10px; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font: 700 12px/1 var(--sans); white-space: nowrap; }
+.mz-ck-full:hover { border-color: var(--ink); }
+.mz-ck .mz-cockpit { display: block; width: 100%; min-height: 0; border: 0; }
+
+/* ---------- Step strip: the current step, the rest on demand ---------- */
+.mz-ride { position: relative; display: flex; align-items: center; gap: 6px; min-width: 0; }
+.mz-ride-now { display: flex; align-items: center; gap: 8px; min-width: 0; height: 32px; padding: 0 10px; border: 1px solid var(--warm); background: #FDF3EE; color: var(--ink); font-size: 12.5px; line-height: 1.3; }
+.mz-ride-n { font: 700 10.5px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--warm); white-space: nowrap; }
+.mz-ride-t { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mz-ride-now.is-done { border-color: var(--accent); background: #EAF4F0; }
+.mz-ride-now.is-done .mz-ride-n { color: var(--accent); }
+.mz-ride kbd { font: 700 10.5px/1 var(--sans); min-width: 20px; text-align: center; border: 1px solid var(--ink); border-bottom-width: 2px; padding: 3px 5px; background: #FFFFFF; color: var(--ink); white-space: nowrap; transition: background .08s ease, color .08s ease; }
+.mz-ride kbd.is-wide { min-width: 42px; }
+.mz-ride kbd.is-held { background: var(--warm); border-color: var(--warm); color: #FFFFFF; }
+.mz-ride-tog { height: 32px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border: 1px solid var(--line); background: #FFFFFF; color: var(--ink); font: 700 12px/1 var(--sans); white-space: nowrap; cursor: pointer; }
+.mz-ride-tog:hover { border-color: var(--ink); }
+.mz-ride-tog:focus-visible, .mz-ck-full:focus-visible, .mz-dy-btn:focus-visible, .mz-dy-log summary:focus-visible { outline: 2px solid var(--warm); outline-offset: 2px; }
+.mz-ride-tog svg { width: 10px; height: 10px; transition: transform .15s ease; }
+.mz-ride-tog[aria-expanded="true"] { border-color: var(--ink); }
+.mz-ride-tog[aria-expanded="true"] svg { transform: rotate(180deg); }
+.mz-ride-pop { position: absolute; top: calc(100% + 6px); left: 0; z-index: 40; width: min(640px, calc(100vw - 32px)); max-height: calc(100vh - 140px); overflow: auto; background: #FFFFFF; border: 1px solid var(--ink); box-shadow: 0 10px 28px rgba(0, 0, 0, .14); padding: 12px 14px; }
+.mz-ride-pop[hidden] { display: none; }
+.mz-ride-note { margin: 0 0 8px; font-size: 12px; line-height: 1.45; color: var(--mute); }
+.mz-ride-steps { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+.mz-ride-steps li { display: grid; grid-template-columns: 16px 58px minmax(0, 1fr); gap: 8px; align-items: center; background: #FFFFFF; padding: 5px 8px; font-size: 12.5px; line-height: 1.35; color: var(--ink-soft); }
+.mz-ride-steps li kbd { justify-self: start; }
+.mz-ride-steps .i { font: 700 11px/1 var(--sans); color: var(--mute); }
+.mz-ride-steps li.is-now { background: #FDF3EE; box-shadow: inset 3px 0 0 var(--warm); color: var(--ink); }
+.mz-ride-steps li.is-now .i { color: var(--warm); }
+.mz-ride-steps li.is-done { color: var(--mute); }
+.mz-ride-steps li.is-done .i { font-size: 0; }
+.mz-ride-steps li.is-done .i::before { content: "✓"; font-size: 12px; color: var(--accent); }
+.mz-ride-keys { border-top: 1px solid var(--line-soft); padding-top: 8px; }
+.mz-ride-keys > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px 12px; margin-top: 6px; font-size: 12px; color: var(--ink-soft); }
+.mz-ride-keys > div > span { display: flex; align-items: center; gap: 6px; white-space: nowrap; min-width: 0; }
+.mz-ride.is-touch kbd, .mz-ride.is-touch .mz-ride-keys { display: none; }
+.mz-ride.is-touch .mz-ride-steps li { grid-template-columns: 16px minmax(0, 1fr); }
+
+/* ---------- Dyno ---------- */
+.mz-ck-dyno { min-width: 0; }
+.mz-ck-dyno-in { display: flex; flex-direction: column; gap: 6px; min-height: 0; }
+.mz-dy-head { display: flex; align-items: center; gap: 8px; min-height: 32px; }
+.mz-dy-head h2 { margin: 0 auto 0 0; font: 700 16px/1 var(--sans); color: var(--ink); }
+.mz-dy-btns { display: flex; gap: 4px; }
+.mz-dy-btn { height: 30px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border: 1px solid var(--line); background: #FFFFFF; color: var(--ink); font: 700 12px/1 var(--sans); white-space: nowrap; cursor: pointer; }
+.mz-dy-btn:hover:not(:disabled) { border-color: var(--ink); }
+.mz-dy-btn.is-primary { background: var(--ink); border-color: var(--ink); color: #FFFFFF; }
+.mz-dy-btn.is-rec { background: var(--warm); border-color: var(--warm); color: #FFFFFF; }
+.mz-dy-btn kbd { font: 700 9.5px/1 var(--sans); border: 1px solid currentColor; padding: 2px 4px; opacity: .7; }
+.mz-dy-btn:disabled { opacity: .4; cursor: not-allowed; }
+.mz-dy-sub { margin: 0; font-size: 11.5px; line-height: 1.4; color: var(--mute); }
+.mz-ck .ute-findings { grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; }
+.mz-ck .ute-findings .cell { padding: 4px 7px; }
+.mz-ck .ute-findings .cell .l { font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mz-ck .ute-findings .cell .v { font-size: 13px; }
+.mz-ck .ute-dyno-cell { padding: 6px 9px 4px; }
+.mz-ck .ute-dyno-cell header { margin-bottom: 2px; }
+.mz-ck .ute-dyno-cell header .ute-label { font-size: 9.5px; }
+.mz-ck .dy-val { font-size: 13px; }
+.mz-dy-log { border: 1px solid #DADADA; background: #FFFFFF; flex: none; }
+.mz-dy-log summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 8px 10px; font: 700 10.5px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+.mz-dy-log summary::-webkit-details-marker { display: none; }
+.mz-dy-log summary::before { content: ""; width: 0; height: 0; border-left: 5px solid currentColor; border-top: 4px solid transparent; border-bottom: 4px solid transparent; transition: transform .15s ease; }
+.mz-dy-log[open] summary::before { transform: rotate(90deg); }
+.mz-dy-log summary span { margin-left: auto; font-size: 11.5px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--mute); }
+.mz-dy-log .ute-dyno-log { max-height: 180px; padding: 0 10px; }
+.mz-dy-log .ute-dyno-legend { margin: 6px 10px 8px; }
+
+/* ---------- Wide screens: cockpit left, dyno right, one screen ---------- */
+@media (min-width: 1100px) {
+  .mz-ck-grid { grid-template-columns: minmax(0, 1fr) clamp(380px, 31vw, 500px); gap: 18px; align-items: start; }
+  .mz-ck-dyno { position: relative; align-self: stretch; min-height: var(--mz-ck-h, 620px); }
+  .mz-ck-dyno-in { position: absolute; inset: 0; }
+  .mz-ck .ute-dyno-charts { flex: 1 1 0; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr); gap: 5px; }
+  .mz-ck .ute-dyno-cell { display: flex; flex-direction: column; min-height: 0; }
+  .mz-ck .ute-dyno-plot, .mz-ck .ute-dyno-cell.is-wide .ute-dyno-plot { flex: 1 1 auto; min-height: 0; grid-template-rows: minmax(0, 1fr) 13px; }
+  .mz-dy-log .ute-dyno-log { max-height: 130px; }
+}
+@media (max-width: 1099px) {
+  .mz-ck .ute-dyno-charts { margin-top: 2px; }
+}
+@media (max-width: 600px) {
+  .mz-ck { padding: 8px 14px 12px; }
+  .mz-ck-bar { align-items: stretch; }
+  .mz-ck-full { padding: 0; width: 36px; height: auto; justify-content: center; font-size: 0; }
+  .mz-ck-full span { font-size: 15px; }
+  .mz-ride { flex: 1 1 auto; align-items: stretch; }
+  .mz-ride-now { flex: 1 1 auto; height: auto; min-height: 36px; padding: 6px 9px; flex-wrap: wrap; gap: 2px 8px; }
+  .mz-ride-t { white-space: normal; }
+  .mz-ride-tog { height: auto; min-height: 36px; }
+  .mz-ride-pop { width: calc(100vw - 28px); }
+  .mz-ck .ute-findings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mz-dy-head { flex-wrap: wrap; }
+}

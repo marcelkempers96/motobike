@@ -100,14 +100,17 @@ function render() {
       </a>
       <nav data-mz-nav></nav>
       <span class="ute-top-spacer"></span>
-      <div class="ute-seg ute-mode-switch" role="group" aria-label="Mode">
-        ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}">${MODE_INFO[m].short}</button>`).join('')}
-      </div>
-      <div class="ute-top-actions">
-        <button class="ute-iconbtn" type="button" data-run aria-label="Play / pause animation (Space)">${S.running ? ICON.pause : ICON.play}</button>
-        <button class="ute-iconbtn" type="button" data-help aria-label="Help (?)">${ICON.help}</button>
-      </div>
     </header>
+    <div class="mz-pagebar">
+      <h1 class="mz-pagebar-title">${PAGE === 'cockpit' ? 'Cockpit' : 'Overview'}</h1>
+      <div class="mz-modes ute-mode-switch" role="group" aria-label="Bike type">
+        ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}" title="${MODE_INFO[m].short} (${['4t', '2t', 'elec'].indexOf(m) + 1})"><span class="l-long">${MODE_INFO[m].short}</span><span class="l-short" aria-hidden="true">${{ '4t': '4T', '2t': '2T', elec: 'EV' }[m]}</span></button>`).join('')}
+      </div>
+      <div class="mz-pagebar-actions">
+        <button class="mz-icon" type="button" data-run aria-label="Pause or resume the animation (Space)" title="Pause or resume the animation (Space)">${S.running ? ICON.pause : ICON.play}</button>
+        <button class="mz-icon" type="button" data-help aria-label="Help (?)" title="Help (?)">${ICON.help}</button>
+      </div>
+    </div>
 
 ${PAGE === 'overview' ? `
     <div class="mz-split" id="mz-split" data-open="0">
@@ -138,36 +141,36 @@ ${PAGE === 'overview' ? `
 
 ` : ''}
 ${PAGE === 'cockpit' ? `
-    <section class="ute-section ute-rider" aria-labelledby="ride-h">
-      <div class="ute-section-head">
-        <div>
-          <h2 id="ride-h">Cockpit</h2>
-          <p class="ute-sub">The rider’s-eye cockpit: every control works and it drives the 3D bike, the close-ups and the dyno.${S.mode === 'elec' ? ' Electric mode: no starter, clutch or gears.' : ''}</p>
+    <section class="mz-ck" aria-label="Cockpit and dyno">
+      <div class="mz-ck-grid">
+        <div class="mz-ck-left">
+          <div class="mz-ck-bar">
+            <h2 id="ride-h" class="mz-vh">Ride the bike</h2>
+            ${rideHowtoHTML()}
+            <a class="mz-ck-full" href="${cockpitSrc().replace('embed=1&', '').replace('?embed=1', '')}" target="_blank" rel="noopener" title="Open the cockpit on its own page, with notes on every control">Full screen <span aria-hidden="true">↗</span></a>
+          </div>
+          <iframe id="mz-cockpit" class="mz-cockpit" src="${cockpitSrc()}" title="Interactive motorcycle cockpit" loading="eager" allow="autoplay"></iframe>
         </div>
-        <a class="ute-linkbtn" href="${cockpitSrc().replace('embed=1&', '').replace('?embed=1', '')}" target="_blank" rel="noopener">Open full screen ↗</a>
-      </div>
-      ${rideHowtoHTML()}
-      <iframe id="mz-cockpit" class="mz-cockpit" src="${cockpitSrc()}" title="Interactive motorcycle cockpit" loading="eager"></iframe>
-    </section>
-
-    <section class="ute-section ute-dyno" aria-labelledby="dyno-h">
-      <div class="ute-section-head">
-        <div>
-          <h2 id="dyno-h">Dyno</h2>
-          <p class="ute-sub">Records a run from the cockpit: press Start test (or G), ride, then stop. Speed, rpm, throttle, brake${S.mode === 'elec' ? '' : ', gear, clutch'} and power at 20 samples a second, with every event marked. Hover a chart to read values.</p>
-        </div>
-        <div class="ute-btnrow">
-          <button type="button" class="ute-btn ${S.dyno.recording ? 'is-rec' : 'is-primary'}" data-dyno="start" aria-pressed="${S.dyno.recording}">${S.dyno.recording ? '■ Stop test (G)' : '● Start test (G)'}</button>
-          <button type="button" class="ute-btn" data-dyno="reset">Reset</button>
-          <button type="button" class="ute-btn" data-dyno="csv" ${S.dyno.samples.length ? '' : 'disabled'}>Export CSV</button>
-        </div>
-      </div>
-      <div class="ute-findings" id="ute-findings"></div>
-      <div class="ute-dyno-body">
-        <div class="ute-dyno-charts" id="ute-dyno-charts"></div>
-        <div class="ute-dyno-logbox"><span class="ute-label">Session log</span><ol class="ute-dyno-log" id="ute-dyno-log" aria-live="off"></ol>
-          <div class="ute-dyno-legend">${Object.entries({ engine: 'Engine', gear: 'Gear', clutch: 'Clutch', brake: 'Brake', key: 'Key', test: 'Test' }).filter(([k]) => S.mode !== 'elec' || (k !== 'gear' && k !== 'clutch')).map(([k, l]) => `<span><i style="background:${C_EV[k]}"></i>${l}</span>`).join('')}</div>
-        </div>
+        <section class="mz-ck-dyno ute-dyno" aria-labelledby="dyno-h">
+          <div class="mz-ck-dyno-in">
+            <div class="mz-dy-head">
+              <h2 id="dyno-h">Dyno</h2>
+              <div class="mz-dy-btns">
+                <button type="button" class="mz-dy-btn ${S.dyno.recording ? 'is-rec' : 'is-primary'}" data-dyno="start" aria-pressed="${S.dyno.recording}" title="Start or stop a test (G)">${S.dyno.recording ? '■ Stop test' : '● Start test'}<kbd>G</kbd></button>
+                <button type="button" class="mz-dy-btn" data-dyno="reset">Reset</button>
+                <button type="button" class="mz-dy-btn" data-dyno="csv" ${S.dyno.samples.length ? '' : 'disabled'}>CSV</button>
+              </div>
+            </div>
+            <p class="mz-dy-sub">Start a test, ride, then stop. ${S.mode === 'elec' ? 'Speed, rpm, throttle, brake and power' : 'Speed, rpm, throttle, brake, gear, clutch and power'} at 20 samples a second. Hover a chart to read values.</p>
+            <div class="ute-findings" id="ute-findings"></div>
+            <div class="ute-dyno-charts" id="ute-dyno-charts"></div>
+            <details class="mz-dy-log">
+              <summary>Session log <span id="mz-dy-logn">0 events</span></summary>
+              <ol class="ute-dyno-log" id="ute-dyno-log" aria-live="off"></ol>
+              <div class="ute-dyno-legend">${Object.entries({ engine: 'Engine', gear: 'Gear', clutch: 'Clutch', brake: 'Brake', key: 'Key', test: 'Test' }).filter(([k]) => S.mode !== 'elec' || (k !== 'gear' && k !== 'clutch')).map(([k, l]) => `<span><i style="background:${C_EV[k]}"></i>${l}</span>`).join('')}</div>
+            </details>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -1592,86 +1595,154 @@ const COCKPIT_KEYS = new Set(['k', 'x', 's', 'c', 't', 'f', 'r', 'h', 'v', 'b', 
 /* Browsers only allow sound after a user gesture on this page, so the page makes the
    audio context on the first click or key and hands it to the cockpit. */
 let mzAudio = null;
-function unlockCockpitAudio() {
+function unlockCockpitAudio(e) {
   const f = document.querySelector('#mz-cockpit');
   if (!f) return;
   try {
-    if (!mzAudio) mzAudio = new (window.AudioContext || window.webkitAudioContext)();
-    if (mzAudio.state === 'suspended') mzAudio.resume();
+    if (!mzAudio || mzAudio.state === 'closed') mzAudio = new (window.AudioContext || window.webkitAudioContext)();
+    // Resume on every gesture: Safari reports 'interrupted' after a call or a locked screen, Chrome
+    // suspends a context made outside a gesture, and a touch pointerdown is not a gesture at all.
+    if (mzAudio.state !== 'running') { const p = mzAudio.resume(); if (p && p.catch) p.catch(() => {}); }
+    try { if (navigator.audioSession && navigator.audioSession.type !== 'playback') navigator.audioSession.type = 'playback'; } catch (err) { /* iOS 17+ only */ }
+    if (!mzAudio._primed && e && e.isTrusted) {
+      // A silent one-sample buffer started inside the gesture unlocks output on iOS Safari.
+      const b = mzAudio.createBuffer(1, 1, 22050), src = mzAudio.createBufferSource();
+      src.buffer = b; src.connect(mzAudio.destination); src.start(0); mzAudio._primed = true;
+    }
     if (f.contentWindow && f.contentWindow.__moto && f.contentWindow.__moto.setAudio) f.contentWindow.__moto.setAudio(mzAudio);
-  } catch (e) { /* no audio */ }
+  } catch (err) { /* no audio */ }
 }
-['pointerdown', 'keydown'].forEach((ev) => document.addEventListener(ev, unlockCockpitAudio, { capture: true }));
+['pointerdown', 'pointerup', 'mousedown', 'touchend', 'click', 'keydown', 'keyup'].forEach((ev) => document.addEventListener(ev, unlockCockpitAudio, { capture: true, passive: true }));
 const heldKeys = new Set();   // cockpit keys currently held (from this page or from inside the cockpit)
 const cockpitSrc = () => `assets/interactive/controls.html?embed=1${S.mode === 'elec' ? '&mode=elec' : ''}`;
 
 const KEY_LABEL = { ArrowUp: '↑', ArrowDown: '↓' };
 function kbd(k, label) { return `<kbd data-k="${k}">${label || KEY_LABEL[k] || k.toUpperCase()}</kbd>`; }
 
+/* Step: [key, text with keys, text for touch, done(state)] */
 function rideStepsICE() {
   return [
-    ['K', 'Key ON', (c) => c.key],
-    ['X', 'Stop switch at RUN', (c) => c.kill],
-    ['↓ ↑ / C', 'Neutral (green N) or hold the clutch', (c) => c.running || c.gi === 1 || c.clutchP > 0.7],
-    ['S', 'Hold the starter until it runs', (c) => c.running],
-    ['C + ↓', 'Hold the clutch, press ↓ for first gear', (c) => c.running && c.gi !== 1],
-    ['T', 'Hold T (or scroll up), then let C go slowly', (c) => c.running && c.v > 1.5],
+    ['K', 'Key ON', 'Tap Key: ON', (c) => c.key],
+    ['X', 'Stop switch at RUN', 'Stop switch at RUN', (c) => c.kill],
+    ['↓ ↑ / C', 'Neutral (green N) or hold the clutch', 'Neutral (green N) or pull the clutch', (c) => c.running || c.gi === 1 || c.clutchP > 0.7],
+    ['S', 'Hold the starter until it runs', 'Hold Start until the engine runs', (c) => c.running],
+    ['C + ↓', 'Hold the clutch, press ↓ for first gear', 'Pull the clutch, tap Down for first gear', (c) => c.running && c.gi !== 1],
+    ['T', 'Hold T (or scroll up), then let C go slowly', 'Open the throttle, then let the clutch out', (c) => c.running && c.v > 1.5],
   ];
 }
 function rideStepsElec() {
   return [
-    ['K', 'Key ON', (c) => c.key],
-    ['X', 'Stop switch at RUN: the bike is READY', (c) => c.key && c.kill],
-    ['T', 'Hold T or scroll up over the cockpit to ride', (c) => c.v > 1.5],
-    ['F / R', 'Brake; closing the throttle also regenerates', (c) => c.v > 1.5 && (c.frontP > 0.3 || c.rearP > 0.3)],
+    ['K', 'Key ON', 'Tap Key: ON', (c) => c.key],
+    ['X', 'Stop switch at RUN: the bike is READY', 'Stop switch at RUN: the bike is READY', (c) => c.key && c.kill],
+    ['T', 'Hold T or scroll up over the cockpit to ride', 'Open the throttle to ride', (c) => c.v > 1.5],
+    ['F / R', 'Brake; closing the throttle also regenerates', 'Brake with Front or Rear', (c) => c.v > 1.5 && (c.frontP > 0.3 || c.rearP > 0.3)],
   ];
 }
+const isTouch = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 function rideHowtoHTML() {
   const elec = S.mode === 'elec';
+  const touch = isTouch();
   const steps = elec ? rideStepsElec() : rideStepsICE();
   const keys = elec
-    ? [['k', 'Key'], ['x', 'Stop switch'], ['t', 'Throttle (hold)'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['m', 'Sound on/off']]
-    : [['k', 'Key'], ['x', 'Stop switch'], ['s', 'Starter (hold)'], ['c', 'Clutch (hold)'], ['t', 'Throttle (hold)'], ['ArrowDown', 'Shift down'], ['ArrowUp', 'Shift up'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['v', 'Choke'], ['m', 'Sound on/off']];
-  return `<div class="mz-howto" aria-label="How to ride">
-    <div class="mz-howto-head"><span class="ute-label">How to ride</span><span class="mz-howto-note">Keys work anywhere on this page: no need to click into the cockpit. Hold several at once${elec ? '' : ', for example <b>C + T</b>'}.</span></div>
-    <ol class="mz-steps">${steps.map(([k, t], i) => `<li data-step="${i}"><b>${k}</b><span>${t}</span></li>`).join('')}</ol>
-    <div class="mz-keymap">${keys.map(([k, l]) => `<span>${kbd(k)}${l}</span>`).join('')}<span><kbd class="is-wide">Wheel</kbd>Throttle over the cockpit</span><span>${kbd('g', 'G')}Dyno start / stop</span></div>
+    ? [['k', 'Key'], ['x', 'Stop switch'], ['t', 'Throttle (hold)'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['m', 'Sound on or off']]
+    : [['k', 'Key'], ['x', 'Stop switch'], ['s', 'Starter (hold)'], ['c', 'Clutch (hold)'], ['t', 'Throttle (hold)'], ['ArrowDown', 'Shift down'], ['ArrowUp', 'Shift up'], ['f', 'Front brake'], ['r', 'Rear brake'], ['h', 'Horn'], ['q', 'Indicate left'], ['e', 'Indicate right'], ['b', 'Beam'], ['v', 'Choke'], ['m', 'Sound on or off']];
+  const note = touch
+    ? 'Tap the switchgear under the cockpit. Hold Start, Front, Rear and Horn for as long as you need them.'
+    : `Keys work anywhere on this page, so there is no need to click into the cockpit. Hold several at once${elec ? '' : ', for example C + T'}.`;
+  return `<div class="mz-ride${touch ? ' is-touch' : ''}" id="mz-ride">
+    <div class="mz-ride-now" aria-live="polite"><span class="mz-ride-n">Step 1 of ${steps.length}</span><kbd class="mz-ride-k">${steps[0][0]}</kbd><span class="mz-ride-t">${touch ? steps[0][2] : steps[0][1]}</span></div>
+    <button type="button" class="mz-ride-tog" aria-expanded="false" aria-controls="mz-ride-pop">All steps<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <div class="mz-ride-pop" id="mz-ride-pop" hidden>
+      <p class="mz-ride-note">${note}</p>
+      <ol class="mz-ride-steps">${steps.map(([k, t, tt], i) => `<li data-step="${i}"><span class="i">${i + 1}</span><kbd>${k}</kbd><span>${touch ? tt : t}</span></li>`).join('')}</ol>
+      <div class="mz-ride-keys"><span class="ute-label">Keys</span><div>${keys.map(([k, l]) => `<span>${kbd(k)}${l}</span>`).join('')}<span><kbd class="is-wide">Wheel</kbd>Throttle over the cockpit</span><span>${kbd('g', 'G')}Dyno start or stop</span></div></div>
+    </div>
   </div>`;
 }
+let _rideNow = -2;
 function updateHowto(c) {
-  const box = $('.mz-steps');
+  const box = $('.mz-ride-steps');
   if (!box || !c) return;
   const steps = S.mode === 'elec' ? rideStepsElec() : rideStepsICE();
   let now = -1;
-  steps.forEach(([, , done], i) => {
-    const li = box.children[i];
-    if (!li) return;
+  steps.forEach(([, , , done], i) => {
     const d = !!done(c);
-    li.classList.toggle('is-done', d);
+    const li = box.children[i];
+    if (li && li.classList.contains('is-done') !== d) li.classList.toggle('is-done', d);
     if (!d && now < 0) now = i;
   });
+  if (now === _rideNow) return;
+  _rideNow = now;
   [...box.children].forEach((li, i) => li.classList.toggle('is-now', i === now));
+  const touch = $('#mz-ride').classList.contains('is-touch');
+  const strip = $('.mz-ride-now');
+  strip.classList.toggle('is-done', now < 0);
+  if (now < 0) {
+    strip.innerHTML = `<span class="mz-ride-n">Riding</span><span class="mz-ride-t">All steps done. ${touch ? 'Start a dyno test to record a run.' : 'Press G to record a dyno run.'}</span>`;
+  } else {
+    const [k, t, tt] = steps[now];
+    strip.innerHTML = `<span class="mz-ride-n">Step ${now + 1} of ${steps.length}</span><kbd class="mz-ride-k">${k}</kbd><span class="mz-ride-t">${touch ? tt : t}</span>`;
+  }
 }
 function markKey(k, on) {
-  $$(`.mz-keymap kbd[data-k="${k}"]`).forEach((el) => el.classList.toggle('is-held', on));
+  $$(`.mz-ride-keys kbd[data-k="${k}"]`).forEach((el) => el.classList.toggle('is-held', on));
+}
+function setRidePop(open) {
+  const tog = $('.mz-ride-tog'), pop = $('#mz-ride-pop');
+  if (!tog || !pop) return;
+  pop.hidden = !open;
+  tog.setAttribute('aria-expanded', String(open));
+}
+let _rideWired = false;
+function wireRideSteps() {
+  _rideNow = -2;
+  $('.mz-ride-tog')?.addEventListener('click', () => setRidePop($('#mz-ride-pop').hidden));
+  if (_rideWired) return;
+  _rideWired = true;
+  const isOpen = () => { const p = $('#mz-ride-pop'); return p && !p.hidden; };
+  document.addEventListener('pointerdown', (e) => { if (isOpen() && !e.target.closest('#mz-ride')) setRidePop(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isOpen()) { setRidePop(false); $('.mz-ride-tog').focus(); } });
+  window.addEventListener('blur', () => setRidePop(false));   // a click into the cockpit frame
 }
 
+const WIDE_COCKPIT = '(min-width: 1100px)';
+let _riderResize = null;
 function mountRider() {
   const f = $('#mz-cockpit');
   if (!f) return;
   heldKeys.clear();
+  wireRideSteps();
+  /* Wide screens: cockpit and dyno share one screen. The page gives the cockpit a height that
+     fits the window and the cockpit scales its drawing to it ('fit'). Narrow: the frame grows
+     to the cockpit's own height. */
   const fit = () => {
     try {
       const d = f.contentDocument;
       if (!d || !d.body) return;
-      const h = Math.ceil(d.querySelector('main') ? d.querySelector('main').getBoundingClientRect().bottom + d.defaultView.scrollY : d.documentElement.scrollHeight);
+      const wide = window.matchMedia(WIDE_COCKPIT).matches;
+      d.documentElement.classList.toggle('fit', wide);
+      let h;
+      if (wide) {
+        const top = f.getBoundingClientRect().top + window.scrollY;
+        const avail = Math.max(440, window.innerHeight - top - 14);
+        const m = f.contentWindow.__moto;
+        const chrome = m && m.chromeH ? m.chromeH() : 150;
+        h = Math.round(Math.min(avail, f.clientWidth * 900 / 1400 + chrome));
+      } else {
+        const main = d.querySelector('main');
+        h = Math.ceil(main ? main.getBoundingClientRect().bottom + d.defaultView.scrollY : d.documentElement.scrollHeight);
+      }
       if (h > 50 && Math.abs(f.offsetHeight - h) > 1) f.style.height = h + 'px';
+      const grid = $('.mz-ck-grid');
+      if (grid) grid.style.setProperty('--mz-ck-h', `${Math.round(f.offsetHeight + $('.mz-ck-bar').offsetHeight + 6)}px`);
     } catch (e) { /* noop */ }
   };
   f.addEventListener('load', () => {
     fit();
     try { new ResizeObserver(fit).observe(f.contentDocument.body); } catch (e) { setInterval(fit, 1000); }
   });
+  if (_riderResize) window.removeEventListener('resize', _riderResize);
+  _riderResize = fit;
   window.addEventListener('resize', fit);
 }
 
@@ -1778,7 +1849,7 @@ function setDynoButtons() {
   if (b) {
     b.classList.toggle('is-rec', d.recording);
     b.classList.toggle('is-primary', !d.recording);
-    b.textContent = d.recording ? '■ Stop test (G)' : '● Start test (G)';
+    b.innerHTML = `${d.recording ? '■ Stop test' : '● Start test'}<kbd>G</kbd>`;
     b.setAttribute('aria-pressed', String(d.recording));
   }
   const x = $('[data-dyno="csv"]');
@@ -1964,6 +2035,8 @@ function renderDynoLog(force) {
   const ev = S.dyno.events;
   if (!force && ev.length === _logN) return;
   _logN = ev.length;
+  const n = $('#mz-dy-logn');
+  if (n) n.textContent = `${ev.length} event${ev.length === 1 ? '' : 's'}`;
   box.innerHTML = ev.length
     ? ev.map((e) => `<li><time>${fmtT(e.t)}</time><i style="background:${C_EV[e.type]}"></i><span>${e.label}</span></li>`).join('')
     : '<li class="is-empty">No events yet. Start a test, then ride: engine start and stall, gear changes, clutch and brakes are logged here.</li>';

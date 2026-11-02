@@ -23,6 +23,7 @@ html.embed header.top,html.embed .mz-site{display:none}
 html.embed body{background:transparent}
 html.embed .wrap{padding:0}
 html.embed .layout{padding-bottom:4px}
+html.embed .panel{display:none}   /* the notes on each control live on the full-screen page */
 .mz-site{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:10px 24px;border-bottom:1px solid var(--line);font:700 11px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase}
 .mz-site a{color:var(--ink);text-decoration:none}.mz-site a:hover{color:var(--accent)}
 .mz-site img{width:22px;height:22px;vertical-align:middle;margin-right:6px}
@@ -174,7 +175,8 @@ html.fit .info,html.fit .deck{flex:none}
   .readouts{grid-template-columns:repeat(3,minmax(0,1fr))}
   .ro:nth-child(4){border-left:0}
   .ro:nth-child(n+4){border-top:1px solid var(--line)}
-  .deck{justify-content:flex-start;gap:10px 0}
+  .deck{justify-content:flex-start;gap:10px 16px}
+  .grp{border-left:0;padding:0}
   .thr{flex-basis:100%;border-left:0;padding-left:0}
 }
 @media (max-width:760px) and (pointer:coarse),(max-width:520px){
@@ -1104,20 +1106,40 @@ function render(force){
    Engine note follows r/min and throttle, plus starter, horn, indicator
    relay, gear clunks and switch clicks. M toggles sound.
    ===================================================================== */
-const SND={ ctx:null, on:true, built:false, last:{gi:null,key:null,kill:null,ind:0,run:false}, indT:0, indPhase:0 };
+const SND={ ctx:null, own:false, on:true, built:false, primed:false, srcs:[], last:{gi:null,key:null,kill:null,ind:0,run:false}, indT:0, indPhase:0 };
+/* Browsers start an AudioContext 'suspended' unless it is made or resumed inside a user gesture
+   (keydown, mousedown, pointerup, touchend or click; a touch pointerdown does not count), and iOS
+   also reports 'interrupted'. A gesture only activates its own frame and the frames above it, so
+   keys pressed on the embedding page cannot start sound in here: that page makes the context in its
+   own gesture and hands it over (setAudio), and a running context always wins over a stalled one. */
+function sndTeardown(){
+  try{ SND.srcs.forEach(n=>{ try{ n.stop(); }catch(e){} }); if(SND.out) SND.out.disconnect(); }catch(e){}
+  if(SND.own && SND.ctx && SND.ctx.close) SND.ctx.close().catch(()=>{});
+  SND.srcs=[]; SND.out=null; SND.master=null; SND.built=false; SND.primed=false;
+}
 function sndCtx(ext){
-  if(ext && !SND.ctx) SND.ctx=ext;
-  if(!SND.ctx){ try{ SND.ctx=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return null; } }
-  if(SND.ctx.state==='suspended') SND.ctx.resume().catch(()=>{});
+  if(ext && ext!==SND.ctx && ext.state!=='closed' && (!SND.ctx || SND.ctx.state!=='running')){ sndTeardown(); SND.ctx=ext; SND.own=false; }
+  if(!SND.ctx){ try{ SND.ctx=new (window.AudioContext||window.webkitAudioContext)(); SND.own=true; }catch(e){ return null; } }
+  const c=SND.ctx;
+  if(c.state!=='running' && c.state!=='closed'){ try{ const p=c.resume(); if(p&&p.catch) p.catch(()=>{}); }catch(e){} }
   if(!SND.built) sndBuild();
-  return SND.ctx;
+  return c;
+}
+function sndUnlock(e){
+  if(e && !e.isTrusted && !SND.ctx) return;          // a key forwarded by the page is not a gesture here
+  const c=sndCtx(); if(!c) return;
+  // iOS 17+: play through the ringer switch like a video would, instead of as a muted 'ambient' sound
+  try{ if(navigator.audioSession && navigator.audioSession.type!=='playback') navigator.audioSession.type='playback'; }catch(err){}
+  // a silent one-sample buffer started inside the gesture unlocks output on iOS Safari
+  if(!SND.primed || c.state!=='running'){ try{ const b=c.createBuffer(1,1,22050), src=c.createBufferSource(); src.buffer=b; src.connect(c.destination); src.start(0); SND.primed=true; }catch(err){} }
 }
 function sndNoise(c){ const len=c.sampleRate*2, b=c.createBuffer(1,len,c.sampleRate), d=b.getChannelData(0); for(let i=0;i<len;i++) d[i]=Math.random()*2-1; return b; }
 function sndBuild(){
   const c=SND.ctx; if(!c) return; SND.built=true;
   const master=c.createGain(); master.gain.value=SND.on?0.9:0;
   const comp=c.createDynamicsCompressor(); comp.threshold.value=-18; comp.ratio.value=4;
-  master.connect(comp); comp.connect(c.destination); SND.master=master;
+  master.connect(comp); comp.connect(c.destination); SND.master=master; SND.out=comp;
+  const an=c.createAnalyser(); an.fftSize=1024; comp.connect(an); SND.an=an;   // level meter, read by audioState()
   // engine: two harmonic-rich oscillators, firing-rate amplitude modulation, low-pass that opens with throttle
   const eGain=c.createGain(); eGain.gain.value=0;
   const lp=c.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=400; lp.Q.value=4;
@@ -1136,7 +1158,7 @@ function sndBuild(){
   const st=c.createOscillator(); st.type='sawtooth'; st.frequency.value=58; const stG=c.createGain(); stG.gain.value=0; const stLp=c.createBiquadFilter(); stLp.type='lowpass'; stLp.frequency.value=900; st.connect(stLp); stLp.connect(stG); stG.connect(master); st.start();
   // horn
   const h1=c.createOscillator(); h1.type='square'; h1.frequency.value=415; const h2=c.createOscillator(); h2.type='square'; h2.frequency.value=505; const hBp=c.createBiquadFilter(); hBp.type='bandpass'; hBp.frequency.value=900; hBp.Q.value=1.2; const hG=c.createGain(); hG.gain.value=0; h1.connect(hBp); h2.connect(hBp); hBp.connect(hG); hG.connect(master); h1.start(); h2.start();
-  Object.assign(SND,{o1,o2,lfo,lp,eGain,nG,bp,w,wG,stG,hG});
+  Object.assign(SND,{o1,o2,lfo,lp,eGain,nG,bp,w,wG,stG,hG,srcs:[o1,o2,lfo,nz,w,st,h1,h2]});
 }
 function sndBlip(freq,dur,vol,type,noise){
   const c=SND.ctx; if(!c||!SND.built) return; const t=c.currentTime;
@@ -1174,11 +1196,12 @@ function sound(dt){
 }
 function setSound(on){
   SND.on=on; if(SND.master) SND.master.gain.setTargetAtTime(on?0.9:0,SND.ctx.currentTime,0.05);
-  const b=document.getElementById('sndBtn'); if(b){ b.setAttribute('aria-checked',String(on)); b.textContent=on?'Sound: ON':'Sound: OFF'; }
+  const b=document.getElementById('sndBtn'); if(b){ b.setAttribute('aria-checked',String(on)); b.title=on?'Sound on: press to mute (M)':'Sound off: press to turn on (M)'; }
   try{ localStorage.setItem('mz-sound',on?'1':'0'); }catch(e){}
 }
 try{ if(localStorage.getItem('mz-sound')==='0') SND.on=false; }catch(e){}
-['pointerdown','keydown'].forEach(ev=>document.addEventListener(ev,()=>sndCtx(),{capture:true}));
+['pointerdown','pointerup','mousedown','touchend','click','keydown','keyup'].forEach(ev=>document.addEventListener(ev,sndUnlock,{capture:true,passive:true}));
+window.addEventListener('pagehide',sndTeardown);
 document.addEventListener('keydown',e=>{ if((e.key==='m'||e.key==='M')&&!e.repeat&&!e.ctrlKey&&!e.metaKey){ sndCtx(); setSound(!SND.on); } });
 
 function frame(t){
@@ -1242,8 +1265,15 @@ document.getElementById('sndBtn')?.addEventListener('click',()=>{ sndCtx(); setS
 setSound(SND.on);
 window.__moto = {
   setAudio:(ctx)=>{ sndCtx(ctx); },
+  dispose:()=>sndTeardown(),
+  // height of everything under the drawing (status row and switchgear), for the page's fit sizing
+  chromeH:()=>{ const st=document.querySelector('.stage'); if(!st) return 0; let h=0; [...st.children].forEach(el=>{ if(el.id!=='art') h+=el.offsetHeight+(parseFloat(getComputedStyle(el).marginTop)||0); }); return Math.ceil(h); },
   sound:(on)=>setSound(on),
-  audioState:()=>({ state: SND.ctx ? SND.ctx.state : 'none', built: SND.built, on: SND.on, engineGain: SND.eGain ? +SND.eGain.gain.value.toFixed(3) : 0 }),
+  audioState:()=>{
+    let level=0;
+    if(SND.an){ const a=new Float32Array(SND.an.fftSize); SND.an.getFloatTimeDomainData(a); let q=0; for(let i=0;i<a.length;i++) q+=a[i]*a[i]; level=Math.sqrt(q/a.length); }
+    return { state: SND.ctx ? SND.ctx.state : 'none', own: SND.own, built: SND.built, on: SND.on, engineGain: SND.eGain ? +SND.eGain.gain.value.toFixed(3) : 0, level: +level.toFixed(4) };
+  },
   state:()=>S, buildSVG,
   setExtThr:(v)=>{ S.extThr=Math.max(0,Math.min(1,+v||0)); },
   releaseAll:()=>{ S.keyThr=false; S.frontIn=false; S.rearIn=false; S.horn=false; if(!S.clutchLatched) S.clutchIn=false; S.gripThr=0; S.extThr=0; render(true); },
