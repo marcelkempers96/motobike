@@ -166,8 +166,8 @@ ${PAGE === 'cockpit' ? `
             <div class="ute-dyno-charts" id="ute-dyno-charts"></div>
             <details class="mz-dy-log">
               <summary>Session log <span id="mz-dy-logn">0 events</span></summary>
-              <ol class="ute-dyno-log" id="ute-dyno-log" aria-live="off"></ol>
-              <div class="ute-dyno-legend">${Object.entries({ engine: 'Engine', gear: 'Gear', clutch: 'Clutch', brake: 'Brake', key: 'Key', test: 'Test' }).filter(([k]) => S.mode !== 'elec' || (k !== 'gear' && k !== 'clutch')).map(([k, l]) => `<span><i style="background:${C_EV[k]}"></i>${l}</span>`).join('')}</div>
+              <div class="mz-dy-logbody"><ol class="ute-dyno-log" id="ute-dyno-log" aria-live="off"></ol>
+              <div class="ute-dyno-legend">${Object.entries({ engine: 'Engine', gear: 'Gear', clutch: 'Clutch', brake: 'Brake', key: 'Key', test: 'Test' }).filter(([k]) => S.mode !== 'elec' || (k !== 'gear' && k !== 'clutch')).map(([k, l]) => `<span><i style="background:${C_EV[k]}"></i>${l}</span>`).join('')}</div></div>
             </details>
           </div>
         </section>
@@ -1638,7 +1638,7 @@ function rideStepsElec() {
     ['F / R', 'Brake; closing the throttle also regenerates', 'Brake with Front or Rear', (c) => c.v > 1.5 && (c.frontP > 0.3 || c.rearP > 0.3)],
   ];
 }
-const isTouch = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+const isTouch = () => window.matchMedia('(hover: none), (pointer: coarse)').matches;
 function rideHowtoHTML() {
   const elec = S.mode === 'elec';
   const touch = isTouch();
