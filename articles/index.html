@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Motorcycle articles: engines, chains, wiring | Moto Zero</title>
-  <meta name="description" content="Plain-English guides to how motorcycles work and how to maintain them: engines, clutches, chains, wiring, electric drives and motorcycle types.">
+  <title>Motorcycle articles: how it works, maintenance and repair | Moto Zero</title>
+  <meta name="description" content="Plain-English guides to how motorcycles work and how to maintain and repair them: engines, starting faults, batteries, oil, brakes, tyres, chains and electric drives.">
   <link rel="canonical" href="https://motobike-five.vercel.app/articles/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Moto Zero">
   <meta property="og:title" content="Motorcycle articles from Moto Zero">
-  <meta property="og:description" content="Plain-English guides to how motorcycles work and how to maintain them: engines, clutches, chains, wiring, electric drives and motorcycle types.">
+  <meta property="og:description" content="Plain-English guides to how motorcycles work and how to maintain and repair them: engines, starting faults, batteries, oil, brakes, tyres, chains and electric drives.">
   <meta property="og:url" content="https://motobike-five.vercel.app/articles/">
   <meta property="og:image" content="https://motobike-five.vercel.app/assets/renders/bike_classic_4t_side.webp">
   <meta property="og:locale" content="en_GB">
@@ -18,14 +18,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css?v=20261102a">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261102b">
   <link rel="stylesheet" href="../assets/articles.css?v=20261101c">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "CollectionPage",
  "name": "Moto Zero articles",
- "description": "Plain-English guides to how motorcycles work and how to maintain them: engines, clutches, chains, wiring, electric drives and motorcycle types.",
+ "description": "Plain-English guides to how motorcycles work and how to maintain and repair them: engines, starting faults, batteries, oil, brakes, tyres, chains and electric drives.",
  "url": "https://motobike-five.vercel.app/articles/",
  "publisher": {
   "@type": "Organization",
@@ -69,18 +69,66 @@
    {
     "@type": "ListItem",
     "position": 6,
-    "url": "https://motobike-five.vercel.app/articles/motorcycle-chain-maintenance/",
-    "name": "Motorcycle chain maintenance"
-   },
-   {
-    "@type": "ListItem",
-    "position": 7,
     "url": "https://motobike-five.vercel.app/articles/types-of-motorcycles/",
     "name": "Types of motorcycles"
    },
    {
     "@type": "ListItem",
+    "position": 7,
+    "url": "https://motobike-five.vercel.app/articles/motorcycle-will-not-start/",
+    "name": "Why your motorcycle will not start"
+   },
+   {
+    "@type": "ListItem",
     "position": 8,
+    "url": "https://motobike-five.vercel.app/articles/motorcycle-battery-keeps-dying/",
+    "name": "Why your motorcycle battery keeps dying"
+   },
+   {
+    "@type": "ListItem",
+    "position": 9,
+    "url": "https://motobike-five.vercel.app/articles/how-to-change-motorcycle-oil/",
+    "name": "How to change your motorcycle oil"
+   },
+   {
+    "@type": "ListItem",
+    "position": 10,
+    "url": "https://motobike-five.vercel.app/articles/how-to-check-motorcycle-brake-pads/",
+    "name": "How to check motorcycle brake pads"
+   },
+   {
+    "@type": "ListItem",
+    "position": 11,
+    "url": "https://motobike-five.vercel.app/articles/motorcycle-tyre-pressure-and-wear/",
+    "name": "Motorcycle tyre pressure and wear"
+   },
+   {
+    "@type": "ListItem",
+    "position": 12,
+    "url": "https://motobike-five.vercel.app/articles/spark-plug-reading/",
+    "name": "How to read a spark plug"
+   },
+   {
+    "@type": "ListItem",
+    "position": 13,
+    "url": "https://motobike-five.vercel.app/articles/carburettor-cleaning-basics/",
+    "name": "Carburettor cleaning basics"
+   },
+   {
+    "@type": "ListItem",
+    "position": 14,
+    "url": "https://motobike-five.vercel.app/articles/motorcycle-chain-maintenance/",
+    "name": "Motorcycle chain maintenance"
+   },
+   {
+    "@type": "ListItem",
+    "position": 15,
+    "url": "https://motobike-five.vercel.app/articles/electric-motorcycle-battery-care/",
+    "name": "Electric motorcycle battery care"
+   },
+   {
+    "@type": "ListItem",
+    "position": 16,
     "url": "https://motobike-five.vercel.app/articles/boda-boda-maintenance-checklist/",
     "name": "Boda boda maintenance checklist"
    }
@@ -88,6 +136,14 @@
  }
 }
 </script>
+  <style>
+    .mz-arts-group { max-width: 1160px; margin: 0 auto; padding: 30px 0 0; border-top: 2px solid var(--ink); }
+    .mz-arts-head + .mz-arts-group { margin-top: 18px; }
+    .mz-arts-group h2 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+    .mz-arts-group p { font-size: 17px; line-height: 1.55; max-width: 720px; margin: 0; color: var(--ink-soft); }
+    .mz-arts-group a { color: var(--ink); text-decoration-color: var(--warm); text-underline-offset: 3px; }
+    @media (max-width: 720px) { .mz-arts-group h2 { font-size: 24px; } }
+  </style>
 </head>
 <body>
 <div class="ute-page">
@@ -100,8 +156,12 @@
     <header class="mz-arts-head">
       <span class="ute-label">Articles</span>
       <h1>Motorcycle articles</h1>
-      <p>Short, accurate guides to how motorcycles work and how to look after them, written from the Moto Zero course. Each one links into the interactive tools and the full course chapters.</p>
+      <p>Short, accurate guides to how motorcycles work and how to look after and repair them, written from the Moto Zero course. Each one links into the interactive tools, the Repair section and the full course chapters.</p>
     </header>
+    <section class="mz-arts-group" aria-labelledby="g-how-it-works">
+      <h2 id="g-how-it-works">How it works</h2>
+      <p>How engines, clutches, wiring and electric drives work, and the main types of motorcycle.</p>
+    </section>
     <ul class="mz-arts">
     <li><a href="how-a-motorcycle-engine-works/">
       <img src="../assets/renders/engine_4t.webp" alt="Rendered single-cylinder four-stroke commuter engine with finned cylinder, carburettor, starter motor, clutch cover and kickstart lever" width="1000" height="800" loading="lazy">
@@ -117,19 +177,57 @@
     </a></li>
     <li><a href="motorcycle-wiring-basics/">
       <img src="../assets/renders/wiring_harness.webp" alt="Rendered motorcycle main wiring harness with branches, multi-pin connectors, fuse box and relays" width="1000" height="800" loading="lazy">
-      <div class="body"><span class="ute-label">Electrics</span><h2>Motorcycle wiring basics</h2><p>Harness, earth return, fuses, colour codes, charging and starting circuits, and a method for tracing faults.</p><span class="time">5 min read</span></div>
+      <div class="body"><span class="ute-label">Electrics</span><h2>Motorcycle wiring basics</h2><p>Harness, earth return, fuses, colour codes, charging and starting circuits, and a method for tracing faults.</p><span class="time">6 min read</span></div>
     </a></li>
     <li><a href="how-electric-motorcycles-work/">
       <img src="../assets/renders/bike_electric_side.webp" alt="Rendered electric scrambler motorcycle in side view with battery pack in the frame, mid-mounted motor and chain final drive" width="1600" height="1200" loading="lazy">
       <div class="body"><span class="ute-label">Electric</span><h2>How electric motorcycles work</h2><p>Battery pack, BMS, controller, motor and regenerative braking, with the efficiency numbers that set range.</p><span class="time">6 min read</span></div>
     </a></li>
+    <li><a href="types-of-motorcycles/">
+      <img src="../types/thumbs/standard.jpg" alt="Labelled line plate of a standard roadster motorcycle in side view with upright handlebars, flat seat, visible engine and twin rear shocks" width="720" height="486" loading="lazy">
+      <div class="body"><span class="ute-label">Motorcycle types</span><h2>Types of motorcycles</h2><p>Sixteen types in five families, from the 1885 Reitwagen to the electric boda, and the parts that define each.</p><span class="time">6 min read</span></div>
+    </a></li>
+    </ul>
+    <section class="mz-arts-group" aria-labelledby="g-maintenance-and-repair">
+      <h2 id="g-maintenance-and-repair">Maintenance and repair</h2>
+      <p>Checks, diagnosis and routine jobs you can do yourself, with the values to test against. For fault finding by symptom or by part, use the <a href="../repair/">Repair section</a>.</p>
+    </section>
+    <ul class="mz-arts">
+    <li><a href="motorcycle-will-not-start/">
+      <img src="../assets/photos/workshop-garage.jpg" alt="Two riders bent over a blue motorcycle outside a home garage, one with his hands on the engine below the fuel tank" width="1600" height="1200" loading="lazy">
+      <div class="body"><span class="ute-label">Diagnosis</span><h2>Why your motorcycle will not start</h2><p>A fixed diagnosis order for a non-starting bike: cranking, interlocks, spark, fuel and compression, with test values.</p><span class="time">6 min read</span></div>
+    </a></li>
+    <li><a href="motorcycle-battery-keeps-dying/">
+      <img src="../assets/renders/battery_12v.webp" alt="Rendered 12 V sealed AGM motorcycle battery with red positive terminal cover, marked maintenance free and VRLA" width="1000" height="800" loading="lazy">
+      <div class="body"><span class="ute-label">Electrical</span><h2>Why your motorcycle battery keeps dying</h2><p>Three causes of a flat battery and how to test each: battery condition, charging output and parasitic drain.</p><span class="time">6 min read</span></div>
+    </a></li>
+    <li><a href="how-to-change-motorcycle-oil/">
+      <img src="../assets/renders/photo/render-engine-exterior.jpg" alt="Rendered horizontal single-cylinder commuter engine with finned cylinder pointing forward, carburettor on top, starter behind the cylinder, large clutch cover and kickstart lever" width="1602" height="1111" loading="lazy">
+      <div class="body"><span class="ute-label">Maintenance</span><h2>How to change your motorcycle oil</h2><p>When to change the oil, which grade to buy and the drain, clean, refill and check sequence for a typical single.</p><span class="time">6 min read</span></div>
+    </a></li>
+    <li><a href="how-to-check-motorcycle-brake-pads/">
+      <img src="../assets/renders/photo/render-brake.jpg" alt="Rendered floating front brake disc with drilled friction ring and dark carrier, gripped by a two-piston sliding caliper with mounting bolts, bleed nipple and brake hose" width="1225" height="1115" loading="lazy">
+      <div class="body"><span class="ute-label">Maintenance</span><h2>How to check motorcycle brake pads</h2><p>Pad and disc wear limits, what uneven wear tells you, brake fluid checks and drum brake wear indicators.</p><span class="time">5 min read</span></div>
+    </a></li>
+    <li><a href="motorcycle-tyre-pressure-and-wear/">
+      <img src="../assets/renders/front_wheel_cast.webp" alt="Rendered motorcycle front wheel with a five-spoke cast alloy rim and a road tyre with tread grooves" width="1000" height="800" loading="lazy">
+      <div class="body"><span class="ute-label">Tyres</span><h2>Motorcycle tyre pressure and wear</h2><p>Setting pressures cold, reading wear indicators and sidewall codes, tyre age and safe puncture repair.</p><span class="time">5 min read</span></div>
+    </a></li>
+    <li><a href="spark-plug-reading/">
+      <img src="../assets/renders/spark_plug.webp" alt="Rendered motorcycle spark plug with white ribbed ceramic insulator, hex and threaded steel shell, and a second plug showing the electrodes" width="1000" height="800" loading="lazy">
+      <div class="body"><span class="ute-label">Ignition</span><h2>How to read a spark plug</h2><p>What each plug colour means, how to set the gap correctly, and how heat range and plug codes work.</p><span class="time">5 min read</span></div>
+    </a></li>
+    <li><a href="carburettor-cleaning-basics/">
+      <img src="../assets/photos/carburettor-work.jpg" alt="A mechanic working on the carburettor of an air-cooled single-cylinder trail motorcycle in a workshop, with the fuel tank removed" width="1600" height="1066" loading="lazy">
+      <div class="body"><span class="ute-label">Fuel system</span><h2>Carburettor cleaning basics</h2><p>Match the symptom to the carburettor circuit, rule out the simple causes, then clean and inspect it properly.</p><span class="time">6 min read</span></div>
+    </a></li>
     <li><a href="motorcycle-chain-maintenance/">
       <img src="../assets/renders/chain_sprockets.webp" alt="Rendered motorcycle drive chain with gold outer plates running between a small front sprocket and a large rear sprocket with six bolt holes" width="1000" height="800" loading="lazy">
       <div class="body"><span class="ute-label">Maintenance</span><h2>Motorcycle chain maintenance</h2><p>Measure slack and wear, read sprocket teeth, adjust the axle and lubricate an O-ring chain correctly.</p><span class="time">5 min read</span></div>
     </a></li>
-    <li><a href="types-of-motorcycles/">
-      <img src="../types/thumbs/standard.jpg" alt="Labelled line plate of a standard roadster motorcycle in side view with upright handlebars, flat seat, visible engine and twin rear shocks" width="720" height="486" loading="lazy">
-      <div class="body"><span class="ute-label">Motorcycle types</span><h2>Types of motorcycles</h2><p>Sixteen types in five families, from the 1885 Reitwagen to the electric boda, and the parts that define each.</p><span class="time">6 min read</span></div>
+    <li><a href="electric-motorcycle-battery-care/">
+      <img src="../assets/renders/photo/render-battery.jpg" alt="Rendered battery module of cylindrical lithium-ion cells in moulded holders, joined by nickel strips with a copper busbar and a small BMS board, with two loose cells beside it" width="1529" height="1190" loading="lazy">
+      <div class="body"><span class="ute-label">Electric</span><h2>Electric motorcycle battery care</h2><p>Charging habits, temperature, storage, the BMS and swapping, plus the signs of a pack that must not be charged.</p><span class="time">6 min read</span></div>
     </a></li>
     <li><a href="boda-boda-maintenance-checklist/">
       <img src="../types/thumbs/boda-boda.jpg" alt="Labelled line plate of a boda boda commuter motorcycle with round headlight, fork gaiters, air-cooled single, long dual seat, rear carrier, crash guards, drum brakes and full chain case" width="720" height="405" loading="lazy">

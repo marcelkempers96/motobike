@@ -172,7 +172,15 @@
       .bb-tile .v { font-size: 18px; }
     }
     @media (prefers-reduced-motion: reduce) { .bb-note, .bb-bar i, .bb-card { transition: none; } }
-  </style>
+  .bb-swap { display: grid; gap: 8px; }
+.bb-swap-row { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 8px; align-items: center; }
+.bb-swap-row span { font: 700 14px/1.2 var(--sans); }
+.bb-swap-row .bb-seg { display: flex; }
+.bb-swap-row button { flex: 1; font: 600 12.5px/1.1 var(--sans); padding: 8px 6px; border: 1px solid var(--line); background: #FFF; color: var(--ink); cursor: pointer; }
+.bb-swap-row button + button { border-left: 0; }
+.bb-swap-row button[aria-pressed="true"] { background: var(--ink); color: #FFF; border-color: var(--ink); }
+.bb-swap-row button:disabled { opacity: .35; cursor: default; }
+</style>
 </head>
 <body>
 <div class="ute-page">
@@ -233,6 +241,11 @@
             <p class="bb-small" id="bb-fd-s">Teeth on the gearbox sprocket and the wheel sprocket. Fewer front or more rear teeth means lower gearing: more pull, less top speed.</p>
             <div class="bb-ctl"><label for="bb-sf" id="bb-sf-l">Front sprocket</label><output id="bb-sf-o"></output><input type="range" id="bb-sf" step="1"></div>
             <div class="bb-ctl"><label for="bb-sr" id="bb-sr-l">Rear sprocket</label><output id="bb-sr-o"></output><input type="range" id="bb-sr" step="1"></div>
+          </div>
+          <div class="bb-box">
+            <h2>Swap parts</h2>
+            <p class="bb-small">Fit parts from the other two bikes. Each part is scaled to fit where the original sat.</p>
+            <div id="bb-swap" class="bb-swap"></div>
           </div>
           <div class="bb-box">
             <h2>Colours</h2>

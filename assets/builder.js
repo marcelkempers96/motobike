@@ -345,6 +345,8 @@ function disposeBike() {
     });
   }
   if (standGroup) { holder.remove(standGroup); standGroup.traverse((m) => m.geometry && m.geometry.dispose()); standGroup = null; }
+  Object.values(swapStore || {}).forEach((st) => st.orig.forEach((m) => { m.geometry?.dispose(); m.userData.real?.dispose?.(); }));
+  swapStore = {}; swaps = {};
   gltfRoot = null; meshes = []; steps = []; partsByKey = {}; placed = [];
   renderer.renderLists.dispose();
 }
@@ -481,6 +483,7 @@ async function loadBike(id) {
   applyCfg();
   blob.scale.set((geo.all.max.x - geo.all.min.x) * 0.0118, (geo.all.max.z - geo.all.min.z) * 0.02 + 0.25, 1);
   setupConfigUI();
+  setupSwapUI();
   resetBuild(true);
   setView(window.innerWidth < 880 ? 'side' : 'threeq', true);
   statusEl.hidden = true;
@@ -974,6 +977,113 @@ function isModified() {
   return cfg.rimF !== B.rim.f || cfg.rimR !== B.rim.r || cfg.sprF !== B.sprF || cfg.sprR !== B.sprR || engScale() !== 1 || battScale() !== 1;
 }
 
+
+/* --------------------------------------------------------------------------
+   Swap parts between bikes: load the donor bike, take its meshes for the slot,
+   scale and place them in the box the original part filled.
+   -------------------------------------------------------------------------- */
+const SWAP = [
+  { key: 'seat', label: 'Seat', comps: ['frame_body__seat'], fit: 'seat' },
+  { key: 'tank', label: 'Tank', comps: ['frame_body__fuel_tank', 'frame_body__tank_cover'], fit: 'bottom' },
+  { key: 'headlight', label: 'Headlight', comps: ['electrical__headlight'], fit: 'centre' },
+  { key: 'instruments', label: 'Instruments', comps: ['electrical__instruments', 'electrical__tft_dash'], fit: 'centre' },
+  { key: 'tail', label: 'Tail light', comps: ['electrical__tail_light'], fit: 'centre' },
+  { key: 'front_wheel', label: 'Front wheel', comps: ['wheels__front_wheel'], fit: 'wheel' },
+  { key: 'rear_wheel', label: 'Rear wheel', comps: ['wheels__rear_wheel'], fit: 'wheel' },
+];
+let swaps = {};            // slot key -> donor bike id
+let swapStore = {};        // slot key -> { orig: [meshes], added: [meshes] }
+const inSlot = (name, slot) => slot.comps.some((c) => name === c || name.startsWith(c + '__'));
+
+async function donorMeshes(donorId, slot) {
+  const g = await loader.loadAsync(MODELS + BIKES[donorId].file + '.glb');
+  g.scene.updateMatrixWorld(true);
+  const keep = [];
+  g.scene.traverse((m) => {
+    if (!m.isMesh) return;
+    const nm = (m.parent && m.parent !== g.scene && m.parent.name) ? m.parent.name : m.name;
+    if (inSlot(nm, slot)) { m.userData.donorName = nm; keep.push(m); }
+  });
+  g.scene.traverse((m) => { if (m.isMesh && !keep.includes(m)) { m.geometry.dispose(); m.material.dispose?.(); } });
+  return keep;
+}
+
+async function applySwap(slotKey, donorId) {
+  const slot = SWAP.find((s) => s.key === slotKey);
+  const part = partsByKey[slotKey];
+  if (!slot || !part) return;
+  // put the original back first
+  const st = swapStore[slotKey];
+  if (st) {
+    st.added.forEach((m) => { gltfRoot.remove(m); m.geometry.dispose(); m.userData.real.dispose(); meshes = meshes.filter((x) => x !== m); });
+    st.orig.forEach((m) => { gltfRoot.add(m); meshes.push(m); });
+    part.meshes = st.orig.slice();
+    delete swapStore[slotKey];
+  }
+  delete swaps[slotKey];
+  if (!donorId || donorId === bikeId) { applyCfg(); paintGhosts(); renderSwapUI(); return; }
+  const token = loadToken;
+  let donor;
+  try { donor = await donorMeshes(donorId, slot); } catch (e) { note('Could not load that part.', true); return; }
+  if (token !== loadToken || !donor.length) { if (!donor.length) note('That bike has no matching part.', true); renderSwapUI(); return; }
+  const orig = part.meshes.slice();
+  const ob = boxOf(orig), oc = ob.getCenter(new THREE.Vector3()), os = ob.getSize(new THREE.Vector3());
+  const db = new THREE.Box3();
+  donor.forEach((m) => { if (!m.geometry.boundingBox) m.geometry.computeBoundingBox(); db.union(m.geometry.boundingBox.clone().applyMatrix4(m.matrixWorld)); });
+  const dc = db.getCenter(new THREE.Vector3()), ds = db.getSize(new THREE.Vector3());
+  let s = slot.fit === 'wheel' ? os.y / ds.y : slot.fit === 'seat' ? os.x / ds.x : (os.x / ds.x + os.y / ds.y) / 2;
+  s = Math.min(1.8, Math.max(0.5, s || 1));
+  const target = oc.clone();
+  if (slot.fit === 'seat' || slot.fit === 'bottom') target.y = ob.min.y + (ds.y * s) / 2;
+  const place = new THREE.Matrix4().makeTranslation(target.x, target.y, target.z)
+    .multiply(new THREE.Matrix4().makeScale(s, s, s))
+    .multiply(new THREE.Matrix4().makeTranslation(-dc.x, -dc.y, -dc.z));
+  const added = donor.map((m) => {
+    const mat = m.material.clone(); m.material.dispose?.();
+    if (mat.transmission) { mat.transmission = 0; mat.transparent = true; mat.opacity = Math.min(mat.opacity, 0.35); mat.depthWrite = false; }
+    const n = new THREE.Mesh(m.geometry, mat);
+    n.name = m.userData.donorName;
+    const u = n.userData;
+    u.real = mat; u.matName = mat.name || ''; u.part = slotKey; u.swapped = true;
+    u.o = { opacity: mat.opacity, transparent: mat.transparent, depthWrite: mat.depthWrite, color: mat.color ? mat.color.clone() : null, emissive: mat.emissive ? mat.emissive.clone() : null, ei: mat.emissiveIntensity };
+    u.home = place.clone().multiply(m.matrixWorld);
+    n.matrixAutoUpdate = false; n.castShadow = true;
+    return n;
+  });
+  orig.forEach((m) => { gltfRoot.remove(m); });
+  meshes = meshes.filter((m) => !orig.includes(m)).concat(added);
+  added.forEach((m) => { gltfRoot.add(m); if (isPlaced(slotKey)) setReal(m); });
+  part.meshes = added;
+  swapStore[slotKey] = { orig, added };
+  swaps[slotKey] = donorId;
+  applyCfg(); paintGhosts(); renderSwapUI();
+  say(`<b>${slot.label} from the ${BIKES[donorId].name.toLowerCase()}</b> fitted. Scaled ${Math.round(s * 100)} % to fit.`);
+}
+
+function renderSwapUI() {
+  const box = $('bb-swap');
+  if (!box) return;
+  const ids = Object.keys(BIKES);
+  const short = { '4t': 'Roadster', '2t': 'MX', elec: 'Scrambler' };
+  box.innerHTML = SWAP.filter((sl) => partsByKey[sl.key]).map((sl) => `<div class="bb-swap-row"><span>${sl.label}</span><div class="bb-seg">${ids.map((id) => {
+    const on = (swaps[sl.key] || bikeId) === id;
+    return `<button type="button" data-slot="${sl.key}" data-from="${id}" aria-pressed="${on}">${short[id]}${id === bikeId ? ' (own)' : ''}</button>`;
+  }).join('')}</div></div>`).join('');
+}
+function setupSwapUI() {
+  swaps = {}; swapStore = {};
+  const box = $('bb-swap');
+  if (box && !box.dataset.wired) {
+    box.dataset.wired = '1';
+    box.addEventListener('click', (e) => {
+      const b = e.target.closest('button[data-slot]'); if (!b) return;
+      box.querySelectorAll('button').forEach((x) => { x.disabled = true; });
+      applySwap(b.dataset.slot, b.dataset.from).finally(() => renderSwapUI());
+    });
+  }
+  renderSwapUI();
+}
+
 function setupConfigUI() {
   const elec = B.kind === 'elec';
   const rng = (id, min, max, val) => { const i = $(id); i.min = min; i.max = max; i.value = val; };
@@ -1066,7 +1176,7 @@ function syncOutputs() {
   $(id).addEventListener('input', (e) => { cfg[k] = +e.target.value; userChange(); });
 });
 $('bb-compare').addEventListener('change', (e) => { cfg.compare = e.target.checked; applyCfg(); });
-$('bb-stock').addEventListener('click', () => { const cmp = cfg.compare; cfg = stockCfg(); cfg.compare = cmp; setupConfigUI(); applyCfg(); syncOutputs(); });
+$('bb-stock').addEventListener('click', async () => { const cmp = cfg.compare; cfg = stockCfg(); cfg.compare = cmp; for (const k of Object.keys(swaps)) await applySwap(k, null); setupConfigUI(); applyCfg(); syncOutputs(); });
 
 /* Tabs */
 function setTab(t) {
