@@ -148,6 +148,16 @@ def credit_line(r):
             f"via Wikimedia Commons ({r['file_page_url']})")
 
 
+def fetch(session, url, timeout=60):
+    for attempt in range(8):
+        r = session.get(url, timeout=timeout)
+        if r.status_code == 429:
+            wait = int(r.headers.get("Retry-After", "0") or 0) or 20 * (attempt + 1)
+            print(f"image rate limited, waiting {wait}s", flush=True); time.sleep(wait); continue
+        r.raise_for_status(); return r
+    r.raise_for_status(); return r
+
+
 def search(session, query, width, limit, delay):
     params = {"action": "query", "format": "json", "formatversion": "2", "maxlag": "5",
               "generator": "search", "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": "6",
@@ -208,7 +218,7 @@ def main():
                 cands[t] = {
                     "part_id": pid, "repair_slug": repair, "file_title": t,
                     "file_page_url": ii.get("descriptionurl", ""),
-                    "original_url": ii.get("url", ""), "web_url": ii.get("thumburl", ""),
+                    "original_url": ii.get("url", ""), "web_url": ii.get("thumburl", "").replace("://thumb.wikimedia.org/", "://upload.wikimedia.org/"),
                     "width": ii.get("width"), "height": ii.get("height"), "mime": ii.get("mime", ""),
                     "licence": lic, "licence_url": meta_val(em, "LicenseUrl"),
                     "author": meta_val(em, "Artist")[:200], "credit": meta_val(em, "Credit")[:200],
@@ -227,7 +237,7 @@ def main():
             r["local_file"] = str(base.with_suffix(ext))
             if not a.dry_run:
                 try:
-                    img = s.get(r["web_url"] or r["original_url"], timeout=60); img.raise_for_status()
+                    img = fetch(s, r["web_url"] or r["original_url"])
                     base.with_suffix(ext).write_bytes(img.content)
                     if a.originals and r["original_url"]:
                         o = s.get(r["original_url"], timeout=120); o.raise_for_status()

@@ -39,6 +39,15 @@ SIDE = re.compile(r"(side|profile|left|right|seitenansicht|lateral)", re.I)
 def strip(s): return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
 def mv(em, k): return strip((em.get(k) or {}).get("value", ""))
 
+def fetch(s, url):
+  for k in range(8):
+    r = s.get(url, timeout=60)
+    if r.status_code == 429:
+      wait = int(r.headers.get("Retry-After", "0") or 0) or 20 * (k + 1)
+      print(f"image rate limited, waiting {wait}s", flush=True); time.sleep(wait); continue
+    r.raise_for_status(); return r
+  r.raise_for_status(); return r
+
 def search(s, q, width, delay):
   p = {"action": "query", "format": "json", "formatversion": "2", "maxlag": "5", "generator": "search",
        "gsrsearch": f"{q} filetype:bitmap", "gsrnamespace": "6", "gsrlimit": "40", "prop": "imageinfo",
@@ -80,7 +89,7 @@ def main():
         hit = sum(1 for x in words if x in text.lower())
         if hit < max(1, len(words) - 1): continue
         score = hit * 2 + (3 if SIDE.search(text) else 0) + (2 if qi < 3 else 0) - (2 if mv(em, "Restrictions") else 0)
-        cands[t] = {"type": tid, "file_title": t, "file_page_url": ii.get("descriptionurl", ""), "web_url": ii.get("thumburl", ""),
+        cands[t] = {"type": tid, "file_title": t, "file_page_url": ii.get("descriptionurl", ""), "web_url": ii.get("thumburl", "").replace("://thumb.wikimedia.org/", "://upload.wikimedia.org/"),
                     "width": w, "height": h, "licence": lic, "licence_url": mv(em, "LicenseUrl"), "author": mv(em, "Artist")[:160],
                     "description": desc, "restrictions": mv(em, "Restrictions"), "query": q, "score": score}
     best = sorted(cands.values(), key=lambda r: (-r["score"], -r["width"]))[:a.max]
@@ -88,7 +97,7 @@ def main():
       ext = Path(r["web_url"].split("?")[0]).suffix.lower() or ".jpg"
       f = out / tid / f"{tid}-{n:02d}{ext}"; f.parent.mkdir(parents=True, exist_ok=True)
       try:
-        im = s.get(r["web_url"], timeout=60); im.raise_for_status(); f.write_bytes(im.content); time.sleep(a.delay)
+        im = fetch(s, r["web_url"]); f.write_bytes(im.content); time.sleep(a.delay)
         r["local_file"] = f.as_posix()
       except Exception as e:
         print("download failed", r["file_title"], e); r["local_file"] = ""
