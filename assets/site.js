@@ -39,13 +39,14 @@ export const NAV = [
     ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
     ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
   ] },
-  { key: 'library', title: 'Library', blurb: 'Articles, types and 3D models', items: [
+  { key: 'library', title: 'Library', blurb: 'Articles, models, illustrations and downloads', items: [
     ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
     ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
     ['models/', '3D models', 'All 56 models, rotate and download'],
+    ['downloads/#plates', 'Technical illustrations', '50+ labelled plates to download'],
+    ['downloads/', 'Downloads', 'PDF modules, plates, data and offline tools'],
   ] },
   { key: 'more', title: 'More', blurb: 'Files, sources and the project', items: [
-    ['downloads/', 'Downloads', 'PDF modules, models, plates'],
     ['sources/', 'Sources and credits', 'Bibliography and licences'],
     ['updates/', 'Updates', 'What changed and when'],
     ['about/', 'About', 'Why this exists, who made it'],
