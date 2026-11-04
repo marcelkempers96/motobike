@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800"><title>Sealed wheel bearings (pair), one showing balls, illustration</title><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f4f6f8"/><stop offset=".45" stop-color="#c3c9cf"/><stop offset="1" stop-color="#7d858d"/></linearGradient>
+<linearGradient id="steelDark" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#b8bfc6"/><stop offset=".5" stop-color="#868e96"/><stop offset="1" stop-color="#555c63"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#6b737b"/><stop offset="1" stop-color="#3d4349"/></linearGradient>
+<linearGradient id="friction" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5a524b"/><stop offset="1" stop-color="#2f2a26"/></linearGradient>
+<linearGradient id="rubber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4a4d51"/><stop offset="1" stop-color="#16181a"/></linearGradient>
+<linearGradient id="black" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5b6067"/><stop offset=".5" stop-color="#2f3337"/><stop offset="1" stop-color="#1b1d20"/></linearGradient>
+<linearGradient id="alu" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#fbfcfd"/><stop offset=".5" stop-color="#d9dde1"/><stop offset="1" stop-color="#a2a9b0"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#c9ced3"/><stop offset=".5" stop-color="#6f777f"/><stop offset=".7" stop-color="#dfe3e7"/><stop offset="1" stop-color="#9aa2aa"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f3d58a"/><stop offset=".5" stop-color="#c9a24a"/><stop offset="1" stop-color="#8a6a26"/></linearGradient>
+<linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0b48a"/><stop offset=".5" stop-color="#c47a45"/><stop offset="1" stop-color="#7f4a24"/></linearGradient>
+<linearGradient id="plastic" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4c5157"/><stop offset="1" stop-color="#22262a"/></linearGradient>
+<linearGradient id="white" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d5d9dd"/></linearGradient>
+<linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0" stop-color="#e9ecef"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#c4cacf"/></linearGradient>
+<linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#a3201a"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#b9d3e6" stop-opacity=".7"/></linearGradient>
+<linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#3f8f5a"/><stop offset="1" stop-color="#1f5a35"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#6aa7e0"/><stop offset="1" stop-color="#245e99"/></linearGradient>
+<radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs><rect width="800" height="800" fill="#fff"/><ellipse cx="400" cy="640" rx="320" ry="36" fill="url(#shadow)"/><path d="M235.0,230.0 L305.0,230.0 L305.0,530.0 L235.0,530.0 A63.0,150.0 0 0,1 235.0,230.0 Z" fill="url(#steel)" stroke="#4b5157" stroke-width="2"/><path d="M368.0,380.0 A63.0,150.0 0 1,0 242.0,380.0 A63.0,150.0 0 1,0 368.0,380.0 ZM329.4,380.0 A24.4,58.0 0 1,0 280.6,380.0 A24.4,58.0 0 1,0 329.4,380.0 Z" fill="url(#alu)" fill-rule="evenodd" stroke="#4b5157" stroke-width="2"/><path d="M359.2,380.0 A54.2,129.0 0 1,0 250.8,380.0 A54.2,129.0 0 1,0 359.2,380.0 ZM337.2,380.0 A32.2,76.6 0 1,0 272.8,380.0 A32.2,76.6 0 1,0 337.2,380.0 Z" fill="url(#black)" fill-rule="evenodd" stroke="#111" stroke-width="1.5"/><path d="M329.4,380.0 A24.4,58.0 0 1,0 280.6,380.0 A24.4,58.0 0 1,0 329.4,380.0 Z" fill="#2a2d31"/><path d="M326.4,380.0 A24.4,58.0 0 1,0 277.6,380.0 A24.4,58.0 0 1,0 326.4,380.0 Z" fill="none" stroke="#7d858d" stroke-width="2"/><path d="M505.0,260.0 L575.0,260.0 L575.0,560.0 L505.0,560.0 A63.0,150.0 0 0,1 505.0,260.0 Z" fill="url(#steel)" stroke="#4b5157" stroke-width="2"/><path d="M638.0,410.0 A63.0,150.0 0 1,0 512.0,410.0 A63.0,150.0 0 1,0 638.0,410.0 ZM599.4,410.0 A24.4,58.0 0 1,0 550.6,410.0 A24.4,58.0 0 1,0 599.4,410.0 Z" fill="url(#alu)" fill-rule="evenodd" stroke="#4b5157" stroke-width="2"/><path d="M629.2,410.0 A54.2,129.0 0 1,0 520.8,410.0 A54.2,129.0 0 1,0 629.2,410.0 ZM607.2,410.0 A32.2,76.6 0 1,0 542.8,410.0 A32.2,76.6 0 1,0 607.2,410.0 Z" fill="#3d4349" fill-rule="evenodd"/><path d="M627.9,410.0 A52.9,126.0 0 1,0 522.1,410.0 A52.9,126.0 0 1,0 627.9,410.0 ZM607.6,410.0 A32.6,77.7 0 1,0 542.4,410.0 A32.6,77.7 0 1,0 607.6,410.0 Z" fill="none" stroke="#c9a24a" stroke-width="3" opacity=".7"/><path d="M618.7,410.0 A43.7,104.0 0 1,0 531.3,410.0 A43.7,104.0 0 1,0 618.7,410.0 Z" fill="none" stroke="#c9a24a" stroke-width="6"/><circle cx="531.8" cy="425.4" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="525.4" cy="419.0" r="5.2" fill="#fff"/><circle cx="537.7" cy="355.7" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="531.3" cy="349.3" r="5.2" fill="#fff"/><circle cx="546.1" cy="487.9" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="539.6" cy="481.5" r="5.2" fill="#fff"/><circle cx="561.1" cy="311.4" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="554.7" cy="305.0" r="5.2" fill="#fff"/><circle cx="573.9" cy="514.0" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="567.4" cy="507.5" r="5.2" fill="#fff"/><circle cx="591.0" cy="313.2" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="584.5" cy="306.8" r="5.2" fill="#fff"/><circle cx="602.2" cy="491.3" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="595.8" cy="484.9" r="5.2" fill="#fff"/><circle cx="613.4" cy="360.3" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="606.9" cy="353.9" r="5.2" fill="#fff"/><circle cx="617.8" cy="430.7" r="18.4" fill="url(#chrome)" stroke="#5a6168" stroke-width="1.5"/><circle cx="611.4" cy="424.2" r="5.2" fill="#fff"/><path d="M599.4,410.0 A24.4,58.0 0 1,0 550.6,410.0 A24.4,58.0 0 1,0 599.4,410.0 Z" fill="#2a2d31"/><path d="M599.4,410.0 A24.4,58.0 0 1,0 550.6,410.0 A24.4,58.0 0 1,0 599.4,410.0 Z" fill="none" stroke="#4b5157" stroke-width="2"/></svg>

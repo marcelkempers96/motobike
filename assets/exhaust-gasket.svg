@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800"><title>Exhaust port gaskets, copper and fibre ring type, illustration</title><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f4f6f8"/><stop offset=".45" stop-color="#c3c9cf"/><stop offset="1" stop-color="#7d858d"/></linearGradient>
+<linearGradient id="steelDark" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#b8bfc6"/><stop offset=".5" stop-color="#868e96"/><stop offset="1" stop-color="#555c63"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#6b737b"/><stop offset="1" stop-color="#3d4349"/></linearGradient>
+<linearGradient id="friction" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5a524b"/><stop offset="1" stop-color="#2f2a26"/></linearGradient>
+<linearGradient id="rubber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4a4d51"/><stop offset="1" stop-color="#16181a"/></linearGradient>
+<linearGradient id="black" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5b6067"/><stop offset=".5" stop-color="#2f3337"/><stop offset="1" stop-color="#1b1d20"/></linearGradient>
+<linearGradient id="alu" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#fbfcfd"/><stop offset=".5" stop-color="#d9dde1"/><stop offset="1" stop-color="#a2a9b0"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#c9ced3"/><stop offset=".5" stop-color="#6f777f"/><stop offset=".7" stop-color="#dfe3e7"/><stop offset="1" stop-color="#9aa2aa"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f3d58a"/><stop offset=".5" stop-color="#c9a24a"/><stop offset="1" stop-color="#8a6a26"/></linearGradient>
+<linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0b48a"/><stop offset=".5" stop-color="#c47a45"/><stop offset="1" stop-color="#7f4a24"/></linearGradient>
+<linearGradient id="plastic" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4c5157"/><stop offset="1" stop-color="#22262a"/></linearGradient>
+<linearGradient id="white" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d5d9dd"/></linearGradient>
+<linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0" stop-color="#e9ecef"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#c4cacf"/></linearGradient>
+<linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#a3201a"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#b9d3e6" stop-opacity=".7"/></linearGradient>
+<linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#3f8f5a"/><stop offset="1" stop-color="#1f5a35"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#6aa7e0"/><stop offset="1" stop-color="#245e99"/></linearGradient>
+<radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs><rect width="800" height="800" fill="#fff"/><ellipse cx="400" cy="620" rx="300" ry="36" fill="url(#shadow)"/><path d="M180,330 L180,352 A120,60.0 0 0,0 420,352 L420,330 A120,60.0 0 0,1 180,330 Z" fill="#7f4a24" stroke="#4b5157" stroke-width="2"/><path d="M420.0,330.0 A120.0,60.0 0 1,0 180.0,330.0 A120.0,60.0 0 1,0 420.0,330.0 ZM372.0,330.0 A72.0,36.0 0 1,0 228.0,330.0 A72.0,36.0 0 1,0 372.0,330.0 Z" fill="url(#copper)" fill-rule="evenodd" stroke="#4b5157" stroke-width="2"/><clipPath id="g300"><path d="M372.0,330.0 A72.0,36.0 0 1,0 228.0,330.0 A72.0,36.0 0 1,0 372.0,330.0 Z"/></clipPath><g clip-path="url(#g300)"><path d="M228,330 A72,36.0 0 0,1 372,330 L372,352 A72,36.0 0 0,0 228,352 Z" fill="#9a5a2e"/></g><path d="M396.0,330.0 A96.0,48.0 0 1,0 204.0,330.0 A96.0,48.0 0 1,0 396.0,330.0 Z" fill="none" stroke="#7f4a24" stroke-width="3"/><path d="M406.0,330.0 A106.0,53.0 0 1,0 194.0,330.0 A106.0,53.0 0 1,0 406.0,330.0 Z" fill="none" stroke="#f6c9a4" stroke-width="2" opacity=".7"/><path d="M380,470 L380,492 A120,60.0 0 0,0 620,492 L620,470 A120,60.0 0 0,1 380,470 Z" fill="#3c3a37" stroke="#4b5157" stroke-width="2"/><path d="M620.0,470.0 A120.0,60.0 0 1,0 380.0,470.0 A120.0,60.0 0 1,0 620.0,470.0 ZM572.0,470.0 A72.0,36.0 0 1,0 428.0,470.0 A72.0,36.0 0 1,0 572.0,470.0 Z" fill="#6e6a65" fill-rule="evenodd" stroke="#4b5157" stroke-width="2"/><clipPath id="g500"><path d="M572.0,470.0 A72.0,36.0 0 1,0 428.0,470.0 A72.0,36.0 0 1,0 572.0,470.0 Z"/></clipPath><g clip-path="url(#g500)"><path d="M428,470 A72,36.0 0 0,1 572,470 L572,492 A72,36.0 0 0,0 428,492 Z" fill="#2a2826"/></g><path d="M596.0,470.0 A96.0,48.0 0 1,0 404.0,470.0 A96.0,48.0 0 1,0 596.0,470.0 Z" fill="none" stroke="url(#copper)" stroke-width="18"/></svg>

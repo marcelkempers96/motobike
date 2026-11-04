@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800"><title>Red tail and brake light with number plate light, illustration</title><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f4f6f8"/><stop offset=".45" stop-color="#c3c9cf"/><stop offset="1" stop-color="#7d858d"/></linearGradient>
+<linearGradient id="steelDark" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#b8bfc6"/><stop offset=".5" stop-color="#868e96"/><stop offset="1" stop-color="#555c63"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#6b737b"/><stop offset="1" stop-color="#3d4349"/></linearGradient>
+<linearGradient id="friction" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5a524b"/><stop offset="1" stop-color="#2f2a26"/></linearGradient>
+<linearGradient id="rubber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4a4d51"/><stop offset="1" stop-color="#16181a"/></linearGradient>
+<linearGradient id="black" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5b6067"/><stop offset=".5" stop-color="#2f3337"/><stop offset="1" stop-color="#1b1d20"/></linearGradient>
+<linearGradient id="alu" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#fbfcfd"/><stop offset=".5" stop-color="#d9dde1"/><stop offset="1" stop-color="#a2a9b0"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#c9ced3"/><stop offset=".5" stop-color="#6f777f"/><stop offset=".7" stop-color="#dfe3e7"/><stop offset="1" stop-color="#9aa2aa"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f3d58a"/><stop offset=".5" stop-color="#c9a24a"/><stop offset="1" stop-color="#8a6a26"/></linearGradient>
+<linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0b48a"/><stop offset=".5" stop-color="#c47a45"/><stop offset="1" stop-color="#7f4a24"/></linearGradient>
+<linearGradient id="plastic" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4c5157"/><stop offset="1" stop-color="#22262a"/></linearGradient>
+<linearGradient id="white" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d5d9dd"/></linearGradient>
+<linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0" stop-color="#e9ecef"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#c4cacf"/></linearGradient>
+<linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#a3201a"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#b9d3e6" stop-opacity=".7"/></linearGradient>
+<linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#3f8f5a"/><stop offset="1" stop-color="#1f5a35"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#6aa7e0"/><stop offset="1" stop-color="#245e99"/></linearGradient>
+<radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs><rect width="800" height="800" fill="#fff"/><defs>
+<linearGradient id="eCylBlack" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#3a3f45"/><stop offset=".3" stop-color="#6b7178"/><stop offset=".55" stop-color="#2b2f34"/><stop offset="1" stop-color="#15171a"/></linearGradient>
+<linearGradient id="eCylAlu" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#9aa2aa"/><stop offset=".3" stop-color="#f4f6f8"/><stop offset=".6" stop-color="#b8bfc6"/><stop offset="1" stop-color="#6b737b"/></linearGradient>
+<linearGradient id="eCylX" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0" stop-color="#2b2f34"/><stop offset=".35" stop-color="#666c73"/><stop offset=".6" stop-color="#2b2f34"/><stop offset="1" stop-color="#15171a"/></linearGradient>
+<linearGradient id="eSteelX" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0" stop-color="#7d858d"/><stop offset=".35" stop-color="#f4f6f8"/><stop offset=".7" stop-color="#b8bfc6"/><stop offset="1" stop-color="#6b737b"/></linearGradient>
+<radialGradient id="eLamp" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#e6edf3"/><stop offset="1" stop-color="#9fb2c2"/></radialGradient>
+<radialGradient id="eRedLens" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#ff8a7a"/><stop offset=".5" stop-color="#d8261c"/><stop offset="1" stop-color="#7a120d"/></radialGradient>
+<radialGradient id="eAmberLens" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#ffe2a0"/><stop offset=".5" stop-color="#f29a1c"/><stop offset="1" stop-color="#a85a0a"/></radialGradient>
+</defs><ellipse cx="410" cy="650" rx="300" ry="34" fill="url(#shadow)"/><path d="M200,300 Q204,240 262,236 L580,236 Q640,240 638,300 L620,470 Q616,505 580,508 L250,508 Q205,505 200,460 Z" fill="#16181a" stroke="#000" stroke-width="2" stroke-linejoin="round" /><path d="M180,310 Q180,260 240,256 L560,256 Q620,260 618,320 L600,460 Q596,500 560,500 L240,500 Q190,500 186,460 Z" fill="url(#eRedLens)" stroke="#6b0d08" stroke-width="2.5" stroke-linejoin="round" /><path d="M200.0,290 L600.0,290" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M201.5,320 L597.5,320" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M203.0,350 L595.0,350" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M204.5,380 L592.5,380" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M206.0,410 L590.0,410" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M207.5,440 L587.5,440" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M209.0,470 L585.0,470" stroke="#ffb3a8" stroke-opacity=".35" stroke-width="2"/><path d="M230,270 L226,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M272,270 L268,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M314,270 L310,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M356,270 L352,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M398,270 L394,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M440,270 L436,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M482,270 L478,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M524,270 L520,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><path d="M566,270 L562,490" stroke="#5a0905" stroke-opacity=".25" stroke-width="2"/><ellipse cx="400" cy="378" rx="120" ry="70" fill="#ffd0c8" fill-opacity=".25"/><path d="M210,300 Q214,272 250,270 L420,270" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="7" stroke-linecap="round"/><path d="M300,500 L500,500 L520,560 L280,560 Z" fill="url(#black)" stroke="#000" stroke-width="2" stroke-linejoin="round" /><path d="M310,560 L490,560 L470,590 L330,590 Z" fill="url(#glass)" stroke="#7d858d" stroke-width="2" stroke-linejoin="round" /><path d="M330,566 L470,566" stroke="#fff" stroke-width="3" opacity=".8"/><rect x="324" y="190" width="12" height="40" fill="url(#eSteelX)" stroke="#4b5157" stroke-width="1.5"/><rect x="464" y="190" width="12" height="40" fill="url(#eSteelX)" stroke="#4b5157" stroke-width="1.5"/><path d="M560,240 C580,180 640,170 680,180" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M560,240 C580,180 640,170 680,180" fill="none" stroke="#1f2226" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M560,240 C580,180 640,170 680,180" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2.8" stroke-linecap="round" transform="translate(-1.2,-2.2)"/></svg>

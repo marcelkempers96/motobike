@@ -1,0 +1,80 @@
+{
+  "asset_id": "bike_scooter",
+  "title": "Automatic 125 cc scooter",
+  "type": "scooter",
+  "reference": "Modern 125 cc twist-and-go scooter of the Honda PCX / Yamaha NMAX / Vespa Primavera family (generic, unbranded)",
+  "era": "2015-2025",
+  "wheelbase_cm": 131,
+  "rake_deg": 26,
+  "wheels": "14 in front / 13 in rear cast alloy (gunmetal), 110/70-14 and 130/70-13 road tyres",
+  "engine": "125 cc liquid-cooled SOHC single, near-horizontal cylinder, unit-swing with CVT belt drive (case on left) and final reduction gearbox at the rear axle; radiator with louvred cover on the right",
+  "colours": "Satin grey-blue body panels, black lower panels, floorboard and leg shield; gunmetal wheels; cast-aluminium CVT case",
+  "systems": {
+    "chassis": [
+      "centre_stand",
+      "engine_mount_link",
+      "front_brake",
+      "front_fork",
+      "handlebar",
+      "passenger_footpegs",
+      "rear_brake",
+      "rear_shock_left",
+      "rear_shock_right",
+      "side_stand",
+      "steering",
+      "swingarm"
+    ],
+    "electrical": [
+      "battery",
+      "headlight",
+      "ignition_coil",
+      "indicators",
+      "instruments",
+      "number_plate_light",
+      "spark_plug_cap",
+      "starter_motor",
+      "tail_light"
+    ],
+    "frame_body": [
+      "floorboard",
+      "frame",
+      "front_lower_cover",
+      "front_mudguard",
+      "front_shield",
+      "fuel_tank",
+      "grab_rail",
+      "handlebar_cowl",
+      "leg_shield",
+      "number_plate_hanger",
+      "rear_hugger",
+      "rear_undercover",
+      "seat",
+      "side_panels",
+      "storage_bucket",
+      "tail_cowl"
+    ],
+    "powertrain": [
+      "cvt",
+      "engine",
+      "exhaust",
+      "intake"
+    ],
+    "transmission": [
+      "cvt_belt",
+      "drive_pulley",
+      "driven_pulley",
+      "final_gearbox"
+    ],
+    "wheels": [
+      "front_wheel",
+      "rear_wheel"
+    ],
+    "wiring": [
+      "harness_main",
+      "throttle_cables"
+    ]
+  },
+  "objects": 122,
+  "triangles": 359080,
+  "weak_points": "The CVT cover is a smooth convex hull with a flat brushed panel and lacks the cast ribbing and stepped profile of the real part; the headlight and front shield styling is generic; the seat is a single loft with no stitching; the inner leg shield and glovebox lids are only visible from the rear 3/4 view; the tyres use plain road grooves with no sipes."
+}
