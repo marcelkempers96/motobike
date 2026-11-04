@@ -1,0 +1,78 @@
+{
+  "asset_id": "bike_step_through",
+  "title": "Step-through underbone 110",
+  "type": "step-through underbone moped (semi-automatic)",
+  "reference": "Super Cub family idiom (C100 to modern 110/125), generic, no branding",
+  "era": "1958 to present",
+  "wheelbase_cm": 122,
+  "rake_deg": 26.5,
+  "wheels": "17 in steel-rim spoked, 2.25-17 front / 2.50-17 rear, drum brakes front and rear",
+  "engine": "horizontal air-cooled OHC four-stroke single ~110 cc, cylinder forward, carburettor, 4-speed semi-automatic (centrifugal clutch, heel-and-toe pedal, kick start), enclosed chain",
+  "colours": "pale blue body/backbone/cowl/front mudguard, cream polyethylene leg shield, dark navy seat, chrome trim",
+  "systems": {
+    "chassis": [
+      "centre_stand",
+      "footpegs",
+      "front_brake",
+      "front_fork",
+      "handlebar",
+      "rear_brake",
+      "rear_shock_left",
+      "rear_shock_right",
+      "rear_shocks",
+      "steering",
+      "swingarm"
+    ],
+    "electrical": [
+      "battery",
+      "cdi_unit",
+      "generator",
+      "headlight",
+      "horn",
+      "ignition_coil",
+      "indicators",
+      "instruments",
+      "regulator_rectifier",
+      "spark_plug",
+      "tail_light"
+    ],
+    "frame_body": [
+      "carrier",
+      "frame",
+      "front_mudguard",
+      "fuel_tank",
+      "handlebar_cowl",
+      "leg_shield",
+      "number_plate_bracket",
+      "rear_body",
+      "rear_mudguard",
+      "seat",
+      "side_covers"
+    ],
+    "powertrain": [
+      "clutch",
+      "engine",
+      "exhaust",
+      "fuel_system",
+      "intake",
+      "kick_start"
+    ],
+    "transmission": [
+      "chain",
+      "chain_case",
+      "front_sprocket",
+      "gear_pedal",
+      "rear_sprocket"
+    ],
+    "wheels": [
+      "front_wheel",
+      "rear_wheel"
+    ],
+    "wiring": [
+      "harness_main"
+    ]
+  },
+  "objects": 127,
+  "triangles": 281557,
+  "weak_points": "Leg shield is a single-thickness loft with plain edges (no moulded rim or fixing bosses); backbone seam flange is subtle at catalogue distance; handlebar cowl is a simple loft without a split line between upper and lower halves; centre stand and footpeg bar are partly hidden behind the chain case in the side view."
+}
