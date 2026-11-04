@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800"><title>Commuter exhaust header pipe with silencer and heat shield, illustration</title><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f4f6f8"/><stop offset=".45" stop-color="#c3c9cf"/><stop offset="1" stop-color="#7d858d"/></linearGradient>
+<linearGradient id="steelDark" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#b8bfc6"/><stop offset=".5" stop-color="#868e96"/><stop offset="1" stop-color="#555c63"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#6b737b"/><stop offset="1" stop-color="#3d4349"/></linearGradient>
+<linearGradient id="friction" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5a524b"/><stop offset="1" stop-color="#2f2a26"/></linearGradient>
+<linearGradient id="rubber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4a4d51"/><stop offset="1" stop-color="#16181a"/></linearGradient>
+<linearGradient id="black" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#5b6067"/><stop offset=".5" stop-color="#2f3337"/><stop offset="1" stop-color="#1b1d20"/></linearGradient>
+<linearGradient id="alu" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#fbfcfd"/><stop offset=".5" stop-color="#d9dde1"/><stop offset="1" stop-color="#a2a9b0"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#c9ced3"/><stop offset=".5" stop-color="#6f777f"/><stop offset=".7" stop-color="#dfe3e7"/><stop offset="1" stop-color="#9aa2aa"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f3d58a"/><stop offset=".5" stop-color="#c9a24a"/><stop offset="1" stop-color="#8a6a26"/></linearGradient>
+<linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0b48a"/><stop offset=".5" stop-color="#c47a45"/><stop offset="1" stop-color="#7f4a24"/></linearGradient>
+<linearGradient id="plastic" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#4c5157"/><stop offset="1" stop-color="#22262a"/></linearGradient>
+<linearGradient id="white" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d5d9dd"/></linearGradient>
+<linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0" stop-color="#e9ecef"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#c4cacf"/></linearGradient>
+<linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#a3201a"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#b9d3e6" stop-opacity=".7"/></linearGradient>
+<linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#3f8f5a"/><stop offset="1" stop-color="#1f5a35"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#6aa7e0"/><stop offset="1" stop-color="#245e99"/></linearGradient>
+<radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs><rect width="800" height="800" fill="#fff"/><ellipse cx="400" cy="640" rx="320" ry="34" fill="url(#shadow)"/><g transform="translate(400,400) scale(.88) translate(-470,-420)"><path d="M150,190 C150,300 170,380 260,430 C320,462 380,470 430,470" fill="none" stroke="#2a2d31" stroke-width="40" stroke-linecap="round"/><path d="M150,190 C150,300 170,380 260,430 C320,462 380,470 430,470" fill="none" stroke="url(#chrome)" stroke-width="34" stroke-linecap="butt"/><path d="M150,190 C150,300 170,380 260,430 C320,462 380,470 430,470" fill="none" stroke="#fff" stroke-width="6" opacity=".5" transform="translate(-6,-4)"/><path d="M210.0,190.0 A60.0,16.0 0 1,0 90.0,190.0 A60.0,16.0 0 1,0 210.0,190.0 ZM117.0,190.0 A7.0,3.0 0 1,0 103.0,190.0 A7.0,3.0 0 1,0 117.0,190.0 ZM197.0,190.0 A7.0,3.0 0 1,0 183.0,190.0 A7.0,3.0 0 1,0 197.0,190.0 Z" fill="url(#steel)" fill-rule="evenodd" stroke="#4b5157" stroke-width="2"/><path d="M170.0,186.0 A20.0,7.0 0 1,0 130.0,186.0 A20.0,7.0 0 1,0 170.0,186.0 Z" fill="#2a2d31"/><g transform="translate(420,470) rotate(-10)"><path d="M0,-42 L60,-62 L330,-62 Q370,-62 370,-30 L370,30 Q370,62 330,62 L60,62 L0,42 Z" fill="url(#black)" stroke="#111" stroke-width="2"/><path d="M70,-50 L320,-50" stroke="#fff" stroke-width="5" opacity=".25" stroke-linecap="round"/><path d="M340,-62 Q376,-62 376,-30 L376,30 Q376,62 340,62 Z" fill="url(#chrome)" stroke="#5a6168" stroke-width="2"/><path d="M376.0,-6.0 L404.0,-6.0 L404.0,26.0 L376.0,26.0 A6.0,16.0 0 0,1 376.0,-6.0 Z" fill="url(#chrome)" stroke="#5a6168" stroke-width="2"/><ellipse cx="404.0" cy="10.0" rx="6.0" ry="16.0" fill="#2a2d31" stroke="#5a6168" stroke-width="2"/><path d="M200,-62 L220,-104 L260,-104 L250,-62 Z" fill="url(#steelDark)" stroke="#4b5157" stroke-width="2"/><circle cx="240" cy="-90" r="7" fill="#fff" stroke="#4b5157" stroke-width="2"/></g><g transform="translate(330,425) rotate(18)"><path d="M-90,-34 Q0,-50 120,-34 L120,6 Q0,-10 -90,6 Z" fill="url(#chrome)" stroke="#5a6168" stroke-width="2"/><ellipse cx="-70" cy="-14.0" rx="5" ry="3" fill="#3d4349"/><ellipse cx="-50" cy="-16.052120859954012" rx="5" ry="3" fill="#3d4349"/><ellipse cx="-30" cy="-17.856725658119235" rx="5" ry="3" fill="#3d4349"/><ellipse cx="-10" cy="-19.196152422706632" rx="5" ry="3" fill="#3d4349"/><ellipse cx="10" cy="-19.908846518073247" rx="5" ry="3" fill="#3d4349"/><ellipse cx="30" cy="-19.908846518073247" rx="5" ry="3" fill="#3d4349"/><ellipse cx="50" cy="-19.196152422706632" rx="5" ry="3" fill="#3d4349"/><ellipse cx="70" cy="-17.856725658119238" rx="5" ry="3" fill="#3d4349"/><ellipse cx="90" cy="-16.052120859954012" rx="5" ry="3" fill="#3d4349"/><ellipse cx="110" cy="-14.0" rx="5" ry="3" fill="#3d4349"/><circle cx="-78" cy="-14" r="5" fill="url(#steelDark)"/><circle cx="108" cy="-14" r="5" fill="url(#steelDark)"/></g></g></svg>
