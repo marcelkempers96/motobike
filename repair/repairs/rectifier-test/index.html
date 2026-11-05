@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test a rectifier with an ohmmeter: step by step | Moto Zero</title>
+  <meta name="description" content="Test a rectifier with an ohmmeter: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.">
+  <link rel="canonical" href="https://motobike-five.vercel.app/repair/repairs/rectifier-test/">
+  <meta property="og:title" content="Test a rectifier with an ohmmeter: step by step | Moto Zero"><meta property="og:description" content="Test a rectifier with an ohmmeter: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem."><meta property="og:url" content="https://motobike-five.vercel.app/repair/repairs/rectifier-test/">
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/styles.css?v=20261102c">
+  <link rel="stylesheet" href="../../../assets/repair2.css?v=2">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Repair", "item": "https://motobike-five.vercel.app/repair/"}, {"@type": "ListItem", "position": 2, "name": "Repairs", "item": "https://motobike-five.vercel.app/repair/repairs/"}, {"@type": "ListItem", "position": 3, "name": "Test a rectifier with an ohmmeter", "item": "https://motobike-five.vercel.app/repair/repairs/rectifier-test/"}]}</script>
+</head>
+<body>
+<div class="ute-page rp2">
+  <header class="ute-top">
+    <a class="ute-brand" href="../../../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../../../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+  <main class="r-main">
+    <p class="r-crumb"><a href="../../../repair/">Repair</a> / <a href="../../../repair/repairs/">Repairs</a> / Test a rectifier with an ohmmeter</p>
+    <header class="r-head">
+      <span class="ute-label">Repair</span>
+      <h1>Test a rectifier with an ohmmeter</h1>
+      <p class="r-meta"><i class="rl is-home">Home workshop</i><span>Basic tools and some experience</span><span>Time: 20 min (estimate)</span></p>
+    </header>
+    <div class="r-grid">
+      <article class="r-body is-repair" data-steps="rectifier-test"><p>A charging coil makes alternating current (AC), which swings positive and negative. A battery can charge only on one direction. The rectifier holds diodes, which pass current one way only, so the output becomes direct current (DC). Older small bikes have a half-wave rectifier. Most modern bikes have a full-wave rectifier with four diodes, often in the same case as the regulator. This page shows the quick ohmmeter test for a rectifier that is out of the bike.</p>
+<h2>Safety</h2>
+<ul>
+<li>Switch the ignition off and disconnect the battery before you unplug the rectifier.</li>
+<li>Do not turn the central bolt that holds the diodes together. It can short them out.</li>
+<li>The rectifier gets hot in use. Let it cool before you handle it.</li>
+</ul>
+<h2>You need</h2>
+<ul>
+<li>A multimeter set to ohms.</li>
+<li>The wiring diagram for your bike, to know which wire is which.</li>
+<li>If the rectifier and regulator are one unit, check the regulator too. See <a href="../../../repair/repairs/regulator-test/">Test the regulator rectifier</a>.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Unplug the rectifier from the harness. Remove it from the bike if the case or the mounting stud is hard to reach.</li>
+<li>Put one meter lead on one output wire. Put the other lead on the metal mounting stud or case. Note the reading.</li>
+<li>Swap the leads and note the reading again.</li>
+<li>A good diode gives a very different reading in the two directions. One direction reads low, the other reads high or OL.</li>
+<li>Repeat for every wire on the rectifier.</li>
+<li>If both directions read about the same, the diode leaks and is no good.</li>
+<li>If both directions read OL, or both read zero, the diode is open or shorted and is no good.</li>
+<li>If you have no ohmmeter, a test light with a small battery in line works in the same way. The light should glow in one direction and not in the other.</li>
+</ol>
+<h2>How to tell</h2>
+<div class="rtab"><table>
+<thead>
+<tr>
+<th>Reading in the two directions</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low one way, high or OL the other</td>
+<td>Diode works</td>
+<td>Test the next wire</td>
+</tr>
+<tr>
+<td>Same both ways</td>
+<td>Diode leaks</td>
+<td>Replace the rectifier</td>
+</tr>
+<tr>
+<td>OL both ways</td>
+<td>Diode open</td>
+<td>Replace the rectifier</td>
+</tr>
+<tr>
+<td>Zero both ways</td>
+<td>Diode shorted</td>
+<td>Replace the rectifier</td>
+</tr>
+</tbody>
+</table></div>
+<p>The exact numbers matter less than the big difference between the two directions. Use your bike's manual for any specified values.</p>
+<h2>Check your work</h2>
+<ul>
+<li>Every wire shows a clear difference when you swap the leads.</li>
+<li>After refitting, the battery voltage rises when the engine runs. See <a href="../../../repair/repairs/charging-system-test/">Test the charging system</a>.</li>
+</ul>
+<h2>If it did not fix the problem</h2>
+<ul>
+<li>A main fuse that keeps blowing can mean a failed diode letting battery current flow back to earth. See <a href="../../../repair/problems/fuse-keeps-blowing/">Fuse keeps blowing</a>.</li>
+<li>Check the charging coils with <a href="../../../repair/repairs/stator-test/">Test the stator (generator coils)</a>.</li>
+<li>If the battery is overcharged and bulbs blow, see <a href="../../../repair/problems/overcharging/">Battery overcharges and bulbs blow</a>.</li>
+<li>Take a unit that tests good to a workshop if the charging fault remains.</li>
+</ul></article>
+      <aside class="r-side">
+        <section><h2>Tools</h2><ul class="r-plain"><li>multimeter (ohmmeter)</li><li>spanner for the mounting bolt</li><li>wiring diagram or manual</li></ul></section>
+        
+        <section><h2>Parts for this job</h2><div class="rpcs"><div class="rpc"><a class="rpc-main" href="../../../repair/parts/regulator/"><span class="rpc-img"><img src="../../../assets/parts-svg/regulator.svg" alt="" loading="lazy"></span><b>Regulator rectifier</b></a><a class="rpc-shop" href="../../../parts/part/regulator-rectifier/">Find this part</a></div></div></section>
+      </aside>
+    </div>
+    <section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols"><li><a href="../../../repair/problems/not-charging/"><b>Battery is not charging while riding</b><i class="ru is-care">Ride with care</i></a></li><li><a href="../../../repair/problems/overcharging/"><b>Battery overcharges and bulbs blow</b><i class="ru is-stop">Do not ride</i></a></li><li><a href="../../../repair/problems/fuse-keeps-blowing/"><b>Fuse keeps blowing</b><i class="ru is-stop">Do not ride</i></a></li></ul></section>
+    <section class="r-sec"><details class="rsrc"><summary>Sources</summary><ul><li><a href="https://www.dansmc.com/electricaltesting.htm" target="_blank" rel="noopener">Dan&#x27;s Motorcycle Repair Course</a></li></ul></details><p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>
+  </main>
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../../../assets/site.js"></script>
+<script type="module" src="../../../assets/repair2.js?v=2"></script>
+</body>
+</html>

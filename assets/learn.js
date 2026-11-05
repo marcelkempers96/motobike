@@ -87,6 +87,18 @@ function glossaryHTML(mod) {
   </article>`;
 }
 
+// consecutive photo blocks render side by side
+function photoRuns(blocks) {
+  const out = [];
+  for (const b of blocks) {
+    const last = out[out.length - 1];
+    if (b.type === 'photo' && last && (last.type === 'photo' || last.type === 'photos')) {
+      if (last.type === 'photo') out[out.length - 1] = { type: 'photos', items: [last, b] };
+      else last.items.push(b);
+    } else out.push(b);
+  }
+  return out;
+}
 function block(b, mod) {
   switch (b.type) {
     case 'p': return `<p>${b.html}</p>`;
@@ -233,7 +245,7 @@ function renderPage(p) {
           <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}.${ci + 1}</span><span class="ute-label">${mod.title} · chapter ${ci + 1} of ${mod.chapters.length}</span></div>
           <h2>${chap.title}</h2>
           ${chap.lead ? `<p class="lead">${chap.lead}</p>` : ''}
-          <div class="prose">${chap.blocks.map((b) => block(b, mod)).join('')}</div>
+          <div class="prose">${photoRuns(chap.blocks).map((b) => b.type === 'photos' ? `<div class="mz-photo-row">${b.items.map((x) => block(x, mod)).join('')}</div>` : block(b, mod)).join('')}</div>
           ${chap.lab ? `<div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="${ROOT}${chap.lab.startsWith('?') ? 'overview/' + chap.lab : chap.lab}">Try it in the Overview →</a></div>` : ''}
           <div class="mz-complete"><button type="button" class="ute-btn ${PG.isDone(chap.id) ? '' : 'is-primary'}" data-complete="${chap.id}">${PG.isDone(chap.id) ? '✓ Chapter completed' : 'Mark this chapter as complete'}</button><a href="${ROOT}progress/">My progress</a></div>
         </article>

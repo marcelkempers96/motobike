@@ -442,6 +442,18 @@ export default {
           "html": "The motorcycle two-stroke uses the <strong>underside of the piston and a sealed crankcase</strong> as a pump, and replaces poppet valves with <strong>ports</strong> that the piston uncovers and covers. The full cycle takes <strong>360°</strong>, so it fires every revolution."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/112_yamaha_yz_125_piston.jpg",
+          "caption": "Two-stroke piston with ring pegs",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/112_i_always_measure_old_piston_so.jpg",
+          "caption": "Two-stroke cylinder bore and ports",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "model",
           "file": "engine_2t",
           "caption": "A 125 cc two-stroke single: finned cylinder with power-valve housing, reed-valve intake and carburettor, clutch and ignition covers."
@@ -642,6 +654,12 @@ export default {
           "html": "Firing every revolution with no valve train, a two-stroke gives <strong>1.5 to 2 times</strong> the power of an equal-size four-stroke. The price: short-circuited fuel, burnt oil, unstable part-load combustion and hot pistons. Injecting fuel late, after the exhaust is nearly closed, means mostly <em>air</em> short-circuits. KTM introduced <strong>Transfer Port Injection (TPI)</strong> on its 250 and 300 EXC for 2018, and moved to Throttle Body Injection (TBI) from the 2023–2024 model years."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/109_two_stroke_exhaust_pipes.jpg",
+          "caption": "Two-stroke exhaust pipes",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
@@ -658,6 +676,36 @@ export default {
         {
           "type": "p",
           "html": "The cylinder head closes the cylinder, carries valves, ports, spark plug and (on overhead-cam engines) the camshafts, and passes heat to the fins or water jacket. It is cast aluminium-silicon alloy with harder inserted seats and guides. The K-Light head face is allowed only <strong>0.05 mm</strong> out of flat."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/111_b_24_valve_ct_90_valve.jpg",
+          "caption": "Two valves of different sizes side by side",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/111_cutting_valve_seat.jpg",
+          "caption": "Cutting a valve seat with a seat cutter",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/111_hose.jpg",
+          "caption": "Lapping a valve with a hose on the stem",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/131_ducati_250_over_head_cam_gear.jpg",
+          "caption": "Gear-driven overhead camshafts in a cylinder head",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/131_over_head_cam_gear_drive.jpg",
+          "caption": "Overhead camshaft drive from a sprocket to the valves",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "model",
@@ -848,6 +896,18 @@ export default {
           "text": "Piston and rings"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/112_small_bore_71mm_long_stroke_82mm.jpg",
+          "caption": "Piston with rings and pin bosses",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/122_motorcycle_counter_balancers.jpg",
+          "caption": "Counterbalancer weights moving opposite the piston",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "Pistons are aluminium-silicon alloy: <strong>cast</strong> for most road engines, <strong>forged</strong> (stronger when hot, lighter) for sports and racing. They are <strong>cam-ground</strong> (slightly oval) and <strong>tapered</strong> (smaller at the hotter crown) so they become round and parallel when hot. That is why you always measure at 90° to the pin, at a set height: <strong>11 mm above the skirt bottom</strong> on the K-Light."
         },
@@ -898,8 +958,20 @@ export default {
           "html": "Two-stroke pistons carry one or two rings, pinned so the ends cannot catch in a port. The <strong>gudgeon pin</strong> is a hollow hardened steel tube held by circlips. Four-stroke small ends run on the pin with splash oil; two-stroke small ends need a <strong>caged needle bearing</strong> because they get only oil mist."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/112_honda_piston.jpg",
+          "caption": "Four-stroke piston with ring grooves",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "h3",
           "text": "Connecting rods and crankshafts"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/112_three_piece.jpg",
+          "caption": "Three-piece oil ring",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "table",
@@ -991,6 +1063,12 @@ export default {
         {
           "type": "h3",
           "text": "Main bearings, crankcase and seals"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/128_hole_tunnel_drilled_machined_two_piece.jpg",
+          "caption": "Plain bearing bore in a two-piece crankcase half",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "p",
@@ -1238,6 +1316,12 @@ export default {
           "text": "Compression test"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/103_engine_compression_testing_2.jpg",
+          "caption": "Screw-in compression gauge with hose and adapters",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "steps",
           "items": [
             {
@@ -1290,6 +1374,12 @@ export default {
               "Significant even if each is in limits"
             ]
           ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/106_leak_down_testing.jpg",
+          "caption": "Leak-down tester kit with two gauges",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "check",
@@ -1401,6 +1491,12 @@ export default {
         {
           "type": "p",
           "html": "Remove head nuts in a cross pattern, lift the cylinder at TDC and <strong>stuff the crankcase mouth with rag</strong>. Never hammer the gudgeon pin (it bends the rod). Many modern bores are nickel-silicon carbide plated and cannot be rebored. Fit the piston arrow toward the exhaust, ring ends at their pins, and new clips fully seated: a clip that comes out destroys the cylinder. Run in for the specified period, often 1–2 hours."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/113_move_hone_back_forth_cylinder_produce.jpg",
+          "caption": "45 degree cross-hatch pattern in a honed bore",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "h3",

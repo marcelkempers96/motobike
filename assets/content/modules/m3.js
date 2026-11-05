@@ -592,8 +592,26 @@ export default {
           "text": "The ignition coil"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/021_low_tension_magneto.jpg",
+          "caption": "Low-tension magneto with a separate ignition coil",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/090_electronic_ignition.jpg",
+          "caption": "Source and trigger coils of an electronic ignition",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "The coil is a step-up transformer: a primary of a few hundred thick turns and a secondary of <strong>15 000&ndash;25 000</strong> fine turns on one iron core. Primary current stores energy in the magnetic field, E = &frac12; L I&sup2;. When the current is interrupted, the collapsing field kicks the primary to 200&ndash;400 V and the ~100:1 turns ratio multiplies that to <strong>20&ndash;40 kV</strong>. Voltage rises only until the gap breaks down, then the arc burns at 1&ndash;2 kV for 1&ndash;2 ms."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/021_find_out_what.jpg",
+          "caption": "Flywheel magneto with the flywheel fitted",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "figure",
@@ -678,6 +696,18 @@ export default {
         {
           "type": "p",
           "html": "CDI voltage rises in a few microseconds, ten times faster than an inductive system, so the spark fires before energy leaks across an oily insulator. That is why <strong>two-strokes favour CDI</strong>. The price is a short spark of 0.1&ndash;0.3 ms. On points, the spark happens when the points <em>open</em>; because gap and timing are linked, always gap first, time second."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/088_centrifugal_advance.jpg",
+          "caption": "Centrifugal advance weights and springs on the points cam",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/088_points_condenser_cdi_box.jpg",
+          "caption": "Points, condenser and CDI box side by side",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "plate",
@@ -827,6 +857,18 @@ export default {
         {
           "type": "p",
           "html": "A lead-acid cell gives a nominal 2.1 V, so a 12 V battery has six in series. <strong>Flooded</strong> batteries have cell caps and are topped up with distilled water; a hydrometer reading of 1.265 or more means fully charged. <strong>AGM (VRLA)</strong> batteries hold the acid in glass mat and are sealed: the K-Light 125 uses a <strong>12 V 6 Ah YTX7A-BS</strong> AGM and must not get a liquid-filled substitute. <strong>LiFePO4</strong> uses four 3.2 V cells (12.8 V), weighs about a third as much, but needs a BMS and must never be charged below about 0 &deg;C, above about 14.6 V or with a desulphation mode."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/095_indeed_armour_light.jpg",
+          "caption": "Battery state of charge compared with volts and gravity",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/095_batteries_junk_anyway_but_might_get.jpg",
+          "caption": "Small pencil hydrometer for a motorcycle battery",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "keys",
@@ -998,6 +1040,12 @@ export default {
           "html": "The starter draws tens to over a hundred amps, far too much for a handlebar switch. So the start button only carries a few hundred milliamps through a <strong>starter relay</strong> coil, and the relay switches the heavy cable. The K-Light circuit has a 20 A main fuse and two 10 A circuit fuses."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/099_electric_starters_2.jpg",
+          "caption": "Two starter motors",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "steps",
           "items": [
             {
@@ -1053,6 +1101,12 @@ export default {
           "html": "A filament bulb turns only about 2&ndash;3 % of its power into visible light. A <strong>halogen</strong> H4 (the K-Light headlight) has two filaments, typically 60 W main and 55 W dipped; never touch the quartz, because skin oil makes hot spots. An <strong>LED</strong> gives 80&ndash;150 lm/W and lasts tens of thousands of hours, but needs a heat sink and a constant-current driver, and it draws far less current than the bulb it replaces."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/086_ground_wire_ground_frame_2.jpg",
+          "caption": "Power source, hot wire, load and ground shown with a lamp",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "keys",
           "items": [
             {
@@ -1080,6 +1134,12 @@ export default {
           "type": "model",
           "file": "headlight_round",
           "caption": "A seven-inch round chrome headlight with glass lens and reflector."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/086_solid_wire.jpg",
+          "caption": "Stranded wire used for heavy 12 V cables",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "models",
@@ -1137,6 +1197,12 @@ export default {
         {
           "type": "h3",
           "text": "Fuses, connectors and earths"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/086_do_have_one_right.jpg",
+          "caption": "Connector block on a bike wiring harness",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "p",
@@ -1231,6 +1297,18 @@ export default {
         {
           "type": "h3",
           "text": "Using the multimeter"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/086_now_we_start_testing_2.jpg",
+          "caption": "Multimeter used to trace a fault",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/099_reverse.jpg",
+          "caption": "Rectifier checked with reversed meter leads",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "table",
@@ -1360,6 +1438,12 @@ export default {
         {
           "type": "p",
           "html": "With the ignition off, the K-Light allows a leakage current of <strong>no more than 1 mA</strong>. Disconnect battery negative, put the ammeter in series, start on 10 A, step down to mA once the ECU sleeps, then pull fuses one at a time until the drain drops. A stuck brake-light switch is a frequent cause. Time to flat is t = C / I: a 20 mA alarm takes a 6 Ah battery to 50 % in about six days."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/099_ignition_coils.jpg",
+          "caption": "Testing an ignition coil with a meter",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "h3",

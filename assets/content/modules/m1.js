@@ -1312,6 +1312,12 @@ export default {
           "html": "General PPE: <strong>safety glasses, nitrile gloves and safety footwear</strong>."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/017_micro_fiche_reader.jpg",
+          "caption": "Microfiche reader used to look up parts diagrams",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "callout",
           "tone": "safety",
           "title": "High-voltage electric motorcycles",
@@ -1387,6 +1393,18 @@ export default {
         {
           "type": "h3",
           "text": "Precision measuring tools"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/017_brand.jpg",
+          "caption": "Dial caliper for measuring shafts and widths",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/016_my_tool_board.jpg",
+          "caption": "Tools hung on a workshop board",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "table",
