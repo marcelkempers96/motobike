@@ -1,0 +1,930 @@
+{
+ "parts": {
+  "battery": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_charger.jpg",
+    "caption": "12 V battery with a charger and clips",
+    "page": "https://www.dansmc.com/batteries.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_fill_them_up.jpg",
+    "caption": "Filling a sealed battery with electrolyte",
+    "page": "https://www.dansmc.com/batteries.htm"
+   }
+  ],
+  "brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_large_c_clamp.jpg",
+    "caption": "Brake caliper held in a C-clamp to push the pistons back",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_there_more_than_one_piston.jpg",
+    "caption": "Caliper bores showing the pistons and O-ring seal",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "brake_caliper": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_there_more_than_one_piston.jpg",
+    "caption": "Twin-piston caliper with the piston and O-ring labelled",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_large_c_clamp.jpg",
+    "caption": "Pushing caliper pistons back with a C-clamp",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "brake_pads": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads.jpg",
+    "caption": "A pair of disc brake pads",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_pads_may_have_worn_different.jpg",
+    "caption": "Two pads from one caliper, worn by different amounts",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "brake_fluid": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_mix_dot_3_dot_4.jpg",
+    "caption": "Reservoir cap marked for DOT 3 or DOT 4 brake fluid",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "master_cylinder": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_cylinder_reservoir_made_out_plastic.jpg",
+    "caption": "Master cylinder with its plastic reservoir",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_plunger_shaft.jpg",
+    "caption": "Rear master cylinder with the plunger shaft labelled",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "drum_brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_inside.jpg",
+    "caption": "Front drum brake backing plate with shoes, spring and cable",
+    "page": "https://www.dansmc.com/front_wheels.htm"
+   }
+  ],
+  "cam_tensioner": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_pinch_bolt.jpg",
+    "caption": "Cam chain adjuster with pinch bolt and lock nut",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_pin_flush.jpg",
+    "caption": "Cam chain adjuster pin set flush with the end",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_adjustable.jpg",
+    "caption": "Manual cam chain tensioner removed from the engine",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   }
+  ],
+  "camshaft": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_kl650.jpg",
+    "caption": "Camshafts and cam bearing caps under the valve cover",
+    "page": "https://www.dansmc.com/valveclearence.htm"
+   }
+  ],
+  "chain": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_one_roller.jpg",
+    "caption": "Chain sections and master links, clip type shown",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_press.jpg",
+    "caption": "Chain press fitted over the chain links",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   }
+  ],
+  "front_sprocket": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted_clip_type.jpg",
+    "caption": "Front sprocket with a bolted retaining clip",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_e_clip.jpg",
+    "caption": "Front sprocket held by an E-clip",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   }
+  ],
+  "rear_sprocket": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket.jpg",
+    "caption": "Worn teeth on a rear sprocket",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   }
+  ],
+  "clutch": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_unit.jpg",
+    "caption": "Clutch pack lifted out of the engine",
+    "page": "https://www.dansmc.com/clutches.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch_springs.jpg",
+    "caption": "Clutch pressure plate with four springs",
+    "page": "https://www.dansmc.com/clutches.htm"
+   }
+  ],
+  "clutch_plates": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+    "caption": "Fibre and steel clutch plates",
+    "page": "https://www.dansmc.com/clutches.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_inner_outer_fingers.jpg",
+    "caption": "Clutch plate fingers on the inner and outer plates",
+    "page": "https://www.dansmc.com/clutches.htm"
+   }
+  ],
+  "cylinder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_cylinder_bore.jpg",
+    "caption": "Cylinder with a bore gauge inside",
+    "page": "https://www.dansmc.com/pistons.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_ring_worn.jpg",
+    "caption": "Cylinder bore showing wear",
+    "page": "https://www.dansmc.com/hone_cyl.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_intake_port.jpg",
+    "caption": "Two-stroke cylinder intake port with piston ring visible",
+    "page": "https://www.dansmc.com/pistons.htm"
+   }
+  ],
+  "piston": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_mark_arrow.jpg",
+    "caption": "Pistons with their position marks",
+    "page": "https://www.dansmc.com/pistons.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_wristpin_puller.jpg",
+    "caption": "Piston with a wrist pin puller",
+    "page": "https://www.dansmc.com/pistons.htm"
+   }
+  ],
+  "piston_rings": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_groove.jpg",
+    "caption": "Piston ring seated in its groove",
+    "page": "https://www.dansmc.com/pistons.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_expander.jpg",
+    "caption": "Ring expander fitting a piston ring",
+    "page": "https://www.dansmc.com/pistons.htm"
+   }
+  ],
+  "valves": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_valves.jpg",
+    "caption": "Engine valve with the 45 degree seat angle shown",
+    "page": "https://www.dansmc.com/valve.htm"
+   }
+  ],
+  "spark_plug": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/011/011_new_plug_ground_electrode_bent_out.jpg",
+    "caption": "Spark plugs with bent ground electrodes",
+    "page": "https://www.dansmc.com/troubleshooting3.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_light_chocolate_brown.jpg",
+    "caption": "Spark plug with a light brown healthy tip",
+    "page": "https://www.dansmc.com/sparkplugs1.htm"
+   }
+  ],
+  "ignition_coil": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_coil.jpg",
+    "caption": "Ignition coil with its plug lead",
+    "page": "https://www.dansmc.com/cdiignition.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_plug_caps.jpg",
+    "caption": "Spark plug cap",
+    "page": "https://www.dansmc.com/cdiignition.htm"
+   }
+  ],
+  "cdi": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_black_box.jpg",
+    "caption": "CDI box with its wiring leads",
+    "page": "https://www.dansmc.com/cdiignition.htm"
+   }
+  ],
+  "stator": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_self_contained.jpg",
+    "caption": "Flywheel and stator with the coil attached",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_stator_plate.jpg",
+    "caption": "Stator plate with coils and points",
+    "page": "http://www.dansmc.com/magneto1.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_flywheel_magnets.jpg",
+    "caption": "Flywheel magnets inside the rotor",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   }
+  ],
+  "pickup": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_trigger_pick_up_pulse_coil.jpg",
+    "caption": "Trigger or pick-up coil on the stator plate",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   }
+  ],
+  "regulator": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wires.jpg",
+    "caption": "Regulator rectifier on an ohmmeter test",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   }
+  ],
+  "starter": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_four_brushes.jpg",
+    "caption": "Starter motor end plate with four brushes",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_field_coils.jpg",
+    "caption": "Starter motor yoke with field coils",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   }
+  ],
+  "starter_clutch": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_gear.jpg",
+    "caption": "Starter gear with its overrunning clutch spring",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   }
+  ],
+  "kickstarter": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kicksarter_return_spring.jpg",
+    "caption": "Kick starter return spring in the opened crankcase",
+    "page": "https://www.dansmc.com/kickstarters.htm"
+   }
+  ],
+  "gearbox": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_drum.jpg",
+    "caption": "Shifter drum and gear set in hand",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_dogs.jpg",
+    "caption": "Two gears with engagement dogs",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   }
+  ],
+  "shift_mechanism": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_shaft_linkage.jpg",
+    "caption": "Shifter shaft linkage and drum",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_drum.jpg",
+    "caption": "Shifter drum with forks and gears",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   }
+  ],
+  "oil_seals": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_wear.jpg",
+    "caption": "Close view of an oil seal lip",
+    "page": "https://www.dansmc.com/seals.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out.jpg",
+    "caption": "Levering an oil seal out with a screwdriver",
+    "page": "https://www.dansmc.com/seals.htm"
+   }
+  ],
+  "forks": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_gators_fork_boots.jpg",
+    "caption": "Rubber fork gaiters",
+    "page": "https://www.dansmc.com/forks.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_pinch_bolts.jpg",
+    "caption": "Front fork with pinch bolts and tubes labelled",
+    "page": "https://www.dansmc.com/forks.htm"
+   }
+  ],
+  "fork_seals": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_circlip.jpg",
+    "caption": "Seal retaining circlip at the top of a fork leg",
+    "page": "https://www.dansmc.com/forks.htm"
+   }
+  ],
+  "steering_bearings": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_bolt_steering_stem.jpg",
+    "caption": "Steering stem top bolt and yoke",
+    "page": "https://www.dansmc.com/steering_bearings.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_adjusting_nut_second_jam_nut.jpg",
+    "caption": "Steering stem adjusting nut under the top yoke",
+    "page": "https://www.dansmc.com/steering_bearings.htm"
+   }
+  ],
+  "wheel_bearing": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_bearing_spacer.jpg",
+    "caption": "Wheel hub with the bearing spacer labelled",
+    "page": "https://www.dansmc.com/wheelbearing.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_lever_seals.jpg",
+    "caption": "Levering a hub seal out with a screwdriver",
+    "page": "https://www.dansmc.com/wheelbearing.htm"
+   }
+  ],
+  "spokes": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spokes_nipples.jpg",
+    "caption": "A spoke and its nipple",
+    "page": "https://www.dansmc.com/spokewheels.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_no_bend_head_some_bend_lot.jpg",
+    "caption": "Spoke heads with different bends",
+    "page": "https://www.dansmc.com/spokewheels.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_some_do.jpg",
+    "caption": "Spoked wheel with spokes at different angles",
+    "page": "https://www.dansmc.com/spokewheels.htm"
+   }
+  ],
+  "front_wheel": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_inside.jpg",
+    "caption": "Front wheel hub with the speedometer drive",
+    "page": "https://www.dansmc.com/front_wheels.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_outside.jpg",
+    "caption": "Speedometer drive on the outside of the front hub",
+    "page": "https://www.dansmc.com/front_wheels.htm"
+   }
+  ],
+  "rear_wheel": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel.jpg",
+    "caption": "Rear wheel fitted with drum brake and shock",
+    "page": "https://www.dansmc.com/rear_wheels.htm"
+   }
+  ],
+  "rear_tyre": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_arrow.jpg",
+    "caption": "Drive direction arrow on a tyre sidewall",
+    "page": "https://www.dansmc.com/tires1.htm"
+   }
+  ],
+  "tyre_valve": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_different_styles.jpg",
+    "caption": "Rubber valves and valve cores",
+    "page": "https://www.dansmc.com/tires1.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_valve_stem_tool.jpg",
+    "caption": "Valve core tools",
+    "page": "https://www.dansmc.com/tires1.htm"
+   }
+  ],
+  "exhaust": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_straight_pipe.jpg",
+    "caption": "Straight exhaust pipes",
+    "page": "https://www.dansmc.com/Exhaust_4.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_mufflers_inter_connected.jpg",
+    "caption": "Interconnected exhaust header pipes",
+    "page": "https://www.dansmc.com/Exhaust_4.htm"
+   }
+  ],
+  "radiator": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_radiator_cap_left_side.jpg",
+    "caption": "Radiator cap location on a water-cooled bike",
+    "page": "https://www.dansmc.com/watercooling.htm"
+   }
+  ],
+  "coolant": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir.jpg",
+    "caption": "Coolant reservoir fitted to the frame",
+    "page": "https://www.dansmc.com/watercooling.htm"
+   }
+  ]
+ },
+ "repairs": {
+  "valve-clearance": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_feeler_gauge.jpg",
+    "caption": "Feeler gauge blades",
+    "page": "https://www.dansmc.com/valveclearence.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_go_no_go.jpg",
+    "caption": "Go and no-go feeler gauge for valve clearance",
+    "page": "https://www.dansmc.com/valveclearence.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_valve_adjusting_tool.jpg",
+    "caption": "Adjusting a valve with a ring spanner and screwdriver",
+    "page": "https://www.dansmc.com/valveclearence.htm"
+   }
+  ],
+  "compression-test": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_pressure.jpg",
+    "caption": "Compression gauge with its pressure release",
+    "page": "https://www.dansmc.com/compression_test.htm"
+   }
+  ],
+  "spark-plug-reading": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_light_chocolate_brown.jpg",
+    "caption": "Plug tip in light chocolate brown, a healthy burn",
+    "page": "https://www.dansmc.com/sparkplugs1.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_black_shiny_oily.jpg",
+    "caption": "Plug fouled black and oily",
+    "page": "https://www.dansmc.com/sparkplugs1.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip showing a hot or lean burn",
+    "page": "https://www.dansmc.com/sparkplugs1.htm"
+   }
+  ],
+  "spark-plug-service": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/011/011_new_plug_ground_electrode_bent_out.jpg",
+    "caption": "New plugs with the ground electrode bent to set the gap",
+    "page": "https://www.dansmc.com/troubleshooting3.htm"
+   }
+  ],
+  "spark-test": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/011/011_spark_plug_spark_plug_cap_grounded.jpg",
+    "caption": "Plug in its cap grounded on the head to check for spark",
+    "page": "https://www.dansmc.com/troubleshooting3.htm"
+   }
+  ],
+  "ignition-coil-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_coil.jpg",
+    "caption": "Ignition coil to be tested",
+    "page": "https://www.dansmc.com/cdiignition.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_secondary.jpg",
+    "caption": "Measuring coil secondary resistance with an ohmmeter",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   }
+  ],
+  "pickup-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_trigger_pick_up_pulse_coil.jpg",
+    "caption": "Trigger or pick-up coil on the stator plate",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   }
+  ],
+  "regulator-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wires.jpg",
+    "caption": "Testing a rectifier with an ohmmeter",
+    "page": "http://www.dansmc.com/electricaltesting.htm"
+   }
+  ],
+  "ignition-timing-check": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_dial_indicator.jpg",
+    "caption": "Dial indicator in the plug hole to find piston position",
+    "page": "http://www.dansmc.com/magneto1.htm"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_time_engine.jpg",
+    "caption": "Timing the engine with a buzz box",
+    "page": "http://www.dansmc.com/magneto1.htm"
+   }
+  ],
+  "battery-test-charge": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_charger.jpg",
+    "caption": "Battery connected to a charger",
+    "page": "https://www.dansmc.com/batteries.htm"
+   }
+  ],
+  "starter-motor-service": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_four_brushes.jpg",
+    "caption": "Checking the starter brushes",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_field_coils.jpg",
+    "caption": "Inspecting the field coils in the yoke",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_commutator_segments.jpg",
+    "caption": "Testing the commutator with ohmmeter leads",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_cable_terminal_bolt.jpg",
+    "caption": "Measuring resistance at the starter terminal bolt",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   }
+  ],
+  "starter-clutch-check": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_gear.jpg",
+    "caption": "Starter gear and overrunning clutch",
+    "page": "https://www.dansmc.com/electric_starters.htm"
+   }
+  ],
+  "clutch-plate-service": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch_springs.jpg",
+    "caption": "Clutch springs on the pressure plate",
+    "page": "https://www.dansmc.com/clutches.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_circlip.jpg",
+    "caption": "Removing the clutch circlip with pliers",
+    "page": "https://www.dansmc.com/clutches.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_unit.jpg",
+    "caption": "Lifting the clutch pack out",
+    "page": "https://www.dansmc.com/clutches.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+    "caption": "Fibre and steel plates for inspection",
+    "page": "https://www.dansmc.com/clutches.htm"
+   }
+  ],
+  "cam-chain-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_pinch_bolt.jpg",
+    "caption": "Cam chain adjuster with pinch bolt and lock nut",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_pin_flush.jpg",
+    "caption": "Adjuster pin set flush with the end",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_adjustable.jpg",
+    "caption": "Adjustable tensioner removed for checking",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_non_adjustable_tensioners.jpg",
+    "caption": "Non-adjustable tensioner plunger and spring",
+    "page": "https://www.dansmc.com/camchain_adjust.htm"
+   }
+  ],
+  "engine-internal-assessment": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_expanding_ball_gauges.jpg",
+    "caption": "Ball gauges for measuring bores and bearing wear",
+    "page": "https://www.dansmc.com/bush_plain_bearings.htm"
+   }
+  ],
+  "top-end-assessment": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_ring_worn.jpg",
+    "caption": "Checking the cylinder bore for wear",
+    "page": "https://www.dansmc.com/hone_cyl.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_cylinder_bore.jpg",
+    "caption": "Bore gauge measuring the cylinder",
+    "page": "https://www.dansmc.com/pistons.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_ridge_reamer.jpg",
+    "caption": "Ridge reamer for the top of the bore",
+    "page": "https://www.dansmc.com/hone_cyl.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_valve_spring_compressor.jpg",
+    "caption": "Valve spring compressors for removing valves",
+    "page": "https://www.dansmc.com/valve.htm"
+   }
+  ],
+  "gearbox-assessment": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_drum.jpg",
+    "caption": "Inspecting the shifter drum",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_dogs.jpg",
+    "caption": "Gear dogs checked for wear",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_broken_teeth.jpg",
+    "caption": "Gear with broken teeth",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   }
+  ],
+  "gearshift-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_shaft_linkage.jpg",
+    "caption": "Shifter shaft linkage and drum",
+    "page": "https://www.dansmc.com/gearbox.htm"
+   }
+  ],
+  "kickstart-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kicksarter_return_spring.jpg",
+    "caption": "Kick starter and return spring in the case",
+    "page": "https://www.dansmc.com/kickstarters.htm"
+   }
+  ],
+  "brake-pad-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_pads_may_have_worn_different.jpg",
+    "caption": "Pads worn by different amounts",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "brake-pad-replace": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_pads_may_have_worn_different.jpg",
+    "caption": "Checking pad wear before replacing",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_large_c_clamp.jpg",
+    "caption": "Pushing caliper pistons back with a C-clamp",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads.jpg",
+    "caption": "New pads ready to fit",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "caliper-clean": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_there_more_than_one_piston.jpg",
+    "caption": "Cleaning the bores and checking the O-ring grooves",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_piston.jpg",
+    "caption": "Caliper piston removed for cleaning",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "caliper-rebuild": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_there_more_than_one_piston.jpg",
+    "caption": "Caliper bores with the O-ring seal labelled",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_piston.jpg",
+    "caption": "Caliper piston to be checked for corrosion",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "master-cylinder-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_cylinder_reservoir_made_out_plastic.jpg",
+    "caption": "Master cylinder and reservoir",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_plunger_shaft.jpg",
+    "caption": "Plunger shaft and spring inside the master cylinder",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_little_rubber_dust_boot.jpg",
+    "caption": "Rubber dust boot on the master cylinder",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "brake-fluid-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_mix_dot_3_dot_4.jpg",
+    "caption": "Reservoir cap marked for DOT 3 or DOT 4 fluid",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "brake-bleed": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_mix_dot_3_dot_4.jpg",
+    "caption": "Using the fluid grade marked on the reservoir cap",
+    "page": "https://www.dansmc.com/hydraulics.htm"
+   }
+  ],
+  "drum-brake-service": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_inside.jpg",
+    "caption": "Drum brake backing plate with shoes and springs",
+    "page": "https://www.dansmc.com/front_wheels.htm"
+   }
+  ],
+  "wheel-remove-front": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_outside.jpg",
+    "caption": "Speedometer drive at the front hub",
+    "page": "https://www.dansmc.com/front_wheels.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_inside.jpg",
+    "caption": "Drum brake side of the front hub",
+    "page": "https://www.dansmc.com/front_wheels.htm"
+   }
+  ],
+  "wheel-remove-rear": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel.jpg",
+    "caption": "Rear wheel in place before removal",
+    "page": "https://www.dansmc.com/rear_wheels.htm"
+   }
+  ],
+  "front-end-align": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_aline_front_wheel.jpg",
+    "caption": "Checking the front wheel is aligned with the bike",
+    "page": "https://www.dansmc.com/aline_wheel.htm"
+   }
+  ],
+  "fork-inspect": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_gators_fork_boots.jpg",
+    "caption": "Fork gaiters protecting the fork tubes",
+    "page": "https://www.dansmc.com/forks.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_pinch_bolts.jpg",
+    "caption": "Fork tubes and pinch bolts",
+    "page": "https://www.dansmc.com/forks.htm"
+   }
+  ],
+  "fork-oil-seals": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_special_tool.jpg",
+    "caption": "Circlip pliers for the fork seal circlip",
+    "page": "https://www.dansmc.com/forks.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_circlip.jpg",
+    "caption": "Prising out the fork seal circlip",
+    "page": "https://www.dansmc.com/forks.htm"
+   }
+  ],
+  "steering-bearing-adjust": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_bolt_steering_stem.jpg",
+    "caption": "Loosening the steering stem top bolt",
+    "page": "https://www.dansmc.com/steering_bearings.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_adjusting_nut_second_jam_nut.jpg",
+    "caption": "Adjusting nut under the top yoke",
+    "page": "https://www.dansmc.com/steering_bearings.htm"
+   }
+  ],
+  "wheel-bearing-replace": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_lever_seals.jpg",
+    "caption": "Levering the hub seal out",
+    "page": "https://www.dansmc.com/wheelbearing.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_bearing_spacer.jpg",
+    "caption": "Hub with the bearing spacer in the centre",
+    "page": "https://www.dansmc.com/wheelbearing.htm"
+   }
+  ],
+  "spoke-tension": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spokes_nipples.jpg",
+    "caption": "A spoke and its nipple",
+    "page": "https://www.dansmc.com/spokewheels.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_adusting_spokes.jpg",
+    "caption": "Adjusting the spokes with a spoke key",
+    "page": "https://www.dansmc.com/spokewheels.htm"
+   }
+  ],
+  "tyre-replace": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_valve_stem_tool.jpg",
+    "caption": "Valve core tool for deflating the tube",
+    "page": "https://www.dansmc.com/tires1.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_cut_outs_fit_onto_spokes.jpg",
+    "caption": "Rim protector while levering the tyre bead",
+    "page": "https://www.dansmc.com/tires1.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_arrow.jpg",
+    "caption": "Checking the drive direction arrow",
+    "page": "https://www.dansmc.com/tires1.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_marker.jpg",
+    "caption": "Matching the tyre balance mark to the valve",
+    "page": "https://www.dansmc.com/tires1.htm"
+   }
+  ],
+  "valve-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_different_styles.jpg",
+    "caption": "Different styles of tyre valve",
+    "page": "https://www.dansmc.com/tires1.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_valve_stem_tool.jpg",
+    "caption": "Valve core tools",
+    "page": "https://www.dansmc.com/tires1.htm"
+   }
+  ],
+  "chain-sprocket-replace": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_press.jpg",
+    "caption": "Chain press for pressing links",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_e_clip.jpg",
+    "caption": "E-clip on the front sprocket",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_lock_washer.jpg",
+    "caption": "Lock washer removed from the front sprocket",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted_clip_type.jpg",
+    "caption": "Sprocket with bolted retaining clip",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   }
+  ],
+  "sprocket-inspect": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket.jpg",
+    "caption": "Worn sprocket teeth",
+    "page": "https://www.dansmc.com/rearchain.htm"
+   }
+  ],
+  "sprocket-shaft-seal": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out.jpg",
+    "caption": "Levering the output shaft seal out",
+    "page": "https://www.dansmc.com/seals.htm"
+   }
+  ]
+ }
+}

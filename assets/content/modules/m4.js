@@ -59,6 +59,12 @@ export default {
           "caption": "Wet multiplate clutch, exploded: basket, friction and steel plates, hub, pressure plate, springs and release mechanism."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/120_centrifugal_clutch_shoes.jpg",
+          "caption": "Centrifugal clutch shoes, as used on step-throughs and scooters: they fly out and grip the drum as engine speed rises.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "engine",
           "shot": "03-clutch-cutaway-pulled",
           "view": "clutch",
@@ -299,6 +305,12 @@ export default {
           "type": "plate",
           "id": "F14",
           "caption": "Constant-mesh five-speed gearbox: fixed, free and sliding gears, dogs, forks and shift drum."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/115_broken_teeth.jpg",
+          "caption": "Broken gear teeth: what shock loads and missed shifts do to a constant-mesh gearbox.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "engine",
@@ -1103,6 +1115,12 @@ export default {
           "type": "plate",
           "id": "W01",
           "caption": "Wheel types: wire-spoked, motocross with rim lock, and cast alloy."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/147_spoke_tightening_pattern.jpg",
+          "caption": "Spoke tightening pattern: work round the wheel in small, even steps so the rim stays true.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "plate",

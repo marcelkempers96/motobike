@@ -478,6 +478,12 @@ export default {
           "caption": "The two-stroke cycle: upstroke and downstroke, above and below the piston."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/109_expansion_chambers.jpg",
+          "caption": "Two-stroke expansion chambers. The returning pressure wave pushes escaping charge back into the cylinder, but only over a narrow rpm band.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "Port events are <strong>symmetrical about BDC</strong>, because the piston opens and closes each port at the same height. So an exhaust port opening 97° before BDC has a duration of 2 × 97 = 194°."
         },
@@ -662,6 +668,12 @@ export default {
           "type": "plate",
           "id": "F09",
           "caption": "Single-cylinder four-stroke in section: cam chain, camshaft, rockers, valves and springs, plug, piston, rod and crank."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/110_feeler_gauge.jpg",
+          "caption": "Checking valve clearance with a feeler gauge, piston at top dead centre on the compression stroke.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "h3",
@@ -933,6 +945,12 @@ export default {
           "type": "photo",
           "src": "render-crank.jpg",
           "caption": "Pressed-up single-cylinder crank assembly: two full-circle flywheel webs with balance holes drilled opposite the crankpin, a roller-bearing big end on a forged I-section connecting rod, bronze-bushed small end, and a slipper-skirt piston with two compression rings and a three-piece oil ring. The splined left shaft carries the primary drive gear; the right shaft carries the cam-chain sprocket, the keyed taper for the alternator rotor and the rotor nut thread."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/122_gear_drive_counterbalancer.jpg",
+          "caption": "Gear-driven counterbalancer. A single cylinder can only be part-balanced by the crank webs; a weight turning the opposite way cancels much of the rest of the shaking force.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "engine",

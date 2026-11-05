@@ -1158,3 +1158,4 @@ a.mz-anim-btn { text-decoration: none; display: inline-flex; align-items: center
   .mz-panel-head { position: sticky; top: 56px; z-index: 30; background: #FFFFFF; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
   .mz-panel-head .ute-cview-close { width: 44px; height: 44px; font-size: 22px; font-weight: 700; border: 2px solid var(--ink); background: #FFFFFF; color: var(--ink); display: grid; place-items: center; }
 }
+.mz-credit { display: block; font-size: 12px; color: var(--mute); margin-top: 4px; }

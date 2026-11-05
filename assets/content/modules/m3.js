@@ -685,6 +685,18 @@ export default {
           "caption": "Ignition circuits: AC-CDI with exciter and pulser coils, and DC-TCI or ECU-controlled inductive ignition."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/090_trigger_source_coils.jpg",
+          "caption": "Source and trigger coils under a flywheel magneto: the source coil charges the CDI, the trigger coil tells it when to fire.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/091_centrifugal_advance.jpg",
+          "caption": "Centrifugal advance unit: weights fly out as rpm rises and turn the trigger earlier, so the spark fires further before top dead centre. Most engines reach full advance by about 3,000 rpm.",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "wiring",
           "tab": "ignition",
           "caption": "Crank the engine and watch the primary current build in the coil and collapse at the trigger point, producing the secondary spark; compare the CDI and TCI/ECU variants and find where the kill switch interrupts each."
