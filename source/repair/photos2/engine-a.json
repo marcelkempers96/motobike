@@ -1,0 +1,467 @@
+{
+ "parts": {
+  "valves": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_b_24_valve_ct_90_valve.jpg",
+    "caption": "Two valves of different sizes side by side"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_if_thin_valve_will_overheat_fail.jpg",
+    "caption": "Valve seat in the cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_checking_guide.jpg",
+    "caption": "Checking valve guide play with a dial gauge"
+   }
+  ],
+  "valve_springs": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_height.jpg",
+    "caption": "Measuring valve spring free height with a caliper"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_thin_metal_washer.jpg",
+    "caption": "Spring seat washer under a valve spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_push_down_guide_then_guide_right.jpg",
+    "caption": "Valve spring compressor on a cylinder head"
+   }
+  ],
+  "cylinder_head": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_real_smart_work_fellows.jpg",
+    "caption": "Valve bucket bores in an aluminium cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_s_bit_pricy_but_after_using.jpg",
+    "caption": "Valve and seat seen through a cylinder head port"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/105/105_two_plug_hole_head.jpg",
+    "caption": "Two-stroke head with fins and two plug holes"
+   }
+  ],
+  "camshaft": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_type_adjusters_valve_shims_valve.jpg",
+    "caption": "Cam lobe above a shim and bucket"
+   }
+  ],
+  "rocker_arms": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_eccentric_shaft_adjusters_eccentric_shaft.jpg",
+    "caption": "Rocker arm on an eccentric adjuster shaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_eccentric_shaft_adjusters.jpg",
+    "caption": "Eccentric adjuster shaft with stepped surfaces"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_tr200_valve_adjustment_1_tr200_valve.jpg",
+    "caption": "Rocker arms with adjuster lock bolts on a cylinder head"
+   }
+  ],
+  "pushrods": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_push_rods.jpg",
+    "caption": "Pushrods in a pushrod engine head"
+   }
+  ],
+  "piston": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_honda_piston.jpg",
+    "caption": "Four-stroke piston with ring grooves and pin bosses"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_yamaha_yz_125_piston.jpg",
+    "caption": "Two-stroke piston with ring pegs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_check_these_pistons_out.jpg",
+    "caption": "Piston pin bosses and circlip grooves"
+   }
+  ],
+  "piston_rings": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/114/114_chinese_motorcycle_rings.jpg",
+    "caption": "A set of piston rings"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_dykes.jpg",
+    "caption": "Dykes type piston ring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_three_piece.jpg",
+    "caption": "Three-piece oil ring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_tough.jpg",
+    "caption": "Piston ring end with a size mark"
+   }
+  ],
+  "cylinder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_i_always_measure_old_piston_so.jpg",
+    "caption": "Two-stroke cylinder bore and ports"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_i_always_measure_old_piston_so_2.jpg",
+    "caption": "Cylinder bore with a clean finish"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_if_over_specification_will_need_bore.jpg",
+    "caption": "Cylinder bore with wear to check"
+   }
+  ],
+  "exhaust": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/109/109_two_stroke_exhaust_pipes.jpg",
+    "caption": "Two-stroke exhaust pipes"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_if_set_up_one_rpm_effect.jpg",
+    "caption": "Rust and carbon inside an exhaust pipe"
+   }
+  ],
+  "gearbox": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gearboxes_motorcycle_engines_do_not_produce.jpg",
+    "caption": "Gearbox shafts with the gears in order"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_1st_2nd_3rd_etc.jpg",
+    "caption": "Power path through a five-speed gearbox in each gear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_horizontally_split.jpg",
+    "caption": "Horizontally split crankcase with the gearbox exposed"
+   }
+  ],
+  "shift_mechanism": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_turned_rotated_through_different_styles.jpg",
+    "caption": "Shift drum with a fork and drum gear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_groove.jpg",
+    "caption": "Shift drum grooves and a shift fork"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_pawl.jpg",
+    "caption": "Shift pawl and return spring in the engine case"
+   }
+  ],
+  "kickstarter": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/104/104_kickstarter_cam_compression_release_2.jpg",
+    "caption": "Kickstarter cam driving a compression release"
+   }
+  ]
+ },
+ "repairs": {
+  "compression-release-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_automatic_compression_release_1.jpg",
+    "caption": "Automatic compression release on a camshaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/104/104_honda_xl500_honda_xl250.jpg",
+    "caption": "Compression release lever on the cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/104/104_spring_loaded_cam_lever_main_exhaust.jpg",
+    "caption": "Spring-loaded lever lifting the exhaust valve rocker"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/104/104_kickstarter_cam_compression_release_2.jpg",
+    "caption": "Kickstarter cam driving a compression release"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/105/105_compression_release_adjustment.jpg",
+    "caption": "Compression release valve fitted in a two-stroke head"
+   }
+  ],
+  "compression-test": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_compression_testing.jpg",
+    "caption": "Compression gauge fitted in the plug hole"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_drill_simple_2.jpg",
+    "caption": "Reading a compression gauge on the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_engine_compression_testing_2.jpg",
+    "caption": "Screw-in compression gauge with hose and adapters"
+   }
+  ],
+  "compression-adapter-make": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_if_can_t_buy_right_adapter.jpg",
+    "caption": "Old spark plug held for making an adapter"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_might_think_they_would_read_different.jpg",
+    "caption": "A set of brass compression tester adapters"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_might_think_they_would_read_different_2.jpg",
+    "caption": "Thread of a compression tester adapter"
+   }
+  ],
+  "leak-down-test": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_leak_down_testing.jpg",
+    "caption": "Leak-down tester kit with two gauges"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_anyway_get_idea.jpg",
+    "caption": "Leak-down tester connected to a cylinder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_might_need_extension_these_hard_reach.jpg",
+    "caption": "Flexible extension hose for a hard-to-reach plug hole"
+   }
+  ],
+  "valve-clearance": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_will_work_all_piston_engines.jpg",
+    "caption": "Tappet, locknut and valve tip in a cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_wrench_screw_driver.jpg",
+    "caption": "Wrench and screwdriver on a tappet adjuster"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_adjust_valves.jpg",
+    "caption": "Special tool adjusting a valve"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_different_tools.jpg",
+    "caption": "Different tappet adjusting tools"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_special_tool.jpg",
+    "caption": "Special spanners and screwdrivers for valve adjustment"
+   }
+  ],
+  "valve-shim-adjust": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_consider_yourself_warned.jpg",
+    "caption": "Shim tool and shim under a cam bucket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_under_cup_1.jpg",
+    "caption": "Shim under a bucket lifted by hand"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_type_adjusters.jpg",
+    "caption": "Valve shims of different thicknesses"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_tight_one_loose_one_loose_one.jpg",
+    "caption": "Tool pressing a bucket down beside the cam"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_tool_2.jpg",
+    "caption": "Shim tool held against a valve cover"
+   }
+  ],
+  "piston-ring-fit": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_compressors.jpg",
+    "caption": "Different types of ring compressor"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_three_piece_ones_seem_work_better.jpg",
+    "caption": "Ring compressor on a piston entering a cylinder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/114/114_ring_expander.jpg",
+    "caption": "Ring expander on a two-stroke piston"
+   }
+  ],
+  "piston-clearance-measure": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_measure_piston_2.jpg",
+    "caption": "Measuring cylinder bore with a bore gauge"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_measured_top_middle_bottom_cylinder_2.jpg",
+    "caption": "Measuring piston diameter with a micrometer"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_if_after_market_piston_use_piston.jpg",
+    "caption": "Feeler gauge strip used to check piston clearance"
+   }
+  ],
+  "gearbox-assessment": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_could_bit_steel_aluminum_who_knows.jpg",
+    "caption": "Slight wear and pitting on gear dogs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_worn_shift_fork.jpg",
+    "caption": "Worn tip on a shift fork"
+   }
+  ],
+  "gearshift-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_check_shop_manuals_2.jpg",
+    "caption": "Pawl adjuster in the engine case"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shift_patterns.jpg",
+    "caption": "Gear lever shaft on the engine side"
+   }
+  ],
+  "top-end-assessment": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_beam_me_up_scotty.jpg",
+    "caption": "Pitted piston crown"
+   }
+  ],
+  "silencer-rust-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_if_set_up_one_rpm_effect.jpg",
+    "caption": "Rust and carbon inside an exhaust pipe"
+   }
+  ]
+ },
+ "problems": {
+  "engine-seized": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_siezed_piston.jpg",
+    "caption": "Seized piston lifted from the cylinder"
+   }
+  ],
+  "jumps-out-of-gear": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_when_disassemble_gear_shafts_use_cardboard.jpg",
+    "caption": "Worn shift fork tip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_teeth.jpg",
+    "caption": "Slight wear and pitting on gear teeth"
+   }
+  ],
+  "gear-lever-no-return": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_pawl.jpg",
+    "caption": "Shift pawl and return spring in the engine case"
+   }
+  ],
+  "metal-in-oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_piston_top_chewed.jpg",
+    "caption": "Piston crown chewed by bearing debris"
+   }
+  ],
+  "kick-very-hard": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_automatic_compression_release_1.jpg",
+    "caption": "Automatic compression release on a camshaft"
+   }
+  ]
+ },
+ "systems": {
+  "engine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_real_smart_work_fellows.jpg",
+    "caption": "Cylinder head with valve bucket bores"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_small_bore_71mm_long_stroke_82mm.jpg",
+    "caption": "Piston with rings and pin bosses"
+   }
+  ],
+  "gearbox": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_1st_2nd_3rd_etc.jpg",
+    "caption": "Power path through a five-speed gearbox in each gear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_turned_rotated_through_different_styles.jpg",
+    "caption": "Shift drum with a fork and drum gear"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/06_Engine_Parts/111/111_b_24_valve_ct_90_valve.jpg",
+   "caption": "Two valves of different sizes side by side"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/06_Engine_Parts/111/111_cutting_valve_seat.jpg",
+   "caption": "Cutting a valve seat with a seat cutter"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/06_Engine_Parts/111/111_hose.jpg",
+   "caption": "Lapping a valve with a hose on the stem"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/06_Engine_Parts/112/112_small_bore_71mm_long_stroke_82mm.jpg",
+   "caption": "Piston with rings and pin bosses"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/06_Engine_Parts/112/112_honda_piston.jpg",
+   "caption": "Four-stroke piston with ring grooves"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/06_Engine_Parts/112/112_three_piece.jpg",
+   "caption": "Three-piece oil ring"
+  },
+  {
+   "chapter": "m2-diagnosis",
+   "file": "source/dansmc/06_Engine_Parts/103/103_engine_compression_testing_2.jpg",
+   "caption": "Screw-in compression gauge with hose and adapters"
+  },
+  {
+   "chapter": "m2-diagnosis",
+   "file": "source/dansmc/06_Engine_Parts/106/106_leak_down_testing.jpg",
+   "caption": "Leak-down tester kit with two gauges"
+  },
+  {
+   "chapter": "m2-diagnosis",
+   "file": "source/dansmc/06_Engine_Parts/113/113_move_hone_back_forth_cylinder_produce.jpg",
+   "caption": "45 degree cross-hatch pattern in a honed bore"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/06_Engine_Parts/112/112_yamaha_yz_125_piston.jpg",
+   "caption": "Two-stroke piston with ring pegs"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/06_Engine_Parts/109/109_two_stroke_exhaust_pipes.jpg",
+   "caption": "Two-stroke exhaust pipes"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/06_Engine_Parts/112/112_i_always_measure_old_piston_so.jpg",
+   "caption": "Two-stroke cylinder bore and ports"
+  },
+  {
+   "chapter": "m4-gearbox",
+   "file": "source/dansmc/06_Engine_Parts/115/115_drum_shifters_drum_slider_forks_shaft.jpg",
+   "caption": "Shift drum with shift forks"
+  },
+  {
+   "chapter": "m4-gearbox",
+   "file": "source/dansmc/06_Engine_Parts/115/115_vertically_split.jpg",
+   "caption": "Vertically split crankcase with gears in place"
+  },
+  {
+   "chapter": "m4-gearbox",
+   "file": "source/dansmc/06_Engine_Parts/115/115_gear_shifters.jpg",
+   "caption": "Gear shift shaft on a modern engine"
+  }
+ ]
+}

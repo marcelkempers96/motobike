@@ -8,7 +8,7 @@ tools: [socket set, dead blow hammer, crankshaft separating tool or puller, thin
 parts: [crankshaft, gearbox, gaskets, oil_seals, engine]
 consumables: [crankcase sealant or gasket set, new crankshaft seals, penetrating oil]
 fixes: [deep-knock, bearing-rumble, metal-in-oil]
-photos: PHOTOS
+photos: [{"file": "source/dansmc/06_Engine_Parts/134/134_all_cases_will_need_pull_engine.jpg", "caption": "Crankcase half with a separating tool across the crankshaft end"}, {"file": "source/dansmc/06_Engine_Parts/134/134_dead_blow_hammer.jpg", "caption": "Dead blow hammers for tapping crankcases apart"}, {"file": "source/dansmc/06_Engine_Parts/134/134_special_tool.jpg", "caption": "Crankshaft separating tool with puller bars"}, {"file": "source/dansmc/06_Engine_Parts/134/134_shift_through_all_gears_make_sure.jpg", "caption": "Pulling a crankshaft into its main bearing with a puller tool"}, {"file": "source/dansmc/06_Engine_Parts/134/134_wedge.jpg", "caption": "Thin wedge blade used to ease a stuck crankcase seam"}, {"file": "source/dansmc/06_Engine_Parts/134/134_after_everything_together_install_crankshaft_seals.jpg", "caption": "Gearbox and crankshaft laid in a horizontally split crankcase"}]
 sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/split_crankcase.htm"}
 ---

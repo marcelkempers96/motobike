@@ -1,0 +1,317 @@
+{
+ "repairs": [
+  {
+   "id": "cylinder-hone",
+   "title": "Hone a cylinder to break the glaze",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "cylinder hone",
+    "drill with slow speed or hand hone",
+    "honing oil",
+    "rags",
+    "solvent",
+    "micrometers or bore gauge"
+   ],
+   "parts": [
+    "cylinder",
+    "piston_rings",
+    "piston"
+   ],
+   "consumables": [
+    "honing oil",
+    "solvent",
+    "clean oil rag"
+   ],
+   "fixes": [
+    "blue-smoke",
+    "low-compression",
+    "smoke-after-rebuild"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/hone_cyl.htm"
+    }
+   ]
+  },
+  {
+   "id": "gearbox-strip-order",
+   "title": "Take a gearbox apart and keep the parts in order",
+   "level": "workshop",
+   "time": "3 to 5 h",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "circlip pliers",
+    "egg carton or tray",
+    "marker pen",
+    "soft mallet",
+    "clean solvent",
+    "shop manual"
+   ],
+   "parts": [
+    "gearbox",
+    "shift_mechanism"
+   ],
+   "consumables": [
+    "gasket set",
+    "gearbox oil",
+    "new circlips"
+   ],
+   "fixes": [
+    "gearbox-whine",
+    "jumps-out-of-gear",
+    "stuck-in-gear"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearbox.htm"
+    }
+   ]
+  },
+  {
+   "id": "piston-inspect",
+   "title": "Inspect a piston and read its size marks",
+   "level": "workshop",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "micrometer",
+    "feeler gauge",
+    "circlip pliers",
+    "shop rag",
+    "shop manual"
+   ],
+   "parts": [
+    "piston",
+    "piston_rings",
+    "cylinder"
+   ],
+   "consumables": [
+    "new circlips",
+    "new wrist pin if worn"
+   ],
+   "fixes": [
+    "piston-slap",
+    "blue-smoke",
+    "engine-seized",
+    "low-compression"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    }
+   ]
+  },
+  {
+   "id": "piston-ring-identify",
+   "title": "Identify piston ring types and which way up they go",
+   "level": "home",
+   "time": "20 to 30 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "caliper",
+    "feeler gauge",
+    "shop manual",
+    "good light"
+   ],
+   "parts": [
+    "piston_rings",
+    "piston"
+   ],
+   "consumables": [],
+   "fixes": [
+    "smoke-after-rebuild",
+    "low-compression",
+    "blue-smoke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rings.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    }
+   ]
+  },
+  {
+   "id": "shift-drum-inspect",
+   "title": "Inspect the gear shift drum, pawl and forks",
+   "level": "workshop",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain",
+    "semi-auto"
+   ],
+   "tools": [
+    "spanners",
+    "screwdrivers",
+    "circlip pliers",
+    "caliper or straight edge",
+    "shop manual",
+    "tray"
+   ],
+   "parts": [
+    "shift_mechanism",
+    "gearbox",
+    "gear_lever"
+   ],
+   "consumables": [
+    "gasket or sealant for the side cover",
+    "gearbox oil"
+   ],
+   "fixes": [
+    "jumps-out-of-gear",
+    "false-neutral",
+    "hard-gear-change",
+    "stuck-in-gear",
+    "gear-lever-no-return"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearshifters.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearbox.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve-remove-refit",
+   "title": "Remove and refit valves, springs and valve seals",
+   "level": "workshop",
+   "time": "2 to 3 h",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "deep socket",
+    "hammer",
+    "valve spring compressor",
+    "caliper",
+    "small screwdriver",
+    "egg carton or tray",
+    "dial gauge"
+   ],
+   "parts": [
+    "valves",
+    "valve_springs",
+    "cylinder_head",
+    "oil_seals"
+   ],
+   "consumables": [
+    "new valve seals",
+    "valve stem lubricant",
+    "solvent"
+   ],
+   "fixes": [
+    "low-compression",
+    "blue-smoke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve-seat-lap",
+   "title": "Cut and lap a valve seat",
+   "level": "workshop",
+   "time": "1 to 2 h per head",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "valve seat cutters or machine shop",
+    "valve lapping tool or hose",
+    "lapping compound",
+    "solvent",
+    "rags"
+   ],
+   "parts": [
+    "valves",
+    "cylinder_head"
+   ],
+   "consumables": [
+    "fine lapping compound",
+    "new valves if the old ones are too worn"
+   ],
+   "fixes": [
+    "low-compression",
+    "hard-hot-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve.htm"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "piston-crown-damage",
+   "title": "Piston crown is chewed, pitted or melted",
+   "system": "engine",
+   "urgency": "do-not-ride",
+   "also_called": [
+    "chewed piston top",
+    "pitted piston",
+    "melted piston"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "piston",
+    "cylinder",
+    "crankshaft",
+    "piston_rings"
+   ],
+   "repairs": [
+    "piston-inspect",
+    "top-end-assessment",
+    "engine-internal-assessment",
+    "piston-clearance-measure"
+   ],
+   "related": [
+    "engine-seized",
+    "metal-in-oil",
+    "deep-knock",
+    "piston-slap",
+    "bearing-rumble",
+    "smoke-after-rebuild"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    }
+   ]
+  }
+ ]
+}

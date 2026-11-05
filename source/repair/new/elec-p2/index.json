@@ -1,0 +1,383 @@
+{
+ "repairs": [
+  {
+   "id": "test-light-multimeter-use",
+   "title": "Use a test light and a multimeter to trace a fault",
+   "level": "home",
+   "time": "20 to 30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "circuit tester light",
+    "multimeter (ohmmeter)",
+    "wiring diagram or manual"
+   ],
+   "parts": [
+    "wiring",
+    "battery",
+    "fuse"
+   ],
+   "consumables": [],
+   "fixes": [
+    "intermittent-electrical",
+    "no-power-key-on",
+    "indicators-dead",
+    "tail-light-out"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wiring_diagram.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electricaltesting.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_all_really_not_difficult_wiring_diagram.jpg",
+     "caption": "Multimeter on continuity showing a low reading on a good wire"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_all_really_not_difficult_wiring_diagram_2.jpg",
+     "caption": "Multimeter reading OL on a broken wire"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing.jpg",
+     "caption": "Circuit tester light with alligator clip"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing_2.jpg",
+     "caption": "Multimeter with test leads for voltage and resistance checks"
+    }
+   ]
+  },
+  {
+   "id": "rectifier-test",
+   "title": "Test a rectifier with an ohmmeter",
+   "level": "home",
+   "time": "20 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "multimeter (ohmmeter)",
+    "spanner for the mounting bolt",
+    "wiring diagram or manual"
+   ],
+   "parts": [
+    "regulator"
+   ],
+   "consumables": [],
+   "fixes": [
+    "not-charging",
+    "overcharging",
+    "fuse-keeps-blowing"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electricaltesting.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_rectifier.jpg",
+     "caption": "Selenium and silicon rectifiers from older bikes"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_reverse.jpg",
+     "caption": "Rectifier checked with reversed meter leads"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_ohmmeter.jpg",
+     "caption": "Multimeter set to ohms"
+    }
+   ]
+  },
+  {
+   "id": "alternator-rotor-check",
+   "title": "Check a wound rotor, slip rings and brushes",
+   "level": "home",
+   "time": "45 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "multimeter (ohmmeter)",
+    "fine sandpaper",
+    "small screwdriver",
+    "wiring diagram or manual"
+   ],
+   "parts": [
+    "stator",
+    "regulator"
+   ],
+   "consumables": [
+    "replacement brushes if worn"
+   ],
+   "fixes": [
+    "not-charging",
+    "dim-lights-idle",
+    "stator-burnt"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electricaltesting.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_rotors.jpg",
+     "caption": "Brush holders and slip rings of a wound rotor"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_two_slip_rings.jpg",
+     "caption": "Checking rotor slip rings for ground and continuity"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_two_brushes.jpg",
+     "caption": "Brush holder with two brushes"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_yamaha_650_twin_rotor.jpg",
+     "caption": "Brush on the slip rings of a rotor"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_under.jpg",
+     "caption": "Alternator rotor beside its stator"
+    }
+   ]
+  },
+  {
+   "id": "starter-remove-refit",
+   "title": "Remove and refit an electric starter motor",
+   "level": "home",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "electric-start"
+   ],
+   "tools": [
+    "spanners or sockets",
+    "marker pen",
+    "new O-ring if needed",
+    "shop manual"
+   ],
+   "parts": [
+    "starter",
+    "starter_clutch"
+   ],
+   "consumables": [
+    "O-ring",
+    "engine oil (if the case is opened)"
+   ],
+   "fixes": [
+    "starter-grinding",
+    "starter-silent",
+    "starter-clicks"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_electric_starters_2.jpg",
+     "caption": "Two starter motors"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_chain_drive_starter_gears.jpg",
+     "caption": "Chain and gear drive of a starter"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_other_safety_cut_out_switches_can_3.jpg",
+     "caption": "Chain-driven starter with the side cover off"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_must_remove_side_cover_get_chain.jpg",
+     "caption": "Alignment marks on a starter body"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_planetary_gears.jpg",
+     "caption": "Planetary gears inside a starter"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_dirt.jpg",
+     "caption": "Dirt and carbon dust inside a starter end cover"
+    }
+   ]
+  },
+  {
+   "id": "spark-plug-heat-range",
+   "title": "Choose the right spark plug heat range",
+   "level": "home",
+   "time": "30 min plus a test ride",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "plug spanner",
+    "new plugs in the heat range being tried",
+    "clean rag"
+   ],
+   "parts": [
+    "spark_plug"
+   ],
+   "consumables": [
+    "spark plug"
+   ],
+   "fixes": [
+    "plug-black-sooty",
+    "plug-white",
+    "plug-oily",
+    "pinking"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/sparkplugs1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spark_plugs/spark_plugs_catalog.html"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/097/097_plug_must_keep_temperature_between_752.jpg",
+     "caption": "Plug temperature range for hot and cold plugs"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/098/098_sp04_jpg_26723_bytes_3_30.jpg",
+     "caption": "Spark plug fouled because it ran too cold"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/098/098_sp21_jpg_20656_bytes_4_1.jpg",
+     "caption": "Spark plug running a little hot but acceptable"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/098/098_sp26_jpg_30763_bytes_4_1.jpg",
+     "caption": "Plug with blistered insulator in the pre-ignition range"
+    }
+   ]
+  },
+  {
+   "id": "spark-advance-check",
+   "title": "Check the automatic spark advance unit",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver",
+    "small amount of grease",
+    "points plate marking pen"
+   ],
+   "parts": [
+    "pickup",
+    "cdi"
+   ],
+   "consumables": [],
+   "fixes": [
+    "ignition-timing-suspect",
+    "misfire-high-rpm",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/ignitiontiming.html"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/088/088_centrifugal_advance.jpg",
+     "caption": "Centrifugal advance weights and springs on the points cam"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/088/088_full_advance_usually_reached_most_engines.jpg",
+     "caption": "Vacuum advance unit on a points ignition"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_lever.jpg",
+     "caption": "Advance lever on the back of a magneto flywheel"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_make_sure_working_smoothly.jpg",
+     "caption": "Points heel and gap beside the advance unit"
+    }
+   ]
+  },
+  {
+   "id": "wire-type-choose",
+   "title": "Choose the right wire type and size for a circuit",
+   "level": "rider",
+   "time": "15 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "wire cutters",
+    "wiring diagram or manual"
+   ],
+   "parts": [
+    "wiring",
+    "fuse"
+   ],
+   "consumables": [
+    "wire",
+    "fuses"
+   ],
+   "fixes": [
+    "accessory-wiring-fault",
+    "fuse-keeps-blowing",
+    "burning-smell-wiring"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wiring_diagram.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire.jpg",
+     "caption": "Stranded copper wire with insulation stripped"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_why_big_thick_battery_cables_have.jpg",
+     "caption": "Solid copper wire with insulation stripped"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire_multiple_wire.jpg",
+     "caption": "Ring terminal crimped on a stranded cable"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_small_wire.jpg",
+     "caption": "Thick starter wire beside thin ignition wire"
+    }
+   ]
+  }
+ ],
+ "problems": []
+}

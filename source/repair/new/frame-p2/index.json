@@ -1,0 +1,275 @@
+{
+ "repairs": [
+  {
+   "id": "front-axle-fittings-identify",
+   "title": "Identify how the front axle is held before removing the wheel",
+   "level": "rider",
+   "time": "5 to 10 min (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spanners, sockets and hex keys that fit the axle and pinch bolts",
+    "phone camera"
+   ],
+   "parts": [
+    "front_wheel",
+    "axle",
+    "forks",
+    "speedo_cable",
+    "speed_sensor"
+   ],
+   "consumables": [],
+   "fixes": [
+    "speedo-dead",
+    "speedo-cable-fault"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/front_wheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_axle_can_just_go_through_fork.jpg",
+     "caption": "Front axle passing through the fork legs"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_can_screw_into_fork_leg.jpg",
+     "caption": "Axle that screws into the fork leg"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_course_s_never_easy.jpg",
+     "caption": "Axle nut on a disc brake front wheel"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_pinch_bolt_nut.jpg",
+     "caption": "Front axle with pinch bolt on the fork leg"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_if_doubt_don_t_have_manual.jpg",
+     "caption": "Two pinch nuts with a gap on the fork leg"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_two_pinch_nuts.jpg",
+     "caption": "Four pinch bolts on the fork leg"
+    }
+   ]
+  },
+  {
+   "id": "rear-axle-fittings-identify",
+   "title": "Identify how the rear axle and brake are held before removing the wheel",
+   "level": "rider",
+   "time": "5 to 10 min (editorial estimate)",
+   "applies_to": [
+    "all",
+    "chain",
+    "drum-brake",
+    "disc-brake"
+   ],
+   "tools": [
+    "spanners and sockets for the axle nut, brake rod nut and anchor bolt",
+    "phone camera",
+    "piece of wood to hold the bike or wheel off the ground"
+   ],
+   "parts": [
+    "rear_wheel",
+    "axle",
+    "swingarm",
+    "rear_brake",
+    "chain",
+    "rear_sprocket"
+   ],
+   "consumables": [],
+   "fixes": [
+    "bike-feels-held-back",
+    "brake-drag"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rear_wheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_lot_dirt_bikes_have_open_slots.jpg",
+     "caption": "Open slots and a removable block at the swingarm end"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_may_also_have_remove_mufflers_shocks.jpg",
+     "caption": "Drum brake adjuster and anchor bolt at the rear wheel"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut.jpg",
+     "caption": "Rear axle area with sprocket nut and chain"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_push_forward_pop_off.jpg",
+     "caption": "Rear axle end at the swingarm"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_any_saddle_bags_mufflers_way.jpg",
+     "caption": "Rear wheel on a single-sided swingarm"
+    }
+   ]
+  },
+  {
+   "id": "tyre-age-check",
+   "title": "Read the tyre date code and tread wear marker",
+   "level": "rider",
+   "time": "5 min (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "clean rag",
+    "torch",
+    "tyre tread depth gauge (optional)"
+   ],
+   "parts": [
+    "front_tyre",
+    "rear_tyre"
+   ],
+   "consumables": [],
+   "fixes": [
+    "tyre-cracked",
+    "tyre-cupping",
+    "tyre-centre-wear"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tires1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tire_date_code.jpg",
+     "caption": "Date code on a tyre sidewall"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_there_may_several_each_tire.jpg",
+     "caption": "Tread wear marker and date code on a tyre"
+    }
+   ]
+  },
+  {
+   "id": "wheel-bearing-race-remove",
+   "title": "Remove a wheel bearing that has broken up in the hub",
+   "level": "workshop",
+   "time": "30 to 60 min per bearing (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "drift or punch",
+    "hammer",
+    "small grinder with a thin stone",
+    "thin screwdriver",
+    "bearing puller (optional)",
+    "hot air gun",
+    "safety goggles and gloves"
+   ],
+   "parts": [
+    "wheel_bearing",
+    "rear_wheel",
+    "front_wheel",
+    "oil_seals"
+   ],
+   "consumables": [
+    "new bearings",
+    "new seals",
+    "penetrating oil",
+    "bearing grease"
+   ],
+   "fixes": [
+    "wheel-bearing-noise",
+    "wheel-bearing-play",
+    "bearing-rumble"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wheelbearing.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_grind_cut_bearing_race.jpg",
+     "caption": "Grinding a groove in a bearing outer race"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_large_hole_side_mag_wheel.jpg",
+     "caption": "Large hole side of a cast wheel hub"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_small_hole_side_mag_wheel_2.jpg",
+     "caption": "Bearing puller with a wheel bearing"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_drive_bearings_out_drift.jpg",
+     "caption": "Drift through the hub against the bearing"
+    }
+   ]
+  },
+  {
+   "id": "wheel-lace-spokes",
+   "title": "Plan a spoke wheel re-lace and swap spokes pair by pair",
+   "level": "workshop",
+   "time": "3 to 6 h (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spoke key",
+    "dial gauge or a wire pointer on a stand",
+    "wire",
+    "side cutters",
+    "file or grinder"
+   ],
+   "parts": [
+    "spokes",
+    "front_wheel",
+    "rear_wheel",
+    "wheel_bearing"
+   ],
+   "consumables": [
+    "spokes and nipples",
+    "rim strip",
+    "new tube"
+   ],
+   "fixes": [
+    "loose-spokes",
+    "wheel-buckled",
+    "rim-damage"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spokewheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_cost_used_wheel_will_lot_less.jpg",
+     "caption": "Used spokes with bent heads"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spoke_ends.jpg",
+     "caption": "Two kinds of spoke head bend"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spoke_wheel_lacing.jpg",
+     "caption": "Tightening a spoke nipple with a spoke key"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel_2.jpg",
+     "caption": "Numbered spokes at the highest point of the rim"
+    }
+   ]
+  }
+ ],
+ "problems": []
+}

@@ -8,7 +8,7 @@ tools: [old spark plug of the right type, hammer and punch, grease fitting, grea
 parts: [piston, cylinder, spark_plug, valves]
 consumables: [penetrating oil, grease]
 fixes: [engine-seized]
-photos: PHOTOS
+photos: [{"file": "source/dansmc/06_Engine_Parts/127/127_cut_spark_plug_hydraulic_tool.jpg", "caption": "Cut-down spark plug body with a grease fitting for freeing a piston"}, {"file": "source/dansmc/06_Engine_Parts/127/127_now_weld_pipe_fitting_grease_gun.jpg", "caption": "Spark plug cut off at the top edge for a grease tool"}, {"file": "source/dansmc/06_Engine_Parts/127/127_steel_spark_plug_body.jpg", "caption": "Steel spark plug body with the porcelain removed"}]
 sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/stuck_engine.htm"}
 ---

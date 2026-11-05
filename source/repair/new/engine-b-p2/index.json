@@ -1,0 +1,401 @@
+{
+ "repairs": [
+  {
+   "id": "cam-chain-adjust",
+   "title": "Adjust a manual cam chain tensioner",
+   "level": "workshop",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "spanners",
+    "screwdriver",
+    "torch",
+    "shop manual",
+    "stethoscope or long screwdriver"
+   ],
+   "parts": [
+    "cam_chain",
+    "cam_tensioner",
+    "camshaft"
+   ],
+   "consumables": [
+    "tensioner gasket or sealing washer if one is fitted"
+   ],
+   "fixes": [
+    "cam-chain-rattle"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/132/132_manual_adjuster.jpg",
+     "caption": "Manual cam chain adjuster and its position on the engine"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/132/132_mark.jpg",
+     "caption": "Cam chain adjuster mark on the flywheel"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/132/132_cam_chain_adjuster_sprocket.jpg",
+     "caption": "Cam chain adjuster roller inside the left cover"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/132/132_automatic_adjustment.jpg",
+     "caption": "Automatic cam chain tensioner body and its parts"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/camchain_adjust.htm"
+    }
+   ]
+  },
+  {
+   "id": "crankcase-split",
+   "title": "Split and rejoin the engine crankcase",
+   "level": "workshop",
+   "time": "3 to 6 h with the engine out",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "socket set",
+    "dead blow hammer",
+    "crankshaft separating tool or puller",
+    "thin steel wedge",
+    "penetrating oil",
+    "soft cloth",
+    "shop manual"
+   ],
+   "parts": [
+    "crankshaft",
+    "gearbox",
+    "gaskets",
+    "oil_seals",
+    "engine"
+   ],
+   "consumables": [
+    "crankcase sealant or gasket set",
+    "new crankshaft seals",
+    "penetrating oil"
+   ],
+   "fixes": [
+    "deep-knock",
+    "bearing-rumble",
+    "metal-in-oil"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/134/134_all_cases_will_need_pull_engine.jpg",
+     "caption": "Crankcase half with a separating tool across the crankshaft end"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/134/134_dead_blow_hammer.jpg",
+     "caption": "Dead blow hammers for tapping crankcases apart"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/134/134_special_tool.jpg",
+     "caption": "Crankshaft separating tool with puller bars"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/134/134_shift_through_all_gears_make_sure.jpg",
+     "caption": "Pulling a crankshaft into its main bearing with a puller tool"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/134/134_wedge.jpg",
+     "caption": "Thin wedge blade used to ease a stuck crankcase seam"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/134/134_after_everything_together_install_crankshaft_seals.jpg",
+     "caption": "Gearbox and crankshaft laid in a horizontally split crankcase"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/split_crankcase.htm"
+    }
+   ]
+  },
+  {
+   "id": "engine-bearing-check",
+   "title": "Check ball and roller bearings removed from an engine",
+   "level": "workshop",
+   "time": "20 to 40 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "clean rags",
+    "solvent",
+    "torch",
+    "magnifier",
+    "small hammer or press as manual states",
+    "shop manual"
+   ],
+   "parts": [
+    "crankshaft",
+    "gearbox",
+    "camshaft",
+    "oil_seals"
+   ],
+   "consumables": [
+    "new bearings",
+    "clean oil"
+   ],
+   "fixes": [
+    "bearing-rumble",
+    "deep-knock",
+    "whine-from-engine"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/129/129_no_shield.jpg",
+     "caption": "Unshielded ball bearing"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/129/129_steel_shield.jpg",
+     "caption": "Ball bearing with a steel shield"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/129/129_shielded_rubber_shield_one_both_sides.jpg",
+     "caption": "Ball bearing outer race and inner race"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/129/129_roller_bearings.jpg",
+     "caption": "Ball, roller and tapered bearings side by side"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/129/129_plain_bearings_there_no_chance.jpg",
+     "caption": "Worn ball bearing next to a good one"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/129/129_shaft_might_still_saved_but_not.jpg",
+     "caption": "Damaged tapered roller bearing"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/roller_bearings.htm"
+    }
+   ]
+  },
+  {
+   "id": "kickstarter-refit",
+   "title": "Refit a kickstarter shaft, gear and return spring",
+   "level": "workshop",
+   "time": "1 to 3 h",
+   "applies_to": [
+    "kickstart"
+   ],
+   "tools": [
+    "spanners",
+    "circlip pliers",
+    "marker or paint pen",
+    "camera",
+    "new gaskets",
+    "shop manual"
+   ],
+   "parts": [
+    "kickstarter",
+    "clutch",
+    "gaskets",
+    "oil_seals"
+   ],
+   "consumables": [
+    "cover gasket",
+    "return spring or clip if worn"
+   ],
+   "fixes": [
+    "kickstart-slips",
+    "kickstart-jammed",
+    "kickstart-kickback"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/123/123_kick_starter_spring_outside_crankcases_2.jpg",
+     "caption": "Kickstart shaft with gear and return spring"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/123/123_lateral_engagement_kick_starter_full_ratchet.jpg",
+     "caption": "Kickstart gear with return spring and spring clip"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/123/123_starter_gear_clip.jpg",
+     "caption": "Kickstart shaft with return spring and retaining clip"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/123/123_kick_starter_spring_outside_crankcases.jpg",
+     "caption": "Kickstart gear and spring on the outside of the crankcase"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/kickstarters.htm"
+    }
+   ]
+  },
+  {
+   "id": "stuck-piston-grease-free",
+   "title": "Free a seized piston with grease pressure",
+   "level": "workshop",
+   "time": "2 to 4 h plus soaking time",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "old spark plug of the right type",
+    "hammer and punch",
+    "grease fitting",
+    "grease gun",
+    "spanners",
+    "penetrating oil",
+    "safety glasses"
+   ],
+   "parts": [
+    "piston",
+    "cylinder",
+    "spark_plug",
+    "valves"
+   ],
+   "consumables": [
+    "penetrating oil",
+    "grease"
+   ],
+   "fixes": [
+    "engine-seized"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/127/127_cut_spark_plug_hydraulic_tool.jpg",
+     "caption": "Cut-down spark plug body with a grease fitting for freeing a piston"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/127/127_now_weld_pipe_fitting_grease_gun.jpg",
+     "caption": "Spark plug cut off at the top edge for a grease tool"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/127/127_steel_spark_plug_body.jpg",
+     "caption": "Steel spark plug body with the porcelain removed"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/stuck_engine.htm"
+    }
+   ]
+  },
+  {
+   "id": "thermostat-test",
+   "title": "Test a coolant thermostat in hot water",
+   "level": "home",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "liquid-cooled"
+   ],
+   "tools": [
+    "spanners",
+    "pan",
+    "cooking thermometer",
+    "heat source",
+    "wire or tongs to hold the thermostat",
+    "drain pan"
+   ],
+   "parts": [
+    "thermostat",
+    "coolant",
+    "radiator",
+    "water_pump"
+   ],
+   "consumables": [
+    "new thermostat if faulty",
+    "new gasket or seal ring",
+    "coolant"
+   ],
+   "fixes": [
+    "overheating-liquid",
+    "temp-gauge-high"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/125/125_closed_thermostat.jpg",
+     "caption": "Thermostat held in hot water to see it open"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/125/125_same_antifreeze_fluid_too.jpg",
+     "caption": "Thermostat removed from its housing"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/watercooling.htm"
+    }
+   ]
+  },
+  {
+   "id": "water-pump-inspect",
+   "title": "Check the water pump and impeller",
+   "level": "workshop",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "liquid-cooled"
+   ],
+   "tools": [
+    "spanners",
+    "drain pan",
+    "torch",
+    "new gasket or seal ring",
+    "shop manual"
+   ],
+   "parts": [
+    "water_pump",
+    "coolant",
+    "radiator",
+    "thermostat"
+   ],
+   "consumables": [
+    "coolant",
+    "cover gasket or seal ring",
+    "pump seal if leaking"
+   ],
+   "fixes": [
+    "overheating-liquid",
+    "coolant-leak",
+    "temp-gauge-high"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/125/125_i_wonder_what_they_mean.jpg",
+     "caption": "Water pump impeller inside the cover"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder.jpg",
+     "caption": "Water pump impeller on a single-cylinder engine"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water.jpg",
+     "caption": "Water pump impeller and seal on a two-cylinder engine"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water_2.jpg",
+     "caption": "Corroded water pump impeller removed from its shaft"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/watercooling.htm"
+    }
+   ]
+  }
+ ],
+ "problems": []
+}
