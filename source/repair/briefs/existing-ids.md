@@ -624,3 +624,111 @@ controls | Controls and cables
 body | Frame, stands and bodywork
 ev-drive | Electric drive
 ev-battery | Electric battery and charging
+
+## New pages (pass 1, already on the site; link to these too)
+### Repairs (id | level | title)
+basic-tool-kit | rider | Build a basic motorcycle tool kit
+diagnosis-method | rider | Find a fault step by step
+engine-stuck-check | home | Find out why the engine will not turn over
+fuel-shot-test | home | Test fuel supply with a small shot of fuel
+fuel-water-test | rider | Test fuel for water
+impact-driver-use | home | Loosen a tight screw with an impact driver
+make-simple-special-tool | home | Make a simple special tool from scrap
+non-running-bike-assess | home | Assess a bike that does not run before you buy or restore it
+points-timing-set | home | Set contact-breaker points gap and timing on an older bike
+spanner-socket-use | rider | Choose and use spanners and sockets without rounding fasteners
+special-tool-choice | rider | Buy, borrow or make a special tool
+stuck-fastener-removal | home | Remove a rounded, seized or broken fastener
+torque-wrench-use | rider | Use a torque wrench correctly
+workshop-safety-setup | rider | Set up a safe place to work on a motorcycle
+battery-dry-activate | workshop | Fill and activate a new dry-charged battery
+battery-hydrometer-test | home | Test a battery with a hydrometer and a load check
+condenser-test | home | Test an ignition condenser
+contact-points-replace | home | Inspect, clean and replace contact breaker points
+dc-switch-select | rider | Choose the right switch for a 12 V circuit
+flywheel-remove | workshop | Remove and refit a flywheel (rotor) with a puller
+magneto-points-timing | workshop | Set points timing on a flywheel magneto
+misfire-light-test | home | Tell an ignition misfire from a fuel misfire with a timing light
+points-timing-set | home | Set points gap and ignition timing (battery and coil ignition)
+spark-tester-make | home | Make a simple spark tester
+starter-armature-test | workshop | Check starter brushes, commutator and armature on the bench
+wire-crimp-join | home | Join wires with crimp connectors
+wire-solder-join | home | Join two wires by soldering
+wiring-diagram-read | home | Read a wiring diagram and trace a circuit
+balancer-marks-set | workshop | Check and set counterbalancer timing marks
+cam-timing-set | workshop | Record and set cam timing marks
+clutch-plates-stuck-free | home | Free stuck clutch plates and check the clutch release rod
+compression-adapter-make | home | Make a compression tester adapter from an old spark plug
+compression-release-check | home | Check a manual or automatic compression release
+oil-seal-fit | home | Remove and fit an engine oil seal
+piston-clearance-measure | workshop | Measure piston-to-cylinder clearance and bore wear
+piston-ring-fit | workshop | Fit piston rings and deglaze the bore
+plain-bearing-clearance-check | workshop | Check plain bearing clearance with Plastigauge
+silencer-rust-check | home | Check a rusted silencer and choose a repair
+stuck-engine-diagnosis | home | Find out where a stuck engine is locked
+thumb-compression-check | rider | Rough compression check with a thumb
+two-stroke-crankcase-test | workshop | Pressure and vacuum test a two-stroke crankcase
+valve-seat-leak-test | workshop | Check a valve and seat with a solvent leak test
+valve-shim-adjust | workshop | Check and adjust valve clearance on shim-type engines
+fork-damper-bolt-release | workshop | Undo the fork damper bolt when the rod spins
+fork-cap-release | workshop | Open a spring-loaded fork cap safely
+fork-oil-level-set | workshop | Set the fork oil level with a simple gauge
+fork-seal-drive-fit | workshop | Fit a fork seal square without damaging it
+fork-spring-spacer | workshop | Add a spacer to firm a sagging fork spring
+drum-brake-twin-leading-adjust | home | Adjust a twin leading shoe drum brake
+drum-brake-centre-shoes | rider | Centre the brake shoes when refitting a drum wheel
+tyre-lever-make | home | Make a rounded tyre lever for fitting the last bead
+tyre-bead-seat | workshop | Seat a stubborn tyre bead on the rim
+spoke-wheel-true | workshop | True a spoked wheel by small spoke adjustments
+spoke-replace | workshop | Replace broken spokes or relace a wheel
+bearing-press-make | home | Make a simple press to fit wheel bearings
+wheel-bearing-regrease | home | Clean and regrease a wheel bearing
+chain-join | workshop | Join a chain with a clip, press-fit or rivet link
+chain-size-identify | rider | Identify the size of a drive chain
+### Problems (id | system | title)
+fastener-stuck-rounded | body | Screw or bolt will not come out, or its head is damaged
+battery-volts-ok-fails-load | charging | Battery reads good voltage but will not start the bike
+misfire-ignition-or-fuel | running | Misfire: ignition or fuel?
+points-wear-misfire | ignition | Points ignition runs rough or misses
+weak-battery-no-fire | starting | Starter turns the engine but the engine will not fire (weak battery)
+kick-very-hard | starting | Kickstarter is very hard to push through
+smoke-after-rebuild | smoke | Engine still smokes after a rebuild with new rings
+two-stroke-crankcase-leak | engine | Two-stroke is hard to start, runs lean or smokes (crankcase leak suspected)
+hub-hot-after-ride | wheels | Wheel hub or brake drum is very hot after riding
+chain-adjuster-at-end | chain | Chain adjuster has run out of travel
+new-fork-seal-leaks | suspension | Fork leaks again soon after new seals
+new-tube-flat-after-fit | wheels | New tube goes flat soon after fitting a tyre
+
+## Course chapters (id | title)
+m1-history-systems | A short history and the motorcycle as a system
+m1-types | Types and configurations
+m1-anatomy | Anatomy and controls
+m1-physics | Physics of riding
+m1-workshop | Workshop safety, tools and measurement
+m2-fundamentals | Engine fundamentals and key numbers
+m2-four-stroke | The four-stroke cycle
+m2-two-stroke | The two-stroke cycle
+m2-top-end | The top end
+m2-bottom-end | The bottom end
+m2-lubrication-cooling | Lubrication and cooling
+m2-diagnosis | Engine diagnosis and service
+m3-mixture | Air, fuel and mixture
+m3-efi | Electronic fuel injection and engine management
+m3-ignition | Ignition systems
+m3-battery-charging | Battery, charging and starting
+m3-lighting-wiring | Lighting, signalling and wiring
+m3-diagnosis | Electrical diagnosis
+m4-clutch | Primary drive and clutch
+m4-gearbox | Gearbox
+m4-final-drive | Final drive and CVT
+m4-frame-steering | Frame and steering geometry
+m4-suspension | Suspension
+m4-wheels-tyres | Wheels and tyres
+m4-brakes | Brakes
+m4-maintenance | Periodic maintenance and pre-delivery inspection
+m5-architecture | Architecture of an electric two-wheeler
+m5-motors | Electric motors
+m5-controllers | Motor controllers and regenerative braking
+m5-batteries | Batteries and the BMS
+m5-charging | Charging, swapping and standards
+m5-safety | Safety, diagnosis and service

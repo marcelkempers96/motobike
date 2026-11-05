@@ -55,12 +55,16 @@ for _k, _x in list(NEW_MD):
 from PIL import Image as _Image
 PHOTO_DIR = os.path.join(ROOT, 'assets', 'repair-photos')
 PHOTO_CREDIT = "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission"
-PHOTOS = {'parts': {}, 'repairs': {}, 'problems': {}}
-_pm = os.path.join(SRC, 'photo-map.json')
-if os.path.exists(_pm):
+PHOTOS = {'parts': {}, 'repairs': {}, 'problems': {}, 'systems': {}}
+# photo-map.json (pass 1), then photos2/*.json (pass 2) appended in order, no repeats per page
+for _pm in [os.path.join(SRC, 'photo-map.json')] + sorted(_glob.glob(os.path.join(SRC, 'photos2', '*.json'))):
+  if not os.path.exists(_pm): continue
   _m = json.load(open(_pm, encoding='utf-8'))
-  for _k in ('parts', 'repairs'):
-    for _i, _l in (_m.get(_k) or {}).items(): PHOTOS[_k][_i] = list(_l)
+  for _k in PHOTOS:
+    for _i, _l in (_m.get(_k) or {}).items():
+      _cur = PHOTOS[_k].setdefault(_i, [])
+      for _ph in _l:
+        if _ph.get('file') and all(_ph['file'] != _c['file'] for _c in _cur): _cur.append(_ph)
 def _fm_photos(path):
   t = open(path, encoding='utf-8').read()
   if not t.startswith('---'): return []
@@ -72,7 +76,7 @@ def _fm_photos(path):
   return out
 for (_k, _i), _f in NEW_MD.items():
   _ph = _fm_photos(_f)
-  if _ph: PHOTOS[_k][_i] = _ph
+  if _ph: PHOTOS[_k][_i] = _ph + [x for x in PHOTOS[_k].get(_i, []) if all(x['file'] != y['file'] for y in _ph)]
 _done = {}
 def photo_src(src):
   if src in _done: return _done[src]
@@ -91,7 +95,7 @@ def photos_html(kind, i, rel, limit=4):
   items = []
   for ph in PHOTOS[kind].get(i, [])[:limit]:
     src = photo_src(ph['file'])
-    if src: items.append(f'<figure><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
+    if src: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
   if not items: return ''
   return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div><p class="r-photos-credit">{PHOTO_CREDIT}.</p></section>'
 
@@ -312,7 +316,7 @@ for i, p in PROB.items():
       <p class="r-meta"><i class="ru is-{u[1]}">{u[0]}</i>{f'<span>Also called: {e(also)}</span>' if also else ''}</p>
     </header>
     <div class="r-grid">
-      <article class="r-body is-problem">{photos_html('problems', i, rel)}{body}</article>
+      <article class="r-body is-problem">{photos_html('problems', i, rel, 4)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Repairs for this problem</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}
         {f'<section><h2>Parts you may need</h2><div class="rpcs">{parts}</div></section>' if parts else ''}
@@ -342,7 +346,7 @@ for i, r in REP.items():
       <p class="r-meta"><i class="rl is-{e(r.get("level"))}">{l[0]}</i><span>{l[1]}</span>{f'<span>Time: {e(tm(r))} (estimate)</span>' if tm(r) else ''}</p>
     </header>
     <div class="r-grid">
-      <article class="r-body is-repair" data-steps="{i}">{photos_html('repairs', i, rel)}{body}</article>
+      <article class="r-body is-repair" data-steps="{i}">{photos_html('repairs', i, rel, 8)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Tools</h2><ul class="r-plain">{tools}</ul></section>' if tools else ''}
         {f'<section><h2>Consumables</h2><ul class="r-plain">{cons}</ul></section>' if cons else ''}
@@ -377,7 +381,7 @@ for i, p in PART.items():
       <figure class="r-fig"><img src="{rel}{src}" alt="{e(p["name"])}">{cap}</figure>
     </header>
     <div class="r-grid">
-      <article class="r-body is-part">{photos_html('parts', i, rel, 3)}{body}</article>
+      <article class="r-body is-part">{photos_html('parts', i, rel, 6)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Problems it can cause</h2><ul class="r-list">{probs}</ul></section>' if probs else ''}
         {f'<section><h2>Repairs</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}
@@ -411,6 +415,7 @@ for sid, name in SYS.items():
         if y not in seen: seen.append(y)
     part_ids = seen
   html_ = f'''    <header class="r-head"><span class="ute-label">System</span><h1>{e(name)}</h1><p class="r-lead">Problems, repairs and parts for the {e(name.lower())}.</p></header>
+    {photos_html('systems', sid, rel, 6)}
     <section class="r-sec"><h2>Problems</h2><ul class="r-list is-cols">{''.join(plink(x['id'], rel) for x in probs)}</ul></section>
     <section class="r-sec"><h2>Repairs</h2><ul class="r-list is-cols">{''.join(rlink(x, rel) for x in rep_ids)}</ul></section>
     <section class="r-sec"><h2>Parts</h2><div class="rpcs is-grid">{''.join(partcard(x, rel) for x in part_ids)}</div></section>'''
