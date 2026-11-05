@@ -1,0 +1,198 @@
+{
+ "parts": {
+  "stator": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_stator_plates.jpg",
+    "caption": "Stator plate with coils and contact points on a flywheel magneto"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_low_tension_magneto.jpg",
+    "caption": "Low-tension magneto with a separate ignition coil"
+   }
+  ],
+  "ignition_coil": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_worst_case_can_snap_back_break.jpg",
+    "caption": "Magneto stator plate with its ignition coil mounted outside the flywheel"
+   }
+  ]
+ },
+ "repairs": {
+  "basic-tool-kit": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_3_8_seems_drive_use_most.jpg",
+    "caption": "Ratchets, T-handle, flex-head and speed handle for sockets"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_set_inch_us_wrenches_would_good.jpg",
+    "caption": "Phillips, straight, Torx and Allen drivers"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_just_pick_ones_like.jpg",
+    "caption": "Socket extensions and adapters"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_if_only_have_one_200_watt.jpg",
+    "caption": "Tap and die set for cleaning and cutting threads"
+   }
+  ],
+  "spanner-socket-use": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_if_part_screw_not_strong_enough.jpg",
+    "caption": "12 point, 6 point, 8 point and impact sockets compared"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_socket_handles.jpg",
+    "caption": "Socket handles: ratchet, T-handle and speed handle"
+   }
+  ],
+  "impact-driver-use": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_impact_driver.jpg",
+    "caption": "Impact driver with screwdriver bits and socket adapter"
+   }
+  ],
+  "make-simple-special-tool": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/019/019_make_special_tools.jpg",
+    "caption": "Special tools made from cut and welded spanners"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/019/019_can_take_wrenches_cut_end_off.jpg",
+    "caption": "Large sockets made from steel strap and a pipe"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/019/019_if_have_lath_wow_skies_limit.jpg",
+    "caption": "Puller tools made in a home workshop"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/019/019_may_simple_heating_up_combination_wrench.jpg",
+    "caption": "Open-end spanner modified with welded metal"
+   }
+  ],
+  "special-tool-choice": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_valve_cutters.jpg",
+    "caption": "Valve seat cutter set"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_spring_hones.jpg",
+    "caption": "Spring hone for breaking the glaze in a cylinder"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_sunnen.jpg",
+    "caption": "Cylinder hone used to bore a cylinder oversize"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_ammco.jpg",
+    "caption": "Cylinder hone with stone holder"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_circlip_plier.jpg",
+    "caption": "Circlip pliers for inner and outer circlips"
+   }
+  ],
+  "workshop-safety-setup": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/023/023_good_shop_practice.jpg",
+    "caption": "Spanners and sockets laid out in sets on a bench"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_my_tool_board.jpg",
+    "caption": "Tools hung on a workshop board"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_very_handy.jpg",
+    "caption": "Workshop air compressor"
+   }
+  ],
+  "wire-solder-join": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_sometimes_i_think_s_best_buy.jpg",
+    "caption": "Soldering gun and soldering iron"
+   }
+  ],
+  "torque-wrench-use": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/024/024_now_screw_into_one_threaded_holes.jpg",
+    "caption": "Torque wrench on a bolt in a test case"
+   }
+  ],
+  "contact-points-replace": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_round_points.jpg",
+    "caption": "Moving and stationary contact points, labelled"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_sandpaper.jpg",
+    "caption": "Cleaning contact points with folded sandpaper"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_screw_connection.jpg",
+    "caption": "Points insulation parts and screw connection"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_points_wire.jpg",
+    "caption": "Points wire routed to the moving point"
+   }
+  ],
+  "magneto-points-timing": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_removal_cylinder_head.jpg",
+    "caption": "Dial indicator set up on a cylinder to find piston position"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_should_do_few_bikes.jpg",
+    "caption": "Stator plate with elongated adjusting holes marked"
+   }
+  ],
+  "condenser-test": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_i_keep_little_bottle_old_screws.jpg",
+    "caption": "Condenser, points and screws removed from a stator plate"
+   }
+  ],
+  "compression-test": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/013/013_if_four_stroke_engine_will_also.jpg",
+    "caption": "Compression gauge with hose"
+   }
+  ]
+ },
+ "problems": {},
+ "systems": {
+  "ignition": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_magneto_mag_hodaka.jpg",
+    "caption": "Flywheel magneto engine with timing marks"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m1-workshop",
+   "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_micro_fiche_reader.jpg",
+   "caption": "Microfiche reader used to look up parts diagrams"
+  },
+  {
+   "chapter": "m1-workshop",
+   "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_brand.jpg",
+   "caption": "Dial caliper for measuring shafts and widths"
+  },
+  {
+   "chapter": "m1-workshop",
+   "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_my_tool_board.jpg",
+   "caption": "Tools hung on a workshop board"
+  },
+  {
+   "chapter": "m3-ignition",
+   "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_low_tension_magneto.jpg",
+   "caption": "Low-tension magneto with a separate ignition coil"
+  },
+  {
+   "chapter": "m3-ignition",
+   "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_find_out_what.jpg",
+   "caption": "Flywheel magneto with the flywheel fitted"
+  }
+ ]
+}

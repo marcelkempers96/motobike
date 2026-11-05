@@ -1,0 +1,508 @@
+{
+ "parts": {
+  "wiring": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_do_have_one_right.jpg",
+    "caption": "Connector block on a bike wiring harness"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire.jpg",
+    "caption": "Stranded copper wire with insulation stripped"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire_multiple_wire.jpg",
+    "caption": "Ring terminal crimped on a stranded cable"
+   }
+  ],
+  "battery": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_acid_battery_1.jpg",
+    "caption": "Lead-acid battery with plates visible through the case"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_charger.jpg",
+    "caption": "Small motorcycle battery on a charger"
+   }
+  ],
+  "spark_plug": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_plug_must_keep_temperature_between_752.jpg",
+    "caption": "Plug temperature range for hot and cold plugs"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp14_jpg_24060_bytes_3_31.jpg",
+    "caption": "Spark plug tip with ideal deposits"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp18_jpg_22371_bytes_4_1.jpg",
+    "caption": "Spark plug tip with a good light colour"
+   }
+  ],
+  "ignition_coil": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ignition_coils.jpg",
+    "caption": "Ignition coil connected to a multimeter"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_different_types.jpg",
+    "caption": "Plug caps and spark tester leads of different types"
+   }
+  ],
+  "cdi": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/088/088_points_condenser_cdi_box.jpg",
+    "caption": "Points, condenser and CDI box side by side"
+   }
+  ],
+  "pickup": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_electronic_ignition.jpg",
+    "caption": "Source coil and trigger coil under an engine cover"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_flywheel.jpg",
+    "caption": "Trigger magnet on the flywheel"
+   }
+  ],
+  "stator": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_around.jpg",
+    "caption": "Flywheel rotor beside the stator coil ring"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_try_get_parts_close_can_without.jpg",
+    "caption": "Source coils on a stator plate"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_low_tension_magneto.jpg",
+    "caption": "Low tension magneto stator with coil and plug lead"
+   }
+  ],
+  "starter": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_electric_starters_2.jpg",
+    "caption": "Two starter motors"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_planetary_gears.jpg",
+    "caption": "Starter motor opened to show planetary gears"
+   }
+  ],
+  "starter_clutch": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_clutch_2.jpg",
+    "caption": "Starter clutch removed from the flywheel"
+   }
+  ],
+  "regulator": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_rectifier.jpg",
+    "caption": "Rectifier units from older bikes"
+   }
+  ]
+ },
+ "repairs": {
+  "wiring-fault-find": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing.jpg",
+    "caption": "Circuit tester light used to trace voltage along a wire"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_all_really_not_difficult_wiring_diagram_2.jpg",
+    "caption": "Multimeter reading OL, showing a broken wire"
+   }
+  ],
+  "connector-clean": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_do_have_one_right.jpg",
+    "caption": "Unplugged connector block from a bike wiring harness"
+   }
+  ],
+  "misfire-light-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_keep_fire_extinguisher_handy.jpg",
+    "caption": "Timing light clipped to the handlebar of a test bike"
+   }
+  ],
+  "ignition-timing-check": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_can_use_timing_light.jpg",
+    "caption": "Clear timing plugs that replace the timing hole cover"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_like_always_check_manual_2.jpg",
+    "caption": "Timing marks on a stator plate and crankcase"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_least_japanese_bikes.jpg",
+    "caption": "Timing a points ignition with a wrench on the crank nut"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_like_always_check_manual.jpg",
+    "caption": "Turning the engine by hand to line up timing marks"
+   }
+  ],
+  "contact-points-replace": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_flex_file.jpg",
+    "caption": "Flex-file used to clean contact points"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_sandpaper.jpg",
+    "caption": "Sandpaper strip cleaning points on a magneto stator"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_finally_clean_points_1_4_inch.jpg",
+    "caption": "Paper strips used for the final points clean"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_some_twins_use_them_too.jpg",
+    "caption": "Pitted contacts compared with filed contacts"
+   }
+  ],
+  "magneto-points-timing": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_if_do_not_know_direction_rotation.jpg",
+    "caption": "Flywheel marks on a magneto engine with no automatic advance"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_lever.jpg",
+    "caption": "Advance lever on the back of a magneto flywheel"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_others_have_lever_push_get_full.jpg",
+    "caption": "Points seen through the flywheel window, with adjusting groove"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_so_much_lie_evolution.jpg",
+    "caption": "Feeler gauge checking the points gap on a magneto"
+   }
+  ],
+  "condenser-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_i_keep_little_bottle_old_screws.jpg",
+    "caption": "Stator plate with points, coils and a loose condenser"
+   }
+  ],
+  "ignition-coil-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ign_coil_testing.jpg",
+    "caption": "Testing an ignition coil with a multimeter"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ignition_coils.jpg",
+    "caption": "Meter reading across ignition coil terminals"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_most_car_engines_have_vacuum_advance.jpg",
+    "caption": "Spark plug polarity test with a pencil"
+   }
+  ],
+  "stator-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_charging_stator_coils.jpg",
+    "caption": "Ohmmeter checks for opens and grounds on stator coils"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_around.jpg",
+    "caption": "Flywheel rotor beside the stator coil ring"
+   }
+  ],
+  "battery-hydrometer-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Small pencil hydrometer used on a motorcycle battery"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_indeed_armour_light.jpg",
+    "caption": "Battery state of charge compared with volts and gravity"
+   }
+  ],
+  "battery-test-charge": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_charger.jpg",
+    "caption": "Small battery on a charger"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_would_behoove_remember_if_have_work_2.jpg",
+    "caption": "Analogue battery load tester"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_tester.jpg",
+    "caption": "Carbon pile battery load tester"
+   }
+  ],
+  "starter-motor-service": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_planetary_gears.jpg",
+    "caption": "Starter motor opened to show planetary gears"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_dirt.jpg",
+    "caption": "Dirt and carbon dust inside a starter end cover"
+   }
+  ],
+  "starter-armature-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_armature_shaft.jpg",
+    "caption": "Meter probe on a starter armature shaft"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_undercutting.jpg",
+    "caption": "Commutator mica being undercut with a saw blade"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_if_they_worn_can_cut.jpg",
+    "caption": "Undercutting commutator mica, right and wrong way"
+   }
+  ],
+  "starter-circuit-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_small_wire.jpg",
+    "caption": "Thick starter wire beside thin ignition wire"
+   }
+  ],
+  "starter-relay-test": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_solenoid_2.jpg",
+    "caption": "Starter solenoid removed from the bike"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_solenoid.jpg",
+    "caption": "How a starter solenoid works"
+   }
+  ],
+  "starter-clutch-check": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_sometimes_starters_also_have_planetary_gears.jpg",
+    "caption": "Starter clutch on the back of a flywheel"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_clutch.jpg",
+    "caption": "Overrunning clutch parts: rollers, springs and races"
+   }
+  ],
+  "spark-plug-reading": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp09_jpg_29237_bytes_3_30.jpg",
+    "caption": "Spark plug tip that is a good colour"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp13_jpg_24025_bytes_3_30.jpg",
+    "caption": "Spark plug with a very good deposit colour"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp15_jpg_24335_bytes_3_31.jpg",
+    "caption": "Spark plug showing ideal tan insulator"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp21_jpg_20656_bytes_4_1.jpg",
+    "caption": "Spark plug running a little hot but acceptable"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp22_jpg_24523_bytes_4_1.jpg",
+    "caption": "Spark plug with pale insulator, hot or lean but acceptable"
+   }
+  ],
+  "dc-switch-select": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_ac_connection_point.jpg",
+    "caption": "Caliper measuring the AC switch contact"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_ac_switch_bodies_2.jpg",
+    "caption": "AC switch contact beside DC switch contact"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_i_took_ac_switch_dc_switch.jpg",
+    "caption": "AC and DC switch bodies compared"
+   }
+  ],
+  "wire-crimp-join": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire_multiple_wire.jpg",
+    "caption": "Ring terminal crimped on a thick battery cable"
+   }
+  ]
+ },
+ "problems": {
+  "plug-oily": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp01_jpg_28461_bytes_3_30.jpg",
+    "caption": "Oil fouled spark plug, wet and black"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp02_jpg_31460_bytes_3_30.jpg",
+    "caption": "Oil fouled spark plug with heavy deposits"
+   }
+  ],
+  "plug-black-sooty": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled spark plug with dry black soot"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp04_jpg_26723_bytes_3_30.jpg",
+    "caption": "Spark plug fouled because it ran too cold"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp05_jpg_27084_bytes_3_30.jpg",
+    "caption": "Sooty plug from a too cold heat range"
+   }
+  ],
+  "plug-white": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp25_jpg_31716_bytes_4_1.jpg",
+    "caption": "White insulator on a plug that ran too hot"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp26_jpg_30763_bytes_4_1.jpg",
+    "caption": "Plug with blistered insulator in the pre-ignition range"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp27_jpg_30858_bytes_4_1.jpg",
+    "caption": "Melted electrode and glazed insulator from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp28_jpg_25280_bytes_4_1.jpg",
+    "caption": "Overheated plug with a bead of melted metal"
+   }
+  ],
+  "pinking": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_25_too_hot_lean_pre_ignition.jpg",
+    "caption": "Spark plug electrode burnt away by pre-ignition"
+   }
+  ],
+  "runs-lean": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_lt_back_catalog_next.jpg",
+    "caption": "Plug with hot or lean running deposits"
+   }
+  ],
+  "points-wear-misfire": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_round_points.jpg",
+    "caption": "Round points, movable and stationary"
+   }
+  ],
+  "starter-spins-freely": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_clutch_2.jpg",
+    "caption": "Starter clutch removed from the flywheel"
+   }
+  ]
+ },
+ "systems": {
+  "ignition": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/088/088_points_condenser_cdi_box.jpg",
+    "caption": "Points, condenser and CDI box side by side"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_electronic_ignition.jpg",
+    "caption": "Source coil and trigger coil of an electronic ignition"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/088/088_full_advance_usually_reached_most_engines.jpg",
+    "caption": "Vacuum advance unit on a points ignition"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_i_keep_little_bottle_old_screws.jpg",
+    "caption": "Flywheel magneto stator with points and condensers"
+   }
+  ],
+  "charging": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_under.jpg",
+    "caption": "Alternator rotor beside its stator"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_charger.jpg",
+    "caption": "Small battery on a charger"
+   }
+  ],
+  "starting": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_electric_starters_2.jpg",
+    "caption": "Two starter motors"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_other_safety_cut_out_switches_can_3.jpg",
+    "caption": "Chain-driven starter gear train with the side cover off"
+   }
+  ],
+  "wiring": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_ground_wire_ground_frame_2.jpg",
+    "caption": "Test lamp lit from a battery: power, load and ground"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing_2.jpg",
+    "caption": "Multimeter with test leads"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m3-ignition",
+   "file": "source/dansmc/05_Electrical_Ignition/088/088_centrifugal_advance.jpg",
+   "caption": "Centrifugal advance weights and springs on the points cam"
+  },
+  {
+   "chapter": "m3-ignition",
+   "file": "source/dansmc/05_Electrical_Ignition/090/090_electronic_ignition.jpg",
+   "caption": "Source and trigger coils of an electronic ignition"
+  },
+  {
+   "chapter": "m3-ignition",
+   "file": "source/dansmc/05_Electrical_Ignition/088/088_points_condenser_cdi_box.jpg",
+   "caption": "Points, condenser and CDI box side by side"
+  },
+  {
+   "chapter": "m3-battery-charging",
+   "file": "source/dansmc/05_Electrical_Ignition/095/095_indeed_armour_light.jpg",
+   "caption": "Battery state of charge compared with volts and gravity"
+  },
+  {
+   "chapter": "m3-battery-charging",
+   "file": "source/dansmc/05_Electrical_Ignition/095/095_batteries_junk_anyway_but_might_get.jpg",
+   "caption": "Small pencil hydrometer for a motorcycle battery"
+  },
+  {
+   "chapter": "m3-battery-charging",
+   "file": "source/dansmc/05_Electrical_Ignition/099/099_electric_starters_2.jpg",
+   "caption": "Two starter motors"
+  },
+  {
+   "chapter": "m3-lighting-wiring",
+   "file": "source/dansmc/05_Electrical_Ignition/086/086_ground_wire_ground_frame_2.jpg",
+   "caption": "Power source, hot wire, load and ground shown with a lamp"
+  },
+  {
+   "chapter": "m3-lighting-wiring",
+   "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire.jpg",
+   "caption": "Stranded wire used for heavy 12 V cables"
+  },
+  {
+   "chapter": "m3-lighting-wiring",
+   "file": "source/dansmc/05_Electrical_Ignition/086/086_do_have_one_right.jpg",
+   "caption": "Connector block on a bike wiring harness"
+  },
+  {
+   "chapter": "m3-diagnosis",
+   "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing_2.jpg",
+   "caption": "Multimeter used to trace a fault"
+  },
+  {
+   "chapter": "m3-diagnosis",
+   "file": "source/dansmc/05_Electrical_Ignition/099/099_ignition_coils.jpg",
+   "caption": "Testing an ignition coil with a meter"
+  },
+  {
+   "chapter": "m3-diagnosis",
+   "file": "source/dansmc/05_Electrical_Ignition/099/099_reverse.jpg",
+   "caption": "Rectifier checked with reversed meter leads"
+  }
+ ]
+}

@@ -1,0 +1,494 @@
+{
+ "parts": {
+  "clutch": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_don_t_let_ball_bearing_fall.jpg",
+    "caption": "Clutch basket and plates fitted in the engine"
+   }
+  ],
+  "clutch_plates": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_if_they_badly_worn_consider_replacing.jpg",
+    "caption": "Clutch plate stack with the plates that must mesh marked"
+   }
+  ],
+  "crankshaft": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_they_can_turn_ride_causes_stop.jpg",
+    "caption": "Crankshaft with balancer gear and timing marks"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_crank_rod.jpg",
+    "caption": "Crankshaft, connecting rod and bearing shells laid out"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_good_rod_bushing.jpg",
+    "caption": "Connecting rod big end with bearing shells fitted"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_roller_bearing.jpg",
+    "caption": "Connecting rod with needle bearings, crank pin and thrust washers"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_kawasaki_zx1100.jpg",
+    "caption": "Crankshaft end with the cam chain sprocket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_works_because_gases_liquids_simply_cannot.jpg",
+    "caption": "Labyrinth seal on a two-stroke crankshaft"
+   }
+  ],
+  "kickstarter": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_check_shop_manual_2.jpg",
+    "caption": "Kickstart shaft with the exhaust lifter cam"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kick_starter_spring_outside_crankcases_2.jpg",
+    "caption": "Kickstart shaft with gear and return spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_lateral_engagement_kick_starter_full_ratchet_2.jpg",
+    "caption": "Kickstart gear with friction clip and groove"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_lateral_engagement_kick_starter_full_ratchet.jpg",
+    "caption": "Kickstart gear with return spring and spring clip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_quadrant_gear_style_kick_starter_used.jpg",
+    "caption": "Quadrant-gear kickstarter with its return spring"
+   }
+  ],
+  "radiator": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_many_dirt_bikes_have_two.jpg",
+    "caption": "Radiator mounted beside the fork on a dirt bike"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_cooling.jpg",
+    "caption": "Radiator behind a crash bar"
+   }
+  ],
+  "cooling_fan": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cx500_honda.jpg",
+    "caption": "Radiator fan and its fitting"
+   }
+  ],
+  "thermostat": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_closed_thermostat.jpg",
+    "caption": "Thermostat opening in hot water"
+   }
+  ],
+  "water_pump": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_i_wonder_what_they_mean.jpg",
+    "caption": "Water pump impeller inside the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder.jpg",
+    "caption": "Water pump impeller seen with the cover removed"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water.jpg",
+    "caption": "Corroded water pump impeller and seal"
+   }
+  ],
+  "cylinder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cylinder_coolant_passages.jpg",
+    "caption": "Water-cooled cylinder with coolant passages"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_one_radiator_two_radiator.jpg",
+    "caption": "Water-cooled two-stroke cylinder with the head removed"
+   }
+  ],
+  "camshaft": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_one_piece_head.jpg",
+    "caption": "Plain bearings for the camshaft in a cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_again_if_work_quickly_bearing_will.jpg",
+    "caption": "Camshaft in a cylinder head with its bearings"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_intake_cam_will_usually_have.jpg",
+    "caption": "Intake and exhaust cam lobes marked IN and EX"
+   }
+  ],
+  "cam_chain": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_honda_cb360.jpg",
+    "caption": "Roller cam chain inside an engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_hi_vo_chain.jpg",
+    "caption": "Cam chain on a camshaft sprocket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_over_head_cam_chain_drive.jpg",
+    "caption": "Toothed belt cam drive sprocket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_remember_put_cam_chain_tensioner_then.jpg",
+    "caption": "Cam chain running over two camshafts"
+   }
+  ],
+  "valves": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_bent.jpg",
+    "caption": "Bent valve and the mark where the piston struck it"
+   }
+  ],
+  "rocker_arms": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_ends_rocker_arms.jpg",
+    "caption": "Rocker arm fitted on and removed from a valve stem"
+   }
+  ],
+  "cylinder_head": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_keep_checking_tdc_flywheel_case_crankshaft_2.jpg",
+    "caption": "Cylinder head with camshafts removed showing valve springs"
+   }
+  ],
+  "cam_tensioner": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_automatic_adjustment.jpg",
+    "caption": "Automatic cam chain tensioner body and its parts"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_cam_chain_adjuster_roller.jpg",
+    "caption": "Cam chain guide blade removed from the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_if_adjuster_plate_may_pull_both.jpg",
+    "caption": "Cam chain adjuster arm with its sprocket"
+   }
+  ],
+  "oil_seals": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip.jpg",
+    "caption": "Worn oil seal lip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_seal_spring.jpg",
+    "caption": "Oil seal with its garter spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_seal_raised_edge.jpg",
+    "caption": "Oil seal outer edge and lip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_oil_seals.jpg",
+    "caption": "Oil seal kit"
+   }
+  ]
+ },
+ "repairs": {
+  "clutch-plate-service": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch_circlip.jpg",
+    "caption": "Clutch circlip on the clutch centre"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_grooves.jpg",
+    "caption": "Clutch basket grooves checked for wear"
+   }
+  ],
+  "clutch-cable-adjust": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_most_clutches_have_disengagement_mechanism_center.jpg",
+    "caption": "Clutch rod, cable adjuster and rod adjuster on the engine"
+   }
+  ],
+  "auto-clutch-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_drives_clutches.jpg",
+    "caption": "Centrifugal clutch shoes and drum inside the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_onda_400_torque_converter_suzuki_m31_2.jpg",
+    "caption": "Centrifugal clutch shoes and springs removed from the engine"
+   }
+  ],
+  "balancer-marks-set": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_gear_drive_counterbalancer_2.jpg",
+    "caption": "Balancer chain drive on the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_gear_drive_counterbalancer_chain_drive_counterbalancer.jpg",
+    "caption": "Balancer gears meshing in the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_simply_loosen_then_tighten_adjuster_balancer.jpg",
+    "caption": "Balancer chain adjuster and timing marks"
+   }
+  ],
+  "compression-release-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_automatic_compression_release.jpg",
+    "caption": "Compression release cable on the cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_check_shop_manual.jpg",
+    "caption": "Exhaust lifter lever inside the kickstart cover"
+   }
+  ],
+  "kickstart-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_full_ratchet_kick_starters.jpg",
+    "caption": "Full ratchet kickstart gear and return spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_full_ratchet_kick_starters_kickstarter.jpg",
+    "caption": "Kickstart ratchet pawl behind the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kick_starter_spring_outside_crankcases.jpg",
+    "caption": "Kickstart gear and spring on the outside of the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_transmission_drive_kick_starting.jpg",
+    "caption": "Power flow from kickstart shaft to the clutch basket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_primary_kick_starter.jpg",
+    "caption": "Power flow from the kickstart shaft through the primary drive"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_internal_kickstart_gears.jpg",
+    "caption": "Kickstart gears inside the gearbox case"
+   }
+  ],
+  "coolant-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_some_can_fix_others_have_replace.jpg",
+    "caption": "Radiator cap on a liquid-cooled motorcycle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_take_pick_but_all_agree_need.jpg",
+    "caption": "Coolant reservoir beside the tank"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir_2.jpg",
+    "caption": "Coolant reservoir under the seat of a shaft-drive bike"
+   }
+  ],
+  "plain-bearing-clearance-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_perish_thought_owner_would_actually_change.jpg",
+    "caption": "Plastigauge strips in several clearance ranges"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_plastigauge_crankpin.jpg",
+    "caption": "Plastigauge strip laid across a crank pin bearing shell"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_plastigauge_crankshaft_main_bearing_2.jpg",
+    "caption": "Plastigauge on a crankshaft main bearing journal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_perish_thought_owner_would_actually_change_2.jpg",
+    "caption": "Flattened Plastigauge compared with its scale"
+   }
+  ],
+  "cam-timing-set": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_degree_wheel.jpg",
+    "caption": "Degree wheel for measuring cam timing"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_most_hondas_yamahas_marks_dots_lines.jpg",
+    "caption": "Cam chain and sprocket timing marks on a four-cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_timing_line_cam.jpg",
+    "caption": "Timing lines on a cam sprocket and chain"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_bsa_single_cylinder_valve_timing_old.jpg",
+    "caption": "Timing marks on the gears of a side-valve engine"
+   }
+  ],
+  "chain-join": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_master_link_clip.jpg",
+    "caption": "Chain master link with its clip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_master_link.jpg",
+    "caption": "Chain master link parts laid out"
+   }
+  ],
+  "cam-chain-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_cam_chain_adjuster_sprocket.jpg",
+    "caption": "Cam chain adjuster roller inside the left cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_mark.jpg",
+    "caption": "Cam chain adjuster mark on the flywheel"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_manual_adjuster.jpg",
+    "caption": "Manual cam chain adjuster and its position on the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_check_them_wear_when_replace_cam.jpg",
+    "caption": "Toothed cam belt and tensioner"
+   }
+  ],
+  "oil-seal-fit": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_i_prefer_lever_puppy_out_but.jpg",
+    "caption": "Levering an old oil seal out with a screwdriver and a wood pad"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out_2.jpg",
+    "caption": "Levering a seal out behind the front sprocket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_always_outside_edge.jpg",
+    "caption": "Seal driver set for fitting oil seals"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_seal_driver_set_2.jpg",
+    "caption": "Pipe seal driver made from a socket"
+   }
+  ]
+ },
+ "problems": {
+  "kickstart-slips": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_pushed_spring_when_kick_starter_shaft_2.jpg",
+    "caption": "Kickstart pawl and ratchet gear inside the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_full_ratchet_kick_starters_kickstarter_kickstarter.jpg",
+    "caption": "Ratchet teeth on a kickstart gear"
+   }
+  ],
+  "kickstart-jammed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_starter_gear_clip.jpg",
+    "caption": "Kickstart shaft with return spring and retaining clip"
+   }
+  ],
+  "coolant-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_one_radiator_two_radiator_2.jpg",
+    "caption": "Spark plug fouled by coolant entering the cylinder"
+   }
+  ],
+  "deep-knock": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_without_bushings_bearing_shells.jpg",
+    "caption": "Worn and good plain bearing shells side by side"
+   }
+  ],
+  "metal-in-oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_without_bushings_bearing_shells.jpg",
+    "caption": "Worn and good plain bearing shells side by side"
+   }
+  ],
+  "bearing-rumble": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_plain_bearings_there_no_chance.jpg",
+    "caption": "Worn ball bearing next to a good one"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_shaft_might_still_saved_but_not.jpg",
+    "caption": "Damaged tapered roller bearing"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_if_must_pull_outside_race_replace.jpg",
+    "caption": "Ball, needle and plain bearings in a crankcase half"
+   }
+  ],
+  "low-compression": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_bent.jpg",
+    "caption": "Bent valve and the mark where the piston struck it"
+   }
+  ],
+  "two-stroke-crankcase-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_mechanical_failure.jpg",
+    "caption": "Failed crankshaft seal on a two-stroke crankcase"
+   }
+  ],
+  "oil-leak-sprocket": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip.jpg",
+    "caption": "Worn oil seal lip"
+   }
+  ]
+ },
+ "systems": {
+  "starting": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kick_starters_2.jpg",
+    "caption": "Kickstarter lever, shaft and gears driving the crankshaft"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m4-clutch",
+   "file": "source/dansmc/06_Engine_Parts/118/118_clutches_basically_round_baskets_filled_alternating.jpg",
+   "caption": "Clutch engaged and disengaged by the lever"
+  },
+  {
+   "chapter": "m4-clutch",
+   "file": "source/dansmc/06_Engine_Parts/118/118_some_activate_clutch_cover_some_use.jpg",
+   "caption": "Cable-operated clutch release, shown in section"
+  },
+  {
+   "chapter": "m4-final-drive",
+   "file": "source/dansmc/06_Engine_Parts/120/120_automatic_clutch.jpg",
+   "caption": "Scooter belt drive in low and high ratio"
+  },
+  {
+   "chapter": "m4-clutch",
+   "file": "source/dansmc/06_Engine_Parts/121/121_i_will_try_add_more_time.jpg",
+   "caption": "Centrifugal clutch parts: weights, sprag and outer housing"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/06_Engine_Parts/122/122_motorcycle_counter_balancers.jpg",
+   "caption": "Counterbalancer weights moving opposite the piston"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/06_Engine_Parts/128/128_hole_tunnel_drilled_machined_two_piece.jpg",
+   "caption": "Plain bearing bore in a two-piece crankcase half"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/06_Engine_Parts/131/131_ducati_250_over_head_cam_gear.jpg",
+   "caption": "Gear-driven overhead camshafts in a cylinder head"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/06_Engine_Parts/131/131_over_head_cam_gear_drive.jpg",
+   "caption": "Overhead camshaft drive from a sprocket to the valves"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/06_Engine_Parts/132/132_oil_pressure.jpg",
+   "caption": "Cam chain tensioner with its oil pressure feed"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/06_Engine_Parts/135/135_labyrinth_seal.jpg",
+   "caption": "Labyrinth seal: gas and liquid cannot pass the grooves"
+  }
+ ]
+}

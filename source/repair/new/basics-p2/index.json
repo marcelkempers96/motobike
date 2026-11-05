@@ -1,0 +1,182 @@
+{
+ "repairs": [
+  {
+   "id": "spark-arrester-clean",
+   "title": "Free a spark arrester blocked with oily carbon",
+   "level": "home",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "two-stroke",
+    "air-cooled"
+   ],
+   "tools": [
+    "spanners",
+    "bench vice",
+    "drill and hacksaw or grinder",
+    "bolts, nuts and washers",
+    "wood dowel",
+    "soft wire",
+    "slide hammer or strap puller",
+    "gloves and eye protection"
+   ],
+   "parts": [
+    "exhaust"
+   ],
+   "consumables": [
+    "penetrating oil",
+    "degreaser"
+   ],
+   "fixes": [
+    "exhaust-blocked"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tool_3.htm"
+    }
+   ]
+  },
+  {
+   "id": "points-opening-find",
+   "title": "Find the moment the contact points open",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "multimeter set to ohms or a continuity buzzer",
+    "buzz box",
+    "cigarette paper or thin tissue",
+    "scissors",
+    "spanner for the flywheel nut"
+   ],
+   "parts": [
+    "stator"
+   ],
+   "consumables": [
+    "acetone for cleaning the points"
+   ],
+   "fixes": [
+    "ignition-timing-suspect",
+    "points-wear-misfire"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/buzzbox.htm"
+    }
+   ]
+  },
+  {
+   "id": "flywheel-timing-marks-read",
+   "title": "Read flywheel timing marks and the spark advance",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "two-stroke",
+    "four-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "multimeter or buzz box",
+    "marker or paint pen",
+    "small drill bit for locking the advance",
+    "screwdriver"
+   ],
+   "parts": [
+    "stator"
+   ],
+   "consumables": [],
+   "fixes": [
+    "ignition-timing-suspect"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/magneto1.htm"
+    }
+   ]
+  },
+  {
+   "id": "torque-feel-practice",
+   "title": "Learn the feel of correct bolt torque on a junk part",
+   "level": "rider",
+   "time": "1 h",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "torque wrench",
+    "combination spanner",
+    "bench vice",
+    "eye protection",
+    "junk crankcase or scrap casting with threaded holes"
+   ],
+   "parts": [],
+   "consumables": [
+    "spare bolts, washers and nuts"
+   ],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/homework.htm"
+    }
+   ]
+  },
+  {
+   "id": "cylinder-fin-safe-hit",
+   "title": "Tap a stuck cylinder loose without breaking the fins",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "air-cooled"
+   ],
+   "tools": [
+    "soft-faced or rubber mallet",
+    "wood block",
+    "bench or vice",
+    "eye protection"
+   ],
+   "parts": [
+    "cylinder"
+   ],
+   "consumables": [],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/homework.htm"
+    }
+   ]
+  },
+  {
+   "id": "measuring-tools-use",
+   "title": "Choose and use calipers and micrometers",
+   "level": "rider",
+   "time": "30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "dial or digital caliper",
+    "outside micrometer",
+    "inside micrometer or bore gauge",
+    "clean rag"
+   ],
+   "parts": [],
+   "consumables": [
+    "light oil for storage"
+   ],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    }
+   ]
+  }
+ ],
+ "problems": []
+}
