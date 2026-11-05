@@ -12,6 +12,7 @@ sources:
   - {doc: "Honda CB500F owner's manual, coolant check page", url: "https://www.bike-parts.fr/thumbs/pdf_url/img/owner_manuals/owner_CB500FAF_FF_EN/2500_2500/0072.pdf"}
   - {doc: "MAVCC Motorcycle Mechanic", page: 730}
   - {doc: "Unit 2 The Motorcycle", page: 19}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/watercooling.htm"}
 ---
 
 # Coolant is leaking
@@ -26,6 +27,7 @@ Not until the leak is found and the level is correct. A bike that loses coolant 
 - Engine cold: check the reserve tank level.
 - Look at hoses, clips and the radiator bottom.
 - Is the rear tyre wet?
+- Coolant pushing out of the radiator cap while the engine runs can mean combustion pressure is entering the cooling system (head gasket or cracked head).
 
 ## Diagnose it step by step
 

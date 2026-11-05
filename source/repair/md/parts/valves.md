@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 206}
   - {doc: "K-Light 125 manual", page: 209}
   - {doc: "MAVCC Motorcycle Mechanic", page: 657}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/valve.htm"}
 ---
 
 # Valves
@@ -37,6 +38,9 @@ When the valve is burnt, bent or pitted, the stem is below the limit, or the sea
 - Workshop job. Seats are cut and the contact width checked. Lap only where the maker allows.
 - Fit springs with the close coils toward the head, and seat the collets fully.
 - After assembly set [valve clearance](/moto-zero/repair/repairs/valve-clearance) cold and run a [compression test](/moto-zero/repair/repairs/compression-test).
+- Keep valves, springs and caps in order, intake with intake and exhaust with exhaust, so each goes back where it came from.
+- After lapping, a matte ring all the way round is the goal. Do not spin a valve in a drill, use a back and forth turn.
+- Test the seating with solvent in the chamber. The ports must stay dry. Clean the inlet side so no dirt reaches the seat.
 
 ## Reference (K-Light 125)
 

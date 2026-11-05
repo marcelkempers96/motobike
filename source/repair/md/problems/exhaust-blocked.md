@@ -13,6 +13,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 800}
   - {doc: "K-Light 125 manual", page: 23}
   - {doc: "K-Light 125 manual", page: 51}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/EXHAUST_2.htm"}
 ---
 
 # Exhaust blocked or choked with carbon (two-stroke)
@@ -27,6 +28,8 @@ Yes with care. Avoid long hard runs: a choked engine runs hot and can seize.
 - Is the plug wet with oil or covered in black crust?
 - Is there oil sludge dripping from the silencer joint or outlet?
 - What oil and ratio are used: correct two-stroke oil, correct pump setting?
+- If the baffle is removable or the silencer is packed with fibre, remove it, clean it and repack it first.
+- Do not use caustic soda to dissolve carbon. It is dangerous. Burning out a pipe with a torch is also a skilled, outdoor job.
 
 ## Diagnose it step by step
 

@@ -32,6 +32,6 @@ Replace the seals every time the valves are removed. They are cheap and cannot b
 
 ## Fitting notes
 - Prise the old seal off gently so the guide is not scratched. See [Remove and refit valves](/moto-zero/repair/repairs/valve-remove-refit).
-- Oil the valve stem and the seal. Cover the stem end with a thin plastic sleeve or tape so the keeper groove does not cut the lip.
+- Oil the valve stem and the seal before fitting.
 - Push the seal down with a deep socket of the right size so it sits square on the guide, not crooked.
 - Fit the spring seat washer before the seal. See [Valve springs](/moto-zero/repair/parts/valve_springs).

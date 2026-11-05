@@ -7,6 +7,7 @@ applies_to: [all]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 293}
   - {doc: "K-Light 125 manual", page: 36}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/wiring_diagram.htm"}
 ---
 
 # Wiring harness and connectors
@@ -29,6 +30,7 @@ Repair rather than replace: clean corroded connectors, re-make loose crimps and 
 ## What to match when buying
 - A harness must match the model, year and options (kick or electric start, carburettor or fuel injection, CDI or ECU).
 - Use wire of at least the same size, and the same fuse rating. Never fit a bigger fuse to stop a fuse blowing.
+- Wire and terminals are sold separately: [Electrical wire](/moto-zero/repair/parts/wire) and [Wire terminals and connectors](/moto-zero/repair/parts/connectors).
 
 ## Fitting notes
 - Start with [Clean and protect connectors](/moto-zero/repair/repairs/connector-clean) and [Clean the earth connections](/moto-zero/repair/repairs/earth-clean).

@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 194}
   - {doc: "K-Light 125 manual", page: 177}
   - {doc: "MAVCC Motorcycle Mechanic", page: 486}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Front sprocket
@@ -37,6 +38,8 @@ Replace when teeth are hooked or bent, or about a quarter of the tooth is worn a
 - Use a new lock washer or plate if bent. Tighten the bolt to the value in your bike's manual.
 - Look at the output shaft seal while the sprocket is off.
 - See [Inspect sprockets](/moto-zero/repair/repairs/sprocket-inspect) and [Replace the chain and sprockets](/moto-zero/repair/repairs/chain-sprocket-replace) (workshop).
+- A smaller front sprocket (or larger rear) gives stronger pulling and lower speed. A larger front sprocket (or smaller rear) lowers engine revs at cruising speed. Changing the front by one tooth has a bigger effect than changing the rear by one.
+- Do not undo the retainer without the chain on, or with the rear brake held by a helper, since the sprocket will turn.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

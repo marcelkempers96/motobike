@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 203}
   - {doc: "K-Light 125 manual", page: 202}
   - {doc: "MAVCC Motorcycle Mechanic", page: 671}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/valveclearence.htm"}
 ---
 
 # Ticking noise from the top of the engine
@@ -64,6 +65,7 @@ Usually yes, gently, for a short distance. Stop if the tick turns into a knock, 
 | Loose spark plug | Plug turns by hand | [Remove, check, gap and fit a spark plug](/moto-zero/repair/repairs/spark-plug-service) |
 | Cam chain slack (OHC only) | Rattle at idle near tensioner | [Check the cam chain and tensioner](/moto-zero/repair/repairs/cam-chain-check) |
 | Worn rocker, pushrod, cam or broken spring | Noise remains with correct gaps | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
+| Clearance too large on a shim-type engine | Feeler gauge cold, reading above the manual range | A thinner shim. Shims can be swapped between valves to save buying new ones |
 
 ## Reference values (K-Light 125)
 

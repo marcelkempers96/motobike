@@ -11,6 +11,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 77}
   - {doc: "MAVCC Motorcycle Mechanic", page: 290}
   - {doc: "baterias.com: JIS battery codes", url: "https://baterias.com/gb/battery-glossary/jis"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/batteries.htm"}
 ---
 
 # 12 V battery
@@ -38,6 +39,8 @@ When it will not hold charge after a full slow charge, or is swollen, cracked or
 - Remove negative first and fit positive first. Acid burns skin and eyes; charging gives off explosive gas, so keep sparks away.
 - Home jobs: [Test and charge a 12 V battery](/moto-zero/repair/repairs/battery-test-charge), [Replace a 12 V battery](/moto-zero/repair/repairs/battery-replace), [Clean and tighten battery terminals](/moto-zero/repair/repairs/battery-terminal-clean).
 - Never jump start from a running car: [Jump start a motorcycle safely](/moto-zero/repair/repairs/jump-start).
+- Do not charge a frozen battery. Let it thaw first.
+- A battery sold dry must be filled and charged as its maker says: [Fill and activate a new dry-charged battery](/moto-zero/repair/repairs/battery-dry-activate). A pre-filled one that sat on a shelf for months should be charged before use.
 
 ## Reference (K-Light 125)
 

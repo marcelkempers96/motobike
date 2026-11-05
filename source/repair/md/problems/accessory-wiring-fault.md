@@ -15,6 +15,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 278}
   - {doc: "HELLA Tech World: CAN bus and vehicle lighting", url: "https://www.hella.com/techworld/sg/lounge/can-bus-vehicle-lighting-bulb-replacement-workshop"}
   - {doc: "Kellermann i.LOAD load resistors", url: "https://www.kellermann-online.com/en/shop/electronic-accessories/i.load/"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/dc_switches.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/wiring_diagram.htm"}
 ---
 
 # Problems after fitting accessories or an alarm
@@ -65,3 +67,5 @@ With care, if the bike starts and lights work. If a fuse blows, wires get hot, o
 | LED lamps with bulb-type flasher or lamp monitoring | Fast flash or warnings | [Fit LED indicators correctly](/moto-zero/repair/repairs/led-indicator-fit) |
 | Short in accessory wiring | Fuse blows | [Find a short circuit](/moto-zero/repair/repairs/short-circuit-find) |
 | Too much load for alternator | Lights dim at idle | [Test the charging system](/moto-zero/repair/repairs/charging-system-test) |
+| AC-rated or small switch used for a DC accessory | Switch hot or burnt contacts | [Choose the right switch for a 12 V circuit](/moto-zero/repair/repairs/dc-switch-select) |
+| Wire too thin for the load | Wire warm to touch; fuse blows | [Choose the right wire](/moto-zero/repair/repairs/wire-type-choose) |

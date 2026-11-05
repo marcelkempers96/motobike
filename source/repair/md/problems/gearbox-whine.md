@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 226}
   - {doc: "K-Light 125 manual", page: 177}
   - {doc: "MAVCC Motorcycle Mechanic", page: 507}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gearbox.htm"}
 ---
 
 # Whining noise in one or more gears
@@ -61,3 +62,4 @@ Ride with care. A whine alone rarely stops the bike, but if it turns into grindi
 | Low or old oil | Level low, oil dark | [Check the engine oil level](/moto-zero/repair/repairs/oil-level-check) |
 | Wheel bearing | Rough when spun by hand | [Check wheel bearings](/moto-zero/repair/repairs/wheel-bearing-check) |
 | Worn gear teeth or gearbox bearing | Whine in certain gears, clutch-dependent | [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment) |
+| Broken, bent or debris-struck gear tooth | Broken teeth are usually noisy. If nothing looks broken, look for a bent tooth or a chip of metal stuck on one | Replace the damaged gear together with its mate on the other shaft: [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment) |

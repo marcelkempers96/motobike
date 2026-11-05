@@ -8,6 +8,7 @@ sources:
   - {doc: "Unit 2 The Motorcycle", page: 34}
   - {doc: "MAVCC Motorcycle Mechanic", page: 627}
   - {doc: "K-Light 125 manual", page: 21}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cdiignition.htm"}
 ---
 
 # CDI unit
@@ -30,8 +31,10 @@ Only when every other part of the ignition has been checked good, ideally by try
 - Match the part number on the label, and AC or DC type. Plugs that fit are not proof of a match: the timing curve and rev limit differ.
 - "Racing" or unlimited CDIs change timing and can cause pinking and engine damage.
 - Cheap copies are common. Buy from a dealer or a known ignition maker, and keep the receipt in case it fails early.
+- Magneto CDI (no battery) and battery-fed CDI are different units. A battery-fed one needs a well-charged battery for a good spark.
 
 ## Fitting notes
 - Workshop job to diagnose: [Diagnose a suspected CDI or ECU fault](/moto-zero/repair/repairs/cdi-ecu-diagnosis).
 - Key off before unplugging. Check the earth wire and plug pins first: [Clean and seal electrical connectors](/moto-zero/repair/repairs/connector-clean).
 - Mount it where it was, away from heat and water spray.
+- Never unplug the CDI, coil or plug cap with the engine running. These systems make very high voltage and it can damage the ignition.

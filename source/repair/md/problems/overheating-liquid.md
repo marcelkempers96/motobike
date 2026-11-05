@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 23}
   - {doc: "Unit 2 The Motorcycle", page: 19}
   - {doc: "MAVCC Motorcycle Mechanic", page: 667}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/watercooling.htm"}
 ---
 
 # Liquid-cooled engine overheats
@@ -27,6 +28,7 @@ Stop now, switch off, and let it cool fully. Do not open the radiator cap while 
 - Was the fan running when you stopped in traffic? (You can hear and feel it.)
 - Reserve tank level once cold.
 - Any wet spots or steam at hoses or the radiator?
+- Open only the pressure cap on the radiator, never the reservoir cap, and only when the engine is cold. Look for the pump flow in the filler neck.
 
 ## Diagnose it step by step
 
@@ -64,3 +66,4 @@ Stop now, switch off, and let it cool fully. Do not open the radiator cap while 
 | Thermostat stuck closed | Hot engine, cool radiator | [Check the thermostat](/moto-zero/repair/repairs/thermostat-check) |
 | Air lock after refill | Recent coolant work | [Replace the coolant](/moto-zero/repair/repairs/coolant-replace) |
 | Head gasket | Bubbles, white smoke | [Do a leak-down test](/moto-zero/repair/repairs/leak-down-test) |
+| Thermostat not opening | Suspend it in a pan of heating water. It should open at the temperature marked on it | [Check the thermostat](/moto-zero/repair/repairs/thermostat-check). Do not run without it to cure heat |

@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 242}
   - {doc: "K-Light 125 manual", page: 245}
   - {doc: "K-Light 125 manual", page: 249}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/Exhaust_4.htm"}
 ---
 
 # Exhaust and silencer
@@ -37,6 +38,7 @@ When it is rusted through, cracked, or the catalyst is broken or blocked. Two-st
 - The exhaust stays hot long after the engine stops; let it cool before touching.
 - Always fit a new [exhaust gasket](/moto-zero/repair/parts/exhaust_gasket). Fit all bolts loosely, tighten the header first, then the silencer mount.
 - Home job: [Find and fix an exhaust leak](/moto-zero/repair/repairs/exhaust-leak-check), [Check exhaust mounts and heat shields](/moto-zero/repair/repairs/exhaust-mount-check).
+- Steam from burnt fuel condenses inside the pipe and rusts it from within. Chrome can hide the holes.
 
 ## Reference (K-Light 125)
 

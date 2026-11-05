@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 101}
   - {doc: "K-Light 125 manual", page: 102}
   - {doc: "Unit 2 The Motorcycle", page: 3}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/dc_switches.htm"}
 ---
 
 # Ignition switch
@@ -31,6 +32,7 @@ When the contacts fail the continuity test, the plug is melted, or the lock is b
 - Match make, model and year: number of positions (OFF, ON, LOCK, PARK), wire colours, plug and mounting.
 - Switches are often sold as a lock set with tank cap and seat lock, all with one key. Buying only the switch means two keys.
 - Cheap switches can have thin contacts that heat up. A melted plug is a warning to check the whole circuit, not just the switch.
+- Use a switch rated for DC at the load it carries: [Choose the right switch for a 12 V circuit](/moto-zero/repair/repairs/dc-switch-select).
 
 ## Fitting notes
 - Home job: [Test the ignition switch](/moto-zero/repair/repairs/ignition-switch-test). Disconnect the battery negative first.

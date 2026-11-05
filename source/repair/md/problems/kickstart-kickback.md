@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 85}
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 628}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/magneto1.htm"}
 ---
 
 # Kickstarter kicks back against my foot
@@ -64,6 +65,7 @@ The bike is usually fine to ride once started, but kicking it is risky. Use the 
 | Wrong or faulty CDI/ECU | After replacement; timing wrong | [Diagnose a suspected CDI or ECU fault](/moto-zero/repair/repairs/cdi-ecu-diagnosis) |
 | Loose pick-up or reluctor | Timing jumps; poor peak voltage | [Test the ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 | Valve clearance or decompressor fault | Clearance out of range | [Check and adjust valve clearance](/moto-zero/repair/repairs/valve-clearance) |
+| Spark too early at kicking speed: advance weights stuck, or points timing set too far advanced | Kickback on every cold kick; weights do not spring back | [Check spark advance](/moto-zero/repair/repairs/spark-advance-check), [Set points gap and ignition timing](/moto-zero/repair/repairs/points-timing-set) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

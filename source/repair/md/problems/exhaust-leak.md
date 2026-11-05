@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 242}
   - {doc: "K-Light 125 manual", page: 244}
   - {doc: "MAVCC Motorcycle Mechanic", page: 754}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/Exhaust_4.htm"}
 ---
 
 # Ticking or puffing from an exhaust leak
@@ -27,6 +28,7 @@ Yes with care. Fix it soon: the leak gets bigger, can burn your leg or wiring, a
 - Are the two nuts at the head both present and tight (engine cold)?
 - Is the silencer loose on its mount?
 - Is the engine warning light on?
+- Rust through in one place usually means rust in many. Chrome can hide the holes.
 
 ## Diagnose it step by step
 

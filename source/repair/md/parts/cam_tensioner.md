@@ -7,6 +7,7 @@ applies_to: [four-stroke]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 657}
   - {doc: "MAVCC Motorcycle Mechanic", page: 678}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/camchain_adjust.htm"}
 ---
 
 # Cam chain tensioner and guides
@@ -33,3 +34,4 @@ When the tensioner plunger is at the end of its travel, the ratchet slips, or th
 - Workshop job: [Check the cam chain and tensioner](/moto-zero/repair/repairs/cam-chain-check).
 - Many automatic tensioners must be wound back and locked before fitting, then released. Releasing them the wrong way can over-tighten the chain.
 - If the chain will not stay quiet after a correct tensioner fit, the chain is almost always worn out.
+- Fit a tensioner in its loosest position, with no load on the chain, then release or set it. See your manual for the engine mark to use.

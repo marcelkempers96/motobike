@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 202}
   - {doc: "K-Light 125 manual", page: 204}
   - {doc: "MAVCC Motorcycle Mechanic", page: 657}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/valve_timing.htm"}
 ---
 
 # Rocker arms and adjusters
@@ -37,6 +38,7 @@ When the shaft or bore is past the limit, the pad that touches the cam or pushro
 - Setting the clearance is a home job: [Check and adjust valve clearance](/moto-zero/repair/repairs/valve-clearance). Do it with the engine cold, at top dead centre on the compression stroke.
 - Hold the screw still while tightening the locknut, then check the gap again.
 - Replacing rockers means opening the head: [Assess the top end](/moto-zero/repair/repairs/top-end-assessment).
+- When tightening the cap, make sure the rocker ends sit on the centre of the valve stem and do not catch on its edge.
 
 ## Reference (K-Light 125)
 

@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 69}
   - {doc: "K-Light 125 manual", page: 222}
   - {doc: "MAVCC Motorcycle Mechanic", page: 731}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/clutches.htm"}
 ---
 
 # Clutch cable
@@ -36,6 +37,7 @@ Replace the cable if any strands are broken, the outer sleeve is cracked or kink
 - Route the new cable exactly where the old one ran, away from the exhaust and with no tight bends. Turn the bars lock to lock and check that the free play does not change.
 - Home job: [Replace the clutch cable](/moto-zero/repair/repairs/clutch-cable-replace), then [Adjust clutch lever free play](/moto-zero/repair/repairs/clutch-cable-adjust).
 - Keep it working: [Lubricate control cables](/moto-zero/repair/repairs/cable-lube).
+- Depending on the bike, the cable can be adjusted at both ends, at one end, or somewhere in the middle. Keep at least a little free play at the lever.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

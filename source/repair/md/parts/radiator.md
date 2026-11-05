@@ -7,6 +7,7 @@ applies_to: [liquid-cooled]
 sources:
   - {doc: "Unit 2 The Motorcycle", page: 19}
   - {doc: "Honda CBF500 owner's manual, coolant page", url: "https://www.bike-parts.fr/thumbs/pdf_url/img/owner_manuals/CBF500A5_E/2500_2500/0035.pdf"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/watercooling.htm"}
 ---
 
 # Radiator
@@ -34,3 +35,4 @@ When the core leaks and cannot be sealed, many tubes are blocked, or the mounts 
 - Never open the cap on a hot engine; boiling coolant can spray out and scald you.
 - Use new hose clips if the old ones are rusty. Refill and bleed air as your manual says.
 - Home jobs: [Check and top up coolant](/moto-zero/repair/repairs/coolant-check), [Find a coolant leak](/moto-zero/repair/repairs/cooling-leak-test).
+- Keep the reservoir at its line when cold. After a refill, run the engine up to temperature, let it cool, and check the radiator and reservoir again.

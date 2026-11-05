@@ -187,6 +187,191 @@
      "url": "https://www.dansmc.com/gearbox.htm"
     }
    ]
+  },
+  {
+   "id": "shift_drum",
+   "name": "Shift drum and shift forks",
+   "category": "transmission",
+   "aliases": [
+    "selector drum",
+    "gear selector drum",
+    "shift fork",
+    "selector fork",
+    "cam plate"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "repairs": [
+    "shift-drum-inspect",
+    "gearbox-assessment",
+    "gearbox-strip-order",
+    "gearshift-check"
+   ],
+   "problems": [
+    "jumps-out-of-gear",
+    "stuck-in-gear",
+    "false-neutral",
+    "hard-gear-change",
+    "hard-to-find-neutral",
+    "clunk-into-first"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearbox.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearshifters.htm"
+    }
+   ]
+  },
+  {
+   "id": "shift_pawl",
+   "name": "Shift pawl and stopper arm",
+   "category": "transmission",
+   "aliases": [
+    "gear change pawl",
+    "ratchet pawl",
+    "drum stopper",
+    "shift detent",
+    "stopper wheel",
+    "indexing arm"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "semi-auto"
+   ],
+   "repairs": [
+    "gearshift-check",
+    "shift-drum-inspect",
+    "gearbox-assessment",
+    "gear-lever-replace"
+   ],
+   "problems": [
+    "gear-lever-no-return",
+    "hard-gear-change",
+    "false-neutral",
+    "stuck-in-gear",
+    "gear-lever-loose",
+    "hard-to-find-neutral"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearshifters.htm"
+    }
+   ]
+  },
+  {
+   "id": "gearbox_gears",
+   "name": "Gearbox gears and shafts",
+   "category": "transmission",
+   "aliases": [
+    "main shaft",
+    "countershaft",
+    "transmission gears",
+    "gear cluster",
+    "dog gears"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "repairs": [
+    "gearbox-assessment",
+    "gearbox-strip-order",
+    "shift-drum-inspect",
+    "sprocket-shaft-seal"
+   ],
+   "problems": [
+    "gearbox-whine",
+    "jumps-out-of-gear",
+    "stuck-in-gear",
+    "hard-gear-change",
+    "clunk-into-first",
+    "false-neutral"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearbox.htm"
+    }
+   ]
+  },
+  {
+   "id": "chain_master_link",
+   "name": "Chain master link (joining link)",
+   "category": "transmission",
+   "aliases": [
+    "connecting link",
+    "split link",
+    "clip link",
+    "rivet link",
+    "joining link"
+   ],
+   "applies_to": [
+    "chain"
+   ],
+   "repairs": [
+    "chain-join",
+    "chain-sprocket-replace",
+    "chain-size-identify",
+    "chain-wear-check",
+    "chain-adjust"
+   ],
+   "problems": [
+    "chain-snapped",
+    "chain-jumps",
+    "chain-noise",
+    "chain-adjuster-at-end",
+    "chain-stretches-fast"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    }
+   ]
+  },
+  {
+   "id": "sprocket_retainer",
+   "name": "Front sprocket retainer (nut, lock washer, clip)",
+   "category": "transmission",
+   "aliases": [
+    "sprocket keeper",
+    "sprocket nut",
+    "lock washer",
+    "sprocket circlip",
+    "sprocket retaining plate"
+   ],
+   "applies_to": [
+    "chain"
+   ],
+   "repairs": [
+    "chain-sprocket-replace",
+    "sprocket-inspect",
+    "chain-adjust",
+    "sprocket-shaft-seal"
+   ],
+   "problems": [
+    "sprocket-worn",
+    "chain-jumps",
+    "chain-noise",
+    "chain-rubbing",
+    "chain-stretches-fast"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    }
+   ]
   }
  ]
 }

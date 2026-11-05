@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 53}
   - {doc: "MAVCC Motorcycle Mechanic", page: 654}
   - {doc: "Unit 2 The Motorcycle", page: 14}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/watercooling.htm"}
 ---
 
 # Oil is milky or creamy
@@ -26,6 +27,7 @@ Do not ride until you know the cause. A little cream only under the filler cap a
 - Is the bike used only for short trips?
 - Has it been through deep water or a flood, or washed with a pressure jet?
 - Liquid-cooled: is the coolant level falling?
+- Coolant pushing out of the radiator cap with the engine running points to a leak of combustion pressure into the coolant. Check the head gasket.
 
 ## Diagnose it step by step
 

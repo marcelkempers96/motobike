@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 176}
   - {doc: "MAVCC Motorcycle Mechanic", page: 488}
   - {doc: "MAVCC Motorcycle Mechanic", page: 509}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain has snapped
@@ -27,6 +28,9 @@ No. Pull the clutch in (or switch off an electric bike), steer to the side and s
 - Does the rear wheel turn freely? Is anything jammed around the sprockets?
 - Look at the engine case around the front sprocket for cracks and oil.
 - Look at the rear brake hose, speed sensor wire and swingarm for damage.
+- A chain that breaks can throw an end through the crankcase or lock the rear wheel. A solid guard in front of the front sprocket helps protect the case.
+- Do not shorten a badly stretched chain by taking out links to keep riding. The chain is past worn out; replace the chain and sprockets together.
+- Keep a spare master link clip in the tool kit.
 
 ## Diagnose it step by step
 

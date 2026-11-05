@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 190}
   - {doc: "K-Light 125 manual", page: 231}
   - {doc: "K-Light 125 manual", page: 232}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gearshifters.htm"}
 ---
 
 # Gear lever does not spring back
@@ -53,3 +54,4 @@ Ride with care. Gear changes become slow and you may miss a gear when you need i
 | Bent lever | Lever crooked after a fall | [Refit or replace the gear lever](/moto-zero/repair/repairs/gear-lever-replace) |
 | Weak or broken return spring | Bare spindle does not return | [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment) |
 | Bent shift spindle | Spindle stiff or wobbles | [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment) |
+| Broken or weak pawl return spring | The spring pulls the shift pawl and lever back to the middle after each change; if it fails, the lever stays where it was pushed | [Check the gear lever and shift linkage](/moto-zero/repair/repairs/gearshift-check) |

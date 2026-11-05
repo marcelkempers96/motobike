@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 61}
   - {doc: "K-Light 125 manual", page: 158}
   - {doc: "MAVCC Motorcycle Mechanic", page: 420}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Drive chain
@@ -37,6 +38,9 @@ Replace the chain when it is stretched beyond the maker's wear limit, when slack
 - Rider job: [Check and adjust chain slack](/moto-zero/repair/repairs/chain-adjust) and [Clean and lubricate the chain](/moto-zero/repair/repairs/chain-clean-lube).
 - Check: [Check the chain for wear](/moto-zero/repair/repairs/chain-wear-check). Replace: [Replace the chain and sprockets](/moto-zero/repair/repairs/chain-sprocket-replace).
 - Keep fingers clear of the sprockets. Never turn the wheel by the chain with the engine running.
+- Chain size is set by pitch and width. Chains of the same pitch but different strength (for example a standard and a heavy-duty type) can share a sprocket if the side clearance allows. Always confirm with your bike's manual.
+- Lubricate the chain at every fuel stop. O-ring chains still need lube, and the lube must be safe for sealed chains.
+- Fit the chain, front sprocket and rear sprocket as a set. A chain wears in its joints, which wears the sprockets.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

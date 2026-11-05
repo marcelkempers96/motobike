@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 262}
   - {doc: "K-Light 125 manual", page: 269}
   - {doc: "Unit 2 The Motorcycle", page: 19}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/watercooling.htm"}
 ---
 
 # Temperature gauge reads high or the warning light is on
@@ -27,6 +28,7 @@ Stop now and switch off until you know the engine is not overheating. Treat the 
 - Real heat signs: boiling or steam, hot smell, pinking, power loss, fan running hard?
 - Liquid-cooled: coolant level once cold.
 - Is the engine warning light also on?
+- If the gauge rises only when idling at a stop, check the fan first. Coolant level usually reads normal in that case.
 
 ## Diagnose it step by step
 

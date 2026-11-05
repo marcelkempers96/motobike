@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 59}
   - {doc: "K-Light 125 manual", page: 76}
   - {doc: "K-Light 125 manual", page: 78}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/batteries.htm"}
 ---
 
 # Battery goes flat after the bike is parked
@@ -28,6 +29,7 @@ With care once started. A fuel-injected bike needs battery power to run its pump
 - Are the battery terminals tight and clean?
 - How old is the battery? Lead acid batteries often weaken after 2 to 3 years (K-Light 125 manual).
 - Mostly short trips with the lights on?
+- A flat battery freezes more easily than a charged one. Do not charge a frozen battery; let it thaw first.
 
 ## Diagnose it step by step
 
@@ -65,6 +67,7 @@ With care once started. A fuel-injected bike needs battery power to run its pump
 | Brake light switch stuck on | Brake light lit with key off | [Test and adjust the brake light switches](/moto-zero/repair/repairs/brake-switch-test) |
 | Parasitic drain | Key-off current above limit | [Find what is draining the battery](/moto-zero/repair/repairs/parasitic-drain-test) |
 | Charging fault | Low charging voltage | [Test the charging system](/moto-zero/repair/repairs/charging-system-test) |
+| Frozen or sulfated battery | Case bulged after a freeze, or no charge after standing flat for a long time | [Test and charge a 12 V battery](/moto-zero/repair/repairs/battery-test-charge) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

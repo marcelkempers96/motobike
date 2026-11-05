@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 191}
   - {doc: "Unit 2 The Motorcycle", page: 19}
   - {doc: "MAVCC Motorcycle Mechanic", page: 782}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/pistons.htm"}
 ---
 
 # Engine has seized or locked up
@@ -62,3 +63,4 @@ No. If it happens while riding, pull the clutch lever in at once (or let the sco
 | Overheating, lean mixture | White plug, blocked fins or low coolant | [Check air cooling (fins, airflow, mixture)](/moto-zero/repair/repairs/air-cooling-check) |
 | Bearing seizure | Crank locked with piston free | [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment) |
 | Hard riding on a new rebuild | Seized soon after rebuild | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
+| Overheated cylinder and melted piston | Smeared aluminium on the bore, blued or discoloured wall | Workshop: new cylinder or liner, and check the head for flatness |

@@ -1,0 +1,430 @@
+{
+ "parts": {
+  "rear_sprocket": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted.jpg",
+    "caption": "Rear wheel parts with the driven sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_clip_bolted_sprocket.jpg",
+    "caption": "Broken tooth on a sprocket with bolted clip"
+   }
+  ],
+  "cush_drive": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_carrier.jpg",
+    "caption": "Rear wheel parts including the sprocket carrier"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted.jpg",
+    "caption": "Rear wheel parts with the driven sprocket"
+   }
+  ],
+  "gear_lever": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shift_patterns.jpg",
+    "caption": "Gear lever shaft on the engine side"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_shifters.jpg",
+    "caption": "Gear shift shaft on a modern engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_shifters_2.jpg",
+    "caption": "Gear lever pattern and shaft"
+   }
+  ],
+  "chain_guide": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_guides.jpg",
+    "caption": "Swingarm with the chain guide slider marked"
+   }
+  ],
+  "front_sprocket": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket_nut.jpg",
+    "caption": "Front sprocket nut with chain on it"
+   }
+  ]
+ },
+ "repairs": {
+  "cush-drive-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_carrier.jpg",
+    "caption": "Rear wheel parts including the sprocket carrier"
+   }
+  ],
+  "gear-lever-replace": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_shifters_2.jpg",
+    "caption": "Gear lever pattern and shaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_shifters.jpg",
+    "caption": "Gear shift shaft on a modern engine"
+   }
+  ],
+  "chain-wear-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bearing_area.jpg",
+    "caption": "Chain pin and bushing area where wear happens"
+   }
+  ],
+  "chain-adjust": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_check_shop_manual_correct_amount.jpg",
+    "caption": "Pulling the chain away from the rear sprocket"
+   }
+  ]
+ },
+ "problems": {
+  "clutch-slip": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_if_they_badly_worn_consider_replacing.jpg",
+    "caption": "Clutch plate stack with the plates that must mesh marked"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_mesh_plates_together.jpg",
+    "caption": "Clutch plates that must mesh with the basket"
+   }
+  ],
+  "clutch-drag": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_stuck_clutch.jpg",
+    "caption": "Clutch plates being prised apart"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_cam_worm.jpg",
+    "caption": "Clutch release rod and cam worm"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_grooves.jpg",
+    "caption": "Clutch basket grooves checked for wear"
+   }
+  ],
+  "clutch-judder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_inner_outer_fingers.jpg",
+    "caption": "Clutch plate fingers on the inner and outer plates"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_unit.jpg",
+    "caption": "Clutch pack lifted out of the engine"
+   }
+  ],
+  "clutch-no-resistance": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_engage_disengage_clutch.jpg",
+    "caption": "Cable pulling the clutch release, engaged and disengaged"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_some_activate_clutch_cover_some_use.jpg",
+    "caption": "Cable-operated clutch release, shown in section"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_most_clutches_have_disengagement_mechanism_center.jpg",
+    "caption": "Clutch rod, cable adjuster and rod adjuster on the engine"
+   }
+  ],
+  "clutch-noise": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_don_t_let_ball_bearing_fall.jpg",
+    "caption": "Clutch basket and plates fitted in the engine"
+   }
+  ],
+  "heavy-clutch": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_engage_disengage_clutch.jpg",
+    "caption": "Cable pulling the clutch release, engaged and disengaged"
+   }
+  ],
+  "hard-to-find-neutral": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_shifters_drum_slider_forks_shaft_3.jpg",
+    "caption": "Shift drum with a fork groove"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_wheel.jpg",
+    "caption": "Spring-loaded detent wheel on the shift drum"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_stuck_clutch.jpg",
+    "caption": "Clutch plates being prised apart"
+   }
+  ],
+  "auto-clutch-fault": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_shoe_type_automatic_clutch.jpg",
+    "caption": "Centrifugal clutch shoes and drum on an engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_drives_clutches.jpg",
+    "caption": "Centrifugal clutch shoes and drum inside the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_onda_400_torque_converter_suzuki_m31.jpg",
+    "caption": "Centrifugal clutch shoes, springs and drum laid out"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_i_will_try_add_more_time.jpg",
+    "caption": "Centrifugal clutch parts: weights, sprag and outer housing"
+   }
+  ],
+  "clunk-into-first": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_power_path.jpg",
+    "caption": "Power path through the gearbox in each gear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shims.jpg",
+    "caption": "Shims on the end of a gear shaft"
+   }
+  ],
+  "false-neutral": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_spring_loaded_plunder.jpg",
+    "caption": "Shifter mechanism diagram with stopper and return spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_pawl_adjust.jpg",
+    "caption": "Shift shaft arm with equal distances to set"
+   }
+  ],
+  "gear-lever-loose": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shift_patterns.jpg",
+    "caption": "Gear lever shaft on the engine side"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_shifters_2.jpg",
+    "caption": "Gear lever pattern and shaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_check_shop_manuals.jpg",
+    "caption": "Shift shaft arm, set equal distances to the manual"
+   }
+  ],
+  "gear-lever-no-return": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_ratchet_pawl.jpg",
+    "caption": "Shift ratchet pawl in the engine case"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_pawl_2.jpg",
+    "caption": "Shift pawl and return spring in the engine case"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_these_drums_need_something_turn_them.jpg",
+    "caption": "Shift drum, pawl and return spring in the case"
+   }
+  ],
+  "gearbox-whine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gear_teeth.jpg",
+    "caption": "Slight wear and pitting on gear teeth"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_broken_teeth.jpg",
+    "caption": "Gear with broken teeth"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_could_bit_steel_aluminum_who_knows.jpg",
+    "caption": "Slight wear and pitting on gear dogs"
+   }
+  ],
+  "hard-gear-change": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_check_shop_manuals_2.jpg",
+    "caption": "Pawl adjuster in the engine case"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_these_drums_need_something_turn_them_2.jpg",
+    "caption": "Shift pawl, drum and stopper arm in the case"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_drum_2.jpg",
+    "caption": "Shift drum held in the hand"
+   }
+  ],
+  "stuck-in-gear": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_egg_crate.jpg",
+    "caption": "Gear shaft parts laid out in an egg carton"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_horizontally_split_2.jpg",
+    "caption": "Horizontally split crankcase with gears in place"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_shifters_drum_slider_forks_shaft_2.jpg",
+    "caption": "Shift drum with three shift forks"
+   }
+  ],
+  "chain-dry-rusty": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_now_let_set_10_15_minutes.jpg",
+    "caption": "Chain left to settle after lubricant is sprayed"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_fancy_styles.jpg",
+    "caption": "O-ring chain cutaway"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_enclosed_rear_chain.jpg",
+    "caption": "Enclosed chain case on an older bike"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_old_days_rear_chains_were_totally.jpg",
+    "caption": "Enclosed rear chain on an older bike"
+   }
+  ],
+  "chain-jumps": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_now_s_worn_sprocket.jpg",
+    "caption": "Worn sprocket teeth"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bob_lane_sent_me_picture_england.jpg",
+    "caption": "Sprocket destroyed by a worn chain"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket.jpg",
+    "caption": "Worn teeth on a rear sprocket"
+   }
+  ],
+  "chain-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_guides.jpg",
+    "caption": "Swingarm with the chain guide slider marked"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_adjuster_rollers.jpg",
+    "caption": "Chain adjuster rollers"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_play.jpg",
+    "caption": "Diagram of chain mid-span movement"
+   }
+  ],
+  "chain-rubbing": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_guides.jpg",
+    "caption": "Swingarm with the chain guide slider marked"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_adjuster_rollers.jpg",
+    "caption": "Chain adjuster rollers"
+   }
+  ],
+  "chain-snapped": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bob_lane_sent_me_picture_england.jpg",
+    "caption": "Sprocket destroyed by a worn chain"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_clip_type.jpg",
+    "caption": "Clip type master link"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_one_roller.jpg",
+    "caption": "Chain sections and master links, clip type shown"
+   }
+  ],
+  "chain-stretches-fast": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bearing_area.jpg",
+    "caption": "Chain pin and bushing area where wear happens"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_check_shop_manual_correct_amount.jpg",
+    "caption": "Pulling the chain away from the rear sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_testing_chain.jpg",
+    "caption": "Testing a chain for wear"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_edges.jpg",
+    "caption": "Chain parts: pin, bushing, roller and link plates"
+   }
+  ],
+  "chain-tight-spots": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_testing_chain.jpg",
+    "caption": "Testing a chain for wear"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bearing_area.jpg",
+    "caption": "Chain pin and bushing area where wear happens"
+   }
+  ],
+  "cush-drive-clunk": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_carrier.jpg",
+    "caption": "Rear wheel parts including the sprocket carrier"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted.jpg",
+    "caption": "Rear wheel parts with the driven sprocket"
+   }
+  ],
+  "sprocket-worn": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_now_s_worn_sprocket.jpg",
+    "caption": "Worn sprocket teeth"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bob_lane_sent_me_picture_england.jpg",
+    "caption": "Sprocket destroyed by a worn chain"
+   }
+  ],
+  "cvt-slip": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_driven_clutch.jpg",
+    "caption": "Exploded driven clutch with spring (belt-type drive)"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_drive_clutch.jpg",
+    "caption": "Exploded drive clutch (belt-type drive)"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_clutch.jpg",
+    "caption": "Belt drive in low and high ratio"
+   }
+  ],
+  "cvt-low-top-speed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_clutch.jpg",
+    "caption": "Belt drive in low and high ratio"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_drive_clutch.jpg",
+    "caption": "Exploded drive clutch (belt-type drive)"
+   }
+  ],
+  "cvt-judder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_drive_clutch.jpg",
+    "caption": "Exploded drive clutch (belt-type drive)"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_driven_clutch.jpg",
+    "caption": "Exploded driven clutch with spring (belt-type drive)"
+   }
+  ],
+  "cvt-noise": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_driven_clutch.jpg",
+    "caption": "Exploded driven clutch with spring (belt-type drive)"
+   }
+  ]
+ },
+ "systems": {
+  "clutch": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch.jpg",
+    "caption": "Exploded manual clutch with basket, plates and springs"
+   }
+  ]
+ }
+}

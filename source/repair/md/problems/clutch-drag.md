@@ -16,6 +16,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 191}
   - {doc: "K-Light 125 manual", page: 222}
   - {doc: "MAVCC Motorcycle Mechanic", page: 577}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/clutches.htm"}
 ---
 
 # Clutch drags: the bike creeps or lurches when in gear with the lever pulled
@@ -66,6 +67,7 @@ Ride with care. The bike may lurch into the junction when you select first, or s
 | High idle | Revs above specification | [Idle speed is too high](/moto-zero/repair/problems/high-idle) |
 | Thick, old or wrong oil | Drag only when cold | [Change the engine oil](/moto-zero/repair/repairs/engine-oil-service) |
 | Warped steels, notched basket, worn lifter | Persists after all the above | [Inspect and replace clutch plates and springs](/moto-zero/repair/repairs/clutch-plate-service) |
+| Bent release rod (rod-operated clutch) | Clutch stopped working suddenly; the rod passes near the front sprocket, where sticks and dirt thrown off the chain can bend it | Check the rod before stripping the clutch: [Free stuck clutch plates and check the release rod](/moto-zero/repair/repairs/clutch-plates-stuck-free) |
 
 ## Reference values (K-Light 125)
 

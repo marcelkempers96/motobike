@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 76}
   - {doc: "K-Light 125 manual", page: 78}
   - {doc: "K-Light 125 manual", page: 79}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/electricaltesting.htm"}
 ---
 
 # Regulator rectifier
@@ -31,6 +32,8 @@ When charging voltage is out of range with a good battery, good stator readings 
 - Match make, model and year, or the part number: single-phase or three-phase, number of wires and plug.
 - Some newer types (MOSFET) run cooler; only fit one if it is made for your charging system.
 - Cheap units can overcharge. Test charging voltage after fitting.
+- On many newer bikes the rectifier and regulator are one unit. If either half fails, replace the whole unit.
+- Some bikes with no battery have no regulator and blow bulbs at high revs. A suitable aftermarket regulator can fix this; check the system voltage first.
 
 ## Fitting notes
 - Home job: [Test the regulator rectifier](/moto-zero/repair/repairs/regulator-test), [Test the charging system](/moto-zero/repair/repairs/charging-system-test).

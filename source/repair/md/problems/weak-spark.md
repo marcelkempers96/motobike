@@ -14,6 +14,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 86}
   - {doc: "K-Light 125 manual", page: 87}
   - {doc: "MAVCC Motorcycle Mechanic", page: 257}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cdiignition.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bat_coil_ign.htm"}
 ---
 
 # Weak, thin or orange spark
@@ -70,6 +72,8 @@ With care. A weak spark can cause misfires and sudden loss of power. Avoid busy 
 | Weak coil | Swap test | [Test the ignition coil and plug cap](/moto-zero/repair/repairs/ignition-coil-test) |
 | Weak pick-up or source coil | Low peak voltage | [Test the ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 | CDI or ECU | All else good | [Diagnose a suspected CDI or ECU fault](/moto-zero/repair/repairs/cdi-ecu-diagnosis) |
+| Worn points or a failed condenser (points ignition) | Pitted faces, wrong gap or heavy arcing | [Inspect, clean and replace contact breaker points](/moto-zero/repair/repairs/contact-points-replace) |
+| Pick-up air gap too wide (electronic ignition) | Gap to the flywheel magnet checked with a non-magnetic gauge; use the value in your bike's manual | [Test an ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

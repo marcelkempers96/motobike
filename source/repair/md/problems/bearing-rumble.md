@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 191}
   - {doc: "K-Light 125 manual", page: 236}
   - {doc: "K-Light 125 manual", page: 241}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/roller_bearings.htm"}
 ---
 
 # Rumbling or growling from inside the engine
@@ -26,6 +27,7 @@ Do not ride until checked. A failing main bearing can let the crankshaft move an
 - Does the noise change when you pull the clutch lever in, at idle in neutral?
 - Does it happen with the engine running and the bike still, or only when moving?
 - Is the chain dry or the rear wheel noisy when spun by hand?
+- A bearing that binds, then seems to free itself when the shaft is turned back and forth, has not recovered. Do not start the engine.
 
 ## Diagnose it step by step
 

@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 241}
   - {doc: "Unit 2 The Motorcycle", page: 10}
   - {doc: "Unit 2 The Motorcycle", page: 11}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/split_crankcase.htm"}
 ---
 
 # Crankshaft and connecting rod
@@ -37,6 +38,7 @@ When the big end has radial or side play past the limit, the crank runout is too
 - Workshop job: the crankcase must be split. See [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment).
 - Find the cause of failure (oil starvation, dirty oil, wrong oil) before fitting a new crank, or it will fail again.
 - After the rebuild use clean oil and the right quantity: [Change the engine oil](/moto-zero/repair/repairs/engine-oil-service).
+- Crankshaft bearings are often a tight fit on the shaft. A puller tool pulls the shaft through the bearing so only the inner ring is loaded.
 
 ## Reference (K-Light 125)
 

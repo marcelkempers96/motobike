@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 190}
   - {doc: "K-Light 125 manual", page: 221}
   - {doc: "K-Light 125 manual", page: 225}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/kickstarters.htm"}
 ---
 
 # Kickstarter
@@ -35,6 +36,9 @@ Replace the lever if bent or the splines are worn. Replace the ratchet, ratchet 
 - Lever fitting is a home job; set the lever so it does not touch the footpeg at the top of its swing.
 - Internal parts: workshop. See [Check the kickstart mechanism](/moto-zero/repair/repairs/kickstart-check).
 - Always kick with the ball of your foot and let the lever return under control.
+- Two systems exist. In a primary-drive kickstarter, the engine turns over even in gear with the clutch lever pulled. In a transmission-drive one, the engine turns only if the clutch is engaged. To find out which, select gear, pull the clutch lever and kick. The system cannot be changed.
+- Look for punch marks on the shaft, gear and compression-release cam. Match them on reassembly.
+- Many electronic ignitions cut the spark at very low engine speed to stop kickback, so a slow, weak kick may not start the engine.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

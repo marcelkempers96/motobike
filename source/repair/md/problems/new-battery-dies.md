@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 76}
   - {doc: "K-Light 125 manual", page: 78}
   - {doc: "MAVCC Motorcycle Mechanic", page: 299}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/batteries.htm"}
 ---
 
 # A new battery goes flat quickly
@@ -63,6 +64,7 @@ With care. A bike that may not restart, or a fuel-injected bike whose battery ru
 | Charging fault | Voltage below range | [Test the charging system](/moto-zero/repair/repairs/charging-system-test) |
 | Overcharging | Voltage above range; hot battery | [Test the regulator rectifier](/moto-zero/repair/repairs/regulator-test) |
 | Faulty new battery | Will not hold charge off the bike | Warranty claim |
+| Dry-charged battery filled but not charged as instructed | Low voltage soon after fitting | [Fill and activate a new dry-charged battery](/moto-zero/repair/repairs/battery-dry-activate) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

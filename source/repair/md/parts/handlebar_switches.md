@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 86}
   - {doc: "K-Light 125 manual", page: 105}
   - {doc: "Unit 2 The Motorcycle", page: 3}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/dc_switches.htm"}
 ---
 
 # Handlebar switches
@@ -30,6 +31,7 @@ When cleaning does not restore continuity, plastic parts are broken, or the wire
 - Match make, model and year, and the plug and wire colours. Compare with the switch table in your manual.
 - Check the functions match: some housings add a hazard switch, a pass switch or a light on/off switch.
 - Check the housing fits your bar diameter and has the locating pin hole.
+- Use switches rated for DC. A household AC switch has small contacts that burn on a 12 V circuit: [Choose the right switch for a 12 V circuit](/moto-zero/repair/repairs/dc-switch-select).
 
 ## Fitting notes
 - Home job: [Clean a handlebar switch](/moto-zero/repair/repairs/switch-clean); kill switch: [Test the engine stop switch](/moto-zero/repair/repairs/kill-switch-test).

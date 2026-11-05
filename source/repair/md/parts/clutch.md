@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 69}
   - {doc: "K-Light 125 manual", page: 222}
   - {doc: "MAVCC Motorcycle Mechanic", page: 380}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/clutches.htm"}
 ---
 
 # Clutch assembly
@@ -34,6 +35,8 @@ Most slipping and dragging is fixed by setting the lever free play first. Replac
 ## Fitting notes
 - Rider job: [Adjust the clutch lever free play](/moto-zero/repair/repairs/clutch-cable-adjust).
 - Home workshop: [Service the clutch plates and springs](/moto-zero/repair/repairs/clutch-plate-service). Soak new friction plates in engine oil before fitting.
+- All clutches need a little free play at the lever so the springs can press the plates fully. Where a rod-type clutch has an adjusting screw and lock nut on the release lever, set it first, then the cable free play. The screw can have a left-hand thread, so check the manual.
+- A bike that has stood for a long time can have plates stuck together. See [Free stuck clutch plates](/moto-zero/repair/repairs/clutch-plates-stuck-free).
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

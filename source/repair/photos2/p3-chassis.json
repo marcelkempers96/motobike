@@ -1,0 +1,565 @@
+{
+ "parts": {
+  "brake_cable": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_front_drum_brakes_normally_cable_operated.jpg",
+    "caption": "Cable-operated front drum brake"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_shaft_operated_rear_brake.jpg",
+    "caption": "Rear drum brake parts diagram with rod and adjuster"
+   }
+  ],
+  "brake_disc": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_axle_can_just_go_through_fork_2.jpg",
+    "caption": "Front disc and caliper on a spoked wheel"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_lot_dirt_bikes_have_open_slots.jpg",
+    "caption": "Rear brake disc and swingarm with axle block"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_course_s_never_easy.jpg",
+    "caption": "Front disc brake with the axle nut labelled"
+   }
+  ],
+  "brake_hose": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_try_bleeding_air_every_fitting.jpg",
+    "caption": "Brake line diagram with hose, union bolts and caliper fittings"
+   }
+  ],
+  "brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_front_wheel_removal_2.jpg",
+    "caption": "Front wheel with disc brake and fork leg"
+   }
+  ],
+  "drum_brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_lever_them_off.jpg",
+    "caption": "Levering a brake shoe off the backing plate"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_both_cases_will_need_remove_wheel.jpg",
+    "caption": "Drum brake backing plate with shoes and springs"
+   }
+  ],
+  "rear_brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_may_also_have_remove_mufflers_shocks.jpg",
+    "caption": "Drum brake adjuster and anchor bolt at the rear wheel"
+   }
+  ],
+  "swingarm": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_guides.jpg",
+    "caption": "Swingarm parts diagram with pivot bolt, collars and seals"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut_2.jpg",
+    "caption": "Rear swingarm end with chain and sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_loosen_nut_push_forward_unhook_chain.jpg",
+    "caption": "Rear axle nut and chain adjuster on a swingarm"
+   }
+  ],
+  "rear_shock": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel.jpg",
+    "caption": "Rear wheel fitted with drum brake and shock"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel_removal.jpg",
+    "caption": "Rear wheel with the shock absorber beside it"
+   }
+  ],
+  "inner_tube": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_installing_tire.jpg",
+    "caption": "Fitting a tyre and tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_changing_tire.jpg",
+    "caption": "Wire wheel with the tyre part off the rim"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tires_tubes.jpg",
+    "caption": "Bare rim with the tyre half off"
+   }
+  ],
+  "front_tyre": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tire_date_code.jpg",
+    "caption": "Date code on a tyre sidewall"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_arrow.jpg",
+    "caption": "Drive direction arrow on a tyre sidewall"
+   }
+  ],
+  "rear_tyre": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel_removal.jpg",
+    "caption": "Rear wheel with the shock absorber beside it"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_one_lug_nut_2.jpg",
+    "caption": "Rear wheel and tyre on a single-sided swingarm"
+   }
+  ],
+  "axle": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_pinch_bolt_nut.jpg",
+    "caption": "Front axle with pinch bolt on the fork leg"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_two_pinch_nuts.jpg",
+    "caption": "Two axle pinch nuts on a fork leg"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_axle_can_just_go_through_fork_2.jpg",
+    "caption": "Front disc and caliper on a spoked wheel"
+   }
+  ],
+  "fork_oil": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_length_pipe_some_tubing_chicken_baster.jpg",
+    "caption": "Home-made fork oil level tool from pipe and baster"
+   }
+  ],
+  "speedo_cable": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_speedo_drive_outside_hub.jpg",
+    "caption": "Front hub with the speedometer cable running to the drive"
+   }
+  ]
+ },
+ "repairs": {
+  "brake-disc-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_course_s_never_easy.jpg",
+    "caption": "Front disc brake with the axle nut labelled"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_lot_dirt_bikes_have_open_slots.jpg",
+    "caption": "Rear brake disc and swingarm with axle block"
+   }
+  ],
+  "brake-drag-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_if_sure_brakes_not_dragging_drum.jpg",
+    "caption": "Feeling the drum after a ride"
+   }
+  ],
+  "brake-hose-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_try_bleeding_air_every_fitting.jpg",
+    "caption": "Brake line diagram with hose, union bolts and caliper fittings"
+   }
+  ],
+  "drum-brake-adjust": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_front_drum_brakes_normally_cable_operated.jpg",
+    "caption": "Cable-operated front drum brake"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_2.jpg",
+    "caption": "Drum brake diagram naming brake arm, panel and cam"
+   }
+  ],
+  "fork-seal-clean": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks.jpg",
+    "caption": "Front fork legs"
+   }
+  ],
+  "rear-pedal-adjust": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_shaft_operated_rear_brake.jpg",
+    "caption": "Rear drum brake parts diagram with rod and adjuster"
+   }
+  ],
+  "rear-shock-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel_removal.jpg",
+    "caption": "Rear wheel with the shock absorber beside it"
+   }
+  ],
+  "steering-bearing-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings_2.jpg",
+    "caption": "Tapered roller steering bearing and cup"
+   }
+  ],
+  "swingarm-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_guides.jpg",
+    "caption": "Swingarm parts diagram with pivot bolt, collars and seals"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut_2.jpg",
+    "caption": "Rear swingarm end with chain and sprocket"
+   }
+  ],
+  "wheel-balance": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_marker.jpg",
+    "caption": "Matching the tyre balance mark to the valve"
+   }
+  ],
+  "wheel-bearing-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_wheel_bearings.jpg",
+    "caption": "Wheel bearings"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_tapered_roller_bearings.jpg",
+    "caption": "Tapered roller bearings"
+   }
+  ],
+  "tube-puncture-repair": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_changing_tire.jpg",
+    "caption": "Wire wheel with the tyre part off the rim"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tires_tubes.jpg",
+    "caption": "Bare rim with the tyre half off"
+   }
+  ]
+ },
+ "problems": {
+  "bars-misaligned": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_aline_front_wheel.jpg",
+    "caption": "Checking the front wheel is aligned with the bike"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_loosen_bolts.jpg",
+    "caption": "Fork clamp bolts on the yokes"
+   }
+  ],
+  "bead-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_bead_expander.jpg",
+    "caption": "Bead expander tool"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_rubber_donut.jpg",
+    "caption": "Rubber ring that fills the bead gap"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_something_expand_bead_if_necessary.jpg",
+    "caption": "Strap tightened around a tyre to press the bead out"
+   }
+  ],
+  "brake-drag": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_if_sure_brakes_not_dragging_drum.jpg",
+    "caption": "Feeling the drum after a ride"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion_2.jpg",
+    "caption": "Corroded brake plunger with rust and dirt build-up"
+   }
+  ],
+  "brake-fade": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads.jpg",
+    "caption": "A pair of disc brake pads"
+   }
+  ],
+  "brake-fluid-dark": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_cylinder_reservoir_made_out_plastic.jpg",
+    "caption": "Master cylinder with its plastic reservoir"
+   }
+  ],
+  "brake-fluid-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_little_rubber_dust_boot.jpg",
+    "caption": "Rubber dust boot on the master cylinder"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_brake_cylinder_circlip.jpg",
+    "caption": "Master cylinder plunger shaft with spring and circlip"
+   }
+  ],
+  "brake-grinding": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads_worn_different_rates.jpg",
+    "caption": "Brake pad worn unevenly"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_both_cases_will_need_remove_wheel.jpg",
+    "caption": "Drum brake backing plate with shoes and springs"
+   }
+  ],
+  "brake-judder": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_axle_can_just_go_through_fork_2.jpg",
+    "caption": "Front disc and caliper on a spoked wheel"
+   }
+  ],
+  "brake-squeal": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads_worn_different_rates_round_pads.jpg",
+    "caption": "Anti-rattle spring that holds the pads in the caliper"
+   }
+  ],
+  "caliper-sticking": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_piston.jpg",
+    "caption": "Caliper piston removed for cleaning"
+   }
+  ],
+  "drum-brake-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_both_cases_will_need_remove_wheel.jpg",
+    "caption": "Drum brake backing plate with shoes and springs"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_lever_them_off.jpg",
+    "caption": "Levering a brake shoe off the backing plate"
+   }
+  ],
+  "drum-brake-weak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_makes_brakes_work_better.jpg",
+    "caption": "Brake held on while the axle is tightened"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_drum_brakes.jpg",
+    "caption": "Drum brake shoes and backing plate"
+   }
+  ],
+  "lever-sinks": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_plunger_shaft.jpg",
+    "caption": "Rear master cylinder with the plunger shaft labelled"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_brake_cylinder_circlip.jpg",
+    "caption": "Master cylinder plunger shaft with spring and circlip"
+   }
+  ],
+  "lever-to-bar": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_i_like_cover_everything_could_dripped.jpg",
+    "caption": "Master cylinder with the circlip showing"
+   }
+  ],
+  "spongy-brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_try_bleeding_air_every_fitting.jpg",
+    "caption": "Brake line diagram with hose, union bolts and caliper fittings"
+   }
+  ],
+  "rear-pedal-travel": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_shaft_operated_rear_brake.jpg",
+    "caption": "Rear drum brake parts diagram with rod and adjuster"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_may_also_have_remove_mufflers_shocks.jpg",
+    "caption": "Drum brake adjuster and anchor bolt at the rear wheel"
+   }
+  ],
+  "weak-brakes": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_do_not_compress_caliper_pistons.jpg",
+    "caption": "Pair of disc brake pads ready to fit"
+   }
+  ],
+  "loose-spokes": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spoke_wheel_lacing.jpg",
+    "caption": "Tightening a spoke nipple with a spoke key"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_tighten_sopkes_order.jpg",
+    "caption": "Wire wheel with spokes marked for tightening order"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_adusting_spokes.jpg",
+    "caption": "Adjusting the spokes with a spoke key"
+   }
+  ],
+  "puncture-tube": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_installing_tire.jpg",
+    "caption": "Fitting a tyre and tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_tire_irons_lever_bead_over.jpg",
+    "caption": "Two tyre irons levering the bead"
+   }
+  ],
+  "rim-damage": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_getting_rim_round.jpg",
+    "caption": "Checking the rim for round"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_rim_side_play.jpg",
+    "caption": "Checking rim side play"
+   }
+  ],
+  "valve-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_different_styles.jpg",
+    "caption": "Rubber valves and valve cores"
+   }
+  ],
+  "speed-vibration": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_marker.jpg",
+    "caption": "Matching the tyre balance mark to the valve"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel.jpg",
+    "caption": "Dial gauge reading rim run-out"
+   }
+  ],
+  "tyre-cracked": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tire_date_code.jpg",
+    "caption": "Date code on a tyre sidewall"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_there_may_several_each_tire.jpg",
+    "caption": "Tread wear marker and date code on a tyre"
+   }
+  ],
+  "tyre-centre-wear": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_there_may_several_each_tire.jpg",
+    "caption": "Tread wear marker and date code on a tyre"
+   }
+  ],
+  "wheel-buckled": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_once_pretty_close_before_spokes_real_2.jpg",
+    "caption": "Dial gauge on the side of the rim"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel_2.jpg",
+    "caption": "Spoked rim with spokes numbered from the high spot"
+   }
+  ],
+  "wheel-bearing-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_wheel_bearings.jpg",
+    "caption": "Wheel bearings"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_tapered_roller_bearings.jpg",
+    "caption": "Tapered roller bearings"
+   }
+  ],
+  "wheel-bearing-play": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_then_just_clean_bearing_add_more.jpg",
+    "caption": "Working at a sealed bearing in the hub with a thin tool"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_very_expensive.jpg",
+    "caption": "Wheel bearing seated in a hub bore"
+   }
+  ],
+  "fork-bottoming": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks_2.jpg",
+    "caption": "Fork assembly diagram with the spring along the tube"
+   }
+  ],
+  "fork-harsh": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_special_tool_2.jpg",
+    "caption": "Oil level tool with syringe for setting fork oil"
+   }
+  ],
+  "fork-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_seal_removal.jpg",
+    "caption": "Removing a fork seal"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_screw_driver.jpg",
+    "caption": "Prising out a fork seal with a screwdriver"
+   }
+  ],
+  "fork-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_bushings_semi_tight_fit_so_will.jpg",
+    "caption": "Tapping a fork bushing in with a flat punch"
+   }
+  ],
+  "fork-sticky": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks.jpg",
+    "caption": "Front fork legs"
+   }
+  ],
+  "fork-twisted": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_loosen_bolts.jpg",
+    "caption": "Fork clamp bolts on the yokes"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_aline_front_wheel.jpg",
+    "caption": "Checking the front wheel is aligned with the bike"
+   }
+  ],
+  "front-clunk-braking": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_pinch_bolt_nut.jpg",
+    "caption": "Front axle with pinch bolt on the fork leg"
+   }
+  ],
+  "headshake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings.jpg",
+    "caption": "Loose steering ball bearings and race"
+   }
+  ],
+  "heavy-steering": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings.jpg",
+    "caption": "Caged tapered roller steering bearing and cup"
+   }
+  ],
+  "notchy-steering": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings_2.jpg",
+    "caption": "Tapered roller steering bearing and cup"
+   }
+  ],
+  "swingarm-play": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_guides.jpg",
+    "caption": "Swingarm parts diagram with pivot bolt, collars and seals"
+   }
+  ],
+  "speedo-cable-fault": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_them.jpg",
+    "caption": "Speedometer drive on the outside of the hub"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_speedo_drive_outside_hub.jpg",
+    "caption": "Front hub with the speedometer cable running to the drive"
+   }
+  ],
+  "cable-frayed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_most_clutches_have_disengagement_mechanism_center.jpg",
+    "caption": "Clutch rod, cable adjuster and rod adjuster on the engine"
+   }
+  ]
+ },
+ "systems": {}
+}

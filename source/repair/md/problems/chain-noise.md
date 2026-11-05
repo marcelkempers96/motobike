@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 176}
   - {doc: "K-Light 125 manual", page: 177}
   - {doc: "MAVCC Motorcycle Mechanic", page: 509}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain is noisy, clattering or slapping
@@ -27,6 +28,7 @@ Ride with care and check it today. A noisy chain can be close to jumping off or 
 - Push the chain up and down at the middle of the lower run. Very loose or very tight?
 - Look for marks where the chain hits the swingarm, slider or guard.
 - Look at the rear sprocket teeth.
+- Check wheel alignment. The front and rear sprockets must be in line, or the chain wears more on one side. Look along the chain to see that it runs straight.
 
 ## Diagnose it step by step
 

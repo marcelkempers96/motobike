@@ -7,6 +7,7 @@ applies_to: [chain]
 sources:
   - {doc: "K-Light 125 manual", page: 160}
   - {doc: "K-Light 125 manual", page: 171}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain guide and slider
@@ -34,6 +35,7 @@ Replace the slider when worn to the metal or deeply grooved. Replace a cracked o
 - Some sliders can only be changed with the swingarm out; see [Check the swingarm pivot](/moto-zero/repair/repairs/swingarm-check).
 - Set slack correctly afterwards: [Check and adjust chain slack](/moto-zero/repair/repairs/chain-adjust).
 - See [Check chain guides, sliders and guards](/moto-zero/repair/repairs/chain-guide-check).
+- When the chain is off, look at the guides on the swingarm and the slack rollers at the adjuster. Replace any that are worn.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

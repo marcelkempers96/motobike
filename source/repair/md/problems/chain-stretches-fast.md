@@ -15,6 +15,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 176}
   - {doc: "K-Light 125 manual", page: 177}
   - {doc: "MAVCC Motorcycle Mechanic", page: 488}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain needs adjusting very often
@@ -29,6 +30,8 @@ Ride with care. First check the axle nut (step 1). A wheel that moves in the swi
 - Is the axle nut tight?
 - When did you last clean and oil the chain?
 - Were a new chain and new sprockets fitted together?
+- A chain does not truly stretch. Wear in the pin and bushing joints makes it longer in pitch, and that in turn wears the sprocket teeth, so a worn chain usually means worn sprockets too.
+- A worn chain is hard to adjust because some spots are tight and others loose. Set the slack at the tightest spot.
 
 ## Diagnose it step by step
 

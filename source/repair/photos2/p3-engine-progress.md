@@ -10,3 +10,36 @@
 - part page written: compression_release
 - part page written: silencer_baffle
 - part page written: radiator_cap
+- photos json written p3-engine.json (rerun p3.py in scratchpad to regenerate)
+- photos placed (task2) done; next: task 3 edits
+- edited problems/low-compression
+- edited problems/low-compression
+- edited problems/low-compression
+- edited problems/piston-slap
+- edited problems/engine-seized
+- edited problems/deep-knock
+- edited problems/metal-in-oil
+- edited problems/bearing-rumble
+- edited problems/tappet-tick
+- edited problems/cam-chain-rattle
+- edited problems/exhaust-blocked
+- edited problems/exhaust-blocked
+- edited problems/exhaust-leak
+- edited problems/overheating-liquid
+- edited problems/overheating-liquid
+- edited problems/temp-gauge-high
+- edited problems/coolant-leak
+- edited problems/milky-oil
+- edited parts/valves
+- edited parts/valves
+- edited parts/valves
+- edited parts/valve_springs
+- edited parts/piston_rings
+- edited parts/cylinder
+- edited parts/cylinder
+- edited parts/cam_tensioner
+- edited parts/camshaft
+- edited parts/rocker_arms
+- edited parts/radiator
+- edited parts/crankshaft
+- edited parts/exhaust

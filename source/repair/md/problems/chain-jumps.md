@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 161}
   - {doc: "K-Light 125 manual", page: 177}
   - {doc: "MAVCC Motorcycle Mechanic", page: 509}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain jumps teeth or comes off the sprockets
@@ -27,6 +28,8 @@ No. Stop as soon as it is safe. Pull the clutch in (or switch off an electric bi
 - Look at the engine case near the front sprocket for cracks or oil.
 - Look at the chain adjusters: are both marks the same and is the axle nut tight?
 - Look at the rear sprocket teeth.
+- Chain and both sprockets wear together. Replace them as a set and do not mix new parts with worn ones.
+- A dished sprocket fitted the wrong way round wears very quickly. Check which way it faces.
 
 ## Diagnose it step by step
 

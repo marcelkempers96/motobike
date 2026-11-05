@@ -15,6 +15,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 224}
   - {doc: "K-Light 125 manual", page: 225}
   - {doc: "MAVCC Motorcycle Mechanic", page: 577}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/clutches.htm"}
 ---
 
 # Clutch slips: revs rise but the bike does not pull
@@ -29,6 +30,8 @@ Ride gently and only as far as you need. A slipping clutch can leave you without
 - Does the lever spring back fully when you let go?
 - Was the oil changed recently, or an additive added?
 - Look at the oil level window or dipstick.
+- When the plates are out, smell them. A burnt smell means they should be replaced, even if they look and measure within limit.
+- Slipping the clutch on purpose (feathering it for long periods in traffic or on hills) is a common way to burn the plates.
 
 ## Diagnose it step by step
 

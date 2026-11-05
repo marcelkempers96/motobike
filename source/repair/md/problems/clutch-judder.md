@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 69}
   - {doc: "K-Light 125 manual", page: 224}
   - {doc: "MAVCC Motorcycle Mechanic", page: 577}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/clutches.htm"}
 ---
 
 # Clutch grabs or judders when pulling away
@@ -63,6 +64,7 @@ Ride with care. Judder makes slow manoeuvres, hill starts and pulling out with a
 | Loose engine mounts | Bolts loose, bushes split | [Check engine mounting bolts](/moto-zero/repair/repairs/engine-mount-check) |
 | Oil type or age | Started after oil change | [Change the engine oil](/moto-zero/repair/repairs/engine-oil-service) |
 | Glazed plates, warped steels, notched basket | Persists after all the above | [Inspect and replace clutch plates and springs](/moto-zero/repair/repairs/clutch-plate-service) |
+| Plates fitted wrongly after a clutch job | Judder or slip started after the clutch was opened | Refit plates in the original order. The plate that carries the springs must mesh with the basket, or the springs cannot press the pack evenly. Oil new fibre plates before fitting (see your bike's manual) |
 
 ## Reference values (K-Light 125)
 

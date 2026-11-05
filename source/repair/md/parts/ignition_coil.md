@@ -10,6 +10,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 88}
   - {doc: "K-Light 125 manual", page: 265}
   - {doc: "Unit 2 The Motorcycle", page: 34}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cdiignition.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bat_coil_ign.htm"}
 ---
 
 # Ignition coil and plug cap
@@ -33,6 +35,7 @@ When it gives no spark or a weak spark with good supply and good triggering, or 
 - Match make, model and year, or the coil part number. CDI and transistor (ECU) ignitions use different coils.
 - Match the plug cap: straight or angled, with or without resistor, and the right fit on the plug top.
 - Cheap coils may give a weak spark or fail when hot. Buy from a dealer or known ignition maker.
+- The cap and lead are sold separately on many bikes: [Spark plug cap and HT lead](/moto-zero/repair/parts/plug_cap). Points systems also use a [condenser](/moto-zero/repair/parts/condenser) and [contact points](/moto-zero/repair/parts/contact_points).
 
 ## Fitting notes
 - Home job: [Test the ignition coil and plug cap](/moto-zero/repair/repairs/ignition-coil-test), [Check for a spark safely](/moto-zero/repair/repairs/spark-test).

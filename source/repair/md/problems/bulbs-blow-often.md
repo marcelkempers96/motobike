@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 76}
   - {doc: "K-Light 125 manual", page: 78}
   - {doc: "K-Light 125 manual", page: 79}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/electricaltesting.htm"}
 ---
 
 # Bulbs keep blowing
@@ -67,6 +68,7 @@ With care. Carry a spare bulb. If the cause is high voltage, the battery can als
 | Regulator earth or connector poor | Burnt pins, rust | [Clean and tighten earth connections](/moto-zero/repair/repairs/earth-clean) |
 | Vibration from loose lamp | Lamp moves at idle | [Check chassis fasteners](/moto-zero/repair/repairs/fastener-check) |
 | Wrong or poor-quality bulb, glass touched | Visual, label | [Replace a bulb](/moto-zero/repair/repairs/bulb-replace) |
+| No regulator on a bike with no battery | Bulbs blow only at high revs | Fit a suitable regulator for that system; use the value in your bike's manual |
 
 ## Reference values (K-Light 125)
 

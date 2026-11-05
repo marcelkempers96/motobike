@@ -15,6 +15,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 202}
   - {doc: "MAVCC Motorcycle Mechanic", page: 254}
   - {doc: "MAVCC Motorcycle Mechanic", page: 664}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/compression_test.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/comp_release4.htm"}
 ---
 
 # Low compression
@@ -29,6 +31,9 @@ Yes with care if it runs. Expect poor power on hills. Do not ride if compression
 - Any hiss at the plug or head joint when you kick or crank?
 - When were the valves last adjusted?
 - Any blue smoke, or a recent overheat?
+- Blow dirt away from around the plug with air before unscrewing it, so none falls into the cylinder.
+- On an engine with more than one cylinder, one low cylinder stops it ever running well. Test compression before cleaning carburettors again.
+- Some off-road singles have an automatic compression release and read low on purpose when cranked. Compare with the value in your bike's manual.
 
 ## Diagnose it step by step
 

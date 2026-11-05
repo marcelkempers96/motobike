@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 51}
   - {doc: "Unit 2 The Motorcycle", page: 18}
   - {doc: "MAVCC Motorcycle Mechanic", page: 509}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain is dry, rusty or has stiff links
@@ -26,6 +27,8 @@ Ride with care, and only after cleaning and oiling. Do not ride a chain with cra
 - Bike on the stand, engine off: turn the rear wheel by hand and watch every link go round the rear sprocket.
 - Look for orange-brown rust coming out from between the side plates.
 - Look for cracked side plates or broken rollers.
+- Lubricate with chain lube at least at every fuel stop, and more often in rain, mud or dust.
+- Spray generously while turning the wheel, aim at the edges of the rollers, then leave the chain to settle for a short time so the carrier liquid dries before riding.
 
 ## Diagnose it step by step
 

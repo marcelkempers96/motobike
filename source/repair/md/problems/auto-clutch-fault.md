@@ -13,6 +13,7 @@ sources:
   - {doc: "Unit 2 The Motorcycle", page: 22}
   - {doc: "K-Light 125 manual", page: 222}
   - {doc: "K-Light 125 manual", page: 31}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/autoclutch.htm"}
 ---
 
 # Semi-automatic clutch (step-through) slips or engages roughly
@@ -27,6 +28,8 @@ Ride with care. A lurch when selecting a gear can push you into a junction, and 
 - Listen to the idle: is it faster than usual?
 - Close the throttle fully before each gear change and press the pedal through its full travel.
 - Check the gear pedal is not bent and does not touch the footpeg.
+- Many step-through bikes have a small lever on the gear shaft that fully frees the clutch while the gear is changed. Check that the lever and its linkage are not bent or loose.
+- Automatic clutches use weights that press plates together (plate type), or spring-held shoes that swing out against a drum (shoe type). In both, worn plates, shoes or springs are replaced, not adjusted.
 
 ## Diagnose it step by step
 

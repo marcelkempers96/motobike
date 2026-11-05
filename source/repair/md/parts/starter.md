@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 91}
   - {doc: "K-Light 125 manual", page: 92}
   - {doc: "MAVCC Motorcycle Mechanic", page: 600}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/electric_starters.htm"}
 ---
 
 # Starter motor
@@ -32,6 +33,7 @@ When brushes are below the limit and new ones are not sold, the armature is shor
 - Match make, model and year, or the part number: gear teeth, shaft length, mounting flange and terminal.
 - Brush kits must match the brush size and holder.
 - Cheap motors may have weak magnets and draw more current. Compare weight and finish with the old one.
+- Brushes and their springs are sold as a set: [Starter motor brushes](/moto-zero/repair/parts/starter_brushes).
 
 ## Fitting notes
 - Disconnect the battery negative first; the starter cable is always live.

@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 196}
   - {doc: "K-Light 125 manual", page: 236}
   - {doc: "MAVCC Motorcycle Mechanic", page: 800}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bush_plain_bearings.htm"}
 ---
 
 # Deep knocking from the bottom of the engine
@@ -63,6 +64,7 @@ No. Stop as soon as it is safe, switch off and do not ride on. Push or carry the
 | Pinking under load | Only when accelerating | [Pinging or rattling sound when accelerating (pinking)](/moto-zero/repair/problems/pinking) |
 | Worn main bearing | Rumble plus knock | [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment) |
 | Broken part inside crankcase | Noise and debris | [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment) |
+| Plain bearing shells run without oil pressure | Knock began after low or old oil, shells scored or spun | [Check plain bearing clearance](/moto-zero/repair/repairs/plain-bearing-clearance-check) |
 
 ## Reference values (K-Light 125)
 

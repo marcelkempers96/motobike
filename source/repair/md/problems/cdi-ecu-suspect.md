@@ -16,6 +16,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 275}
   - {doc: "K-Light 125 manual", page: 87}
   - {doc: "MAVCC Motorcycle Mechanic", page: 628}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cdiignition.htm"}
 ---
 
 # CDI or ECU suspected faulty
@@ -31,6 +32,8 @@ With care if it runs. If it cuts out without warning, do not ride in traffic.
 - Engine stop switch on RUN, side stand up, neutral selected.
 - Fuel-injected: does the warning light come on for a moment at key ON? If it never lights, the ECU may have no power or earth.
 - Any recent wash, rain, crash or wiring work?
+- Before blaming the box, test the trigger coil, source coil and ignition coil against the resistances in your bike's manual, and recheck every plug-in connector and earth.
+- Swapping in a unit from a working bike is a fair test, but a failed part can damage the good one. Do it only when the units are the same part number.
 
 ## Diagnose it step by step
 
@@ -71,6 +74,7 @@ With care if it runs. If it cuts out without warning, do not ride in traffic.
 | Faulty coil | Swap test | [Test the ignition coil and plug cap](/moto-zero/repair/repairs/ignition-coil-test) |
 | Faulty pick-up | Resistance; crank sensor code | [Test the ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 | CDI or ECU failure | All else good; known good unit works | [Diagnose a suspected CDI or ECU fault](/moto-zero/repair/repairs/cdi-ecu-diagnosis) |
+| Pick-up air gap too wide | Gap to the flywheel magnet checked with a brass or plastic gauge; use the value in your bike's manual | [Test an ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

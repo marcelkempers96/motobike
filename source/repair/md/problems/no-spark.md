@@ -16,6 +16,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 58}
   - {doc: "MAVCC Motorcycle Mechanic", page: 257}
   - {doc: "MAVCC Motorcycle Mechanic", page: 628}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cdiignition.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bat_coil_ign.htm"}
 ---
 
 # No spark at the spark plug
@@ -31,6 +33,7 @@ The engine will not run. When testing, never hold the plug lead by hand or touch
 - Plug cap pushed fully on, no water in it.
 - Battery charged (needed for battery-powered CDI and all fuel-injected bikes).
 - Fuel-injected: does the warning light come on at key ON?
+- Do not pull the plug cap or unplug any ignition part with the engine running. The voltage is high and can damage the ignition.
 
 ## Diagnose it step by step
 
@@ -77,6 +80,8 @@ The engine will not run. When testing, never hold the plug lead by hand or touch
 | Faulty coil or cap | Open winding; swap test | [Test the ignition coil and plug cap](/moto-zero/repair/repairs/ignition-coil-test) |
 | Faulty pick-up | Resistance out of range; crank sensor code | [Test the ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 | CDI or ECU | All else tests good; swap test | [Diagnose a suspected CDI or ECU fault](/moto-zero/repair/repairs/cdi-ecu-diagnosis) |
+| Worn or burnt contact points, or a failed condenser (older points ignition) | Pitted or blackened faces, heavy arcing; no spark even with clean, correctly gapped points | [Inspect, clean and replace contact breaker points](/moto-zero/repair/repairs/contact-points-replace), [Test an ignition condenser](/moto-zero/repair/repairs/condenser-test) |
+| Battery too low for a battery-fed electronic ignition | Starter still turns, but voltage sags; spark returns after charging | [Test and charge a 12 V battery](/moto-zero/repair/repairs/battery-test-charge) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

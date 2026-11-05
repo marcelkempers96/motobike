@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 174}
   - {doc: "K-Light 125 manual", page: 177}
   - {doc: "MAVCC Motorcycle Mechanic", page: 486}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Rear sprocket
@@ -38,6 +39,8 @@ Replace when teeth are hooked or bent, or about a quarter of a tooth has worn aw
 - Tighten sprocket nuts in a cross pattern in two or three passes.
 - Check sprocket runout by spinning the wheel and watching the teeth.
 - See [Inspect sprockets](/moto-zero/repair/repairs/sprocket-inspect) and [Replace the chain and sprockets](/moto-zero/repair/repairs/chain-sprocket-replace) (workshop).
+- A dished sprocket must go on the right way round. Fitted backwards, it wears out quickly.
+- Some rear sprockets bolt to a carrier that slides into rubber cushions in the hub. Keep the bolts, nuts and lock washers, which are often of a special length.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

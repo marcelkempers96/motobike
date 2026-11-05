@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 206}
   - {doc: "K-Light 125 manual", page: 210}
   - {doc: "MAVCC Motorcycle Mechanic", page: 657}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/valve.htm"}
 ---
 
 # Valve springs
@@ -36,6 +37,7 @@ When free length is below the limit, a coil is cracked, or the spring leans. Rep
 - Workshop job. Use a valve spring compressor; springs can fly out and hurt you.
 - Fit with the close-wound coils toward the combustion chamber, and check both collets are seated.
 - See [Assess the top end](/moto-zero/repair/repairs/top-end-assessment).
+- Measure the free height of each spring. A spring that has settled short is replaced. Do not leave out the thin washer under each spring.
 
 ## Reference (K-Light 125)
 

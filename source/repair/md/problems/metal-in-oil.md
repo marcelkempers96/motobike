@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 195}
   - {doc: "K-Light 125 manual", page: 236}
   - {doc: "Unit 2 The Motorcycle", page: 15}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/pistons.htm"}
 ---
 
 # Metal particles or flakes in the oil
@@ -63,3 +64,4 @@ Do not ride until the source is understood, except very gently to a workshop if 
 | Cam chain or tensioner (OHC) | Steel plus plastic, rattle | [Check the cam chain and tensioner](/moto-zero/repair/repairs/cam-chain-check) |
 | Piston scuffing | Aluminium, low compression | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
 | Clutch wear | Fibre, slipping | [Inspect and replace clutch plates and springs](/moto-zero/repair/repairs/clutch-plate-service) |
+| Bottom end bearing debris (two-stroke) | Piston crown looks chewed, needle bearing pieces in the crankcase | Rebuild the bottom end. A new piston alone will be ruined |

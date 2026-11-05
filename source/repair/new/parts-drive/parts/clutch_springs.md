@@ -11,7 +11,7 @@ photos: [{"file": "source/dansmc/06_Engine_Parts/118/118_clutch_springs.jpg", "c
 
 # Clutch springs
 
-The clutch springs press the plates together so the clutch grips. Most bikes have four to six coil springs held by bolts or nuts on the pressure plate. Some bikes use one large spring (or a diaphragm spring) held by a big circlip.
+The clutch springs press the plates together so the clutch grips. Most bikes have several coil springs held by bolts or nuts on the pressure plate. Some bikes use one large spring (or a diaphragm spring) held by a big circlip.
 
 ## What it does
 The springs set how hard the plates clamp. The clutch lever works against them: pulling the lever pushes the pressure plate back so the plates part. If the springs are weak, the clutch slips. If they are too strong or the wrong type, the lever is heavy.

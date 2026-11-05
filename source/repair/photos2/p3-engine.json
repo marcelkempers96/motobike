@@ -1,0 +1,460 @@
+{
+ "problems": {
+  "tappet-tick": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_feeler_gauge.jpg",
+    "caption": "Feeler gauge blades"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_valve_adjusting_tool.jpg",
+    "caption": "Adjusting a valve with a ring spanner and screwdriver"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_type_adjusters_valve_shims.jpg",
+    "caption": "Valve shims of different thickness"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_go_no_go.jpg",
+    "caption": "Go and no-go feeler gauge for valve clearance"
+   }
+  ],
+  "cam-chain-rattle": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_manual_adjuster.jpg",
+    "caption": "Manual cam chain adjuster and its position on the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_non_adjustable_tensioners.jpg",
+    "caption": "Non-adjustable tensioner plunger and spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_honda_cb360.jpg",
+    "caption": "Roller cam chain inside an engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_cam_chain_adjuster_sprocket.jpg",
+    "caption": "Cam chain adjuster roller inside the left cover"
+   }
+  ],
+  "piston-slap": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_measure_piston_2.jpg",
+    "caption": "Measuring cylinder bore with a bore gauge"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_measured_top_middle_bottom_cylinder_2.jpg",
+    "caption": "Measuring piston diameter with a micrometer"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_cylinder_ridge.jpg",
+    "caption": "Wear ridge at the top of the bore"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_i_always_measure_old_piston_so_2.jpg",
+    "caption": "Cylinder bore with a clean finish"
+   }
+  ],
+  "low-compression": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_compression_testing.jpg",
+    "caption": "Compression gauge fitted in the plug hole"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_pressure.jpg",
+    "caption": "Compression gauge with its pressure release"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_leak_down_testing.jpg",
+    "caption": "Leak-down tester kit with two gauges"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_testing_work.jpg",
+    "caption": "Solvent in the combustion chamber to test valve seating"
+   }
+  ],
+  "blue-smoke": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_groove.jpg",
+    "caption": "Piston ring seated in its groove"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_pry_valve_seals_off.jpg",
+    "caption": "Prising an old valve seal off the guide"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_worn_plated_cylinder.jpg",
+    "caption": "Worn plated cylinder wall"
+   }
+  ],
+  "white-smoke": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_one_radiator_two_radiator_2.jpg",
+    "caption": "Spark plug fouled by coolant entering the cylinder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cylinder_coolant_passages.jpg",
+    "caption": "Water-cooled cylinder with coolant passages"
+   }
+  ],
+  "milky-oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_one_radiator_two_radiator_2.jpg",
+    "caption": "Spark plug fouled by coolant entering the cylinder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water.jpg",
+    "caption": "Corroded water pump impeller and seal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cylinder_coolant_passages.jpg",
+    "caption": "Water-cooled cylinder with coolant passages"
+   }
+  ],
+  "exhaust-blocked": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_removable_baffle.jpg",
+    "caption": "Silencer with a removable baffle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/109/109_two_stroke_exhaust_pipes.jpg",
+    "caption": "Two-stroke exhaust pipes"
+   }
+  ],
+  "exhaust-rattle": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_tripled_wall_exhaust_header_pipe_honda.jpg",
+    "caption": "Multi-wall header pipe on a street bike"
+   }
+  ],
+  "exhaust-loud": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_straight_pipe.jpg",
+    "caption": "Straight exhaust pipes"
+   }
+  ],
+  "exhaust-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_mufflers_inter_connected.jpg",
+    "caption": "Interconnected exhaust header pipes"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_tripled_wall_exhaust_header_pipe_honda.jpg",
+    "caption": "Multi-wall header pipe on a street bike"
+   }
+  ],
+  "exhaust-popping": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_lapping_valve.jpg",
+    "caption": "Lapping a valve onto its seat"
+   }
+  ],
+  "engine-seized": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_piston_top_chewed.jpg",
+    "caption": "Piston crown chewed by bearing debris"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/127/127_cutting_spark_plug_hydraulic_tool.jpg",
+    "caption": "Old plug body cut to make a grease tool for workshops"
+   }
+  ],
+  "deep-knock": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_plastigauge_crankpin.jpg",
+    "caption": "Plastigauge strip laid across a crank pin bearing shell"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_good_rod_bushing.jpg",
+    "caption": "Connecting rod big end with bearing shells fitted"
+   }
+  ],
+  "metal-in-oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_bad_bushing_good_bushing.jpg",
+    "caption": "Good and worn bearing shells side by side"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_plain_bearings_there_no_chance.jpg",
+    "caption": "Worn ball bearing next to a good one"
+   }
+  ],
+  "new-vibration": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_motorcycle_counter_balancers.jpg",
+    "caption": "Counterbalancer weights moving opposite the piston"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_punch_mark.jpg",
+    "caption": "Punch mark on a balancer shaft or gear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_gear_drive_counterbalancer.jpg",
+    "caption": "Chain-driven balancer shafts in a crankcase"
+   }
+  ],
+  "whine-from-engine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_shaft_might_still_saved_but_not.jpg",
+    "caption": "Damaged tapered roller bearing"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/131/131_hi_vo_chain.jpg",
+    "caption": "Cam chain on a camshaft sprocket"
+   }
+  ],
+  "overheating-liquid": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_radiator_cap_left_side.jpg",
+    "caption": "Radiator cap location on a water-cooled bike"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_closed_thermostat.jpg",
+    "caption": "Thermostat opening in hot water"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cx500_honda.jpg",
+    "caption": "Radiator fan and its fitting"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir.jpg",
+    "caption": "Coolant reservoir fitted to the frame"
+   }
+  ],
+  "temp-gauge-high": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cx500_honda.jpg",
+    "caption": "Radiator fan and its fitting"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_closed_thermostat.jpg",
+    "caption": "Thermostat opening in hot water"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_take_pick_but_all_agree_need.jpg",
+    "caption": "Coolant reservoir beside the tank"
+   }
+  ],
+  "radiator-damage": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_cooling.jpg",
+    "caption": "Radiator behind a crash bar"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_many_dirt_bikes_have_two.jpg",
+    "caption": "Radiator mounted beside the fork on a dirt bike"
+   }
+  ],
+  "coolant-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water.jpg",
+    "caption": "Corroded water pump impeller and seal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir.jpg",
+    "caption": "Coolant reservoir fitted to the frame"
+   }
+  ],
+  "overheating-air": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/105/105_two_plug_hole_head.jpg",
+    "caption": "Two-stroke head with fins and two plug holes"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_cylinder_ridge.jpg",
+    "caption": "Wear ridge at the top of the bore"
+   }
+  ],
+  "pinking": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_beam_me_up_scotty.jpg",
+    "caption": "Pitted piston crown from overheating"
+   }
+  ],
+  "power-fades-hot": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_compression_testing.jpg",
+    "caption": "Compression gauge fitted in the plug hole"
+   }
+  ],
+  "low-power": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_pressure.jpg",
+    "caption": "Compression gauge with its pressure release"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_leak_down_testing.jpg",
+    "caption": "Leak-down tester kit with two gauges"
+   }
+  ],
+  "two-stroke-crankcase-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/107/107_vacuum_tester.jpg",
+    "caption": "Hand pump and gauge for pressure and vacuum tests"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/107/107_two_stroke_vacuum_pressure_testing.jpg",
+    "caption": "Two-stroke crankcase set up for pressure test"
+   }
+  ],
+  "oil-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_oil_seals.jpg",
+    "caption": "Oil seal kit"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out_2.jpg",
+    "caption": "Levering a seal out behind the front sprocket"
+   }
+  ],
+  "oily-exhaust": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/109/109_two_stroke_exhaust_pipes.jpg",
+    "caption": "Two-stroke exhaust pipes"
+   }
+  ],
+  "oil-darkens-quickly": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_groove.jpg",
+    "caption": "Piston ring seated in its groove"
+   }
+  ]
+ },
+ "parts": {
+  "coolant": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_take_pick_but_all_agree_need.jpg",
+    "caption": "Coolant reservoir beside the tank"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir_2.jpg",
+    "caption": "Coolant reservoir under the seat of a shaft-drive bike"
+   }
+  ],
+  "engine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_small_bore_71mm_long_stroke_82mm.jpg",
+    "caption": "Piston with rings and pin bosses"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_crank_rod.jpg",
+    "caption": "Crankshaft, connecting rod and bearing shells laid out"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_real_smart_work_fellows.jpg",
+    "caption": "Valve bucket bores in an aluminium cylinder head"
+   }
+  ],
+  "pushrods": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_will_work_all_piston_engines.jpg",
+    "caption": "Tappet, locknut and valve tip in a cylinder head"
+   }
+  ]
+ },
+ "repairs": {
+  "coolant-replace": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir_2.jpg",
+    "caption": "Coolant reservoir under the seat of a shaft-drive bike"
+   }
+  ],
+  "exhaust-leak-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_mufflers_inter_connected.jpg",
+    "caption": "Interconnected exhaust header pipes"
+   }
+  ],
+  "exhaust-mount-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_straight_pipe.jpg",
+    "caption": "Straight exhaust pipes"
+   }
+  ],
+  "balancer-marks-set": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_gear_drive_counterbalancer.jpg",
+    "caption": "Chain-driven balancer shafts in a crankcase"
+   }
+  ],
+  "crankcase-split": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/134/134_split_horizontally.jpg",
+    "caption": "Crankcase split sideways with the gearbox shafts showing"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/134/134_all_cases_will_need_pull_engine.jpg",
+    "caption": "Crankcase half with a crankshaft pulling tool fitted"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/134/134_tool.jpg",
+    "caption": "Gearbox half of a crankcase with a puller tool fitted"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/134/134_puller_tool.jpg",
+    "caption": "Puller tool drawing the crankshaft into the crankcase"
+   }
+  ],
+  "cam-chain-adjust": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_pinch_bolt.jpg",
+    "caption": "Cam chain adjuster with pinch bolt and lock nut"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_manual_adjuster.jpg",
+    "caption": "Manual cam chain adjuster and its position on the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_automatic_adjustment.jpg",
+    "caption": "Automatic cam chain tensioner body and its parts"
+   }
+  ],
+  "water-pump-inspect": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder.jpg",
+    "caption": "Water pump impeller seen with the cover removed"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_i_wonder_what_they_mean.jpg",
+    "caption": "Water pump impeller inside the cover"
+   }
+  ],
+  "engine-bearing-check": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_if_must_pull_outside_race_replace.jpg",
+    "caption": "Ball, needle and plain bearings in a crankcase half"
+   }
+  ]
+ },
+ "systems": {
+  "engine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_honda_piston.jpg",
+    "caption": "Four-stroke piston with ring grooves and pin bosses"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_crank_rod.jpg",
+    "caption": "Crankshaft, connecting rod and bearing shells laid out"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_valves.jpg",
+    "caption": "Engine valve with the 45 degree seat angle shown"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/134/134_split_horizontally.jpg",
+    "caption": "Crankcase split sideways with the gearbox shafts showing"
+   }
+  ],
+  "oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_oil_seals.jpg",
+    "caption": "Oil seal kit"
+   }
+  ],
+  "cooling": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_cooling.jpg",
+    "caption": "Radiator behind a crash bar"
+   }
+  ]
+ }
+}

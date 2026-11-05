@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 213}
   - {doc: "K-Light 125 manual", page: 214}
   - {doc: "MAVCC Motorcycle Mechanic", page: 790}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hone_cyl.htm"}
 ---
 
 # Cylinder (barrel)
@@ -37,6 +38,8 @@ When the bore is past the size, taper or out-of-round limit, or deeply scored. M
 - Workshop job. Measure the bore in six places: top, middle and bottom, in line with and across the crank.
 - Use a new base gasket and dowels, oil the bore, and compress the rings carefully.
 - See [Assess the top end](/moto-zero/repair/repairs/top-end-assessment).
+- After honing or boring, wipe the bore with a clean oiled rag. If dirt comes off, wash it in hot soapy water, dry it and oil it at once.
+- Look for rust pits. If any remain after honing, the bore may have to go to the next oversize.
 
 ## Reference (K-Light 125)
 

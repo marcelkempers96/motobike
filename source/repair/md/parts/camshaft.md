@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 238}
   - {doc: "MAVCC Motorcycle Mechanic", page: 254}
   - {doc: "MAVCC Motorcycle Mechanic", page: 657}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/valve_timing.htm"}
 ---
 
 # Camshaft
@@ -36,6 +37,7 @@ When lobe height is below the limit, the lobes are pitted or flat, or the journa
 - Workshop job. Valve timing marks must line up, or the valves can hit the piston.
 - Oil the lobes and journals on assembly. Set [valve clearance](/moto-zero/repair/repairs/valve-clearance) afterwards.
 - See [Assess the top end](/moto-zero/repair/repairs/top-end-assessment) or, for a crankcase cam, [Assess bottom end](/moto-zero/repair/repairs/engine-internal-assessment).
+- Tighten the bearing caps evenly and turn the engine over by hand very gently to confirm the cam turns freely before starting.
 
 ## Reference (K-Light 125)
 

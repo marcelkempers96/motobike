@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 224}
   - {doc: "K-Light 125 manual", page: 225}
   - {doc: "MAVCC Motorcycle Mechanic", page: 577}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/clutches.htm"}
 ---
 
 # Clutch plates and springs
@@ -37,6 +38,8 @@ Replace when a friction plate is below the limit, a spring is shorter than its l
 - Workshop job: holding tool and locknut torque required. See [Inspect and replace clutch plates and springs](/moto-zero/repair/repairs/clutch-plate-service).
 - Loosen and tighten spring bolts a little at a time in a cross pattern.
 - After fitting, set free play: [Adjust clutch lever free play](/moto-zero/repair/repairs/clutch-cable-adjust).
+- Stand each plate on edge and look along it. Replace any plate that is bent. Check the finger tabs of both plate types for damage.
+- Steel plates can have a dished edge and are staggered, so put every plate, ring and washer back in the order it came out.
 
 ## Reference (K-Light 125)
 | Item | Standard | Limit | PDF page |

@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 80}
   - {doc: "K-Light 125 manual", page: 82}
   - {doc: "Unit 2 The Motorcycle", page: 34}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/magneto1.htm"}
 ---
 
 # Stator and flywheel
@@ -32,6 +33,7 @@ When a coil reads open, shorted to earth, or outside the resistance range, after
 - Match the part number, or make, model and engine. Count coils and wires; single-phase and three-phase stators are not swappable.
 - Check whether the pick-up comes with the stator.
 - Rewound stators are common and can be good, but ask about wire grade and a warranty.
+- The rotor that turns around the coils is a separate part: [Flywheel (magnet rotor)](/moto-zero/repair/parts/flywheel).
 
 ## Fitting notes
 - Home job to test: [Test the stator](/moto-zero/repair/repairs/stator-test). Removing the flywheel needs a puller and holder: workshop job.

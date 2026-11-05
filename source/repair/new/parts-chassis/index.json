@@ -1,0 +1,302 @@
+{
+ "parts": [
+  {
+   "id": "wheel_rim",
+   "name": "Wheel rim",
+   "category": "wheels",
+   "aliases": [
+    "rim",
+    "wheel hoop",
+    "alloy rim",
+    "wire wheel rim"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "wheel-runout-check",
+    "spoke-wheel-true",
+    "spoke-tension",
+    "tyre-replace",
+    "wheel-balance",
+    "tyre-pressure-check",
+    "spoke-replace",
+    "wheel-lace-spokes"
+   ],
+   "problems": [
+    "rim-damage",
+    "wheel-buckled",
+    "speed-vibration",
+    "bead-leak",
+    "loose-spokes",
+    "slow-puncture"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spokewheels.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tires1.htm"
+    }
+   ]
+  },
+  {
+   "id": "wheel_hub",
+   "name": "Wheel hub",
+   "category": "wheels",
+   "aliases": [
+    "hub",
+    "wheel centre",
+    "bearing hub",
+    "drum hub"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "wheel-bearing-check",
+    "wheel-bearing-replace",
+    "wheel-bearing-regrease",
+    "wheel-bearing-race-remove",
+    "bearing-press-make",
+    "wheel-remove-front",
+    "wheel-remove-rear",
+    "spoke-tension"
+   ],
+   "problems": [
+    "wheel-bearing-noise",
+    "wheel-bearing-play",
+    "hub-hot-after-ride",
+    "loose-spokes",
+    "wheel-buckled"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wheelbearing.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/front_wheels.htm"
+    }
+   ]
+  },
+  {
+   "id": "speedo_drive",
+   "name": "Speedometer drive",
+   "category": "wheels",
+   "aliases": [
+    "speedo gearbox",
+    "speedometer gear",
+    "speedo drive unit",
+    "speedo drive gear"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "speedo-cable-replace",
+    "wheel-remove-front",
+    "front-axle-fittings-identify",
+    "speed-sensor-check"
+   ],
+   "problems": [
+    "speedo-cable-fault"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/front_wheels.htm"
+    }
+   ]
+  },
+  {
+   "id": "fork_springs",
+   "name": "Fork springs and spacers",
+   "category": "chassis",
+   "aliases": [
+    "fork spring",
+    "front spring",
+    "fork preload spacer",
+    "fork top bolt spring"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "fork-spring-spacer",
+    "fork-cap-release",
+    "fork-oil-level-set",
+    "fork-oil-seals",
+    "fork-inspect",
+    "sag-measure"
+   ],
+   "problems": [
+    "fork-bottoming",
+    "fork-harsh",
+    "fork-twisted",
+    "fork-noise"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ]
+  },
+  {
+   "id": "fork_bushes",
+   "name": "Fork bushes",
+   "category": "chassis",
+   "aliases": [
+    "fork slider bush",
+    "fork tube bush",
+    "fork bearings",
+    "slide bushes"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "fork-oil-seals",
+    "fork-seal-drive-fit",
+    "fork-inspect",
+    "fork-damper-bolt-release",
+    "steering-bearing-check"
+   ],
+   "problems": [
+    "fork-noise",
+    "front-clunk-braking",
+    "fork-sticky",
+    "fork-leak",
+    "new-fork-seal-leaks"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ]
+  },
+  {
+   "id": "fork_tubes",
+   "name": "Fork tubes and gaiters",
+   "category": "chassis",
+   "aliases": [
+    "inner tubes",
+    "stanchions",
+    "fork stanchion",
+    "fork boots",
+    "fork gators",
+    "fork gaiters"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "fork-inspect",
+    "fork-seal-clean",
+    "fork-oil-seals",
+    "fork-seal-drive-fit",
+    "front-end-align",
+    "frame-crash-inspect"
+   ],
+   "problems": [
+    "fork-leak",
+    "new-fork-seal-leaks",
+    "fork-twisted",
+    "fork-sticky",
+    "crash-check"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ]
+  },
+  {
+   "id": "steering_stem",
+   "name": "Steering stem and yokes",
+   "category": "chassis",
+   "aliases": [
+    "triple clamp",
+    "triple tree",
+    "top yoke",
+    "bottom yoke",
+    "fork crown",
+    "steering column"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "front-end-align",
+    "steering-bearing-check",
+    "steering-bearing-adjust",
+    "frame-crash-inspect",
+    "fastener-check"
+   ],
+   "problems": [
+    "bars-misaligned",
+    "heavy-steering",
+    "notchy-steering",
+    "headshake",
+    "crash-check",
+    "weave"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aline_wheel.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/steering_bearings.htm"
+    }
+   ]
+  },
+  {
+   "id": "caliper_seals",
+   "name": "Caliper piston seals",
+   "category": "brakes",
+   "aliases": [
+    "caliper seal kit",
+    "piston seal",
+    "square seal",
+    "dust seal",
+    "caliper O-ring"
+   ],
+   "applies_to": [
+    "disc-brake"
+   ],
+   "repairs": [
+    "caliper-clean",
+    "caliper-rebuild",
+    "brake-pad-replace",
+    "brake-bleed",
+    "brake-drag-check",
+    "brake-fluid-check"
+   ],
+   "problems": [
+    "brake-fluid-leak",
+    "caliper-sticking",
+    "brake-drag",
+    "pads-uneven",
+    "spongy-brake"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/hydraulics3.htm"
+    }
+   ]
+  }
+ ]
+}

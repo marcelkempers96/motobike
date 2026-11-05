@@ -15,6 +15,9 @@ sources:
   - {doc: "K-Light 125 manual", page: 85}
   - {doc: "MAVCC Motorcycle Mechanic", page: 628}
   - {doc: "MAVCC Motorcycle Mechanic", page: 679}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bat_coil_ign.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/magneto1.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/ignitiontiming.htm"}
 ---
 
 # Ignition timing suspected wrong
@@ -61,6 +64,7 @@ With care. If the engine pinks under load, ease off at once: pinking can damage 
 | Loose pick-up | Pick-up moves; erratic spark | [Test the ignition pick-up](/moto-zero/repair/repairs/pickup-test) |
 | Sheared flywheel key or loose flywheel | Marks wrong; after left-side work | [Check the ignition timing](/moto-zero/repair/repairs/ignition-timing-check) |
 | Wrong or faulty CDI/ECU | After replacement; advance not working | [Diagnose a suspected CDI or ECU fault](/moto-zero/repair/repairs/cdi-ecu-diagnosis) |
+| Worn points heel, loose points plate or sticking advance weights (points ignition) | Timing moves when the plate screws are tightened; marks drift between checks | [Set points gap and ignition timing](/moto-zero/repair/repairs/points-timing-set), [Check spark advance](/moto-zero/repair/repairs/spark-advance-check) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

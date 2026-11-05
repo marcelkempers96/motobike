@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 217}
   - {doc: "Unit 2 The Motorcycle", page: 9}
   - {doc: "MAVCC Motorcycle Mechanic", page: 784}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/pistons.htm"}
 ---
 
 # Knocking from the cylinder when cold that fades when warm
@@ -64,6 +65,7 @@ Usually yes with care, because it is a wear sign rather than a sudden failure. P
 | Worn piston pin or pin bore | Knock that stays sharper at idle | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
 | Worn rings with the piston | Low compression, blue smoke | [Test engine compression](/moto-zero/repair/repairs/compression-test) |
 | Thin or low oil | Dipstick | [Check the engine oil level](/moto-zero/repair/repairs/oil-level-check) |
+| Bore worn with a ridge at the top | Ridge felt with a fingernail, piston rocks sideways | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
 
 ## Reference values (K-Light 125)
 

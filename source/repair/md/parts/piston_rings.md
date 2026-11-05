@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 217}
   - {doc: "MAVCC Motorcycle Mechanic", page: 792}
   - {doc: "Unit 2 The Motorcycle", page: 9}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rings.htm"}
 ---
 
 # Piston rings
@@ -38,6 +39,7 @@ When end gap or groove clearance is past the limit, or whenever the cylinder is 
 - Workshop job. Check the end gap with each ring pushed square into the bore before fitting.
 - Fit with the mark up, stagger the gaps, and make sure oil ring expander ends butt and do not overlap. Two-stroke ring gaps must sit over the locating pins.
 - Rings are brittle and sharp. See [Assess the top end](/moto-zero/repair/repairs/top-end-assessment) and [Test engine compression](/moto-zero/repair/repairs/compression-test).
+- A three-piece oil ring has no up or down side. On two-strokes a bevelled end fits against the peg in the groove.
 
 ## Reference (K-Light 125)
 

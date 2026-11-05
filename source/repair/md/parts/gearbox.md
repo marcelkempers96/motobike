@@ -7,6 +7,7 @@ applies_to: [four-stroke, two-stroke, chain]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 400}
   - {doc: "Unit 2 The Motorcycle", page: 12}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gearbox.htm"}
 ---
 
 # Gearbox
@@ -33,3 +34,6 @@ Many shifting faults come from clutch drag, a loose gear pedal or the outside sh
 ## Fitting notes
 - Rider check: [Check gear shifting](/moto-zero/repair/repairs/gearshift-check).
 - Change gear firmly and fully, with the clutch pulled. Half-shifts round off the dogs.
+- Gearbox bearings run in an oil bath and rarely wear out. If they turn smoothly and show no damage, they can usually stay, unless the engine is a high-value one.
+- Take shafts and gears out gently, as a unit where possible, and lay the parts in order (an egg crate helps). Refit each part in the same position and the same way round.
+- On engines with a crankcase split along the horizontal plane, a gear can be changed without removing the cylinder head.

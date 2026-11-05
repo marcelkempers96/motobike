@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 76}
   - {doc: "K-Light 125 manual", page: 91}
   - {doc: "K-Light 125 manual", page: 92}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/electric_starters.htm"}
 ---
 
 # Engine turns over slowly
@@ -28,6 +29,7 @@ Yes, if it starts. But the battery may soon fail to start the bike at all, and a
 - When was the battery fitted? Lead acid batteries often weaken after 2 to 3 years (K-Light 125 manual).
 - Are the terminals tight and clean?
 - Is the oil the grade your manual asks for?
+- Starter cables are thick for a reason. A thin, damaged or loose starter cable or lug can starve the starter even with a good battery.
 
 ## Diagnose it step by step
 
@@ -65,6 +67,7 @@ Yes, if it starts. But the battery may soon fail to start the bike at all, and a
 | Thick or wrong oil in cold weather | Slow only when cold | [Change the engine oil and clean the strainer](/moto-zero/repair/repairs/engine-oil-service) |
 | Worn starter brushes | Full voltage at starter, still slow | [Remove and inspect the starter motor](/moto-zero/repair/repairs/starter-motor-service) |
 | Tight engine or heavy carbon | Slow even with plug out; high compression | [Test engine compression](/moto-zero/repair/repairs/compression-test) |
+| Dirty brush holder or commutator in the starter | Black carbon dust inside the end cover; worn brushes | [Check starter brushes, commutator and armature on the bench](/moto-zero/repair/repairs/starter-armature-test) |
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

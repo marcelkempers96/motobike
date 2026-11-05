@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 97}
   - {doc: "K-Light 125 manual", page: 105}
   - {doc: "K-Light 125 manual", page: 141}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/dc_switches.htm"}
 ---
 
 # Handlebar switch does not work properly
@@ -60,6 +61,7 @@ With care, if only the horn, dip or indicator switch is affected and you have a 
 | Wire crushed where it leaves the housing | Continuity changes when wire is bent | [Find a wiring fault](/moto-zero/repair/repairs/wiring-fault-find) |
 | Housing loose or broken | Visual | Refit or replace housing |
 | Burnt contacts from overload | Black, pitted contacts | Replace housing; check bulb and accessory loads |
+| AC-rated switch used on a 12 V DC circuit | Small, burnt or pitted contacts | [Choose the right switch for a 12 V circuit](/moto-zero/repair/repairs/dc-switch-select) |
 
 ## Reference values (K-Light 125)
 

@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 160}
   - {doc: "K-Light 125 manual", page: 161}
   - {doc: "K-Light 125 manual", page: 171}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rearchain.htm"}
 ---
 
 # Chain rubs on the guard, slider or swingarm
@@ -27,6 +28,7 @@ Ride with care. A chain cutting into a steel swingarm weakens it, and a chain ru
 - Look at the slider near the swingarm pivot: is there plastic left?
 - Look at the guard and chain case for dents and loose bolts.
 - Compare the adjuster marks on both sides.
+- Marks on both sides of the swingarm help to align the wheel, but they can be slightly off. Look along the chain from behind to see that it runs straight, or use an alignment tool.
 
 ## Diagnose it step by step
 

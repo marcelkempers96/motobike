@@ -16,6 +16,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 222}
   - {doc: "K-Light 125 manual", page: 230}
   - {doc: "MAVCC Motorcycle Mechanic", page: 577}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gearbox.htm"}
 ---
 
 # Gears are hard to select
@@ -30,6 +31,7 @@ Ride with care. A gear that will not go in when you need it, or a missed change 
 - Is it hard with the engine off as well as running? Rock the bike or turn the rear wheel by hand while you try.
 - Does the bike creep in gear with the clutch lever pulled?
 - Is anything (mud, a bent lever, your boot) stopping the lever's full stroke?
+- After a gearbox rebuild the change can feel stiff or chunky. If the shafts turn freely by hand and every gear can be selected while the shaft is spun, this is usually normal and eases with use.
 
 ## Diagnose it step by step
 

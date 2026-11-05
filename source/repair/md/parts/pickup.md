@@ -11,6 +11,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 82}
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "Unit 2 The Motorcycle", page: 34}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cdiignition.htm"}
 ---
 
 # Ignition pick-up
@@ -38,6 +39,7 @@ When its resistance is open, shorted or out of range, or its peak voltage at cra
 - Home job to test: [Test the ignition pick-up](/moto-zero/repair/repairs/pickup-test). Fitting a stator or pick-up means removing the left cover: workshop if a flywheel puller is needed.
 - Clean all metal dust off the flywheel magnets before refitting.
 - Use the K-Light pick-up bolt torque only on the K-Light.
+- Set the air gap between the pick-up and the flywheel magnet with a non-magnetic (brass or plastic) gauge, as close as possible without touching. Use the value in your bike's manual.
 
 ## Reference (K-Light 125)
 

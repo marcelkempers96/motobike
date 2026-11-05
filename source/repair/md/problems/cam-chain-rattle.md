@@ -12,6 +12,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 654}
   - {doc: "MAVCC Motorcycle Mechanic", page: 678}
   - {doc: "K-Light 125 manual", page: 238}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/camchain_adjust.htm"}
 ---
 
 # Rattling noise from the cam chain area
@@ -26,6 +27,7 @@ A light rattle at idle: ride gently to a workshop soon. A loud rattle, a rattle 
 - Oil level and age: thin, old or low oil makes hydraulic tensioners noisy.
 - Where is the noise? Cylinder side, head cover, or bottom of the engine?
 - Did it start after a valve job or a new chain?
+- Newer engines often have a tensioner that cannot be adjusted. When the chain gets noisy the fix is a new chain. Older engines have a pinch bolt or lock nut. See your bike's manual.
 
 ## Diagnose it step by step
 

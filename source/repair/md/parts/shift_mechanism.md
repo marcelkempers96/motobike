@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 32}
   - {doc: "K-Light 125 manual", page: 231}
   - {doc: "K-Light 125 manual", page: 232}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gearshifters.htm"}
 ---
 
 # Gear shift mechanism
@@ -36,3 +37,5 @@ Replace springs that are broken, stretched or weak, a bent spindle, or a stopper
 - Check the lever, linkage and spindle splines first: [Check the gear lever and shift linkage](/moto-zero/repair/repairs/gearshift-check).
 - Parts behind the clutch cover are a workshop job: [Assess internal gearbox faults](/moto-zero/repair/repairs/gearbox-assessment).
 - The spindle should turn and return freely before the cover goes back on.
+- Gearboxes use a shift drum turned by a pawl, a cam plate and quadrant (mostly older British and European designs), or, rarely, a ball-lock shifter. Use the manual for the type fitted.
+- On some drum shifters the pawl can be adjusted: loosen the lock nut, set the pawl to the centre position, and retighten. This is rarely needed.
