@@ -1,0 +1,931 @@
+{
+ "repairs": [
+  {
+   "id": "balancer-marks-set",
+   "title": "Check and set counterbalancer timing marks",
+   "level": "workshop",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "spanners",
+    "torque wrench",
+    "white paint or paint pen",
+    "camera",
+    "shop manual"
+   ],
+   "parts": [
+    "crankshaft",
+    "engine",
+    "gaskets"
+   ],
+   "consumables": [
+    "cover gasket",
+    "balancer chain if worn"
+   ],
+   "fixes": [
+    "new-vibration"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/122/122_punch_mark.jpg",
+     "caption": "Punch mark on a balancer shaft or gear"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/122/122_gear_alignment.jpg",
+     "caption": "Balancer gear marks aligned with the crank gear"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/122/122_chain_alignment.jpg",
+     "caption": "Balancer chain drive with sprocket marks aligned"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/counterbalancers.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve_timing.htm"
+    }
+   ]
+  },
+  {
+   "id": "cam-timing-set",
+   "title": "Record and set cam timing marks",
+   "level": "workshop",
+   "time": "60 to 180 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "spanners",
+    "torque wrench",
+    "white paint or paint pen",
+    "camera",
+    "shop manual"
+   ],
+   "parts": [
+    "camshaft",
+    "cam_chain",
+    "cam_tensioner",
+    "cylinder_head",
+    "valves"
+   ],
+   "consumables": [
+    "head cover gasket",
+    "new cam chain if worn"
+   ],
+   "fixes": [
+    "cam-chain-rattle",
+    "low-power",
+    "low-compression"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/130/130_timing_line_cam_sprocket.jpg",
+     "caption": "Timing line on a cam sprocket level with the head"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/130/130_suzuki_twin_cam_timing.jpg",
+     "caption": "Twin-cam timing marks on both cam sprockets"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/130/130_timing_mark.jpg",
+     "caption": "Cam timing mark on the cylinder head"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve_timing.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/camchain.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/camchain_adjust.htm"
+    }
+   ]
+  },
+  {
+   "id": "clutch-plates-stuck-free",
+   "title": "Free stuck clutch plates and check the clutch release rod",
+   "level": "home",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "spanners",
+    "screwdrivers",
+    "steel rule",
+    "drain tray",
+    "shop manual"
+   ],
+   "parts": [
+    "clutch",
+    "clutch_plates",
+    "clutch_cable",
+    "kickstarter"
+   ],
+   "consumables": [
+    "engine oil",
+    "clutch cover gasket"
+   ],
+   "fixes": [
+    "clutch-drag",
+    "hard-to-find-neutral",
+    "no-start-after-storage"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/118/118_stuck_clutch.jpg",
+     "caption": "Clutch plates being prised apart"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+     "caption": "Fibre and steel clutch plates"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/118/118_cam_worm.jpg",
+     "caption": "Clutch release rod and cam worm"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/clutches.htm"
+    }
+   ]
+  },
+  {
+   "id": "compression-adapter-make",
+   "title": "Make a compression tester adapter from an old spark plug",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "hacksaw",
+    "hammer",
+    "drift or punch",
+    "thread tap of the plug thread size",
+    "drill",
+    "vice",
+    "safety glasses"
+   ],
+   "parts": [
+    "spark_plug"
+   ],
+   "consumables": [
+    "old spark plug of the same thread and reach"
+   ],
+   "fixes": [
+    "low-compression",
+    "cranks-no-start"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/103/103_making_adapter.jpg",
+     "caption": "Old spark plug cut and tapped to make a gauge adapter"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/103/103_adaptor_made_old_spark_plug.jpg",
+     "caption": "Finished adapter made from an old spark plug"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/103/103_compresssion_tester_adapters.jpg",
+     "caption": "Compression gauge adapters for different plug threads"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/compression_test.htm"
+    }
+   ]
+  },
+  {
+   "id": "compression-release-check",
+   "title": "Check a manual or automatic compression release",
+   "level": "home",
+   "time": "20 to 30 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "spanners",
+    "steel rule",
+    "shop manual"
+   ],
+   "parts": [
+    "valves",
+    "camshaft",
+    "kickstarter"
+   ],
+   "consumables": [],
+   "fixes": [
+    "low-compression",
+    "kickstart-jammed",
+    "kickstart-kickback"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/104/104_kickstarter_cam_compression_release.jpg",
+     "caption": "Kickstarter cam that works the compression release cable"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/104/104_exhaust_valve_lifter.jpg",
+     "caption": "Exhaust valve lifter on the cylinder head"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/104/104_lever_operated_compression_release.jpg",
+     "caption": "Lever-operated compression release on the cylinder head"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/comp_release4.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/compression_test.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/kickstarters.htm"
+    }
+   ]
+  },
+  {
+   "id": "oil-seal-fit",
+   "title": "Remove and fit an engine oil seal",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain",
+    "scooter-cvt"
+   ],
+   "tools": [
+    "seal puller or flat screwdriver",
+    "wood or brass pad",
+    "socket or pipe that matches the seal",
+    "hammer",
+    "fine emery paper",
+    "grease"
+   ],
+   "parts": [
+    "oil_seals",
+    "gaskets"
+   ],
+   "consumables": [
+    "new oil seal",
+    "grease",
+    "sealant if the manual calls for it"
+   ],
+   "fixes": [
+    "oil-leak-sprocket",
+    "oil-leak-cover",
+    "oil-level-falling",
+    "two-stroke-crankcase-leak"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out.jpg",
+     "caption": "Levering an old oil seal out of the case"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/135/135_seal_driver_set.jpg",
+     "caption": "Seal driver set for fitting seals square"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip_worn_seal_lip.jpg",
+     "caption": "New seal lip beside a worn seal lip"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/seals.htm"
+    }
+   ]
+  },
+  {
+   "id": "piston-clearance-measure",
+   "title": "Measure piston-to-cylinder clearance and bore wear",
+   "level": "workshop",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "outside micrometer",
+    "bore gauge or inside micrometer",
+    "feeler gauge",
+    "clean rags",
+    "shop manual"
+   ],
+   "parts": [
+    "piston",
+    "cylinder",
+    "piston_rings"
+   ],
+   "consumables": [],
+   "fixes": [
+    "piston-slap",
+    "blue-smoke",
+    "low-compression",
+    "smoke-after-rebuild"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/113/113_measure_piston.jpg",
+     "caption": "Measuring piston diameter with a micrometer"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/113/113_measured_top_middle_bottom_cylinder.jpg",
+     "caption": "Cylinder bore measured at top, middle and bottom"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/113/113_cylinder_ridge.jpg",
+     "caption": "Wear ridge at the top of the bore"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/hone_cyl.htm"
+    }
+   ]
+  },
+  {
+   "id": "piston-ring-fit",
+   "title": "Fit piston rings and deglaze the bore",
+   "level": "workshop",
+   "time": "90 to 150 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "feeler gauge",
+    "ring expander or fingers",
+    "ring compressor or hose clamp",
+    "flat file",
+    "cylinder hone",
+    "honing oil",
+    "clean rags",
+    "circlip pliers",
+    "shop manual"
+   ],
+   "parts": [
+    "piston_rings",
+    "piston",
+    "cylinder"
+   ],
+   "consumables": [
+    "ring set of the correct type and size",
+    "new circlips",
+    "base gasket",
+    "engine oil"
+   ],
+   "fixes": [
+    "blue-smoke",
+    "low-compression",
+    "smoke-after-rebuild"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/112/112_ring_gap.jpg",
+     "caption": "Measuring piston ring end gap in the bore"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/112/112_ring_side_gap.jpg",
+     "caption": "Measuring ring side clearance in the groove"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/112/112_stagger.jpg",
+     "caption": "Ring gaps staggered around the piston"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/113/113_hone_marks.jpg",
+     "caption": "Cross-hatch pattern left by honing"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/hone_cyl.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rings.htm"
+    }
+   ]
+  },
+  {
+   "id": "plain-bearing-clearance-check",
+   "title": "Check plain bearing clearance with Plastigauge",
+   "level": "workshop",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "Plastigauge (crushable plastic thread) of the right range",
+    "torque wrench",
+    "clean rags",
+    "shop manual"
+   ],
+   "parts": [
+    "crankshaft",
+    "camshaft",
+    "engine_oil",
+    "oil_pump"
+   ],
+   "consumables": [
+    "Plastigauge strip",
+    "clean engine oil for assembly"
+   ],
+   "fixes": [
+    "deep-knock",
+    "bearing-rumble",
+    "metal-in-oil",
+    "oil-warning-light"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/128/128_plastigauge_crankshaft_main_bearing.jpg",
+     "caption": "Plastigauge thread laid on a crankshaft main journal"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/128/128_plastigauge_thread.jpg",
+     "caption": "Plastigauge thread before and after crushing"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/128/128_bad_bushing_good_bushing.jpg",
+     "caption": "Good and worn bearing shells side by side"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bush_plain_bearings.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/roller_bearings.htm"
+    }
+   ]
+  },
+  {
+   "id": "silencer-rust-check",
+   "title": "Check a rusted silencer and choose a repair",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "padded pliers or hand",
+    "torch",
+    "wire brush",
+    "tape measure"
+   ],
+   "parts": [
+    "exhaust",
+    "exhaust_gasket"
+   ],
+   "consumables": [
+    "exhaust repair tape or putty",
+    "replacement silencer or slip-on if needed"
+   ],
+   "fixes": [
+    "exhaust-leak",
+    "exhaust-loud"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/108/108_removable_baffle.jpg",
+     "caption": "Silencer with a removable baffle"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/108/108_tripled_wall_exhaust_header_pipe_honda.jpg",
+     "caption": "Multi-wall header pipe on a street bike"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Exhaust_4.htm"
+    }
+   ]
+  },
+  {
+   "id": "stuck-engine-diagnosis",
+   "title": "Find out where a stuck engine is locked",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "electric-start",
+    "chain"
+   ],
+   "tools": [
+    "spanner or socket for the crankshaft nut",
+    "penetrating oil",
+    "spark plug spanner",
+    "rags"
+   ],
+   "parts": [
+    "engine",
+    "piston",
+    "clutch",
+    "starter",
+    "kickstarter"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "engine-seized",
+    "kickstart-jammed",
+    "starter-silent",
+    "starter-spins-freely"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/127/127_cutting_spark_plug_hydraulic_tool.jpg",
+     "caption": "Old plug body cut to make a grease tool for workshops"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/stuck_engine.htm"
+    }
+   ]
+  },
+  {
+   "id": "thumb-compression-check",
+   "title": "Rough compression check with a thumb",
+   "level": "rider",
+   "time": "5 to 10 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "spark plug spanner",
+    "helper"
+   ],
+   "parts": [
+    "spark_plug",
+    "piston_rings",
+    "valves"
+   ],
+   "consumables": [],
+   "fixes": [
+    "cranks-no-start",
+    "low-compression"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/103/103_engine_compression_testing.jpg",
+     "caption": "Compression test at the spark plug hole"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/compression_test.htm"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-crankcase-test",
+   "title": "Pressure and vacuum test a two-stroke crankcase",
+   "level": "workshop",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "two-stroke crankcase test kit or hand pump with gauge",
+    "plugs or blanking plates for the inlet and exhaust",
+    "plug-hole fitting",
+    "soapy water",
+    "shop manual"
+   ],
+   "parts": [
+    "oil_seals",
+    "crankshaft",
+    "gaskets",
+    "engine"
+   ],
+   "consumables": [
+    "crankshaft oil seals",
+    "gasket or sealant as the manual calls for"
+   ],
+   "fixes": [
+    "hard-cold-start",
+    "runs-lean",
+    "stalls-at-idle",
+    "two-stroke-crankcase-leak"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/107/107_vacuum_tester.jpg",
+     "caption": "Hand pump and gauge for pressure and vacuum tests"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/107/107_two_stroke_vacuum_pressure_testing.jpg",
+     "caption": "Two-stroke crankcase set up for pressure test"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/vacuum_testing.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve-seat-leak-test",
+   "title": "Check a valve and seat with a solvent leak test",
+   "level": "workshop",
+   "time": "20 to 40 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "torch",
+    "clean solvent or petrol in a small container",
+    "levelling bench",
+    "shop rags"
+   ],
+   "parts": [
+    "valves",
+    "cylinder_head",
+    "valve_springs"
+   ],
+   "consumables": [],
+   "fixes": [
+    "low-compression",
+    "cranks-no-start"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/111/111_testing_work.jpg",
+     "caption": "Solvent in the combustion chamber to test valve seating"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/111/111_lapping_valve.jpg",
+     "caption": "Lapping a valve onto its seat"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve-shim-adjust",
+   "title": "Check and adjust valve clearance on shim-type engines",
+   "level": "workshop",
+   "time": "90 to 180 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "feeler gauges",
+    "micrometer or vernier caliper",
+    "shim holder tool for your engine",
+    "small screwdriver",
+    "tweezers",
+    "torque wrench",
+    "shop manual"
+   ],
+   "parts": [
+    "valves",
+    "camshaft",
+    "rocker_arms"
+   ],
+   "consumables": [
+    "valve cover gasket or O-rings",
+    "replacement shims"
+   ],
+   "fixes": [
+    "tappet-tick",
+    "hard-cold-start",
+    "low-compression"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/110/110_shim_type_adjusters_valve_shims.jpg",
+     "caption": "Valve shims of different thickness"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/110/110_shim_tool.jpg",
+     "caption": "Tool holding the bucket down to remove a shim"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/110/110_feeler_gauge.jpg",
+     "caption": "Feeler gauge measuring valve clearance"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valveclearence.htm"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "kick-very-hard",
+   "title": "Kickstarter is very hard to push through",
+   "system": "starting",
+   "also_called": [
+    "kick is heavy",
+    "cannot kick over compression",
+    "kicker will not go down"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "parts": [
+    "valves",
+    "camshaft",
+    "kickstarter",
+    "piston",
+    "clutch"
+   ],
+   "repairs": [
+    "thumb-compression-check",
+    "compression-release-check",
+    "valve-clearance",
+    "stuck-engine-diagnosis"
+   ],
+   "related": [
+    "kickstart-jammed",
+    "kickstart-kickback",
+    "engine-seized",
+    "low-compression"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/104/104_kickstarter_cam_compression_release.jpg",
+     "caption": "Kickstarter cam that works the compression release cable"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/comp_release4.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/stuck_engine.htm"
+    }
+   ]
+  },
+  {
+   "id": "smoke-after-rebuild",
+   "title": "Engine still smokes after a rebuild with new rings",
+   "system": "smoke",
+   "also_called": [
+    "smokes after new piston",
+    "smoke after overhaul",
+    "rings will not seat"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "piston_rings",
+    "piston",
+    "cylinder",
+    "cylinder_head",
+    "oil_seals"
+   ],
+   "repairs": [
+    "piston-clearance-measure",
+    "piston-ring-fit",
+    "compression-test",
+    "valve-seat-leak-test"
+   ],
+   "related": [
+    "blue-smoke",
+    "low-compression",
+    "piston-slap",
+    "engine-seized"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/112/112_worn_plated_cylinder.jpg",
+     "caption": "Worn plated cylinder wall"
+    },
+    {
+     "file": "source/dansmc/06_Engine_Parts/113/113_ring_worn.jpg",
+     "caption": "Ring wear groove in a cylinder bore"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/hone_cyl.htm"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-crankcase-leak",
+   "title": "Two-stroke is hard to start, runs lean or smokes (crankcase leak suspected)",
+   "system": "engine",
+   "also_called": [
+    "two-stroke leaks air",
+    "crankshaft seal leak",
+    "hard to start when cold",
+    "runs weak and hot"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "parts": [
+    "oil_seals",
+    "crankshaft",
+    "gaskets",
+    "engine"
+   ],
+   "repairs": [
+    "two-stroke-crankcase-test",
+    "oil-seal-fit",
+    "intake-leak-test",
+    "compression-test"
+   ],
+   "related": [
+    "hard-cold-start",
+    "runs-lean",
+    "white-smoke",
+    "overheating-air",
+    "engine-seized"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip_worn_seal_lip.jpg",
+     "caption": "New seal lip beside a worn seal lip"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/vacuum_testing.htm"
+    }
+   ]
+  }
+ ]
+}
