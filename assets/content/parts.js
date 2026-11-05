@@ -4,6 +4,8 @@
 export const MODE_INFO = {
   '4t': { short: '4-Stroke', name: 'Classic four-stroke', blurb: 'Air-cooled single, carburettor, chain drive. Click any part to look inside.' },
   '2t': { short: '2-Stroke', name: 'Two-stroke motocross', blurb: 'Ports instead of valves, a power stroke every revolution. Click any part to look inside.' },
+  sc: { short: 'Scooter', name: 'Automatic scooter', blurb: '125 cc twist-and-go: CVT belt drive in a swinging engine unit, no clutch lever or gears. Click any part to look inside.' },
+  st: { short: 'Step-through', name: 'Step-through underbone', blurb: '110 cc four-stroke with a centrifugal clutch and four gears, the commuter and boda bike of Asia and Africa. Click any part to look inside.' },
   elec: { short: 'Electric', name: 'Electric scrambler', blurb: 'Battery, controller and motor, with the rotor as the only moving part in the powertrain. Click any part to look inside.' },
 };
 
@@ -52,6 +54,7 @@ export const PARTS = {
   starter:     { name: 'Starter motor', tag: 'Electrical', chapter: 'm3-battery-charging', desc: 'A DC motor that cranks the engine through a starter clutch. It draws around 100 A, so it is switched by a relay.', notes: 'Interlocks: clutch pulled or neutral, stand up.' },
   dc_dc:       { name: 'DC-DC converter', tag: 'Electric', chapter: 'm5-architecture', desc: 'Steps the traction voltage down to about 13.8 V for lights, dash and the 12 V auxiliary battery.', notes: 'Replaces the alternator of a petrol bike.' },
   cooling:     { name: 'Radiator & cooling', tag: 'Powertrain', chapter: 'm2-lubrication-cooling', desc: 'Liquid cooling: a pump circulates coolant through the cylinder jacket and the radiator, where passing air carries the heat away.', notes: 'Never open a hot radiator cap.' },
+  cvt:         { name: 'CVT belt drive', tag: 'Transmission', chapter: 'm4-final-drive', desc: 'A scooter\'s automatic gearbox: a rubber belt runs between two pulleys whose sides move apart and together, so the ratio changes smoothly with engine speed. Roller weights in the front pulley set when it shifts; a centrifugal clutch in the rear pulley takes up the drive.', notes: 'Check the belt for cracks and width wear, and the rollers for flat spots, at the interval in your manual.' },
   bodywork:    { name: 'Bodywork', tag: 'Body', chapter: 'm1-anatomy', desc: 'Mudguards, side panels, shrouds and covers: they keep water and dirt off the rider and machine, guide air and carry the number plate.', notes: 'Side covers usually hide the battery, fuses and air box.' },
 };
 
@@ -60,7 +63,7 @@ export const PART_CATEGORY = {
   valve_in: 'powertrain', valve_ex: 'powertrain', port_ex: 'powertrain', port_tr: 'powertrain',
   carb: 'powertrain', air_filter: 'powertrain', exhaust: 'powertrain', cooling: 'powertrain',
   motor: 'powertrain', controller: 'powertrain',
-  clutch: 'powertrain', gearbox: 'transmission', chain: 'transmission', rear_sprocket: 'transmission',
+  clutch: 'powertrain', gearbox: 'transmission', cvt: 'transmission', chain: 'transmission', rear_sprocket: 'transmission',
   forks: 'chassis', swingarm: 'chassis', rear_shock: 'chassis', brake: 'chassis', rear_brake: 'chassis',
   handlebar: 'chassis', footpegs: 'chassis', side_stand: 'chassis',
   frame: 'frame_body', seat: 'frame_body', fuel_tank: 'frame_body', bodywork: 'frame_body',

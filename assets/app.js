@@ -11,7 +11,7 @@ import { recordTool } from './progress.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
 const ENGINE_VIEW = { engine: 'overview', crankshaft: 'overview', piston: 'overview', conrod: 'overview', cylinder: 'top', valve_in: 'top', valve_ex: 'top', clutch: 'clutch', gearbox: 'gearbox', rear_sprocket: 'final', chain: 'final', starter: 'start', charging: 'gen', spark_plug: 'gen' };
 import {
-  BIKE_MODEL, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
+  BIKE_MODEL, MODES, MODE_PARTS, baseMode, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
   partForMesh, BIKE_WHEELS, HOTSPOTS,
 } from './content/assets-map.js';
 
@@ -104,9 +104,11 @@ function render() {
     </header>
     <div class="mz-pagebar">
       <h1 class="mz-pagebar-title">${PAGE === 'cockpit' ? 'Cockpit' : 'Overview'}</h1>
-      <div class="mz-modes ute-mode-switch" role="group" aria-label="Bike type">
+      ${PAGE === 'cockpit' ? `<div class="mz-modes ute-mode-switch" role="group" aria-label="Bike type">
         ${['4t', '2t', 'elec'].map((m) => `<button type="button" data-mode="${m}" class="${S.mode === m ? 'is-on' : ''}" aria-pressed="${S.mode === m}" title="${MODE_INFO[m].short} (${['4t', '2t', 'elec'].indexOf(m) + 1})"><span class="l-long">${MODE_INFO[m].short}</span><span class="l-short" aria-hidden="true">${{ '4t': '4T', '2t': '2T', elec: 'EV' }[m]}</span></button>`).join('')}
-      </div>
+      </div>` : `<label class="mz-modesel"><select class="ute-mode-select" aria-label="Bike">
+        ${MODES.map((m) => `<option value="${m}" ${S.mode === m ? 'selected' : ''}>${MODE_INFO[m].name}</option>`).join('')}
+      </select></label>`}
       <div class="mz-pagebar-actions">
         <button class="mz-icon" type="button" data-run aria-label="Pause or resume the animation (Space)" title="Pause or resume the animation (Space)">${S.running ? ICON.pause : ICON.play}</button>
         <button class="mz-icon" type="button" data-help aria-label="Help (?)" title="Help (?)">${ICON.help}</button>
@@ -244,6 +246,7 @@ function wireSplit() {
 function wireChrome() {
   wireSplit();
   $$('.ute-mode-switch button').forEach((b) => b.addEventListener('click', () => switchMode(b.dataset.mode)));
+  $$('.ute-mode-select').forEach((sel) => sel.addEventListener('change', () => switchMode(sel.value)));
   $$('.ute-chips [data-cat]').forEach((b) => b.addEventListener('click', () => {
     S.category = b.dataset.cat;
     $$('.ute-chips [data-cat]').forEach((x) => x.classList.toggle('is-on', x.dataset.cat === S.category));
@@ -272,7 +275,7 @@ function closeHelp() { $('#ute-help').classList.remove('is-open'); }
 
 /* ---------- Mode switching ---------- */
 function switchMode(mode) {
-  if (!['4t', '2t', 'elec'].includes(mode) || mode === S.mode) return;
+  if (!MODES.includes(mode) || mode === S.mode) return;
   S.mode = mode;
   S.crank_deg = 0;
   S.selected_part = null;
@@ -299,7 +302,7 @@ let mountToken = 0;
 const load3D = () => v3mod || (v3mod = import('./viewer3d.js'));
 
 function overviewParts() {
-  const keys = [...new Set(HOTSPOTS[S.mode].map((h) => h[0]))];
+  const keys = MODE_PARTS[S.mode] ? [...MODE_PARTS[S.mode]] : [...new Set(HOTSPOTS[S.mode].map((h) => h[0]))];
   if (!keys.includes('wiring')) keys.push('wiring');
   return keys;
 }
@@ -702,7 +705,7 @@ function engineView(title, focus) {
         badge.querySelector('i').style.background = s.color;
         badge.querySelector('span').textContent = s.label;
       }
-      setStatus(r.spark ? 'Spark!' : s.label, STROKE_DESC[S.mode][s.k], `θ ${Math.round(S.crank_deg)}° · ${Math.round(S.rpm)} rpm${S.live ? '' : ' (demo)'}`);
+      setStatus(r.spark ? 'Spark!' : s.label, STROKE_DESC[baseMode(S.mode)][s.k], `θ ${Math.round(S.crank_deg)}° · ${Math.round(S.rpm)} rpm${S.live ? '' : ' (demo)'}`);
       const lv = $('#cv-live');
       if (lv) { const t = S.live ? 'Live from the Cockpit: the engine is running.' : 'Demo idle. Start the engine in the Cockpit and this follows its rpm.'; if (lv.textContent !== t) { lv.textContent = t; lv.classList.toggle('is-live', !!S.live); } }
     },
@@ -2133,7 +2136,7 @@ function pageShortcut(key, repeat) {
   if (key === '?' || key === '/') { openHelp(); return true; }
   if (key === ' ') { toggleRun(); return true; }
   if (repeat) return true;
-  if (['1', '2', '3'].includes(key)) { switchMode(['4t', '2t', 'elec'][+key - 1]); return true; }
+  if (['1', '2', '3', '4', '5'].includes(key)) { const L = (document.getElementById('ute-root')?.dataset.page === 'cockpit') ? ['4t', '2t', 'elec'] : MODES; if (L[+key - 1]) switchMode(L[+key - 1]); return true; }
   if (key === 'g' || key === 'G') { toggleDyno(); return true; }
   return false;
 }
@@ -2187,7 +2190,8 @@ function wireChromeGlobal() {
 if (document.getElementById('ute-root')) {
   try {
     const q = new URLSearchParams(location.search);
-    if (['4t', '2t', 'elec'].includes(q.get('mode'))) S.mode = q.get('mode');
+    if (MODES.includes(q.get('mode'))) S.mode = q.get('mode');
+    if (document.getElementById('ute-root').dataset.page === 'cockpit' && (S.mode === 'sc' || S.mode === 'st')) S.mode = '4t';
     // Engine size from the Bike builder: ?bore=mm&stroke=mm&cr=ratio
     const num = (k, lo, hi) => { const v = parseFloat(q.get(k)); return Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : null; };
     const bore = num('bore', 40, 100), stroke = num('stroke', 40, 90), cr = num('cr', 7, 14);

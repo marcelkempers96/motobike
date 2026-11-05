@@ -4,9 +4,16 @@
    bike mesh names and diagram hotspots.
    ========================================================================== */
 
-export const BIKE_MODEL = { '4t': 'bike_classic_4t', '2t': 'bike_mx_2t', elec: 'bike_electric' };
-export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', elec: 'overview/F03.png' };
-export const PLATE_RATIO = { '4t': 2400 / 1620, '2t': 2400 / 1185, elec: 2400 / 1185 };
+export const BIKE_MODEL = { '4t': 'bike_classic_4t', '2t': 'bike_mx_2t', sc: 'bike_scooter', st: 'bike_step_through', elec: 'bike_electric' };
+export const MODES = ['4t', '2t', 'sc', 'st', 'elec'];
+/* Scooter and step-through are four-stroke petrol bikes: they borrow the 4T data where they have none of their own. */
+export const baseMode = (m) => (m === 'sc' || m === 'st' ? '4t' : m);
+export const MODE_PARTS = {
+  sc: ['headlight', 'indicators', 'instruments', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'cooling', 'cvt', 'rear_shock', 'spark_plug', 'starter', 'side_stand', 'wiring'],
+  st: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
+};
+export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', sc: 'overview/F04.png', st: 'overview/F01.png', elec: 'overview/F03.png' };
+export const PLATE_RATIO = { '4t': 2400 / 1620, '2t': 2400 / 1185, sc: 2400 / 1620, st: 2400 / 1620, elec: 2400 / 1185 };
 
 /* All course plates (id → category/title) */
 export const PLATES = {
@@ -56,6 +63,8 @@ export const MODELS = {
   bike_classic_4t: ['bikes', 'Classic air-cooled four-stroke roadster'],
   bike_mx_2t: ['bikes', 'Two-stroke motocross bike'],
   bike_electric: ['bikes', 'Electric scrambler'],
+  bike_scooter: ['bikes', 'Automatic 125 cc scooter'],
+  bike_step_through: ['bikes', 'Step-through underbone 110'],
   engine_4t: ['powertrain', 'Four-stroke horizontal single engine'],
   engine_2t: ['powertrain', '125 cc two-stroke single engine'],
   cylinder: ['powertrain', 'Cylinder and head (quarter cutaway)'],
@@ -138,6 +147,7 @@ const PM = {
   chain: ['chain_sprockets', 'rear_sprocket'], rear_sprocket: ['rear_sprocket', 'chain_sprockets'],
   front_wheel: { '4t': ['front_wheel_spoked', 'front_wheel_cast', 'front_wheel_mx'], '2t': ['front_wheel_mx', 'front_wheel_spoked', 'front_wheel_cast'], elec: ['front_wheel_cast', 'front_wheel_spoked', 'front_wheel_mx'] },
   rear_wheel: { '4t': ['rear_wheel_spoked', 'rear_wheel_cast', 'rear_wheel_mx'], '2t': ['rear_wheel_mx', 'rear_wheel_spoked', 'rear_wheel_cast'], elec: ['rear_wheel_cast', 'rear_wheel_spoked', 'rear_wheel_mx'] },
+  cvt: ['clutch', 'chain_sprockets'], cooling: { '4t': ['engine_2t'] },
   clutch: ['clutch', 'clutch_exploded'], gearbox: ['clutch_exploded', 'clutch'],
   handlebar: ['handlebar'],
 };
@@ -145,7 +155,7 @@ export function modelsFor(key, mode) {
   const v = PM[key];
   if (!v) return [];
   if (Array.isArray(v)) return v;
-  return v[mode] || v['4t'] || [];
+  return v[mode] || v[baseMode(mode)] || v['4t'] || [];
 }
 
 /* Part key → course plates */
@@ -161,14 +171,14 @@ const PP = {
   handlebar: ['F05', 'EL01'],
   frame: ['FB01', 'F17'], seat: ['FB02'], fuel_tank: ['FB02', 'F06'], bodywork: ['FB02', 'F06'],
   forks: ['F18', 'F17'], rear_shock: ['F18'], swingarm: ['F18'], brake: ['F19'], rear_brake: ['F19'],
-  chain: ['F15', 'TR02'], rear_sprocket: ['F15', 'TR02'], clutch: ['F13'], gearbox: ['F14', 'TR01'],
+  chain: ['F15', 'TR02'], rear_sprocket: ['F15', 'TR02'], cvt: ['F16', 'F04'], clutch: ['F13'], gearbox: ['F14', 'TR01'],
   front_wheel: ['W01', 'F20', 'W02'], rear_wheel: ['W01', 'F20', 'W02'], footpegs: ['F06'], side_stand: ['F06'],
 };
 export function platesFor(key, mode) {
   const v = PP[key];
   if (!v) return [];
   if (Array.isArray(v)) return v;
-  return v[mode] || v['4t'] || [];
+  return v[mode] || v[baseMode(mode)] || v['4t'] || [];
 }
 
 /* Better Learn targets per part */
@@ -177,7 +187,7 @@ export const PART_CHAPTER = {
   port_ex: 'm2-two-stroke', port_tr: 'm2-two-stroke', engine: 'm2-four-stroke', exhaust: 'm2-top-end', cooling: 'm2-lubrication-cooling',
   spark_plug: 'm3-ignition', carb: 'm3-mixture', air_filter: 'm3-mixture', fuel_tank: 'm3-efi', battery: 'm3-battery-charging', charging: 'm3-battery-charging',
   starter: 'm3-battery-charging', wiring: 'm3-lighting-wiring', headlight: 'm3-lighting-wiring', tail_light: 'm3-lighting-wiring', indicators: 'm3-lighting-wiring', horn: 'm3-lighting-wiring', instruments: 'm1-anatomy',
-  clutch: 'm4-clutch', gearbox: 'm4-gearbox', chain: 'm4-final-drive', rear_sprocket: 'm4-final-drive', frame: 'm4-frame-steering', forks: 'm4-suspension', rear_shock: 'm4-suspension',
+  clutch: 'm4-clutch', gearbox: 'm4-gearbox', cvt: 'm4-final-drive', chain: 'm4-final-drive', rear_sprocket: 'm4-final-drive', frame: 'm4-frame-steering', forks: 'm4-suspension', rear_shock: 'm4-suspension',
   swingarm: 'm4-suspension', brake: 'm4-brakes', rear_brake: 'm4-brakes', front_wheel: 'm4-wheels-tyres', rear_wheel: 'm4-wheels-tyres',
   motor: 'm5-motors', controller: 'm5-controllers', charge_port: 'm5-charging', dc_dc: 'm5-architecture',
   handlebar: 'm1-anatomy', seat: 'm1-anatomy', bodywork: 'm1-anatomy', footpegs: 'm1-anatomy', side_stand: 'm1-anatomy',
@@ -193,7 +203,10 @@ const MESH_PART = {
   electrical__ignition_coils: 'spark_plug', electrical__ignition_coil: 'spark_plug', electrical__spark_plugs: 'spark_plug', electrical__spark_plug: 'spark_plug',
   electrical__cdi_unit: 'spark_plug', electrical__kill_switch: 'handlebar', electrical__indicators: 'indicators', electrical__instruments: 'instruments',
   electrical__tft_dash: 'instruments', electrical__starter_motor: 'starter', electrical__tail_light: 'tail_light', electrical__charge_port: 'charge_port',
-  electrical__dc_dc_converter: 'dc_dc',
+  electrical__dc_dc_converter: 'dc_dc', electrical__generator: 'charging', electrical__spark_plug_cap: 'spark_plug', electrical__number_plate_light: 'tail_light',
+  chassis__centre_stand: 'side_stand', chassis__engine_mount_link: 'swingarm', chassis__passenger_footpegs: 'footpegs', chassis__rear_shocks: 'rear_shock',
+  powertrain__cvt: 'cvt', powertrain__kick_start: 'engine', transmission__cvt_belt: 'cvt', transmission__drive_pulley: 'cvt', transmission__driven_pulley: 'cvt',
+  transmission__final_gearbox: 'cvt', transmission__chain_case: 'chain', transmission__gear_pedal: 'gearbox', wiring__throttle_cables: 'handlebar',
   frame_body__frame: 'frame', frame_body__subframe: 'frame', frame_body__fuel_tank: 'fuel_tank', frame_body__tank_cover: 'bodywork', frame_body__seat: 'seat',
   frame_body__airbox: 'air_filter',
   powertrain__clutch: 'clutch', powertrain__engine: 'engine', powertrain__exhaust: 'exhaust', powertrain__fuel_system: 'carb', powertrain__intake: 'carb',
