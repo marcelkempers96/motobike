@@ -198,7 +198,7 @@ export function createViewer(el, opts = {}) {
       m.userData.origOpacity = m.material.opacity;
       m.userData.origTransparent = m.material.transparent;
       m.userData.origDepthWrite = m.material.depthWrite;
-      if (!m.name && m.parent) m.name = m.parent.name;
+      if (!m.name || !m.name.includes('__')) { let a = m.parent; while (a && !(a.name && a.name.includes('__'))) a = a.parent; if (a) m.name = a.name; else if (!m.name && m.parent) m.name = m.parent.name; }
       meshes.push(m);
     });
     picked = null;

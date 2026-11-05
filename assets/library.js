@@ -20,7 +20,7 @@ function gallery() {
   document.title = 'Moto Zero · Models';
   root.innerHTML = `
     <section class="ute-hero"><span class="ute-label">Model library · ${KEYS.length} models</span><h1>Every part, in 3D</h1>
-      <p>Three complete motorcycles and ${KEYS.length - 3} components, modelled for the course. Open any model to rotate it, zoom in and highlight each sub-part, or download it as a GLB file for Blender, three.js or any glTF viewer (CC BY-SA 4.0).</p>
+      <p>${KEYS.filter((k) => MODELS[k][0] === 'bikes').length} complete motorcycles and scooters and ${KEYS.filter((k) => MODELS[k][0] !== 'bikes').length} components, modelled for the course. Open any model to rotate it, zoom in and highlight each sub-part, or download it as a GLB file for Blender, three.js or any glTF viewer (CC BY-SA 4.0).</p>
       <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="https://sketchfab.com/motorbikemodel" target="_blank" rel="noopener">Download the models on Sketchfab ↗</a><a class="ute-linkbtn" href="../sources/#download">Need another model? Get in touch</a></div></section>
     ${Object.entries(CATS).map(([c, label]) => {
       const items = KEYS.filter((k) => MODELS[k][0] === c);

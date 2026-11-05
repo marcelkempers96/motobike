@@ -4,16 +4,21 @@
    bike mesh names and diagram hotspots.
    ========================================================================== */
 
-export const BIKE_MODEL = { '4t': 'bike_classic_4t', '2t': 'bike_mx_2t', sc: 'bike_scooter', st: 'bike_step_through', elec: 'bike_electric' };
-export const MODES = ['4t', '2t', 'sc', 'st', 'elec'];
-/* Scooter and step-through are four-stroke petrol bikes: they borrow the 4T data where they have none of their own. */
-export const baseMode = (m) => (m === 'sc' || m === 'st' ? '4t' : m);
+export const BIKE_MODEL = { '4t': 'bike_classic_4t', '2t': 'bike_mx_2t', sc: 'bike_scooter', st: 'bike_step_through', bb: 'bike_boda_boda', cr: 'bike_cafe_racer', sb: 'bike_superbike', elec: 'bike_electric' };
+export const MODES = ['4t', '2t', 'sc', 'st', 'bb', 'cr', 'sb', 'elec'];
+/* Bikes shown with their own model only (no 4T animations or generic part models of their own) */
+export const OWN_MODEL_MODES = new Set(['sc', 'st', 'bb', 'cr', 'sb']);
+/* Scooter, step-through, boda boda, cafe racer and superbike are four-stroke petrol bikes: they borrow the 4T data where they have none of their own. */
+export const baseMode = (m) => (OWN_MODEL_MODES.has(m) ? '4t' : m);
 export const MODE_PARTS = {
+  bb: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
+  cr: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
+  sb: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'cooling', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
   sc: ['headlight', 'indicators', 'instruments', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'cvt', 'rear_shock', 'swingarm', 'spark_plug', 'starter', 'footpegs', 'side_stand', 'wiring'],
   st: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
 };
-export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', sc: 'overview/F04.png', st: 'overview/F01.png', elec: 'overview/F03.png' };
-export const PLATE_RATIO = { '4t': 2400 / 1620, '2t': 2400 / 1185, sc: 2400 / 1620, st: 2400 / 1620, elec: 2400 / 1185 };
+export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', sc: 'overview/F04.png', st: 'overview/F01.png', bb: 'overview/F01.png', cr: 'overview/F01.png', sb: 'overview/F01.png', elec: 'overview/F03.png' };
+export const PLATE_RATIO = { '4t': 2400 / 1620, '2t': 2400 / 1185, sc: 2400 / 1620, st: 2400 / 1620, bb: 2400 / 1620, cr: 2400 / 1620, sb: 2400 / 1620, elec: 2400 / 1185 };
 
 /* All course plates (id → category/title) */
 export const PLATES = {
@@ -65,6 +70,9 @@ export const MODELS = {
   bike_electric: ['bikes', 'Electric scrambler'],
   bike_scooter: ['bikes', 'Automatic 125 cc scooter'],
   bike_step_through: ['bikes', 'Step-through underbone 110'],
+  bike_boda_boda: ['bikes', 'Boda boda commuter 150'],
+  bike_cafe_racer: ['bikes', '1960s cafe racer, 650 cc twin'],
+  bike_superbike: ['bikes', '1000 cc superbike'],
   engine_4t: ['powertrain', 'Four-stroke horizontal single engine'],
   engine_2t: ['powertrain', '125 cc two-stroke single engine'],
   cylinder: ['powertrain', 'Cylinder and head (quarter cutaway)'],
@@ -195,6 +203,8 @@ export const PART_CHAPTER = {
 
 /* Bike mesh component (<category>__<component>) → part key */
 const MESH_PART = {
+  chassis__passenger_footrests: 'footpegs', electrical__ht_leads: 'spark_plug', electrical__magneto: 'spark_plug', transmission__gearbox: 'gearbox',
+  transmission__primary_chaincase: 'clutch', wiring__control_cables: 'handlebar', electrical__ecu: 'carb', powertrain__radiator: 'cooling',
   chassis__footpegs: 'footpegs', chassis__front_brake: 'brake', chassis__front_fork: 'forks', chassis__handlebar: 'handlebar',
   chassis__rear_brake: 'rear_brake', chassis__rear_shock: 'rear_shock', chassis__rear_shock_left: 'rear_shock', chassis__rear_shock_right: 'rear_shock',
   chassis__rear_suspension_linkage: 'rear_shock', chassis__side_stand: 'side_stand', chassis__steering: 'forks', chassis__swingarm: 'swingarm',

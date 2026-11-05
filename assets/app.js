@@ -11,7 +11,7 @@ import { recordTool } from './progress.js';
 import { PARTS, PART_CATEGORY, CATEGORIES, INTERACTIVE_PARTS, MODE_INFO } from './content/parts.js';
 const ENGINE_VIEW = { engine: 'overview', crankshaft: 'overview', piston: 'overview', conrod: 'overview', cylinder: 'top', valve_in: 'top', valve_ex: 'top', clutch: 'clutch', gearbox: 'gearbox', rear_sprocket: 'final', chain: 'final', starter: 'start', charging: 'gen', spark_plug: 'gen' };
 import {
-  BIKE_MODEL, MODES, MODE_PARTS, baseMode, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
+  BIKE_MODEL, MODES, MODE_PARTS, OWN_MODEL_MODES, baseMode, PLATES, plateSrc, MODELS, modelsFor, platesFor, PART_CHAPTER,
   partForMesh, BIKE_WHEELS, HOTSPOTS,
 } from './content/assets-map.js';
 
@@ -55,7 +55,8 @@ const S = {
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-const partName = (k) => (PARTS[k] && PARTS[k].name) || 'Component';
+const MODE_PART_NAME = { sb: { carb: 'Fuel injection and throttle bodies', spark_plug: 'Spark plugs and coils' }, cr: { carb: 'Twin carburettors', spark_plug: 'Spark plugs and magneto' } };
+const partName = (k) => (MODE_PART_NAME[S.mode] && MODE_PART_NAME[S.mode][k]) || (PARTS[k] && PARTS[k].name) || 'Component';
 
 /* ---------- Icons ---------- */
 const ICON = {
@@ -604,7 +605,7 @@ async function mountAssetsPanel(key) {
   };
   // Scooter and step-through: the part in place on the bike's own model first; a generic
   // component model only where it is the same on every bike.
-  const OWN = S.mode === 'sc' || S.mode === 'st';
+  const OWN = OWN_MODEL_MODES.has(S.mode);
   const GENERIC_OK = new Set(['spark_plug', 'battery_12v', 'tail_light', 'wiring_harness']);
   const onBike = OWN && (MODE_PARTS[S.mode] || []).includes(key);
   const models = OWN ? [...(onBike ? ['@bike'] : []), ...modelsFor(key, S.mode).filter((m) => GENERIC_OK.has(m))] : modelsFor(key, S.mode);
@@ -2152,7 +2153,7 @@ function pageShortcut(key, repeat) {
   if (key === '?' || key === '/') { openHelp(); return true; }
   if (key === ' ') { toggleRun(); return true; }
   if (repeat) return true;
-  if (['1', '2', '3', '4', '5'].includes(key)) { const L = (document.getElementById('ute-root')?.dataset.page === 'cockpit') ? ['4t', '2t', 'elec'] : MODES; if (L[+key - 1]) switchMode(L[+key - 1]); return true; }
+  if (['1', '2', '3', '4', '5', '6', '7', '8'].includes(key)) { const L = (document.getElementById('ute-root')?.dataset.page === 'cockpit') ? ['4t', '2t', 'elec'] : MODES; if (L[+key - 1]) switchMode(L[+key - 1]); return true; }
   if (key === 'g' || key === 'G') { toggleDyno(); return true; }
   return false;
 }
@@ -2207,7 +2208,7 @@ if (document.getElementById('ute-root')) {
   try {
     const q = new URLSearchParams(location.search);
     if (MODES.includes(q.get('mode'))) S.mode = q.get('mode');
-    if (document.getElementById('ute-root').dataset.page === 'cockpit' && (S.mode === 'sc' || S.mode === 'st')) S.mode = '4t';
+    if (document.getElementById('ute-root').dataset.page === 'cockpit' && OWN_MODEL_MODES.has(S.mode)) S.mode = '4t';
     // Engine size from the Bike builder: ?bore=mm&stroke=mm&cr=ratio
     const num = (k, lo, hi) => { const v = parseFloat(q.get(k)); return Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : null; };
     const bore = num('bore', 40, 100), stroke = num('stroke', 40, 90), cr = num('cr', 7, 14);

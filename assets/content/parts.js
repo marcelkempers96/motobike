@@ -6,6 +6,9 @@ export const MODE_INFO = {
   '2t': { short: '2-Stroke', name: 'Two-stroke motocross', blurb: 'Ports instead of valves, a power stroke every revolution. Click any part to look inside.' },
   sc: { short: 'Scooter', name: 'Automatic scooter', blurb: '125 cc twist-and-go: CVT belt drive in a swinging engine unit, no clutch lever or gears. Click any part to look inside.' },
   st: { short: 'Step-through', name: 'Step-through underbone', blurb: '110 cc four-stroke with a centrifugal clutch and four gears, the commuter and boda bike of Asia and Africa. Click any part to look inside.' },
+  bb: { short: 'Boda boda', name: 'Boda boda commuter', blurb: '150 cc air-cooled single with kick start, four gears and a fully enclosed chain, in taxi fit-out. Click any part to look inside.' },
+  cr: { short: 'Cafe racer', name: '1960s cafe racer', blurb: '650 cc parallel twin with magneto ignition, twin carburettors and a separate gearbox. Click any part to look inside.' },
+  sb: { short: 'Superbike', name: '1000 cc superbike', blurb: 'Liquid-cooled inline four with fuel injection, twin front discs and a twin-spar frame. Click any part to look inside.' },
   elec: { short: 'Electric', name: 'Electric scrambler', blurb: 'Battery, controller and motor, with the rotor as the only moving part in the powertrain. Click any part to look inside.' },
 };
 
