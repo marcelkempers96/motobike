@@ -27,6 +27,74 @@ D = json.load(open(os.path.join(SRC, 'repair-data.json'), encoding='utf-8'))
 PROB = {x['id']: x for x in D['problems']}
 REP = {x['id']: x for x in D['repairs']}
 PART = {x['id']: x for x in D['parts']}
+import glob as _glob
+NEW_MD = {}   # (kind, id) -> path of a page written from the repair course
+for _ix in sorted(_glob.glob(os.path.join(SRC, 'new', '*', 'index.json'))):
+  _sec = os.path.dirname(_ix)
+  _d = json.load(open(_ix, encoding='utf-8'))
+  for _k, _store in (('repairs', REP), ('problems', PROB)):
+    for _x in _d.get(_k, []):
+      _f = os.path.join(_sec, _k, _x['id'] + '.md')
+      if _x['id'] in _store or not os.path.exists(_f): continue
+      _store[_x['id']] = _x; NEW_MD[(_k, _x['id'])] = _f
+# back-links: new repairs appear on the parts and problems they name
+for _k, _x in list(NEW_MD):
+  if _k != 'repairs': continue
+  _r = REP[_x]
+  for _pt in _r.get('parts', []):
+    if _pt in PART and _x not in PART[_pt].setdefault('repairs', []): PART[_pt]['repairs'].append(_x)
+  for _pb in _r.get('fixes', []):
+    if _pb in PROB and _x not in PROB[_pb].setdefault('repairs', []): PROB[_pb]['repairs'].append(_x)
+for _k, _x in list(NEW_MD):
+  if _k != 'problems': continue
+  for _pt in PROB[_x].get('parts', []):
+    if _pt in PART and _x not in PART[_pt].setdefault('problems', []): PART[_pt]['problems'].append(_x)
+
+# photos from the repair course (used with permission): photo-map.json for existing pages,
+# `photos:` frontmatter for new pages. Copied as web-size JPEGs to assets/repair-photos/.
+from PIL import Image as _Image
+PHOTO_DIR = os.path.join(ROOT, 'assets', 'repair-photos')
+PHOTO_CREDIT = "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission"
+PHOTOS = {'parts': {}, 'repairs': {}, 'problems': {}}
+_pm = os.path.join(SRC, 'photo-map.json')
+if os.path.exists(_pm):
+  _m = json.load(open(_pm, encoding='utf-8'))
+  for _k in ('parts', 'repairs'):
+    for _i, _l in (_m.get(_k) or {}).items(): PHOTOS[_k][_i] = list(_l)
+def _fm_photos(path):
+  t = open(path, encoding='utf-8').read()
+  if not t.startswith('---'): return []
+  fm = t[3:t.index('\n---', 3)]
+  out = []
+  for m in re.finditer(r'\{\s*file:\s*"([^"]+)"\s*,\s*caption:\s*"([^"]*)"\s*\}', fm): out.append({'file': m.group(1), 'caption': m.group(2)})
+  if not out:
+    for m in re.finditer(r'-\s*file:\s*"?([^"\n]+?)"?\s*\n\s*caption:\s*"?([^"\n]*)"?\s*(?:\n|$)', fm): out.append({'file': m.group(1).strip(), 'caption': m.group(2).strip()})
+  return out
+for (_k, _i), _f in NEW_MD.items():
+  _ph = _fm_photos(_f)
+  if _ph: PHOTOS[_k][_i] = _ph
+_done = {}
+def photo_src(src):
+  if src in _done: return _done[src]
+  full = os.path.join(ROOT, src)
+  if not os.path.exists(full): _done[src] = None; return None
+  name = re.sub(r'[^a-z0-9_-]+', '-', os.path.splitext(os.path.basename(src))[0].lower()) + '.jpg'
+  out = os.path.join(PHOTO_DIR, name)
+  if not os.path.exists(out):
+    os.makedirs(PHOTO_DIR, exist_ok=True)
+    try:
+      im = _Image.open(full); im = im.convert('RGB'); im.thumbnail((1200, 1200)); im.save(out, 'JPEG', quality=82, optimize=True, progressive=True)
+    except Exception: _done[src] = None; return None
+  _done[src] = 'assets/repair-photos/' + name
+  return _done[src]
+def photos_html(kind, i, rel, limit=4):
+  items = []
+  for ph in PHOTOS[kind].get(i, [])[:limit]:
+    src = photo_src(ph['file'])
+    if src: items.append(f'<figure><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
+  if not items: return ''
+  return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div><p class="r-photos-credit">{PHOTO_CREDIT}.</p></section>'
+
 SYS = D['systems']
 
 URG = {'ok-to-ride': ('OK to ride', 'ok'), 'ride-with-care': ('Ride with care', 'care'), 'do-not-ride': ('Do not ride', 'stop'), 'stop-now': ('Stop now', 'now')}
@@ -104,7 +172,7 @@ def overview_url(pid):
 
 # ---------------------------------------------------------------------------
 def read_md(kind, i):
-  f = os.path.join(SRC, 'md', kind, i + '.md')
+  f = NEW_MD.get((kind, i)) or os.path.join(SRC, 'md', kind, i + '.md')
   if not os.path.exists(f): return None, None
   t = open(f, encoding='utf-8').read()
   fm = {}
@@ -187,7 +255,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None):
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
-  <link rel="stylesheet" href="{rel}assets/repair2.css?v=1">
+  <link rel="stylesheet" href="{rel}assets/repair2.css?v=2">
   {''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)}
 </head>
 <body>
@@ -244,7 +312,7 @@ for i, p in PROB.items():
       <p class="r-meta"><i class="ru is-{u[1]}">{u[0]}</i>{f'<span>Also called: {e(also)}</span>' if also else ''}</p>
     </header>
     <div class="r-grid">
-      <article class="r-body is-problem">{body}</article>
+      <article class="r-body is-problem">{photos_html('problems', i, rel)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Repairs for this problem</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}
         {f'<section><h2>Parts you may need</h2><div class="rpcs">{parts}</div></section>' if parts else ''}
@@ -274,7 +342,7 @@ for i, r in REP.items():
       <p class="r-meta"><i class="rl is-{e(r.get("level"))}">{l[0]}</i><span>{l[1]}</span>{f'<span>Time: {e(tm(r))} (estimate)</span>' if tm(r) else ''}</p>
     </header>
     <div class="r-grid">
-      <article class="r-body is-repair" data-steps="{i}">{body}</article>
+      <article class="r-body is-repair" data-steps="{i}">{photos_html('repairs', i, rel)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Tools</h2><ul class="r-plain">{tools}</ul></section>' if tools else ''}
         {f'<section><h2>Consumables</h2><ul class="r-plain">{cons}</ul></section>' if cons else ''}
@@ -309,7 +377,7 @@ for i, p in PART.items():
       <figure class="r-fig"><img src="{rel}{src}" alt="{e(p["name"])}">{cap}</figure>
     </header>
     <div class="r-grid">
-      <article class="r-body is-part">{body}</article>
+      <article class="r-body is-part">{photos_html('parts', i, rel, 3)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Problems it can cause</h2><ul class="r-list">{probs}</ul></section>' if probs else ''}
         {f'<section><h2>Repairs</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}

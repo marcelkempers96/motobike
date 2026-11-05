@@ -1,0 +1,706 @@
+{
+ "repairs": [
+  {
+   "id": "basic-tool-kit",
+   "title": "Build a basic motorcycle tool kit",
+   "level": "rider",
+   "time": "30 min to plan, then built up over time",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spanners",
+    "sockets",
+    "screwdrivers",
+    "pliers",
+    "hammer"
+   ],
+   "parts": [],
+   "consumables": [],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_sockets.jpg",
+     "caption": "Socket set with ratchet handles"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_screw_drivers.jpg",
+     "caption": "Screwdrivers in different sizes"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_pliers.jpg",
+     "caption": "Pliers for holding and gripping"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    }
+   ]
+  },
+  {
+   "id": "diagnosis-method",
+   "title": "Find a fault step by step",
+   "level": "rider",
+   "time": "15 to 30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "notebook",
+    "torch"
+   ],
+   "parts": [],
+   "consumables": [],
+   "fixes": [
+    "cranks-no-start",
+    "intermittent-electrical",
+    "new-vibration"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/013/013_compression_gauge.jpg",
+     "caption": "Compression gauge"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/013/013_spark_testers.jpg",
+     "caption": "Spark testers"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/logicalthinking.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting3.htm"
+    }
+   ]
+  },
+  {
+   "id": "engine-stuck-check",
+   "title": "Find out why the engine will not turn over",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "socket or spanner for the crank end nut",
+    "penetrating oil",
+    "plug spanner",
+    "battery charger or good battery"
+   ],
+   "parts": [
+    "starter",
+    "starter_clutch",
+    "kickstarter",
+    "gearbox",
+    "piston",
+    "piston_rings",
+    "cylinder",
+    "engine"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "engine-seized",
+    "starter-silent",
+    "kickstart-jammed",
+    "starter-spins-freely",
+    "starter-clicks"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/013/013_compression_gauge.jpg",
+     "caption": "Compression gauge fitted in the plug hole"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting.htm"
+    }
+   ]
+  },
+  {
+   "id": "fuel-shot-test",
+   "title": "Test fuel supply with a small shot of fuel",
+   "level": "home",
+   "time": "10 to 15 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "plug spanner",
+    "small oil can or dropper",
+    "clean container",
+    "fire extinguisher"
+   ],
+   "parts": [
+    "carb",
+    "fuel_tap",
+    "fuel_tank",
+    "fuel_line",
+    "spark_plug"
+   ],
+   "consumables": [
+    "fresh petrol"
+   ],
+   "fixes": [
+    "cranks-no-start",
+    "carb-no-fuel",
+    "hard-cold-start",
+    "starts-only-with-choke",
+    "stale-fuel",
+    "no-start-after-storage"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/011/011_spark_plug_spark_plug_cap_grounded.jpg",
+     "caption": "Plug grounded to the engine to check spark first"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting3.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting2.htm"
+    }
+   ]
+  },
+  {
+   "id": "fuel-water-test",
+   "title": "Test fuel for water",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "carburettor",
+    "fuel-injected",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "clear glass jar",
+    "clean cotton rag",
+    "drain container"
+   ],
+   "parts": [
+    "fuel_tank",
+    "fuel_tap",
+    "fuel_filter",
+    "carb"
+   ],
+   "consumables": [],
+   "fixes": [
+    "water-in-fuel",
+    "stale-fuel",
+    "dies-in-rain",
+    "no-start-after-rain",
+    "hesitation"
+   ],
+   "photos": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting2.htm"
+    }
+   ]
+  },
+  {
+   "id": "impact-driver-use",
+   "title": "Loosen a tight screw with an impact driver",
+   "level": "home",
+   "time": "5 to 10 min per screw",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "hand impact driver with bits",
+    "hammer",
+    "support block",
+    "grinding paste or fine sand"
+   ],
+   "parts": [
+    "engine"
+   ],
+   "consumables": [
+    "valve grinding paste or fine sand",
+    "thread lock if the manual asks for it"
+   ],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/022/022_impact_driver.jpg",
+     "caption": "Hand impact driver with bits"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/022/022_impact_driver_2.jpg",
+     "caption": "Impact driver ready to use"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/022/022_impact_driver_3.jpg",
+     "caption": "Impact driver on a case screw"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/impactdriver.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools.htm"
+    }
+   ]
+  },
+  {
+   "id": "make-simple-special-tool",
+   "title": "Make a simple special tool from scrap",
+   "level": "home",
+   "time": "30 min to 2 h",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "hacksaw or grinder",
+    "drill",
+    "bench vice",
+    "welder or propane torch",
+    "spanners"
+   ],
+   "parts": [],
+   "consumables": [
+    "steel strap or flat bar",
+    "old nuts and bolts",
+    "wire"
+   ],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/019/019_special_tool.jpg",
+     "caption": "Special tool made from a spanner"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/019/019_socket.jpg",
+     "caption": "Large socket made from steel strap"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/020/020_strap.jpg",
+     "caption": "Strap used in a home-made puller"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/special_tools_2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tool_3.htm"
+    }
+   ]
+  },
+  {
+   "id": "non-running-bike-assess",
+   "title": "Assess a bike that does not run before you buy or restore it",
+   "level": "home",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "torch",
+    "plug spanner",
+    "compression gauge",
+    "battery charger or spare battery",
+    "clean jar",
+    "notebook"
+   ],
+   "parts": [
+    "engine",
+    "frame",
+    "forks",
+    "battery",
+    "fuel_tank",
+    "engine_oil",
+    "spark_plug",
+    "wheel_bearing"
+   ],
+   "consumables": [],
+   "fixes": [
+    "no-start-after-storage",
+    "engine-seized",
+    "low-compression",
+    "no-spark",
+    "milky-oil"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/013/013_compression_gauge.jpg",
+     "caption": "Compression gauge"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/013/013_spark_testers.jpg",
+     "caption": "Spark tester for the plug lead"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/troubleshooting3.htm"
+    }
+   ]
+  },
+  {
+   "id": "points-timing-set",
+   "title": "Set contact-breaker points gap and timing on an older bike",
+   "level": "home",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "all",
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "continuity tester or multimeter",
+    "cigarette paper or thin tissue",
+    "feeler gauge",
+    "flywheel holder",
+    "flywheel puller",
+    "screwdrivers",
+    "spanners"
+   ],
+   "parts": [
+    "stator",
+    "ignition_coil",
+    "spark_plug",
+    "cdi"
+   ],
+   "consumables": [
+    "contact points set",
+    "points lubricating felt grease",
+    "contact cleaner"
+   ],
+   "fixes": [
+    "no-spark",
+    "weak-spark",
+    "ignition-timing-suspect",
+    "kickstart-kickback",
+    "misfire-high-rpm"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_points.jpg",
+     "caption": "Contact-breaker points"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_buzz_box.jpg",
+     "caption": "Buzz box tester"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_flywheel_magneto_timing.jpg",
+     "caption": "Flywheel timing marks"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/021/021_points_cam_follower_heel.jpg",
+     "caption": "Points heel, the usual wear spot"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/magneto1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/buzzbox.htm"
+    }
+   ]
+  },
+  {
+   "id": "spanner-socket-use",
+   "title": "Choose and use spanners and sockets without rounding fasteners",
+   "level": "rider",
+   "time": "5 min per fastener",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "combination spanners",
+    "6-point sockets",
+    "ratchet",
+    "extensions"
+   ],
+   "parts": [],
+   "consumables": [],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_sockets.jpg",
+     "caption": "Sockets in different sizes"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_12_point_has_weaker_grip.jpg",
+     "caption": "12-point and 6-point sockets compared"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_socket_drives.jpg",
+     "caption": "Socket drive sizes"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools.htm"
+    }
+   ]
+  },
+  {
+   "id": "special-tool-choice",
+   "title": "Buy, borrow or make a special tool",
+   "level": "rider",
+   "time": "15 min of planning",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "workshop manual"
+   ],
+   "parts": [],
+   "consumables": [],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/018/018_special_tools.jpg",
+     "caption": "Special tools for one job"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/018/018_special_tools_2.jpg",
+     "caption": "Special tools bought for a single engine"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/special_tools.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    }
+   ]
+  },
+  {
+   "id": "stuck-fastener-removal",
+   "title": "Remove a rounded, seized or broken fastener",
+   "level": "home",
+   "time": "15 min to 1 h",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "impact driver",
+    "locking pliers",
+    "drill and bits",
+    "screw extractor",
+    "hammer",
+    "penetrating oil"
+   ],
+   "parts": [
+    "engine",
+    "gaskets"
+   ],
+   "consumables": [
+    "penetrating oil",
+    "grinding paste"
+   ],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_easy_outs.jpg",
+     "caption": "Screw extractors for broken bolts"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/022/022_impact_driver_3.jpg",
+     "caption": "Impact driver on a seized screw"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/impactdriver.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools.htm"
+    }
+   ]
+  },
+  {
+   "id": "torque-wrench-use",
+   "title": "Use a torque wrench correctly",
+   "level": "rider",
+   "time": "5 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "torque wrench",
+    "sockets",
+    "extensions"
+   ],
+   "parts": [
+    "engine_mounts"
+   ],
+   "consumables": [],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_needful_tool.jpg",
+     "caption": "Torque wrench"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    }
+   ]
+  },
+  {
+   "id": "workshop-safety-setup",
+   "title": "Set up a safe place to work on a motorcycle",
+   "level": "rider",
+   "time": "20 min to set up",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "fire extinguisher",
+    "first aid kit",
+    "safety glasses",
+    "gloves",
+    "metal bin with lid",
+    "approved fuel container"
+   ],
+   "parts": [
+    "fuel_tank",
+    "battery"
+   ],
+   "consumables": [
+    "baking soda",
+    "clean water",
+    "solvent"
+   ],
+   "fixes": [],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/023/023_shop_tools.jpg",
+     "caption": "Clean, tidy tools in the workshop"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/shopsafety.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/shop_practice.htm"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "fastener-stuck-rounded",
+   "title": "Screw or bolt will not come out, or its head is damaged",
+   "system": "body",
+   "urgency": "ok-to-ride",
+   "also_called": [
+    "stripped head",
+    "rounded bolt",
+    "seized screw",
+    "snapped bolt",
+    "stuck screw in case"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "engine",
+    "gaskets",
+    "engine_mounts"
+   ],
+   "repairs": [
+    "spanner-socket-use",
+    "impact-driver-use",
+    "stuck-fastener-removal",
+    "basic-tool-kit"
+   ],
+   "related": [
+    "oil-leak-cover",
+    "gear-lever-loose"
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/022/022_impact_driver_3.jpg",
+     "caption": "Impact driver on a seized screw"
+    },
+    {
+     "file": "source/dansmc/01_Basics_Tools_Manuals/017/017_easy_outs.jpg",
+     "caption": "Screw extractors"
+    }
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/impactdriver.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools.htm"
+    }
+   ]
+  }
+ ]
+}
