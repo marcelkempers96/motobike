@@ -289,6 +289,154 @@
      "url": "https://www.dansmc.com/roller_bearings.htm"
     }
    ]
+  },
+  {
+   "id": "counterbalancer",
+   "name": "Counterbalancer",
+   "category": "engine",
+   "aliases": [
+    "balancer shaft",
+    "balance shaft",
+    "counter balancer"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "balancer-marks-set",
+    "crankcase-split",
+    "engine-internal-assessment",
+    "engine-mount-check"
+   ],
+   "problems": [
+    "new-vibration",
+    "deep-knock",
+    "bearing-rumble",
+    "whine-from-engine"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/counterbalancers.htm"
+    }
+   ]
+  },
+  {
+   "id": "compression_release",
+   "name": "Compression release",
+   "category": "engine",
+   "aliases": [
+    "decompressor",
+    "decomp",
+    "exhaust valve lifter",
+    "auto decomp"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "compression-release-check",
+    "compression-test",
+    "thumb-compression-check",
+    "valve-clearance",
+    "kickstart-check",
+    "cam-timing-set"
+   ],
+   "problems": [
+    "kick-very-hard",
+    "hard-cold-start",
+    "kickstart-kickback",
+    "low-compression",
+    "exhaust-popping"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/comp_release4.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/comp_release2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/compression_test.htm"
+    }
+   ]
+  },
+  {
+   "id": "silencer_baffle",
+   "name": "Silencer baffles and packing",
+   "category": "exhaust",
+   "aliases": [
+    "baffle",
+    "muffler baffle",
+    "silencer packing",
+    "db killer",
+    "spark arrester insert"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "repairs": [
+    "silencer-rust-check",
+    "spark-arrester-clean",
+    "two-stroke-decoke",
+    "exhaust-leak-check",
+    "exhaust-mount-check"
+   ],
+   "problems": [
+    "exhaust-blocked",
+    "exhaust-loud",
+    "exhaust-rattle",
+    "exhaust-leak",
+    "low-power",
+    "oily-exhaust"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Exhaust_4.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/EXHAUST_2.htm"
+    }
+   ]
+  },
+  {
+   "id": "radiator_cap",
+   "name": "Radiator cap",
+   "category": "cooling",
+   "aliases": [
+    "pressure cap",
+    "rad cap",
+    "coolant cap"
+   ],
+   "applies_to": [
+    "liquid-cooled"
+   ],
+   "repairs": [
+    "coolant-check",
+    "coolant-replace",
+    "cooling-leak-test",
+    "thermostat-check",
+    "fan-test"
+   ],
+   "problems": [
+    "coolant-leak",
+    "overheating-liquid",
+    "temp-gauge-high",
+    "radiator-damage",
+    "milky-oil"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/watercooling.htm"
+    }
+   ]
   }
  ]
 }

@@ -18,7 +18,7 @@ The piston pin (gudgeon pin, wrist pin) is the short steel rod that joins the pi
 The pin lets the piston tilt slightly as the connecting rod swings. The circlips stop the pin from sliding sideways and hitting the cylinder wall. A circlip that fails lets the pin score the bore.
 
 ## Signs it is worn or failing
-- A light, sharp tap from the cylinder that is heard at idle and fades with load, different from [piston slap](/moto-zero/repair/problems/piston-slap).
+- A tapping from the cylinder that does not match [piston slap](/moto-zero/repair/problems/piston-slap).
 - A scored cylinder wall on one side, from a pin that has moved.
 - Play at the small end when the piston is rocked on the rod with the cylinder off.
 - A blued or pitted pin or a worn two-stroke pin bearing.

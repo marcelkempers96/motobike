@@ -1,0 +1,192 @@
+{
+ "parts": [
+  {
+   "id": "clutch_basket",
+   "name": "Clutch basket and clutch centre",
+   "category": "transmission",
+   "aliases": [
+    "clutch drum",
+    "clutch housing",
+    "outer basket",
+    "inner hub"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "repairs": [
+    "clutch-plate-service",
+    "clutch-plates-stuck-free",
+    "clutch-cable-adjust",
+    "clutch-cable-replace",
+    "gearbox-assessment",
+    "kickstart-check"
+   ],
+   "problems": [
+    "clutch-drag",
+    "clutch-judder",
+    "clutch-slip",
+    "clutch-noise",
+    "hard-to-find-neutral",
+    "heavy-clutch"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/clutches.htm"
+    }
+   ]
+  },
+  {
+   "id": "clutch_springs",
+   "name": "Clutch springs",
+   "category": "transmission",
+   "aliases": [
+    "pressure plate springs",
+    "clutch spring set",
+    "diaphragm spring"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "repairs": [
+    "clutch-plate-service",
+    "clutch-cable-adjust",
+    "clutch-plates-stuck-free",
+    "gearbox-assessment"
+   ],
+   "problems": [
+    "clutch-slip",
+    "heavy-clutch",
+    "clutch-drag",
+    "clutch-judder",
+    "hard-to-find-neutral"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/clutches.htm"
+    }
+   ]
+  },
+  {
+   "id": "clutch_release",
+   "name": "Clutch release rod and lifter",
+   "category": "transmission",
+   "aliases": [
+    "clutch pushrod",
+    "clutch lifter",
+    "release bearing",
+    "push rod",
+    "clutch worm"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "repairs": [
+    "clutch-cable-adjust",
+    "clutch-cable-replace",
+    "clutch-plate-service",
+    "clutch-plates-stuck-free",
+    "lever-service"
+   ],
+   "problems": [
+    "clutch-no-resistance",
+    "clutch-drag",
+    "heavy-clutch",
+    "clutch-slip",
+    "hard-to-find-neutral"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/clutches.htm"
+    }
+   ]
+  },
+  {
+   "id": "centrifugal_clutch",
+   "name": "Centrifugal clutch (step-through and small engines)",
+   "category": "transmission",
+   "aliases": [
+    "automatic clutch",
+    "semi-automatic clutch",
+    "shoe clutch",
+    "clutch weights"
+   ],
+   "applies_to": [
+    "semi-auto",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "repairs": [
+    "auto-clutch-check",
+    "clutch-plate-service",
+    "starter-clutch-check",
+    "kickstart-check",
+    "gearshift-check"
+   ],
+   "problems": [
+    "auto-clutch-fault",
+    "clutch-slip",
+    "clutch-drag",
+    "clutch-judder",
+    "hard-to-find-neutral",
+    "neutral-light-fault"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/autoclutch.htm"
+    }
+   ]
+  },
+  {
+   "id": "primary_drive",
+   "name": "Primary drive (primary gear and chain)",
+   "category": "transmission",
+   "aliases": [
+    "primary gear",
+    "primary chain",
+    "crank gear",
+    "clutch drive gear"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "repairs": [
+    "clutch-plate-service",
+    "kickstart-check",
+    "gearbox-assessment",
+    "engine-stuck-check"
+   ],
+   "problems": [
+    "clutch-noise",
+    "kick-very-hard",
+    "kickstart-slips",
+    "clutch-judder",
+    "stuck-in-gear"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/kickstarters.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/clutches.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gearbox.htm"
+    }
+   ]
+  }
+ ]
+}
