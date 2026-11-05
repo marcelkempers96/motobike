@@ -30,14 +30,6 @@
    {
     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_brakes.jpg",
     "caption": "Inside of a single leading shoe drum brake"
-   },
-   {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe.jpg",
-    "caption": "Single leading shoe brake layout"
-   },
-   {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_twin_dual_leading_shoe.jpg",
-    "caption": "Twin leading shoe brake layout"
    }
   ],
   "fork_seals": [
@@ -106,10 +98,6 @@
     "caption": "Chain parts: pin, bushing, roller and link plates"
    },
    {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_special_grooves.jpg",
-    "caption": "X-ring chain cutaway showing sealing rings"
-   },
-   {
     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_fancy_styles.jpg",
     "caption": "O-ring chain cutaway"
    }
@@ -148,12 +136,6 @@
    {
     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_do_not_compress_caliper_pistons.jpg",
     "caption": "Pair of disc brake pads ready to fit"
-   }
-  ],
-  "brake-pad-check": [
-   {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads_worn_different_rates.jpg",
-    "caption": "Disc brake pad worn unevenly"
    }
   ],
   "caliper-clean": [
@@ -406,22 +388,22 @@
   ],
   "suspension": [
    {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_special_tool_2.jpg",
-    "caption": "Oil level tool with syringe for setting fork oil"
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_take_time.jpg",
+    "caption": "Tube used to drive the bushing and seal home"
    },
    {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_screw_driver.jpg",
-    "caption": "Prising out a fork seal with a screwdriver"
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_tools.jpg",
+    "caption": "Two special tools for pulling fork seals"
    }
   ],
   "wheels": [
    {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel.jpg",
-    "caption": "Dial gauge reading rim run-out"
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_once_pretty_close_before_spokes_real_2.jpg",
+    "caption": "Dial gauge on the side of the rim"
    },
    {
-    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tire_date_code.jpg",
-    "caption": "Date code on a tyre sidewall"
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_changing_tire_2.jpg",
+    "caption": "Hook-shaped tyre tool on a wire wheel rim"
    }
   ],
   "chain": [
@@ -473,8 +455,8 @@
   },
   {
    "chapter": "m4-final-drive",
-   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_play.jpg",
-   "caption": "Diagram of chain mid-span movement"
+   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_now_good_time_look_any_chain.jpg",
+   "caption": "Chain breaker on the rear chain"
   },
   {
    "chapter": "m4-final-drive",
@@ -488,23 +470,13 @@
   },
   {
    "chapter": "m4-suspension",
-   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_special_tool_2.jpg",
-   "caption": "Oil level tool with syringe for setting fork oil"
+   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_helps_lube_seal_really_good_grease.jpg",
+   "caption": "Driving a fork seal home with a socket"
   },
   {
    "chapter": "m4-suspension",
    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_screw_driver.jpg",
    "caption": "Prising out a fork seal with a screwdriver"
-  },
-  {
-   "chapter": "m4-frame-steering",
-   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings.jpg",
-   "caption": "Loose steering ball bearings and race"
-  },
-  {
-   "chapter": "m4-frame-steering",
-   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings.jpg",
-   "caption": "Caged tapered roller steering bearing and cup"
   },
   {
    "chapter": "m4-frame-steering",
