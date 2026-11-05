@@ -9,7 +9,7 @@ export const MODES = ['4t', '2t', 'sc', 'st', 'elec'];
 /* Scooter and step-through are four-stroke petrol bikes: they borrow the 4T data where they have none of their own. */
 export const baseMode = (m) => (m === 'sc' || m === 'st' ? '4t' : m);
 export const MODE_PARTS = {
-  sc: ['headlight', 'indicators', 'instruments', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'cooling', 'cvt', 'rear_shock', 'spark_plug', 'starter', 'side_stand', 'wiring'],
+  sc: ['headlight', 'indicators', 'instruments', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'cvt', 'rear_shock', 'swingarm', 'spark_plug', 'starter', 'footpegs', 'side_stand', 'wiring'],
   st: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
 };
 export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', sc: 'overview/F04.png', st: 'overview/F01.png', elec: 'overview/F03.png' };

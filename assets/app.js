@@ -591,7 +591,7 @@ async function mountAssetsPanel(key) {
   const listSubs = (filter, strip) => {
     const groups = new Map();
     viewer.meshes().filter((m) => filter(m.name)).forEach((m) => {
-      const label = mod.humanize(m.name.split('__').slice(strip).join(' ') || m.name);
+      const label = mod.humanize(m.name.split('__').slice(strip).join(' ') || m.name).replace(/(\s+\d+)+$/, '') || m.name;
       if (!groups.has(label)) groups.set(label, []);
       groups.get(label).push(m.name);
     });
@@ -602,9 +602,25 @@ async function mountAssetsPanel(key) {
       b.addEventListener('mouseenter', on); b.addEventListener('focus', on); b.addEventListener('click', on);
     });
   };
-  const models = modelsFor(key, S.mode);
+  // Scooter and step-through: the part in place on the bike's own model first; a generic
+  // component model only where it is the same on every bike.
+  const OWN = S.mode === 'sc' || S.mode === 'st';
+  const GENERIC_OK = new Set(['spark_plug', 'battery_12v', 'tail_light', 'wiring_harness']);
+  const onBike = OWN && (MODE_PARTS[S.mode] || []).includes(key);
+  const models = OWN ? [...(onBike ? ['@bike'] : []), ...modelsFor(key, S.mode).filter((m) => GENERIC_OK.has(m))] : modelsFor(key, S.mode);
   const loadModel = async (name) => {
     vbox.querySelectorAll('button').forEach((b) => b.classList.toggle('is-on', b.dataset.model === name));
+    if (name === '@bike') {
+      CV3_MODEL = null;
+      const match = (n) => partForMesh(n) === key;
+      await viewer.load(BIKE_MODEL[S.mode], { view: 'side' });
+      if (CV3 !== viewer) return;
+      viewer.setHighlight(match);
+      viewer.focus(match, false);
+      cap.textContent = `Shown in place on the ${MODE_INFO[S.mode].name.toLowerCase()}.`;
+      listSubs(match, 2);
+      return;
+    }
     await viewer.load(name, { view: 'threeq' });
     if (CV3 !== viewer) return;
     CV3_MODEL = name;
@@ -612,7 +628,7 @@ async function mountAssetsPanel(key) {
     listSubs(() => true, 1);
   };
   if (models.length) {
-    vbox.innerHTML = models.length > 1 ? `<div class="ute-seg" role="group" aria-label="Model variants">${models.map((m) => `<button type="button" data-model="${m}">${MODELS[m] ? MODELS[m][1].split(/[,(]/)[0].trim() : m}</button>`).join('')}</div>` : '';
+    vbox.innerHTML = models.length > 1 ? `<div class="ute-seg" role="group" aria-label="Model variants">${models.map((m) => `<button type="button" data-model="${m}">${m === '@bike' ? 'On this bike' : MODELS[m] ? MODELS[m][1].split(/[,(]/)[0].trim() : m}</button>`).join('')}</div>` : '';
     vbox.querySelectorAll('[data-model]').forEach((b) => b.addEventListener('click', () => loadModel(b.dataset.model)));
     loadModel(models[0]);
   } else {
