@@ -575,6 +575,13 @@
   <url><loc>https://motobike-five.vercel.app/repair/problems/whine-from-engine/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/white-smoke/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/fastener-stuck-rounded/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/battery-volts-ok-fails-load/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/misfire-ignition-or-fuel/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/points-wear-misfire/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/weak-battery-no-fire/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/kick-very-hard/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/smoke-after-rebuild/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/two-stroke-crankcase-leak/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/hub-hot-after-ride/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/chain-adjuster-at-end/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/new-fork-seal-leaks/</loc><lastmod>2026-11-02</lastmod></url>
@@ -778,6 +785,34 @@
   <url><loc>https://motobike-five.vercel.app/repair/repairs/stuck-fastener-removal/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/torque-wrench-use/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/workshop-safety-setup/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/battery-dry-activate/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/battery-hydrometer-test/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/condenser-test/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/contact-points-replace/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/dc-switch-select/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/flywheel-remove/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/magneto-points-timing/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/misfire-light-test/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/spark-tester-make/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/starter-armature-test/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/wire-crimp-join/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/wire-solder-join/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/wiring-diagram-read/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/balancer-marks-set/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/cam-timing-set/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/clutch-plates-stuck-free/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/compression-adapter-make/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/compression-release-check/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/oil-seal-fit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/piston-clearance-measure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/piston-ring-fit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/plain-bearing-clearance-check/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/silencer-rust-check/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/stuck-engine-diagnosis/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/thumb-compression-check/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/two-stroke-crankcase-test/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/valve-seat-leak-test/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/valve-shim-adjust/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/fork-damper-bolt-release/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/fork-cap-release/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/fork-oil-level-set/</loc><lastmod>2026-11-02</lastmod></url>

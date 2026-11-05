@@ -1,0 +1,980 @@
+{
+ "repairs": [
+  {
+   "id": "battery-dry-activate",
+   "title": "Fill and activate a new dry-charged battery",
+   "level": "workshop",
+   "time": "1 h plus charging time",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "gloves",
+    "eye protection",
+    "funnel",
+    "battery charger set for the battery",
+    "baking soda and water close by"
+   ],
+   "parts": [
+    "battery"
+   ],
+   "consumables": [
+    "battery acid pack supplied with the battery"
+   ],
+   "fixes": [
+    "new-battery-dies",
+    "battery-flat",
+    "slow-cranking"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/batteries.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_strange_looking_bottle.jpg",
+     "caption": "Acid pack supplied with a dry battery"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_fill_them_up.jpg",
+     "caption": "Filling battery cells with acid"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_yuasa_gyz_battery.jpg",
+     "caption": "Sealed motorcycle battery"
+    }
+   ]
+  },
+  {
+   "id": "battery-hydrometer-test",
+   "title": "Test a battery with a hydrometer and a load check",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "small hydrometer for motorcycle batteries",
+    "multimeter",
+    "load tester if available",
+    "gloves",
+    "eye protection"
+   ],
+   "parts": [
+    "battery"
+   ],
+   "consumables": [
+    "distilled water"
+   ],
+   "fixes": [
+    "battery-flat",
+    "new-battery-dies",
+    "slow-cranking",
+    "battery-volts-ok-fails-load"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/batteries.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_sulfate.jpg",
+     "caption": "White lead sulfate seen on battery plates"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_tester.jpg",
+     "caption": "Battery tester"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_tester.jpg",
+     "caption": "Load tester on a battery"
+    }
+   ]
+  },
+  {
+   "id": "condenser-test",
+   "title": "Test an ignition condenser",
+   "level": "home",
+   "time": "15 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "12 V battery with leads",
+    "insulated test wire",
+    "screwdriver",
+    "soldering iron if the condenser is soldered"
+   ],
+   "parts": [
+    "ignition_coil",
+    "stator"
+   ],
+   "consumables": [
+    "new condenser of the correct rating"
+   ],
+   "fixes": [
+    "points-wear-misfire",
+    "no-spark",
+    "weak-spark",
+    "misfire-high-rpm"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_condensers.jpg",
+     "caption": "Ignition condensers"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_points_condenser_cdi_box.jpg",
+     "caption": "Points, condenser and electronic ignition box compared"
+    }
+   ]
+  },
+  {
+   "id": "contact-points-replace",
+   "title": "Inspect, clean and replace contact breaker points",
+   "level": "home",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "screwdrivers",
+    "feeler gauges",
+    "spanners for the crankshaft nut",
+    "points grease",
+    "clean card strips"
+   ],
+   "parts": [
+    "ignition_coil",
+    "spark_plug",
+    "stator"
+   ],
+   "consumables": [
+    "new points set",
+    "points grease",
+    "1 drop of light oil",
+    "contact cleaner or acetone",
+    "fine abrasive paper"
+   ],
+   "fixes": [
+    "points-wear-misfire",
+    "no-spark",
+    "weak-spark",
+    "misfire-high-rpm",
+    "hard-cold-start",
+    "ignition-timing-suspect"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_points.jpg",
+     "caption": "Contact breaker points on the plate"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_points_cam_follower_heel.jpg",
+     "caption": "Points heel that rides the cam"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_points_lubricating_felt.jpg",
+     "caption": "Lubricating felt beside the points cam"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_points_pits.jpg",
+     "caption": "Pitted points faces that need replacing"
+    }
+   ]
+  },
+  {
+   "id": "dc-switch-select",
+   "title": "Choose the right switch for a 12 V circuit",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "wiring diagram or label on the switch"
+   ],
+   "parts": [
+    "handlebar_switches",
+    "wiring"
+   ],
+   "consumables": [
+    "switch rated for DC",
+    "fuse"
+   ],
+   "fixes": [
+    "switch-fault",
+    "accessory-wiring-fault",
+    "burning-smell-wiring",
+    "fuse-keeps-blowing"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/dc_switches.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_ac_switch_bodies.jpg",
+     "caption": "DC and AC switch bodies side by side"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_switch.jpg",
+     "caption": "Contact of a DC-rated switch"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/096/096_ac_switch.jpg",
+     "caption": "Small contact of an AC switch"
+    }
+   ]
+  },
+  {
+   "id": "flywheel-remove",
+   "title": "Remove and refit a flywheel (rotor) with a puller",
+   "level": "workshop",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "flywheel puller for your engine",
+    "flywheel holding tool or strap",
+    "socket for the nut",
+    "torque wrench",
+    "shop manual"
+   ],
+   "parts": [
+    "stator",
+    "pickup",
+    "ignition_coil"
+   ],
+   "consumables": [
+    "thread locker if the manual calls for it"
+   ],
+   "fixes": [
+    "no-spark",
+    "stator-burnt",
+    "not-charging",
+    "points-wear-misfire",
+    "ignition-timing-suspect"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_flywheel_puller.jpg",
+     "caption": "Flywheel puller fitted to a flywheel"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_flywheel.jpg",
+     "caption": "Flywheel with its magnets"
+    }
+   ]
+  },
+  {
+   "id": "magneto-points-timing",
+   "title": "Set points timing on a flywheel magneto",
+   "level": "workshop",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "tools": [
+    "flywheel puller made for your engine",
+    "flywheel holding tool",
+    "torque wrench",
+    "feeler gauges",
+    "continuity buzzer or multimeter or cigarette paper",
+    "shop manual"
+   ],
+   "parts": [
+    "stator",
+    "ignition_coil",
+    "spark_plug"
+   ],
+   "consumables": [
+    "new points set",
+    "points grease",
+    "contact cleaner or acetone"
+   ],
+   "fixes": [
+    "ignition-timing-suspect",
+    "no-spark",
+    "hard-cold-start",
+    "points-wear-misfire"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_buzz_box.jpg",
+     "caption": "Buzzer used to hear the points open"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_stator_plate.jpg",
+     "caption": "Stator plate under the flywheel"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_flywheel_magneto_timing.jpg",
+     "caption": "Flywheel mark and crankcase mark"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_dial_indicator.jpg",
+     "caption": "Dial indicator in the plug hole"
+    }
+   ]
+  },
+  {
+   "id": "misfire-light-test",
+   "title": "Tell an ignition misfire from a fuel misfire with a timing light",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "carburettor",
+    "fuel-injected"
+   ],
+   "tools": [
+    "timing light with its own power or a light-up plug cap",
+    "tape or clamp for the handlebar",
+    "helper to watch the road"
+   ],
+   "parts": [
+    "spark_plug",
+    "ignition_coil",
+    "carb",
+    "injector"
+   ],
+   "consumables": [],
+   "fixes": [
+    "misfire-under-load",
+    "misfire-high-rpm",
+    "hesitation",
+    "flat-spot",
+    "cuts-out-random",
+    "surging-cruise"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cdiignition.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_plug_caps.jpg",
+     "caption": "Plug cap fitted with a light"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_test.jpg",
+     "caption": "Watching the spark with a tester"
+    }
+   ]
+  },
+  {
+   "id": "points-timing-set",
+   "title": "Set points gap and ignition timing (battery and coil ignition)",
+   "level": "home",
+   "time": "45 to 60 min",
+   "applies_to": [
+    "four-stroke",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "feeler gauges",
+    "test lamp (12 V bulb with two leads)",
+    "spanner for the crankshaft nut",
+    "screwdriver",
+    "shop manual"
+   ],
+   "parts": [
+    "ignition_coil",
+    "spark_plug",
+    "battery"
+   ],
+   "consumables": [
+    "points grease",
+    "contact cleaner or acetone"
+   ],
+   "fixes": [
+    "ignition-timing-suspect",
+    "pinking",
+    "hard-cold-start",
+    "low-power",
+    "points-wear-misfire",
+    "kickstart-kickback"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/ignitiontiming.html"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_timing_marks.jpg",
+     "caption": "Flywheel and crankcase timing marks"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_set_point_gap.jpg",
+     "caption": "Setting the points gap with a feeler gauge"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_elongated_holes.jpg",
+     "caption": "Slotted holes that let the points plate move"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_timing_plugs.jpg",
+     "caption": "Clear timing plug in an inspection hole"
+    }
+   ]
+  },
+  {
+   "id": "spark-tester-make",
+   "title": "Make a simple spark tester",
+   "level": "home",
+   "time": "15 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "pliers",
+    "soldering iron or crimp pliers",
+    "wire cutters"
+   ],
+   "parts": [
+    "spark_plug",
+    "ignition_coil"
+   ],
+   "consumables": [
+    "one spare spark plug",
+    "small crocodile clip",
+    "short length of wire",
+    "heat-shrink or tape"
+   ],
+   "fixes": [
+    "no-spark",
+    "weak-spark",
+    "cranks-no-start",
+    "misfire-high-rpm",
+    "coil-fails-hot"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cdiignition.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/electricaltesting.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_test.jpg",
+     "caption": "Spark tester clipped to the cylinder head"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_plug_caps.jpg",
+     "caption": "Spark plug caps"
+    }
+   ]
+  },
+  {
+   "id": "starter-armature-test",
+   "title": "Check starter brushes, commutator and armature on the bench",
+   "level": "workshop",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "electric-start"
+   ],
+   "tools": [
+    "multimeter on continuity or low ohms",
+    "vernier caliper",
+    "fine abrasive paper",
+    "spring balance if available",
+    "marker pen"
+   ],
+   "parts": [
+    "starter",
+    "starter_relay"
+   ],
+   "consumables": [
+    "new brushes",
+    "new O-ring",
+    "new seals"
+   ],
+   "fixes": [
+    "slow-cranking",
+    "starter-silent",
+    "starter-clicks",
+    "starter-grinding"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_brushes.jpg",
+     "caption": "Starter carbon brushes"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_commutator_segments.jpg",
+     "caption": "Commutator segments on the armature"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_alignment_marks.jpg",
+     "caption": "Alignment marks on a starter body"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_pole_core_armature.jpg",
+     "caption": "Starter armature"
+    }
+   ]
+  },
+  {
+   "id": "wire-crimp-join",
+   "title": "Join wires with crimp connectors",
+   "level": "home",
+   "time": "10 to 20 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "crimping pliers",
+    "wire strippers",
+    "cutters",
+    "heat gun or lighter",
+    "safety glasses"
+   ],
+   "parts": [
+    "wiring",
+    "stator"
+   ],
+   "consumables": [
+    "butt or ring or spade crimp connectors",
+    "heat-shrink tubing",
+    "cable ties"
+   ],
+   "fixes": [
+    "intermittent-electrical",
+    "wet-connectors",
+    "stator-burnt",
+    "accessory-wiring-fault",
+    "burning-smell-wiring"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/soldering.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/electricaltesting.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_ends_crimping.jpg",
+     "caption": "Wire ends ready for a crimp fitting"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/094/094_special_pliers.jpg",
+     "caption": "Crimping pliers for wire fittings"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/099/099_wire_fitting.jpg",
+     "caption": "Crimp fitting on a wire end"
+    }
+   ]
+  },
+  {
+   "id": "wire-solder-join",
+   "title": "Join two wires by soldering",
+   "level": "home",
+   "time": "15 to 30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "soldering iron or gun",
+    "wire strippers",
+    "cutters",
+    "heat gun or lighter for heat-shrink",
+    "safety glasses",
+    "fine sandpaper or a knife"
+   ],
+   "parts": [
+    "wiring"
+   ],
+   "consumables": [
+    "rosin-core solder",
+    "flux",
+    "heat-shrink tubing",
+    "cable ties"
+   ],
+   "fixes": [
+    "intermittent-electrical",
+    "burning-smell-wiring",
+    "wet-connectors",
+    "accessory-wiring-fault",
+    "indicators-dead",
+    "tail-light-out"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/soldering.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wiring_diagram.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/094/094_soldering.jpg",
+     "caption": "Soldering two twisted wires with an iron and solder"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/094/094_twist.jpg",
+     "caption": "Stripped wire ends twisted together before soldering"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/094/094_types_insulation.jpg",
+     "caption": "Heat-shrink tubing and tape to insulate a joint"
+    }
+   ]
+  },
+  {
+   "id": "wiring-diagram-read",
+   "title": "Read a wiring diagram and trace a circuit",
+   "level": "home",
+   "time": "20 to 40 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "wiring diagram for your bike",
+    "multimeter or test lamp",
+    "pen"
+   ],
+   "parts": [
+    "wiring",
+    "battery",
+    "fuse"
+   ],
+   "consumables": [],
+   "fixes": [
+    "no-power-key-on",
+    "intermittent-electrical",
+    "all-lights-out",
+    "indicators-dead",
+    "horn-silent",
+    "dash-dead",
+    "cuts-out-random"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wiring_diagram.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_reading_wiring_diagrams.jpg",
+     "caption": "Wiring diagram with colour-coded wires"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_simplest_wiring_system.jpg",
+     "caption": "The four parts of the simplest circuit"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/086/086_colored_marked.jpg",
+     "caption": "Diagram with wire colours and marks"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "battery-volts-ok-fails-load",
+   "title": "Battery reads good voltage but will not start the bike",
+   "system": "charging",
+   "urgency": "do-not-ride",
+   "also_called": [
+    "battery shows 12 volts but will not crank",
+    "battery tests ok but is dead",
+    "voltage ok no cranking"
+   ],
+   "applies_to": [
+    "electric-start",
+    "all"
+   ],
+   "parts": [
+    "battery",
+    "wiring",
+    "starter_relay",
+    "earth_strap"
+   ],
+   "repairs": [
+    "battery-hydrometer-test",
+    "battery-test-charge",
+    "voltage-drop-test",
+    "battery-terminal-clean",
+    "battery-replace"
+   ],
+   "related": [
+    "slow-cranking",
+    "battery-flat",
+    "starter-clicks",
+    "new-battery-dies",
+    "weak-battery-no-fire"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/batteries.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/electricaltesting.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_sulfate.jpg",
+     "caption": "White lead sulfate seen on battery plates"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_tester.jpg",
+     "caption": "Battery tester"
+    }
+   ]
+  },
+  {
+   "id": "misfire-ignition-or-fuel",
+   "title": "Misfire: ignition or fuel?",
+   "system": "running",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "engine missing",
+    "stutters",
+    "cuts under load",
+    "coughs and splutters"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "carburettor",
+    "fuel-injected"
+   ],
+   "parts": [
+    "spark_plug",
+    "ignition_coil",
+    "carb",
+    "injector",
+    "fuel_filter",
+    "air_filter"
+   ],
+   "repairs": [
+    "misfire-light-test",
+    "spark-plug-service",
+    "ignition-coil-test",
+    "carburettor-clean",
+    "fuel-tap-line-check"
+   ],
+   "related": [
+    "misfire-under-load",
+    "misfire-high-rpm",
+    "hesitation",
+    "flat-spot",
+    "cuts-out-random"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cdiignition.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_plug_caps.jpg",
+     "caption": "Plug cap fitted with a light"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_test.jpg",
+     "caption": "Watching the spark with a tester"
+    }
+   ]
+  },
+  {
+   "id": "points-wear-misfire",
+   "title": "Points ignition runs rough or misses",
+   "system": "ignition",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "worn points",
+    "burnt points",
+    "points trouble",
+    "contact breaker fault"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart"
+   ],
+   "parts": [
+    "ignition_coil",
+    "spark_plug",
+    "stator"
+   ],
+   "repairs": [
+    "contact-points-replace",
+    "condenser-test",
+    "points-timing-set",
+    "magneto-points-timing",
+    "spark-test"
+   ],
+   "related": [
+    "no-spark",
+    "weak-spark",
+    "ignition-timing-suspect",
+    "misfire-high-rpm",
+    "hard-cold-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/091/091_points_pits.jpg",
+     "caption": "Pitted points faces"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/089/089_points_cam_follower_heel.jpg",
+     "caption": "Points heel that rides the cam"
+    }
+   ]
+  },
+  {
+   "id": "weak-battery-no-fire",
+   "title": "Starter turns the engine but the engine will not fire (weak battery)",
+   "system": "starting",
+   "urgency": "do-not-ride",
+   "also_called": [
+    "cranks but no start",
+    "turns over but no spark",
+    "battery looks ok but no start"
+   ],
+   "applies_to": [
+    "electric-start",
+    "four-stroke",
+    "two-stroke",
+    "carburettor",
+    "fuel-injected"
+   ],
+   "parts": [
+    "battery",
+    "spark_plug",
+    "ignition_coil",
+    "wiring"
+   ],
+   "repairs": [
+    "battery-test-charge",
+    "battery-hydrometer-test",
+    "spark-tester-make",
+    "spark-test",
+    "jump-start"
+   ],
+   "related": [
+    "cranks-no-start",
+    "no-spark",
+    "weak-spark",
+    "slow-cranking",
+    "battery-flat"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/batteries.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cdiignition.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_tester.jpg",
+     "caption": "Load tester on a battery"
+    },
+    {
+     "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_test.jpg",
+     "caption": "Spark tester clipped to the cylinder head"
+    }
+   ]
+  }
+ ]
+}

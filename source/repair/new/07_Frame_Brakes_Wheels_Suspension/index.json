@@ -1,0 +1,946 @@
+{
+ "repairs": [
+  {
+   "id": "fork-damper-bolt-release",
+   "title": "Undo the fork damper bolt when the rod spins",
+   "level": "workshop",
+   "time": "20 to 40 min per leg (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "hex key or socket",
+    "fork damper holder or a made tool",
+    "impact driver (optional)",
+    "drain pan"
+   ],
+   "parts": [
+    "forks",
+    "fork_seals",
+    "fork_oil"
+   ],
+   "consumables": [
+    "thread locker",
+    "new sealing washer if fitted"
+   ],
+   "fixes": [
+    "fork-leak",
+    "fork-sticky",
+    "new-fork-seal-leaks"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_damper_rod_tools.jpg",
+     "caption": "Tools that hold the damper rod still"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_tool.jpg",
+     "caption": "Fork tool used to hold the rod"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_bolt.jpg",
+     "caption": "Hex bolt in the bottom of the fork leg"
+    }
+   ]
+  },
+  {
+   "id": "fork-cap-release",
+   "title": "Open a spring-loaded fork cap safely",
+   "level": "workshop",
+   "time": "10 to 20 min per leg (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spanner or socket for the cap",
+    "small screwdriver or pick for a circlip",
+    "helper or fork clamp"
+   ],
+   "parts": [
+    "forks",
+    "fork_oil"
+   ],
+   "consumables": [],
+   "fixes": [
+    "fork-leak",
+    "fork-harsh",
+    "fork-bottoming"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_circlip.jpg",
+     "caption": "Circlip holding the fork top plug"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_yamaha_fork.jpg",
+     "caption": "Fork with spring and top plug"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks.jpg",
+     "caption": "Front fork legs"
+    }
+   ]
+  },
+  {
+   "id": "fork-oil-level-set",
+   "title": "Set the fork oil level with a simple gauge",
+   "level": "workshop",
+   "time": "20 to 30 min per leg (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "fork oil level gauge or home-made equivalent",
+    "syringe or pump",
+    "measuring jug",
+    "ruler"
+   ],
+   "parts": [
+    "fork_oil",
+    "forks"
+   ],
+   "consumables": [
+    "fork oil of the grade in your manual"
+   ],
+   "fixes": [
+    "fork-bottoming",
+    "fork-harsh",
+    "fork-leak",
+    "fork-sticky"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_length_pipe_some_tubing_chicken_baster.jpg",
+     "caption": "Home-made fork oil level tool from pipe and baster"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_special_tool.jpg",
+     "caption": "Fork oil level gauge"
+    }
+   ]
+  },
+  {
+   "id": "fork-seal-drive-fit",
+   "title": "Fit a fork seal square without damaging it",
+   "level": "workshop",
+   "time": "30 to 45 min per leg (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "thin plastic sheet",
+    "seal grease",
+    "seal driver, long pipe or socket",
+    "flat punch (for bushes)",
+    "circlip pliers or pick"
+   ],
+   "parts": [
+    "fork_seals",
+    "forks",
+    "fork_oil"
+   ],
+   "consumables": [
+    "new oil seal",
+    "new dust seal",
+    "fork oil"
+   ],
+   "fixes": [
+    "fork-leak",
+    "new-fork-seal-leaks",
+    "fork-sticky"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_plastic.jpg",
+     "caption": "Plastic sleeve protecting the seal lips"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_seating_seal_tubing.jpg",
+     "caption": "Tube used to drive the seal home"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_drive_seal_home.jpg",
+     "caption": "Driving the seal into the leg"
+    }
+   ]
+  },
+  {
+   "id": "fork-spring-spacer",
+   "title": "Add a spacer to firm a sagging fork spring",
+   "level": "workshop",
+   "time": "20 to 30 min per leg (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "pipe cutter or saw",
+    "ruler",
+    "fork cap tools"
+   ],
+   "parts": [
+    "forks",
+    "fork_oil"
+   ],
+   "consumables": [
+    "plastic or metal spacer pipe cut to length"
+   ],
+   "fixes": [
+    "fork-bottoming"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks_2.jpg",
+     "caption": "Fork parts including spring"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_yamaha_fork.jpg",
+     "caption": "Fork spring and top plug"
+    }
+   ]
+  },
+  {
+   "id": "drum-brake-twin-leading-adjust",
+   "title": "Adjust a twin leading shoe drum brake",
+   "level": "home",
+   "time": "20 to 30 min (editorial estimate)",
+   "applies_to": [
+    "drum-brake",
+    "chain"
+   ],
+   "tools": [
+    "spanners for the adjuster and rod locknuts",
+    "ruler"
+   ],
+   "parts": [
+    "drum_brake",
+    "brake_cable",
+    "levers",
+    "front_wheel"
+   ],
+   "consumables": [],
+   "fixes": [
+    "drum-brake-weak",
+    "brake-drag",
+    "lever-to-bar",
+    "bike-feels-held-back"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/drumbrakes.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_front_twin_leading_shoe.jpg",
+     "caption": "Front twin leading shoe drum brake"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_twin_leading_shoe.jpg",
+     "caption": "Two cams pushing both shoe ends"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_front_drum_brakes_normally_cable_operated.jpg",
+     "caption": "Cable-operated front drum brake"
+    }
+   ]
+  },
+  {
+   "id": "drum-brake-centre-shoes",
+   "title": "Centre the brake shoes when refitting a drum wheel",
+   "level": "rider",
+   "time": "5 min (editorial estimate)",
+   "applies_to": [
+    "drum-brake"
+   ],
+   "tools": [
+    "axle spanner or socket",
+    "torque wrench"
+   ],
+   "parts": [
+    "drum_brake",
+    "axle",
+    "front_wheel",
+    "rear_wheel"
+   ],
+   "consumables": [],
+   "fixes": [
+    "drum-brake-weak",
+    "brake-drag",
+    "brake-squeal",
+    "drum-brake-noise"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/drumbrakes.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/front_wheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_drum_brakes.jpg",
+     "caption": "Drum brake shoes and backing plate"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_makes_brakes_work_better.jpg",
+     "caption": "Brake held on while the axle is tightened"
+    }
+   ]
+  },
+  {
+   "id": "tyre-lever-make",
+   "title": "Make a rounded tyre lever for fitting the last bead",
+   "level": "home",
+   "time": "1 to 2 h (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "hacksaw",
+    "file or bench grinder",
+    "vice",
+    "eye protection"
+   ],
+   "parts": [
+    "inner_tube",
+    "front_tyre",
+    "rear_tyre"
+   ],
+   "consumables": [
+    "aluminium round bar about 25 mm thick and 200 to 230 mm long"
+   ],
+   "fixes": [
+    "new-tube-flat-after-fit",
+    "puncture-tube",
+    "slow-puncture"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/breezer.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tire_tool.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_breezer_tire_tool.jpg",
+     "caption": "Rounded tyre lever made from aluminium bar"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_breezer_tool_specifications.jpg",
+     "caption": "Lever shape from the side"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_make_custom_tire_tool.jpg",
+     "caption": "Small steel bead holding tool"
+    }
+   ]
+  },
+  {
+   "id": "tyre-bead-seat",
+   "title": "Seat a stubborn tyre bead on the rim",
+   "level": "workshop",
+   "time": "10 to 20 min (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "valve core tool",
+    "pump or compressor with a large-volume hose",
+    "strap, rope or bead expander",
+    "soapy water or tyre lubricant"
+   ],
+   "parts": [
+    "front_tyre",
+    "rear_tyre",
+    "front_wheel",
+    "rear_wheel",
+    "tyre_valve"
+   ],
+   "consumables": [
+    "tyre lubricant",
+    "new valve"
+   ],
+   "fixes": [
+    "bead-leak",
+    "puncture-tubeless"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tires1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_bead_expander.jpg",
+     "caption": "Bead expander tool"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_rubber_donut.jpg",
+     "caption": "Rubber ring that fills the bead gap"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_special_air_tank.jpg",
+     "caption": "Large air tank for seating beads"
+    }
+   ]
+  },
+  {
+   "id": "spoke-wheel-true",
+   "title": "True a spoked wheel by small spoke adjustments",
+   "level": "workshop",
+   "time": "1 to 3 h (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spoke wrench that fits the nipple",
+    "pointer or dial indicator",
+    "stand or the bike's fork or swingarm",
+    "marker"
+   ],
+   "parts": [
+    "spokes",
+    "front_wheel",
+    "rear_wheel",
+    "inner_tube"
+   ],
+   "consumables": [
+    "rim tape",
+    "penetrating oil"
+   ],
+   "fixes": [
+    "wheel-buckled",
+    "loose-spokes",
+    "speed-vibration"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spokewheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_adusting_spokes.jpg",
+     "caption": "Adjusting a spoke nipple"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_getting_rim_round.jpg",
+     "caption": "Checking the rim for round"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_rim_side_play.jpg",
+     "caption": "Checking rim side play"
+    }
+   ]
+  },
+  {
+   "id": "spoke-replace",
+   "title": "Replace broken spokes or relace a wheel",
+   "level": "workshop",
+   "time": "1 to 4 h (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spoke wrench",
+    "spoke gauge or ruler",
+    "wire",
+    "pointer or dial indicator",
+    "side cutters"
+   ],
+   "parts": [
+    "spokes",
+    "front_wheel",
+    "rear_wheel"
+   ],
+   "consumables": [
+    "spokes and nipples of the right length and gauge",
+    "rim tape"
+   ],
+   "fixes": [
+    "loose-spokes",
+    "wheel-buckled"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spokewheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_four_different_spokes.jpg",
+     "caption": "Different spoke types on one wheel"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_no_bend_head_some_bend_lot.jpg",
+     "caption": "Spoke head bend styles"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spokes_nipples.jpg",
+     "caption": "Spokes and nipples"
+    }
+   ]
+  },
+  {
+   "id": "bearing-press-make",
+   "title": "Make a simple press to fit wheel bearings",
+   "level": "home",
+   "time": "20 min to make, 10 min per bearing (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spanners",
+    "hacksaw for the rod",
+    "socket or tube for the driver"
+   ],
+   "parts": [
+    "wheel_bearing",
+    "axle",
+    "front_wheel",
+    "rear_wheel"
+   ],
+   "consumables": [
+    "threaded rod",
+    "nuts",
+    "large washers",
+    "bearing grease"
+   ],
+   "fixes": [
+    "wheel-bearing-noise",
+    "wheel-bearing-play"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wheelbearing.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_hand_made_bearing_press.jpg",
+     "caption": "Home-made bearing press from threaded rod"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_cross_section_press_tool.jpg",
+     "caption": "Cross section of the press"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_special_bearing_driver_tool.jpg",
+     "caption": "Bearing driver tool"
+    }
+   ]
+  },
+  {
+   "id": "wheel-bearing-regrease",
+   "title": "Clean and regrease a wheel bearing",
+   "level": "home",
+   "time": "30 to 45 min per bearing (editorial estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "thin screwdriver",
+    "degreaser",
+    "grease gun with a needle nozzle",
+    "clean rags"
+   ],
+   "parts": [
+    "wheel_bearing",
+    "axle"
+   ],
+   "consumables": [
+    "bearing grease",
+    "new seals if damaged"
+   ],
+   "fixes": [
+    "wheel-bearing-noise",
+    "hub-hot-after-ride"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wheelbearing.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_needle_fitting.jpg",
+     "caption": "Needle fitting for a grease gun"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_lube_bearing_needle.jpg",
+     "caption": "Greasing a sealed bearing with a needle"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_tapered_roller_bearings.jpg",
+     "caption": "Tapered roller bearings"
+    }
+   ]
+  },
+  {
+   "id": "chain-join",
+   "title": "Join a chain with a clip, press-fit or rivet link",
+   "level": "workshop",
+   "time": "20 to 40 min (editorial estimate)",
+   "applies_to": [
+    "chain"
+   ],
+   "tools": [
+    "chain breaker and riveting tool",
+    "chain press or vice grips (for press-fit links)",
+    "pliers",
+    "ruler"
+   ],
+   "parts": [
+    "chain",
+    "front_sprocket",
+    "rear_sprocket"
+   ],
+   "consumables": [
+    "new joining link of the right type and size",
+    "chain lubricant"
+   ],
+   "fixes": [
+    "chain-snapped",
+    "chain-jumps",
+    "chain-stretches-fast"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_clip_type.jpg",
+     "caption": "Clip type master link"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_press.jpg",
+     "caption": "Chain press tool"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_breaker_tool.jpg",
+     "caption": "Chain breaker tool"
+    }
+   ]
+  },
+  {
+   "id": "chain-size-identify",
+   "title": "Identify the size of a drive chain",
+   "level": "rider",
+   "time": "10 min (editorial estimate)",
+   "applies_to": [
+    "chain"
+   ],
+   "tools": [
+    "ruler",
+    "torch"
+   ],
+   "parts": [
+    "chain",
+    "front_sprocket",
+    "rear_sprocket"
+   ],
+   "consumables": [],
+   "fixes": [
+    "chain-stretches-fast",
+    "sprocket-worn",
+    "chain-jumps"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_525_530_like_too.jpg",
+     "caption": "Chain sizes of the same pitch"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_o_ring_chain.jpg",
+     "caption": "O-ring chain"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_regular_o_ring.jpg",
+     "caption": "Chain seal ring"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "hub-hot-after-ride",
+   "title": "Wheel hub or brake drum is very hot after riding",
+   "system": "wheels",
+   "urgency": "do-not-ride",
+   "also_called": [
+    "hot hub",
+    "hot wheel",
+    "drum too hot",
+    "hub burning"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "wheel_bearing",
+    "drum_brake",
+    "brake_caliper",
+    "brake_pads",
+    "axle"
+   ],
+   "repairs": [
+    "brake-drag-check",
+    "drum-brake-adjust",
+    "drum-brake-centre-shoes",
+    "wheel-bearing-check",
+    "wheel-bearing-replace",
+    "wheel-bearing-regrease"
+   ],
+   "related": [
+    "brake-drag",
+    "bike-feels-held-back",
+    "wheel-bearing-noise",
+    "wheel-bearing-play"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/drumbrakes.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wheelbearing.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_if_sure_brakes_not_dragging_drum.jpg",
+     "caption": "Feeling the drum after a ride"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_wheel_bearings.jpg",
+     "caption": "Wheel bearings"
+    }
+   ]
+  },
+  {
+   "id": "chain-adjuster-at-end",
+   "title": "Chain adjuster has run out of travel",
+   "system": "chain",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "no more chain adjustment",
+    "chain too long",
+    "axle at end of slot"
+   ],
+   "applies_to": [
+    "chain"
+   ],
+   "parts": [
+    "chain",
+    "front_sprocket",
+    "rear_sprocket",
+    "chain_guide"
+   ],
+   "repairs": [
+    "chain-wear-check",
+    "sprocket-inspect",
+    "chain-size-identify",
+    "chain-sprocket-replace",
+    "chain-join",
+    "chain-adjust"
+   ],
+   "related": [
+    "chain-stretches-fast",
+    "chain-tight-spots",
+    "sprocket-worn",
+    "chain-snapped",
+    "chain-jumps"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_now_s_worn_sprocket.jpg",
+     "caption": "Worn sprocket teeth"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_testing_chain.jpg",
+     "caption": "Testing a chain for wear"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_adjuster_rollers.jpg",
+     "caption": "Chain adjuster rollers"
+    }
+   ]
+  },
+  {
+   "id": "new-fork-seal-leaks",
+   "title": "Fork leaks again soon after new seals",
+   "system": "suspension",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "new fork seal leaking",
+    "fork seal failed again",
+    "oil on fork again"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "fork_seals",
+    "forks",
+    "fork_oil"
+   ],
+   "repairs": [
+    "fork-inspect",
+    "fork-seal-drive-fit",
+    "fork-oil-level-set",
+    "fork-damper-bolt-release",
+    "fork-seal-clean",
+    "fork-oil-seals"
+   ],
+   "related": [
+    "fork-leak",
+    "fork-sticky",
+    "fork-harsh",
+    "fork-bottoming"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/forks.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_seal_removal.jpg",
+     "caption": "Removing a fork seal"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_gators_fork_boots.jpg",
+     "caption": "Fork gaiters protecting the tubes"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_plastic.jpg",
+     "caption": "Plastic sleeve protecting seal lips"
+    }
+   ]
+  },
+  {
+   "id": "new-tube-flat-after-fit",
+   "title": "New tube goes flat soon after fitting a tyre",
+   "system": "wheels",
+   "urgency": "do-not-ride",
+   "also_called": [
+    "flat again after tyre change",
+    "tube pinched",
+    "tube leaking at the valve",
+    "tube cut by spoke"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "inner_tube",
+    "tyre_valve",
+    "front_tyre",
+    "rear_tyre",
+    "spokes"
+   ],
+   "repairs": [
+    "tyre-lever-make",
+    "tube-puncture-repair",
+    "tyre-replace",
+    "valve-check",
+    "spoke-tension",
+    "tyre-inspect"
+   ],
+   "related": [
+    "puncture-tube",
+    "slow-puncture",
+    "bead-leak",
+    "loose-spokes"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tires1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/breezer.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spokewheels.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_installing_tire.jpg",
+     "caption": "Fitting a tyre and tube"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_valve_stem_tool.jpg",
+     "caption": "Valve stem tool"
+    },
+    {
+     "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_tire_irons_lever_bead_over.jpg",
+     "caption": "Two tyre irons levering the bead"
+    }
+   ]
+  }
+ ]
+}
