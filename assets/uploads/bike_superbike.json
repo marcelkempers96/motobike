@@ -1,0 +1,80 @@
+{
+  "asset_id": "bike_superbike",
+  "title": "1000 cc superbike",
+  "type": "superbike",
+  "reference": "Honda CBR1000RR Fireblade 2012-2016 type, race-replica colours, no logos",
+  "era": "2012-2016",
+  "wheelbase_cm": 140.5,
+  "rake_deg": 23.3,
+  "trail_cm": 9.6,
+  "seat_height_cm": 82,
+  "wheels": "17 in cast wheels in orange with 12 thin split spokes (6 pairs); 120/70 ZR17 front and 190/50 ZR17 rear sport tyres; twin 320 mm floating front discs with radial four-piston calipers; 220 mm rear disc with single-piston caliper; cush-drive rear hub with sprocket carrier",
+  "engine": "1000 cc liquid-cooled DOHC inline-four, cylinders inclined 30 deg forward: crankcase, finned sump, cylinder block, head with black cam cover and four stick coils, four throttle bodies into an airbox under the tank fed by a ram-air duct from the low central beak, alternator cover left, clutch cover right, oil filter, water pump; curved radiator with fan and hoses; 4-into-1 headers into an under-engine chamber and a short triangular-section silencer low on the right under the swingarm pivot; chain final drive (16/40)",
+  "colours": "Race-replica scheme as clear-coated solid colour panels and material zones, no text: orange tank with black knee recess; side fairing with an orange swoosh on top, a broad white band across the middle and a red front-lower block separated by a thin navy line; red nose tip and screen surround with white lower cheeks; white lower side panels; black belly pan and front mudguard; white tail with an orange and red block at the tip; black rider and pillion pads; satin silver twin-spar frame and swingarm; black subframe; gold USD fork tubes and shock spring; orange 12-spoke wheels; tinted screen",
+  "systems": {
+    "chassis": [
+      "footpegs",
+      "front_brake",
+      "front_fork",
+      "handlebar",
+      "rear_brake",
+      "rear_shock",
+      "rear_suspension_linkage",
+      "side_stand",
+      "steering",
+      "swingarm"
+    ],
+    "electrical": [
+      "alternator",
+      "battery",
+      "ecu",
+      "headlight",
+      "horn",
+      "ignition_coils",
+      "indicators",
+      "instruments",
+      "number_plate_light",
+      "regulator_rectifier",
+      "tail_light"
+    ],
+    "frame_body": [
+      "fairing",
+      "frame",
+      "front_mudguard",
+      "fuel_tank",
+      "number_plate_hanger",
+      "rear_hugger",
+      "seat",
+      "subframe",
+      "tail_unit"
+    ],
+    "powertrain": [
+      "clutch",
+      "cooling",
+      "engine",
+      "exhaust",
+      "intake",
+      "radiator"
+    ],
+    "transmission": [
+      "chain",
+      "chain_guard",
+      "chain_slider",
+      "front_sprocket",
+      "gear_lever",
+      "rear_sprocket",
+      "sprocket_cover"
+    ],
+    "wheels": [
+      "front_wheel",
+      "rear_wheel"
+    ],
+    "wiring": [
+      "control_cables",
+      "harness_main"
+    ]
+  },
+  "objects": 141,
+  "triangles": 324824,
+  "weak_points": "The side fairing is flat hinge-creased facets with no compound curvature, so it still reads flatter than the real moulded panels. The rear of the spar and the swingarm pivot plates are simple extrusions without casting detail. The headlights are thin surface patches rather than recessed light units, and the right-side triangular silencer doesn't show in the left-side standard views."
+}

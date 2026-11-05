@@ -1,0 +1,24 @@
+{
+  "asset_id": "bike_cafe_racer",
+  "title": "1960s café racer",
+  "type": "café racer",
+  "reference": "1960s British Triton-style café racer (generic, unbranded): pre-unit 650 vertical parallel twin in a duplex featherbed frame",
+  "era": "1959-1968",
+  "wheelbase_cm": 142,
+  "rake_deg": 27,
+  "wheels": "Polished alloy-rimmed 40-spoke wire wheels, 19 in front with ribbed tyre and twin-leading-shoe drum (air scoop, linked cam levers), 18 in rear with block tread and single-leading-shoe drum",
+  "engine": "650 cc air-cooled OHV pre-unit vertical parallel twin, 3 deg forward, separate four-speed gearbox with primary chaincase, magneto ignition, twin carburettors with chrome bellmouths, swept-back chrome headers into megaphones on both sides, dry-sump oil tank under the seat",
+  "colours": "British racing green tank (polished alloy lower band), tail cowl and side panels; gloss black frame and swingarm; polished alloy engine cases, oil tank, mudguards, rims and rear-sets; chrome exhaust, fork stanchions and clip-ons; black vinyl seat; smoked flyscreen",
+  "systems": {
+    "chassis": ["footpegs", "front_brake", "front_fork", "handlebar", "rear_brake", "rear_shock_left", "rear_shock_right", "side_stand", "steering", "swingarm"],
+    "electrical": ["battery", "headlight", "horn", "ht_leads", "indicators", "instruments", "magneto", "regulator_rectifier", "spark_plugs", "tail_light"],
+    "frame_body": ["battery_box", "flyscreen", "frame", "front_mudguard", "fuel_tank", "number_plate_bracket", "rear_mudguard", "seat", "side_panels", "tail_cowl"],
+    "powertrain": ["engine", "exhaust", "fuel_system", "intake"],
+    "transmission": ["chain", "chain_guard", "front_sprocket", "gear_lever", "gearbox", "primary_chaincase", "rear_sprocket"],
+    "wheels": ["front_wheel", "rear_wheel"],
+    "wiring": ["control_cables", "harness_main"]
+  },
+  "objects": 118,
+  "triangles": 332488,
+  "weak_points": "The featherbed crossover at the head stock is a lug cluster hidden behind the fork and clocks rather than a clearly readable X; the oil tank and battery box are bevelled flat extrusions without seams or straps; the seat is a smooth thin pad without stitching and the tail cowl is not a separate fibreglass shell over the subframe."
+}

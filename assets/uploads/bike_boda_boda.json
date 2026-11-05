@@ -1,0 +1,24 @@
+{
+  "asset_id": "bike_boda_boda",
+  "title": "Boda boda commuter 150",
+  "type": "commuter / motorcycle taxi",
+  "reference": "East African boda boda taxi of the Bajaj Boxer BM150 / TVS HLX family (generic, unbranded), in typical taxi fit-out",
+  "era": "2010-2025",
+  "wheelbase_cm": 128,
+  "rake_deg": 26,
+  "wheels": "17 in 36-spoke chrome wire wheels, 2.75-17 ribbed front and 3.00-17 block-tread rear tyres, drum brakes front (cable) and rear (rod)",
+  "engine": "150 cc air-cooled OHV single, cylinder inclined 15 deg forward, kick start, carburettor with rubber hose to side air box, chrome header and silencer with heat shield on the right; 4-speed chain drive in a full enclosed chain case",
+  "colours": "Gloss black frame and body with red tank side panels and silver pinstripe, red side-panel bands, chrome mudguards, crash guards, dress guard and exhaust, silver engine",
+  "systems": {
+    "chassis": ["centre_stand", "footpegs", "front_brake", "front_fork", "handlebar", "passenger_footrests", "rear_brake", "rear_shock_left", "rear_shock_right", "side_stand", "steering", "swingarm"],
+    "electrical": ["alternator", "battery", "cdi_unit", "headlight", "horn", "ignition_coil", "indicators", "instruments", "regulator_rectifier", "spark_plug", "tail_light"],
+    "frame_body": ["carrier", "crash_guard_front", "crash_guard_rear", "dress_guard", "frame", "front_mudguard", "fuel_tank", "number_plate_bracket", "rear_mudguard", "seat", "side_panels"],
+    "powertrain": ["clutch", "engine", "exhaust", "fuel_system", "intake", "kick_start"],
+    "transmission": ["chain", "chain_case", "front_sprocket", "gear_lever", "rear_sprocket"],
+    "wheels": ["front_wheel", "rear_wheel"],
+    "wiring": ["harness_main"]
+  },
+  "objects": 141,
+  "triangles": 370878,
+  "weak_points": "The full chain case is still a large plain black loft that dominates the lower left side; the tank's red panel edge shows faceting at render resolution; the seat is a smooth loft without a fabric texture; the dress guard grille is a simple radial/arc wire grid rather than a pressed perforated panel."
+}
