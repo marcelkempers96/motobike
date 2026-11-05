@@ -84,7 +84,7 @@ def _fm_photos(path):
   if not t.startswith('---'): return []
   fm = t[3:t.index('\n---', 3)]
   out = []
-  for m in re.finditer(r'\{\s*file:\s*"([^"]+)"\s*,\s*caption:\s*"([^"]*)"\s*\}', fm): out.append({'file': m.group(1), 'caption': m.group(2)})
+  for m in re.finditer(r'\{\s*"?file"?:\s*"([^"]+)"\s*,\s*"?caption"?:\s*"([^"]*)"\s*\}', fm): out.append({'file': m.group(1), 'caption': m.group(2)})
   if not out:
     for m in re.finditer(r'-\s*file:\s*"?([^"\n]+?)"?\s*\n\s*caption:\s*"?([^"\n]*)"?\s*(?:\n|$)', fm): out.append({'file': m.group(1).strip(), 'caption': m.group(2).strip()})
   return out
@@ -105,11 +105,12 @@ def photo_src(src):
     except Exception: _done[src] = None; return None
   _done[src] = 'assets/repair-photos/' + name
   return _done[src]
-def photos_html(kind, i, rel, limit=4):
+def photos_html(kind, i, rel, limit=4, skip=None):
   items = []
-  for ph in PHOTOS[kind].get(i, [])[:limit]:
+  for ph in PHOTOS[kind].get(i, [])[:limit + (1 if skip else 0)]:
     src = photo_src(ph['file'])
-    if src: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
+    if src == skip: continue
+    if src and len(items) < limit: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
   if not items: return ''
   return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div></section>'
 
@@ -406,7 +407,7 @@ for i, p in PART.items():
       <figure class="r-fig"><img src="{rel}{src}" alt="{e(p["name"])}">{cap}</figure>
     </header>
     <div class="r-grid">
-      <article class="r-body is-part">{photos_html('parts', i, rel, 6)}{body}</article>
+      <article class="r-body is-part">{photos_html('parts', i, rel, 6, src)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Problems it can cause</h2><ul class="r-list">{probs}</ul></section>' if probs else ''}
         {f'<section><h2>Repairs</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}

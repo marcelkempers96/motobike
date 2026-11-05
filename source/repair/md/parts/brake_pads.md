@@ -11,6 +11,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 545}
   - {doc: "Motorcyclist: brake pad options", url: "https://motorcyclistonline.com/motorcycle-brake-pad-options-explained-mc-garage-video"}
   - {doc: "webBikeWorld: fake or genuine parts", url: "https://www.webbikeworld.com/how-to-find-whether-a-spare-part-is-fake-or-genuine"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 ---
 
 # Brake pads
@@ -40,6 +41,9 @@ Replace when the friction material reaches the wear groove or the limit in your 
 - Never press the lever with the pads out. Push the pistons back slowly and watch the reservoir does not overflow.
 - Bed in new pads with several gentle stops before hard braking.
 - Home job: [Replace disc brake pads](/moto-zero/repair/repairs/brake-pad-replace). Check: [Check brake pad wear](/moto-zero/repair/repairs/brake-pad-check).
+- Pads in one caliper can wear by different amounts. Look at both pads at each check and replace them as a pair.
+- With the wheel off the bike, put a piece of wood or steel between the pads so that squeezing the lever cannot push the pistons out.
+- Refit any anti-rattle spring or clip that came with the old pads. Some pads are round and sit in recesses in the caliper.
 
 ## Reference (K-Light 125)
 | Item | Standard | Limit | PDF page |

@@ -12,6 +12,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 398}
   - {doc: "MAVCC Motorcycle Mechanic", page: 410}
   - {doc: "K-Light 125 manual", page: 130}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tires1.htm"}
 ---
 
 # Air leaking from the tyre valve
@@ -26,6 +27,7 @@ Only if the tyre holds pressure long enough for the trip and you check it before
 - Does the valve lean to one side (tube tyre)?
 - Is the rubber stem cracked when you bend it?
 - Did someone just inflate it with a poor chuck that bent the stem?
+- Wet the end of the valve with soapy water each time the pressure is checked. A core that leaks in one stem may hold in another.
 
 ## Diagnose it step by step
 

@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 156}
   - {doc: "MAVCC Motorcycle Mechanic", page: 487}
   - {doc: "Unit 2 The Motorcycle", page: 38}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/forks.htm"}
 ---
 
 # Front forks
@@ -28,6 +29,7 @@ The spring carries the weight of bike and rider and soaks up bumps. The oil, for
 
 ## When to replace it
 Fork legs are rarely replaced whole. Seals, oil, bushes and springs are service parts. Replace an inner tube that is bent or pitted where the seal runs. Never straighten a bent tube or damper rod.
+- Dents or rough patches on a fork tube wear out any new seal. Replace a damaged tube instead of fitting new seals onto it.
 
 ## What to match when buying
 - [Fork seals](/moto-zero/repair/parts/fork_seals) (sized by inner tube diameter), [Fork oil](/moto-zero/repair/parts/fork_oil), springs, bushes, dust seals.
@@ -38,6 +40,9 @@ Fork legs are rarely replaced whole. Seals, oil, bushes and springs are service 
 - Rider check: [Inspect the front forks](/moto-zero/repair/repairs/fork-inspect).
 - Seal and oil work: [Replace fork oil and seals](/moto-zero/repair/repairs/fork-oil-seals) (workshop).
 - After refitting, align the front end: [Align the front wheel, forks and handlebar](/moto-zero/repair/repairs/front-end-align).
+- Rubber gaiters over the tubes keep dirt off the seals and stones off the tubes. They are worth fitting on a bike used on dusty or stony roads.
+- When a fork leg is removed, tie the brake caliper up and do not let it hang by the hose. A top bolt that holds the spring can be under pressure and fly out, so hold it down while loosening.
+- A thicker fork oil firms up a soft front end. A spacer cut from plastic pipe and fitted on top of a sagged spring has a similar effect.
 
 ## Reference (K-Light 125)
 | Item | Standard | Limit | PDF page |

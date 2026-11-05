@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 72}
   - {doc: "K-Light 125 manual", page: 141}
   - {doc: "MAVCC Motorcycle Mechanic", page: 503}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aline_wheel.htm"}
 ---
 
 # Handlebar is not straight when the wheel is straight
@@ -27,6 +28,8 @@ No, until you have checked for bent parts. If only the forks have twisted in the
 - Are both fork legs at the same height above the top clamp?
 - Is the handlebar itself bent (compare left and right grip heights and angles)?
 - Look at the chain adjuster marks on both sides.
+- To realign a twisted fork, loosen the pinch bolts only a little, so the legs can twist in the clamps but not slide, and turn the bars gently into line. Retighten to the value in your bike's manual.
+- If the bars cannot be lined up this way, the frame, forks, axle or yokes may be bent. See [Align the front wheel, forks and handlebar](/moto-zero/repair/repairs/front-end-align).
 
 ## Diagnose it step by step
 

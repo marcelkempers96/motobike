@@ -8,6 +8,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 404}
   - {doc: "MAVCC Motorcycle Mechanic", page: 410}
   - {doc: "Michelin: how to read a motorcycle tyre", url: "https://www.michelin.ca/en/motorcycle/tips-and-advice/advice-motorcycle/how-to-choose-the-right-motorcycle-tire/how-to-read-a-tire"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tires1.htm"}
 ---
 
 # Inner tube
@@ -35,3 +36,6 @@ Replace a tube with a large cut, a split near the valve, many patches, or perish
 - Inflate a little to remove folds, then fit. Use levers carefully near the valve to avoid pinching.
 - Check the rim tape covers every nipple and no spoke end sticks out.
 - See [Repair a puncture in an inner tube](/moto-zero/repair/repairs/tube-puncture-repair) and [Replace a tyre](/moto-zero/repair/repairs/tyre-replace).
+- Fit the tube with the tyre's light balance mark beside the valve. Pump in a little air first so the tube holds a shape and is harder to pinch with the levers.
+- Many dirt bikes have rim locks that stop the rim turning inside the tyre and tearing out the valve at low pressure. Work the bead round them with care.
+- If no rim tape is available, a few turns of strong tape over the nipple ends is a stopgap.

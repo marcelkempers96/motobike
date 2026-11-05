@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 116}
   - {doc: "K-Light 125 manual", page: 162}
   - {doc: "MAVCC Motorcycle Mechanic", page: 551}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/drumbrakes.htm"}
 ---
 
 # Brake drags and the wheel does not spin freely
@@ -28,6 +29,8 @@ No. Heat builds up and can boil the fluid or lock the wheel. Find the cause firs
 - Put the bike on its stand and spin each wheel. Does one stop quickly?
 - Does the lever or pedal return fully and have free play?
 - Is the rear chain very tight?
+- Feel the drum or hub after a ride. If it is very hot and the brake was hardly used, it is dragging. If the brake is not dragging and the hub is still hot, check the wheel bearings: [Wheel hub or brake drum is very hot after riding](/moto-zero/repair/problems/hub-hot-after-ride).
+- A master cylinder plunger or caliper piston gummed up by water in the fluid can leave a disc brake on.
 
 ## Diagnose it step by step
 

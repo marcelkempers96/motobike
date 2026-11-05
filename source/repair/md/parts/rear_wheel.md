@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 158}
   - {doc: "K-Light 125 manual", page: 164}
   - {doc: "MAVCC Motorcycle Mechanic", page: 429}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/rear_wheels.htm"}
 ---
 
 # Rear wheel
@@ -37,6 +38,9 @@ Replace a cast wheel that is cracked or bent beyond the runout limit. Rebuild a 
 - [Remove and refit the rear wheel](/moto-zero/repair/repairs/wheel-remove-rear). Note spacer positions.
 - Check the axle nut torque for your exact bike; the K-Light 125 manual gives two different values, so confirm before work.
 - After fitting, set chain slack and alignment: [Check and adjust chain slack](/moto-zero/repair/repairs/chain-adjust).
+- Watch for spacers as the axle comes out. There may be one, two or none, and they centre the wheel in the swingarm.
+- On a drum brake, undo the brake anchor bolt and the rod adjusting nut before the wheel comes out. The anchor stops the brake plate turning with the wheel.
+- Some swingarms have open slots or a removable block at the rear, and some hold the wheel on one side only with lug nuts. If the bike has no centre stand, the wheel must be held off the ground another way, and a silencer or shock may have to come off.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

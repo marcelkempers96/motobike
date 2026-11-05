@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 135}
   - {doc: "K-Light 125 manual", page: 162}
   - {doc: "K-Light 125 manual", page: 25}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/wheelbearing.htm"}
 ---
 
 # Rumbling or grinding from a wheel
@@ -26,6 +27,7 @@ With care for a short distance if there is no play in the wheel. If the noise is
 - Does the noise change when you lean left and right? Bearings often change tone when loaded.
 - Touch the hub after a ride (carefully): is one much hotter than the other?
 - Look at the tyre: cupped tread hums too.
+- A hub that is very hot after a ride, with the brake not dragging, means the bearing grease has failed: [Wheel hub or brake drum is very hot after riding](/moto-zero/repair/problems/hub-hot-after-ride).
 
 ## Diagnose it step by step
 

@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 71}
   - {doc: "MAVCC Motorcycle Mechanic", page: 404}
   - {doc: "Michelin: how to read a motorcycle tyre", url: "https://www.michelin.ca/en/motorcycle/tips-and-advice/advice-motorcycle/how-to-choose-the-right-motorcycle-tire/how-to-read-a-tire"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tires1.htm"}
 ---
 
 # Rear tyre
@@ -40,6 +41,7 @@ Replace at the wear bars (TWI marks), at the limit in your manual, or at the leg
 - Check cold pressure weekly, more with a passenger: [Check tyre pressure](/moto-zero/repair/repairs/tyre-pressure-check).
 - Puncture repair: [Plug a tubeless tyre puncture](/moto-zero/repair/repairs/tubeless-plug) (get home, then inspect) or [Repair a puncture in an inner tube](/moto-zero/repair/repairs/tube-puncture-repair).
 - Fitting: [Replace a tyre](/moto-zero/repair/repairs/tyre-replace) (workshop).
+- New tyres carry a mould release coating and are slippery at first. Ride gently until it wears off.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

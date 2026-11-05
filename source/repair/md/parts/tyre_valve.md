@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 71}
   - {doc: "K-Light 125 manual", page: 158}
   - {doc: "MAVCC Motorcycle Mechanic", page: 404}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tires1.htm"}
 ---
 
 # Tyre valve
@@ -36,6 +37,8 @@ Replace the core if it leaks after cleaning; it is cheap. Replace a rubber tubel
 - Snap-in stems are pulled through the rim with a special tool, so the tyre bead must be off: workshop or tyre shop job.
 - Line up the tyre's balance mark with the valve.
 - See [Check and replace a tyre valve](/moto-zero/repair/repairs/valve-check).
+- Put a little soapy water on the end of the stem each time the pressure is checked. Bubbles show a leaking core.
+- A core that leaks in one stem may hold in another, so keep an old core that tested good. Tighten the valve nut on a tube only finger tight.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

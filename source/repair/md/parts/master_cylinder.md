@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 116}
   - {doc: "K-Light 125 manual", page: 117}
   - {doc: "K-Light 125 manual", page: 33}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 ---
 
 # Brake master cylinder
@@ -23,6 +24,7 @@ The lever pushes a piston with rubber cups through a bore filled with fluid. Thi
 - Lever comes back to the bar with no visible leak: [Lever to bar](/moto-zero/repair/problems/lever-to-bar).
 - Fluid at the lever boot or reservoir cap: [Brake fluid leak](/moto-zero/repair/problems/brake-fluid-leak).
 - Brake drags and frees after opening the bleed screw: [Brake drag](/moto-zero/repair/problems/brake-drag).
+- Brake heats up or drags with the lever untouched: the plunger may be gummed up by water in the fluid.
 
 ## When to replace it
 Rebuild with a cup and piston kit if it leaks inside or out. Replace the whole unit if the bore is scratched or pitted, or the reservoir is cracked.
@@ -37,6 +39,8 @@ Rebuild with a cup and piston kit if it leaks inside or out. Replace the whole u
 - Workshop job to rebuild: clean only with brake fluid or alcohol and fit cups the right way round. See [Check the brake master cylinder](/moto-zero/repair/repairs/master-cylinder-check).
 - Bleed fully afterwards: [Replace brake fluid and bleed the brakes](/moto-zero/repair/repairs/brake-bleed).
 - Keep the reservoir level when the bike is upright before opening the cap.
+- Use new parts or a rebuild kit where they can be bought. Square rubber seals often clean up well and can be reused if they are not hard or damaged.
+- Before opening the reservoir, set the handlebar so the master cylinder is level, and cover the tank and any paint with a wet towel.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 156}
   - {doc: "MAVCC Motorcycle Mechanic", page: 487}
   - {doc: "Unit 2 The Motorcycle", page: 38}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/forks.htm"}
 ---
 
 # Front forks bottom out
@@ -28,6 +29,7 @@ Ride with care at lower speed. Hard bottoming under braking can upset the bike. 
 - Hold the front brake and push the bars down hard: does it go down too easily, or knock at the bottom?
 - Push down and let go: does it bounce more than once?
 - Is the bike carrying heavy loads on the front (bags on the bars, a front rack)?
+- A spacer on top of a sagged spring, or thicker oil, can firm up the front end. See [Fit a fork spring spacer](/moto-zero/repair/repairs/fork-spring-spacer) and [Set the fork oil level](/moto-zero/repair/repairs/fork-oil-level-set).
 
 ## Diagnose it step by step
 

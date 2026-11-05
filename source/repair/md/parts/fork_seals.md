@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 151}
   - {doc: "K-Light 125 manual", page: 152}
   - {doc: "MAVCC Motorcycle Mechanic", page: 497}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/forks.htm"}
 ---
 
 # Fork seals
@@ -36,6 +37,9 @@ Replace both oil seals and both dust seals when one leaks. First try cleaning un
 - Use a seal driver of the right size; never hammer the seal directly.
 - Cover the tube top with tape or a plastic bag so the seal lips are not cut on the way down.
 - Workshop job: [Replace fork oil and seals](/moto-zero/repair/repairs/fork-oil-seals).
+- A leg that will not slide out after the bolt and circlip are out may be held by the bush under the seal. Push the leg in and pull it out sharply, several times, to work the seal and bush free.
+- If no seal driver is available, a socket or a length of tube of the right size can seat the seal. Work round the edge in turn, not at one spot.
+- Most of the oil comes out when the damper bolt is loosened. Stand the leg upright in a pan for a while to let the rest drain.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

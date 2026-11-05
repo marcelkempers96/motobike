@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 116}
   - {doc: "MAVCC Motorcycle Mechanic", page: 540}
   - {doc: "MAVCC Motorcycle Mechanic", page: 731}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/drumbrakes.htm"}
 ---
 
 # Brake cable and rod
@@ -36,6 +37,8 @@ Replace a cable with broken strands, a kinked or cracked outer, or one that stay
 - Never ride with the adjuster nut missing or loose; the brake can fall off the arm.
 - Adjust free play, then spin the wheel to check it turns freely, and check the brake light.
 - See [Adjust a drum brake](/moto-zero/repair/repairs/drum-brake-adjust), [Adjust the rear brake pedal](/moto-zero/repair/repairs/rear-pedal-adjust), [Lubricate control cables](/moto-zero/repair/repairs/cable-lube).
+- On a front drum brake with two cams, adjust the linking rod so both shoe ends touch the drum at the same time, then set the cable at the drum, then the lever play at the handlebar. The lever must not touch the bar when the brake is fully on.
+- After a ride, feel the drum. If it is very hot and the brake was hardly used, the brake is dragging.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

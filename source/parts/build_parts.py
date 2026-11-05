@@ -239,7 +239,7 @@ def _dan_load():
   for f in _glob.glob(os.path.join(ROOT, 'source/repair/new/*/parts/*.md')):
     t = open(f, encoding='utf-8').read()
     k = os.path.splitext(os.path.basename(f))[0]
-    for m in _re.finditer(r'\{\s*file:\s*"([^"]+)"\s*,\s*caption:\s*"([^"]*)"\s*\}', t.split('\n---', 1)[0]): out.setdefault(k, []).append({'file': m.group(1), 'caption': m.group(2)})
+    for m in _re.finditer(r'\{\s*"?file"?:\s*"([^"]+)"\s*,\s*"?caption"?:\s*"([^"]*)"\s*\}', t.split('\n---', 1)[0]): out.setdefault(k, []).append({'file': m.group(1), 'caption': m.group(2)})
   return out
 _DAN = _dan_load()
 def dan_photos(pid, limit=8):

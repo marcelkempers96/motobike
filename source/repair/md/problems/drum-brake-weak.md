@@ -14,6 +14,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 544}
   - {doc: "MAVCC Motorcycle Mechanic", page: 546}
   - {doc: "Unit 2 The Motorcycle", page: 42}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/drumbrakes.htm"}
 ---
 
 # Drum brake is weak
@@ -28,6 +29,9 @@ No, until it is adjusted or serviced. A weak rear drum means you are relying on 
 - Look at the wear indicator pointer on the brake arm with the brake applied: is it past the end of the mark?
 - Has the bike just been through deep water or washed? Brake gently a few times to dry it.
 - Did you just adjust the chain? Moving the rear wheel changes the brake rod length.
+- A twin leading shoe brake has two cams. If they are not adjusted so each shoe touches the drum at the same time, braking is weaker than a single cam brake.
+- A cam shaft rusted tight, or lining that has come unglued from the shoe, also gives weak or sticking brakes. Both need the wheel and shoes off.
+- After refitting the wheel, spin it, press the brake on hard and hold it, then tighten the axle. This centres the shoes.
 
 ## Diagnose it step by step
 

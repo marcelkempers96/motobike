@@ -5,7 +5,7 @@ category: brakes
 aliases: [caliper seal kit, piston seal, square seal, dust seal, caliper O-ring]
 applies_to: [disc-brake]
 sources:
-  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics3.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 photos: [{file: "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper_caliper_piston.jpg", caption: "Square-section piston seal removed from a caliper"}, {file: "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_sure_pad_caliper_shop_rag_so.jpg", caption: "Two-piston caliper with pistons and seal groove"}]
 ---
 

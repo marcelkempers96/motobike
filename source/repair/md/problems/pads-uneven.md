@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 66}
   - {doc: "K-Light 125 manual", page: 110}
   - {doc: "MAVCC Motorcycle Mechanic", page: 553}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 ---
 
 # Brake pads wear unevenly
@@ -26,6 +27,7 @@ Ride with care if the thinnest pad is still above the limit and the brake works 
 - Spin the wheel: does it drag?
 - Look at the disc: is one face shinier or more scored than the other?
 - Look at the caliper slide pin boots (sliding calipers): torn or missing?
+- Two pads in one caliper can wear by different amounts. Look at both pads at each check, not only the one that is easy to see.
 
 ## Diagnose it step by step
 

@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 156}
   - {doc: "MAVCC Motorcycle Mechanic", page: 487}
   - {doc: "MAVCC Motorcycle Mechanic", page: 493}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/forks.htm"}
 ---
 
 # Fork oil
@@ -36,6 +37,8 @@ Change at the interval in your bike's manual, whenever the seals are replaced, a
 - Fill both legs the same.
 - Pump the fork slowly several times to remove air before fitting the spring and cap.
 - Workshop job on most bikes: [Replace fork oil and seals](/moto-zero/repair/repairs/fork-oil-seals).
+- Some forks need the oil level set instead of a measured volume. An oil level tool with its gauge set to the manual's level draws off the excess. The manual says whether the tube is fully compressed or fully extended for the check.
+- A level tool can be made from a length of pipe, some tubing and a syringe or baster.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

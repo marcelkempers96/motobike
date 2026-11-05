@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 162}
   - {doc: "MAVCC Motorcycle Mechanic", page: 540}
   - {doc: "MAVCC Motorcycle Mechanic", page: 546}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/drumbrakes.htm"}
 ---
 
 # Drum brake squeaks or grinds
@@ -26,6 +27,8 @@ Ride with care to a place to work on it if it only squeaks and still brakes well
 - Look at the wear indicator pointer with the brake on.
 - Spin the wheel on the stand: does it rub at one point?
 - Has the bike been through mud or sand?
+- A grooved or glazed drum can be sanded smooth. Turning it on a lathe is better but costs more. Do not breathe the dust.
+- Grease the cam shaft and pivot post lightly when the shoes are out.
 
 ## Diagnose it step by step
 

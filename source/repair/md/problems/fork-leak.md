@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 151}
   - {doc: "MAVCC Motorcycle Mechanic", page: 487}
   - {doc: "MAVCC Motorcycle Mechanic", page: 497}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/forks.htm"}
 ---
 
 # Oil leaking from a fork leg
@@ -27,6 +28,7 @@ Ride with care if it is a light film and the brake is clean. If oil has reached 
 - Wipe the tubes clean, pump the forks with the brake on, and see which leg leaves a fresh oil ring.
 - Look at the tube for rust spots, chips or scratches.
 - Is the oil coming from the seal, or from the bottom bolt or the cap at the top?
+- Dents or rough patches on a fork tube wear out new seals. Gaiters over the tubes keep dirt off the seals.
 
 ## Diagnose it step by step
 

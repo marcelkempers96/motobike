@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 139}
   - {doc: "K-Light 125 manual", page: 161}
   - {doc: "K-Light 125 manual", page: 165}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/wheelbearing.htm"}
 ---
 
 # Wheel moves sideways on the axle
@@ -26,6 +27,7 @@ No. A wheel with side play can let the brake disc hit the caliper, make the bike
 - Is the axle nut tight and its split pin in place?
 - Was the wheel recently removed? (Spacers left out or swapped.)
 - Does the play feel like a sharp knock or a soft movement?
+- Any play felt when the wheel is rocked is a reason to replace the bearings. A hub that is very hot after a ride with the brake not dragging, or an axle that looks discoloured as if heated, also means the bearings have failed.
 
 ## Diagnose it step by step
 

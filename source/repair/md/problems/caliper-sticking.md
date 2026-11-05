@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 118}
   - {doc: "K-Light 125 manual", page: 127}
   - {doc: "MAVCC Motorcycle Mechanic", page: 553}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 ---
 
 # Brake caliper sticks or is seized
@@ -27,6 +28,8 @@ No. A sticking caliper overheats the fluid and pads, can fade the brake complete
 - After a short ride, hold the back of your hand near the disc (do not touch). Very hot?
 - Look at pad wear: one pad much thinner?
 - Look at the fluid: dark?
+- Signs of gum and corrosion behind a piston: the brake heats up with the lever untouched, or the wheel locks or drags. Water in the fluid is the usual cause.
+- Push pistons back slowly with a clamp, loosening it a turn or two at a time so they move together. Pad the caliper so the paint is not damaged.
 
 ## Diagnose it step by step
 

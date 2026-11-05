@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 158}
   - {doc: "RS Components: SKF 6202-2RSL bearing", url: "https://uk.rs-online.com/web/p/ball-bearings/2077086"}
   - {doc: "webBikeWorld: fake or genuine parts", url: "https://www.webbikeworld.com/how-to-find-whether-a-spare-part-is-fake-or-genuine"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/wheelbearing.htm"}
 ---
 
 # Wheel bearings
@@ -27,6 +28,8 @@ The balls roll between an inner and an outer ring, so the wheel turns freely on 
 
 ## When to replace it
 Replace if rough, noisy or loose when turned by finger with the wheel out. Replace both bearings in a hub together, plus the hub seals. Always fit new bearings once removed.
+- Replace the bearings if there is any play. Replace them also if the hub is very hot after a ride and the brake is not dragging, or if the axle looks discoloured as if it was heated. Both mean the grease has failed and the bearings have overheated.
+- Before a long trip, replace the bearings if the last change cannot be recalled.
 
 ## What to match when buying
 - The number printed on the bearing seal, for example 6202-2RS. The four digits set the size; a 6202 is 15 mm inside, 35 mm outside and 11 mm wide.
@@ -37,6 +40,9 @@ Replace if rough, noisy or loose when turned by finger with the wheel out. Repla
 - Press or drive only on the outer ring with a driver of the right size. Never hit the inner ring or seal.
 - Fit the spacer tube between the bearings, or the axle nut will crush them.
 - Check: [Check wheel bearings](/moto-zero/repair/repairs/wheel-bearing-check) (home). Replace: [Replace wheel bearings](/moto-zero/repair/repairs/wheel-bearing-replace) (workshop).
+- Warming an aluminium hub gently with a hot air gun makes bearings come out and go in more easily.
+- A bearing driven out with a drift or pulled with a puller is damaged and must be replaced. Tapered roller bearings can be cleaned and regreased, because the rollers are not driven.
+- On cast wheels, keep the drift on the bearing and not on the casting. A slip can crack the hub. Some cast hubs take the centre spacer from one side only.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

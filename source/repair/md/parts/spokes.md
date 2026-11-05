@@ -7,6 +7,7 @@ applies_to: [all]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 404}
   - {doc: "MAVCC Motorcycle Mechanic", page: 436}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/spokewheels.htm"}
 ---
 
 # Spokes and nipples
@@ -20,9 +21,11 @@ The spokes hold the rim round and in line with the hub. Each one is under tensio
 - A spoke rattles, moves when squeezed, or rings a dull note when tapped: [Spokes are loose or broken](/moto-zero/repair/problems/loose-spokes).
 - Rim wobbles: [Wheel is buckled or wobbles](/moto-zero/repair/problems/wheel-buckled).
 - Repeated punctures from the inside: a spoke end may stick through the nipple.
+- Tap each spoke with a spanner: a tight spoke gives a clear ringing note and a loose one a dull sound. Tighten the dull ones until they ring. Spokes on a good wheel do not all sound exactly the same.
 
 ## When to replace it
 Replace any broken, bent or badly rusted spoke and its nipple. If several are broken or the rim is bent, the wheel needs rebuilding. Old spokes are rarely reused in a rebuild.
+- One broken spoke is usually not urgent. Two need attention soon if they are apart. Three, or any that are close together, can make the wheel fail suddenly: do not ride.
 
 ## What to match when buying
 - Make, model, year, front or rear, and left or right side: spoke length and head bend angle differ (inner and outer spokes).
@@ -34,3 +37,4 @@ Replace any broken, bent or badly rusted spoke and its nipple. If several are br
 - Check runout as you go and grind off any spoke end that sticks past the nipple into the tube side.
 - Home job for checking and small adjustments: [Check and tighten spokes](/moto-zero/repair/repairs/spoke-tension). Rebuilding and truing a whole wheel needs a truing stand and is best done by a wheel builder.
 - Check runout after: [Check a wheel for runout](/moto-zero/repair/repairs/wheel-runout-check).
+- Old nipples can seize on the spoke, and stretched threads can lock a spoke and nipple together, so a whole set may have to be cut out. Check a used wheel for spoke condition and trueness before buying it, and plan to fit new bearings.

@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 118}
   - {doc: "K-Light 125 manual", page: 127}
   - {doc: "MAVCC Motorcycle Mechanic", page: 553}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 ---
 
 # Brake caliper
@@ -23,6 +24,7 @@ Brake fluid from the master cylinder pushes the pistons out, and they press the 
 - One pad much thinner: [Pads wear unevenly](/moto-zero/repair/problems/pads-uneven).
 - Fluid wet around a piston: [Brake fluid leak](/moto-zero/repair/problems/brake-fluid-leak). Stop riding.
 - Weak braking: [Weak brakes](/moto-zero/repair/problems/weak-brakes).
+- Brakes that heat up with the lever untouched, or that lock or drag, point to gum and corrosion behind a piston. Water in the fluid is the usual cause.
 
 ## When to replace it
 Clean and free the pistons first. Rebuild with new seals if they leak or stick after cleaning. Replace the whole caliper if the bore is pitted or the body is cracked.
@@ -39,6 +41,8 @@ Clean and free the pistons first. Rebuild with new seals if they leak or stick a
 - Use new copper or aluminium sealing washers on the banjo bolt.
 - Caliper bolt torque: use the value in your bike's manual for that exact bolt.
 - See [Clean a brake caliper and free the pistons](/moto-zero/repair/repairs/caliper-clean) (home) and [Rebuild a brake caliper](/moto-zero/repair/repairs/caliper-rebuild) (workshop). Always bleed afterwards.
+- When the caliper is off the disc, tie it up with wire or cord. Never let it hang by the hose.
+- Fit the mounting bolts with thread locker and tighten them to the value in your bike's manual. On many rear calipers it is easier to take out the axle and remove the whole bracket with the caliper.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

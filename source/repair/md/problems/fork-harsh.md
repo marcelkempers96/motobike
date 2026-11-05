@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 156}
   - {doc: "MAVCC Motorcycle Mechanic", page: 487}
   - {doc: "Unit 2 The Motorcycle", page: 38}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/forks.htm"}
 ---
 
 # Front forks feel harsh over bumps
@@ -27,6 +28,7 @@ Ride with care. A fork that binds can lose grip over bumps in corners.
 - Hold the front brake and push the bars down: smooth, or does it stick?
 - Was the fork serviced recently? Too much oil or the wrong grade is a common cause.
 - Was the bike dropped recently?
+- Thicker oil makes the fork action stiffer. Check that the oil grade and level match the manual.
 
 ## Diagnose it step by step
 

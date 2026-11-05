@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 61}
   - {doc: "K-Light 125 manual", page: 64}
   - {doc: "MAVCC Motorcycle Mechanic", page: 541}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hydraulics.htm"}
 ---
 
 # Brake lever or pedal feels spongy
@@ -28,6 +29,8 @@ No. A spongy brake can go all the way to the bar in an emergency stop. Do not ri
 - Look for wet fluid at the caliper, hoses and lever.
 - Did someone just change pads, open a hose or bleed the brakes?
 - Pump the lever several times: does it get firmer?
+- If pumping the lever does nothing, air may be trapped at a fitting. Bleed at every fitting on the line, including where the hose meets the master cylinder, and tap the fittings lightly to free bubbles.
+- Some systems fill more easily from the bleed screw upward, using a pump and a catch jar.
 
 ## Diagnose it step by step
 

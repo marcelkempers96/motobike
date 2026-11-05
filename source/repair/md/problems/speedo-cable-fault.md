@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 135}
   - {doc: "MAVCC Motorcycle Mechanic", page: 410}
   - {doc: "Unit 2 The Motorcycle", page: 18}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/front_wheels.htm"}
 ---
 
 # Speedometer cable is noisy or broken
@@ -27,6 +28,7 @@ Yes, with care. You cannot see your speed, and in many places a working speedome
 - Is the cable connected at both ends?
 - Is the cable pulled tight or kinked when the bars are turned?
 - Was the front wheel removed recently?
+- The cable drive can sit on the outside of the hub, as on most disc brake bikes, or inside the brake plate, as on many drum hubs. Refit it in the same position, with its ear or tabs engaged, or its housing spins. See [Speedometer drive](/moto-zero/repair/parts/speedo_drive).
 
 ## Diagnose it step by step
 
