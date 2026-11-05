@@ -223,6 +223,39 @@ def gallery(pid):
   if len(ph) < 2: return ''
   return '<section class="sp-sec"><h2>Photos</h2><div class="sp-gal">' + ''.join(f'<figure><img src="{{R}}{x["src"]}" alt="{e(x["alt"])}" loading="lazy"><figcaption>{e(x["author"])}, <a href="{e(x["page"])}" target="_blank" rel="noopener">{e(x["licence"])}</a></figcaption></figure>' for x in ph) + '</div><p class="sp-note">Photos show the part type, not the exact version for each model. From Wikimedia Commons under the licences shown.</p></section>'
 
+# Workshop photos from the repair course: the same photos the Repair part pages use
+# (source/repair/photo-map.json, photos2/*.json, new part pages' frontmatter), already
+# converted to assets/repair-photos/ by build_repair.py. Spare-part type -> repair part ids.
+import glob as _glob, re as _re
+DAN_OF = dict(SVG_OF, **{'brake-shoes': 'drum_brake', 'tyres': 'rear_tyre', 'chain-sprocket-kit': 'chain'})
+DAN_EXTRA = {'tyres': ['front_tyre', 'inner_tube', 'tyre_valve'], 'chain-sprocket-kit': ['rear_sprocket', 'front_sprocket'], 'brake-pads': ['brake_caliper'],
+  'brake-disc': ['brake_caliper'], 'wheel-bearings': [], 'battery': [], 'spark-plug': ['ignition_coil'], 'clutch-plates': ['clutch']}
+def _dan_load():
+  out = {}
+  srcs = [os.path.join(ROOT, 'source/repair/photo-map.json')] + sorted(_glob.glob(os.path.join(ROOT, 'source/repair/photos2/*.json')))
+  for f in srcs:
+    if not os.path.exists(f): continue
+    for k, l in (json.load(open(f, encoding='utf-8')).get('parts') or {}).items(): out.setdefault(k, []).extend(l)
+  for f in _glob.glob(os.path.join(ROOT, 'source/repair/new/*/parts/*.md')):
+    t = open(f, encoding='utf-8').read()
+    k = os.path.splitext(os.path.basename(f))[0]
+    for m in _re.finditer(r'\{\s*file:\s*"([^"]+)"\s*,\s*caption:\s*"([^"]*)"\s*\}', t.split('\n---', 1)[0]): out.setdefault(k, []).append({'file': m.group(1), 'caption': m.group(2)})
+  return out
+_DAN = _dan_load()
+def dan_photos(pid, limit=8):
+  ids = ([DAN_OF[pid]] if pid in DAN_OF else []) + DAN_EXTRA.get(pid, [])
+  seen, res = set(), []
+  for i in ids:
+    for ph in _DAN.get(i, []):
+      name = _re.sub(r'[^a-z0-9_-]+', '-', os.path.splitext(os.path.basename(ph['file']))[0].lower()) + '.jpg'
+      if name in seen or not os.path.exists(os.path.join(ROOT, 'assets/repair-photos', name)): continue
+      seen.add(name); res.append({'src': 'assets/repair-photos/' + name, 'caption': ph.get('caption', '')})
+  return res[:limit]
+def workshop(pid, limit=8):
+  ph = dan_photos(pid, limit)
+  if not ph: return ''
+  return '<section class="sp-sec"><h2>Workshop photos</h2><div class="sp-gal">' + ''.join(f'<figure><a href="{{R}}{x["src"]}" target="_blank" rel="noopener"><img src="{{R}}{x["src"]}" alt="{e(x["caption"])}" loading="lazy"></a><figcaption>{e(x["caption"])}</figcaption></figure>' for x in ph) + '</div></section>'
+
 def facts(p):
   dif = p['DIY difficulty (1-5)']
   return f'''<div class="sp-facts">
@@ -305,6 +338,7 @@ for r in PAGES:
       </div>
       {img(pid, f"{p['Part']} for the {name}")}
     </section>
+    {workshop(pid, 4)}
     {'<p class="sp-warn"><b>Check the specification.</b> Brake and drive details for this model vary by market; confirm yours before you buy.</p>' if verify(m) else ''}
     <section class="sp-sec sp-cols">
       <div>
@@ -379,6 +413,7 @@ for pid, p in PARTS.items():
       {img(pid, p['Part'])}
     </section>
     {gallery(pid)}
+    {workshop(pid)}
     <section class="sp-sec sp-cols">
       <div>
         <h2>Pick your bike</h2>

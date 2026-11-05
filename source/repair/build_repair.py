@@ -32,7 +32,7 @@ NEW_MD = {}   # (kind, id) -> path of a page written from the repair course
 for _ix in sorted(_glob.glob(os.path.join(SRC, 'new', '*', 'index.json'))):
   _sec = os.path.dirname(_ix)
   _d = json.load(open(_ix, encoding='utf-8'))
-  for _k, _store in (('repairs', REP), ('problems', PROB)):
+  for _k, _store in (('repairs', REP), ('problems', PROB), ('parts', PART)):
     for _x in _d.get(_k, []):
       _f = os.path.join(_sec, _k, _x['id'] + '.md')
       if _x['id'] in _store or not os.path.exists(_f): continue
@@ -45,6 +45,20 @@ for _k, _x in list(NEW_MD):
     if _pt in PART and _x not in PART[_pt].setdefault('repairs', []): PART[_pt]['repairs'].append(_x)
   for _pb in _r.get('fixes', []):
     if _pb in PROB and _x not in PROB[_pb].setdefault('repairs', []): PROB[_pb]['repairs'].append(_x)
+for _k, _x in list(NEW_MD):
+  if _k != 'parts': continue
+  _p = PART[_x]; _p.setdefault('category', 'engine'); _p.setdefault('aliases', [])
+  for _r in _p.get('repairs', []):
+    if _r in REP and _x not in REP[_r].setdefault('parts', []): REP[_r]['parts'].append(_x)
+  for _pb in _p.get('problems', []):
+    if _pb in PROB and _x not in PROB[_pb].setdefault('parts', []): PROB[_pb]['parts'].append(_x)
+# repairs and problems that name a new part show on its page
+for _k, _x in list(NEW_MD):
+  if _k != 'parts': continue
+  for _r, _rv in REP.items():
+    if _x in _rv.get('parts', []) and _r not in PART[_x].setdefault('repairs', []): PART[_x]['repairs'].append(_r)
+  for _pb, _pv in PROB.items():
+    if _x in _pv.get('parts', []) and _pb not in PART[_x].setdefault('problems', []): PART[_x]['problems'].append(_pb)
 for _k, _x in list(NEW_MD):
   if _k != 'problems': continue
   for _pt in PROB[_x].get('parts', []):
@@ -97,7 +111,7 @@ def photos_html(kind, i, rel, limit=4):
     src = photo_src(ph['file'])
     if src: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
   if not items: return ''
-  return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div><p class="r-photos-credit">{PHOTO_CREDIT}.</p></section>'
+  return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div></section>'
 
 SYS = D['systems']
 
@@ -163,6 +177,10 @@ except Exception: pass
 def part_img(pid):
   if pid in SHOP and SHOP[pid] in SP: return SP[SHOP[pid]]['src'], SP[SHOP[pid]]
   if os.path.exists(os.path.join(ROOT, 'assets/parts-svg', pid + '.svg')): return f'assets/parts-svg/{pid}.svg', None
+  if pid not in IMG:
+    for _ph in PHOTOS['parts'].get(pid, []):
+      _s = photo_src(_ph['file'])
+      if _s: return _s, None
   return 'assets/' + IMG.get(pid, 'renders/engine_4t.webp'), None
 for v in IMG.values(): assert os.path.exists(os.path.join(ROOT, 'assets', v)), v
 
@@ -238,9 +256,16 @@ def tm(r): return re.sub(r'\s*\((editorial )?estimate\)', '', r.get('time') or '
 def rlink(i, rel):
   r = REP[i]; l = LEVEL.get(r.get('level'), ('', ''))
   return f'<li><a href="{rel}repair/repairs/{i}/"><b>{e(r["title"])}</b><span>{l[0]}{" · " + e(tm(r)) if tm(r) else ""}</span></a></li>'
+def part_thumb(pid):
+  # cards prefer a real photo: shop photo, then a repair-course photo of the part, then the drawing
+  if pid in SHOP and SHOP[pid] in SP: return SP[SHOP[pid]]['src']
+  for _ph in PHOTOS['parts'].get(pid, []):
+    _s = photo_src(_ph['file'])
+    if _s: return _s
+  return part_img(pid)[0]
 def partcard(i, rel):
-  p = PART[i]; src, _ = part_img(i)
-  return f'<div class="rpc"><a class="rpc-main" href="{rel}repair/parts/{i}/"><span class="rpc-img"><img src="{rel}{src}" alt="" loading="lazy"></span><b>{e(p["name"])}</b></a><a class="rpc-shop" href="{rel}{shop_url(i)}">Find this part</a></div>'
+  p = PART[i]; src = part_thumb(i)
+  return f'<div class="rpc"><a class="rpc-main" href="{rel}repair/parts/{i}/"><span class="rpc-img{' is-photo' if src.endswith(('.jpg', '.jpeg', '.webp')) and '/renders/' not in src else ''}"><img src="{rel}{src}" alt="" loading="lazy"></span><b>{e(p["name"])}</b></a><a class="rpc-shop" href="{rel}{shop_url(i)}">Find this part</a></div>'
 
 def page(path, title, desc, body, crumbs, rel, extra_ld=None):
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": c, "item": SITE + '/' + u} for n, (c, u) in enumerate(crumbs)]}]
@@ -259,7 +284,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None):
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
-  <link rel="stylesheet" href="{rel}assets/repair2.css?v=2">
+  <link rel="stylesheet" href="{rel}assets/repair2.css?v=3">
   {''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)}
 </head>
 <body>

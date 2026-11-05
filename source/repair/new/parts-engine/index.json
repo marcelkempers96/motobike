@@ -1,0 +1,294 @@
+{
+ "parts": [
+  {
+   "id": "valve_guides",
+   "name": "Valve guides",
+   "category": "engine",
+   "aliases": [
+    "valve guide",
+    "guides"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "top-end-assessment",
+    "valve-remove-refit",
+    "valve-seat-lap",
+    "valve-clearance",
+    "compression-test",
+    "smoke-diagnosis"
+   ],
+   "problems": [
+    "blue-smoke",
+    "tappet-tick",
+    "low-compression",
+    "white-smoke",
+    "oil-level-falling"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve_seats",
+   "name": "Valve seats",
+   "category": "engine",
+   "aliases": [
+    "valve seat",
+    "seat inserts"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "valve-seat-lap",
+    "valve-seat-leak-test",
+    "valve-remove-refit",
+    "compression-test",
+    "leak-down-test",
+    "top-end-assessment"
+   ],
+   "problems": [
+    "low-compression",
+    "exhaust-popping",
+    "power-fades-hot",
+    "hard-hot-start",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valveclearence.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve_seals",
+   "name": "Valve stem seals",
+   "category": "engine",
+   "aliases": [
+    "valve seal",
+    "stem seal",
+    "valve oil seal"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "valve-remove-refit",
+    "top-end-assessment",
+    "smoke-diagnosis",
+    "oil-inspect"
+   ],
+   "problems": [
+    "blue-smoke",
+    "plug-oily",
+    "oil-level-falling",
+    "breather-smoke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve.htm"
+    }
+   ]
+  },
+  {
+   "id": "valve_shims",
+   "name": "Valve shims and buckets",
+   "category": "engine",
+   "aliases": [
+    "shim",
+    "valve shim",
+    "tappet shim",
+    "bucket tappet"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "valve-shim-adjust",
+    "valve-clearance",
+    "cam-timing-set",
+    "top-end-assessment"
+   ],
+   "problems": [
+    "tappet-tick",
+    "hard-cold-start",
+    "low-power",
+    "exhaust-popping",
+    "low-compression"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valveclearence.htm"
+    }
+   ]
+  },
+  {
+   "id": "crankcase",
+   "name": "Crankcase",
+   "category": "engine",
+   "aliases": [
+    "crankcase halves",
+    "engine cases",
+    "engine block case"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "repairs": [
+    "crankcase-split",
+    "engine-bearing-check",
+    "engine-internal-assessment",
+    "oil-seal-fit",
+    "two-stroke-crankcase-test",
+    "cover-gasket-replace"
+   ],
+   "problems": [
+    "oil-leak",
+    "two-stroke-crankcase-leak",
+    "bearing-rumble",
+    "metal-in-oil",
+    "deep-knock",
+    "new-vibration"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/split_crankcase.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/roller_bearings.htm"
+    }
+   ]
+  },
+  {
+   "id": "engine_bearings",
+   "name": "Engine ball and needle bearings",
+   "category": "engine",
+   "aliases": [
+    "crankshaft bearing",
+    "main bearing",
+    "ball bearing",
+    "needle bearing",
+    "gearbox bearing"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "repairs": [
+    "engine-bearing-check",
+    "crankcase-split",
+    "engine-internal-assessment",
+    "oil-seal-fit",
+    "wheel-bearing-check"
+   ],
+   "problems": [
+    "bearing-rumble",
+    "whine-from-engine",
+    "metal-in-oil",
+    "deep-knock",
+    "new-vibration",
+    "engine-seized"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/roller_bearings.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bush_plain_bearings.htm"
+    }
+   ]
+  },
+  {
+   "id": "bearing_shells",
+   "name": "Plain bearing shells",
+   "category": "engine",
+   "aliases": [
+    "big end shells",
+    "main bearing shells",
+    "rod bearing",
+    "bushings"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "plain-bearing-clearance-check",
+    "engine-internal-assessment",
+    "engine-bearing-check",
+    "crankcase-split",
+    "oil-inspect",
+    "engine-oil-service"
+   ],
+   "problems": [
+    "deep-knock",
+    "metal-in-oil",
+    "oil-warning-light",
+    "engine-seized",
+    "bearing-rumble"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bush_plain_bearings.htm"
+    }
+   ]
+  },
+  {
+   "id": "piston_pin",
+   "name": "Piston pin and circlips",
+   "category": "engine",
+   "aliases": [
+    "gudgeon pin",
+    "wrist pin",
+    "wristpin",
+    "piston circlips",
+    "pin bearing"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "repairs": [
+    "piston-inspect",
+    "top-end-assessment",
+    "piston-ring-fit",
+    "piston-clearance-measure",
+    "stuck-piston-grease-free"
+   ],
+   "problems": [
+    "piston-slap",
+    "piston-crown-damage",
+    "engine-seized",
+    "low-compression",
+    "blue-smoke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/pistons.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/roller_bearings.htm"
+    }
+   ]
+  }
+ ]
+}

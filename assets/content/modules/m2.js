@@ -444,14 +444,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/112_yamaha_yz_125_piston.jpg",
-          "caption": "Two-stroke piston with ring pegs",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Two-stroke piston with ring pegs"
         },
         {
           "type": "photo",
           "src": "repair-photos/112_i_always_measure_old_piston_so.jpg",
-          "caption": "Two-stroke cylinder bore and ports",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Two-stroke cylinder bore and ports"
         },
         {
           "type": "model",
@@ -492,8 +490,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/109_expansion_chambers.jpg",
-          "caption": "Two-stroke expansion chambers. The returning pressure wave pushes escaping charge back into the cylinder, but only over a narrow rpm band.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Two-stroke expansion chambers. The returning pressure wave pushes escaping charge back into the cylinder, but only over a narrow rpm band."
         },
         {
           "type": "p",
@@ -656,8 +653,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/109_two_stroke_exhaust_pipes.jpg",
-          "caption": "Two-stroke exhaust pipes",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Two-stroke exhaust pipes"
         },
         {
           "type": "callout",
@@ -680,32 +676,27 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/111_b_24_valve_ct_90_valve.jpg",
-          "caption": "Two valves of different sizes side by side",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Two valves of different sizes side by side"
         },
         {
           "type": "photo",
           "src": "repair-photos/111_cutting_valve_seat.jpg",
-          "caption": "Cutting a valve seat with a seat cutter",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Cutting a valve seat with a seat cutter"
         },
         {
           "type": "photo",
           "src": "repair-photos/111_hose.jpg",
-          "caption": "Lapping a valve with a hose on the stem",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Lapping a valve with a hose on the stem"
         },
         {
           "type": "photo",
           "src": "repair-photos/131_ducati_250_over_head_cam_gear.jpg",
-          "caption": "Gear-driven overhead camshafts in a cylinder head",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Gear-driven overhead camshafts in a cylinder head"
         },
         {
           "type": "photo",
           "src": "repair-photos/131_over_head_cam_gear_drive.jpg",
-          "caption": "Overhead camshaft drive from a sprocket to the valves",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Overhead camshaft drive from a sprocket to the valves"
         },
         {
           "type": "model",
@@ -720,8 +711,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/110_feeler_gauge.jpg",
-          "caption": "Checking valve clearance with a feeler gauge, piston at top dead centre on the compression stroke.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Checking valve clearance with a feeler gauge, piston at top dead centre on the compression stroke."
         },
         {
           "type": "h3",
@@ -898,14 +888,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/112_small_bore_71mm_long_stroke_82mm.jpg",
-          "caption": "Piston with rings and pin bosses",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Piston with rings and pin bosses"
         },
         {
           "type": "photo",
           "src": "repair-photos/122_motorcycle_counter_balancers.jpg",
-          "caption": "Counterbalancer weights moving opposite the piston",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Counterbalancer weights moving opposite the piston"
         },
         {
           "type": "p",
@@ -960,8 +948,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/112_honda_piston.jpg",
-          "caption": "Four-stroke piston with ring grooves",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Four-stroke piston with ring grooves"
         },
         {
           "type": "h3",
@@ -970,8 +957,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/112_three_piece.jpg",
-          "caption": "Three-piece oil ring",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Three-piece oil ring"
         },
         {
           "type": "table",
@@ -1021,8 +1007,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/122_gear_drive_counterbalancer.jpg",
-          "caption": "Gear-driven counterbalancer. A single cylinder can only be part-balanced by the crank webs; a weight turning the opposite way cancels much of the rest of the shaking force.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Gear-driven counterbalancer. A single cylinder can only be part-balanced by the crank webs; a weight turning the opposite way cancels much of the rest of the shaking force."
         },
         {
           "type": "engine",
@@ -1067,8 +1052,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/128_hole_tunnel_drilled_machined_two_piece.jpg",
-          "caption": "Plain bearing bore in a two-piece crankcase half",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Plain bearing bore in a two-piece crankcase half"
         },
         {
           "type": "p",
@@ -1318,8 +1302,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/103_engine_compression_testing_2.jpg",
-          "caption": "Screw-in compression gauge with hose and adapters",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Screw-in compression gauge with hose and adapters"
         },
         {
           "type": "steps",
@@ -1378,8 +1361,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/106_leak_down_testing.jpg",
-          "caption": "Leak-down tester kit with two gauges",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Leak-down tester kit with two gauges"
         },
         {
           "type": "check",
@@ -1495,8 +1477,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/113_move_hone_back_forth_cylinder_produce.jpg",
-          "caption": "45 degree cross-hatch pattern in a honed bore",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "45 degree cross-hatch pattern in a honed bore"
         },
         {
           "type": "h3",

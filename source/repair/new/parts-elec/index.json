@@ -1,0 +1,330 @@
+{
+ "parts": [
+  {
+   "id": "contact_points",
+   "name": "Contact breaker points",
+   "category": "ignition",
+   "aliases": [
+    "points",
+    "contact breaker",
+    "CB points",
+    "breaker points"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "air-cooled"
+   ],
+   "repairs": [
+    "contact-points-replace",
+    "points-timing-set",
+    "magneto-points-timing",
+    "condenser-test",
+    "ignition-timing-check",
+    "points-opening-find",
+    "spark-advance-check"
+   ],
+   "problems": [
+    "points-wear-misfire",
+    "weak-spark",
+    "no-spark",
+    "ignition-timing-suspect",
+    "misfire-high-rpm",
+    "hard-cold-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ]
+  },
+  {
+   "id": "condenser",
+   "name": "Ignition condenser",
+   "category": "ignition",
+   "aliases": [
+    "capacitor",
+    "points condenser",
+    "ignition capacitor"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "air-cooled"
+   ],
+   "repairs": [
+    "condenser-test",
+    "contact-points-replace",
+    "points-timing-set",
+    "magneto-points-timing"
+   ],
+   "problems": [
+    "points-wear-misfire",
+    "weak-spark",
+    "no-spark",
+    "misfire-high-rpm"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bat_coil_ign.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ]
+  },
+  {
+   "id": "advance_unit",
+   "name": "Automatic spark advance unit",
+   "category": "ignition",
+   "aliases": [
+    "centrifugal advance",
+    "advance weights",
+    "auto advance",
+    "vacuum advance"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "air-cooled"
+   ],
+   "repairs": [
+    "spark-advance-check",
+    "ignition-timing-check",
+    "points-timing-set",
+    "magneto-points-timing",
+    "flywheel-timing-marks-read",
+    "misfire-light-test"
+   ],
+   "problems": [
+    "ignition-timing-suspect",
+    "misfire-high-rpm",
+    "points-wear-misfire",
+    "kickstart-kickback",
+    "hard-cold-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/ignitiontiming.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ]
+  },
+  {
+   "id": "plug_cap",
+   "name": "Spark plug cap and HT lead",
+   "category": "ignition",
+   "aliases": [
+    "plug cap",
+    "plug boot",
+    "HT lead",
+    "high tension lead",
+    "spark plug wire"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "spark-test",
+    "spark-tester-make",
+    "ignition-coil-test",
+    "spark-plug-service",
+    "misfire-light-test"
+   ],
+   "problems": [
+    "no-spark",
+    "weak-spark",
+    "no-start-after-rain",
+    "misfire-high-rpm",
+    "misfire-ignition-or-fuel",
+    "cranks-no-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cdiignition.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electricaltesting.htm"
+    }
+   ]
+  },
+  {
+   "id": "connectors",
+   "name": "Wire terminals and connectors",
+   "category": "electrical",
+   "aliases": [
+    "terminals",
+    "plugs",
+    "crimp connectors",
+    "ring terminal",
+    "harness connector"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "connector-clean",
+    "wire-crimp-join",
+    "wire-solder-join",
+    "wire-type-choose",
+    "wiring-fault-find",
+    "voltage-drop-test",
+    "wiring-diagram-read",
+    "earth-clean"
+   ],
+   "problems": [
+    "intermittent-electrical",
+    "wet-connectors",
+    "burning-smell-wiring",
+    "regulator-hot",
+    "no-power-key-on",
+    "accessory-wiring-fault",
+    "starter-silent"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wiring_diagram.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/soldering.htm"
+    }
+   ]
+  },
+  {
+   "id": "wire",
+   "name": "Electrical wire",
+   "category": "electrical",
+   "aliases": [
+    "cable",
+    "copper wire",
+    "stranded wire",
+    "primary wire",
+    "battery cable"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "wire-type-choose",
+    "wiring-fault-find",
+    "wire-crimp-join",
+    "wire-solder-join",
+    "test-light-multimeter-use",
+    "short-circuit-find",
+    "accessory-wiring"
+   ],
+   "problems": [
+    "fuse-keeps-blowing",
+    "burning-smell-wiring",
+    "intermittent-electrical",
+    "accessory-wiring-fault",
+    "no-power-key-on",
+    "all-lights-out"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wiring_diagram.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electricaltesting.htm"
+    }
+   ]
+  },
+  {
+   "id": "flywheel",
+   "name": "Flywheel (magnet rotor)",
+   "category": "ignition",
+   "aliases": [
+    "rotor",
+    "magneto flywheel",
+    "alternator rotor",
+    "generator rotor"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "kickstart",
+    "air-cooled",
+    "electric-start"
+   ],
+   "repairs": [
+    "flywheel-remove",
+    "alternator-rotor-check",
+    "stator-test",
+    "magneto-points-timing",
+    "flywheel-timing-marks-read",
+    "pickup-test"
+   ],
+   "problems": [
+    "no-spark",
+    "weak-spark",
+    "not-charging",
+    "kickstart-kickback",
+    "starter-spins-freely"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cdiignition.htm"
+    }
+   ]
+  },
+  {
+   "id": "starter_brushes",
+   "name": "Starter motor brushes",
+   "category": "electrical",
+   "aliases": [
+    "carbon brushes",
+    "starter brush set",
+    "brush holder"
+   ],
+   "applies_to": [
+    "electric-start"
+   ],
+   "repairs": [
+    "starter-armature-test",
+    "starter-motor-service",
+    "starter-circuit-test",
+    "starter-remove-refit",
+    "starter-relay-test"
+   ],
+   "problems": [
+    "slow-cranking",
+    "starter-clicks",
+    "starter-silent",
+    "starter-grinding",
+    "starter-keeps-running"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ]
+  }
+ ]
+}

@@ -28,8 +28,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/121_i_will_try_add_more_time.jpg",
-          "caption": "Centrifugal clutch parts: weights, sprag and outer housing",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Centrifugal clutch parts: weights, sprag and outer housing"
         },
         {
           "type": "keys",
@@ -67,8 +66,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/120_centrifugal_clutch_shoes.jpg",
-          "caption": "Centrifugal clutch shoes, as used on step-throughs and scooters: they fly out and grip the drum as engine speed rises.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Centrifugal clutch shoes, as used on step-throughs and scooters: they fly out and grip the drum as engine speed rises."
         },
         {
           "type": "engine",
@@ -138,14 +136,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/118_clutches_basically_round_baskets_filled_alternating.jpg",
-          "caption": "Clutch engaged and disengaged by the lever",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Clutch engaged and disengaged by the lever"
         },
         {
           "type": "photo",
           "src": "repair-photos/118_some_activate_clutch_cover_some_use.jpg",
-          "caption": "Cable-operated clutch release, shown in section",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Cable-operated clutch release, shown in section"
         },
         {
           "type": "h3",
@@ -327,8 +323,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/115_broken_teeth.jpg",
-          "caption": "Broken gear teeth: what shock loads and missed shifts do to a constant-mesh gearbox.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Broken gear teeth: what shock loads and missed shifts do to a constant-mesh gearbox."
         },
         {
           "type": "engine",
@@ -353,8 +348,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/115_vertically_split.jpg",
-          "caption": "Vertically split crankcase with gears in place",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Vertically split crankcase with gears in place"
         },
         {
           "type": "h3",
@@ -393,8 +387,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/115_drum_shifters_drum_slider_forks_shaft.jpg",
-          "caption": "Shift drum with shift forks",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Shift drum with shift forks"
         },
         {
           "type": "keys",
@@ -423,8 +416,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/115_gear_shifters.jpg",
-          "caption": "Gear shift shaft on a modern engine",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Gear shift shaft on a modern engine"
         },
         {
           "type": "check",
@@ -529,14 +521,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/148_now_good_time_look_any_chain.jpg",
-          "caption": "Chain breaker on the rear chain",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Chain breaker on the rear chain"
         },
         {
           "type": "photo",
           "src": "repair-photos/148_special_grooves.jpg",
-          "caption": "X-ring chain cutaway showing sealing rings",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "X-ring chain cutaway showing sealing rings"
         },
         {
           "type": "p",
@@ -639,8 +629,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/148_big_nut_lock_washer.jpg",
-          "caption": "Front sprocket nut with bent lock tab",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Front sprocket nut with bent lock tab"
         },
         {
           "type": "steps",
@@ -700,8 +689,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/120_automatic_clutch.jpg",
-          "caption": "Scooter belt drive in low and high ratio",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Scooter belt drive in low and high ratio"
         },
         {
           "type": "plate",
@@ -892,8 +880,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/143_align_front_wheel_2.jpg",
-          "caption": "Loosened fork bolts while aligning the front wheel",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Loosened fork bolts while aligning the front wheel"
         },
         {
           "type": "figure",
@@ -975,8 +962,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/141_helps_lube_seal_really_good_grease.jpg",
-          "caption": "Driving a fork seal home with a socket",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Driving a fork seal home with a socket"
         },
         {
           "type": "model",
@@ -990,8 +976,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/141_screw_driver.jpg",
-          "caption": "Prising out a fork seal with a screwdriver",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Prising out a fork seal with a screwdriver"
         },
         {
           "type": "p",
@@ -1197,8 +1182,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/147_spoke_tightening_pattern.jpg",
-          "caption": "Spoke tightening pattern: work round the wheel in small, even steps so the rim stays true.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Spoke tightening pattern: work round the wheel in small, even steps so the rim stays true."
         },
         {
           "type": "plate",
@@ -1254,8 +1238,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/149_bearing_spacer_2.jpg",
-          "caption": "Driving a wheel bearing out with a drift",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Driving a wheel bearing out with a drift"
         },
         {
           "type": "h3",
@@ -1264,8 +1247,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/147_but_if_only_doing_one_wheel.jpg",
-          "caption": "Dial gauge reading rim run-out",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Dial gauge reading rim run-out"
         },
         {
           "type": "plate",
@@ -1445,14 +1427,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/140_twin_dual_leading_shoe.jpg",
-          "caption": "Twin leading shoe drum brake layout",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Twin leading shoe drum brake layout"
         },
         {
           "type": "photo",
           "src": "repair-photos/138_pads_worn_different_rates.jpg",
-          "caption": "Disc brake pad worn unevenly",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Disc brake pad worn unevenly"
         },
         {
           "type": "p",
@@ -1461,8 +1441,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/140_single_leading_shoe.jpg",
-          "caption": "Single leading shoe drum brake layout",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Single leading shoe drum brake layout"
         },
         {
           "type": "plate",

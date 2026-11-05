@@ -594,14 +594,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/021_low_tension_magneto.jpg",
-          "caption": "Low-tension magneto with a separate ignition coil",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Low-tension magneto with a separate ignition coil"
         },
         {
           "type": "photo",
           "src": "repair-photos/090_electronic_ignition.jpg",
-          "caption": "Source and trigger coils of an electronic ignition",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Source and trigger coils of an electronic ignition"
         },
         {
           "type": "p",
@@ -610,8 +608,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/021_find_out_what.jpg",
-          "caption": "Flywheel magneto with the flywheel fitted",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Flywheel magneto with the flywheel fitted"
         },
         {
           "type": "figure",
@@ -700,14 +697,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/088_centrifugal_advance.jpg",
-          "caption": "Centrifugal advance weights and springs on the points cam",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Centrifugal advance weights and springs on the points cam"
         },
         {
           "type": "photo",
           "src": "repair-photos/088_points_condenser_cdi_box.jpg",
-          "caption": "Points, condenser and CDI box side by side",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Points, condenser and CDI box side by side"
         },
         {
           "type": "plate",
@@ -717,14 +712,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/090_trigger_source_coils.jpg",
-          "caption": "Source and trigger coils under a flywheel magneto: the source coil charges the CDI, the trigger coil tells it when to fire.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Source and trigger coils under a flywheel magneto: the source coil charges the CDI, the trigger coil tells it when to fire."
         },
         {
           "type": "photo",
           "src": "repair-photos/091_centrifugal_advance.jpg",
-          "caption": "Centrifugal advance unit: weights fly out as rpm rises and turn the trigger earlier, so the spark fires further before top dead centre. Most engines reach full advance by about 3,000 rpm.",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Centrifugal advance unit: weights fly out as rpm rises and turn the trigger earlier, so the spark fires further before top dead centre. Most engines reach full advance by about 3,000 rpm."
         },
         {
           "type": "wiring",
@@ -861,14 +854,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/095_indeed_armour_light.jpg",
-          "caption": "Battery state of charge compared with volts and gravity",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Battery state of charge compared with volts and gravity"
         },
         {
           "type": "photo",
           "src": "repair-photos/095_batteries_junk_anyway_but_might_get.jpg",
-          "caption": "Small pencil hydrometer for a motorcycle battery",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Small pencil hydrometer for a motorcycle battery"
         },
         {
           "type": "keys",
@@ -1042,8 +1033,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/099_electric_starters_2.jpg",
-          "caption": "Two starter motors",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Two starter motors"
         },
         {
           "type": "steps",
@@ -1103,8 +1093,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/086_ground_wire_ground_frame_2.jpg",
-          "caption": "Power source, hot wire, load and ground shown with a lamp",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Power source, hot wire, load and ground shown with a lamp"
         },
         {
           "type": "keys",
@@ -1138,8 +1127,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/086_solid_wire.jpg",
-          "caption": "Stranded wire used for heavy 12 V cables",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Stranded wire used for heavy 12 V cables"
         },
         {
           "type": "models",
@@ -1201,8 +1189,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/086_do_have_one_right.jpg",
-          "caption": "Connector block on a bike wiring harness",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Connector block on a bike wiring harness"
         },
         {
           "type": "p",
@@ -1301,14 +1288,12 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/086_now_we_start_testing_2.jpg",
-          "caption": "Multimeter used to trace a fault",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Multimeter used to trace a fault"
         },
         {
           "type": "photo",
           "src": "repair-photos/099_reverse.jpg",
-          "caption": "Rectifier checked with reversed meter leads",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Rectifier checked with reversed meter leads"
         },
         {
           "type": "table",
@@ -1442,8 +1427,7 @@ export default {
         {
           "type": "photo",
           "src": "repair-photos/099_ignition_coils.jpg",
-          "caption": "Testing an ignition coil with a meter",
-          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+          "caption": "Testing an ignition coil with a meter"
         },
         {
           "type": "h3",
