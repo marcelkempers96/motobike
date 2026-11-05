@@ -90,6 +90,7 @@ try:
 except Exception: pass
 def part_img(pid):
   if pid in SHOP and SHOP[pid] in SP: return SP[SHOP[pid]]['src'], SP[SHOP[pid]]
+  if os.path.exists(os.path.join(ROOT, 'assets/parts-svg', pid + '.svg')): return f'assets/parts-svg/{pid}.svg', None
   return 'assets/' + IMG.get(pid, 'renders/engine_4t.webp'), None
 for v in IMG.values(): assert os.path.exists(os.path.join(ROOT, 'assets', v)), v
 

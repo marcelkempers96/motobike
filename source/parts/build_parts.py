@@ -92,6 +92,14 @@ def load_photos():
   # people or trademarks flagged by Commons: keep them, but never as the first (hero) photo
   for pid, lst in PHOTOS.items(): lst.sort(key=lambda x: x['restricted'])
 load_photos()
+SVG_OF = {'chain-sprocket-kit': 'chain', 'drive-belt': 'cvt_belt', 'roller-weights': 'cvt_rollers', 'cvt-clutch-shoes': 'cvt_clutch', 'gear-oil': 'gear_oil',
+  'clutch-plates': 'clutch_plates', 'brake-pads': 'brake_pads', 'brake-shoes': 'drum_brake', 'brake-disc': 'brake_disc', 'spark-plug': 'spark_plug', 'air-filter': 'air_filter',
+  'oil-filter': 'oil_filter', 'engine-oil': 'engine_oil', 'battery': 'battery', 'tyres': 'rear_tyre', 'clutch-cable': 'clutch_cable', 'throttle-cable': 'throttle_cable',
+  'levers': 'levers', 'mirrors': 'mirrors', 'headlight': 'headlight', 'fork-seals': 'fork_seals', 'rear-shock': 'rear_shock', 'wheel-bearings': 'wheel_bearing',
+  'regulator-rectifier': 'regulator', 'final-drive-belt': 'cvt_belt', 'final-drive-oil': 'gear_oil', 'ev-controller': 'controller', 'ev-charger': 'charger'}
+for _k, _v in SVG_OF.items():
+  if _k in P and os.path.exists(os.path.join(ROOT, 'assets/parts-svg', _v + '.svg')):
+    P[_k] = P[_k][:3] + (f'assets/parts-svg/{_v}.svg',)
 def hero_src(pid): return PHOTOS[pid][0]['src'] if PHOTOS.get(pid) else P[pid][3]
 
 # Shops by market (from the Shops sheet). Marketplaces with per-page search links
@@ -207,7 +215,7 @@ def img(pid, alt, cls='sp-img'):
     cap = f'<figcaption>Typical {e(lc_part(PARTS[pid]))}, not the exact part for every model. Photo: {e(ph["author"])}, <a href="{e(ph["page"])}" target="_blank" rel="noopener">{e(ph["licence"])} via Wikimedia Commons</a></figcaption>' if cls == 'sp-img' else ''
     return f'<figure class="{cls}"><img src="{{R}}{ph["src"]}" alt="{e(alt or ph["alt"])}" title="{e(ph["credit"])}" loading="lazy">{cap}</figure>'
   src = P[pid][3]
-  tag = '<span class="sp-imgtag">Photo</span>' if src in REAL else ('<span class="sp-imgtag">Plate</span>' if '/illustrations/' in src else '<span class="sp-imgtag">3D render</span>')
+  tag = '<span class="sp-imgtag">Photo</span>' if src in REAL else ('<span class="sp-imgtag">Illustration</span>' if '/parts-svg/' in src else '<span class="sp-imgtag">Plate</span>' if '/illustrations/' in src else '<span class="sp-imgtag">3D render</span>')
   return f'<figure class="{cls}"><img src="{{R}}{src}" alt="{e(alt)}" loading="lazy">{tag}</figure>'
 
 def gallery(pid):
