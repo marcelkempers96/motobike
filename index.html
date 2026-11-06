@@ -102,6 +102,7 @@
     .hm-modules { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
     .hm-mod { display: flex; flex-direction: column; border: 1px solid var(--line); text-decoration: none; color: var(--ink-soft); background: #FFF; }
     .hm-mod img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .hm-mod img.is-plate { object-fit: contain; background: #FFFFFF; padding: 6px; box-sizing: border-box; }
     .hm-mod div { padding: 14px 16px 16px; }
     .hm-mod b { font: 900 13px/1 var(--sans); color: var(--warm); }
     .hm-mod h3 { font-size: 18px; line-height: 1.25; margin: 6px 0 6px; }
@@ -250,7 +251,7 @@
         <h2>The course: from how it works to how to fix it</h2>
         <p class="hm-lead">Five modules, 32 chapters, each with pictures, animations and a quick check.</p>
         <div class="hm-modules">
-          <a class="hm-mod" href="learn/#foundations"><img src="assets/photos/honda-air-cooled.jpg" alt="" loading="lazy"><div><b>01</b><h3>Foundations</h3><p>Anatomy, physics, workshop.</p></div></a>
+          <a class="hm-mod" href="learn/#foundations"><img class="is-plate" src="assets/photos/home-mod-anatomy.webp" alt="Anatomy of a motorcycle: the principal parts, labelled" loading="lazy"><div><b>01</b><h3>Foundations</h3><p>Anatomy, physics, workshop.</p></div></a>
           <a class="hm-mod" href="learn/#engine"><img src="assets/photos/triumph-engine.jpg" alt="" loading="lazy"><div><b>02</b><h3>The engine</h3><p>Four-stroke and two-stroke.</p></div></a>
           <a class="hm-mod" href="learn/#fuel-ignition"><img src="assets/photos/vintage-timing-cover.jpg" alt="" loading="lazy"><div><b>03</b><h3>Fuel, ignition, electrics</h3><p>Mixture, ignition, wiring.</p></div></a>
           <a class="hm-mod" href="learn/#drivetrain-chassis"><img src="assets/photos/honda-cb650r-engine.jpg" alt="" loading="lazy"><div><b>04</b><h3>Drivetrain and chassis</h3><p>Clutch to brakes.</p></div></a>

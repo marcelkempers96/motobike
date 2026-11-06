@@ -10,7 +10,7 @@ const MAIN = ['.r-main', '.sp-main', 'main', 'article', '.ute-page'];
 const SKIP = 'nav, header.ute-top, footer, script, style, noscript, button, select, input, textarea, svg, canvas, .mzc, .mz-signup, .r-crumb, .sp-crumb, .r-photos, figure, .mz-listen, [aria-hidden="true"], .r-search, .bk-filter, .r-jump, details.rsrc, .mz3d, .ute-modal, .mz-gate';
 const BLOCKS = 'h1, h2, h3, h4, p, li, td, th, dt, dd, blockquote, figcaption';
 const SPEEDS = [0.85, 1, 1.15, 1.3];
-let queue = [], idx = 0, state = 'idle', rate = 1, box = null, current = null;
+let queue = [], idx = 0, state = 'idle', rate = 1, box = null, current = null, started = false;
 
 function lang() {
   const l = (document.documentElement.getAttribute('lang') || 'en').toLowerCase();
@@ -57,17 +57,29 @@ function speakNext() {
   const [el, text] = queue[idx];
   mark(el);
   const u = new SpeechSynthesisUtterance(text);
+  window.__mzUtter = u;   // keep a reference: Chrome drops events of collected utterances and stops reading
   const v = bestVoice();
-  if (v) { u.voice = v; u.lang = v.lang; } else u.lang = lang();
+  u.lang = v ? v.lang : lang();
+  try { if (v) u.voice = v; } catch (e) { /* keep the language only */ }
   u.rate = rate;
+  u.onstart = () => { started = true; };
   u.onend = () => { if (state === 'playing') { idx += 1; speakNext(); } };
   u.onerror = () => { if (state === 'playing') { idx += 1; speakNext(); } };
+  if (synth.paused) synth.resume();
   synth.speak(u);
 }
 function play() {
   if (state === 'paused') { state = 'playing'; synth.resume(); ui(); return; }
-  synth.cancel();
-  queue = collect(); idx = 0; state = 'playing'; ui(); speakNext();
+  // cancelling right before speaking makes Chrome drop the new speech, so only cancel when needed
+  if (synth.speaking || synth.pending) synth.cancel();
+  queue = collect(); idx = 0; state = 'playing'; started = false; ui(); speakNext();
+  setTimeout(() => {
+    if (state === 'playing' && !started && !synth.speaking) {
+      stop();
+      const m = box && box.querySelector('.mz-listen-msg');
+      if (m) m.textContent = 'This browser has no voice it can use. Try Chrome, Edge or Safari, or add a voice in your device settings.';
+    }
+  }, 3500);
 }
 function pause() { if (state !== 'playing') return; state = 'paused'; synth.pause(); ui(); }
 function stop() { state = 'idle'; synth.cancel(); mark(null); ui(); }
@@ -82,24 +94,27 @@ function ui() {
 function mount() {
   if (!synth || document.querySelector('.mz-listen') || document.documentElement.classList.contains('mz-embed')) return;
   if (box && !box.isConnected) { stop(); box = null; }
-  if (/^\/(account|privacy|terms|cookies)\//.test(location.pathname)) return;
+  // Only where reading aloud helps: repair guides (problems, repairs, parts, systems, bikes) and the course.
+  const path = location.pathname.replace(/index\.html$/, '');
+  if (!/\/(repair\/(problems|repairs|parts|systems|bikes)\/.+|learn\/|crash-course\/)$/.test(path)) return;
   const h1 = document.querySelector('.r-main h1, .sp-main h1, main h1, .ute-hero h1, h1') || document.querySelector('main h2, .ute-chapter h2');
   if (!h1) return;
   box = document.createElement('div');
   box.className = 'mz-listen';
   box.innerHTML = `<button type="button" class="mz-listen-play" aria-pressed="false"><span aria-hidden="true">🔊</span> Listen to this page</button>
     <button type="button" class="mz-listen-stop" hidden>Stop</button>
-    <button type="button" class="mz-listen-rate" hidden title="Reading speed">1×</button>`;
+    <button type="button" class="mz-listen-rate" hidden title="Reading speed">1×</button>
+    <span class="mz-listen-msg" aria-live="polite"></span>`;
   h1.insertAdjacentElement('afterend', box);
   box.querySelector('.mz-listen-play').addEventListener('click', () => (state === 'playing' ? pause() : play()));
   box.querySelector('.mz-listen-stop').addEventListener('click', stop);
   const rb = box.querySelector('.mz-listen-rate');
   rb.addEventListener('click', () => {
     rate = SPEEDS[(SPEEDS.indexOf(rate) + 1) % SPEEDS.length]; rb.textContent = rate + '×';
-    if (state === 'playing') { synth.cancel(); speakNext(); }
+    if (state === 'playing') { state = 'switching'; synth.cancel(); setTimeout(() => { state = 'playing'; speakNext(); }, 150); }
   });
   synth.getVoices();
-  if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = () => {};
+  try { synth.addEventListener('voiceschanged', () => synth.getVoices()); } catch (e) { /* older browsers */ }
   addEventListener('pagehide', () => synth.cancel());
   ui();
 }

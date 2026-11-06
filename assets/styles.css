@@ -1255,3 +1255,5 @@ font[style] { background: none !important; box-shadow: none !important; }
 .mz-yt-info span { color: var(--mute); font-size: 13px; }
 .mz-yt-info p { margin: 6px 0 0; color: var(--ink-soft); }
 .mz-yt-role { display: inline-block; font: 700 11px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--warm); margin-bottom: 4px; }
+
+.mz-listen-msg { font-size: 13.5px; color: var(--mute); }
