@@ -198,6 +198,7 @@ def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
     <p class="sp-crumb">{crumb_html}</p>
 {body.replace('{R}', rel)}
   </main>
+  {'<section data-mz-signup data-title="Get new spare-parts guides by email"></section>' if path in ('/parts/', 'parts/') or path.count('/') <= 3 else ''}
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="{rel}assets/site.js"></script>

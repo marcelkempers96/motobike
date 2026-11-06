@@ -98,3 +98,15 @@ on conflict (slug) do nothing;
 
 -- To make yourself an admin (can hide or delete any comment), after you have signed up once:
 --   update public.profiles set is_admin = true where id = (select id from auth.users where email = 'you@example.com');
+
+-- 7. Email sign-ups from the "Get updates" boxes. Visitors can add an address; nobody can read
+--    the list through the website. Read or export it in the Table Editor (subscribers > Export CSV).
+create table if not exists public.subscribers (
+  id bigint generated always as identity primary key,
+  email text not null unique check (email ~* '^[^@\s]+@[^@\s]+\.[^@\s]+$' and char_length(email) <= 254),
+  source text check (char_length(source) <= 300),
+  created_at timestamptz not null default now()
+);
+alter table public.subscribers enable row level security;
+drop policy if exists "anyone can subscribe" on public.subscribers;
+create policy "anyone can subscribe" on public.subscribers for insert to anon, authenticated with check (true);

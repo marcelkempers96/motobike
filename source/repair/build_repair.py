@@ -285,6 +285,7 @@ def partcard(i, rel):
   p = PART[i]; src = part_thumb(i)
   return f'<div class="rpc"><a class="rpc-main" href="{rel}repair/parts/{i}/"><span class="rpc-img{' is-photo' if src.endswith(('.jpg', '.jpeg', '.webp')) and '/renders/' not in src else ''}"><img src="{rel}{src}" alt="" loading="lazy"></span><b>{e(p["name"])}</b></a><a class="rpc-shop" href="{rel}{shop_url(i)}">Find this part</a></div>'
 
+SIGNUP = {p: '<section data-mz-signup data-title="Get new repair guides by email"></section>' for p in ('repair/', 'repair/problems/', 'repair/repairs/', 'repair/parts/', 'repair/bikes/', 'repair/diagnose/')}
 SEO = {
   'repair/': ('Motorcycle Troubleshooting & Repair Guides | Moto Zero', 'Motorcycle troubleshooting and repair guides', None),
   'repair/parts/': ('Motorcycle Parts: Names & Functions | Moto Zero', 'Motorcycle parts: names, functions and common faults', 'Explore motorcycle parts by system. Learn what each part does, signs of failure and the related diagnostic and repair guides.'),
@@ -326,6 +327,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
     <p class="r-crumb">{cr}</p>
 {body}
   </main>
+  {SIGNUP.get(path, '')}
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="{rel}assets/site.js"></script>
@@ -376,7 +378,7 @@ for i, p in PROB.items():
       <p class="r-meta"><i class="ru is-{u[1]}">{u[0]}</i>{f'<span>Also called: {e(also)}</span>' if also else ''}</p>
     </header>
     <div class="r-grid">
-      <article class="r-body is-problem">{photos_html('problems', i, rel, 4)}{body}</article>
+      <article class="r-body is-problem">{photos_html('problems', i, rel, 6)}{body}</article>
       <aside class="r-side">
         {f'<section><h2>Repairs for this problem</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}
         {f'<section><h2>Parts you may need</h2><div class="rpcs">{parts}</div></section>' if parts else ''}

@@ -11,6 +11,8 @@ const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split(
    sign-ups directly; while it is empty the form opens an email to the team instead. */
 export const SUBSCRIBE_ENDPOINT = '';
 const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './community-config.js';
+import './gate.js';
 
 export const MAIN = [['overview/', 'Overview']];
 export const NAV = [
@@ -113,6 +115,17 @@ function wireSubscribe(form) {
     e.preventDefault();
     const email = form.email.value.trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please enter a valid email address.'; return; }
+    if (!SUBSCRIBE_ENDPOINT && SUPABASE_URL && SUPABASE_ANON_KEY) {
+      // Save the address in the Supabase subscribers table (insert-only for visitors, see docs/supabase.sql)
+      msg.textContent = 'Sending…';
+      try {
+        const r = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, { method: 'POST', headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+          body: JSON.stringify({ email, source: location.pathname }) });
+        msg.textContent = r.ok || r.status === 409 ? 'Thank you. You are on the list.' : 'That did not work. Please try again later.';
+        if (r.ok || r.status === 409) form.reset();
+      } catch (err) { msg.textContent = 'That did not work. Please check your connection.'; }
+      return;
+    }
     if (!SUBSCRIBE_ENDPOINT) {
       location.href = `mailto:${SUBSCRIBE_MAILTO}?subject=${encodeURIComponent('Subscribe me to Moto Zero updates')}&body=${encodeURIComponent('Please add ' + email + ' to the Moto Zero update list.')}`;
       msg.textContent = 'Your email app should open with the request ready to send.';
@@ -161,6 +174,18 @@ export function mountSite(root = document) {
     nav.setAttribute('aria-label', 'Site');
     nav.innerHTML = navHTML();
     wireNav(nav);
+  });
+  root.querySelectorAll('[data-mz-signup]').forEach((b) => {
+    if (b.dataset.mounted) return;
+    b.dataset.mounted = '1';
+    b.classList.add('mz-signup');
+    const t = b.dataset.title || 'Get new repair guides, bikes and tools by email';
+    b.innerHTML = `<form class="mz-sub is-band" novalidate>
+      <div><h4>${t}</h4><p>${b.dataset.text || 'New course modules, step-by-step repairs and interactive tools. Free, at most one email a month, unsubscribe any time.'}</p></div>
+      <div class="mz-sub-row"><label class="mz-sub-l" for="mz-sub-b${Math.random().toString(36).slice(2, 7)}">Email address</label><input type="email" name="email" placeholder="you@example.com" autocomplete="email" required><button type="submit">Subscribe</button></div>
+      <p class="mz-sub-msg" aria-live="polite"></p></form>`;
+    const lab = b.querySelector('label'), inp = b.querySelector('input'); inp.id = lab.htmlFor;
+    wireSubscribe(b.querySelector('form'));
   });
   root.querySelectorAll('[data-mz-footer]').forEach((f) => {
     if (f.dataset.mounted) return;

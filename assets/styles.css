@@ -1202,3 +1202,20 @@ a.mz-anim-btn { text-decoration: none; display: inline-flex; align-items: center
 .mzc-meta b { color: var(--ink); }
 .mzc-del { margin-left: auto; background: none; border: 0; color: var(--mute); text-decoration: underline; cursor: pointer; font-size: 13px; }
 @media (max-width: 720px) { .mzc-in { padding: 32px 16px 40px; gap: 26px; } }
+
+/* Sign-up band (data-mz-signup) on the home page and key pages */
+.mz-signup { display: block; padding: 0 40px; margin: 48px 0; }
+.mz-signup .mz-sub { box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 520px); gap: 8px 48px; align-items: center; max-width: 1160px; margin: 0 auto; padding: 32px 36px; background: #FFF4EC; border: 1.5px solid var(--warm); cursor: default; font-size: inherit; color: inherit; }
+.mz-signup .mz-sub:hover { background: #FFF4EC; color: inherit; }
+@media (max-width: 800px) { .mz-signup { padding: 0 16px; margin: 36px 0; } .mz-signup .mz-sub { grid-template-columns: 1fr; padding: 22px 18px; } .mz-signup .mz-sub .mz-sub-msg { grid-column: 1; } }
+/* Download sign-up dialog (assets/gate.js) */
+.mz-gate { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 16px; }
+.mz-gate.is-open { display: flex; }
+.mz-gate-box { background: #FFF; max-width: 480px; width: 100%; padding: 28px 28px 22px; border-top: 4px solid var(--warm); }
+.mz-gate-box h2 { margin: 0 0 10px; font-size: 22px; }
+.mz-gate-box p { margin: 0 0 12px; line-height: 1.55; }
+.mz-gate-what { font-size: 14px; color: var(--mute); word-break: break-all; }
+.mz-gate-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.mz-gate-go { padding: 12px 16px; background: var(--ink); color: #FFF; text-decoration: none; font: 700 15px/1 var(--sans); }
+.mz-gate-go:hover { background: var(--warm); }
+.mz-gate-no { padding: 12px 16px; background: #FFF; border: 1px solid var(--line); font: 600 15px/1 var(--sans); cursor: pointer; }
