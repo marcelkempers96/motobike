@@ -91,8 +91,17 @@ export function navHTML() {
           </div>
         </div>`).join('')}
       ${pickerHTML('mz-lang-sel')}
-      ${/\/(overview|cockpit)\/$/.test(location.pathname) ? '' : `<a class="mz-menu-cta" href="${url('progress/')}">My progress</a>`}
+      ${/\/(overview|cockpit)\/$/.test(location.pathname) ? '' : ctaHTML()}
     </div>`;
+}
+
+// Signed-in visitors see their account (admins: "Admin"); others see My progress and Sign in.
+function ctaHTML() {
+  let role = '';
+  try { role = localStorage.getItem('mz-role') || ''; if (role && !Object.keys(localStorage).some((k) => /^sb-.*-auth-token$/.test(k))) role = ''; } catch (e) { /* noop */ }
+  if (role === 'admin') return `<a class="mz-menu-cta is-admin" href="${url('account/')}#admin">Admin</a>`;
+  if (role === 'user') return `<a class="mz-menu-cta" href="${url('account/')}">My account</a>`;
+  return `<a class="mz-menu-cta" href="${url('progress/')}">My progress</a>`;
 }
 
 export function footerHTML() {

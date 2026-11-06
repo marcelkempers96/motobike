@@ -31,6 +31,38 @@
 .mza ul.mine small { color: var(--mute); display: block; }
 .mza-member { border-left: 3px solid var(--warm); padding: 12px 16px; margin: 12px 0; background: #FFF; }
 .mza-member h3 { margin: 0 0 6px; font-size: 18px; }
+
+.mza { max-width: 1100px; }
+.mza-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 22px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+.mza-tabs a { padding: 9px 13px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); font: 700 14px/1 var(--sans); background: #FFF; }
+.mza-tabs a.is-on { background: var(--ink); color: #FFF; border-color: var(--ink); }
+.mza-tabs a.is-admin { border-color: var(--warm); color: var(--warm); }
+.mza-tabs a.is-admin.is-on { background: var(--warm); color: #FFF; }
+.mza-tabs i { font-style: normal; background: var(--warm); color: #FFF; border-radius: 9px; padding: 1px 6px; margin-left: 4px; font-size: 12px; }
+.mza-head { display: flex; gap: 16px; align-items: center; margin-bottom: 18px; }
+.mza-av { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: #EEE; flex: none; display: flex; align-items: center; justify-content: center; font: 700 24px var(--sans); color: var(--mute); }
+.mza-role { display: inline-block; font: 700 12px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; background: var(--warm); color: #FFF; margin-left: 6px; vertical-align: middle; }
+.mza-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border: 1px solid var(--line); background: #FFF; margin-bottom: 20px; }
+.mza-stats div { padding: 14px 16px; border-right: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.mza-stats span { display: block; font: 700 12px/1.2 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--mute); }
+.mza-stats b { display: block; font: 700 30px/1.1 var(--sans); margin-top: 4px; }
+.mza-gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.mza-gal figure { margin: 0; border: 1px solid var(--line); background: #FFF; }
+.mza-gal img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.mza-gal figcaption { font-size: 13px; padding: 6px 8px; color: var(--mute); }
+.mza-thread { border: 1px solid var(--line); background: #FFF; padding: 12px; max-height: 420px; overflow: auto; margin-bottom: 10px; }
+.mza-msg { max-width: 80%; padding: 9px 12px; margin: 6px 0; background: #F2F2EE; font-size: 15px; line-height: 1.45; }
+.mza-msg.is-team { background: #FFF1E6; margin-left: auto; }
+.mza-msg small { display: block; color: var(--mute); font-size: 12px; margin-top: 3px; }
+.mza textarea { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--ink); font: 15px/1.5 var(--sans); }
+.mza table { border-collapse: collapse; width: 100%; font-size: 14px; background: #FFF; }
+.mza th, .mza td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+.mza td button { padding: 5px 9px; font-size: 13px; }
+.mza-two { display: grid; grid-template-columns: 260px 1fr; gap: 16px; }
+.mza-two ul { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); background: #FFF; max-height: 460px; overflow: auto; }
+.mza-two li { padding: 10px 12px; border-bottom: 1px solid var(--line-soft); cursor: pointer; font-size: 14px; }
+.mza-two li.is-on { background: #FFF1E6; }
+@media (max-width: 760px) { .mza-two { grid-template-columns: 1fr; } }
 @media (max-width: 720px) { .ute-hero { padding: 40px 16px 28px; } .mza { padding: 28px 16px; } }
   </style>
 </head>
@@ -53,45 +85,191 @@
 </div>
 <script type="module" src="../assets/site.js"></script>
 <script type="module">
-import { supabase, syncProgress } from '../assets/community.js';
+import { supabase, syncProgress, photoURL } from '../assets/community.js';
+import { MODULES } from '../assets/content/index.js';
+import { summary, load as loadProgress } from '../assets/progress.js';
 const box = document.getElementById('mza');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const day = (d) => new Date(d).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+const TEAM = 'https://formsubmit.co/ajax/marcel@transitionslab.org';
 const next = new URLSearchParams(location.search).get('next');
+const setRole = (r) => { try { if (r) localStorage.setItem('mz-role', r); else localStorage.removeItem('mz-role'); } catch (e) { /* noop */ } };
 const sb = await supabase();
 const hashErr = new URLSearchParams(location.hash.slice(1)).get('error_description');
 if (hashErr) box.insertAdjacentHTML('beforebegin', `<p class="msg" style="padding:0 40px">${esc(hashErr)}. Ask for a new link below.</p>`);
+let ME = null, PROF = null, ADMIN = false;
 if (!sb) {
   box.innerHTML = `<div class="mza-card"><h2>Accounts are coming soon</h2><p>Your course progress is saved in this browser in the meantime: see <a href="../progress/">My progress</a>.</p></div>`;
 } else {
-  sb.auth.onAuthStateChange((ev) => { if (ev === 'SIGNED_IN' || ev === 'SIGNED_OUT') show(); });
-  show();
+  sb.auth.onAuthStateChange((ev) => { if (ev === 'SIGNED_IN' || ev === 'SIGNED_OUT') start(); });
+  start();
 }
-async function show() {
+async function start() {
   const { data: { session } } = await sb.auth.getSession();
-  if (!session) return signInView();
-  const me = session.user;
+  if (!session) { setRole(''); return signInView(); }
+  ME = session.user;
   if (next && sessionStorage.getItem('mz-next-done') !== next) { sessionStorage.setItem('mz-next-done', next); location.href = next; return; }
   syncProgress();
-  const [{ data: prof }, { data: mine }, { data: members }] = await Promise.all([
-    sb.from('profiles').select('display_name').eq('id', me.id).maybeSingle(),
-    sb.from('comments').select('id, page, body, created_at').eq('user_id', me.id).order('created_at', { ascending: false }).limit(50),
-    sb.from('member_content').select('slug, title, body_html, file_url').order('sort'),
-  ]);
-  box.innerHTML = `
-    <div class="mza-card"><h2>Signed in</h2><p>${esc(me.email)}</p>
-      <form id="f-name"><label for="dn">Name shown with your comments</label><input id="dn" type="text" maxlength="40" value="${esc(prof ? prof.display_name : '')}">
-      <div class="row"><button type="submit">Save name</button><button type="button" class="is-light" id="out">Sign out</button></div><p class="msg" id="m-name"></p></form></div>
-    <h2>Course progress</h2><p>Your progress is saved to your account and kept in step on every device you sign in on. <a href="../progress/">See my progress →</a></p>
-    <h2>Members-only</h2>${(members || []).map((m) => `<div class="mza-member"><h3>${esc(m.title)}</h3>${m.body_html}${m.file_url ? `<p><a class="btn" href="${esc(m.file_url)}">Download</a></p>` : ''}</div>`).join('') || '<p>Nothing here yet.</p>'}
-    <h2>Your comments</h2>${mine && mine.length ? `<ul class="mine">${mine.map((c) => `<li><a href="${esc(c.page)}#comments">${esc(c.page)}</a><small>${new Date(c.created_at).toLocaleDateString()}</small>${esc(c.body.slice(0, 160))}</li>`).join('')}</ul>` : '<p>No comments yet. Every repair, part, problem, bike and tool page has a comments section at the bottom.</p>'}`;
-  document.getElementById('out').onclick = async () => { await sb.auth.signOut(); };
-  document.getElementById('f-name').onsubmit = async (e) => {
-    e.preventDefault();
-    const v = document.getElementById('dn').value.trim();
-    const { error } = await sb.from('profiles').update({ display_name: v || 'Rider' }).eq('id', me.id);
-    document.getElementById('m-name').textContent = error ? 'Could not save: ' + error.message : 'Saved.';
-  };
+  const { data } = await sb.from('profiles').select('display_name, is_admin, avatar_path, bio, country').eq('id', ME.id).maybeSingle();
+  PROF = data || { display_name: ME.email.split('@')[0] };
+  ADMIN = !!(data && data.is_admin);
+  setRole(ADMIN ? 'admin' : 'user');
+  document.querySelectorAll('.mz-menu-cta').forEach((a) => { a.textContent = ADMIN ? 'Admin' : 'My account'; a.href = ADMIN ? '#admin' : '#overview'; a.classList.toggle('is-admin', ADMIN); });
+  document.querySelector('.ute-hero h1').textContent = ADMIN ? 'Admin dashboard' : 'Your dashboard';
+  document.querySelector('.ute-hero p').innerHTML = ADMIN ? `Signed in as <b>${esc(ME.email)}</b> with <b>admin</b> rights: you can moderate comments, answer messages and see sign-ups and brand requests in the Admin tab.` : `Signed in as <b>${esc(ME.email)}</b>.`;
+  window.addEventListener('hashchange', route);
+  route();
 }
+const TABS = [['overview', 'Overview'], ['course', 'Course'], ['comments', 'Comments'], ['photos', 'Photos'], ['messages', 'Messages'], ['members', 'Members only'], ['settings', 'Settings']];
+async function route() {
+  const tab = (location.hash.slice(1) || 'overview').replace(/[^a-z]/g, '');
+  const tabs = ADMIN ? [...TABS, ['admin', 'Admin']] : TABS;
+  const cur = tabs.some(([k]) => k === tab) ? tab : 'overview';
+  let unread = 0;
+  try { const r = await sb.from('messages').select('id', { count: 'exact', head: true }).eq('user_id', ME.id).eq('from_admin', true).eq('read', false); unread = r.count || 0; } catch (e) { /* table may not exist yet */ }
+  const av = PROF.avatar_path ? `<img class="mza-av" src="${photoURL(PROF.avatar_path)}?v=${Date.now() % 1e6}" alt="">` : `<span class="mza-av">${esc((PROF.display_name || '?')[0].toUpperCase())}</span>`;
+  box.innerHTML = `<div class="mza-head">${av}<div><b style="font-size:20px">${esc(PROF.display_name)}</b>${ADMIN ? '<span class="mza-role">Admin</span>' : ''}<br><span class="msg">${esc(ME.email)}</span></div></div>
+    <nav class="mza-tabs">${tabs.map(([k, t]) => `<a href="#${k}" class="${k === cur ? 'is-on' : ''} ${k === 'admin' ? 'is-admin' : ''}">${t}${k === 'messages' && unread ? `<i>${unread}</i>` : ''}</a>`).join('')}</nav>
+    <div id="tab"><p>Loading…</p></div>`;
+  const el = document.getElementById('tab');
+  try { await VIEWS[cur](el); } catch (e) { el.innerHTML = `<p class="msg">This part could not load (${esc(e.message || e)}). If you are the site owner, run docs/supabase-account.sql in Supabase.</p>`; }
+}
+const VIEWS = {
+  async overview(el) {
+    const s = summary(MODULES); const done = s.reduce((a, m) => a + m.done, 0), total = s.reduce((a, m) => a + m.total, 0);
+    const [{ count: nc }, { data: photos }] = await Promise.all([
+      sb.from('comments').select('id', { count: 'exact', head: true }).eq('user_id', ME.id),
+      sb.from('comments').select('id').eq('user_id', ME.id).not('photo_path', 'is', null)]);
+    const p = loadProgress(); const tools = Object.keys(p.tools || {}).length;
+    el.innerHTML = `<div class="mza-stats"><div><span>Chapters done</span><b>${done}<small style="font-size:15px"> / ${total}</small></b></div><div><span>Comments</span><b>${nc || 0}</b></div><div><span>Photos</span><b>${(photos || []).length}</b></div><div><span>Tools used</span><b>${tools}</b></div></div>
+      <p><a class="btn" href="../learn/">Continue the course</a> <a class="btn" style="background:#FFF;color:var(--ink)" href="../repair/">Find a repair</a></p>
+      <p class="msg">Your progress is saved to your account and is the same on every device you sign in on.</p>`;
+  },
+  async course(el) {
+    const s = summary(MODULES);
+    el.innerHTML = `<table><tr><th>Module</th><th>Chapters done</th><th>Quiz best (easy / mixed / hard)</th></tr>${s.map((m) => `<tr><td><a href="../learn/#${m.id}">${esc(m.num)} ${esc(m.title)}</a></td><td>${m.done} of ${m.total}</td><td>${['easy', 'mixed', 'hard'].map((l) => m.quiz[l] ? `${m.quiz[l].best ?? m.quiz[l].last ?? ''}` : '·').join(' / ')}</td></tr>`).join('')}</table>
+      <p><a href="../progress/">Full progress page →</a></p>`;
+  },
+  async comments(el) {
+    const { data, error } = await sb.from('comments').select('id, page, body, photo_path, created_at, hidden').eq('user_id', ME.id).order('created_at', { ascending: false }).limit(200);
+    if (error) throw error;
+    el.innerHTML = data.length ? `<table><tr><th>Page</th><th>Comment</th><th>Date</th><th></th></tr>${data.map((c) => `<tr><td><a href="${esc(c.page)}#comments">${esc(c.page)}</a></td><td>${esc(c.body.slice(0, 220))}${c.hidden ? ' <i class="msg">(hidden by a moderator)</i>' : ''}</td><td>${day(c.created_at)}</td><td><button type="button" class="is-light" data-del="${c.id}">Delete</button></td></tr>`).join('')}</table>`
+      : '<p>No comments yet. Every repair, problem, part, bike and tool page has a comments section at the bottom.</p>';
+    el.querySelectorAll('[data-del]').forEach((b) => b.onclick = async () => { if (!confirm('Delete this comment?')) return; await sb.from('comments').delete().eq('id', b.dataset.del); VIEWS.comments(el); });
+  },
+  async photos(el) {
+    const { data, error } = await sb.from('comments').select('id, page, photo_path, created_at').eq('user_id', ME.id).not('photo_path', 'is', null).order('created_at', { ascending: false });
+    if (error) throw error;
+    el.innerHTML = data.length ? `<div class="mza-gal">${data.map((c) => `<figure><a href="${esc(c.page)}#comments"><img src="${photoURL(c.photo_path)}" alt="" loading="lazy"></a><figcaption>${esc(c.page)} · ${day(c.created_at)}</figcaption></figure>`).join('')}</div>` : '<p>No photos yet. Add one with a comment on any page.</p>';
+  },
+  async messages(el) {
+    const { data, error } = await sb.from('messages').select('id, from_admin, body, created_at, read').eq('user_id', ME.id).order('created_at');
+    if (error) throw error;
+    el.innerHTML = `<div class="mza-thread">${data.length ? data.map((m) => `<div class="mza-msg ${m.from_admin ? 'is-team' : ''}">${esc(m.body).replace(/\n/g, '<br>')}<small>${m.from_admin ? 'Moto Zero team' : 'You'} · ${day(m.created_at)}</small></div>`).join('') : '<p class="msg">No messages yet. Ask the team anything: a correction, a missing part, help with a repair.</p>'}</div>
+      <form id="f-msg"><textarea name="body" rows="3" maxlength="4000" required placeholder="Write to the team"></textarea><div class="row"><button type="submit">Send</button></div><p class="msg" id="m-msg"></p></form>`;
+    const ids = data.filter((m) => m.from_admin && !m.read).map((m) => m.id);
+    if (ids.length) await sb.from('messages').update({ read: true }).in('id', ids);
+    el.querySelector('#f-msg').onsubmit = async (e) => {
+      e.preventDefault(); const body = e.target.body.value.trim(); if (!body) return;
+      const { error: er } = await sb.from('messages').insert({ user_id: ME.id, body });
+      if (er) { el.querySelector('#m-msg').textContent = 'Could not send: ' + er.message; return; }
+      fetch(TEAM, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'New member message on Moto Zero', from: ME.email, message: body }) }).catch(() => {});
+      VIEWS.messages(el);
+    };
+  },
+  async members(el) {
+    const { data, error } = await sb.from('member_content').select('slug, title, body_html, file_url').order('sort');
+    if (error) throw error;
+    el.innerHTML = (data || []).map((m) => `<div class="mza-member"><h3>${esc(m.title)}</h3>${m.body_html}${m.file_url ? `<p><a class="btn" href="${esc(m.file_url)}">Download</a></p>` : ''}</div>`).join('') || '<p>Nothing here yet.</p>';
+  },
+  async settings(el) {
+    el.innerHTML = `<div class="mza-card"><form id="f-prof">
+      <label for="dn">Name shown with your comments</label><input id="dn" type="text" maxlength="40" value="${esc(PROF.display_name || '')}">
+      <label for="co" style="margin-top:12px">Country (optional)</label><input id="co" type="text" maxlength="60" value="${esc(PROF.country || '')}">
+      <label for="bio" style="margin-top:12px">About you (optional, shown to nobody yet)</label><textarea id="bio" rows="3" maxlength="300">${esc(PROF.bio || '')}</textarea>
+      <label for="av" style="margin-top:12px">Profile picture</label><input id="av" type="file" accept="image/jpeg,image/png,image/webp">
+      <div class="row"><button type="submit">Save</button></div><p class="msg" id="m-prof"></p></form></div>
+      <div class="mza-card"><h2>Account</h2><p>Email: ${esc(ME.email)}. You sign in with a link sent to this address.</p>
+      <div class="row"><button type="button" class="is-light" id="out">Sign out</button><button type="button" class="is-light" id="del">Ask to delete my account</button></div><p class="msg" id="m-acc"></p></div>`;
+    el.querySelector('#out').onclick = async () => { setRole(''); await sb.auth.signOut(); };
+    el.querySelector('#del').onclick = async () => {
+      if (!confirm('Send a request to delete your account and everything linked to it?')) return;
+      await sb.from('messages').insert({ user_id: ME.id, body: 'Please delete my account and all my data.' }).catch(() => {});
+      fetch(TEAM, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'Account deletion request', from: ME.email }) }).catch(() => {});
+      el.querySelector('#m-acc').textContent = 'Request sent. We delete the account and reply by email.';
+    };
+    el.querySelector('#f-prof').onsubmit = async (e) => {
+      e.preventDefault(); const m = el.querySelector('#m-prof'); m.textContent = 'Saving…';
+      const upd = { display_name: el.querySelector('#dn').value.trim() || 'Rider', country: el.querySelector('#co').value.trim() || null, bio: el.querySelector('#bio').value.trim() || null };
+      const f = el.querySelector('#av').files[0];
+      if (f) {
+        const img = await createImageBitmap(f); const k = Math.min(1, 512 / Math.max(img.width, img.height));
+        const c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        const blob = await new Promise((r) => c.toBlob(r, 'image/jpeg', 0.85));
+        const path = `${ME.id}/avatar.jpg`;
+        const up = await sb.storage.from('uploads').upload(path, blob, { contentType: 'image/jpeg', upsert: true });
+        if (up.error) { m.textContent = 'Picture not saved: ' + up.error.message; return; }
+        upd.avatar_path = path;
+      }
+      const { error } = await sb.from('profiles').update(upd).eq('id', ME.id);
+      if (error) { m.textContent = 'Not saved: ' + error.message; return; }
+      Object.assign(PROF, upd); m.textContent = 'Saved.'; route();
+    };
+  },
+  async admin(el) {
+    if (!ADMIN) { el.innerHTML = '<p>Admins only.</p>'; return; }
+    const cnt = async (t) => { const r = await sb.from(t).select('*', { count: 'exact', head: true }); return r.count ?? '·'; };
+    const [members, comments, subs, brand] = await Promise.all([cnt('profiles'), cnt('comments'), cnt('subscribers').catch(() => '·'), cnt('brand_requests').catch(() => '·')]);
+    el.innerHTML = `<div class="mza-stats"><div><span>Members</span><b>${members}</b></div><div><span>Comments</span><b>${comments}</b></div><div><span>Email sign-ups</span><b>${subs}</b></div><div><span>Brand requests</span><b>${brand}</b></div></div>
+      <nav class="mza-tabs" id="adm-tabs"><a href="#admin" data-a="comments" class="is-on">Comments</a><a href="#admin" data-a="inbox">Messages</a><a href="#admin" data-a="subs">Sign-ups</a><a href="#admin" data-a="brand">Brand requests</a><a href="#admin" data-a="content">Members-only content</a></nav><div id="adm"></div>`;
+    const A = el.querySelector('#adm');
+    const ADM = {
+      async comments() {
+        const { data } = await sb.from('comments').select('id, page, body, photo_path, created_at, hidden, profiles(display_name)').order('created_at', { ascending: false }).limit(200);
+        A.innerHTML = `<table><tr><th>Who</th><th>Page</th><th>Comment</th><th>Date</th><th></th></tr>${(data || []).map((c) => `<tr><td>${esc(c.profiles ? c.profiles.display_name : '')}</td><td><a href="${esc(c.page)}#comments">${esc(c.page)}</a></td><td>${esc(c.body.slice(0, 200))}${c.photo_path ? ` <a href="${photoURL(c.photo_path)}" target="_blank">[photo]</a>` : ''}${c.hidden ? ' <i class="msg">(hidden)</i>' : ''}</td><td>${day(c.created_at)}</td><td>${c.hidden ? '' : `<button type="button" class="is-light" data-hide="${c.id}">Hide</button>`} <button type="button" class="is-light" data-del="${c.id}">Delete</button></td></tr>`).join('')}</table>`;
+        A.querySelectorAll('[data-hide]').forEach((b) => b.onclick = async () => { await sb.from('comments').update({ hidden: true }).eq('id', b.dataset.hide); ADM.comments(); });
+        A.querySelectorAll('[data-del]').forEach((b) => b.onclick = async () => { if (confirm('Delete this comment?')) { await sb.from('comments').delete().eq('id', b.dataset.del); ADM.comments(); } });
+      },
+      async inbox(sel) {
+        const { data } = await sb.from('messages').select('id, user_id, from_admin, body, created_at, read, profiles(display_name)').order('created_at');
+        const by = new Map(); (data || []).forEach((m) => { if (!by.has(m.user_id)) by.set(m.user_id, []); by.get(m.user_id).push(m); });
+        const users = [...by.keys()]; const cur = sel || users[users.length - 1];
+        A.innerHTML = users.length ? `<div class="mza-two"><ul>${users.map((u) => { const l = by.get(u); const un = l.filter((m) => !m.from_admin && !m.read).length; return `<li data-u="${u}" class="${u === cur ? 'is-on' : ''}">${esc(l[0].profiles ? l[0].profiles.display_name : u.slice(0, 8))}${un ? ` <i class="mza-role">${un}</i>` : ''}<br><small class="msg">${day(l[l.length - 1].created_at)}</small></li>`; }).join('')}</ul>
+          <div><div class="mza-thread">${(by.get(cur) || []).map((m) => `<div class="mza-msg ${m.from_admin ? 'is-team' : ''}">${esc(m.body).replace(/\n/g, '<br>')}<small>${m.from_admin ? 'Team' : 'Member'} · ${day(m.created_at)}</small></div>`).join('')}</div>
+          <form id="f-rep"><textarea name="body" rows="3" required placeholder="Reply as the team"></textarea><div class="row"><button type="submit">Reply</button></div></form></div></div>` : '<p>No messages yet.</p>';
+        A.querySelectorAll('[data-u]').forEach((li) => li.onclick = () => ADM.inbox(li.dataset.u));
+        const unreadIds = (by.get(cur) || []).filter((m) => !m.from_admin && !m.read).map((m) => m.id);
+        if (unreadIds.length) sb.from('messages').update({ read: true }).in('id', unreadIds);
+        const f = A.querySelector('#f-rep');
+        if (f) f.onsubmit = async (e) => { e.preventDefault(); const body = f.body.value.trim(); if (!body) return; const { error } = await sb.from('messages').insert({ user_id: cur, from_admin: true, body }); if (error) alert(error.message); ADM.inbox(cur); };
+      },
+      async subs() {
+        const { data, error } = await sb.from('subscribers').select('email, source, created_at').order('created_at', { ascending: false });
+        if (error) { A.innerHTML = `<p class="msg">${esc(error.message)}</p>`; return; }
+        A.innerHTML = `<p><button type="button" id="csv">Download CSV</button></p><table><tr><th>Email</th><th>Signed up on</th><th>Date</th></tr>${data.map((r) => `<tr><td>${esc(r.email)}</td><td>${esc(r.source || '')}</td><td>${day(r.created_at)}</td></tr>`).join('')}</table>`;
+        A.querySelector('#csv').onclick = () => { const csv = 'email,source,created_at\n' + data.map((r) => [r.email, r.source || '', r.created_at].map((x) => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n'); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'moto-zero-subscribers.csv'; a.click(); };
+      },
+      async brand() {
+        const { data, error } = await sb.from('brand_requests').select('*').order('created_at', { ascending: false });
+        if (error) { A.innerHTML = `<p class="msg">${esc(error.message)}</p>`; return; }
+        const pub = (path) => path ? `${photoURL('').replace('/uploads/', '/brand-requests/')}${path}` : '';
+        A.innerHTML = data.length ? `<table><tr><th>Company</th><th>Contact</th><th>Fleet</th><th>Message</th><th>Files</th><th>Status</th></tr>${data.map((r) => `<tr><td>${esc(r.company)}<br><small class="msg">${day(r.created_at)}</small></td><td>${esc(r.name)}<br><a href="mailto:${esc(r.email)}">${esc(r.email)}</a><br>${esc(r.country || '')}</td><td>${esc(r.fleet || '')}</td><td>${esc((r.message || '').slice(0, 200))}</td><td>${r.logo_path ? `<a href="${pub(r.logo_path)}" target="_blank">logo</a>` : ''} ${r.preview_path ? `<a href="${pub(r.preview_path)}" target="_blank">preview</a>` : ''}</td><td><select data-id="${r.id}">${['new', 'contacted', 'quoted', 'done', 'declined'].map((s) => `<option ${s === r.status ? 'selected' : ''}>${s}</option>`).join('')}</select></td></tr>`).join('')}</table>` : '<p>No brand requests yet.</p>';
+        A.querySelectorAll('select[data-id]').forEach((s) => s.onchange = () => sb.from('brand_requests').update({ status: s.value }).eq('id', s.dataset.id));
+      },
+      async content() {
+        const { data } = await sb.from('member_content').select('*').order('sort');
+        A.innerHTML = `${(data || []).map((m) => `<div class="mza-member"><h3>${esc(m.title)} <small class="msg">(${esc(m.slug)})</small></h3>${m.body_html}<p><button type="button" class="is-light" data-del="${esc(m.slug)}">Remove</button></p></div>`).join('')}
+          <div class="mza-card"><h2>Add members-only content</h2><form id="f-mc"><label>Title</label><input type="text" name="title" required><label style="margin-top:10px">Text (simple HTML allowed)</label><textarea name="body" rows="4"></textarea><label style="margin-top:10px">File or link (optional)</label><input type="text" name="url" placeholder="https://..."><div class="row"><button type="submit">Add</button></div><p class="msg" id="m-mc"></p></form></div>`;
+        A.querySelectorAll('[data-del]').forEach((b) => b.onclick = async () => { if (confirm('Remove?')) { await sb.from('member_content').delete().eq('slug', b.dataset.del); ADM.content(); } });
+        A.querySelector('#f-mc').onsubmit = async (e) => { e.preventDefault(); const f = e.target; const t = f.title.value.trim(); const slug = t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + Date.now().toString(36);
+          const { error } = await sb.from('member_content').insert({ slug, title: t, body_html: f.body.value.trim() ? `<p>${esc(f.body.value.trim()).replace(/\n\n/g, '</p><p>').replace(/&lt;(\/?)(b|i|a|ul|li|p|br)([^&]*)&gt;/g, '<$1$2$3>')}</p>` : '', file_url: f.url.value.trim() || null, sort: (data || []).length });
+          if (error) A.querySelector('#m-mc').textContent = error.message; else ADM.content(); };
+      },
+    };
+    el.querySelectorAll('#adm-tabs [data-a]').forEach((a) => a.onclick = (e) => { e.preventDefault(); el.querySelectorAll('#adm-tabs a').forEach((x) => x.classList.toggle('is-on', x === a)); ADM[a.dataset.a](); });
+    ADM.comments();
+  },
+};
 function signInView() {
   box.innerHTML = `<div class="mza-card"><h2>Sign in or create an account</h2>
     <form id="f-in"><label for="em">Email address</label><input id="em" type="email" autocomplete="email" required placeholder="you@example.com">

@@ -1282,3 +1282,5 @@ font[style] { background: none !important; box-shadow: none !important; }
   .mz-vt-grid { gap: 10px; }
   .mz-vt-img { aspect-ratio: 16 / 10; }
 }
+
+.mz-menu-cta.is-admin { background: var(--warm) !important; border-color: var(--warm) !important; color: #FFF !important; }

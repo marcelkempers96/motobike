@@ -11,8 +11,8 @@ const main = $('#learn-main');
 const toc = $('#learn-toc');
 const ROOT = '../';
 const CHAPTER_IMG = {
-  'm1-history-systems': 'photos/curtiss-1907.jpg', 'm1-types': 'photos/kenya-ride-helicopter.jpg', 'm1-anatomy': 'renders/bike_mx_2t_threeq.webp',
-  'm1-physics': 'photos/kenya-flag-ride.jpg', 'm1-workshop': 'photos/workshop-garage.jpg',
+  'm1-history-systems': 'photos/curtiss-1907.jpg', 'm1-types': 'renders/ch-types.webp', 'm1-anatomy': 'renders/ch-anatomy.webp',
+  'm1-physics': 'renders/ch-physics.webp', 'm1-workshop': 'photos/workshop-garage.jpg',
   'm2-fundamentals': 'photos/engine-closeup.jpg', 'm2-four-stroke': 'renders/photo/render-engine-xray.jpg', 'm2-two-stroke': 'renders/engine_2t.webp',
   'm2-top-end': 'renders/photo/render-valve.jpg', 'm2-bottom-end': 'renders/photo/render-crank.jpg', 'm2-lubrication-cooling': 'illustrations/powertrain/F11.png',
   'm2-diagnosis': 'photos/carburettor-work.jpg',

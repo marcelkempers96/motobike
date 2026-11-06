@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Circuit Builder"><title>Circuit Builder</title><g fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="50" width="34" height="26" rx="3"/><path d="M20 50 V45 H26 V50 M34 50 V45 H40 V50"/>
+<path d="M23 45 V34 H58 M37 45 V40 H66 V44"/><path d="M58 34 V28"/><path d="M62 62 H72 M64 68 H70"/></g>
+<circle cx="62" cy="24" r="12" fill="#C4452B"/><rect x="58" y="34" width="12" height="8" rx="1.5" fill="#141414"/>
+<path d="M58 24 Q60 20 62 24 T66 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+<path d="M18 63 H24 M21 60 V66 M33 63 H39" stroke="#141414" stroke-width="2" stroke-linecap="round"/></svg>
