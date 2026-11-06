@@ -1,0 +1,967 @@
+{
+ "problems": {
+  "fan-not-working": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cx500_honda.jpg",
+    "caption": "Radiator fan and its mounting: the part that must switch on"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_crcuit_tester.jpg",
+    "caption": "Circuit tester light on the fan feed: checks for power"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing.jpg",
+    "caption": "Circuit tester tracing voltage along a wire to the fan"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing_2.jpg",
+    "caption": "Multimeter with test leads, used to check fan circuit voltage"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire_multiple_wire.jpg",
+    "caption": "Crimped ring terminal: a loose or corroded joint stops the fan"
+   }
+  ],
+  "cvt-belt-broken": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_clutch.jpg",
+    "caption": "Scooter belt drive in low and high ratio, showing the belt path"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_drive_clutch.jpg",
+    "caption": "Drive clutch (variator) pulleys that carry the belt"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_driven_clutch.jpg",
+    "caption": "Driven clutch and spring: check for belt damage and wear"
+   }
+  ],
+  "cvt-creeps": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_drives_clutches.jpg",
+    "caption": "Centrifugal clutch shoes and drum: sticking shoes or weak springs cause creep"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_onda_400_torque_converter_suzuki_m31_2.jpg",
+    "caption": "Centrifugal clutch shoes and springs removed from the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_i_will_try_add_more_time.jpg",
+    "caption": "Centrifugal clutch parts: weights, sprag and outer housing"
+   }
+  ],
+  "cvt-gear-oil-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_seal_spring.jpg",
+    "caption": "Oil seal with its garter spring: a worn seal leaks gear oil"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip_worn_seal_lip_2.jpg",
+    "caption": "Worn seal lip and seal area on an engine case"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_wear.jpg",
+    "caption": "Close view of an oil seal lip, the usual leak point"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out.jpg",
+    "caption": "Levering a leaking oil seal out with a screwdriver"
+   }
+  ],
+  "neutral-light-fault": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_wheel.jpg",
+    "caption": "Spring-loaded detent wheel on the shift drum, where the neutral switch reads"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_shifters_drum_slider_forks_shaft_3.jpg",
+    "caption": "Shift drum with fork grooves: neutral position is read here"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_crcuit_tester.jpg",
+    "caption": "Circuit tester light: checks power at the neutral switch"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ohmmeter.jpg",
+    "caption": "Multimeter on the ohm scale checks the switch for continuity"
+   }
+  ],
+  "oil-leak-cover": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_horizontally_split.jpg",
+    "caption": "Horizontally split crankcase: the joint face is a common leak path"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_vertically_split.jpg",
+    "caption": "Vertically split crankcase with its cover joint faces"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip.jpg",
+    "caption": "Worn oil seal lip: seals behind covers leak when hardened"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_oil_seals.jpg",
+    "caption": "Oil seal kit: seals and gaskets replaced to stop a cover leak"
+   }
+  ],
+  "oil-leak-head-base": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_if_over_specification_will_need_bore.jpg",
+    "caption": "Cylinder bore and base area where the base gasket seals"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_if_thin_valve_will_overheat_fail.jpg",
+    "caption": "Valve seat in the cylinder head, beside the sealing face"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cylinder_coolant_passages.jpg",
+    "caption": "Cylinder with passages that the head gasket must seal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/105/105_two_plug_hole_head.jpg",
+    "caption": "Cooling fins on a cylinder head: clean fins show oil seepage"
+   }
+  ],
+  "oil-level-falling": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_cylinder_ridge.jpg",
+    "caption": "Wear ridge at the top of the bore: worn bore burns oil"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_ring_worn.jpg",
+    "caption": "Worn cylinder bore: oil passes the rings and is burnt"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_checking_guide.jpg",
+    "caption": "Checking valve guide play with a dial gauge: worn guides burn oil"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_groove.jpg",
+    "caption": "Piston ring seated in its groove: stuck or worn rings pass oil"
+   }
+  ],
+  "oil-warning-light": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_without_bushings_bearing_shells.jpg",
+    "caption": "Worn bearing shells: wear that drops oil pressure"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_oil_pressure.jpg",
+    "caption": "Cam chain tensioner with its oil pressure feed"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_good_rod_bushing.jpg",
+    "caption": "Connecting rod big end with bearing shells: oil feeds through here"
+   }
+  ],
+  "black-smoke": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled spark plug with dry black soot from a rich mixture"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp04_jpg_26723_bytes_3_30.jpg",
+    "caption": "Plug fouled because it ran too cold or rich"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_if_set_up_one_rpm_effect.jpg",
+    "caption": "Rust and carbon inside an exhaust pipe"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip showing a lean burn"
+   }
+  ],
+  "breather-smoke": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_groove.jpg",
+    "caption": "Piston ring in its groove: worn rings let blow-by reach the breather"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_ring_worn.jpg",
+    "caption": "Worn cylinder bore: blow-by pressurises the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_cylinder_ridge.jpg",
+    "caption": "Wear ridge at the top of the bore: ring and bore wear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_beam_me_up_scotty.jpg",
+    "caption": "Pitted piston crown from combustion damage"
+   }
+  ],
+  "exhaust-glowing": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp27_jpg_30858_bytes_4_1.jpg",
+    "caption": "Melted electrode and glazed insulator from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp28_jpg_25280_bytes_4_1.jpg",
+    "caption": "Overheated plug with a bead of melted metal"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_25_too_hot_lean_pre_ignition.jpg",
+    "caption": "Spark plug electrode burnt away by pre-ignition and lean running"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_if_set_up_one_rpm_effect.jpg",
+    "caption": "Rust and carbon inside an exhaust pipe"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp25_jpg_31716_bytes_4_1.jpg",
+    "caption": "White insulator on a plug that ran too hot"
+   }
+  ],
+  "clutch-noise": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_grooves.jpg",
+    "caption": "Clutch basket grooves worn by the plate tabs: a cause of rattle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+    "caption": "Fibre and steel clutch plates to inspect for wear"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch_springs.jpg",
+    "caption": "Clutch pressure plate with four springs: weak springs allow rattle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_stuck_clutch.jpg",
+    "caption": "Clutch plates stuck together, prised apart"
+   }
+  ],
+  "heavy-clutch": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_most_clutches_have_disengagement_mechanism_center.jpg",
+    "caption": "Clutch rod, cable adjuster and rod adjuster on the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_some_activate_clutch_cover_some_use.jpg",
+    "caption": "Cable-operated clutch release in section"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_cam_worm.jpg",
+    "caption": "Clutch release rod and cam worm: dry parts make the lever heavy"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch_springs.jpg",
+    "caption": "Clutch pressure plate with four springs: springs that are too strong"
+   }
+  ],
+  "cvt-noise": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_drives_clutches.jpg",
+    "caption": "Centrifugal clutch shoes and drum inside the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_clutch.jpg",
+    "caption": "Scooter belt drive in low and high ratio"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_onda_400_torque_converter_suzuki_m31_2.jpg",
+    "caption": "Centrifugal clutch shoes and springs removed from the engine"
+   }
+  ],
+  "oil-darkens-quickly": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Dry black soot on a plug: rich running or blow-by dirties oil"
+   }
+  ],
+  "oil-leak-sprocket": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_wear.jpg",
+    "caption": "Close view of an oil seal lip, where leaks start"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip_worn_seal_lip_2.jpg",
+    "caption": "Worn seal lip near the output shaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_seal_spring.jpg",
+    "caption": "Oil seal with its garter spring"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_big_nut_lock_washer.jpg",
+    "caption": "Front sprocket nut with bent lock tab: check for oil behind it"
+   }
+  ],
+  "exhaust-loud": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/020/020_1_needs_come_out.jpg",
+    "caption": "Silencer bore packed with oily carbon: baffle condition check"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_mufflers_inter_connected.jpg",
+    "caption": "Interconnected exhaust header pipes: check joints for leaks"
+   }
+  ],
+  "exhaust-popping": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_mufflers_inter_connected.jpg",
+    "caption": "Interconnected exhaust header pipes: leaks let air in and cause popping"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip showing a lean burn that pops on the overrun"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_lt_back_catalog_next.jpg",
+    "caption": "Plug with hot or lean running deposits"
+   }
+  ],
+  "exhaust-rattle": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/020/020_1_needs_come_out.jpg",
+    "caption": "Silencer bore with loose carbon and a baffle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_straight_pipe.jpg",
+    "caption": "Straight exhaust pipes: check mounts and shields"
+   }
+  ],
+  "oily-exhaust": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/020/020_1_needs_come_out.jpg",
+    "caption": "Silencer bore packed with oily carbon"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp01_jpg_28461_bytes_3_30.jpg",
+    "caption": "Oil fouled spark plug, wet and black"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_intake_port.jpg",
+    "caption": "Two-stroke cylinder intake port with piston ring visible"
+   }
+  ],
+  "chain-rubbing": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_maybe_put_piece_steel_wood_between.jpg",
+    "caption": "Rear sprocket and chain seen from the swingarm side"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_loosen_nut_push_forward_unhook_chain.jpg",
+    "caption": "Axle nut and chain adjuster: a misaligned axle makes the chain rub"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_check_shop_manual_correct_amount.jpg",
+    "caption": "Pulling the chain away from the rear sprocket"
+   }
+  ],
+  "chain-tight-spots": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_edges.jpg",
+    "caption": "Chain pin, bushing, roller and plates: stiff links make tight spots"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket.jpg",
+    "caption": "Worn teeth on a rear sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_clip_bolted_sprocket.jpg",
+    "caption": "Broken tooth on a sprocket with bolted clip"
+   }
+  ],
+  "cush-drive-clunk": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_maybe_put_piece_steel_wood_between.jpg",
+    "caption": "Rear sprocket and chain seen from the swingarm side"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket.jpg",
+    "caption": "Worn teeth on a rear sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_loosen_nut_push_forward_unhook_chain.jpg",
+    "caption": "Rear axle nut and chain adjuster on a swingarm"
+   }
+  ],
+  "clutch-judder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+    "caption": "Fibre and steel clutch plates: warped or glazed plates cause judder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_grooves.jpg",
+    "caption": "Clutch basket grooves worn by the plate tabs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_clutch_springs.jpg",
+    "caption": "Clutch pressure plate with four springs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_stuck_clutch.jpg",
+    "caption": "Clutch plates stuck together, prised apart"
+   }
+  ],
+  "clutch-slip": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_grooves.jpg",
+    "caption": "Clutch basket grooves worn by the plate tabs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_unit.jpg",
+    "caption": "Clutch pack lifted out of the engine for inspection"
+   }
+  ],
+  "overheating-air": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_25_too_hot_lean_pre_ignition.jpg",
+    "caption": "Spark plug electrode burnt away by pre-ignition and lean running"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp28_jpg_25280_bytes_4_1.jpg",
+    "caption": "Overheated plug with a bead of melted metal"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp27_jpg_30858_bytes_4_1.jpg",
+    "caption": "Melted electrode and glazed insulator from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp25_jpg_31716_bytes_4_1.jpg",
+    "caption": "White insulator on a plug that ran too hot"
+   }
+  ],
+  "radiator-damage": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_some_can_fix_others_have_replace.jpg",
+    "caption": "Radiator cap on a liquid-cooled motorcycle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_coolant_reservoir.jpg",
+    "caption": "Coolant reservoir fitted to the frame"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_cx500_honda.jpg",
+    "caption": "Radiator fan and its fitting"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_one_radiator.jpg",
+    "caption": "Radiator and hoses on a bike with the bodywork off"
+   }
+  ],
+  "cvt-judder": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_automatic_drives_clutches.jpg",
+    "caption": "Centrifugal clutch shoes and drum: uneven grab causes judder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_onda_400_torque_converter_suzuki_m31_2.jpg",
+    "caption": "Centrifugal clutch shoes and springs removed from the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_i_will_try_add_more_time.jpg",
+    "caption": "Centrifugal clutch parts: weights, sprag and outer housing"
+   }
+  ],
+  "cvt-low-top-speed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_onda_400_torque_converter_suzuki_m31_2.jpg",
+    "caption": "Centrifugal clutch shoes and springs removed from the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_driven_clutch.jpg",
+    "caption": "Driven clutch and spring with the belt path"
+   }
+  ],
+  "whine-from-engine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_broken_teeth.jpg",
+    "caption": "Gear with broken teeth: a cause of whine and noise"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_plain_bearings_there_no_chance.jpg",
+    "caption": "Worn ball bearing next to a good one"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_could_bit_steel_aluminum_who_knows.jpg",
+    "caption": "Slight wear and pitting on gear dogs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder.jpg",
+    "caption": "Water pump impeller seen with the cover removed"
+   }
+  ],
+  "clunk-into-first": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_unit.jpg",
+    "caption": "Clutch pack lifted out of the engine: drag causes the clunk"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_dogs.jpg",
+    "caption": "Two gears with engagement dogs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_could_bit_steel_aluminum_who_knows.jpg",
+    "caption": "Slight wear and pitting on gear dogs"
+   }
+  ],
+  "false-neutral": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_dogs.jpg",
+    "caption": "Two gears with engagement dogs: rounded dogs slip out"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_wheel.jpg",
+    "caption": "Spring-loaded detent wheel on the shift drum"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_shifters_drum_slider_forks_shaft_3.jpg",
+    "caption": "Shift drum with a fork groove"
+   }
+  ],
+  "jumps-out-of-gear": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_dogs.jpg",
+    "caption": "Two gears with engagement dogs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_broken_teeth.jpg",
+    "caption": "Gear with broken teeth"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_wheel.jpg",
+    "caption": "Spring-loaded detent wheel on the shift drum"
+   }
+  ],
+  "oil-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip.jpg",
+    "caption": "Worn oil seal lip: a hardened seal leaks"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_wear.jpg",
+    "caption": "Close view of an oil seal lip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_horizontally_split.jpg",
+    "caption": "Horizontally split crankcase: joint faces and gaskets leak here"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_vertically_split.jpg",
+    "caption": "Vertically split crankcase with gears in place"
+   }
+  ],
+  "exhaust-blocked": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/020/020_1_needs_come_out.jpg",
+    "caption": "Silencer bore packed with oily carbon: the cause of choking"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_intake_port.jpg",
+    "caption": "Two-stroke cylinder intake port with piston ring visible"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled spark plug with dry black soot"
+   }
+  ],
+  "exhaust-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_straight_pipe.jpg",
+    "caption": "Straight exhaust pipes: check joints at the head"
+   }
+  ],
+  "white-smoke": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water.jpg",
+    "caption": "Corroded water pump impeller and seal: coolant leak source"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder.jpg",
+    "caption": "Water pump impeller seen with the cover removed"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_i_wonder_what_they_mean.jpg",
+    "caption": "Water pump impeller inside the cover"
+   }
+  ],
+  "smoke-after-rebuild": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_move_hone_back_forth_cylinder_produce.jpg",
+    "caption": "45 degree cross-hatch pattern in a honed bore: needed to seat rings"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_three_piece_ones_seem_work_better.jpg",
+    "caption": "Ring compressor on a piston entering a cylinder"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_three_piece.jpg",
+    "caption": "Three-piece oil ring: fitting errors cause smoke"
+   }
+  ],
+  "chain-jumps": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_clip_bolted_sprocket.jpg",
+    "caption": "Broken tooth on a sprocket with bolted clip"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_big_nut_lock_washer.jpg",
+    "caption": "Front sprocket nut with bent lock tab"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_edges.jpg",
+    "caption": "Chain parts: pin, bushing, roller and link plates"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_check_shop_manual_correct_amount.jpg",
+    "caption": "Pulling the chain away from the rear sprocket to check wear"
+   }
+  ],
+  "chain-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_edges.jpg",
+    "caption": "Chain parts: pin, bushing, roller and link plates"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bearing_area.jpg",
+    "caption": "Chain pin and bushing area where wear happens"
+   }
+  ],
+  "chain-snapped": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_now_good_time_look_any_chain.jpg",
+    "caption": "Chain breaker on the rear chain"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_press.jpg",
+    "caption": "Chain press fitted over the chain links"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_rollers.jpg",
+    "caption": "Chain links, rollers and master links laid out"
+   }
+  ],
+  "sprocket-worn": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_big_nut_lock_washer.jpg",
+    "caption": "Front sprocket nut with bent lock tab"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted_clip_type.jpg",
+    "caption": "Front sprocket with a bolted retaining clip"
+   }
+  ],
+  "chain-adjuster-at-end": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_loosen_nut_push_forward_unhook_chain.jpg",
+    "caption": "Rear axle nut and chain adjuster on a swingarm"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_maybe_put_piece_steel_wood_between.jpg",
+    "caption": "Rear sprocket and chain seen from the swingarm side"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_push_forward_pop_off.jpg",
+    "caption": "Rear axle end at the swingarm"
+   }
+  ],
+  "clutch-drag": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_if_they_badly_worn_consider_replacing.jpg",
+    "caption": "Clutch plate stack with the plates that must mesh marked"
+   }
+  ],
+  "clutch-no-resistance": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_cam_worm.jpg",
+    "caption": "Clutch release rod and cam worm"
+   }
+  ],
+  "hard-to-find-neutral": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_drum.jpg",
+    "caption": "Shifter drum and gear set in hand"
+   }
+  ],
+  "coolant-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_some_can_fix_others_have_replace.jpg",
+    "caption": "Radiator cap on a liquid-cooled motorcycle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_i_wonder_what_they_mean.jpg",
+    "caption": "Water pump impeller inside the cover"
+   }
+  ],
+  "temp-gauge-high": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder_water.jpg",
+    "caption": "Corroded water pump impeller and seal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_some_can_fix_others_have_replace.jpg",
+    "caption": "Radiator cap on a liquid-cooled motorcycle"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ohmmeter.jpg",
+    "caption": "Multimeter with test leads, used to check the sensor and gauge"
+   }
+  ],
+  "cvt-slip": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/121/121_i_will_try_add_more_time.jpg",
+    "caption": "Centrifugal clutch parts: weights, sprag and outer housing"
+   }
+  ],
+  "bearing-rumble": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_bad_ball_bearing.jpg",
+    "caption": "Two ball bearings: the rough one is the cause of rumble"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_without_bushings_bearing_shells.jpg",
+    "caption": "Worn bearing shells: wear that makes knocking and rumble"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_bad_bushing_good_bushing.jpg",
+    "caption": "Good and worn bearing shells side by side"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_roller_bearing.jpg",
+    "caption": "Connecting rod with needle bearings, crank pin and thrust washers"
+   }
+  ],
+  "deep-knock": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_crank_rod.jpg",
+    "caption": "Crankshaft, connecting rod and bearing shells laid out"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_bad_bushing_good_bushing.jpg",
+    "caption": "Good and worn bearing shells side by side"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_piston_top_chewed.jpg",
+    "caption": "Piston crown chewed by bearing debris"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_roller_bearing.jpg",
+    "caption": "Connecting rod with needle bearings, crank pin and thrust washers"
+   }
+  ],
+  "engine-seized": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_beam_me_up_scotty.jpg",
+    "caption": "Pitted piston crown"
+   }
+  ],
+  "new-vibration": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_gear_drive_counterbalancer_2.jpg",
+    "caption": "Balancer chain drive on the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_gear_drive_counterbalancer_chain_drive_counterbalancer.jpg",
+    "caption": "Balancer gears meshing in the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_simply_loosen_then_tighten_adjuster_balancer.jpg",
+    "caption": "Balancer chain adjuster and timing marks"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/122/122_they_can_turn_ride_causes_stop.jpg",
+    "caption": "Crankshaft with balancer gear and timing marks"
+   }
+  ],
+  "piston-crown-damage": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/130/130_bent.jpg",
+    "caption": "Bent valve and the mark where the piston struck it"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_honda_piston.jpg",
+    "caption": "Four-stroke piston with ring grooves and pin bosses"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_intake_port.jpg",
+    "caption": "Two-stroke cylinder intake port with piston ring visible"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_25_too_hot_lean_pre_ignition.jpg",
+    "caption": "Spark plug electrode burnt away by pre-ignition and lean running"
+   }
+  ],
+  "gear-lever-loose": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_shaft_linkage.jpg",
+    "caption": "Shifter shaft linkage and drum"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_pawl_adjust.jpg",
+    "caption": "Shift shaft arm with equal distances to set"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_drum.jpg",
+    "caption": "Shifter drum and gear set in hand"
+   }
+  ],
+  "gearbox-whine": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_gearboxes_motorcycle_engines_do_not_produce.jpg",
+    "caption": "Gearbox shafts with the gears in order"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_shaft_might_still_saved_but_not.jpg",
+    "caption": "Damaged tapered roller bearing"
+   }
+  ],
+  "hard-gear-change": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_drum_shifters_drum_slider_forks_shaft_3.jpg",
+    "caption": "Shift drum with a fork groove"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_ratchet_pawl.jpg",
+    "caption": "Shift ratchet pawl in the engine case"
+   }
+  ],
+  "stuck-in-gear": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_broken_teeth.jpg",
+    "caption": "Gear with broken teeth"
+   }
+  ],
+  "milky-oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_pump_impeller_single_cylinder.jpg",
+    "caption": "Water pump impeller seen with the cover removed"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_i_wonder_what_they_mean.jpg",
+    "caption": "Water pump impeller inside the cover"
+   }
+  ],
+  "blue-smoke": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_checking_guide.jpg",
+    "caption": "Checking valve guide play with a dial gauge"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_three_piece.jpg",
+    "caption": "Three-piece oil ring"
+   }
+  ],
+  "chain-dry-rusty": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bearing_area.jpg",
+    "caption": "Chain pin and bushing area where wear happens"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_special_grooves.jpg",
+    "caption": "X-ring chain cutaway showing sealing rings"
+   }
+  ],
+  "chain-stretches-fast": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_carrier.jpg",
+    "caption": "Rear wheel parts including the sprocket carrier"
+   }
+  ],
+  "auto-clutch-fault": [],
+  "overheating-liquid": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/125/125_water_cooling.jpg",
+    "caption": "Radiator behind a crash bar"
+   }
+  ],
+  "cam-chain-rattle": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_cam_chain_adjuster_roller.jpg",
+    "caption": "Cam chain guide blade removed from the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_automatic_adjustment.jpg",
+    "caption": "Automatic cam chain tensioner body and its parts"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_adjustable.jpg",
+    "caption": "Manual cam chain tensioner removed from the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_if_adjuster_plate_may_pull_both.jpg",
+    "caption": "Cam chain adjuster arm with its sprocket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/132/132_check_them_wear_when_replace_cam.jpg",
+    "caption": "Toothed cam belt and tensioner"
+   }
+  ],
+  "low-compression": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_checking_guide.jpg",
+    "caption": "Checking valve guide play with a dial gauge"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_anyway_get_idea.jpg",
+    "caption": "Leak-down tester connected to a cylinder"
+   }
+  ],
+  "metal-in-oil": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/129/129_shaft_might_still_saved_but_not.jpg",
+    "caption": "Damaged tapered roller bearing"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/128/128_crank_rod.jpg",
+    "caption": "Crankshaft, connecting rod and bearing shells laid out"
+   }
+  ],
+  "piston-slap": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_if_over_specification_will_need_bore.jpg",
+    "caption": "Cylinder bore with wear to check"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_if_after_market_piston_use_piston.jpg",
+    "caption": "Feeler gauge strip used to check piston clearance"
+   }
+  ],
+  "tappet-tick": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_type_adjusters_valve_shims_valve.jpg",
+    "caption": "Cam lobe above a shim and bucket"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_shim_type_adjusters.jpg",
+    "caption": "Valve shims of different thicknesses"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_tr200_valve_adjustment_1_tr200_valve.jpg",
+    "caption": "Rocker arms with adjuster lock bolts on a cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_push_rods.jpg",
+    "caption": "Pushrods in a pushrod engine head"
+   }
+  ],
+  "two-stroke-crankcase-leak": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_works_because_gases_liquids_simply_cannot.jpg",
+    "caption": "Labyrinth seal on a two-stroke crankshaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_new_seal_lip.jpg",
+    "caption": "Worn oil seal lip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_lever_seal_out.jpg",
+    "caption": "Levering an oil seal out with a screwdriver"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/135/135_labyrinth_seal.jpg",
+    "caption": "Labyrinth seal: gas and liquid cannot pass the grooves"
+   }
+  ],
+  "gear-lever-no-return": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shifter_shaft_linkage.jpg",
+    "caption": "Shifter shaft linkage and drum"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_check_shop_manuals.jpg",
+    "caption": "Shift shaft arm, set equal distances to the manual"
+   }
+  ]
+ }
+}

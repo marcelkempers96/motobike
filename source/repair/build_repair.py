@@ -122,11 +122,25 @@ def photo_src(src):
     except Exception: _done[src] = None; return None
   _done[src] = 'assets/repair-photos/' + name
   return _done[src]
+_AH = {}
+def _ahash(src):
+  # 8x8 average hash of a converted photo, to drop near-duplicates (same photo at two sizes) on one page
+  if src not in _AH:
+    try:
+      im = _Image.open(os.path.join(ROOT, src)).convert('L').resize((8, 8))
+      px = list(im.getdata()); m = sum(px) / 64; _AH[src] = sum(1 << n for n, v in enumerate(px) if v > m)
+    except Exception: _AH[src] = None
+  return _AH[src]
+def _near(a, b): return a is not None and b is not None and bin(a ^ b).count('1') <= 6
 def photos_html(kind, i, rel, limit=4, skip=None):
-  items = []
+  items = []; hashes = [_ahash(skip)] if skip else []
   for ph in PHOTOS[kind].get(i, [])[:limit + (1 if skip else 0)]:
     src = photo_src(ph['file'])
     if src == skip: continue
+    if src:
+      h = _ahash(src)
+      if any(_near(h, x) for x in hashes): continue
+      hashes.append(h)
     if src and len(items) < limit: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
   if not items: return ''
   return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div></section>'

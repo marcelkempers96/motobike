@@ -1,0 +1,72 @@
+id	title	system	photos_now	parts
+bodywork-rattle	Rattling from panels, mudguards or the seat	body	0	bodywork,seat,mirrors,exhaust
+centre-stand-fault	Centre stand is hard to use or scrapes	body	0	centre_stand,frame,rear_shock
+crash-check	The bike has been dropped or crashed	body	0	frame,forks,handlebar,levers
+frame-crack	Crack in the frame or a bracket	body	0	frame,engine_mounts,footpegs,side_stand
+mirror-loose	Mirror is loose or will not stay in place	body	0	mirrors,handlebar,levers
+seat-loose	Seat is loose or the seat lock does not work	body	0	seat,bodywork,frame
+side-stand-weak	Side stand spring is weak or the stand is loose	body	0	side_stand,interlock_switches,frame
+abs-light	ABS warning light is on	brakes	0	abs,fuse,wiring,battery
+cbs-fault	Combined braking (CBS) does not work as it should	brakes	0	cbs_unit,rear_brake,brake,master_cylinder
+wheel-locks	Wheel locks too easily	brakes	0	brake_pads,brake_caliper,drum_brake,rear_brake
+choke-cable-fault	Choke lever or cable does not work	controls	0	choke_cable,carb
+lever-damaged	Brake or clutch lever is loose, bent or broken	controls	0	levers,master_cylinder,clutch_cable,brake_cable
+pedal-stiff	Foot pedal or footpeg is stiff, bent or loose	controls	0	footpegs,rear_brake,gear_lever,kickstarter
+throttle-free-play	Throttle has too much free play	controls	0	throttle_cable,handlebar,carb,throttle_body
+throttle-sticks	Throttle sticks or does not snap shut	controls	0	throttle_cable,handlebar,carb,throttle_body
+pulls-to-side	Bike pulls to one side	steering	0	front_tyre,rear_tyre,forks,handlebar
+weave	Bike weaves at high speed	steering	0	rear_tyre,front_tyre,swingarm,rear_shock
+rear-bouncy	Rear bounces after bumps	suspension	0	rear_shock,rear_tyre,swingarm
+rear-clunk	Clunk from the rear suspension	suspension	0	rear_shock,swingarm,chain,cush_drive
+rear-harsh	Rear suspension feels harsh	suspension	0	rear_shock,rear_tyre,swingarm,seat
+rear-sagging	Rear sits too low	suspension	0	rear_shock,swingarm,rear_tyre
+shock-leak	Oil leaking from a rear shock	suspension	0	rear_shock,rear_tyre,chain
+puncture-tubeless	Flat tyre on a tubeless wheel	wheels	0	front_tyre,rear_tyre,tyre_valve,front_wheel
+slow-puncture	Tyre slowly loses air	wheels	0	tyre_valve,front_tyre,rear_tyre,inner_tube
+tyre-bulge	Tyre has a bulge or cut	wheels	0	front_tyre,rear_tyre,inner_tube,front_wheel
+tyre-cupping	Tyre worn into a scalloped or cupped pattern	wheels	0	front_tyre,rear_tyre,forks,rear_shock
+brake-fade	Brakes get weaker when hot	brakes	1	brake_fluid,brake_pads,brake_disc,drum_brake
+brake-fluid-dark	Brake fluid is dark or low	brakes	1	brake_fluid,brake_pads,master_cylinder,brake_caliper
+brake-judder	Brakes pulse or judder	brakes	1	brake_disc,brake_pads,wheel_bearing,steering_bearings
+brake-squeal	Brakes squeal	brakes	1	brake_pads,brake_disc,brake_caliper,drum_brake
+lever-to-bar	Brake lever pulls back to the handlebar	brakes	1	brake_fluid,brake_hose,master_cylinder,brake_pads
+pads-uneven	Brake pads wear unevenly	brakes	1	brake_pads,brake_caliper,brake_disc,master_cylinder
+spongy-brake	Brake lever or pedal feels spongy	brakes	1	brake_fluid,brake_hose,brake_pads,master_cylinder
+weak-brakes	Brakes are firm but do not stop the bike well	brakes	1	brake_pads,brake_disc,brake_caliper,drum_brake
+cable-frayed	A control cable is frayed or stiff	controls	1	clutch_cable,throttle_cable,brake_cable,choke_cable
+front-clunk-braking	Clunk from the front when braking	steering	1	steering_bearings,forks,brake_caliper,axle
+headshake	Handlebars shake or wobble	steering	1	front_tyre,steering_bearings,wheel_bearing,front_wheel
+heavy-steering	Steering feels heavy	steering	1	front_tyre,steering_bearings,forks,handlebar
+notchy-steering	Steering is notchy or catches in the centre	steering	1	steering_bearings,forks,handlebar,frame
+fork-bottoming	Front forks bottom out	suspension	1	fork_oil,fork_seals,forks,front_tyre
+fork-harsh	Front forks feel harsh over bumps	suspension	1	forks,fork_oil,fork_seals,front_tyre
+fork-noise	Knocking or squeaking from the front forks	suspension	1	forks,fork_seals,fork_oil,steering_bearings
+fork-sticky	Front forks feel sticky or stiff	suspension	1	forks,fork_seals,fork_oil,axle
+swingarm-play	Swingarm moves sideways or has play	suspension	1	swingarm,wheel_bearing,rear_wheel,rear_shock
+tyre-centre-wear	Tyre worn flat in the centre	wheels	1	rear_tyre,front_tyre
+valve-leak	Air leaking from the tyre valve	wheels	1	tyre_valve,inner_tube,front_wheel,rear_wheel
+fastener-stuck-rounded	Screw or bolt will not come out, or its head is damaged	body	2	engine,gaskets,engine_mounts
+brake-drag	Brake drags and the wheel does not spin freely	brakes	2	brake_caliper,brake_pads,master_cylinder,drum_brake
+brake-fluid-leak	Brake fluid is leaking	brakes	2	brake_hose,brake_caliper,master_cylinder,brake_fluid
+brake-grinding	Brakes grind or scrape	brakes	2	brake_pads,brake_disc,brake_caliper,drum_brake
+caliper-sticking	Brake caliper sticks or is seized	brakes	2	brake_caliper,brake_pads,brake_disc,brake_fluid
+drum-brake-noise	Drum brake squeaks or grinds	brakes	2	drum_brake,rear_brake,wheel_bearing,brake_cable
+drum-brake-weak	Drum brake is weak	brakes	2	drum_brake,brake_cable,rear_brake,levers
+lever-sinks	Brake lever slowly sinks when held	brakes	2	master_cylinder,brake_caliper,brake_hose,brake_fluid
+rear-pedal-travel	Rear brake pedal travels too far	brakes	2	rear_brake,drum_brake,brake_cable,master_cylinder
+speedo-cable-fault	Speedometer cable is noisy or broken	controls	2	speedo_cable,instruments,front_wheel,speed_sensor
+bars-misaligned	Handlebar is not straight when the wheel is straight	steering	2	handlebar,forks,front_wheel,frame
+fork-leak	Oil leaking from a fork leg	suspension	2	fork_seals,fork_oil,forks,brake_pads
+fork-twisted	Fork legs are twisted or uneven	suspension	2	forks,handlebar,front_wheel,frame
+puncture-tube	Flat tyre on a wheel with an inner tube	wheels	2	inner_tube,front_tyre,rear_tyre,tyre_valve
+rim-damage	Rim is dented or cracked	wheels	2	front_wheel,rear_wheel,spokes,front_tyre
+speed-vibration	Vibration at certain speeds	wheels	2	front_wheel,rear_wheel,front_tyre,rear_tyre
+tyre-cracked	Tyre is cracked or old	wheels	2	front_tyre,rear_tyre,inner_tube,tyre_valve
+wheel-bearing-noise	Rumbling or grinding from a wheel	wheels	2	wheel_bearing,front_wheel,rear_wheel,speedo_cable
+wheel-bearing-play	Wheel moves sideways on the axle	wheels	2	wheel_bearing,axle,front_wheel,rear_wheel
+wheel-buckled	Wheel is buckled or wobbles	wheels	2	front_wheel,rear_wheel,spokes,wheel_bearing
+hub-hot-after-ride	Wheel hub or brake drum is very hot after riding	wheels	2	wheel_bearing,drum_brake,brake_caliper,brake_pads
+new-fork-seal-leaks	Fork leaks again soon after new seals	suspension	3	fork_seals,forks,fork_oil,fork_bushes
+bead-leak	Air leaking where the tyre meets the rim	wheels	3	front_tyre,rear_tyre,front_wheel,rear_wheel
+loose-spokes	Spokes are loose or broken	wheels	3	spokes,front_wheel,rear_wheel,inner_tube
+new-tube-flat-after-fit	New tube goes flat soon after fitting a tyre	wheels	3	inner_tube,tyre_valve,front_tyre,rear_tyre

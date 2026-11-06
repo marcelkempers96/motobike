@@ -1,0 +1,141 @@
+id	title	system	photos_now	parts
+battery-corrosion	Battery terminals are corroded	charging	0	battery,earth_strap,wiring,regulator
+dim-lights-idle	Lights go dim at idle	charging	0	battery,regulator,stator,headlight
+ev-aux-battery-flat	Small 12 V battery is flat	ev-battery	0	aux_battery,dc_dc,fuse,wiring
+ev-bms-cutoff	Battery shuts off suddenly (BMS protection)	ev-battery	0	bms,traction_battery,contactor,controller
+ev-charge-jumps	Battery percentage jumps or drops suddenly	ev-battery	0	bms,traction_battery,instruments,wiring
+ev-charge-stops	Charging stops before the battery is full	ev-battery	0	charger,charge_port,bms,traction_battery
+ev-charger-cable-damage	Charger cable or plug is damaged	ev-battery	0	charger,charge_port
+ev-charger-fault	Charger shows a fault light or stays off	ev-battery	0	charger,charge_port,fuse,wiring
+ev-cold-weather	Poor range or slow charging in the cold	ev-battery	0	traction_battery,bms,charger,rear_tyre
+ev-pack-damaged	Battery pack is dropped, dented, swollen or wet	ev-battery	0	traction_battery,bms
+ev-pack-hot-smell	Battery pack is hot, hissing or smells	ev-battery	0	traction_battery,bms,charger,charge_port
+ev-port-hot	Charge plug or socket gets hot	ev-battery	0	charge_port,charger,wiring,bms
+ev-range-drop	Range has dropped	ev-battery	0	traction_battery,bms,charger,rear_tyre
+ev-swap-not-recognised	Swapped battery is not recognised	ev-battery	0	traction_battery,bms,charge_port,wiring
+ev-wont-charge	Battery will not charge	ev-battery	0	charger,charge_port,traction_battery,bms
+ev-controller-hot	Controller overheats or shuts down	ev-drive	0	controller,wiring,motor,traction_battery
+ev-cuts-out-accel	Power cuts out when accelerating hard	ev-drive	0	traction_battery,bms,controller,motor
+ev-dash-dark	Dashboard is dark and the bike seems dead	ev-drive	0	traction_battery,aux_battery,fuse,ignition_switch
+ev-error-code	Error code or warning on the dashboard	ev-drive	0	controller,bms,traction_battery,motor_sensor
+ev-insulation-warning	Insulation or high-voltage warning	ev-drive	0	traction_battery,wiring,motor,controller
+ev-judder	Bike judders or jerks when pulling away	ev-drive	0	motor_sensor,wiring,motor,controller
+ev-limp-mode	Bike is in reduced power or limp mode	ev-drive	0	traction_battery,bms,controller,motor
+ev-motor-hot	Motor gets very hot or power drops after a long climb	ev-drive	0	motor,controller,rear_brake,rear_tyre
+ev-motor-noise	Grinding, clicking or growling from the motor	ev-drive	0	wheel_bearing,motor,motor_sensor,axle
+ev-no-ready	Dashboard is on but the bike will not go to ready	ev-drive	0	interlock_switches,side_stand,brake_light_switch,throttle_sensor
+ev-no-regen	Regenerative braking does not work	ev-drive	0	controller,brake_light_switch,throttle_sensor,traction_battery
+ev-ready-no-drive	Bike shows ready but will not move	ev-drive	0	throttle_sensor,brake_light_switch,interlock_switches,controller
+ev-throttle-dropout	Power cuts in and out with the throttle	ev-drive	0	throttle_sensor,wiring,traction_battery,interlock_switches
+ev-water-exposure	Bike has been in deep water or a flood	ev-drive	0	traction_battery,bms,controller,motor
+ev-wheel-locked	Rear wheel is locked or very hard to push	ev-drive	0	rear_brake,motor,controller,wheel_bearing
+carb-no-fuel	No fuel reaching the carburettor	fuel	0	fuel_tap,fuel_filter,fuel_line,fuel_cap
+carb-overflowing	Fuel pours out of the carburettor overflow pipe	fuel	0	carb,fuel_tap,fuel_line,fuel_filter
+choke-stuck	Choke is stuck on or will not work	fuel	0	choke_cable,carb,throttle_body,efi_sensors
+dirty-throttle-body	Unstable idle after cleaning or battery disconnection (fuel-injected)	fuel	0	throttle_body,efi_sensors,intake_manifold,air_filter
+engine-warning-light	Engine warning light (check engine, MIL) is on or flashing	fuel	0	ecu,efi_sensors,o2_sensor,injector
+fuel-cap-fault	Fuel cap is stuck, leaks or will not lock	fuel	0	fuel_cap,fuel_tank
+fuel-gauge-wrong	Fuel gauge reads wrong or does not move	fuel	0	fuel_sender,instruments,wiring,earth_strap
+fuel-leak	Fuel is leaking or dripping	fuel	0	fuel_line,fuel_tap,fuel_tank,fuel_filter
+fuel-pump-noisy	Fuel pump whines loudly or runs all the time	fuel	0	fuel_pump,fuel_filter,fuel_tank,fuse
+fuel-pump-silent	No buzz from the fuel pump when the key is turned on	fuel	0	fuel_pump,fuse,wiring,battery
+fuel-smell	Strong smell of fuel around the bike	fuel	0	fuel_line,fuel_tap,carb,fuel_cap
+fuel-starvation	Engine stops and only runs on reserve or after a rest	fuel	0	fuel_tap,fuel_filter,fuel_cap,fuel_line
+injector-fault	Fuel injector suspected blocked or leaking	fuel	0	injector,fuel_pump,fuel_filter,intake_manifold
+rusty-tank	Rust or flakes inside the fuel tank	fuel	0	fuel_tank,fuel_filter,fuel_tap,fuel_pump
+stale-fuel	Old or stale fuel in the tank	fuel	0	fuel_tank,carb,fuel_filter,injector
+tank-vacuum	Engine stops after a few kilometres and the cap hisses when opened	fuel	0	fuel_cap,fuel_tank,fuel_line
+water-in-fuel	Water or dirt in the fuel	fuel	0	fuel_tank,fuel_filter,fuel_tap,carb
+brake-light-dead	Brake light does not work	lighting	0	tail_light,brake_light_switch,fuse,wiring
+brake-light-stuck-on	Brake light stays on	lighting	0	brake_light_switch,levers,rear_brake,tail_light
+dash-dead	Instruments or dashboard are dead	lighting	0	instruments,fuse,battery,wiring
+headlight-dim	Headlight is dim	lighting	0	headlight,battery,earth_strap,wiring
+headlight-flicker	Headlight flickers	lighting	0	wiring,earth_strap,headlight,handlebar_switches
+headlight-out	Headlight does not work	lighting	0	headlight,fuse,handlebar_switches,wiring
+high-beam-fault	High beam or flash does not work	lighting	0	handlebar_switches,headlight,wiring,instruments
+horn-silent	Horn does not work	lighting	0	horn,handlebar_switches,fuse,wiring
+horn-weak	Horn is weak or croaky	lighting	0	horn,battery,earth_strap,wiring
+indicators-fast	Indicators flash too fast	lighting	0	indicators,flasher,earth_strap,wiring
+indicators-steady	Indicators stay on and do not flash	lighting	0	flasher,indicators,wiring,earth_strap
+speedo-dead	Speedometer or odometer does not work	lighting	0	speed_sensor,speedo_cable,instruments,wiring
+tail-light-out	Tail light does not work	lighting	0	tail_light,fuse,wiring,earth_strap
+warning-lights-flicker	Warning lights flicker or come on wrongly	lighting	0	battery,earth_strap,wiring,instruments
+bike-feels-held-back	Bike feels held back, as if something is dragging	power	0	brake_caliper,brake_pads,drum_brake,rear_brake
+high-fuel-use	Uses more fuel than normal	power	0	air_filter,choke_cable,carb,fuel_line
+low-top-speed	Will not reach normal top speed	power	0	air_filter,exhaust,carb,fuel_filter
+poor-hill-climbing	Struggles to climb hills or carry a passenger	power	0	clutch_plates,chain,front_sprocket,rear_sprocket
+revs-without-speed	Engine revs rise but the bike does not speed up	power	0	clutch_plates,clutch_cable,clutch,cvt_belt
+sudden-power-loss	Sudden loss of power while riding	power	0	fuel_tank,fuel_cap,fuel_tap,fuel_pump
+bogs-full-throttle	Bogs down or chokes at full throttle	running	0	air_filter,carb,fuel_filter,fuel_tap
+cuts-out-bumps	Cuts out when riding over bumps	running	0	battery,fuse,wiring,ignition_switch
+cuts-out-random	Cuts out randomly, then restarts	running	0	fuel_cap,fuel_tank,fuel_filter,fuel_pump
+dies-in-rain	Misfires or dies in heavy rain	running	0	ignition_coil,spark_plug,wiring,handlebar_switches
+dies-side-stand	Engine dies when the side stand moves or the bike is put in gear	running	0	interlock_switches,side_stand,wiring,clutch_cable
+flat-spot	Flat spot in the middle of the rev range	running	0	carb,air_filter,throttle_body,efi_sensors
+hanging-revs	Revs hang or drop slowly after closing the throttle	running	0	throttle_cable,carb,throttle_body,intake_manifold
+hesitation	Hesitates or stumbles when opening the throttle	running	0	carb,throttle_body,efi_sensors,intake_manifold
+high-idle	Idle speed is too high	running	0	throttle_cable,carb,throttle_body,intake_manifold
+hunting-idle	Idle speed rises and falls on its own	running	0	intake_manifold,carb,throttle_body,efi_sensors
+misfire-under-load	Misfires or stutters when accelerating hard or climbing	running	0	spark_plug,ignition_coil,fuel_filter,fuel_pump
+rough-idle	Rough, lumpy or uneven idle	running	0	spark_plug,ignition_coil,air_filter,carb
+runs-rich	Engine runs rich, smells of fuel and smokes black	running	0	air_filter,choke_cable,carb,injector
+stalls-at-idle	Engine stalls at idle or at junctions	running	0	carb,throttle_body,air_filter,spark_plug
+stalls-when-hot	Engine stalls once it is fully warm	running	0	ignition_coil,pickup,carb,fuel_line
+surging-cruise	Surges or jerks at steady cruising speed	running	0	chain,rear_sprocket,cush_drive,carb
+flooded-engine	Engine is flooded and smells of fuel	starting	0	spark_plug,carb,fuel_tap,choke_cable
+hard-hot-start	Hard to start when the engine is hot	starting	0	spark_plug,ignition_coil,pickup,carb
+no-start-after-rain	Will not start after rain or washing	starting	0	ignition_coil,spark_plug,wiring,handlebar_switches
+start-blocked-interlock	Will not start in gear, on the side stand or without the clutch pulled	starting	0	interlock_switches,side_stand,levers,clutch_cable
+starts-only-with-choke	Starts only with the choke on or the throttle held open	starting	0	carb,intake_manifold,air_filter,fuel_filter
+battery-swollen	Battery is boiling, swollen or leaking	charging	1	battery,regulator,wiring
+kill-switch-fault	Engine stop switch fault	ignition	1	handlebar_switches,wiring,ignition_switch
+misfire-high-rpm	Misfires only at high revs	ignition	1	spark_plug,ignition_coil,pickup,fuel_filter
+all-lights-out	All lights stop working	lighting	1	fuse,battery,ignition_switch,wiring
+bulbs-blow-often	Bulbs keep blowing	lighting	1	regulator,battery,headlight,tail_light
+indicators-dead	Indicators do not work	lighting	1	flasher,indicators,fuse,handlebar_switches
+power-fades-hot	Power fades as the engine gets hot	power	1	engine_oil,air_filter,spark_plug,ignition_coil
+runs-lean	Engine runs hot and lean, pops and pinks	running	1	intake_manifold,carb,fuel_filter,fuel_tap
+backfire-on-start	Pops or bangs when trying to start	starting	1	ignition_coil,spark_plug,pickup,stator
+cranks-no-start	Engine turns over but will not start	starting	1	spark_plug,ignition_coil,fuel_pump,fuel_tap
+hard-cold-start	Hard to start when the engine is cold	starting	1	battery,choke_cable,spark_plug,carb
+kickstart-jammed	Kickstarter will not move or does not spring back	starting	1	kickstarter,gearbox,engine,clutch
+starter-keeps-running	Starter keeps turning after I let go of the button	starting	1	starter_relay,handlebar_switches,wiring,battery
+starts-then-dies	Engine starts, then dies after a few seconds	starting	1	fuel_cap,fuel_tap,fuel_filter,carb
+accessory-wiring-fault	Problems after fitting accessories or an alarm	wiring	1	wiring,fuse,battery,earth_strap
+burning-smell-wiring	Burning smell from the wiring	wiring	1	wiring,fuse,regulator,stator
+wet-connectors	Electrical faults after rain or washing	wiring	1	wiring,handlebar_switches,earth_strap,ignition_coil
+battery-flat	Battery goes flat after the bike is parked	charging	2	battery,regulator,stator,wiring
+overcharging	Battery overcharges and bulbs blow	charging	2	regulator,battery,earth_strap,wiring
+parasitic-drain	Something drains the battery with the key off	charging	2	battery,wiring,regulator,ignition_switch
+battery-volts-ok-fails-load	Battery reads good voltage but will not start the bike	charging	2	battery,wiring,starter_relay,earth_strap
+coil-fails-hot	Ignition cuts out when hot and returns when cool	ignition	2	ignition_coil,pickup,cdi,ecu
+weak-spark	Weak, thin or orange spark	ignition	2	spark_plug,ignition_coil,battery,earth_strap
+low-power	Engine feels weak and down on power	power	2	air_filter,spark_plug,fuel_filter,carb
+pinking	Pinging or rattling sound when accelerating (pinking)	power	2	spark_plug,intake_manifold,carb,cylinder_head
+misfire-ignition-or-fuel	Misfire: ignition or fuel?	running	2	spark_plug,ignition_coil,carb,injector
+kickstart-slips	Kickstarter slips or turns without turning the engine	starting	2	kickstarter,clutch_plates,clutch,clutch_cable
+starter-spins-freely	Starter motor whirs but the engine does not turn	starting	2	starter_clutch,starter,stator,battery
+weak-battery-no-fire	Starter turns the engine but the engine will not fire (weak battery)	starting	2	battery,spark_plug,ignition_coil,wiring
+kick-very-hard	Kickstarter is very hard to push through	starting	2	valves,camshaft,kickstarter,piston
+fuse-keeps-blowing	Fuse keeps blowing	wiring	2	fuse,wiring,regulator,tail_light
+ignition-switch-fault	Ignition switch is stiff or cuts power	wiring	2	ignition_switch,wiring,fuse,battery
+no-power-key-on	Nothing happens when the key is turned on	wiring	2	battery,fuse,ignition_switch,wiring
+new-battery-dies	A new battery goes flat quickly	charging	3	battery,regulator,stator,wiring
+regulator-hot	Regulator is very hot or the connector has melted	charging	3	regulator,wiring,stator,battery
+stator-burnt	Burnt smell from the generator or a dark stator connector	charging	3	stator,regulator,wiring,battery
+cdi-ecu-suspect	CDI or ECU suspected faulty	ignition	3	cdi,ecu,pickup,ignition_coil
+no-spark	No spark at the spark plug	ignition	3	spark_plug,ignition_coil,handlebar_switches,ignition_switch
+plug-black-sooty	Spark plug is black and sooty	ignition	3	spark_plug,air_filter,choke_cable,carb
+plug-oily	Spark plug is wet with oil	ignition	3	spark_plug,piston_rings,valves,two_stroke_oil_pump
+points-wear-misfire	Points ignition runs rough or misses	ignition	3	ignition_coil,spark_plug,stator,contact_points
+kickstart-kickback	Kickstarter kicks back against my foot	starting	3	spark_plug,pickup,cdi,ecu
+no-start-after-storage	Will not start after standing for weeks or months	starting	3	battery,fuel_tank,carb,fuel_filter
+slow-cranking	Engine turns over slowly	starting	3	battery,earth_strap,starter,starter_relay
+starter-clicks	Starter relay clicks but the engine does not turn	starting	3	battery,starter_relay,starter,earth_strap
+starter-grinding	Grinding or screeching noise when starting	starting	3	starter_clutch,starter,starter_relay,stator
+starter-silent	Nothing happens when I press the starter button	starting	3	battery,fuse,interlock_switches,handlebar_switches
+intermittent-electrical	Electrical faults come and go	wiring	3	wiring,earth_strap,battery,ignition_switch
+switch-fault	Handlebar switch does not work properly	wiring	3	handlebar_switches,wiring,interlock_switches
+not-charging	Battery is not charging while riding	charging	4	regulator,stator,battery,fuse
+ignition-timing-suspect	Ignition timing suspected wrong	ignition	4	pickup,stator,cdi,ecu
+plug-white	Spark plug is white or blistered	ignition	4	spark_plug,intake_manifold,carb,fuel_filter

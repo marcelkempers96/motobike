@@ -1,0 +1,1050 @@
+{
+ "problems": {
+  "fastener-stuck-rounded": [
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_impact_driver.jpg",
+    "caption": "Impact driver: shock frees seized or rounded screws without slipping"
+   },
+   {
+    "file": "source/dansmc/01_Basics_Tools_Manuals/016/016_screw_drivers.jpg",
+    "caption": "Screwdrivers in different sizes: a tight-fitting bit avoids rounding heads"
+   }
+  ],
+  "cbs-fault": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_try_bleeding_air_every_fitting.jpg",
+    "caption": "Brake line with hose, union bolts and caliper fittings: check for leaks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_plunger_shaft.jpg",
+    "caption": "Rear master cylinder plunger shaft: worn seals leak or lose pressure"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_axle_can_just_go_through_fork_2.jpg",
+    "caption": "Front disc and caliper on a spoked wheel: check disc and pads"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_front_wheel_removal_2.jpg",
+    "caption": "Front wheel with disc brake and fork leg: check disc and pads"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_lot_dirt_bikes_have_open_slots.jpg",
+    "caption": "Rear brake disc and swingarm with axle block"
+   }
+  ],
+  "wheel-locks": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion.jpg",
+    "caption": "Corroded plunger shaft with rust and dirt: a cause of sticking brakes"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_piston.jpg",
+    "caption": "Caliper piston removed: pitting or rust on it makes the caliper stick"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_pads_may_have_worn_different.jpg",
+    "caption": "Two pads worn by different amounts: a sign of a sticking caliper"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_both_cases_will_need_remove_wheel.jpg",
+    "caption": "Drum brake shoes and springs: look for wear and glazing"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_do_not_compress_caliper_pistons.jpg",
+    "caption": "Pair of disc brake pads: check thickness and even wear"
+   }
+  ],
+  "lever-damaged": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_cylinder_reservoir_made_out_plastic.jpg",
+    "caption": "Master cylinder reservoir: check the fluid level and colour here"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_most_clutches_have_disengagement_mechanism_center.jpg",
+    "caption": "Clutch rod, cable adjuster and rod adjuster on the engine"
+   }
+  ],
+  "pedal-stiff": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_may_also_have_remove_mufflers_shocks.jpg",
+    "caption": "Rear drum brake adjuster and anchor bolt: where pedal travel is set"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_shaft_operated_rear_brake.jpg",
+    "caption": "Rear drum brake parts with rod and adjuster: worn pivots add travel"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kicksarter_return_spring.jpg",
+    "caption": "Kick starter return spring: a weak or stuck spring affects the pedal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/115/115_shift_patterns.jpg",
+    "caption": "Gear lever shaft on the engine side: a bent shaft binds"
+   }
+  ],
+  "pulls-to-side": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_there_may_several_each_tire.jpg",
+    "caption": "Tread wear marker and date code on a tyre"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_aline_front_wheel.jpg",
+    "caption": "Checking the front wheel lines up with the bike"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_loosen_bolts.jpg",
+    "caption": "Fork clamp bolts on the yokes: loose clamps let the legs twist"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_align_front_wheel_2.jpg",
+    "caption": "Loosened fork bolts while the front wheel is aligned with the frame"
+   }
+  ],
+  "weave": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings.jpg",
+    "caption": "Loose steering balls and race: pitted or loose bearings make steering rough"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut_2.jpg",
+    "caption": "Rear swingarm end with chain and sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel_removal.jpg",
+    "caption": "Rear wheel with the shock absorber beside it: check shock and tyre"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel.jpg",
+    "caption": "Dial gauge reading rim run-out: a buckled rim shows here"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings.jpg",
+    "caption": "Caged tapered roller steering bearing and cup: check for pits and dents"
+   }
+  ],
+  "rear-bouncy": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel_removal.jpg",
+    "caption": "Rear wheel with the shock absorber beside it: check shock and tyre"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel.jpg",
+    "caption": "Rear wheel with drum brake and shock: check for leaks and play"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut_2.jpg",
+    "caption": "Rear swingarm end with chain and sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_push_forward_pop_off.jpg",
+    "caption": "Rear axle end at the swingarm: loose mounts allow play"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_one_lug_nut_2.jpg",
+    "caption": "Rear wheel on a single-sided swingarm: check tyre and mounts"
+   }
+  ],
+  "rear-clunk": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_carrier.jpg",
+    "caption": "Sprocket carrier with cush drive rubbers: worn rubbers cause clunk"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_bolted.jpg",
+    "caption": "Rear wheel parts with the driven sprocket and rubbers: worn rubbers clunk"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut_2.jpg",
+    "caption": "Rear swingarm end with chain and sprocket"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_loosen_nut_push_forward_unhook_chain.jpg",
+    "caption": "Rear axle nut and chain adjuster: a loose axle moves under load"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut.jpg",
+    "caption": "Rear axle area with sprocket nut and chain: loose parts clunk"
+   }
+  ],
+  "rear-harsh": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_rear_wheel.jpg",
+    "caption": "Rear wheel with drum brake and shock: check for leaks and play"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_one_lug_nut_2.jpg",
+    "caption": "Rear wheel on a single-sided swingarm: check tyre and mounts"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_push_forward_pop_off.jpg",
+    "caption": "Rear axle end at the swingarm: loose mounts allow play"
+   }
+  ],
+  "rear-sagging": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_one_lug_nut_2.jpg",
+    "caption": "Rear wheel on a single-sided swingarm: check tyre and mounts"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_push_forward_pop_off.jpg",
+    "caption": "Rear axle end at the swingarm: loose mounts allow play"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_maybe_put_piece_steel_wood_between.jpg",
+    "caption": "Rear sprocket and chain seen from the swingarm side"
+   }
+  ],
+  "shock-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_one_lug_nut_2.jpg",
+    "caption": "Rear wheel on a single-sided swingarm: check tyre and mounts"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_push_forward_pop_off.jpg",
+    "caption": "Rear axle end at the swingarm: loose mounts allow play"
+   }
+  ],
+  "puncture-tubeless": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_different_styles.jpg",
+    "caption": "Rubber valves and cores: cracked rubber or a weak core leaks air"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_valve_stem_tool.jpg",
+    "caption": "Valve core tools: a loose core is a common air leak"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_marker.jpg",
+    "caption": "Tyre balance mark lined up with the valve: an unbalanced wheel vibrates"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_something_expand_bead_if_necessary.jpg",
+    "caption": "Strap pressing the tyre bead out against the rim"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_rubber_donut.jpg",
+    "caption": "Rubber ring that fills the bead gap"
+   }
+  ],
+  "slow-puncture": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_different_styles.jpg",
+    "caption": "Rubber valves and cores: cracked rubber or a weak core leaks air"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_installing_tire.jpg",
+    "caption": "Fitting a tyre and tube: a pinched tube causes flats"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_changing_tire.jpg",
+    "caption": "Tyre part off a wire wheel: look for what punctured the tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_cut_outs_fit_onto_spokes.jpg",
+    "caption": "Rim protector while levering the tyre bead"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_rubber_donut.jpg",
+    "caption": "Rubber ring that fills the bead gap"
+   }
+  ],
+  "tyre-bulge": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tire_date_code.jpg",
+    "caption": "Date code on a tyre sidewall: old rubber hardens and cracks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_there_may_several_each_tire.jpg",
+    "caption": "Tread wear marker and date code on a tyre"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_installing_tire.jpg",
+    "caption": "Fitting a tyre and tube: a pinched tube causes flats"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tires_tubes.jpg",
+    "caption": "Bare rim with the tyre half off: check for sharp edges"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_don_t_install_backwards.jpg",
+    "caption": "Fitting a tyre on a wire wheel: avoid pinching the tube"
+   }
+  ],
+  "tyre-cupping": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks.jpg",
+    "caption": "Front fork legs: oil or dirt on the tubes shows seal trouble"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tires_tubes.jpg",
+    "caption": "Bare rim with the tyre half off: check for sharp edges"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_something_expand_bead_if_necessary.jpg",
+    "caption": "Strap pressing the tyre bead out against the rim"
+   }
+  ],
+  "brake-fade": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_mix_dot_3_dot_4.jpg",
+    "caption": "Reservoir cap marked with the brake fluid type to use"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_cylinder_reservoir_made_out_plastic.jpg",
+    "caption": "Master cylinder reservoir: check the fluid level and colour here"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_drum_brakes.jpg",
+    "caption": "Drum brake shoes and backing plate: worn or glazed shoes weaken braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_course_s_never_easy.jpg",
+    "caption": "Front disc brake with the axle nut labelled: a warped disc pulses"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper.jpg",
+    "caption": "Caliper piston removed: it must be smooth and unpitted"
+   }
+  ],
+  "brake-fluid-dark": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_mix_dot_3_dot_4.jpg",
+    "caption": "Reservoir cap marked with the brake fluid type to use"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_try_bleeding_air_every_fitting.jpg",
+    "caption": "Brake line with hose, union bolts and caliper fittings: check for leaks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_plunger_shaft.jpg",
+    "caption": "Rear master cylinder plunger shaft: worn seals leak or lose pressure"
+   }
+  ],
+  "brake-judder": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_course_s_never_easy.jpg",
+    "caption": "Front disc brake with the axle nut labelled: a warped disc pulses"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_lot_dirt_bikes_have_open_slots.jpg",
+    "caption": "Rear brake disc and swingarm with axle block"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_wheel_bearings.jpg",
+    "caption": "Wheel bearings: rough or dry bearings rumble and heat up"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings_2.jpg",
+    "caption": "Tapered roller steering bearing and cup: pits cause notchy steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_front_wheel_removal_2.jpg",
+    "caption": "Front wheel with disc brake and fork leg: check disc and pads"
+   }
+  ],
+  "brake-squeal": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_pads_may_have_worn_different.jpg",
+    "caption": "Two pads worn by different amounts: a sign of a sticking caliper"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads_worn_different_rates.jpg",
+    "caption": "Brake pad worn unevenly: the cause of pulling, noise and weak braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_both_cases_will_need_remove_wheel.jpg",
+    "caption": "Drum brake shoes and springs: look for wear and glazing"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_drum_brakes.jpg",
+    "caption": "Drum brake shoes and backing plate: worn or glazed shoes weaken braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads.jpg",
+    "caption": "Disc brake pads: friction material must be thick and even"
+   }
+  ],
+  "lever-to-bar": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_there_more_than_one_piston.jpg",
+    "caption": "Caliper bores, pistons and seal: corrosion here makes a caliper stick"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_little_rubber_dust_boot.jpg",
+    "caption": "Master cylinder dust boot: a split boot lets dirt in"
+   }
+  ],
+  "pads-uneven": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion.jpg",
+    "caption": "Corroded plunger shaft with rust and dirt: a cause of sticking brakes"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_piston.jpg",
+    "caption": "Caliper piston removed: pitting or rust on it makes the caliper stick"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_sure_pad_caliper_shop_rag_so.jpg",
+    "caption": "Two-piston caliper pistons and seal groove: a worn seal leaks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper.jpg",
+    "caption": "Caliper piston removed: it must be smooth and unpitted"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion_2.jpg",
+    "caption": "Corroded brake plunger with rust and dirt: seizes the brake"
+   }
+  ],
+  "spongy-brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_i_like_cover_everything_could_dripped.jpg",
+    "caption": "Master cylinder with circlip: the plunger seals are inside"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_master_brake_cylinder_circlip.jpg",
+    "caption": "Master cylinder plunger shaft with spring and circlip"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_little_rubber_dust_boot.jpg",
+    "caption": "Master cylinder dust boot: a split boot lets dirt in"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper.jpg",
+    "caption": "Caliper piston removed: it must be smooth and unpitted"
+   }
+  ],
+  "weak-brakes": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads_worn_different_rates.jpg",
+    "caption": "Brake pad worn unevenly: the cause of pulling, noise and weak braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads.jpg",
+    "caption": "Disc brake pads: friction material must be thick and even"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_course_s_never_easy.jpg",
+    "caption": "Front disc brake with the axle nut labelled: a warped disc pulses"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_drum_brakes.jpg",
+    "caption": "Drum brake shoes and backing plate: worn or glazed shoes weaken braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_front_wheel_removal_2.jpg",
+    "caption": "Front wheel with disc brake and fork leg: check disc and pads"
+   }
+  ],
+  "cable-frayed": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_front_drum_brakes_normally_cable_operated.jpg",
+    "caption": "Cable-operated front drum brake: a stiff cable weakens braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_may_also_have_remove_mufflers_shocks.jpg",
+    "caption": "Rear drum brake adjuster and anchor bolt: where pedal travel is set"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_shaft_operated_rear_brake.jpg",
+    "caption": "Rear drum brake parts with rod and adjuster: worn pivots add travel"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_engage_disengage_clutch.jpg",
+    "caption": "Cable pulling the clutch release: a frayed cable sticks and breaks"
+   }
+  ],
+  "front-clunk-braking": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_then_just_clean_bearing_add_more.jpg",
+    "caption": "Working at a sealed wheel bearing in the hub: roughness means replacement"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_very_expensive.jpg",
+    "caption": "Wheel bearing in the hub bore: play here lets the wheel wobble"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings.jpg",
+    "caption": "Loose steering balls and race: pitted or loose bearings make steering rough"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_loosen_bolts.jpg",
+    "caption": "Fork clamp bolts on the yokes: loose clamps let the legs twist"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_axle_can_just_go_through_fork_2.jpg",
+    "caption": "Front disc and caliper on a spoked wheel: check disc and pads"
+   }
+  ],
+  "headshake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings.jpg",
+    "caption": "Caged tapered roller steering bearing and cup: check for pits and dents"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings_2.jpg",
+    "caption": "Tapered roller steering bearing and cup: pits cause notchy steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_wheel_bearings.jpg",
+    "caption": "Wheel bearings: rough or dry bearings rumble and heat up"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_adjusting_nut_second_jam_nut.jpg",
+    "caption": "Steering stem adjusting nut: too tight or too loose spoils steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_bolt_steering_stem.jpg",
+    "caption": "Steering stem top bolt and yoke: the bearing preload is set here"
+   }
+  ],
+  "heavy-steering": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_ball_bearings_caged_ball_bearings_2.jpg",
+    "caption": "Tapered roller steering bearing and cup: pits cause notchy steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_adjusting_nut_second_jam_nut.jpg",
+    "caption": "Steering stem adjusting nut: too tight or too loose spoils steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_bolt_steering_stem.jpg",
+    "caption": "Steering stem top bolt and yoke: the bearing preload is set here"
+   }
+  ],
+  "fork-bottoming": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_special_tool_2.jpg",
+    "caption": "Oil level tool and syringe: wrong fork oil level changes the ride"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_length_pipe_some_tubing_chicken_baster.jpg",
+    "caption": "Home-made fork oil level tool from pipe and baster"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_bolt.jpg",
+    "caption": "Fork parts diagram showing the spring and spacer under the top bolt"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_yamaha_fork.jpg",
+    "caption": "Fork diagram with top plug and spring: weak springs let forks bottom"
+   }
+  ],
+  "fork-harsh": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_length_pipe_some_tubing_chicken_baster.jpg",
+    "caption": "Home-made fork oil level tool from pipe and baster"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks_2.jpg",
+    "caption": "Fork diagram with spring along the tube: spring and spacer set ride"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_yamaha_fork.jpg",
+    "caption": "Fork diagram with top plug and spring: weak springs let forks bottom"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_bolt.jpg",
+    "caption": "Fork parts diagram showing the spring and spacer under the top bolt"
+   }
+  ],
+  "fork-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_pinch_bolts.jpg",
+    "caption": "Fork pinch bolts and tubes: loose or bent parts upset steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_take_time.jpg",
+    "caption": "Tube used to drive the bushing and seal home"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_loosen_bolts.jpg",
+    "caption": "Fork clamp bolts on the yokes: loose clamps let the legs twist"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_if_forks_look_ok_ride_lot_2.jpg",
+    "caption": "Fork parts diagram with the tubes and pinch bolts"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_drain.jpg",
+    "caption": "Fork diagram naming the dust cover, tube and leg"
+   }
+  ],
+  "fork-sticky": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_gators_fork_boots.jpg",
+    "caption": "Rubber fork gaiters: they keep grit off the stanchion and seal"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_pinch_bolts.jpg",
+    "caption": "Fork pinch bolts and tubes: loose or bent parts upset steering"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_yes_indeed_can_don_t_ask.jpg",
+    "caption": "Fork leg held in a vice for work on the damper rod"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_circlip.jpg",
+    "caption": "Seal retaining circlip at the top of a fork leg"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_drain.jpg",
+    "caption": "Fork diagram naming the dust cover, tube and leg"
+   }
+  ],
+  "swingarm-play": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_then_just_clean_bearing_add_more.jpg",
+    "caption": "Working at a sealed wheel bearing in the hub: roughness means replacement"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_very_expensive.jpg",
+    "caption": "Wheel bearing in the hub bore: play here lets the wheel wobble"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_remove_axle_nut_brake_rod_nut.jpg",
+    "caption": "Rear axle area with sprocket nut and chain: loose parts clunk"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/145/145_maybe_put_piece_steel_wood_between.jpg",
+    "caption": "Rear sprocket and chain seen from the swingarm side"
+   }
+  ],
+  "tyre-centre-wear": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_tire_date_code.jpg",
+    "caption": "Date code on a tyre sidewall: old rubber hardens and cracks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_marker.jpg",
+    "caption": "Tyre balance mark lined up with the valve: an unbalanced wheel vibrates"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_arrow.jpg",
+    "caption": "Tyre sidewall arrow marks the rotation direction; fit the right way round"
+   }
+  ],
+  "valve-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_cut_outs_fit_onto_spokes.jpg",
+    "caption": "Rim protector while levering the tyre bead"
+   }
+  ],
+  "brake-drag": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion.jpg",
+    "caption": "Corroded plunger shaft with rust and dirt: a cause of sticking brakes"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper.jpg",
+    "caption": "Caliper piston removed: it must be smooth and unpitted"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper_caliper_piston.jpg",
+    "caption": "Square-section caliper piston seal: it pulls the piston back off the disc"
+   }
+  ],
+  "brake-fluid-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_sure_pad_caliper_shop_rag_so.jpg",
+    "caption": "Two-piston caliper pistons and seal groove: a worn seal leaks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper_caliper_piston.jpg",
+    "caption": "Square-section caliper piston seal: it pulls the piston back off the disc"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion_2.jpg",
+    "caption": "Corroded brake plunger with rust and dirt: seizes the brake"
+   }
+  ],
+  "brake-grinding": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_2.jpg",
+    "caption": "Drum brake diagram naming brake arm, panel and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_front_wheel_removal_2.jpg",
+    "caption": "Front wheel with disc brake and fork leg: check disc and pads"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe.jpg",
+    "caption": "Single leading shoe drum brake layout"
+   }
+  ],
+  "caliper-sticking": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper_caliper_piston.jpg",
+    "caption": "Square-section caliper piston seal: it pulls the piston back off the disc"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_piston_caliper_caliper_piston_2.jpg",
+    "caption": "Caliper piston seal ring: a hardened seal drags or leaks"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_if_these_things_happen_have_corrosion_2.jpg",
+    "caption": "Corroded brake plunger with rust and dirt: seizes the brake"
+   }
+  ],
+  "drum-brake-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_inside.jpg",
+    "caption": "Front drum brake shoes, spring and cable: check wear and linkage"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_brakes.jpg",
+    "caption": "Single leading shoe drum brake: look at shoe wear and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_front_drum_brakes_normally_cable_operated.jpg",
+    "caption": "Cable-operated front drum brake: a stiff cable weakens braking"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_2.jpg",
+    "caption": "Drum brake diagram naming brake arm, panel and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe.jpg",
+    "caption": "Single leading shoe drum brake layout"
+   }
+  ],
+  "drum-brake-weak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_lever_them_off.jpg",
+    "caption": "Levering a brake shoe off the backing plate to inspect it"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_brakes.jpg",
+    "caption": "Single leading shoe drum brake: look at shoe wear and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_2.jpg",
+    "caption": "Drum brake diagram naming brake arm, panel and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe.jpg",
+    "caption": "Single leading shoe drum brake layout"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_twin_dual_leading_shoe.jpg",
+    "caption": "Twin leading shoe drum brake layout"
+   }
+  ],
+  "lever-sinks": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_i_like_cover_everything_could_dripped.jpg",
+    "caption": "Master cylinder with circlip: the plunger seals are inside"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_little_rubber_dust_boot.jpg",
+    "caption": "Master cylinder dust boot: a split boot lets dirt in"
+   }
+  ],
+  "rear-pedal-travel": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_brakes.jpg",
+    "caption": "Single leading shoe drum brake: look at shoe wear and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_2.jpg",
+    "caption": "Drum brake diagram naming brake arm, panel and cam"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_twin_dual_leading_shoe.jpg",
+    "caption": "Twin leading shoe drum brake layout"
+   }
+  ],
+  "speedo-cable-fault": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_outside.jpg",
+    "caption": "Speedometer drive on the front hub: a dry drive is noisy"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_speedo_drive_inside_hub.jpg",
+    "caption": "Speedometer drive inside the hub: worn gears or dry drive make noise"
+   }
+  ],
+  "bars-misaligned": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/143/143_align_front_wheel_2.jpg",
+    "caption": "Loosened fork bolts while the front wheel is aligned with the frame"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_pinch_bolt_nut.jpg",
+    "caption": "Front axle pinch bolt on the fork leg: loose parts clunk"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_if_forks_look_ok_ride_lot_2.jpg",
+    "caption": "Fork parts diagram with the tubes and pinch bolts"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_two_pinch_nuts.jpg",
+    "caption": "Two axle pinch nuts on a fork leg"
+   }
+  ],
+  "fork-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_fork_gators_fork_boots.jpg",
+    "caption": "Rubber fork gaiters: they keep grit off the stanchion and seal"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_circlip.jpg",
+    "caption": "Seal retaining circlip at the top of a fork leg"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_pull.jpg",
+    "caption": "Seal puller on a fork leg: a leaking seal is replaced"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_yes_indeed_can_don_t_ask.jpg",
+    "caption": "Fork leg held in a vice for work on the damper rod"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_different_kinds.jpg",
+    "caption": "Different kinds of fork seal circlip"
+   }
+  ],
+  "fork-twisted": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_front_forks.jpg",
+    "caption": "Front fork legs: oil or dirt on the tubes shows seal trouble"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_pinch_bolt_nut.jpg",
+    "caption": "Front axle pinch bolt on the fork leg: loose parts clunk"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_if_forks_look_ok_ride_lot_2.jpg",
+    "caption": "Fork parts diagram with the tubes and pinch bolts"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_two_pinch_nuts.jpg",
+    "caption": "Two axle pinch nuts on a fork leg"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_if_doubt_don_t_have_manual.jpg",
+    "caption": "Two pinch nuts with a gap on the fork leg"
+   }
+  ],
+  "puncture-tube": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_changing_tire.jpg",
+    "caption": "Tyre part off a wire wheel: look for what punctured the tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_don_t_install_backwards.jpg",
+    "caption": "Fitting a tyre on a wire wheel: avoid pinching the tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_cut_outs_fit_onto_spokes.jpg",
+    "caption": "Rim protector while levering the tyre bead"
+   }
+  ],
+  "rim-damage": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel.jpg",
+    "caption": "Dial gauge reading rim run-out: a buckled rim shows here"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_once_pretty_close_before_spokes_real_2.jpg",
+    "caption": "Dial gauge on the rim side: side wobble is measured here"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel_2.jpg",
+    "caption": "Spoked rim with spokes numbered from the high spot"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spoke_wheel_lacing.jpg",
+    "caption": "Tightening a spoke nipple with a spoke key"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_tighten_sopkes_order.jpg",
+    "caption": "Wire wheel with spokes marked for tightening order"
+   }
+  ],
+  "speed-vibration": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_once_pretty_close_before_spokes_real_2.jpg",
+    "caption": "Dial gauge on the rim side: side wobble is measured here"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_getting_rim_round.jpg",
+    "caption": "Checking the rim for round"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_rim_side_play.jpg",
+    "caption": "Checking rim side play: a buckled rim wobbles"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_but_if_only_doing_one_wheel_2.jpg",
+    "caption": "Spoked rim with spokes numbered from the high spot"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_tighten_sopkes_order.jpg",
+    "caption": "Wire wheel with spokes marked for tightening order"
+   }
+  ],
+  "tyre-cracked": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_arrow.jpg",
+    "caption": "Tyre sidewall arrow marks the rotation direction; fit the right way round"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_don_t_install_backwards.jpg",
+    "caption": "Fitting a tyre on a wire wheel: avoid pinching the tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_cut_outs_fit_onto_spokes.jpg",
+    "caption": "Rim protector while levering the tyre bead"
+   }
+  ],
+  "wheel-bearing-noise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_then_just_clean_bearing_add_more.jpg",
+    "caption": "Working at a sealed wheel bearing in the hub: roughness means replacement"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_very_expensive.jpg",
+    "caption": "Wheel bearing in the hub bore: play here lets the wheel wobble"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_lever_seals.jpg",
+    "caption": "Levering out a hub seal: a damaged seal lets water in"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_bearing_spacer.jpg",
+    "caption": "Wheel hub bearing spacer: a wrong or missing spacer ruins bearings"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_large_hole_side_mag_wheel_2.jpg",
+    "caption": "Hub bore where the bearing sits: check for wear and damage"
+   }
+  ],
+  "wheel-bearing-play": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_tapered_roller_bearings.jpg",
+    "caption": "Tapered roller bearings: dry or pitted rollers wear the hub"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_bearing_spacer.jpg",
+    "caption": "Wheel hub bearing spacer: a wrong or missing spacer ruins bearings"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_large_hole_side_mag_wheel_2.jpg",
+    "caption": "Hub bore where the bearing sits: check for wear and damage"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_large_hole_side_mag_wheel.jpg",
+    "caption": "Hub bore where the bearing sits: wear lets the bearing spin"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_very_expensive_2.jpg",
+    "caption": "Hub bore with the bearing removed: look for wear and pitting"
+   }
+  ],
+  "wheel-buckled": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_getting_rim_round.jpg",
+    "caption": "Checking the rim for round"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_rim_side_play.jpg",
+    "caption": "Checking rim side play: a buckled rim wobbles"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spoke_wheel_lacing.jpg",
+    "caption": "Tightening a spoke nipple with a spoke key"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_once_pretty_close_before_spokes_real.jpg",
+    "caption": "Numbered spokes at the highest point of the rim"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_tighten_sopkes_order.jpg",
+    "caption": "Wire wheel with spokes marked for tightening order"
+   }
+  ],
+  "hub-hot-after-ride": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_tapered_roller_bearings.jpg",
+    "caption": "Tapered roller bearings: dry or pitted rollers wear the hub"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_wheel.jpg",
+    "caption": "Cast hub with brake disc and axle spacer: check spacer and bearing"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_lube_bearing_needle.jpg",
+    "caption": "Greasing a sealed bearing with a needle"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/149/149_large_hole_side_mag_wheel.jpg",
+    "caption": "Hub bore where the bearing sits: wear lets the bearing spin"
+   }
+  ],
+  "new-fork-seal-leaks": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_screw_driver.jpg",
+    "caption": "Prising out a fork seal: a worn seal lets oil seep past"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_pull.jpg",
+    "caption": "Seal puller on a fork leg: a leaking seal is replaced"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_tools.jpg",
+    "caption": "Special tools for pulling fork seals"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_different_kinds.jpg",
+    "caption": "Different kinds of fork seal circlip"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/141/141_drain.jpg",
+    "caption": "Fork diagram naming the dust cover, tube and leg"
+   }
+  ],
+  "bead-leak": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_two_tire_irons_lever_bead_over.jpg",
+    "caption": "Two tyre irons levering the bead: care avoids pinching the tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_don_t_install_backwards.jpg",
+    "caption": "Fitting a tyre on a wire wheel: avoid pinching the tube"
+   }
+  ],
+  "loose-spokes": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_cost_used_wheel_will_lot_less.jpg",
+    "caption": "Used spokes with bent heads: the bend is where spokes break"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spoke_ends.jpg",
+    "caption": "Two kinds of spoke head bend: cracks start at the bend"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_spokes_nipples.jpg",
+    "caption": "A spoke and its nipple: both must be straight and tight"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_there_different_thread_pitches_too_but.jpg",
+    "caption": "Spoked rear wheel: loose or broken spokes show as uneven spacing"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/147/147_no_bend_head_some_bend_lot.jpg",
+    "caption": "Spoke heads with different bends: the bend is where spokes crack"
+   }
+  ],
+  "new-tube-flat-after-fit": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_changing_tire.jpg",
+    "caption": "Tyre part off a wire wheel: look for what punctured the tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/146/146_rubber_donut.jpg",
+    "caption": "Rubber ring that fills the bead gap"
+   }
+  ]
+ }
+}

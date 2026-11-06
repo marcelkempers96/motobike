@@ -1,0 +1,77 @@
+id	title	system	photos_now	parts
+fan-not-working	Radiator fan does not switch on	cooling	0	cooling_fan,fuse,wiring,efi_sensors
+cvt-belt-broken	Scooter drive belt has broken	cvt	0	cvt_belt,cvt_rollers,cvt_clutch,gear_oil
+cvt-creeps	Scooter creeps forward at idle or the rear wheel turns on the stand	cvt	0	cvt_clutch,cvt_belt,throttle_cable,efi_sensors
+cvt-gear-oil-leak	Oil leaking from the scooter rear gear case	cvt	0	gear_oil,oil_seals,gaskets,cvt_belt
+neutral-light-fault	Neutral light does not work or stays on in gear	gearbox	0	interlock_switches,wiring,instruments,fuse
+oil-leak-cover	Oil leaking from an engine side cover	oil	0	gaskets,oil_seals,engine_oil,gear_lever
+oil-leak-drain-plug	Oil leaking from the drain plug	oil	0	drain_plug,engine_oil,oil_filter
+oil-leak-head-base	Oil leaking from the cylinder head or base gasket	oil	0	gaskets,cylinder_head,cylinder,oil_seals
+oil-level-falling	Oil level drops but there is no visible leak	oil	0	piston_rings,valves,cylinder,engine_oil
+oil-overfilled	Too much oil in the engine	oil	0	engine_oil,drain_plug,crankcase_breather,air_filter
+oil-smells-fuel	Oil smells of petrol or the level rises	oil	0	engine_oil,carb,fuel_tap,injector
+oil-warning-light	Oil pressure or oil level light is on	oil	0	engine_oil,oil_pump,oil_filter,wiring
+two-stroke-oil-not-used	Two-stroke oil tank level is not going down	oil	0	two_stroke_oil_pump,engine_oil,throttle_cable,fuel_cap
+black-smoke	Black smoke from the exhaust	smoke	0	air_filter,carb,injector,efi_sensors
+breather-smoke	Smoke or oil mist from the crankcase breather	smoke	0	crankcase_breather,piston_rings,cylinder,piston
+exhaust-glowing	Exhaust pipe glows red or the catalytic converter overheats	smoke	0	exhaust,spark_plug,ignition_coil,carb
+clutch-noise	Rattle or whir from the clutch that changes when the lever is pulled	clutch	1	clutch,clutch_plates,clutch_cable,engine_oil
+heavy-clutch	Clutch lever is very heavy to pull	clutch	1	clutch_cable,levers,clutch,clutch_plates
+cvt-noise	Noise from the scooter drive case	cvt	1	cvt_rollers,cvt_clutch,cvt_belt,gear_oil
+oil-darkens-quickly	Oil turns black very soon after a change	oil	1	engine_oil,oil_filter,air_filter,piston_rings
+oil-leak-sprocket	Oil leaking behind the front sprocket	oil	1	oil_seals,front_sprocket,chain,engine_oil
+exhaust-loud	Exhaust has become much louder	smoke	1	exhaust,exhaust_gasket,silencer_baffle
+exhaust-popping	Popping or banging from the exhaust when slowing down	smoke	1	exhaust_gasket,exhaust,intake_manifold,carb
+exhaust-rattle	Rattling from the exhaust or heat shield	smoke	1	exhaust,engine_mounts,frame,centre_stand
+oily-exhaust	Oil dripping from the exhaust (two-stroke)	smoke	1	two_stroke_oil_pump,exhaust,exhaust_gasket,oil_seals
+chain-rubbing	Chain rubs on the guard, slider or swingarm	chain	2	chain_guide,chain,swingarm,rear_sprocket
+chain-tight-spots	Chain is tight in some places and slack in others	chain	2	chain,rear_sprocket,front_sprocket,cush_drive
+cush-drive-clunk	Clunk or snatch from the rear wheel when opening and closing the throttle	chain	2	cush_drive,chain,rear_sprocket,engine_mounts
+clutch-judder	Clutch grabs or judders when pulling away	clutch	2	clutch_plates,clutch,clutch_cable,levers
+clutch-slip	Clutch slips: revs rise but the bike does not pull	clutch	2	clutch_cable,engine_oil,clutch_plates,clutch
+overheating-air	Air-cooled engine overheats	cooling	2	cylinder,cylinder_head,engine_oil,spark_plug
+radiator-damage	Radiator is damaged, bent or blocked	cooling	2	radiator,coolant,cooling_fan,radiator_cap
+cvt-judder	Scooter judders when pulling away	cvt	2	cvt_clutch,cvt_belt,cvt_rollers,engine_mounts
+cvt-low-top-speed	Scooter will not reach its normal top speed	cvt	2	cvt_belt,cvt_rollers,cvt_clutch,air_filter
+whine-from-engine	Whining noise from the engine	engine	2	gearbox,oil_pump,water_pump,clutch
+clunk-into-first	Loud clunk when selecting first gear	gearbox	2	clutch_cable,clutch_plates,engine_oil,chain
+false-neutral	Finds false neutrals between gears	gearbox	2	gear_lever,shift_mechanism,gearbox,footpegs
+jumps-out-of-gear	Jumps out of gear under load	gearbox	2	gearbox,shift_mechanism,gear_lever,footpegs
+oil-leak	Oil leaking under the bike	oil	2	gaskets,oil_seals,drain_plug,crankcase_breather
+exhaust-blocked	Exhaust blocked or choked with carbon (two-stroke)	smoke	2	exhaust,exhaust_gasket,cylinder,spark_plug
+exhaust-leak	Ticking or puffing from an exhaust leak	smoke	2	exhaust_gasket,exhaust,o2_sensor,silencer_baffle
+white-smoke	White smoke or steam from the exhaust	smoke	2	coolant,gaskets,cylinder_head,engine_oil
+smoke-after-rebuild	Engine still smokes after a rebuild with new rings	smoke	2	piston_rings,piston,cylinder,cylinder_head
+chain-jumps	Chain jumps teeth or comes off the sprockets	chain	3	chain,rear_sprocket,front_sprocket,chain_guide
+chain-noise	Chain is noisy, clattering or slapping	chain	3	chain,rear_sprocket,front_sprocket,chain_guide
+chain-snapped	Chain has snapped	chain	3	chain,front_sprocket,rear_sprocket,chain_guide
+sprocket-worn	Sprocket teeth are hooked, sharp or broken	chain	3	rear_sprocket,front_sprocket,chain,cush_drive
+chain-adjuster-at-end	Chain adjuster has run out of travel	chain	3	chain,front_sprocket,rear_sprocket,chain_guide
+clutch-drag	Clutch drags: the bike creeps or lurches when in gear with the lever pulled	clutch	3	clutch_cable,engine_oil,clutch_plates,clutch
+clutch-no-resistance	Clutch lever has no resistance or the cable has snapped	clutch	3	clutch_cable,levers,clutch,brake_fluid
+hard-to-find-neutral	Hard to find neutral	clutch	3	clutch_cable,gear_lever,interlock_switches,clutch_plates
+coolant-leak	Coolant is leaking	cooling	3	coolant,radiator,water_pump,thermostat
+temp-gauge-high	Temperature gauge reads high or the warning light is on	cooling	3	efi_sensors,coolant,cooling_fan,thermostat
+cvt-slip	Scooter revs but accelerates slowly	cvt	3	cvt_belt,cvt_rollers,cvt_clutch,gear_oil
+bearing-rumble	Rumbling or growling from inside the engine	engine	3	crankshaft,engine_oil,clutch,gearbox
+deep-knock	Deep knocking from the bottom of the engine	engine	3	crankshaft,engine_oil,oil_pump,piston
+engine-seized	Engine has seized or locked up	engine	3	piston,cylinder,crankshaft,engine_oil
+new-vibration	New or increased engine vibration	engine	3	engine_mounts,exhaust,spark_plug,crankshaft
+piston-crown-damage	Piston crown is chewed, pitted or melted	engine	3	piston,cylinder,crankshaft,piston_rings
+gear-lever-loose	Gear lever is loose, bent or slipping on its shaft	gearbox	3	gear_lever,shift_mechanism,footpegs,oil_seals
+gearbox-whine	Whining noise in one or more gears	gearbox	3	gearbox,engine_oil,chain,wheel_bearing
+hard-gear-change	Gears are hard to select	gearbox	3	clutch_cable,gear_lever,shift_mechanism,engine_oil
+stuck-in-gear	Stuck in one gear	gearbox	3	gear_lever,shift_mechanism,gearbox,clutch_cable
+milky-oil	Oil is milky or creamy	oil	3	engine_oil,coolant,gaskets,water_pump
+blue-smoke	Blue or grey smoke from the exhaust	smoke	3	piston_rings,valves,cylinder,piston
+chain-dry-rusty	Chain is dry, rusty or has stiff links	chain	4	chain,rear_sprocket,front_sprocket
+chain-stretches-fast	Chain needs adjusting very often	chain	4	chain,rear_sprocket,front_sprocket,axle
+auto-clutch-fault	Semi-automatic clutch (step-through) slips or engages roughly	clutch	4	clutch,clutch_plates,engine_oil,gear_lever
+overheating-liquid	Liquid-cooled engine overheats	cooling	4	coolant,radiator,cooling_fan,thermostat
+cam-chain-rattle	Rattling noise from the cam chain area	engine	4	cam_chain,cam_tensioner,camshaft,engine_oil
+low-compression	Low compression	engine	4	piston_rings,valves,gaskets,cylinder
+metal-in-oil	Metal particles or flakes in the oil	engine	4	engine_oil,oil_filter,crankshaft,cam_chain
+piston-slap	Knocking from the cylinder when cold that fades when warm	engine	4	piston,cylinder,piston_rings,engine_oil
+tappet-tick	Ticking noise from the top of the engine	engine	4	rocker_arms,valves,pushrods,camshaft
+two-stroke-crankcase-leak	Two-stroke is hard to start, runs lean or smokes (crankcase leak suspected)	engine	4	oil_seals,crankshaft,gaskets,engine
+gear-lever-no-return	Gear lever does not spring back	gearbox	4	gear_lever,shift_mechanism,footpegs,gearbox

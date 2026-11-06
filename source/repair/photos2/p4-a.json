@@ -1,0 +1,1116 @@
+{
+ "problems": {
+  "battery-corrosion": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_sulfate.jpg",
+    "caption": "White lead sulfate on battery plates: a sulphated, failing battery"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire_multiple_wire.jpg",
+    "caption": "Crimped ring terminal: a loose or green one causes faults"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_do_have_one_right.jpg",
+    "caption": "Wiring connector block: corroded or loose pins are a common fault"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_yuasa_gyz_battery.jpg",
+    "caption": "Sealed motorcycle battery"
+   }
+  ],
+  "dim-lights-idle": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_around.jpg",
+    "caption": "Flywheel rotor beside its stator: a worn or burnt stator stops charging"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wires.jpg",
+    "caption": "Regulator rectifier on an ohmmeter test: a failed one stops charging"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_stator_testing.jpg",
+    "caption": "Stator coils with meter test points marked for the resistance check"
+   }
+  ],
+  "flooded-engine": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp01_jpg_28461_bytes_3_30.jpg",
+    "caption": "Oil fouled plug, wet and black"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_carbon_fouled.jpg",
+    "caption": "Carbon fouled plug, dry black soot from a rich mixture"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_black_shiny_oily.jpg",
+    "caption": "Plug fouled black and oily: too rich or oil getting in"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_test.jpg",
+    "caption": "Spark tester clipped to the head: shows whether the spark is strong"
+   }
+  ],
+  "hard-hot-start": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_coil.jpg",
+    "caption": "Ignition coil with plug lead: cracks or heat faults stop the spark"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ign_coil_testing.jpg",
+    "caption": "Testing an ignition coil with a multimeter"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_trigger_pick_up_pulse_coil.jpg",
+    "caption": "Pick-up coil on the stator plate: a weak signal gives no spark"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_pressure.jpg",
+    "caption": "Compression gauge: low reading points to worn rings or valves"
+   }
+  ],
+  "no-start-after-rain": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_ignition_coil.jpg",
+    "caption": "Ignition coil with plug lead: cracks or heat faults stop the spark"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wire_fitting.jpg",
+    "caption": "Crimp fitting on a wire end"
+   }
+  ],
+  "start-blocked-interlock": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_ac_switch_bodies.jpg",
+    "caption": "DC and AC switch bodies side by side"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_switch.jpg",
+    "caption": "Contact of a DC-rated switch"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_crcuit_tester.jpg",
+    "caption": "Circuit tester light with probe and clip lead for finding dead circuits"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_most_clutches_have_disengagement_mechanism_center.jpg",
+    "caption": "Clutch rod, cable adjuster and rod adjuster on the engine"
+   }
+  ],
+  "starts-only-with-choke": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip: the engine runs hot or lean"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp22_jpg_24523_bytes_4_1.jpg",
+    "caption": "Pale insulator: hot or lean running"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_pressure.jpg",
+    "caption": "Compression gauge: low reading points to worn rings or valves"
+   }
+  ],
+  "battery-swollen": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_acid_battery_1.jpg",
+    "caption": "Lead-acid battery with plates visible through the case"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Pencil hydrometer used to check each battery cell"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_rectifiers.jpg",
+    "caption": "Rectifier unit with its wires and plug"
+   }
+  ],
+  "kill-switch-fault": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_ac_switch_bodies_2.jpg",
+    "caption": "AC switch contact beside DC switch contact"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_i_took_ac_switch_dc_switch.jpg",
+    "caption": "AC and DC switch bodies compared"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_crcuit_tester.jpg",
+    "caption": "Circuit tester light with probe and clip lead for finding dead circuits"
+   }
+  ],
+  "misfire-high-rpm": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp27_jpg_30858_bytes_4_1.jpg",
+    "caption": "Melted electrode and glazed insulator from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ign_coil_testing.jpg",
+    "caption": "Testing an ignition coil with a multimeter"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_try_get_parts_close_can_without.jpg",
+    "caption": "Source coils on a stator plate"
+   }
+  ],
+  "backfire-on-start": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_timing_plugs.jpg",
+    "caption": "Clear timing plug in an inspection hole"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_flywheel_magneto_timing.jpg",
+    "caption": "Flywheel mark and crankcase mark"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_automatic_spark_advance_unit.jpg",
+    "caption": "Centrifugal advance unit with weights and springs"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_lapping_valve.jpg",
+    "caption": "Lapping a valve onto its seat"
+   }
+  ],
+  "cranks-no-start": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_wiring.jpg",
+    "caption": "Starter circuit diagram: switch, relay, fuse and motor in line"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wiring.jpg",
+    "caption": "Starter wiring layout from button and relay to the motor"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_tester.jpg",
+    "caption": "Pencil hydrometer reading a battery: low charge shows here first"
+   }
+  ],
+  "hard-cold-start": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_tester.jpg",
+    "caption": "Pencil hydrometer reading a battery: low charge shows here first"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_black_shiny_oily.jpg",
+    "caption": "Plug fouled black and oily: too rich or oil getting in"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_indeed_armour_light.jpg",
+    "caption": "Battery state of charge chart: volts and gravity for each level"
+   }
+  ],
+  "kickstart-jammed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kick_starter_spring_outside_crankcases.jpg",
+    "caption": "Kickstart gear and spring on the outside of the crankcase"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_full_ratchet_kick_starters_kickstarter.jpg",
+    "caption": "Kickstart ratchet pawl behind the cover"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_kick_starters_2.jpg",
+    "caption": "Kickstarter lever, shaft and gears driving the crankshaft"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_internal_kickstart_gears.jpg",
+    "caption": "Kickstart gears inside the gearbox case"
+   }
+  ],
+  "starter-keeps-running": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_solenoid_2.jpg",
+    "caption": "Starter solenoid removed from the bike"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_wiring.jpg",
+    "caption": "Starter circuit diagram: switch, relay, fuse and motor in line"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_small_wire.jpg",
+    "caption": "Thick starter wire beside thin ignition wire"
+   }
+  ],
+  "accessory-wiring-fault": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_nuts.jpg",
+    "caption": "Wire nuts and a twisted joint: poor joints cause faults"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_ends_crimping.jpg",
+    "caption": "Wire ends ready for a crimp fitting"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_special_pliers.jpg",
+    "caption": "Crimping pliers for wire fittings"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire_multiple_wire.jpg",
+    "caption": "Crimped ring terminal: a loose or green one causes faults"
+   }
+  ],
+  "burning-smell-wiring": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_solid_wire.jpg",
+    "caption": "Stranded wire stripped of insulation: broken strands cause open circuits"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_rectifiers.jpg",
+    "caption": "Rectifier unit with its wires and plug"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wires.jpg",
+    "caption": "Regulator rectifier on an ohmmeter test: a failed one stops charging"
+   }
+  ],
+  "wet-connectors": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing.jpg",
+    "caption": "Test light tracing voltage along a wire to find the break"
+   }
+  ],
+  "battery-flat": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_sulfate.jpg",
+    "caption": "White lead sulfate on battery plates: a sulphated, failing battery"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Pencil hydrometer used to check each battery cell"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_indeed_armour_light.jpg",
+    "caption": "Battery state of charge chart: volts and gravity for each level"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_charger.jpg",
+    "caption": "Small motorcycle battery on a charger"
+   }
+  ],
+  "overcharging": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_reverse.jpg",
+    "caption": "Rectifier tested with reversed leads: it must pass current one way only"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Pencil hydrometer used to check each battery cell"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_rectifiers.jpg",
+    "caption": "Rectifier unit with its wires and plug"
+   }
+  ],
+  "parasitic-drain": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing.jpg",
+    "caption": "Test light tracing voltage along a wire to find the break"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_ground_wire_ground_frame_2.jpg",
+    "caption": "Test lamp lit from a battery: power, load and ground"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/101/101_regulator.jpg",
+    "caption": "Old voltage regulator and cutout relay: faulty gaps cause over or undercharge"
+   }
+  ],
+  "battery-volts-ok-fails-load": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_tester.jpg",
+    "caption": "Carbon pile battery load tester"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_would_behoove_remember_if_have_work_2.jpg",
+    "caption": "Analogue battery load tester"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_cable_terminal_bolt.jpg",
+    "caption": "Measuring resistance at the starter terminal bolt"
+   }
+  ],
+  "coil-fails-hot": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ignition_coils.jpg",
+    "caption": "Ignition coil connected to a multimeter"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_trigger_pick_up_pulse_coil.jpg",
+    "caption": "Pick-up coil on the stator plate: a weak signal gives no spark"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_black_box.jpg",
+    "caption": "CDI box with its wiring leads"
+   }
+  ],
+  "weak-spark": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_flywheel.jpg",
+    "caption": "Trigger magnet on the flywheel"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_try_get_parts_close_can_without.jpg",
+    "caption": "Source coils on a stator plate"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_trigger_source_coils.jpg",
+    "caption": "Trigger and source coils on an electronic ignition stator"
+   }
+  ],
+  "kickstart-slips": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_full_ratchet_kick_starters.jpg",
+    "caption": "Full ratchet kickstart gear and return spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_lateral_engagement_kick_starter_full_ratchet.jpg",
+    "caption": "Kickstart gear with return spring and spring clip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/123/123_quadrant_gear_style_kick_starter_used.jpg",
+    "caption": "Quadrant-gear kickstarter with its return spring"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+    "caption": "Fibre and steel clutch plates: glazed or thin plates slip"
+   }
+  ],
+  "starter-spins-freely": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_sometimes_starters_also_have_planetary_gears.jpg",
+    "caption": "Starter clutch on the back of a flywheel"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_gear.jpg",
+    "caption": "Starter gear with its overrunning clutch spring"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_gears.jpg",
+    "caption": "Starter gear train seen with the cover off"
+   }
+  ],
+  "weak-battery-no-fire": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_tester.jpg",
+    "caption": "Pencil hydrometer reading a battery: low charge shows here first"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_tester.jpg",
+    "caption": "Carbon pile battery load tester"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_cable_terminal_bolt.jpg",
+    "caption": "Measuring resistance at the starter terminal bolt"
+   }
+  ],
+  "kick-very-hard": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/104/104_lever_operated_compression_release.jpg",
+    "caption": "Lever-operated compression release on the cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/104/104_exhaust_valve_lifter.jpg",
+    "caption": "Exhaust valve lifter on the cylinder head"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/110/110_kl650.jpg",
+    "caption": "Camshafts and cam bearing caps under the valve cover"
+   }
+  ],
+  "fuse-keeps-blowing": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_small_wire.jpg",
+    "caption": "Thick starter wire beside thin ignition wire"
+   }
+  ],
+  "ignition-switch-fault": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_ac_connection_point.jpg",
+    "caption": "Caliper measuring the AC switch contact"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_ac_switch.jpg",
+    "caption": "Small contact of an AC switch"
+   }
+  ],
+  "no-power-key-on": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ohmmeter.jpg",
+    "caption": "Multimeter on ohm and volt scales for checking circuits"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_tester.jpg",
+    "caption": "Load tester on a battery"
+   }
+  ],
+  "new-battery-dies": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_sulfate.jpg",
+    "caption": "White lead sulfate on battery plates: a sulphated, failing battery"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_charging_stator_coils.jpg",
+    "caption": "Ohmmeter checks for opens and grounds on stator coils"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ohmmeter.jpg",
+    "caption": "Multimeter on ohm and volt scales for checking circuits"
+   }
+  ],
+  "regulator-hot": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_reverse.jpg",
+    "caption": "Rectifier tested with reversed leads: it must pass current one way only"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/101/101_voltage_regulator_yoke_gap.jpg",
+    "caption": "Regulator core gap setting: a wrong gap overcharges and blows bulbs"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/101/101_regulator.jpg",
+    "caption": "Old voltage regulator and cutout relay: faulty gaps cause over or undercharge"
+   }
+  ],
+  "stator-burnt": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_flywheel_magnets.jpg",
+    "caption": "Flywheel magnets inside the rotor"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_self_contained.jpg",
+    "caption": "Flywheel and stator with the coil attached"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ohmmeter.jpg",
+    "caption": "Multimeter on ohm and volt scales for checking circuits"
+   }
+  ],
+  "cdi-ecu-suspect": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_electronic_ignition.jpg",
+    "caption": "Source coil and trigger coil under an engine cover"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_different_types.jpg",
+    "caption": "Plug caps and spark tester leads of different types"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_flywheel.jpg",
+    "caption": "Trigger magnet on the flywheel"
+   }
+  ],
+  "no-spark": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_secondary.jpg",
+    "caption": "Measuring coil secondary resistance: a break or short shows here"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_try_get_parts_close_can_without.jpg",
+    "caption": "Source coils on a stator plate"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_black_box.jpg",
+    "caption": "CDI box with its wiring leads"
+   }
+  ],
+  "plug-black-sooty": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_carbon_fouled.jpg",
+    "caption": "Carbon fouled plug, dry black soot from a rich mixture"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_light_chocolate_brown.jpg",
+    "caption": "Light brown plug tip: the healthy colour to compare against"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_oil_fouled.jpg",
+    "caption": "Oil fouled plug, wet and black: oil is reaching the chamber"
+   }
+  ],
+  "plug-oily": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_oil_fouled.jpg",
+    "caption": "Oil fouled plug, wet and black: oil is reaching the chamber"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/113/113_ring_worn.jpg",
+    "caption": "Cylinder bore wear: worn bore lets oil and gas past"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/111/111_pry_valve_seals_off.jpg",
+    "caption": "Worn valve seal prised off the guide: oil leaks into the chamber"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_ring_groove.jpg",
+    "caption": "Piston ring in its groove: stuck or worn rings pass oil"
+   }
+  ],
+  "points-wear-misfire": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_points.jpg",
+    "caption": "Contact breaker points on the plate"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_set_point_gap.jpg",
+    "caption": "Setting the points gap with a feeler gauge"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_ign_coil_testing.jpg",
+    "caption": "Testing an ignition coil with a multimeter"
+   }
+  ],
+  "kickstart-kickback": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_flywheel.jpg",
+    "caption": "Trigger magnet on the flywheel"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/088/088_centrifugal_advance.jpg",
+    "caption": "Centrifugal advance weights and springs on the points cam"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_timing_marks.jpg",
+    "caption": "Flywheel and crankcase timing marks"
+   }
+  ],
+  "no-start-after-storage": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Pencil hydrometer used to check each battery cell"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_indeed_armour_light.jpg",
+    "caption": "Battery state of charge chart: volts and gravity for each level"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_charger.jpg",
+    "caption": "Small motorcycle battery on a charger"
+   }
+  ],
+  "slow-cranking": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_four_brushes.jpg",
+    "caption": "Starter motor end plate with four brushes"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_commutator_segments.jpg",
+    "caption": "Testing the commutator with ohmmeter leads"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wiring.jpg",
+    "caption": "Starter wiring layout from button and relay to the motor"
+   }
+  ],
+  "starter-clicks": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_wiring.jpg",
+    "caption": "Starter circuit diagram: switch, relay, fuse and motor in line"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_tester.jpg",
+    "caption": "Load tester on a battery"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_tester.jpg",
+    "caption": "Carbon pile battery load tester"
+   }
+  ],
+  "starter-grinding": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_clutch.jpg",
+    "caption": "Overrunning clutch parts: rollers, springs and races"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_sometimes_starters_also_have_planetary_gears.jpg",
+    "caption": "Starter clutch on the back of a flywheel"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_field_coils.jpg",
+    "caption": "Starter motor yoke with field coils"
+   }
+  ],
+  "starter-silent": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_wiring.jpg",
+    "caption": "Starter circuit diagram: switch, relay, fuse and motor in line"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_switch.jpg",
+    "caption": "Contact of a DC-rated switch"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_starter_gears.jpg",
+    "caption": "Starter gear train seen with the cover off"
+   }
+  ],
+  "intermittent-electrical": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_wire_fitting.jpg",
+    "caption": "Crimp fitting on a wire end"
+   }
+  ],
+  "switch-fault": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_ac_connection_point.jpg",
+    "caption": "Caliper measuring the AC switch contact"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_nuts.jpg",
+    "caption": "Wire nuts and a twisted joint: poor joints cause faults"
+   }
+  ],
+  "not-charging": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_reverse.jpg",
+    "caption": "Rectifier tested with reversed leads: it must pass current one way only"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_flywheel_magnets.jpg",
+    "caption": "Flywheel magnets inside the rotor"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Pencil hydrometer used to check each battery cell"
+   }
+  ],
+  "ignition-timing-suspect": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_timing_plugs.jpg",
+    "caption": "Clear timing plug in an inspection hole"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/091/091_like_always_check_manual.jpg",
+    "caption": "Turning the engine by hand to line up timing marks"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/089/089_dial_indicator.jpg",
+    "caption": "Dial indicator in the plug hole"
+   }
+  ],
+  "plug-white": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip: the engine runs hot or lean"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp22_jpg_24523_bytes_4_1.jpg",
+    "caption": "Pale insulator: hot or lean running"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled plug with dry black soot"
+   }
+  ],
+  "bike-feels-held-back": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_two_pads_may_have_worn_different.jpg",
+    "caption": "Two pads worn by different amounts: a sign of a sticking caliper"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_pads.jpg",
+    "caption": "Disc brake pads: worn or sticking pads cause drag"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_inside.jpg",
+    "caption": "Drum brake with shoes and springs: dragging shoes hold the bike back"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/140/140_single_leading_shoe_brakes.jpg",
+    "caption": "Inside of a single leading shoe drum brake"
+   }
+  ],
+  "high-fuel-use": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp05_jpg_27084_bytes_3_30.jpg",
+    "caption": "Sooty plug from too cold a heat range"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_carbon_fouled.jpg",
+    "caption": "Carbon fouled plug, dry black soot from a rich mixture"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled plug with dry black soot"
+   }
+  ],
+  "low-top-speed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_if_set_up_one_rpm_effect.jpg",
+    "caption": "Rust and carbon inside an exhaust pipe"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_removable_baffle.jpg",
+    "caption": "Silencer with a removable baffle"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/106/106_leak_down_testing.jpg",
+    "caption": "Leak-down tester: shows where compression is escaping"
+   }
+  ],
+  "poor-hill-climbing": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_sprocket.jpg",
+    "caption": "Worn rear sprocket teeth: a hooked sprocket wastes drive"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_fiber_steel_plates.jpg",
+    "caption": "Fibre and steel clutch plates: glazed or thin plates slip"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_if_they_badly_worn_consider_replacing.jpg",
+    "caption": "Clutch plate stack: worn plates must be replaced"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_edges.jpg",
+    "caption": "Chain parts: pin, bushing, roller and plates that wear and stretch"
+   }
+  ],
+  "revs-without-speed": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_if_they_badly_worn_consider_replacing.jpg",
+    "caption": "Clutch plate stack: worn plates must be replaced"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/118/118_grooves.jpg",
+    "caption": "Clutch basket grooves worn by the plates"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/120/120_drive_clutch.jpg",
+    "caption": "Exploded drive clutch: worn weights and rollers cause slip"
+   }
+  ],
+  "cuts-out-bumps": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_all_really_not_difficult_wiring_diagram_2.jpg",
+    "caption": "Meter reading OL: a broken wire or open circuit"
+   }
+  ],
+  "cuts-out-random": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_all_really_not_difficult_wiring_diagram_2.jpg",
+    "caption": "Meter reading OL: a broken wire or open circuit"
+   }
+  ],
+  "dies-in-rain": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_simplest_wiring_system.jpg",
+    "caption": "The four parts of the simplest circuit"
+   }
+  ],
+  "dies-side-stand": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_ac_switch_bodies.jpg",
+    "caption": "DC and AC switch bodies side by side"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_dc_ac_switch_bodies_2.jpg",
+    "caption": "AC switch contact beside DC switch contact"
+   }
+  ],
+  "misfire-under-load": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp27_jpg_30858_bytes_4_1.jpg",
+    "caption": "Melted electrode and glazed insulator from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp26_jpg_30763_bytes_4_1.jpg",
+    "caption": "Blistered insulator: pre-ignition damage from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_oil_fouled.jpg",
+    "caption": "Oil fouled plug, wet and black: oil is reaching the chamber"
+   }
+  ],
+  "rough-idle": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_black_shiny_oily.jpg",
+    "caption": "Plug fouled black and oily: too rich or oil getting in"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled plug with dry black soot"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_drill_simple_2.jpg",
+    "caption": "Reading a compression gauge on the engine"
+   }
+  ],
+  "runs-rich": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp04_jpg_26723_bytes_3_30.jpg",
+    "caption": "Plug fouled because it ran too cold"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp03_jpg_25006_bytes_3_30.jpg",
+    "caption": "Carbon fouled plug with dry black soot"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_carbon_fouled.jpg",
+    "caption": "Carbon fouled plug, dry black soot from a rich mixture"
+   }
+  ],
+  "stalls-at-idle": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp26_jpg_30763_bytes_4_1.jpg",
+    "caption": "Blistered insulator: pre-ignition damage from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip: the engine runs hot or lean"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_oil_fouled.jpg",
+    "caption": "Oil fouled plug, wet and black: oil is reaching the chamber"
+   }
+  ],
+  "stalls-when-hot": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_secondary.jpg",
+    "caption": "Measuring coil secondary resistance: a break or short shows here"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_trigger_source_coils.jpg",
+    "caption": "Trigger and source coils on an electronic ignition stator"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_different_types.jpg",
+    "caption": "Plug caps and spark tester leads of different types"
+   }
+  ],
+  "surging-cruise": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_fancy_styles.jpg",
+    "caption": "O-ring chain cutaway"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_edges.jpg",
+    "caption": "Chain parts: pin, bushing, roller and plates that wear and stretch"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/148/148_chain_press.jpg",
+    "caption": "Chain press fitted over the chain links"
+   }
+  ],
+  "power-fades-hot": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_whitish.jpg",
+    "caption": "Whitish plug tip: the engine runs hot or lean"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_drill_simple_2.jpg",
+    "caption": "Reading a compression gauge on the engine"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_engine_compression_testing_2.jpg",
+    "caption": "Screw-in compression gauge with hose and adapters"
+   }
+  ],
+  "runs-lean": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp25_jpg_31716_bytes_4_1.jpg",
+    "caption": "White insulator on a plug that ran too hot"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp22_jpg_24523_bytes_4_1.jpg",
+    "caption": "Pale insulator: hot or lean running"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/112/112_beam_me_up_scotty.jpg",
+    "caption": "Pitted piston crown: damage from lean running and detonation"
+   }
+  ],
+  "low-power": [
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_compression_testing.jpg",
+    "caption": "Compression gauge in the plug hole to test the engine"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/097/097_light_chocolate_brown.jpg",
+    "caption": "Light brown plug tip: the healthy colour to compare against"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/108/108_if_set_up_one_rpm_effect.jpg",
+    "caption": "Rust and carbon inside an exhaust pipe"
+   }
+  ],
+  "pinking": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp26_jpg_30763_bytes_4_1.jpg",
+    "caption": "Blistered insulator: pre-ignition damage from overheating"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp28_jpg_25280_bytes_4_1.jpg",
+    "caption": "Overheated plug with a bead of melted metal"
+   },
+   {
+    "file": "source/dansmc/06_Engine_Parts/103/103_compression_testing.jpg",
+    "caption": "Compression gauge in the plug hole to test the engine"
+   }
+  ],
+  "misfire-ignition-or-fuel": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/088/088_points_condenser_cdi_box.jpg",
+    "caption": "Points, condenser and CDI box side by side"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/090/090_try_get_parts_close_can_without.jpg",
+    "caption": "Source coils on a stator plate"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_carbon_fouled.jpg",
+    "caption": "Carbon fouled plug, dry black soot from a rich mixture"
+   }
+  ],
+  "brake-light-dead": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_nuts.jpg",
+    "caption": "Wire nuts and a twisted joint: poor joints cause faults"
+   }
+  ],
+  "brake-light-stuck-on": [],
+  "dash-dead": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_simplest_wiring_system.jpg",
+    "caption": "The four parts of the simplest circuit"
+   }
+  ],
+  "headlight-dim": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/101/101_voltage_regulator_yoke_gap.jpg",
+    "caption": "Regulator core gap setting: a wrong gap overcharges and blows bulbs"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/101/101_regulator.jpg",
+    "caption": "Old voltage regulator and cutout relay: faulty gaps cause over or undercharge"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_heat_sink.jpg",
+    "caption": "Rectifier heat sink with its fixing parts"
+   }
+  ],
+  "headlight-flicker": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_i_took_ac_switch_dc_switch.jpg",
+    "caption": "AC and DC switch bodies compared"
+   }
+  ],
+  "headlight-out": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_types_insulation.jpg",
+    "caption": "Heat-shrink tubing and tape to insulate a joint"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_ends_crimping.jpg",
+    "caption": "Wire ends ready for a crimp fitting"
+   }
+  ],
+  "high-beam-fault": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_special_pliers.jpg",
+    "caption": "Crimping pliers for wire fittings"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_nuts.jpg",
+    "caption": "Wire nuts and a twisted joint: poor joints cause faults"
+   }
+  ],
+  "horn-silent": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_simplest_wiring_system.jpg",
+    "caption": "The four parts of the simplest circuit"
+   }
+  ],
+  "horn-weak": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_battery_charger.jpg",
+    "caption": "12 V battery with a charger and clips"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_battery_tester.jpg",
+    "caption": "Pencil hydrometer reading a battery: low charge shows here first"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_indeed_armour_light.jpg",
+    "caption": "Battery state of charge chart: volts and gravity for each level"
+   }
+  ],
+  "indicators-fast": [],
+  "indicators-steady": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_now_we_start_testing_2.jpg",
+    "caption": "Multimeter with leads: the tool for voltage and continuity checks"
+   }
+  ],
+  "speedo-dead": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_outside.jpg",
+    "caption": "Speedometer drive on the outside of the front hub"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/144/144_them.jpg",
+    "caption": "Speedometer drive on the outside of the hub"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_types_insulation.jpg",
+    "caption": "Heat-shrink tubing and tape to insulate a joint"
+   }
+  ],
+  "tail-light-out": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_ends_crimping.jpg",
+    "caption": "Wire ends ready for a crimp fitting"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_special_pliers.jpg",
+    "caption": "Crimping pliers for wire fittings"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/094/094_wire_nuts.jpg",
+    "caption": "Wire nuts and a twisted joint: poor joints cause faults"
+   }
+  ],
+  "warning-lights-flicker": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_indeed_armour_light.jpg",
+    "caption": "Battery state of charge compared with volts and gravity"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_tester.jpg",
+    "caption": "Battery tester"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_batteries_junk_anyway_but_might_get.jpg",
+    "caption": "Small pencil hydrometer used on a motorcycle battery"
+   }
+  ],
+  "all-lights-out": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/095/095_lead_acid_battery_1.jpg",
+    "caption": "Lead-acid battery with plates visible through the case"
+   }
+  ],
+  "bulbs-blow-often": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_reverse.jpg",
+    "caption": "Rectifier tested with reversed leads: it must pass current one way only"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/101/101_voltage_regulator_yoke_gap.jpg",
+    "caption": "Regulator core gap setting: a wrong gap overcharges and blows bulbs"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/099/099_self_contained.jpg",
+    "caption": "Flywheel and stator with the coil attached"
+   }
+  ],
+  "indicators-dead": [
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/096/096_ac_connection_point.jpg",
+    "caption": "Caliper measuring the AC switch contact"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/086/086_simplest_wiring_system.jpg",
+    "caption": "The four parts of the simplest circuit"
+   }
+  ]
+ }
+}
