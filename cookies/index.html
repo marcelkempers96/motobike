@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moto Zero · Cookies and local storage</title>
   <link rel="canonical" href="https://motobike-five.vercel.app/cookies/">
-  <meta property="og:type" content="website"><meta property="og:site_name" content="Moto Zero"><meta property="og:title" content="Moto Zero · Cookies and local storage"><meta property="og:description" content="Moto Zero sets no cookies. It uses your browser’s local storage only to remember progress and preferences, on your device."><meta property="og:url" content="https://motobike-five.vercel.app/cookies/"><meta property="og:image" content="https://motobike-five.vercel.app/assets/photos/home-ov-all-3q.webp"><meta name="twitter:card" content="summary_large_image">
-  <meta name="description" content="Moto Zero sets no cookies. It uses your browser’s local storage only to remember progress and preferences, on your device.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Moto Zero"><meta property="og:title" content="Moto Zero · Cookies and local storage"><meta property="og:description" content="Moto Zero sets no tracking or advertising cookies. Local storage remembers progress and preferences on your device; one cookie is set only when you choose a language."><meta property="og:url" content="https://motobike-five.vercel.app/cookies/"><meta property="og:image" content="https://motobike-five.vercel.app/assets/photos/home-ov-all-3q.webp"><meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Moto Zero sets no tracking or advertising cookies. Local storage remembers progress and preferences on your device; one cookie is set only when you choose a language.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261106b">
-  <style>
+    <style>
 .ute-hero { padding: 64px 40px 52px; border-bottom: 1px solid var(--line); }
 .ute-hero h1 { max-width: 880px; }
 .ute-hero p { max-width: 720px; line-height: 1.55; }
@@ -64,6 +65,11 @@
   .mz-doc-toc ol { columns: 2; column-gap: 16px; }
 }
 @media (max-width: 540px) { .mz-doc-toc ol { columns: 1; } .mz-doc-body h2 { font-size: 21px; } }
+.mz-legal-nav { padding: 32px 40px 44px; border-top: 1px solid var(--line); }
+.mz-legal-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 12px 0 0; padding: 0; }
+.mz-legal-nav a { font-size: 15px; }
+.mz-legal-nav a[aria-current] { color: var(--ink); font-weight: 600; text-decoration: none; }
+@media (max-width: 720px) { .mz-legal-nav { padding: 28px 16px 36px; } }
 </style>
 </head>
 <body>
@@ -76,29 +82,43 @@
   <section class="ute-hero">
     <span class="ute-label">Legal · cookies</span>
     <h1>Cookies and local storage</h1>
-    <p>This site sets no cookies. It uses local storage in your browser to remember your progress and a few preferences, and that information never leaves your device.</p>
+    <p>Moto Zero sets no tracking or advertising cookies. It uses your browser's local storage to remember your progress and preferences on your device, and one cookie only if you choose to translate a page.</p>
   </section>
 
   <div class="mz-doc">
-    <nav class="mz-doc-toc" aria-label="On this page"><span class="ute-label">On this page</span><ol><li><a href="#none">No cookies</a></li><li><a href="#local">What local storage is used for</a></li><li><a href="#banner">Why there is no cookie banner</a></li><li><a href="#clear">How to clear it</a></li><li><a href="#contact">Questions</a></li></ol></nav>
+    <nav class="mz-doc-toc" aria-label="On this page"><span class="ute-label">On this page</span><ol><li><a href="#short">In short</a></li><li><a href="#cookies">Cookies</a></li><li><a href="#local">Local storage</a></li><li><a href="#banner">Why there is no cookie banner</a></li><li><a href="#clear">How to clear it</a></li><li><a href="#contact">Questions</a></li></ol></nav>
     <div class="mz-doc-body">
-      <section id="none"><h2><small>01</small>No cookies</h2><p>Moto Zero does not set any cookies, first-party or third-party. There are no analytics, advertising or social media cookies.</p></section>
-      <section id="local"><h2><small>02</small>What local storage is used for</h2><p>Local storage is a small store inside your browser that a website can read and write on your device. The site uses these keys:</p><div class="ute-table-wrap"><table class="ute-table">
+      <section id="short"><h2><small>01</small>In short</h2><ul><li>No analytics, advertising, tracking or social media cookies.</li><li>One small cookie, <code>googtrans</code>, is set only if you choose a language other than English, so the translation follows you from page to page.</li><li>Everything else is kept in your browser's local storage, only to remember your progress and settings, and is not sent to us. If you sign in, local storage also keeps you signed in.</li></ul></section>
+      <section id="cookies"><h2><small>02</small>Cookies</h2><div class="ute-table-wrap"><table class="ute-table">
+  <thead><tr><th>Cookie</th><th>Set by</th><th>Purpose</th><th>Duration</th></tr></thead>
+  <tbody>
+    <tr><td><code>googtrans</code></td><td>This site, when you choose a language</td><td>Tells Google Translate which language to show (for example <code>/en/sw</code>).</td><td>Until you close the browser; removed when you choose English again</td></tr>
+    <tr><td>Google cookies</td><td>Google, only after you choose a language</td><td>Set by the Google Translate script on Google's own domains.</td><td>See <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Google's cookie policy</a></td></tr>
+    <tr><td>YouTube storage</td><td>YouTube, only after you press play on a video</td><td>The privacy-enhanced player (youtube-nocookie.com) may store data in your browser once a video plays.</td><td>See Google's cookie policy</td></tr>
+  </tbody>
+</table></div><p>Before you choose a language or play a video, neither Google Translate nor the YouTube player is loaded.</p></section>
+      <section id="local"><h2><small>03</small>Local storage</h2><p>Local storage is a small store inside your browser that a website can read and write on your device. It is not sent with requests to the server. The site uses these keys:</p><div class="ute-table-wrap"><table class="ute-table">
   <thead><tr><th>Key</th><th>Set by</th><th>What it holds</th></tr></thead>
   <tbody>
-    <tr><td><code>mz-progress-v1</code></td><td>Learn, Quiz and the tools</td><td>Chapters you opened and marked as done (with dates), your answers to in-chapter checks, best and last quiz scores per module and level, and which tools you used.</td></tr>
-    <tr><td><code>sb-…-auth-token</code></td><td>Account (only if you sign in)</td><td>Keeps you signed in. Removed when you sign out.</td></tr>
+    <tr><td><code>mz-progress-v1</code></td><td>Learn, Quiz, My progress and the tools</td><td>Chapters you opened and marked as done (with dates), your answers to in-chapter checks, best and last quiz scores per module and level, and which tools you used.</td></tr>
+    <tr><td><code>mz-rep-…</code></td><td>Repair job pages</td><td>Which steps of a job you ticked as done (one key per job).</td></tr>
     <tr><td><code>mz-circuit-builder-v1</code></td><td>Circuit Builder</td><td>Your circuit and readings log, so they are there next time.</td></tr>
-    <tr><td><code>mz-best</code></td><td>Quiz</td><td>Your best score per quiz topic.</td></tr>
+    <tr><td><code>mz-build</code></td><td>Bike builder game</td><td>Your fastest time for each bike and level.</td></tr>
     <tr><td><code>mz-sound</code></td><td>Cockpit</td><td>Whether the engine sound is on or off.</td></tr>
-    <tr><td><code>mz-build</code></td><td>Bike builder</td><td>Your fastest time for each bike and level.</td></tr>
+    <tr><td><code>mz-split</code></td><td>Overview</td><td>The width you chose for the side panel.</td></tr>
+    <tr><td><code>mz-types-look</code></td><td>Motorcycle types</td><td>Whether you prefer drawings or photos.</td></tr>
+    <tr><td><code>mz-lang</code></td><td>Language picker</td><td>The language you chose, so pages open in it.</td></tr>
+    <tr><td><code>sb-…-auth-token</code></td><td>Account (only if you sign in)</td><td>Keeps you signed in (a session token from Supabase; the middle part is our project name). Removed when you sign out.</td></tr>
+    <tr><td><code>mz-role</code></td><td>Account page (only if you sign in)</td><td>Whether the account is a member or team account, to show the right menu. Removed when you sign out.</td></tr>
   </tbody>
-</table></div><p>The data is plain text that only pages from this site, in this browser, can read. It is not sent with requests to the server.</p></section>
-      <section id="banner"><h2><small>03</small>Why there is no cookie banner</h2><p>Consent banners are needed for storage that tracks people or is not necessary for a service the visitor asked for. The keys above only remember what you did on the site so that it can show your progress and settings back to you, and nothing is shared. There is nothing to opt out of, so there is no banner.</p></section>
-      <section id="clear"><h2><small>04</small>How to clear it</h2><ul><li>Use <strong>Reset progress</strong> on the <a href="../progress/">My progress</a> page to clear your learning progress.</li><li>To remove every key, clear the site data for this website in your browser settings.</li><li>Before clearing, you can use <strong>Export progress</strong> to keep a copy and import it later or on another device.</li></ul></section>
-      <section id="contact"><h2><small>05</small>Questions</h2><p>Write to <a href="mailto:marcel@transitionslab.org">marcel@transitionslab.org</a>. See also the <a href="../privacy/">privacy policy</a>.</p><p class="mz-updated">Last updated 1 November 2026.</p></section>
+</table></div><p>The site also uses one session storage key, <code>mz-next-done</code>, during sign-in to bring you back to the page you came from; the browser deletes it when you close the tab.</p><p>If you are signed in, your course progress is also saved to your account, as described in the <a href="../privacy/">privacy policy</a>.</p></section>
+      <section id="banner"><h2><small>04</small>Why there is no cookie banner</h2><p>Dutch and EU law (article 11.7a of the Telecommunicatiewet, based on the ePrivacy directive) requires consent for cookies and similar storage unless they are strictly necessary for a service you asked for. Everything above only remembers what you did on the site or keeps you signed in, so that the site can show your progress and settings back to you. Translation and video players load only when you ask for them. Nothing is used for tracking, analytics or advertising, so there is nothing to consent to and no banner.</p></section>
+      <section id="clear"><h2><small>05</small>How to clear it</h2><ul><li>Use <strong>Reset progress</strong> on the <a href="../progress/">My progress</a> page to clear your learning progress. Before clearing, you can use <strong>Export progress</strong> to keep a copy and import it later or on another device.</li><li>Choose <strong>English</strong> in the language picker to remove the <code>googtrans</code> cookie.</li><li>Sign out on the <a href="../account/">account page</a> to remove the sign-in token.</li><li>To remove every key, clear the site data for this website in your browser settings.</li></ul></section>
+      <section id="contact"><h2><small>06</small>Questions</h2><p>Email the team at <a href="mailto:marcel@transitionslab.org">marcel@transitionslab.org</a> or use the <a href="../contact/">contact form</a>. See also the <a href="../privacy/">privacy policy</a>.</p><p class="mz-updated">Last updated 6 November 2026.</p></section>
     </div>
   </div>
+
+  <nav class="mz-legal-nav" aria-label="Legal pages"><span class="ute-label">Legal pages</span><ul><li><a href="../privacy/">Privacy policy</a></li><li><a href="../cookies/" aria-current="page">Cookies and storage</a></li><li><a href="../terms/">Terms of use</a></li><li><a href="../community/">Community guidelines</a></li><li><a href="../disclaimer/">Safety disclaimer</a></li><li><a href="../accessibility/">Accessibility</a></li><li><a href="../legal/">Legal notice</a></li></ul></nav>
 
   <footer data-mz-footer></footer>
 </div>
