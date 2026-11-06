@@ -14,6 +14,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 349}
   - {doc: "K-Light 125 manual", page: 243}
   - {doc: "K-Light 125 manual", page: 187}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs2.htm"}
 ---
 
 # Strong smell of fuel around the bike
@@ -31,6 +32,8 @@ Not until you have found the source. If you see any wet fuel, treat it as a leak
 - Does it smell more after the bike has been parked on its side stand?
 - Is the choke left on?
 - Is the oil level rising, or does the oil smell of petrol?
+- A float level a little high makes the mixture rich and a low one makes it lean. A level far too high leaks fuel from the overflow tube.
+
 
 ## Diagnose it step by step
 

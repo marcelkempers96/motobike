@@ -8,6 +8,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 376}
   - {doc: "MAVCC Motorcycle Mechanic", page: 262}
   - {doc: "Unit 2 The Motorcycle", page: 2}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel tap
@@ -36,3 +37,6 @@ When it leaks, will not shut, or still flows badly after the strainer is cleaned
 - Home job: [Check the fuel tap, lines and flow](/moto-zero/repair/repairs/fuel-tap-line-check).
 - Drain the tank first, outside, away from flames. Do not overtighten into the tank.
 - After fitting, check flow in ON and RES into a container before connecting the hose.
+- Standard taps have ON, OFF and RES. Vacuum taps have ON, RES and PRI. Racing taps have ON and OFF only.
+- Some taps are held with small screws and can be opened. Others are riveted and can only be replaced. See [Vacuum fuel tap check](/moto-zero/repair/repairs/vacuum-fuel-tap-check) and [Inline shut-off valve](/moto-zero/repair/parts/inline_fuel_valve).
+

@@ -14,6 +14,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 377}
   - {doc: "MAVCC Motorcycle Mechanic", page: 378}
   - {doc: "MAVCC Motorcycle Mechanic", page: 370}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # No fuel reaching the carburettor
@@ -31,6 +32,10 @@ The engine will not run properly without fuel, so do not try to ride. Work outdo
 - Is the fuel hose pinched, kinked or blocked?
 - Does opening the fuel cap make a hiss?
 - Has the bike stood for weeks or months?
+- A standard tap has ON, OFF and RES. ON draws fuel from a tube a little above the tank bottom. When the level falls below it, the carburettor runs dry until the lever is moved to RES.
+- A vacuum tap opens only with engine vacuum and has ON, RES and PRI. PRI by-passes the diaphragm. See [Check a vacuum fuel tap and use the prime position](/moto-zero/repair/repairs/vacuum-fuel-tap-check).
+- Most taps have one or more fine screens, in the tank, in the tap and on the reserve tube. Any of them can block.
+
 
 ## Diagnose it step by step
 

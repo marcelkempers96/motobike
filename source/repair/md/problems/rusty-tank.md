@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 186}
   - {doc: "MAVCC Motorcycle Mechanic", page: 377}
   - {doc: "MAVCC Motorcycle Mechanic", page: 66}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Rust or flakes inside the fuel tank
@@ -29,6 +30,10 @@ With care, after fitting a clean filter, while you arrange a proper fix. If the 
 - Look into the tank through the filler with a bright torch: rust on the walls or bottom?
 - Is the outside of the tank wet, bubbled or stained near the bottom or seams?
 - Has the bike stood with a half-empty tank, or does the cap seal leak?
+- A cheap clean-out for rust only: put a few large nuts in the tank, shake hard, then wash the loosened rust out. Fit a see-through fuel filter in the line to the carburettor and change it when it fills.
+- A rust pinhole usually means the inside is thin in many places. Cleaning to weld it often opens more holes. A different or new tank is the lasting cure.
+- Liquid tank coatings do not seal a crack, and some peel off and block the filter. See [Assess and repair a leaking fuel tank](/moto-zero/repair/repairs/fuel-tank-leak-repair).
+
 
 ## Diagnose it step by step
 

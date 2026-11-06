@@ -1,0 +1,958 @@
+{
+ "repairs": [
+  {
+   "id": "needle-seat-replace",
+   "title": "Check and replace the carburettor needle valve and seat",
+   "level": "home",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "carburettor"
+   ],
+   "tools": [
+    "screwdrivers",
+    "small spanner or socket for a screwed-in seat",
+    "clean tray",
+    "new needle and seat set",
+    "new float bowl gasket"
+   ],
+   "parts": [
+    "carb"
+   ],
+   "consumables": [
+    "float bowl gasket"
+   ],
+   "fixes": [
+    "carb-overflowing",
+    "flooded-engine",
+    "fuel-leak",
+    "fuel-smell",
+    "runs-rich",
+    "hard-hot-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb8a.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_maybe_just_sell_more_parts_think.jpg",
+     "caption": "Brass needle seats of two flow sizes"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip.jpg",
+     "caption": "Needle valve with a steel tip"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip_steel_tip.jpg",
+     "caption": "Needle valve with a rubber tip"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_if_after_tapping_carburetor_still_leaks.jpg",
+     "caption": "Worn needle tips, each with a ring"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_worn_fuel_valve_needles.jpg",
+     "caption": "Needle and seat in section in the float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_5.jpg",
+     "caption": "Spanner on a needle seat inside the carburettor"
+    }
+   ]
+  },
+  {
+   "id": "carb-jet-tune",
+   "title": "Read a spark plug and choose the jet by throttle position",
+   "level": "home",
+   "time": "1 to 2 h plus road tests",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "new or clean spark plug",
+    "plug spanner",
+    "masking tape",
+    "pen",
+    "tape measure",
+    "jet set for your carburettor"
+   ],
+   "parts": [
+    "carb",
+    "spark_plug"
+   ],
+   "consumables": [],
+   "fixes": [
+    "runs-lean",
+    "runs-rich",
+    "flat-spot",
+    "hesitation",
+    "surging-cruise",
+    "bogs-full-throttle",
+    "rough-idle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb10.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb9.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_tuning.jpg",
+     "caption": "Carburettor with the throttle range of each jet marked"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1.jpg",
+     "caption": "Chart of the throttle range each jet controls"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_roaring_down_road_120_mph_trying.jpg",
+     "caption": "Tape marks on the grip and housing show throttle position"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_2.jpg",
+     "caption": "Slide cutaway at idle"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg",
+     "caption": "Slide cutaway at three quarter throttle"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg",
+     "caption": "Slide cutaway at full throttle"
+    }
+   ]
+  },
+  {
+   "id": "starter-plunger-check",
+   "title": "Check the starter plunger and cold-start circuit",
+   "level": "home",
+   "time": "20 to 30 min",
+   "applies_to": [
+    "carburettor",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "screwdrivers",
+    "carburettor cleaner",
+    "thin wire or compressed air",
+    "new gasket if the bowl comes off"
+   ],
+   "parts": [
+    "carb",
+    "choke_cable"
+   ],
+   "consumables": [],
+   "fixes": [
+    "hard-cold-start",
+    "starts-only-with-choke",
+    "choke-stuck",
+    "runs-rich",
+    "high-idle",
+    "flooded-engine"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb11.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_start_mixture_enrichment_circuit.jpg",
+     "caption": "Drawing of the starter fuel and air circuit"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger.jpg",
+     "caption": "Starter plunger parts: cable, lever and knob types"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake.jpg",
+     "caption": "Starter jet outlet in the carburettor throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg",
+     "caption": "Brass starter jet in the float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_11.jpg",
+     "caption": "Plunger end of a starter plunger"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_12.jpg",
+     "caption": "Starter plungers on a four-carburettor set"
+    }
+   ]
+  },
+  {
+   "id": "choke-plate-check",
+   "title": "Check a plate or guillotine choke and its spring",
+   "level": "rider",
+   "time": "10 to 20 min",
+   "applies_to": [
+    "carburettor",
+    "kickstart",
+    "electric-start"
+   ],
+   "tools": [
+    "screwdriver",
+    "torch"
+   ],
+   "parts": [
+    "carb",
+    "choke_cable"
+   ],
+   "consumables": [],
+   "fixes": [
+    "choke-stuck",
+    "hard-cold-start",
+    "starts-only-with-choke",
+    "cranks-no-start",
+    "runs-rich"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb12.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/077/077_choke_plate.jpg",
+     "caption": "Spring-loaded lever on a plate choke"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style_guillotine_style_2.jpg",
+     "caption": "Plate choke closed across the throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style_guillotine_style_3.jpg",
+     "caption": "Plate choke open in the throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style.jpg",
+     "caption": "Choke lever and guillotine choke in the throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/077/077_because_some_engines_need_bit_more.jpg",
+     "caption": "Choke plate with small spring-loaded doors"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/077/077_if_think_choke_but_engine_will.jpg",
+     "caption": "Choke plate seen from the air filter side"
+    }
+   ]
+  },
+  {
+   "id": "cv-carb-check",
+   "title": "Check a constant velocity (CV) carburettor slide and diaphragm",
+   "level": "home",
+   "time": "45 to 60 min",
+   "applies_to": [
+    "carburettor"
+   ],
+   "tools": [
+    "screwdrivers",
+    "torch",
+    "clean cloth",
+    "new diaphragm or slide kit if needed"
+   ],
+   "parts": [
+    "carb"
+   ],
+   "consumables": [
+    "carburettor gasket set"
+   ],
+   "fixes": [
+    "hesitation",
+    "flat-spot",
+    "hanging-revs",
+    "surging-cruise",
+    "bogs-full-throttle",
+    "cv-carb-stumble"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cv_carb.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_again_i_put_wire_through_atmospheric.jpg",
+     "caption": "Drawing of a CV carburettor: vacuum above, air pressure below"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+     "caption": "Diaphragm slide with its vacuum holes"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_2.jpg",
+     "caption": "Diaphragm, slide and return spring in the carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_i_put_wire_through_atmospheric_air.jpg",
+     "caption": "Piston slide with a labyrinth seal"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_11.jpg",
+     "caption": "Air passage traced with a wire in a diaphragm body"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_piston_constant_velocity_carburetor_vacuum_air.jpg",
+     "caption": "Piston-type CV carburettor"
+    }
+   ]
+  },
+  {
+   "id": "reed-valve-check",
+   "title": "Check a reed valve and its petals",
+   "level": "home",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "two-stroke",
+    "carburettor"
+   ],
+   "tools": [
+    "screwdrivers or spanners for the intake",
+    "clean cloth",
+    "new gasket"
+   ],
+   "parts": [
+    "reed_valve",
+    "carb",
+    "intake_manifold"
+   ],
+   "consumables": [
+    "intake gasket"
+   ],
+   "fixes": [
+    "reed-valve-fault",
+    "hard-cold-start",
+    "rough-idle",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/reedvalve.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder_2.jpg",
+     "caption": "Reed cage, reed stop and reed petal labelled"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_reed_petal.jpg",
+     "caption": "A single reed petal held in the hand"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_engines_usually_have_four_six.jpg",
+     "caption": "Reed stop plate screwed to the reed cage"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_parts_reed_valve.jpg",
+     "caption": "Reed valve block with its petals"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg",
+     "caption": "Intake port of a cylinder without reeds"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_reed_valves.jpg",
+     "caption": "Fitting a reed valve in the intake port"
+    }
+   ]
+  },
+  {
+   "id": "power-valve-service",
+   "title": "Assess and service a two-stroke power valve",
+   "level": "workshop",
+   "time": "2 to 3 h",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "shop manual",
+    "spanners or sockets",
+    "carbon scraper",
+    "solvent",
+    "setting rod or pin from the manual"
+   ],
+   "parts": [
+    "power_valve",
+    "exhaust"
+   ],
+   "consumables": [
+    "gaskets",
+    "o-rings"
+   ],
+   "fixes": [
+    "powervalve-stuck",
+    "low-power",
+    "power-fades-hot"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/powervalve.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_closed.jpg",
+     "caption": "Power valve closed, narrowing the exhaust port"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_open.jpg",
+     "caption": "Power valve open at high revs"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_check_shop_manual.jpg",
+     "caption": "Power valve cover removed from a cylinder"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_dirty_power_valve_linkage.jpg",
+     "caption": "Carbon in the power valve linkage housing"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_yamaha_yz125_governor.jpg",
+     "caption": "Governor with centrifugal weights on the valve shaft"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_setting_power_valve_linkage.jpg",
+     "caption": "Checking the power valve linkage setting"
+    }
+   ]
+  },
+  {
+   "id": "air-filter-foam-service",
+   "title": "Clean and re-oil a foam air filter",
+   "level": "rider",
+   "time": "20 to 30 min plus drying",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "carburettor"
+   ],
+   "tools": [
+    "solvent or mild detergent",
+    "clean container",
+    "filter oil or oil named in the manual",
+    "disposable gloves",
+    "clean cloth"
+   ],
+   "parts": [
+    "air_filter"
+   ],
+   "consumables": [
+    "filter oil",
+    "new foam if torn"
+   ],
+   "fixes": [
+    "runs-rich",
+    "black-smoke",
+    "low-power",
+    "bogs-full-throttle",
+    "high-fuel-use",
+    "plug-black-sooty"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aircleaner.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam.jpg",
+     "caption": "Oiled foam air filter element"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_filters_real_filter.jpg",
+     "caption": "Rips in an old foam filter"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_oiled_fabric_dry_paper.jpg",
+     "caption": "Foam filter with its frame"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_worn_out_foam.jpg",
+     "caption": "Worn out foam filter with torn spots"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_just_never_know.jpg",
+     "caption": "Foam filter fitted with a clamp"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg",
+     "caption": "Foam filter sheet cut to shape"
+    }
+   ]
+  },
+  {
+   "id": "airbox-blockage-check",
+   "title": "Check the airbox inlet, filter and breather for a blockage",
+   "level": "rider",
+   "time": "10 to 20 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "carburettor"
+   ],
+   "tools": [
+    "screwdriver",
+    "torch",
+    "clean cloth"
+   ],
+   "parts": [
+    "air_filter"
+   ],
+   "consumables": [],
+   "fixes": [
+    "runs-rich",
+    "black-smoke",
+    "bogs-full-throttle",
+    "high-fuel-use",
+    "low-power",
+    "plug-black-sooty"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aircleaner.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_care_they_last_quite_while.jpg",
+     "caption": "Paper air filter element in its frame"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_paper_filter.jpg",
+     "caption": "Paper filter element held for inspection"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+     "caption": "Oiled fabric air filter"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_spark_plug.jpg",
+     "caption": "Spark plug fouled with black soot"
+    }
+   ]
+  },
+  {
+   "id": "air-tube-replace",
+   "title": "Replace a hard, shrunk air tube between airbox and carburettor",
+   "level": "home",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdrivers",
+    "hose clamps",
+    "new fuel-safe rubber tube or the correct maker tube"
+   ],
+   "parts": [
+    "air_filter",
+    "carb",
+    "intake_manifold"
+   ],
+   "consumables": [
+    "hose clamps"
+   ],
+   "fixes": [
+    "runs-lean",
+    "hunting-idle",
+    "rough-idle",
+    "hesitation",
+    "air-change-runs-wrong"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aircleaner.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+     "caption": "Foam sock filter clamped to a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_just_never_know.jpg",
+     "caption": "Foam sock filter fitted with a hose clamp"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_fabric_filter.jpg",
+     "caption": "Oiled fabric filter on a carburettor pod"
+    }
+   ]
+  },
+  {
+   "id": "airbox-change-check",
+   "title": "Check the mixture after changing the air filter or airbox",
+   "level": "home",
+   "time": "30 to 60 min plus a test ride",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "spark plug spanner",
+    "new or clean spark plug",
+    "manual",
+    "jet set if needed"
+   ],
+   "parts": [
+    "air_filter",
+    "carb",
+    "spark_plug"
+   ],
+   "consumables": [],
+   "fixes": [
+    "air-change-runs-wrong",
+    "runs-rich",
+    "runs-lean",
+    "hesitation",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aircleaner.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb10.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg",
+     "caption": "Foam sheet cut to shape for a homemade filter"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_foam_make_filter.jpg",
+     "caption": "Foam air filter sheet before cutting"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+     "caption": "Foam sock filter clamped to a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+     "caption": "Oiled fabric filter on a pod"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_spark_plug.jpg",
+     "caption": "Spark plug fouled with black soot"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "cv-carb-stumble",
+   "title": "Stumbles or dies when the throttle is snapped open (CV carburettor)",
+   "system": "running",
+   "also_called": [
+    "bog when throttle opened fast",
+    "dies when throttle whacked open",
+    "slow to pick up"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "carburettor",
+    "four-stroke"
+   ],
+   "parts": [
+    "carb",
+    "throttle_cable",
+    "intake_manifold",
+    "air_filter"
+   ],
+   "repairs": [
+    "cv-carb-check",
+    "carburettor-clean",
+    "intake-leak-test",
+    "throttle-cable-adjust"
+   ],
+   "related": [
+    "hesitation",
+    "flat-spot",
+    "hanging-revs",
+    "bogs-full-throttle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cv_carb.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_again_i_put_wire_through_atmospheric.jpg",
+     "caption": "Drawing of a CV carburettor: vacuum above, air pressure below"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+     "caption": "Diaphragm slide with its vacuum holes"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_cure_dying_stumbling_carburetor_manufacturers_invented.jpg",
+     "caption": "CV carburettor with throttle plate in the throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/081/081_very_smoothly_no_stumbling_whatsoever_when.jpg",
+     "caption": "Four CV carburettors on a multi-cylinder engine"
+    }
+   ]
+  },
+  {
+   "id": "reed-valve-fault",
+   "title": "Two-stroke is hard to start or weak at low revs (reed valve fault)",
+   "system": "running",
+   "also_called": [
+    "reeds broken",
+    "mixture spits back from carburettor",
+    "two-stroke will not start"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "two-stroke",
+    "carburettor"
+   ],
+   "parts": [
+    "reed_valve",
+    "carb",
+    "intake_manifold",
+    "piston"
+   ],
+   "repairs": [
+    "reed-valve-check",
+    "intake-leak-test",
+    "compression-test"
+   ],
+   "related": [
+    "hard-cold-start",
+    "rough-idle",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/reedvalve.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder_2.jpg",
+     "caption": "Reed cage, reed stop and reed petal labelled"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_reed_petal.jpg",
+     "caption": "A single reed petal held in the hand"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_eight.jpg",
+     "caption": "Eight-petal reed valve"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg",
+     "caption": "Intake port of a cylinder without reeds"
+    }
+   ]
+  },
+  {
+   "id": "powervalve-stuck",
+   "title": "Two-stroke is weak at one end of the rev range (power valve)",
+   "system": "running",
+   "also_called": [
+    "powervalve stuck",
+    "exhaust valve stuck",
+    "no top end power",
+    "flat at low revs"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "parts": [
+    "power_valve",
+    "exhaust",
+    "cylinder",
+    "piston"
+   ],
+   "repairs": [
+    "power-valve-service",
+    "two-stroke-decoke",
+    "compression-test"
+   ],
+   "related": [
+    "low-power",
+    "power-fades-hot",
+    "exhaust-blocked"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/powervalve.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_closed.jpg",
+     "caption": "Power valve closed, narrowing the exhaust port"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_open.jpg",
+     "caption": "Power valve open at high revs"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_dirty_power_valve_linkage.jpg",
+     "caption": "Carbon in the power valve linkage housing"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/083/083_yamaha_yz125_governor.jpg",
+     "caption": "Governor with centrifugal weights on the valve shaft"
+    }
+   ]
+  },
+  {
+   "id": "air-change-runs-wrong",
+   "title": "Runs rich or lean after changing the air filter or airbox",
+   "system": "running",
+   "also_called": [
+    "runs badly without air filter",
+    "ran differently after new filter",
+    "airbox cracked"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "air_filter",
+    "carb",
+    "spark_plug",
+    "intake_manifold"
+   ],
+   "repairs": [
+    "airbox-change-check",
+    "airbox-blockage-check",
+    "air-tube-replace",
+    "carb-jet-tune"
+   ],
+   "related": [
+    "runs-rich",
+    "runs-lean",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aircleaner.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg",
+     "caption": "Foam sheet cut to shape for a homemade filter"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+     "caption": "Foam sock filter clamped to a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+     "caption": "Oiled fabric filter on a pod"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_spark_plug.jpg",
+     "caption": "Spark plug fouled with black soot"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "reed_valve",
+   "name": "Reed valve",
+   "category": "engine",
+   "aliases": [
+    "reeds",
+    "reed petals",
+    "reed cage",
+    "intake reed"
+   ],
+   "applies_to": [
+    "two-stroke",
+    "carburettor"
+   ],
+   "repairs": [
+    "reed-valve-check",
+    "intake-leak-test",
+    "compression-test"
+   ],
+   "problems": [
+    "reed-valve-fault",
+    "hard-cold-start",
+    "rough-idle",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/reedvalve.htm"
+    }
+   ]
+  },
+  {
+   "id": "power_valve",
+   "name": "Power valve (exhaust valve)",
+   "category": "exhaust",
+   "aliases": [
+    "exhaust valve",
+    "powervalve",
+    "exhaust port valve"
+   ],
+   "applies_to": [
+    "two-stroke"
+   ],
+   "repairs": [
+    "power-valve-service",
+    "two-stroke-decoke",
+    "compression-test"
+   ],
+   "problems": [
+    "powervalve-stuck",
+    "low-power",
+    "power-fades-hot"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/powervalve.htm"
+    }
+   ]
+  }
+ ]
+}

@@ -13,6 +13,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 49}
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "Unit 2 The Motorcycle", page: 29}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb3.htm"}
 ---
 
 # Starts only with the choke on or the throttle held open
@@ -28,6 +30,10 @@ With care, for a short way only. An engine that dies when you close the throttle
 - Has the bike stood with fuel in it for weeks?
 - Is the idle speed screw (carburettor) turned right down?
 - Fuel-injected: is the warning light on?
+- Try starting with the throttle fully closed. Starter circuits stop working as soon as the throttle opens a little.
+- If the engine runs only with the choke on, one or more jets are probably blocked. See [Clear carburettor jets and passages](/moto-zero/repair/repairs/carb-jet-clear) and [Clear a blocked starter circuit](/moto-zero/repair/repairs/choke-circuit-clear).
+- An old, hard intake rubber can leak air. A leaking boot makes the idle rise and fall, then die.
+
 
 ## Diagnose it step by step
 

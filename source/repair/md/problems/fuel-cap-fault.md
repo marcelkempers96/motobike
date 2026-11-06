@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 22}
   - {doc: "K-Light 125 manual", page: 180}
   - {doc: "MAVCC Motorcycle Mechanic", page: 66}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel cap is stuck, leaks or will not lock
@@ -29,6 +30,9 @@ With care, as long as the cap closes and seals. If the cap will not close, or fu
 - Is the rubber seal under the cap whole and seated?
 - Has the bike been dropped on the tank side?
 - Do you hear a hiss when the cap opens?
+- A cap may have a small vent hole, a one-way valve, or be sealed with a separate vent tube. A blocked vent stops fuel flowing.
+- Keep plastic tanks and caps out of strong sun where possible. Plastic parts become brittle after years of sunlight.
+
 
 ## Diagnose it step by step
 

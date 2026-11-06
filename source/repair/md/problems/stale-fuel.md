@@ -13,6 +13,8 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 257}
   - {doc: "K-Light 125 manual", page: 258}
   - {doc: "K-Light 125 manual", page: 269}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gas.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
 ---
 
 # Old or stale fuel in the tank
@@ -30,6 +32,10 @@ With care, once it starts and runs smoothly. If it hesitates or stalls, fix it b
 - Is it darker than fresh fuel in a clear jar?
 - Was the tank half empty (more air, more condensation)?
 - Carburettor: was the float bowl left full?
+- A small amount of fuel, such as a pint, can go bad in as little as two weeks. A full tank can stay good for a year or so. Fuel standing in a carburettor is the first to turn to varnish.
+- Fuel stabiliser in the tank slows this. See [Protect stored fuel with a fuel stabiliser](/moto-zero/repair/repairs/fuel-stabiliser-use). Replace old fuel with new about once a year.
+- Constant velocity carburettors suffer most, because slightly thickened fuel can plug the small idle passages.
+
 
 ## Diagnose it step by step
 

@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 186}
   - {doc: "K-Light 125 manual", page: 274}
   - {doc: "MAVCC Motorcycle Mechanic", page: 376}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel filter
@@ -37,6 +38,8 @@ At the interval in your bike's manual, and at once after rust or dirt has been f
 - Home job: [Replace the fuel filter](/moto-zero/repair/repairs/fuel-filter-replace).
 - Work cold, outside, with no flames. On injection, release pressure as the manual describes before opening any line.
 - Fit with the arrow toward the engine, use new clips, and check for leaks with the key on before starting.
+- A see-through filter in the line to the carburettor shows rust and dirt. Change it when it fills. It is the cheapest way to protect the carburettor from a rusty tank.
+
 
 ## Reference (K-Light 125)
 

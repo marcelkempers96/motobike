@@ -11,6 +11,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 269}
   - {doc: "K-Light 125 manual", page: 270}
   - {doc: "K-Light 125 manual", page: 274}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel pump
@@ -39,6 +40,8 @@ When it has power and earth at its plug but does not run, or a workshop pressure
 - Home job to check: [Check the fuel pump](/moto-zero/repair/repairs/fuel-pump-check). Pressure testing needs a gauge and the model procedure; leave it to a workshop.
 - Fuel and sparks: work outside, battery negative off, tank drained. Release pressure before unplugging the hose.
 - Fit the pump the right way round (on the K-Light, the regulator faces the rear) and tighten the bolts evenly in sequence.
+- Bikes with a tank below the level of the carburettor, such as under-seat tanks, use an electric pump to lift the fuel.
+
 
 ## Reference (K-Light 125)
 

@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 192}
   - {doc: "K-Light 125 manual", page: 245}
   - {doc: "K-Light 125 manual", page: 276}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
 ---
 
 # Intake manifold and rubber
@@ -36,3 +37,5 @@ When it is cracked, hard, split or the clamp will not seal. Replace O-rings and 
 - Home job to find a leak: [Find an intake air leak](/moto-zero/repair/repairs/intake-leak-test).
 - Clean both faces. Tighten manifold bolts evenly so the flange is not bent.
 - Make sure the carburettor or throttle body sits straight and fully in the rubber before tightening clamps.
+- Old hard rubber can be softened for refitting. Heat gently with warm water or a hot air gun, and ease the carburettor in. Never pry hard, because the carburettor body is soft metal. See [Remove and refit a carburettor](/moto-zero/repair/repairs/carb-remove-refit).
+

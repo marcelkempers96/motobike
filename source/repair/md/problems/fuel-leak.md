@@ -16,6 +16,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 185}
   - {doc: "K-Light 125 manual", page: 186}
   - {doc: "K-Light 125 manual", page: 268}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel is leaking or dripping
@@ -33,6 +34,10 @@ No. **Stop now**, switch off the engine and turn the fuel tap OFF. Move the bike
 - Is fuel coming from the small overflow pipe under the carburettor?
 - Is the fuel cap closed and its seal in place?
 - Fuel-injected: is the wet spot near the pump on the tank, the hose connector or the injector?
+- If the tap flows but will not shut off, a plastic [inline shut-off valve](/moto-zero/repair/repairs/inline-fuel-valve-fit) in the hose is a cheap fix.
+- A crack or hole in a steel tank can be welded only by someone who purges the tank of air with an inert gas first. Filling it with water is not enough. Do not weld or solder a tank yourself.
+- Plastic glue is not a safe fix for a plastic tank. Two-part tank epoxy can last a time on a steel tank, and then fail.
+
 
 ## Diagnose it step by step
 

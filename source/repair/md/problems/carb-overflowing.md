@@ -14,6 +14,9 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 371}
   - {doc: "MAVCC Motorcycle Mechanic", page: 376}
   - {doc: "MAVCC Motorcycle Mechanic", page: 66}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs2.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb8.htm"}
 ---
 
 # Fuel pours out of the carburettor overflow pipe
@@ -31,6 +34,12 @@ No. **Turn the fuel tap OFF now.** Wipe up the fuel and let the engine cool. Do 
 - Does the oil smell of petrol, or is the oil level higher than normal?
 - Is the engine hard to turn over (fuel in the cylinder)?
 - Vacuum tap: does fuel keep flowing with the engine stopped?
+- If fuel pours from the overflow with the tap on, tap the carburettor body lightly with a plastic hammer. This may free a needle held by dirt. If it does not, replace needle and seat.
+- A needle tip with a groove worn in it should be replaced.
+- Plastic floats usually cannot be adjusted. Metal floats can be bent at the tang. See [Measure and set the carburettor float height](/moto-zero/repair/repairs/float-height-set).
+- A metal float crushed by frozen water makes the carburettor overflow.
+- If a full tank turns into half a tank overnight, check the oil. If it is thin and smells of fuel, change it and replace the needle valve.
+
 
 ## Diagnose it step by step
 

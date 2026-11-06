@@ -1,0 +1,1092 @@
+{
+ "repairs": [
+  {
+   "id": "cold-start-drill",
+   "title": "Start a cold carburettor engine with a choke, enrichener or float plunger",
+   "level": "rider",
+   "time": "2 to 5 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [],
+   "parts": [
+    "carb",
+    "choke_cable",
+    "spark_plug"
+   ],
+   "consumables": [],
+   "fixes": [
+    "hard-cold-start",
+    "flooded-engine",
+    "choke-cable-fault"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/starter.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_carb_enrichening_circuit.jpg",
+     "caption": "Carburettor with a choke plate across the bore"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_choke_lever.jpg",
+     "caption": "Choke lever on a carburettor, with cable attachment hole"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_motorcycle_carburetors_have_either_enriching_circuit.jpg",
+     "caption": "Enrichener plunger on the side of a carburettor"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_choke_type_carb.jpg",
+     "caption": "Float plunger (tickler) on a carburettor"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_cable.jpg",
+     "caption": "Enrichener cable fitted to a carburettor"
+    }
+   ]
+  },
+  {
+   "id": "kick-push-start",
+   "title": "Kick start a big single, or push start a bike with a dead starter",
+   "level": "rider",
+   "time": "5 to 10 min",
+   "applies_to": [
+    "four-stroke",
+    "kickstart",
+    "carburettor"
+   ],
+   "tools": [
+    "clear, level road"
+   ],
+   "parts": [
+    "kickstarter",
+    "compression_release",
+    "starter"
+   ],
+   "consumables": [],
+   "fixes": [
+    "kick-very-hard",
+    "starter-clicks",
+    "battery-flat"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/starter.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_helps_if_can_push_down_hill.jpg",
+     "caption": "Manual compression release lever on a cylinder head"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_do_again.jpg",
+     "caption": "Compression release on the camshaft under the valve cover"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_just_exactly_like_we_did_back.jpg",
+     "caption": "Kick indicator window and marker on a camshaft end"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/026/026_starter_kick_indicator_window.jpg",
+     "caption": "Starter marker seen through the kick indicator window"
+    }
+   ]
+  },
+  {
+   "id": "engine-break-in",
+   "title": "Break in a new or rebuilt engine",
+   "level": "home",
+   "time": "500 to 1000 km of riding",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "none"
+   ],
+   "parts": [
+    "piston_rings",
+    "piston",
+    "engine_oil"
+   ],
+   "consumables": [
+    "engine oil and filter"
+   ],
+   "fixes": [
+    "smoke-after-rebuild",
+    "low-power",
+    "engine-seized"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/engine_breakin.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/028/028_mysterious_two_stroke_seizure.jpg",
+     "caption": "Piston scored by heat, the risk of a hard break-in"
+    }
+   ]
+  },
+  {
+   "id": "seat-remove",
+   "title": "Remove the seat when you cannot find how",
+   "level": "rider",
+   "time": "5 to 15 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "basic spanners",
+    "key"
+   ],
+   "parts": [
+    "seat",
+    "bodywork"
+   ],
+   "consumables": [],
+   "fixes": [
+    "seat-loose",
+    "bodywork-rattle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/seats.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Seat_Latches.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_3.jpg",
+     "caption": "Seat hook under the seat, seen from the tool box"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250.jpg",
+     "caption": "Seat clip beside a seat bolt"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_2.jpg",
+     "caption": "Seat bolt hole under a side panel"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4.jpg",
+     "caption": "Seat bolt at the rear under the mudguard"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/030/030_remove_motorcycle_s_seat.jpg",
+     "caption": "Seat release button on the side of a frame"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_4.jpg",
+     "caption": "Seat raised and hinged at the rear"
+    }
+   ]
+  },
+  {
+   "id": "parts-solvent-clean",
+   "title": "Clean engine parts safely with solvent",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "parts washer or large pan",
+    "stiff brush",
+    "old toothbrush",
+    "gloves",
+    "eye protection"
+   ],
+   "parts": [
+    "gaskets"
+   ],
+   "consumables": [
+    "petroleum solvent",
+    "engine degreaser"
+   ],
+   "fixes": [
+    "smoke-diagnosis",
+    "oil-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/partsclean.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/033/033_parts_cleaning_2.jpg",
+     "caption": "Parts washer with a pump and tray"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/033/033_parts_cleaning_3.jpg",
+     "caption": "Large pan of solvent with brushes"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/033/033_parts_cleaning.jpg",
+     "caption": "Engine case being rinsed with solvent"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/033/033_stiff_bristle_brush_old_tooth_brush.jpg",
+     "caption": "Stiff bristle brush and old toothbrush"
+    }
+   ]
+  },
+  {
+   "id": "heat-cool-fit",
+   "title": "Use heat and cold to remove and fit bearings and tight parts",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "hot air gun",
+    "freezer",
+    "oven (optional)",
+    "gloves",
+    "bearing driver"
+   ],
+   "parts": [
+    "wheel_bearing",
+    "engine_bearings"
+   ],
+   "consumables": [],
+   "fixes": [
+    "bearing-rumble",
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/hot_cold.html"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/035/035_hot_air_gun.jpg",
+     "caption": "Hot air gun warming an engine case with bearings"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_heat_heat_gun_will_very_helpful.jpg",
+     "caption": "Bearing driver on the inner race of a bearing"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/035/035_oven.jpg",
+     "caption": "Oven used to warm parts evenly"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/035/035_propane_torch.jpg",
+     "caption": "Propane torch, a last resort for heat"
+    }
+   ]
+  },
+  {
+   "id": "bearing-seal-install-care",
+   "title": "Fit seals and bearings the right way round without damage",
+   "level": "home",
+   "time": "20 to 40 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "bearing driver or socket the size of the outer race",
+    "hammer",
+    "grease",
+    "heat gun"
+   ],
+   "parts": [
+    "oil_seals",
+    "wheel_bearing",
+    "engine_bearings"
+   ],
+   "consumables": [
+    "grease"
+   ],
+   "fixes": [
+    "bearing-rumble",
+    "oil-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing.jpg",
+     "caption": "Drive a bearing by its outer race only, never the inner race"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_drive_bearing.jpg",
+     "caption": "Bearing driver seated on the outer race"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+     "caption": "Ball bearing with its steel cage marked"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_dudette_case_may_2.jpg",
+     "caption": "Seal with grease packed in its lip cavity"
+    }
+   ]
+  },
+  {
+   "id": "bike-storage-prepare",
+   "title": "Prepare a bike for storage",
+   "level": "home",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "trickle charger",
+    "baking soda and water",
+    "spanners"
+   ],
+   "parts": [
+    "battery",
+    "fuel_tank",
+    "spark_plug",
+    "engine_oil"
+   ],
+   "consumables": [
+    "fuel stabiliser",
+    "engine oil",
+    "distilled water"
+   ],
+   "fixes": [
+    "no-start-after-storage",
+    "stale-fuel",
+    "battery-flat"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/winterize.htm"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "id": "fastener-types-identify",
+   "title": "Identify bolt strength, thread and locking types before you reuse them",
+   "level": "home",
+   "time": "10 to 20 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "callipers",
+    "thread gauge",
+    "torque wrench"
+   ],
+   "parts": [
+    "fasteners"
+   ],
+   "consumables": [
+    "thread locker"
+   ],
+   "fixes": [
+    "bolts-keep-loosening",
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_metric_bolt_grades.jpg",
+     "caption": "Metric bolts with strength grade marks on the heads"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_if_torqueing_bolt_engine_feel_yield.jpg",
+     "caption": "Bolt heads with different strength markings"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_hurts_seeing_how_these_bolts_don.jpg",
+     "caption": "Waisted studs used on high-stress joints"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_left_right_hand_threads.jpg",
+     "caption": "Left-hand and right-hand threads on shafts"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+     "caption": "Bolt with lock washer and nut"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+     "caption": "Nut scraped by the lock washer holding it"
+    }
+   ]
+  },
+  {
+   "id": "jis-screwdriver-fit",
+   "title": "Choose the right Phillips bit for Japanese bike screws (JIS)",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "JIS-type screwdriver or bit",
+    "impact driver (optional)"
+   ],
+   "parts": [
+    "fasteners"
+   ],
+   "consumables": [],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/jis_screw.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/044/044_good_fit_bad_fit_phillips_screwdriver.jpg",
+     "caption": "Two Phillips bits: one fits JIS screws, one does not"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/044/044_jis_screw_specifications_iso_screw_specifications.jpg",
+     "caption": "ISO large head beside two JIS heads"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/044/044_good_fit.jpg",
+     "caption": "A good fit: bit sits snug in a JIS screw"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/044/044_good_fit_bad_fit.jpg",
+     "caption": "A bad fit: bit is loose in the screw"
+    }
+   ]
+  },
+  {
+   "id": "blast-clean-parts",
+   "title": "Blast-clean corroded parts with walnut, glass beads or sand",
+   "level": "workshop",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "blast cabinet or portable blaster",
+    "air compressor",
+    "respirator",
+    "eye protection"
+   ],
+   "parts": [
+    "gaskets"
+   ],
+   "consumables": [
+    "blast media"
+   ],
+   "fixes": [
+    "oil-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/sandblasting.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/045/045_can_really_grind_things_up_so.jpg",
+     "caption": "Walnut, sand and glass bead results on one cover"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/045/045_can_really_grind_things_up_so_2.jpg",
+     "caption": "Blast cabinet with viewing windows"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/045/045_portable_sand_blaster.jpg",
+     "caption": "Portable blaster with media hopper"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/045/045_walnut.jpg",
+     "caption": "Walnut shell media under magnification"
+    }
+   ]
+  },
+  {
+   "id": "parts-source-choose",
+   "title": "Choose where to buy motorcycle parts (OEM, aftermarket, old stock or used)",
+   "level": "rider",
+   "time": "30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [],
+   "parts": [
+    "gaskets",
+    "piston",
+    "piston_rings",
+    "air_filter"
+   ],
+   "consumables": [],
+   "fixes": [
+    "parts-not-available"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/parts.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/china_bikes.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/047/047_finding_motorcycle_parts.jpg",
+     "caption": "Bag of new gaskets, seals and rings"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/046/046_chinese_motorcycles.jpg",
+     "caption": "Small imported motorcycle with limited parts support"
+    }
+   ]
+  },
+  {
+   "id": "cotter-pin-fit",
+   "title": "Fit and remove cotter pins, slip pins and castle nuts",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "pliers",
+    "wire cutters",
+    "torque wrench"
+   ],
+   "parts": [
+    "cotter_pin",
+    "fasteners"
+   ],
+   "consumables": [
+    "new cotter pin"
+   ],
+   "fixes": [
+    "bolts-keep-loosening"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_do_not_loosen_castle_nut_make.jpg",
+     "caption": "Castle nut with a cotter pin on a rear axle"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_cotter_pin.jpg",
+     "caption": "Cotter pin through an axle end"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_make_sure_sharp_edge_away_line.jpg",
+     "caption": "Cutters used to pull a rusted cotter pin"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_say_bend_cotter_pin_all_around.jpg",
+     "caption": "Right and wrong way to fit a cotter pin"
+    }
+   ]
+  },
+  {
+   "id": "teardown-organise",
+   "title": "Keep parts in order during a strip-down",
+   "level": "rider",
+   "time": "set up 15 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "parts trays",
+    "plastic freezer bags",
+    "felt-tip marker",
+    "camera or phone",
+    "cardboard"
+   ],
+   "parts": [
+    "fasteners"
+   ],
+   "consumables": [],
+   "fixes": [
+    "rebuilt-engine-hard-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_parts_tray.jpg",
+     "caption": "Parts tray holding bolts and washers from one assembly"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_plastic_bags.jpg",
+     "caption": "Freezer bag labelled with its contents"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_there_several_ways_do_quickly.jpg",
+     "caption": "Cardboard template with each screw in its own hole"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_felt_tip_marker.jpg",
+     "caption": "Felt-tip marks showing the position of a part"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_if_screw_sticks_out_too_much.jpg",
+     "caption": "Phone camera used to record the bike before strip-down"
+    }
+   ]
+  },
+  {
+   "id": "workshop-chemicals-choose",
+   "title": "Choose the right workshop chemicals and sprays",
+   "level": "rider",
+   "time": "15 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [],
+   "parts": [
+    "gaskets",
+    "engine_oil"
+   ],
+   "consumables": [
+    "penetrating oil",
+    "contact cleaner",
+    "chain oil",
+    "gasket remover",
+    "thread locker",
+    "anti-seize",
+    "carburettor cleaner",
+    "hand cleaner"
+   ],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/032/032_chemicals.jpg",
+     "caption": "Shelf of sprays and chemicals in a workshop"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_gasket_removal.jpg",
+     "caption": "Gasket remover sprayed on an old gasket"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_hand_cleaner.jpg",
+     "caption": "Hand cleaner bottles beside oil and grease"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "two-stroke-steady-seizure",
+   "title": "Two-stroke seizes after long steady running at one throttle setting",
+   "system": "engine",
+   "urgency": "stop-now",
+   "also_called": [
+    "seizure at constant speed",
+    "two-stroke locks up on the road",
+    "seizes at steady half throttle",
+    "piston melts on long ride"
+   ],
+   "applies_to": [
+    "two-stroke"
+   ],
+   "parts": [
+    "piston",
+    "cylinder",
+    "piston_rings",
+    "two_stroke_oil_pump",
+    "spark_plug"
+   ],
+   "repairs": [
+    "two-stroke-oil-pump",
+    "compression-test",
+    "top-end-assessment",
+    "engine-internal-assessment"
+   ],
+   "related": [
+    "engine-seized",
+    "piston-crown-damage",
+    "two-stroke-oil-not-used"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/seizure.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/028/028_mysterious_two_stroke_seizure.jpg",
+     "caption": "Piston with seizure scoring on the skirt"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/028/028_flow.jpg",
+     "caption": "Two-stroke port flow: exhaust sweep and transfer ports"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/028/028_off_off.jpg",
+     "caption": "Five-port cylinder diagram: mixture and exhaust flow"
+    }
+   ]
+  },
+  {
+   "id": "rebuilt-engine-hard-start",
+   "title": "Rebuilt engine will not start at first, or seems to have no compression",
+   "system": "engine",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "new engine will not start",
+    "no compression after rebuild",
+    "dead after reassembly",
+    "no start after head gasket"
+   ],
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "carburettor"
+   ],
+   "parts": [
+    "spark_plug",
+    "piston_rings",
+    "piston",
+    "valves",
+    "kickstarter"
+   ],
+   "repairs": [
+    "compression-test",
+    "spark-test",
+    "valve-clearance",
+    "engine-break-in",
+    "teardown-organise"
+   ],
+   "related": [
+    "smoke-after-rebuild",
+    "low-compression",
+    "cranks-no-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/starter.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/engine_breakin.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_felt_tip_marker.jpg",
+     "caption": "Marked parts: each goes back in its place"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_parts_tray.jpg",
+     "caption": "Parts tray keeping each assembly in order"
+    }
+   ]
+  },
+  {
+   "id": "bolts-keep-loosening",
+   "title": "Nuts and bolts keep coming loose",
+   "system": "body",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "bolts fall out",
+    "nuts vibrate loose",
+    "missing bolts",
+    "fasteners loosen on the road"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "fasteners",
+    "frame",
+    "bodywork"
+   ],
+   "repairs": [
+    "fastener-check",
+    "fastener-types-identify",
+    "rattle-fix",
+    "cotter-pin-fit"
+   ],
+   "related": [
+    "new-vibration",
+    "bodywork-rattle",
+    "seat-loose"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+     "caption": "Bolt with lock washer and nut on a shaft"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+     "caption": "Nut scraped by the lock washer that held it"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_metric_bolt_grades.jpg",
+     "caption": "Metric bolts of different grade and size"
+    }
+   ]
+  },
+  {
+   "id": "parts-not-available",
+   "title": "Cannot find parts for an old or imported bike",
+   "system": "body",
+   "urgency": "ok-to-ride",
+   "also_called": [
+    "no spare parts",
+    "parts not sold",
+    "obsolete bike",
+    "no workshop manual"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "gaskets",
+    "piston",
+    "piston_rings",
+    "bodywork"
+   ],
+   "repairs": [
+    "parts-source-choose",
+    "basic-tool-kit"
+   ],
+   "related": [
+    "crash-check",
+    "frame-crack"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/parts.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/china_bikes.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/046/046_chinese_motorcycles.jpg",
+     "caption": "Small imported motorcycle with limited parts support"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/047/047_finding_motorcycle_parts.jpg",
+     "caption": "New gaskets, seals and rings in a parts bag"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "fasteners",
+   "name": "Bolts, nuts, studs and washers",
+   "category": "chassis",
+   "aliases": [
+    "bolts",
+    "nuts",
+    "screws",
+    "studs",
+    "lock washers",
+    "locknuts"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "fastener-types-identify",
+    "fastener-check",
+    "jis-screwdriver-fit",
+    "cotter-pin-fit",
+    "stuck-fastener-removal",
+    "torque-wrench-use"
+   ],
+   "problems": [
+    "bolts-keep-loosening",
+    "fastener-stuck-rounded",
+    "new-vibration",
+    "bodywork-rattle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/jis_screw.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_metric_bolt_grades.jpg",
+     "caption": "Metric bolts with strength grade marks on the heads"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_hurts_seeing_how_these_bolts_don.jpg",
+     "caption": "Waisted studs used where stress is high"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_left_right_hand_threads.jpg",
+     "caption": "Left-hand and right-hand threads on shafts"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+     "caption": "Nut scraped by the lock washer holding it"
+    }
+   ]
+  },
+  {
+   "id": "cotter_pin",
+   "name": "Cotter pins and slip pins",
+   "category": "chassis",
+   "aliases": [
+    "split pin",
+    "cotter",
+    "R-pin",
+    "slip pin"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "cotter-pin-fit",
+    "wheel-remove-rear",
+    "wheel-remove-front",
+    "fastener-check"
+   ],
+   "problems": [
+    "bolts-keep-loosening"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_cotter_pin.jpg",
+     "caption": "Cotter pin through a rear axle end"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_say_bend_cotter_pin_all_around.jpg",
+     "caption": "Right and wrong way to fit a cotter pin"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_if_happens_just_lever_two_pin.jpg",
+     "caption": "Slip pin on a rear brake rod"
+    }
+   ]
+  },
+  {
+   "id": "gasket_sealant",
+   "name": "Gasket sealant and liquid gasket",
+   "category": "engine",
+   "aliases": [
+    "liquid gasket",
+    "gasket cement",
+    "gasket maker",
+    "sealing compound",
+    "gasket dressing"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "cover-gasket-replace",
+    "crankcase-split",
+    "workshop-chemicals-choose",
+    "parts-solvent-clean"
+   ],
+   "problems": [
+    "oil-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_gasket_removal.jpg",
+     "caption": "Gasket remover sprayed on an old gasket"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/032/032_chemicals.jpg",
+     "caption": "Shelf of sprays and chemicals in a workshop"
+    }
+   ]
+  }
+ ]
+}

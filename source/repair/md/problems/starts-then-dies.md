@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 26}
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 264}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Engine starts, then dies after a few seconds
@@ -28,6 +29,8 @@ No. An engine that may stop at any moment is dangerous in traffic.
 - Open the fuel cap: do you hear a hiss of air rushing in?
 - Does it keep running if you hold the throttle a little open, or with the choke ON?
 - Fuel-injected: is the engine warning light on?
+- A vacuum tap on PRI gives fuel without vacuum. If the engine dies on ON but runs on PRI, the vacuum hose or diaphragm is at fault. See [Vacuum fuel tap gives no fuel unless set to prime](/moto-zero/repair/problems/vacuum-tap-no-flow).
+
 
 ## Diagnose it step by step
 

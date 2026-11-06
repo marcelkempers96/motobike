@@ -12,6 +12,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 21}
   - {doc: "K-Light 125 manual", page: 275}
   - {doc: "MAVCC Motorcycle Mechanic", page: 656}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gas.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
 ---
 
 # Engine is flooded and smells of fuel
@@ -27,6 +29,9 @@ Not until the fuel smell has gone and you know nothing is leaking. Petrol near a
 - Turn the fuel tap OFF while you work.
 - Check the engine oil: does the level look too high or smell of petrol?
 - No smoking or flames nearby.
+- Use starting fluid only in a very small amount. Too much can blow the silencer or the engine. If the engine does not start, find out why. Do not keep adding more.
+- Turn the fuel tap off for storage. A failed needle valve can fill the crankcase with fuel, which thins the oil on a four-stroke.
+
 
 ## Diagnose it step by step
 

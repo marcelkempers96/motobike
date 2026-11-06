@@ -13,6 +13,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 76}
   - {doc: "K-Light 125 manual", page: 268}
   - {doc: "MAVCC Motorcycle Mechanic", page: 264}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gas.htm"}
 ---
 
 # Will not start after standing for weeks or months
@@ -28,6 +30,9 @@ Not until you have done the checks in [Bring a bike back into use after storage]
 - Smell the fuel: sour or varnish smell means stale.
 - Do the dashboard lights come on with the key ON?
 - Check tyre pressures before moving the bike far.
+- Most carburettor faults follow a long stand. Use stabiliser in the tank before the next stand. See [Protect stored fuel with a fuel stabiliser](/moto-zero/repair/repairs/fuel-stabiliser-use).
+- A metal float can be crushed if water in the carburettor froze during the stand. The carburettor then overflows when the fuel is turned on.
+
 
 ## Diagnose it step by step
 

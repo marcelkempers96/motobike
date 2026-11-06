@@ -16,6 +16,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 275}
   - {doc: "MAVCC Motorcycle Mechanic", page: 257}
   - {doc: "MAVCC Motorcycle Mechanic", page: 264}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gas.htm"}
 ---
 
 # Engine turns over but will not start
@@ -31,6 +33,9 @@ It will not run. Do not crank for long: you flatten the battery, overheat the st
 - Carburettor: fuel tap ON or RES; choke ON when cold.
 - Fuel injection: does the pump buzz for about 3 seconds at key ON? Is the warning light on?
 - Strong smell of petrol? The engine may be flooded.
+- If there is spark and compression but no start after the bike has stood, a blocked carburettor jet is likely. See [Clear carburettor jets and passages](/moto-zero/repair/repairs/carb-jet-clear).
+- Starting fluid: a very small amount only. If the engine will not start, find the cause instead of adding more.
+
 
 ## Diagnose it step by step
 

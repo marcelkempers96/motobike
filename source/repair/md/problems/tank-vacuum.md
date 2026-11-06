@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 22}
   - {doc: "K-Light 125 manual", page: 187}
   - {doc: "K-Light 125 manual", page: 243}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Engine stops after a few kilometres and the cap hisses when opened
@@ -28,6 +29,9 @@ With care, for short distances, until the vent is cleared. The engine can stop s
 - Has the cap recently been changed, painted, or covered with a tank bag or cover?
 - Is the vent hose under the tank (if fitted) kinked or blocked with mud?
 - Has the bike been washed with a pressure washer near the cap?
+- Air must enter the tank as fuel leaves. Most caps have a small vent hole. Newer caps may have a one-way valve, or be sealed with a vent tube to the tank instead.
+- Some tanks have two caps, with one not vented. Check that the vented cap is the one in use.
+
 
 ## Diagnose it step by step
 

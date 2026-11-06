@@ -13,6 +13,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 349}
   - {doc: "Unit 2 The Motorcycle", page: 29}
   - {doc: "K-Light 125 manual", page: 276}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
 ---
 
 # Choke is stuck on or will not work
@@ -29,6 +30,9 @@ With care. A choke stuck on makes the bike idle fast and pull at junctions, and 
 - With the lever OFF, does the cable have a little slack at the carburettor end?
 - Scooter: is the automatic choke connector plugged in and clean?
 - Fuel-injected: does the engine idle fast when cold and then settle? That is normal.
+- Many carburettors use a starter circuit instead of a choke plate. A plunger or lever opens a passage to the engine side. The circuit gives a rich mixture only while the throttle is closed. A butterfly choke does not work this way.
+- A small starter jet in the float bowl can block. Then the choke control has no effect. See [Clear a blocked starter circuit](/moto-zero/repair/repairs/choke-circuit-clear).
+
 
 ## Diagnose it step by step
 

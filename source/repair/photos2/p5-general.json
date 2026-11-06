@@ -1,0 +1,455 @@
+{
+ "problems": {
+  "seat-loose": [
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250.jpg",
+    "caption": "Seat clip beside a seat bolt"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_3.jpg",
+    "caption": "Seat hook under the seat"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_2.jpg",
+    "caption": "Seat bolt hole under a side panel"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4.jpg",
+    "caption": "Seat bolt at the rear under the mudguard"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_remove_motorcycle_s_seat.jpg",
+    "caption": "Seat release button on the frame side"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_4.jpg",
+    "caption": "Seat raised on its hinge"
+   }
+  ],
+  "bodywork-rattle": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+    "caption": "Nut scraped by the lock washer holding it"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+    "caption": "Bolt with lock washer and nut"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_3.jpg",
+    "caption": "Seat hook that can rattle when worn"
+   }
+  ],
+  "choke-cable-fault": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_choke_lever.jpg",
+    "caption": "Choke lever with cable attachment hole"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_cable.jpg",
+    "caption": "Enrichener cable fitted to a carburettor"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_if_engine_does_not_start_one.jpg",
+    "caption": "Internal choke spring on a small carburettor"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_carb_enrichening_circuit.jpg",
+    "caption": "Choke plate across a carburettor bore"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_motorcycle_carburetors_have_either_enriching_circuit.jpg",
+    "caption": "Enrichener plunger on a carburettor"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_choke_type_carb.jpg",
+    "caption": "Float plunger on a carburettor"
+   }
+  ],
+  "fastener-stuck-rounded": [
+   {
+    "file": "source/dansmc/02_General_Repairs/044/044_good_fit_bad_fit_phillips_screwdriver.jpg",
+    "caption": "Two Phillips bits: one fits JIS screws, one does not"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/044/044_jis_screw_specifications_iso_screw_specifications.jpg",
+    "caption": "ISO large head beside two JIS heads"
+   }
+  ],
+  "engine-seized": [
+   {
+    "file": "source/dansmc/02_General_Repairs/028/028_mysterious_two_stroke_seizure.jpg",
+    "caption": "Seized two-stroke piston with scoring on the skirt"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/028/028_flow.jpg",
+    "caption": "Two-stroke port flow diagram"
+   }
+  ],
+  "bearing-rumble": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+    "caption": "Ball bearing with its steel cage"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_name_sizing_numbers.jpg",
+    "caption": "Bearing seated in an engine case"
+   }
+  ],
+  "new-vibration": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+    "caption": "Bolt with lock washer and nut"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+    "caption": "Nut scraped by the lock washer holding it"
+   }
+  ]
+ },
+ "repairs": {
+  "choke-cable-adjust": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_choke_lever.jpg",
+    "caption": "Choke lever with cable attachment hole"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_cable.jpg",
+    "caption": "Enrichener cable fitted to a carburettor"
+   }
+  ],
+  "choke-check": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_carb_enrichening_circuit.jpg",
+    "caption": "Choke plate across a carburettor bore"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_if_engine_does_not_start_one.jpg",
+    "caption": "Internal choke spring on a small carburettor"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_motorcycle_carburetors_have_either_enriching_circuit.jpg",
+    "caption": "Enrichener plunger on a carburettor"
+   }
+  ],
+  "stuck-fastener-removal": [
+   {
+    "file": "source/dansmc/02_General_Repairs/036/036_thing_do_gently_keep.jpg",
+    "caption": "Gentle hammering to work a stuck axle"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_take_extra_combination_wrench_similar_size.jpg",
+    "caption": "Spanner and pipe used as a cheater bar"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_bat_cheater.jpg",
+    "caption": "Breaker bar with an extension on a rear nut"
+   }
+  ],
+  "impact-driver-use": [
+   {
+    "file": "source/dansmc/02_General_Repairs/034/034_air_impact_wrenches.jpg",
+    "caption": "Air impact wrenches"
+   }
+  ],
+  "oil-seal-fit": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_seal.jpg",
+    "caption": "Seal fitted in an engine cover"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_dudette_case_may_2.jpg",
+    "caption": "Seal with grease packed in the lip cavity"
+   }
+  ],
+  "wheel-bearing-replace": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_heat_heat_gun_will_very_helpful.jpg",
+    "caption": "Bearing driver on the inner race"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/035/035_hot_air_gun.jpg",
+    "caption": "Hot air gun warming a case to free bearings"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_drive_bearing.jpg",
+    "caption": "Bearing driver seated on the outer race"
+   }
+  ],
+  "engine-bearing-check": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+    "caption": "Ball bearing with its steel cage"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_name_sizing_numbers.jpg",
+    "caption": "Bearing seated in an engine case"
+   }
+  ],
+  "cover-gasket-replace": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_gasket_removal.jpg",
+    "caption": "Gasket remover sprayed on an old gasket"
+   }
+  ],
+  "compression-release-check": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_do_again.jpg",
+    "caption": "Compression release under the valve cover"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_helps_if_can_push_down_hill.jpg",
+    "caption": "Manual compression release lever on the head"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_just_exactly_like_we_did_back.jpg",
+    "caption": "Release lever and kick indicator window on a cylinder head"
+   }
+  ],
+  "kickstart-check": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_starter_kick_indicator_window.jpg",
+    "caption": "Starter marker seen through the kick indicator window"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_just_exactly_like_we_did_back.jpg",
+    "caption": "Kick indicator window and compression release"
+   }
+  ],
+  "fastener-check": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+    "caption": "Bolt with lock washer and nut"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_metric_bolt_grades.jpg",
+    "caption": "Metric bolts with strength grade marks"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+    "caption": "Nut scraped by the lock washer holding it"
+   }
+  ],
+  "rattle-fix": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+    "caption": "Nut scraped by the lock washer holding it"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250.jpg",
+    "caption": "Seat clip beside a seat bolt"
+   }
+  ]
+ },
+ "parts": {
+  "seat": [
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250.jpg",
+    "caption": "Seat clip beside a seat bolt"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_3.jpg",
+    "caption": "Seat hook under the seat"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_remove_motorcycle_s_seat.jpg",
+    "caption": "Seat release button on the frame side"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/031/031_enjoy_10.jpg",
+    "caption": "Exploded view of a seat, brackets and latch"
+   }
+  ],
+  "compression_release": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_do_again.jpg",
+    "caption": "Compression release under the valve cover"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_helps_if_can_push_down_hill.jpg",
+    "caption": "Manual compression release lever on the head"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_just_exactly_like_we_did_back.jpg",
+    "caption": "Release lever and kick indicator window"
+   }
+  ],
+  "kickstarter": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_starter_kick_indicator_window.jpg",
+    "caption": "Starter marker seen through the kick indicator window"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_just_exactly_like_we_did_back.jpg",
+    "caption": "Kick indicator window on a cylinder head"
+   }
+  ],
+  "engine_bearings": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+    "caption": "Ball bearing with its steel cage"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_name_sizing_numbers.jpg",
+    "caption": "Bearing seated in an engine case"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_drive_bearing.jpg",
+    "caption": "Bearing driver seated on the outer race"
+   }
+  ],
+  "wheel_bearing": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_heat_heat_gun_will_very_helpful.jpg",
+    "caption": "Bearing driver on the inner race"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing.jpg",
+    "caption": "Drive a bearing by its outer race only"
+   }
+  ],
+  "piston": [
+   {
+    "file": "source/dansmc/02_General_Repairs/028/028_mysterious_two_stroke_seizure.jpg",
+    "caption": "Seized two-stroke piston with scoring on the skirt"
+   }
+  ],
+  "cylinder_head": [
+   {
+    "file": "source/dansmc/02_General_Repairs/029/029_lots_work.jpg",
+    "caption": "Cam lobe and heel on a camshaft"
+   }
+  ]
+ },
+ "systems": {
+  "engine": [
+   {
+    "file": "source/dansmc/02_General_Repairs/028/028_mysterious_two_stroke_seizure.jpg",
+    "caption": "Seized two-stroke piston with scoring on the skirt"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_do_again.jpg",
+    "caption": "Compression release under the valve cover"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+    "caption": "Ball bearing with its steel cage"
+   }
+  ],
+  "body": [
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250.jpg",
+    "caption": "Seat clip beside a seat bolt"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_3.jpg",
+    "caption": "Seat hook under the seat"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_remove_motorcycle_s_seat.jpg",
+    "caption": "Seat release button on the frame side"
+   }
+  ],
+  "controls": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_choke_lever.jpg",
+    "caption": "Choke lever with cable attachment hole"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_cable.jpg",
+    "caption": "Enrichener cable fitted to a carburettor"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_if_engine_does_not_start_one.jpg",
+    "caption": "Internal choke spring on a small carburettor"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m3-mixture",
+   "file": "source/dansmc/02_General_Repairs/026/026_carb_enrichening_circuit.jpg",
+   "caption": "Choke plate across a carburettor bore"
+  },
+  {
+   "chapter": "m3-mixture",
+   "file": "source/dansmc/02_General_Repairs/026/026_motorcycle_carburetors_have_either_enriching_circuit.jpg",
+   "caption": "Enrichener plunger on a carburettor"
+  },
+  {
+   "chapter": "m3-mixture",
+   "file": "source/dansmc/02_General_Repairs/026/026_choke_type_carb.jpg",
+   "caption": "Float plunger on a carburettor"
+  },
+  {
+   "chapter": "m1-workshop",
+   "file": "source/dansmc/02_General_Repairs/032/032_chemicals.jpg",
+   "caption": "Shelf of sprays and chemicals in a workshop"
+  },
+  {
+   "chapter": "m1-workshop",
+   "file": "source/dansmc/02_General_Repairs/034/034_air_impact_wrenches.jpg",
+   "caption": "Air impact wrenches"
+  },
+  {
+   "chapter": "m1-workshop",
+   "file": "source/dansmc/02_General_Repairs/048/048_take_extra_combination_wrench_similar_size.jpg",
+   "caption": "Spanner and pipe used as a cheater bar"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/02_General_Repairs/026/026_do_again.jpg",
+   "caption": "Compression release under the valve cover"
+  },
+  {
+   "chapter": "m2-top-end",
+   "file": "source/dansmc/02_General_Repairs/029/029_lots_work.jpg",
+   "caption": "Cam lobe and heel on a camshaft"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+   "caption": "Ball bearing with its steel cage"
+  },
+  {
+   "chapter": "m2-bottom-end",
+   "file": "source/dansmc/02_General_Repairs/048/048_name_sizing_numbers.jpg",
+   "caption": "Bearing seated in an engine case"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/02_General_Repairs/028/028_mysterious_two_stroke_seizure.jpg",
+   "caption": "Seized two-stroke piston with scoring on the skirt"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/02_General_Repairs/028/028_flow.jpg",
+   "caption": "Two-stroke port flow diagram"
+  },
+  {
+   "chapter": "m4-maintenance",
+   "file": "source/dansmc/02_General_Repairs/048/048_parts_tray.jpg",
+   "caption": "Parts tray holding bolts from one assembly"
+  },
+  {
+   "chapter": "m4-maintenance",
+   "file": "source/dansmc/02_General_Repairs/048/048_plastic_bags.jpg",
+   "caption": "Freezer bag labelled with its contents"
+  },
+  {
+   "chapter": "m4-maintenance",
+   "file": "source/dansmc/02_General_Repairs/048/048_there_several_ways_do_quickly.jpg",
+   "caption": "Cardboard template with each screw in its own hole"
+  },
+  {
+   "chapter": "m4-wheels-tyres",
+   "file": "source/dansmc/02_General_Repairs/048/048_do_not_loosen_castle_nut_make.jpg",
+   "caption": "Castle nut with a cotter pin on a rear axle"
+  },
+  {
+   "chapter": "m4-wheels-tyres",
+   "file": "source/dansmc/02_General_Repairs/048/048_if_happens_just_lever_two_pin.jpg",
+   "caption": "Slip pin on a rear brake rod"
+  }
+ ]
+}

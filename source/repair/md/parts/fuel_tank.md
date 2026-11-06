@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 184}
   - {doc: "K-Light 125 manual", page: 245}
   - {doc: "K-Light 125 manual", page: 274}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel tank
@@ -37,6 +38,9 @@ When it leaks from a seam or crack, or rust has thinned the metal. Light surface
 - Work outside or in good air, engine cold, no flame or sparks; disconnect the battery negative first, as the K-Light manual says.
 - On fuel injection, residual pressure sprays fuel when the hose is unplugged; cover the connector with a cloth.
 - Check rubber mounts and hose routing. Drain old fuel: [Drain old or contaminated fuel](/moto-zero/repair/repairs/drain-fuel).
+- Steel tanks rust, plastic tanks crack with age and sun, and fiberglass tanks may not cope with ethanol blends. A new tank is the best fix for a rusted one.
+- Under-seat tanks need an electric pump. Two-piece tanks have a crossover tube, and the tank must be fully drained before removal. See [Remove and refit a fuel tank safely](/moto-zero/repair/repairs/fuel-tank-remove).
+
 
 ## Reference (K-Light 125)
 

@@ -15,6 +15,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 22}
   - {doc: "K-Light 125 manual", page: 269}
   - {doc: "K-Light 125 manual", page: 275}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Engine stops and only runs on reserve or after a rest
@@ -32,6 +33,10 @@ With care, and only for short distances until fixed. Avoid busy roads where a su
 - Does it run normally on RES?
 - Is the fuel hose kinked, or the inline filter dark with dirt?
 - Fuel-injected: does the pump buzz strongly at key-on?
+- On a standard tap, ON draws from a tube above the tank bottom. When the engine dies at a low level, turning to RES draws from the bottom of the tank.
+- Bikes with a low or under-seat tank use an electric pump to send fuel up to the carburettor.
+- On older tanks in two halves, a crossover tube joins them. A blocked or kinked tube leaves fuel in one half.
+
 
 ## Diagnose it step by step
 

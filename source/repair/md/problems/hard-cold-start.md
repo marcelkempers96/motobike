@@ -14,6 +14,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "K-Light 125 manual", page: 277}
   - {doc: "Unit 2 The Motorcycle", page: 29}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs2.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gasohol.htm"}
 ---
 
 # Hard to start when the engine is cold
@@ -28,6 +30,9 @@ Yes once it is running and warmed up. Let it idle briefly before riding off.
 - Fuel-injected: K-Light 125 manual says not to touch the throttle when starting (PDF page 277). The ECU raises idle by itself on a cold engine.
 - Does the starter turn the engine at normal speed?
 - Has the bike stood for weeks with old fuel?
+- A cold engine does not vaporise fuel well. Liquid fuel does not burn, so the choke gives a very rich mixture so that part of it vaporises.
+- Fuel with a high alcohol share vaporises poorly in the cold. See [Problems after using ethanol blend fuel](/moto-zero/repair/problems/alcohol-fuel-trouble).
+
 
 ## Diagnose it step by step
 

@@ -7,6 +7,7 @@ applies_to: [four-stroke, two-stroke]
 sources:
   - {doc: "K-Light 125 manual", page: 180}
   - {doc: "K-Light 125 manual", page: 245}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
 ---
 
 # Fuel cap
@@ -34,3 +35,5 @@ When the seal is cracked or flat, the lock is broken, or the vent cannot be clea
 - Rider or home job. Check the vent: [Check the fuel tank vent](/moto-zero/repair/repairs/tank-vent-check).
 - Keep dirt out of the tank while the cap is off.
 - Use only a light lubricant on the lock; do not let it drip into the fuel.
+- The vent may be a hole in the cap, a one-way valve, or a tube from the tank. A blocked vent stops the flow of fuel. Match a new cap to the same vent type.
+

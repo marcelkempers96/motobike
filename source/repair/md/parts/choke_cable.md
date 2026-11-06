@@ -7,6 +7,7 @@ applies_to: [carburettor]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 731}
   - {doc: "Unit 2 The Motorcycle", page: 29}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs.htm"}
 ---
 
 # Choke cable
@@ -33,3 +34,5 @@ Replace a cable with broken strands, a kinked outer, or one that will not slide 
 - Set it so the choke closes fully when the lever is off, and opens fully when on.
 - Route away from the exhaust and engine heat.
 - See [Adjust the choke cable](/moto-zero/repair/repairs/choke-cable-adjust) and [Check the choke or starter valve](/moto-zero/repair/repairs/choke-check).
+- On many carburettors the cable lifts a plunger that opens the starter circuit. It works only when the throttle is closed. See [Clear a blocked starter circuit](/moto-zero/repair/repairs/choke-circuit-clear).
+

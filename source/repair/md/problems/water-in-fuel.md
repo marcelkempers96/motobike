@@ -14,6 +14,9 @@ sources:
   - {doc: "K-Light 125 manual", page: 186}
   - {doc: "K-Light 125 manual", page: 274}
   - {doc: "K-Light 125 manual", page: 275}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gas.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gasohol.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb8.htm"}
 ---
 
 # Water or dirt in the fuel
@@ -30,6 +33,10 @@ No, not until the fuel is drained. The engine can stop without warning in traffi
 - Is the fuel cap seal whole?
 - Is the inline filter (if see-through) showing water drops or dirt?
 - Does the fuel smell normal, or of kerosene or paint?
+- Fuel with alcohol takes up water. Test a sample with [a shake test](/moto-zero/repair/repairs/alcohol-fuel-test) if you suspect ethanol blend fuel.
+- On a two-stroke with pre-mix oil, water settles at the bottom of the tank and alcohol joins it. That layer has no oil. If it reaches the engine, the crank and piston run without lubrication.
+- Water in a metal float or carburettor can freeze and crush a float in cold weather.
+
 
 ## Diagnose it step by step
 
