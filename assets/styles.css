@@ -235,7 +235,7 @@ p { margin: 0 0 10px; }
 .ute-slider label b { color: var(--ink); font-weight: 700; font-size: 12px; }
 .ute-slider input[type=range] { width: 100%; accent-color: var(--warm); margin: 4px 0 0; }
 
-.ute-btnrow { display: flex; gap: 6px; flex-wrap: wrap; }
+.ute-btnrow { display: flex; gap: 10px; flex-wrap: wrap; }
 .ute-btn {
   padding: 8px 12px; background: var(--surface); border: 1px solid var(--ink); cursor: pointer;
   font: 600 10.5px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink);
@@ -1307,3 +1307,5 @@ font[style] { background: none !important; box-shadow: none !important; }
 .prose .katex { font-size: 1.08em; }
 @media print { .mz-eq { break-inside: avoid; } }
 #learn-main p.mz-pdf-note-small, p.mz-pdf-note-small { margin: 10px 0 0; font-size: 14px; line-height: 1.45; color: var(--mute); max-width: 640px; }
+/* a paragraph that holds a row of buttons: space them, also when they wrap onto two lines */
+p:has(> .ute-btn + .ute-btn) { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
