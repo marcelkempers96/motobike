@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your account | Moto Zero</title>
+  <link rel="canonical" href="https://motobike-five.vercel.app/account/">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Sign in to Moto Zero with your email to comment, share photos, save your course progress and open members-only content.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261106a">
+  <style>
+.ute-hero { padding: 64px 40px 40px; border-bottom: 1px solid var(--line); }
+.ute-hero p { max-width: 680px; line-height: 1.55; }
+.mza { padding: 40px; max-width: 760px; }
+.mza h2 { font-size: 22px; margin: 32px 0 10px; }
+.mza h2:first-child { margin-top: 0; }
+.mza p { line-height: 1.6; }
+.mza-card { border: 1px solid var(--line); padding: 22px 24px; margin: 0 0 20px; background: #FFF; }
+.mza label { display: block; font: 600 14px/1.3 var(--sans); margin: 0 0 6px; }
+.mza input[type=email], .mza input[type=text] { width: 100%; max-width: 420px; padding: 12px 14px; border: 1px solid var(--ink); font: 16px var(--sans); }
+.mza .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.mza button, .mza .btn { padding: 12px 18px; border: 1px solid var(--ink); background: var(--ink); color: #FFF; font: 600 15px/1 var(--sans); cursor: pointer; text-decoration: none; display: inline-block; }
+.mza button.is-light { background: #FFF; color: var(--ink); }
+.mza .msg { min-height: 1.4em; color: var(--mute); font-size: 14px; }
+.mza ul.mine { padding: 0; list-style: none; }
+.mza ul.mine li { border-top: 1px solid var(--line-soft); padding: 10px 0; font-size: 15px; }
+.mza ul.mine small { color: var(--mute); display: block; }
+.mza-member { border-left: 3px solid var(--warm); padding: 12px 16px; margin: 12px 0; background: #FFF; }
+.mza-member h3 { margin: 0 0 6px; font-size: 18px; }
+@media (max-width: 720px) { .ute-hero { padding: 40px 16px 28px; } .mza { padding: 28px 16px; } }
+  </style>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Moto Zero home"><img class="ute-brand-mark" src="../assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero">
+    <span class="ute-label">Account</span>
+    <h1>Your Moto Zero account</h1>
+    <p>Free, with just your email. Sign in to comment and share photos on any page, keep your course progress on every device, and open members-only content.</p>
+  </section>
+
+  <main class="mza" id="mza" aria-live="polite"><p>Loading…</p></main>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+<script type="module">
+import { supabase, syncProgress } from '../assets/community.js';
+const box = document.getElementById('mza');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const next = new URLSearchParams(location.search).get('next');
+const sb = await supabase();
+if (!sb) {
+  box.innerHTML = `<div class="mza-card"><h2>Accounts are coming soon</h2><p>Your course progress is saved in this browser in the meantime: see <a href="../progress/">My progress</a>.</p></div>`;
+} else {
+  sb.auth.onAuthStateChange((ev) => { if (ev === 'SIGNED_IN' || ev === 'SIGNED_OUT') show(); });
+  show();
+}
+async function show() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) return signInView();
+  const me = session.user;
+  if (next && sessionStorage.getItem('mz-next-done') !== next) { sessionStorage.setItem('mz-next-done', next); location.href = next; return; }
+  syncProgress();
+  const [{ data: prof }, { data: mine }, { data: members }] = await Promise.all([
+    sb.from('profiles').select('display_name').eq('id', me.id).maybeSingle(),
+    sb.from('comments').select('id, page, body, created_at').eq('user_id', me.id).order('created_at', { ascending: false }).limit(50),
+    sb.from('member_content').select('slug, title, body_html, file_url').order('sort'),
+  ]);
+  box.innerHTML = `
+    <div class="mza-card"><h2>Signed in</h2><p>${esc(me.email)}</p>
+      <form id="f-name"><label for="dn">Name shown with your comments</label><input id="dn" type="text" maxlength="40" value="${esc(prof ? prof.display_name : '')}">
+      <div class="row"><button type="submit">Save name</button><button type="button" class="is-light" id="out">Sign out</button></div><p class="msg" id="m-name"></p></form></div>
+    <h2>Course progress</h2><p>Your progress is saved to your account and kept in step on every device you sign in on. <a href="../progress/">See my progress →</a></p>
+    <h2>Members-only</h2>${(members || []).map((m) => `<div class="mza-member"><h3>${esc(m.title)}</h3>${m.body_html}${m.file_url ? `<p><a class="btn" href="${esc(m.file_url)}">Download</a></p>` : ''}</div>`).join('') || '<p>Nothing here yet.</p>'}
+    <h2>Your comments</h2>${mine && mine.length ? `<ul class="mine">${mine.map((c) => `<li><a href="${esc(c.page)}#comments">${esc(c.page)}</a><small>${new Date(c.created_at).toLocaleDateString()}</small>${esc(c.body.slice(0, 160))}</li>`).join('')}</ul>` : '<p>No comments yet. Every repair, part, problem, bike and tool page has a comments section at the bottom.</p>'}`;
+  document.getElementById('out').onclick = async () => { await sb.auth.signOut(); };
+  document.getElementById('f-name').onsubmit = async (e) => {
+    e.preventDefault();
+    const v = document.getElementById('dn').value.trim();
+    const { error } = await sb.from('profiles').update({ display_name: v || 'Rider' }).eq('id', me.id);
+    document.getElementById('m-name').textContent = error ? 'Could not save: ' + error.message : 'Saved.';
+  };
+}
+function signInView() {
+  box.innerHTML = `<div class="mza-card"><h2>Sign in or create an account</h2>
+    <form id="f-in"><label for="em">Email address</label><input id="em" type="email" autocomplete="email" required placeholder="you@example.com">
+    <div class="row"><button type="submit">Email me a sign-in link</button></div><p class="msg" id="m-in"></p></form>
+    <p class="mzc-small">We email you a link; open it on this device to sign in. No password needed. We only use your email for signing in. See <a href="../privacy/">Privacy</a>.</p></div>`;
+  document.getElementById('f-in').onsubmit = async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('em').value.trim();
+    const m = document.getElementById('m-in'); m.textContent = 'Sending…';
+    const redirect = location.origin + location.pathname + (next ? '?next=' + encodeURIComponent(next) : '');
+    const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: redirect } });
+    m.textContent = error ? 'That did not work: ' + error.message : 'Check your email for the sign-in link.';
+  };
+}
+</script>
+</body>
+</html>

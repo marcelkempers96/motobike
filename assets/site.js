@@ -23,7 +23,8 @@ export const NAV = [
     ['learn/#drivetrain-chassis', '04 Drivetrain and chassis', 'Clutch to brakes'],
     ['learn/#electric', '05 Electric motorcycles', 'Motors, packs, BMS'],
     ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
-    ['progress/', 'My progress', 'Saved in this browser, no login'],
+    ['progress/', 'My progress', 'Saved in this browser, or to your account'],
+    ['account/', 'Account', 'Sign in to comment, add photos, save progress'],
   ] },
   { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it, get the part', items: [
     ['repair/diagnose/', 'Diagnose a problem', 'Three questions to the likely fault'],
@@ -170,3 +171,5 @@ export function mountSite(root = document) {
 }
 
 mountSite();
+// Share, tool notes and comments at the end of every page (accounts via Supabase, see docs/supabase.sql)
+if (!document.documentElement.classList.contains('mz-embed') && !/[?&]embed=1/.test(location.search)) import('./community.js').catch(() => {});
