@@ -53,7 +53,6 @@ export const NAV = [
   ] },
   { key: 'library', title: 'Library', blurb: 'Articles, models, illustrations and downloads', items: [
     ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
-    ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
     ['videos/', 'Videos', 'The best motorcycle videos, sorted by topic'],
     ['models/', '3D models', 'All 337 models: 8 bikes and every part'],
     ['downloads/#plates', 'Technical illustrations', '50+ labelled plates to download'],
@@ -124,7 +123,7 @@ export function footerHTML() {
     </div>
     <div class="mz-foot-bottom">
       <span>© ${new Date().getFullYear()} Transitions Lab · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></span>
-      <span><a href="${url('privacy/')}">Privacy</a> · <a href="${url('cookies/')}">Cookies and storage</a> · <a href="${url('terms/')}">Terms of use</a> · <a href="${url('contact/')}">Contact</a> · <a href="https://www.transitionslab.org" target="_blank" rel="noopener">transitionslab.org</a></span>
+      <span><a href="${url('privacy/')}">Privacy</a> · <a href="${url('cookies/')}">Cookies and storage</a> · <a href="${url('terms/')}">Terms of use</a> · <a href="${url('community/')}">Community guidelines</a> · <a href="${url('disclaimer/')}">Safety disclaimer</a> · <a href="${url('accessibility/')}">Accessibility</a> · <a href="${url('legal/')}">Legal notice</a> · <a href="${url('work-with-us/')}">Work with us</a> · <a href="${url('contact/')}">Contact</a> · <a href="https://www.transitionslab.org" target="_blank" rel="noopener">transitionslab.org</a></span>
     </div>`;
 }
 

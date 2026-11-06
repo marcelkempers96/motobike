@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Wiring Lab"><title>Wiring Lab</title><g fill="none" stroke="#141414" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M16 44 V30 H40 M56 30 H80 V44 M80 56 V70 H61 M40 70 H16 V56"/>
+<path d="M8 46 H24 M11 52 H21" stroke-width="2.5"/><circle cx="48" cy="30" r="8"/><path d="M44 30 Q46 26 48 30 T52 30"/><path d="M40 70 l2.5 -5 l5 10 l5 -10 l5 10 l3 -5"/>
+<circle cx="16" cy="30" r="2" fill="#141414"/><circle cx="80" cy="70" r="2" fill="#141414"/><circle cx="16" cy="70" r="2" fill="#141414"/>
+<path d="M90 90 L70 70" stroke-width="2"/></g>
+<path d="M48 18 V13 M38 21 L35 18 M58 21 L61 18" stroke="#C4452B" stroke-width="2" stroke-linecap="round"/>
+<polygon points="83,42 76,51 81,51 77,59 86,48 81,48 85,42" fill="#C4452B"/><circle cx="70" cy="70" r="3" fill="#C4452B"/></svg>

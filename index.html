@@ -82,6 +82,21 @@
     .hm-feature-img img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .4s ease; }
     .hm-feature-img.is-photo img { object-fit: cover; }
     .hm-feature-img:hover img { transform: scale(1.03); }
+
+    .hm-feature-img.is-slides { position: relative; background: #FFFFFF; }
+    .hm-feature-img.is-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .7s ease; }
+    .hm-feature-img.is-slides img.is-on { opacity: 1; }
+    .hm-feature-img.is-slides.is-plate img { object-fit: contain; background: #FFFFFF; }
+    .hm-quote-sec { background: #F7F5F0; }
+    .hm-quote { margin: 0 auto; max-width: 900px; text-align: center; padding: 20px 0; }
+    .hm-quote blockquote { margin: 0; font: italic 400 clamp(22px, 2.6vw, 32px)/1.35 Georgia, "Times New Roman", serif; color: var(--ink); }
+    .hm-quote blockquote::before { content: ""; display: block; width: 120px; height: 4px; background: var(--warm); margin: 0 auto 22px; }
+    .hm-quote figcaption { margin-top: 16px; font: 700 13px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+    a.hm-look { display: block; text-decoration: none; color: inherit; }
+    a.hm-look:hover b { color: var(--warm); text-decoration: underline; }
+    .hm-tools a b i { font-style: normal; opacity: .6; transition: transform .2s ease, opacity .2s ease; display: inline-block; }
+    .hm-tools a:hover b i { opacity: 1; transform: translateX(3px); }
+    .hm-tool-ico { width: 28px; height: 28px; display: block; margin-bottom: 6px; filter: brightness(0) invert(1); }
     .hm-feature-img.is-swap, .hm-feature-img.is-shot { background: #FFFFFF; position: relative; }
     .hm-feature-img.is-shot { aspect-ratio: auto; }
     .hm-feature-img.is-shot img { height: auto; }
@@ -174,7 +189,7 @@
           <a class="is-main" href="overview/">Explore the motorcycle in 3D →</a>
           <a href="repair/diagnose/">Diagnose a problem</a>
         </div>
-        <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview</b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit</b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder</b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><b>Wiring Lab</b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course</b><span>Five modules from engine to battery</span></a><a href="engine/"><b>Under the Engine</b><span>Every gear and valve moving, in 3D</span></a></div>
+        <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><b>3D Overview <i aria-hidden="true">→</i></b><span>Tap any part, see inside, watch it run</span></a><a href="cockpit/"><b>Cockpit <i aria-hidden="true">→</i></b><span>Start the engine, ride and run a dyno</span></a><a href="build/"><b>Bike builder <i aria-hidden="true">→</i></b><span>Assemble a bike, change its specification</span></a><a href="wiring/"><img class="hm-tool-ico" src="assets/icons/wiring-lab.svg" alt="" width="28" height="28"><b>Wiring Lab <i aria-hidden="true">→</i></b><span>Trace circuits and find faults</span></a><a href="learn/"><b>Course <i aria-hidden="true">→</i></b><span>Five modules from engine to battery</span></a><a href="engine/"><img class="hm-tool-ico" src="assets/icons/under-the-engine.svg" alt="" width="28" height="28"><b>Under the Engine <i aria-hidden="true">→</i></b><span>Every gear and valve moving, in 3D</span></a></div>
         <p class="hm-facts"><span class="is-key">32 chapters</span><span class="is-key">369 3D models</span><span class="is-key">38 technical plates</span><span>274 repair guides</span><span>16 motorcycle types</span><span>148 quiz questions</span><span>Thousands of bikes served</span></p>
       </div>
     </section>
@@ -186,7 +201,7 @@
         <p class="hm-lead">Pick one. They all link together.</p>
 
         <div class="hm-feature">
-          <a class="hm-feature-img is-swap" href="overview/"><img src="assets/photos/home-ov-all-3q.webp" alt="The Overview: classic four-stroke motorcycle in 3D" loading="lazy"><img class="is-alt" src="assets/photos/home-ov-elec-3q.webp" alt="The same bike with a see-through shell, electrical parts highlighted" loading="lazy"><span class="hm-swap-tag">Solid and see-through</span></a>
+          <a class="hm-feature-img is-swap" href="overview/"><img src="assets/photos/home-ov-side.webp" alt="The Overview: classic four-stroke motorcycle in 3D, side view" loading="lazy"><img class="is-alt" src="assets/photos/home-ov-side-xray.webp" alt="The same bike, side view, with a see-through shell and the electrical parts highlighted" loading="lazy"><span class="hm-swap-tag">Solid and see-through</span></a>
           <div>
             <span class="hm-num">01</span>
             <h3>How a motorcycle works</h3>
@@ -197,7 +212,7 @@
         </div>
 
         <div class="hm-feature is-flip">
-          <a class="hm-feature-img is-shot" href="build/"><img src="assets/photos/home-builder.webp" alt="The Bike builder half way through: frame, engine and wheels fitted, sprockets and chain next" loading="lazy"></a>
+          <a class="hm-feature-img is-slides" href="build/"><img src="assets/photos/home-builder-1.webp" alt="Bike builder: Four-stroke roadster, three-quarter view" loading="lazy" class=is-on><img src="assets/photos/home-builder-2.webp" alt="Bike builder: Two-stroke motocross bike, side view" loading="lazy"><img src="assets/photos/home-builder-3.webp" alt="Bike builder: Electric scrambler, three-quarter view" loading="lazy"><img src="assets/photos/home-builder-4.webp" alt="Bike builder: Four-stroke roadster, front view" loading="lazy"><img src="assets/photos/home-builder-5.webp" alt="Bike builder: Two-stroke motocross bike, top view" loading="lazy"><span class="hm-swap-tag">Three bikes, four views</span></a>
           <div>
             <span class="hm-num">02</span>
             <h3>Build a bike from the ground up</h3>
@@ -208,7 +223,7 @@
         </div>
 
         <div class="hm-feature">
-          <a class="hm-feature-img" href="wiring/"><img src="assets/interactive/wiring/preview/harness.png" alt="Wiring Lab, main harness" loading="lazy"></a>
+          <a class="hm-feature-img is-slides is-plate" href="wiring/"><img src="assets/photos/home-wiring-1.webp" alt="Wiring Lab: Starting circuit: battery, starter relay (solenoid) and starter motor" loading="lazy" class=is-on><img src="assets/photos/home-wiring-2.webp" alt="Wiring Lab: Main wiring harness with every connector" loading="lazy"><img src="assets/photos/home-wiring-3.webp" alt="Wiring Lab: Circuit Builder: a relay drives the horn, with ammeters" loading="lazy"><img src="assets/photos/home-wiring-4.webp" alt="Wiring Lab: Charging circuit: alternator and regulator rectifier" loading="lazy"><span class="hm-swap-tag">Wiring Lab and Circuit Builder</span></a>
           <div>
             <span class="hm-num">03</span>
             <h3>Learn all about wiring</h3>
@@ -241,7 +256,7 @@
           <a href="repair/problems/"><img class="hm-ico" src="assets/icons/by-problem.svg" alt="" width="40" height="40"><b>By problem</b><span>Start from what you see, hear or feel</span></a>
           <a href="repair/repairs/"><img class="hm-ico" src="assets/icons/by-repair.svg" alt="" width="40" height="40"><b>By repair</b><span>Step-by-step jobs, rider to workshop</span></a>
           <a href="repair/parts/"><img class="hm-ico" src="assets/icons/by-part.svg" alt="" width="40" height="40"><b>By part</b><span>What each part does and how it fails</span></a>
-          <a href="repair/bikes/"><b>By bike</b><span>500 motorcycles: top repairs and problems</span></a>
+          <a href="repair/bikes/"><img class="hm-ico" src="assets/icons/by-bike.svg" alt="" width="40" height="40"><b>By bike</b><span>500 motorcycles: top repairs and problems</span></a>
           <a href="parts/"><img class="hm-ico" src="assets/icons/spare-parts.svg" alt="" width="40" height="40"><b>Spare parts</b><span>Prices and shops for 41 popular bikes</span></a>
         </div>
         <h3 class="hm-fix-h">Common problems</h3>
@@ -268,17 +283,12 @@
       </div>
     </section>
 
-    <section class="hm-section">
+    <section class="hm-section hm-quote-sec">
       <div class="hm-wrap">
-        <span class="hm-label">In the workshop and on the road</span>
-        <h2>For the people who keep machines running</h2>
-        <div class="hm-gallery">
-          <figure><img src="assets/photos/kenya-crew.jpg" alt="Riders and mechanics on open grassland in Kenya" loading="lazy"></figure>
-          <figure><img src="assets/photos/engine-closeup.jpg" alt="Close-up of an air-cooled V-twin engine" loading="lazy"></figure>
-          <figure><img src="assets/photos/carburettor-work.jpg" alt="A mechanic fitting a carburettor" loading="lazy"></figure>
-          <figure><img src="assets/photos/workshop-garage.jpg" alt="Two people working on a motorcycle outside a garage" loading="lazy"></figure>
-          <figure><img src="assets/photos/kenya-flag-ride.jpg" alt="Two riders beside a Kenyan flag" loading="lazy" style="object-position:center 78%"></figure>
-        </div>
+        <figure class="hm-quote">
+          <blockquote>A motorcycle is a set of simple ideas, built one on top of the other. Learn the ideas, and every fault becomes something you can find.</blockquote>
+          <figcaption>Moto Zero, for the people who keep machines running</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -309,12 +319,12 @@
         <h2>What we are looking for</h2>
         <p class="hm-lead">Moto Zero is open and growing. If one of these is you, get in touch.</p>
         <div class="hm-look">
-          <div><b>Training centres and workshops</b><p>To pilot the course and the repair guides with apprentices and fundis.</p></div>
-          <div><b>Fleet operators</b><p>Boda boda and delivery fleets, petrol or electric, who want their mechanics trained.</p></div>
-          <div><b>Mechanics and engineers</b><p>To check the repair steps and specifications, and share the faults you see most.</p></div>
-          <div><b>Translators</b><p>Kiswahili, French and other languages, so more mechanics can use it.</p></div>
-          <div><b>3D artists</b><p>To model more parts and bikes for the Overview and the builder.</p></div>
-          <div><b>Partners and funders</b><p>To bring electric motorcycle training to more places.</p></div>
+          <a class="hm-look" href="work-with-us/#training-centres-and-workshops"><img class="hm-ico" src="assets/icons/training-centres-and-workshops.svg" alt="" width="40" height="40"><b>Training centres and workshops</b><p>To pilot the course and the repair guides with apprentices and fundis.</p></a>
+          <a class="hm-look" href="work-with-us/#fleet-operators"><img class="hm-ico" src="assets/icons/fleet-operators.svg" alt="" width="40" height="40"><b>Fleet operators</b><p>Boda boda and delivery fleets, petrol or electric, who want their mechanics trained.</p></a>
+          <a class="hm-look" href="work-with-us/#mechanics-and-engineers"><img class="hm-ico" src="assets/icons/mechanics-and-engineers.svg" alt="" width="40" height="40"><b>Mechanics and engineers</b><p>To check the repair steps and specifications, and share the faults you see most.</p></a>
+          <a class="hm-look" href="work-with-us/#translators"><img class="hm-ico" src="assets/icons/translators.svg" alt="" width="40" height="40"><b>Translators</b><p>Kiswahili, French and other languages, so more mechanics can use it.</p></a>
+          <a class="hm-look" href="work-with-us/#3d-artists"><img class="hm-ico" src="assets/icons/3d-artists.svg" alt="" width="40" height="40"><b>3D artists</b><p>To model more parts and bikes for the Overview and the builder.</p></a>
+          <a class="hm-look" href="work-with-us/#partners-and-funders"><img class="hm-ico" src="assets/icons/partners-and-funders.svg" alt="" width="40" height="40"><b>Partners and funders</b><p>To bring electric motorcycle training to more places.</p></a>
         </div>
         <p style="margin-top:24px"><a class="ute-btn is-primary" href="contact/">Get in touch →</a></p>
       </div>
@@ -328,15 +338,15 @@
           <a href="about/"><img class="hm-ico" src="assets/icons/about-moto-zero.svg" alt="" width="40" height="40"><b>About</b><span>The story behind it</span></a>
           <a href="downloads/"><img class="hm-ico" src="assets/icons/downloads.svg" alt="" width="40" height="40"><b>Downloads</b><span>PDFs, models, diagrams</span></a>
           <a href="engine/"><img class="hm-ico" src="assets/icons/under-the-engine.svg" alt="" width="40" height="40"><b>Under the Engine</b><span>3D engine and gearbox, every part moving</span></a>
-          <a href="wiring/#builder"><b>Circuit Builder</b><span>Build and measure 12 V circuits</span></a>
+          <a href="wiring/#builder"><img class="hm-ico" src="assets/icons/circuit-builder.svg" alt="" width="40" height="40"><b>Circuit Builder</b><span>Build and measure 12 V circuits</span></a>
           <a href="brand/"><b>Brand a bike</b><span>Put your logo on a 3D motorcycle</span></a>
           <a href="types/"><img class="hm-ico" src="assets/icons/motorcycle-types.svg" alt="" width="40" height="40"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a>
           <a href="articles/"><img class="hm-ico" src="assets/icons/articles.svg" alt="" width="40" height="40"><b>Articles</b><span>Guides to engines, chains and wiring</span></a>
           <a href="models/"><img class="hm-ico" src="assets/icons/3d-model-library.svg" alt="" width="40" height="40"><b>3D model library</b><span>369 models to explore</span></a>
-          <a href="videos/"><b>Videos</b><span>The best motorcycle videos by topic</span></a>
+          <a href="videos/"><img class="hm-ico" src="assets/icons/videos.svg" alt="" width="40" height="40"><b>Videos</b><span>The best motorcycle videos by topic</span></a>
           <a href="sources/"><img class="hm-ico" src="assets/icons/sources-and-credits.svg" alt="" width="40" height="40"><b>Sources and credits</b><span>Bibliography and licences</span></a>
           <a href="progress/"><img class="hm-ico" src="assets/icons/my-progress.svg" alt="" width="40" height="40"><b>My progress</b><span>In this browser or your account</span></a>
-          <a href="account/"><b>Account</b><span>Comments, photos, downloads</span></a>
+          <a href="account/"><img class="hm-ico" src="assets/icons/account.svg" alt="" width="40" height="40"><b>Account</b><span>Comments, photos, downloads</span></a>
           <a href="updates/"><img class="hm-ico" src="assets/icons/updates.svg" alt="" width="40" height="40"><b>Updates</b><span>What changed and when</span></a>
           <a href="contact/"><img class="hm-ico" src="assets/icons/contact.svg" alt="" width="40" height="40"><b>Contact</b><span>Collaborate or ask</span></a>
           <a href="kids/"><img class="hm-ico" src="assets/icons/kids-build-a-bike.svg" alt="" width="40" height="40"><b>Kids: build a bike</b><span>For younger learners</span></a>
@@ -356,5 +366,15 @@
   })();
 </script>
 <script type="module" src="assets/site.js"></script>
+<script>
+(() => { // home page slideshows: change every 3.5 s, pause on hover, still for reduced motion
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.hm-feature-img.is-slides').forEach((box) => {
+    const imgs = [...box.querySelectorAll('img')]; let i = 0, hold = false;
+    box.addEventListener('mouseenter', () => { hold = true; }); box.addEventListener('mouseleave', () => { hold = false; });
+    setInterval(() => { if (hold || document.hidden) return; imgs[i].classList.remove('is-on'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-on'); }, 3500);
+  });
+})();
+</script>
 </body>
 </html>
