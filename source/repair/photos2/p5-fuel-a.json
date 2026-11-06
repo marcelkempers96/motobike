@@ -1,0 +1,659 @@
+{
+ "problems": {
+  "carb-no-fuel": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "caption": "Vacuum fuel tap with its vacuum fitting"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "caption": "Tap lever with ON, RES and PRI marks"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+    "caption": "Vacuum tap taken apart: filter and diaphragm"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg",
+    "caption": "Plastic inline fuel valve"
+   }
+  ],
+  "carb-overflowing": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+    "caption": "Float bowl with the overflow tube marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+    "caption": "Float needles with steel and rubber tips, and the seat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_groove_worn_them.jpg",
+    "caption": "Needle tip with a groove worn in it"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_crushing_floats.jpg",
+    "caption": "Crushed metal float"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level.jpg",
+    "caption": "Fuel level mark inside a float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float_two_piece_float.jpg",
+    "caption": "Tang on a two-piece float"
+   }
+  ],
+  "choke-stuck": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and the hole it feeds"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "caption": "Enrichening tube inside the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_screwed.jpg",
+    "caption": "Starter jet in the float bowl cover"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_butterfly_choke.jpg",
+    "caption": "Butterfly choke plate on a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_passages.jpg",
+    "caption": "Diagram of the enrichening passages"
+   }
+  ],
+  "fuel-cap-fault": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   }
+  ],
+  "fuel-leak": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+    "caption": "Vacuum tap taken apart: filter and diaphragm"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg",
+    "caption": "Plastic inline fuel valve"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+    "caption": "Float bowl with the overflow tube marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank_bmw_coated.jpg",
+    "caption": "Rust around a steel tank filler opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+    "caption": "Float needles with steel and rubber tips, and the seat"
+   }
+  ],
+  "fuel-smell": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+    "caption": "Float bowl with the overflow tube marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+    "caption": "Float needles with steel and rubber tips, and the seat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level.jpg",
+    "caption": "Fuel level mark inside a float bowl"
+   }
+  ],
+  "fuel-starvation": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "caption": "Tap lever with ON, RES and PRI marks"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "caption": "Vacuum fuel tap with its vacuum fitting"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_i_haven_t_used_any_because.jpg",
+    "caption": "Under-seat tank with fuel pump, drawn in outline"
+   }
+  ],
+  "rusty-tank": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank_bmw_coated.jpg",
+    "caption": "Rust around a steel tank filler opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_what_do.jpg",
+    "caption": "Clean tank interior with no rust"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_internal_coating.jpg",
+    "caption": "Coated tank interior, clean and free of rust"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   }
+  ],
+  "stale-fuel": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "caption": "Dirty carburettor parts laid out after standing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_exploded_carburetor.jpg",
+    "caption": "Dried varnish in a neglected float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "caption": "Idle jet being cleaned with a single wire"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "caption": "Enrichening tube inside the float bowl"
+   }
+  ],
+  "tank-vacuum": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "caption": "Vacuum fuel tap with its vacuum fitting"
+   }
+  ],
+  "water-in-fuel": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+    "caption": "Fuel above a layer of water in a jar"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/061/061_pattakon_engine_pattakon_crank.jpg",
+    "caption": "Test tube with fill lines for a fuel alcohol test"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_crushing_floats.jpg",
+    "caption": "Crushed metal float"
+   }
+  ],
+  "starts-then-dies": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "caption": "Vacuum fuel tap with its vacuum fitting"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "caption": "Tap lever with ON, RES and PRI marks"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+    "caption": "Intake rubber with the fitting for the vacuum hose"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   }
+  ],
+  "flooded-engine": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+    "caption": "Float bowl with the overflow tube marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+    "caption": "Float needles with steel and rubber tips, and the seat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_groove_worn_them.jpg",
+    "caption": "Needle tip with a groove worn in it"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level.jpg",
+    "caption": "Fuel level mark inside a float bowl"
+   }
+  ],
+  "starts-only-with-choke": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and the hole it feeds"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "caption": "Enrichening tube inside the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "caption": "Idle jet being cleaned with a single wire"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_screwed.jpg",
+    "caption": "Starter jet in the float bowl cover"
+   }
+  ],
+  "hard-cold-start": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/061/061_other_words_stuff_just_will_not.jpg",
+    "caption": "Chart of fuel vapour pressure against ethanol content"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and the hole it feeds"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_butterfly_choke.jpg",
+    "caption": "Butterfly choke plate on a carburettor"
+   }
+  ],
+  "cranks-no-start": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "caption": "Dirty carburettor parts laid out after standing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "caption": "Idle jet being cleaned with a single wire"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "caption": "Tap lever with ON, RES and PRI marks"
+   }
+  ],
+  "no-start-after-storage": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "caption": "Dirty carburettor parts laid out after standing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_exploded_carburetor.jpg",
+    "caption": "Dried varnish in a neglected float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_2.jpg",
+    "caption": "Carburettor and its jets spread out for cleaning"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_crush_floats.jpg",
+    "caption": "Crushed metal float"
+   }
+  ]
+ },
+ "repairs": {
+  "carburettor-clean": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "caption": "Idle jet being cleaned with a single wire"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "caption": "Dirty carburettor parts laid out after standing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_assembly.jpg",
+    "caption": "Four carburettors with parts sorted in numbered trays"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles.jpg",
+    "caption": "Safety goggles, needed when spraying cleaner"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "caption": "Enrichening tube inside the float bowl"
+   }
+  ],
+  "carb-float-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level.jpg",
+    "caption": "Fuel level mark inside a float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_float_level_set_single_float.jpg",
+    "caption": "Measuring the height of a single float"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float_two_piece_float.jpg",
+    "caption": "Tang on a two-piece float"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_crushing_floats.jpg",
+    "caption": "Crushed metal float"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_bendable.jpg",
+    "caption": "Metal float tang that can be bent"
+   }
+  ],
+  "carb-idle-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_throttle_adjustment_screws.jpg",
+    "caption": "Throttle stop screw on a single carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_air_adjust_idle_screw_1.jpg",
+    "caption": "Air type idle screw seen from the carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1.jpg",
+    "caption": "Fuel type idle screw below the carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1_fuel.jpg",
+    "caption": "Air screw above and fuel screw below, side by side"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_air_screw_may_covered_plug_similar.jpg",
+    "caption": "Plug that hides the idle screw"
+   }
+  ],
+  "choke-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and the hole it feeds"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_butterfly_choke.jpg",
+    "caption": "Butterfly choke plate on a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "caption": "Enrichening tube inside the float bowl"
+   }
+  ],
+  "fuel-tap-line-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "caption": "Vacuum fuel tap with its vacuum fitting"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "caption": "Tap lever with ON, RES and PRI marks"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+    "caption": "Vacuum tap taken apart: filter and diaphragm"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg",
+    "caption": "Standard fuel tap with ON, OFF and RES marks"
+   }
+  ],
+  "tank-vent-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_i_haven_t_used_any_because.jpg",
+    "caption": "Under-seat tank with fuel pump, drawn in outline"
+   }
+  ],
+  "tank-rust-treat": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank_bmw_coated.jpg",
+    "caption": "Rust around a steel tank filler opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_internal_coating.jpg",
+    "caption": "Coated tank interior, clean and free of rust"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_what_do.jpg",
+    "caption": "Clean tank interior with no rust"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   }
+  ],
+  "fuel-cap-service": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   }
+  ],
+  "clear-flooded-engine": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+    "caption": "Float bowl with the overflow tube marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+    "caption": "Float needles with steel and rubber tips, and the seat"
+   }
+  ],
+  "intake-leak-test": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+    "caption": "Intake rubber with the fitting for the vacuum hose"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_center_between_carburetors.jpg",
+    "caption": "Idle adjuster between two joined carburettors"
+   }
+  ],
+  "recommission-after-storage": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "caption": "Dirty carburettor parts laid out after standing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_exploded_carburetor.jpg",
+    "caption": "Dried varnish in a neglected float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_crush_floats.jpg",
+    "caption": "Crushed metal float"
+   }
+  ],
+  "fuel-water-test": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+    "caption": "Fuel above a layer of water in a jar"
+   }
+  ],
+  "choke-cable-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   }
+  ]
+ },
+ "parts": {
+  "carb": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Carburettor body with the enrichening plunger marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_assembly.jpg",
+    "caption": "Four carburettors with parts sorted in numbered trays"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_carb_jet_range.jpg",
+    "caption": "Diagram showing which jet controls which throttle opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_carb_venturi.jpg",
+    "caption": "Venturi, the narrow throat of a carburettor"
+   }
+  ],
+  "fuel_tap": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg",
+    "caption": "Standard fuel tap with ON, OFF and RES marks"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "caption": "Vacuum fuel tap with its vacuum fitting"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "caption": "Tap lever with ON, RES and PRI marks"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+    "caption": "Vacuum tap taken apart: filter and diaphragm"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_sometimes_called_main.jpg",
+    "caption": "Drawing of a tap with strainer, valve and tube"
+   }
+  ],
+  "fuel_cap": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_because_low_position_gas_tank_these.jpg",
+    "caption": "Fuel cap with its vent holes marked"
+   }
+  ],
+  "fuel_tank": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_gas_tank.jpg",
+    "caption": "Steel fuel tank on a Suzuki"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_steel_gas_tank_yamaha.jpg",
+    "caption": "Plastic fuel tank on a small Honda"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_steel_gas_tank_yamaha_plastic_gas.jpg",
+    "caption": "Montesa fiberglass tank with the filler cap"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank_bmw_coated.jpg",
+    "caption": "Rust around a steel tank filler opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_internal_coating.jpg",
+    "caption": "Coated tank interior, clean and free of rust"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_some_crossover_tubes_front_gas_tank.jpg",
+    "caption": "Crossover tube between the two halves of a tank"
+   }
+  ],
+  "fuel_filter": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+    "caption": "Fuel filter and diaphragm inside a vacuum tap"
+   }
+  ],
+  "choke_cable": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and the hole it feeds"
+   }
+  ],
+  "intake_manifold": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+    "caption": "Intake rubber with the fitting for the vacuum hose"
+   }
+  ],
+  "fuel_pump": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_i_haven_t_used_any_because.jpg",
+    "caption": "Under-seat tank with fuel pump, drawn in outline"
+   }
+  ]
+ },
+ "systems": {
+  "fuel": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_carb_jet_range.jpg",
+    "caption": "Diagram showing which jet controls which throttle opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "caption": "Dirty carburettor parts laid out after standing"
+   }
+  ],
+  "starting": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and the hole it feeds"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "caption": "Choke plunger on top of a carburettor"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m3-mixture",
+   "file": "source/dansmc/04_Fuel_Carburetors/063/063_carb_jet_range.jpg",
+   "caption": "Diagram showing which jet controls which throttle opening"
+  },
+  {
+   "chapter": "m3-mixture",
+   "file": "source/dansmc/04_Fuel_Carburetors/063/063_carb_venturi.jpg",
+   "caption": "Venturi, the narrow throat of a carburettor"
+  },
+  {
+   "chapter": "m3-mixture",
+   "file": "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level_2.jpg",
+   "caption": "Floats: two plastic, all metal, plastic and metal, all plastic"
+  }
+ ]
+}

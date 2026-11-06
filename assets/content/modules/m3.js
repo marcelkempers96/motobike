@@ -104,6 +104,12 @@ export default {
           "html": "Rich burns <em>cooler</em> (surplus fuel soaks up heat as it evaporates) but dirtier. Lean burns <em>slower</em>, so combustion is still going when the exhaust valve opens: on an air-cooled single like the K-Light 125 a persistently lean mixture leads to detonation, burned exhaust valves and piston seizure."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/063_fuel_level_2.jpg",
+          "caption": "Floats: two plastic, all metal, plastic and metal, all plastic",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "callout",
           "tone": "warm",
           "title": "Rule of thumb: altitude",
@@ -120,6 +126,12 @@ export default {
         {
           "type": "p",
           "html": "A <strong>blocked filter</strong> raises the depression downstream of it. In a carburettor that depression pulls on every jet, so the engine runs <strong>rich at all openings</strong>. In a speed-density injection system the MAP sensor sees the lower pressure and the ECU cuts fuel, so the symptom is <strong>loss of power</strong> instead. An air leak after the carb (split boot, loose clamp) admits unmetered air and leans the mixture, mostly at idle."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/075_carburetor_jets.jpg",
+          "caption": "Carburettor cutaway with jets and passages labelled",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "model",
@@ -141,8 +153,20 @@ export default {
           "html": "Air speeds up through the venturi (or under the slide) and its pressure drops (Bernoulli). The float bowl is vented to atmosphere, so atmospheric pressure pushes fuel up through calibrated jets into the low-pressure airstream. The throttle regulates air; the jets regulate fuel."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/075_jet_ranges_1.jpg",
+          "caption": "Chart of the throttle range each jet controls",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "In a <strong>slide carburettor</strong> (Mikuni VM, Keihin PWK) the cable lifts the slide directly: instant response, but snap it open at low rpm and the engine bogs. In a <strong>constant-velocity (CV) carburettor</strong> (Keihin CVK) the cable turns a butterfly and venturi depression lifts a diaphragm piston, so the venturi only opens as fast as the engine can use the air. A torn diaphragm leaves the piston down: the engine runs but will not rev."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/063_carb_venturi.jpg",
+          "caption": "Venturi, the narrow throat of a carburettor",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "model",
@@ -162,6 +186,12 @@ export default {
         {
           "type": "h3",
           "text": "Circuits by throttle opening (not rpm)"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/063_carb_jet_range.jpg",
+          "caption": "Diagram showing which jet controls which throttle opening",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "table",
@@ -1186,7 +1216,7 @@ export default {
               "channel_url": "http://www.youtube.com/@RevZilla",
               "duration": "7:07",
               "role": "How-to",
-              "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific."
+              "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific. Shows the multimeter tests and what a good or bad reading means; values are for that bike."
             }
           ]
         }

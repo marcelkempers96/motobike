@@ -1389,10 +1389,22 @@ export default {
           "caption": "Microfiche reader used to look up parts diagrams"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/032_chemicals.jpg",
+          "caption": "Shelf of sprays and chemicals in a workshop",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "callout",
           "tone": "safety",
           "title": "High-voltage electric motorcycles",
           "html": "Packs run at 48&ndash;120 V, up to about 400 V DC on larger bikes. Anything <strong>above 60 V DC</strong> is high voltage, can kill, and cannot be switched off inside the pack. Only trained technicians open orange-cabled circuits: remove and lock out the service disconnect, wait for capacitors to discharge, verify absence of voltage with a rated meter, and use tools insulated to IEC 60900 (1,000 V)."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/034_air_impact_wrenches.jpg",
+          "caption": "Air impact wrenches",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "check",

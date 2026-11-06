@@ -549,6 +549,12 @@ export default {
           ]
         },
         {
+          "type": "photo",
+          "src": "repair-photos/084_reed_valve_cylinder_2.jpg",
+          "caption": "Reed cage, reed stop and reed petal labelled",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "plate",
           "id": "F08",
           "caption": "The two-stroke cycle: upstroke and downstroke, above and below the piston."
@@ -679,6 +685,12 @@ export default {
         {
           "type": "p",
           "html": "Because the wave timing is fixed in milliseconds, the pipe only works over a band of rpm: the reason for the narrow powerband. A <strong>power valve</strong> (Yamaha YPVS, KTM guillotine, Honda HPP, Kawasaki KIPS, Suzuki AETC) lowers the exhaust port roof at low rpm and opens it fully at high rpm."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/083_power_valve_open.jpg",
+          "caption": "Power valve open at high revs",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "model",
@@ -1228,9 +1240,21 @@ export default {
           "html": "In a <strong>wet sump</strong> the oil sits in the bottom of the crankcase, usually shared with the gearbox and wet clutch. A <strong>dry sump</strong> keeps oil in a separate tank, with a scavenge pump returning it; it allows a lower engine and avoids oil surge on steep slopes, at the cost of extra pumps and pipes."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/051_dry_sump_oil_tank.jpg",
+          "caption": "Separate oil tank of a dry-sump engine",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "plate",
           "id": "F11",
           "caption": "Wet-sump circuit: strainer, trochoid pump, filter, crank and big end, head and cam, gearbox, back to the sump."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/051_cartridge_oil_filter.jpg",
+          "caption": "Spin-on cartridge oil filter",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "steps",
@@ -1280,6 +1304,12 @@ export default {
         {
           "type": "p",
           "html": "Check the level with the bike upright on level ground and the dipstick <strong>resting</strong> in the hole, not screwed in."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/052_high_low_marks.jpg",
+          "caption": "Dipstick with high and low marks",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "h3",
@@ -1655,6 +1685,12 @@ export default {
           "text": "Reading a spark plug"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/085_spark_plug.jpg",
+          "caption": "Spark plug fouled with black soot",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "Read after steady load, not idling. K-Light plug: <strong>D7RTC, gap 0.7 ± 0.1 mm, 15 N·m</strong>. Set the gap by bending only the earth electrode."
         },
@@ -1712,7 +1748,7 @@ export default {
               "channel_url": "http://www.youtube.com/@The_Bearded_Mechanic",
               "duration": "29:29",
               "role": "Case study",
-              "note": "Cheap Suzuki: diagnose why it will not run, step by step; a good example of reasoning order."
+              "note": "Cheap Suzuki: diagnose why it will not run, step by step; a good example of reasoning order. Worth watching for the order of checks: fuel, spark, compression."
             },
             {
               "id": "tM9AqyQrrPk",

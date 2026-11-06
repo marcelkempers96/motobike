@@ -1,0 +1,1462 @@
+{
+ "repairs": [
+  {
+   "id": "fuel-stabiliser-use",
+   "title": "Protect stored fuel with a fuel stabiliser",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "clean fuel can",
+    "funnel"
+   ],
+   "parts": [
+    "fuel_stabiliser",
+    "carb",
+    "fuel_tank"
+   ],
+   "consumables": [
+    "fuel stabiliser"
+   ],
+   "fixes": [
+    "stale-fuel",
+    "no-start-after-storage",
+    "starts-only-with-choke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gas.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_exploded_carburetor.jpg",
+     "caption": "Dried varnish in a neglected float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+     "caption": "Dirty carburettor parts laid out after standing"
+    }
+   ]
+  },
+  {
+   "id": "alcohol-fuel-test",
+   "title": "Test fuel for alcohol with a shake test",
+   "level": "home",
+   "time": "20 min plus 10 min settling",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "clear plastic or glass tube with a cap",
+    "marker",
+    "small funnel",
+    "water"
+   ],
+   "parts": [
+    "fuel_tank",
+    "fuel_line",
+    "carb"
+   ],
+   "consumables": [
+    "a small sample of fuel"
+   ],
+   "fixes": [
+    "water-in-fuel",
+    "hard-cold-start",
+    "fuel-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gasohol.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gas.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/061/061_pattakon_engine_pattakon_crank.jpg",
+     "caption": "Test tube with fill lines for a fuel alcohol test"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+     "caption": "Fuel above a layer of water in a jar"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/061/061_other_words_stuff_just_will_not.jpg",
+     "caption": "Chart of fuel vapour pressure against ethanol content"
+    }
+   ]
+  },
+  {
+   "id": "fuel-tank-leak-repair",
+   "title": "Assess and repair a leaking fuel tank",
+   "level": "workshop",
+   "time": "1 to 2 h plus curing time",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "fuel-safe containers",
+    "fine file or abrasive pad",
+    "two-part fuel tank epoxy"
+   ],
+   "parts": [
+    "fuel_tank",
+    "fuel_tap",
+    "fuel_cap"
+   ],
+   "consumables": [
+    "tank repair epoxy",
+    "degreaser"
+   ],
+   "fixes": [
+    "fuel-leak",
+    "fuel-smell",
+    "rusty-tank"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gastank.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank_bmw_coated.jpg",
+     "caption": "Rust around a steel tank filler opening"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_internal_coating.jpg",
+     "caption": "Coated tank interior, clean and free of rust"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_steel_gas_tank_yamaha.jpg",
+     "caption": "Plastic tank on a small motorcycle"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_fiberglass_gas_tanks.jpg",
+     "caption": "Fiberglass tank with a damaged area"
+    }
+   ]
+  },
+  {
+   "id": "fuel-tank-remove",
+   "title": "Remove and refit a fuel tank safely",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "spanners and sockets",
+    "fuel-safe container",
+    "funnel",
+    "hose clamps"
+   ],
+   "parts": [
+    "fuel_tank",
+    "fuel_tap",
+    "fuel_line"
+   ],
+   "consumables": [
+    "fuel line, if hard or cracked"
+   ],
+   "fixes": [
+    "fuel-leak",
+    "rusty-tank",
+    "tank-vacuum"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gastank.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_some_crossover_tubes_front_gas_tank.jpg",
+     "caption": "Crossover tube between the two halves of a tank"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_some_crossover_tubes_front_gas_tank_2.jpg",
+     "caption": "Underside of a tank with two crossover tubes"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_i_haven_t_used_any_because.jpg",
+     "caption": "Under-seat tank with fuel pump, drawn in outline"
+    }
+   ]
+  },
+  {
+   "id": "vacuum-fuel-tap-check",
+   "title": "Check a vacuum fuel tap and use the prime position",
+   "level": "home",
+   "time": "20 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "small screwdriver",
+    "spare piece of fuel hose",
+    "fuel-safe container"
+   ],
+   "parts": [
+    "fuel_tap",
+    "fuel_filter",
+    "intake_manifold"
+   ],
+   "consumables": [],
+   "fixes": [
+    "carb-no-fuel",
+    "fuel-starvation",
+    "starts-then-dies",
+    "fuel-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gastank.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+     "caption": "Vacuum fuel tap with its vacuum fitting"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+     "caption": "Tap lever with ON, RES and PRI marks"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+     "caption": "Vacuum tap taken apart: filter and diaphragm"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+     "caption": "Intake rubber with the fitting for the vacuum hose"
+    }
+   ]
+  },
+  {
+   "id": "inline-fuel-valve-fit",
+   "title": "Fit an inline shut-off valve in place of a failed fuel tap",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "hose clamp pliers or screwdriver",
+    "sharp knife",
+    "fuel-safe container"
+   ],
+   "parts": [
+    "inline_fuel_valve",
+    "fuel_line",
+    "fuel_tap",
+    "fuel_filter"
+   ],
+   "consumables": [
+    "fuel hose",
+    "hose clamps"
+   ],
+   "fixes": [
+    "fuel-leak",
+    "carb-overflowing",
+    "carb-no-fuel"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gastank.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg",
+     "caption": "Plastic inline fuel shut-off valve"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg",
+     "caption": "Standard fuel tap with ON, OFF and RES marks"
+    }
+   ]
+  },
+  {
+   "id": "carb-remove-refit",
+   "title": "Remove and refit a carburettor with stiff rubber boots",
+   "level": "home",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "spanners and screwdrivers",
+    "trays or labelled containers",
+    "fuel-safe container",
+    "heat gun or hot water"
+   ],
+   "parts": [
+    "carb",
+    "intake_manifold",
+    "air_filter",
+    "throttle_cable",
+    "choke_cable"
+   ],
+   "consumables": [
+    "rubber boots or O-rings if hard",
+    "carburettor cleaner"
+   ],
+   "fixes": [
+    "starts-only-with-choke",
+    "stale-fuel",
+    "no-start-after-storage",
+    "carb-overflowing"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_then_find_out_not_available_except.jpg",
+     "caption": "Four carburettors with parts sorted in numbered trays"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_careful_not_get_any_cleaner_rubber.jpg",
+     "caption": "Rubber seal at the throttle shaft, circled"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_slide_carb_cv_carburetors_slide_carb.jpg",
+     "caption": "Several slide and constant velocity carburettors on a bench"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_center_between_carburetors.jpg",
+     "caption": "Idle adjuster between two joined carburettors"
+    }
+   ]
+  },
+  {
+   "id": "carb-diaphragm-check",
+   "title": "Check the slide diaphragm of a constant velocity carburettor",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke"
+   ],
+   "tools": [
+    "screwdriver",
+    "clean rag",
+    "bright light"
+   ],
+   "parts": [
+    "carb_diaphragm",
+    "carb_slide",
+    "carb"
+   ],
+   "consumables": [
+    "new diaphragm or slide, if torn"
+   ],
+   "fixes": [
+    "carb-slow-to-rev",
+    "low-power",
+    "hesitation",
+    "bogs-full-throttle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm.jpg",
+     "caption": "Rubber diaphragm slide beside a steel piston type"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm_type.jpg",
+     "caption": "Diaphragm slide with the needle fixed below"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_holes.jpg",
+     "caption": "Tear in a diaphragm, found with a thin probe"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_diaphragm.jpg",
+     "caption": "Carburettor with its diaphragm cover removed"
+    }
+   ]
+  },
+  {
+   "id": "carb-jet-clear",
+   "title": "Clear carburettor jets and passages",
+   "level": "home",
+   "time": "1 to 2 h",
+   "applies_to": [
+    "carburettor"
+   ],
+   "tools": [
+    "screwdrivers that fit the jets",
+    "carburettor cleaner spray",
+    "compressed air",
+    "eye protection",
+    "soft brass or plastic pick"
+   ],
+   "parts": [
+    "carb_jets",
+    "carb",
+    "jet_needle"
+   ],
+   "consumables": [
+    "carburettor cleaner",
+    "new jets or O-rings if damaged"
+   ],
+   "fixes": [
+    "starts-only-with-choke",
+    "stale-fuel",
+    "no-start-after-storage",
+    "stalls-at-idle",
+    "cranks-no-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+     "caption": "Idle jet being cleaned with a single wire"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles.jpg",
+     "caption": "Safety goggles, needed when spraying cleaner"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_main_jet.jpg",
+     "caption": "Main jet in place in the float bowl area"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_needle_jet.jpg",
+     "caption": "Needle jet being tapped out with a punch"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_washer.jpg",
+     "caption": "Main jet washers beside a main jet"
+    }
+   ]
+  },
+  {
+   "id": "choke-circuit-clear",
+   "title": "Clear a blocked starter (choke) circuit in a slide carburettor",
+   "level": "home",
+   "time": "45 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver",
+    "carburettor cleaner spray with straw",
+    "compressed air",
+    "eye protection"
+   ],
+   "parts": [
+    "carb",
+    "choke_cable",
+    "carb_jets"
+   ],
+   "consumables": [
+    "carburettor cleaner"
+   ],
+   "fixes": [
+    "choke-stuck",
+    "hard-cold-start",
+    "starts-only-with-choke",
+    "cranks-no-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+     "caption": "Enrichening plunger and the hole it feeds"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+     "caption": "Choke plunger on top of a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+     "caption": "Enrichening tube inside the float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_lower_hole.jpg",
+     "caption": "Large passage and lower hole in the float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_screwed.jpg",
+     "caption": "Starter jet in the float bowl cover"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_passages.jpg",
+     "caption": "Diagram of the enrichening passages"
+    }
+   ]
+  },
+  {
+   "id": "jet-needle-clip-set",
+   "title": "Move the jet needle clip to change the mid-range mixture",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver",
+    "pliers",
+    "clean rag"
+   ],
+   "parts": [
+    "jet_needle",
+    "carb_slide",
+    "carb"
+   ],
+   "consumables": [
+    "small washer, if the needle has one groove"
+   ],
+   "fixes": [
+    "hesitation",
+    "flat-spot",
+    "runs-lean",
+    "runs-rich"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb6.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_needle_clip.jpg",
+     "caption": "Jet needle with its clip groove"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_clip.jpg",
+     "caption": "Jet needle with a retaining clip beside a second needle"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_clip_no_clip_needle.jpg",
+     "caption": "Parts that hold a needle in a slide: clip, plate and screw"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_needle_jet.jpg",
+     "caption": "Diagram of a jet needle in a needle jet"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_throttle_slide.jpg",
+     "caption": "Slide with the jet needle and clip beside it"
+    }
+   ]
+  },
+  {
+   "id": "main-jet-change",
+   "title": "Change the main jet and read the plug",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver or small spanner that fits the jet",
+    "spark plug spanner",
+    "clean rag"
+   ],
+   "parts": [
+    "carb_jets",
+    "spark_plug",
+    "carb"
+   ],
+   "consumables": [
+    "main jets of the carburettor maker, one size larger and smaller",
+    "new spark plug for testing"
+   ],
+   "fixes": [
+    "runs-lean",
+    "runs-rich",
+    "bogs-full-throttle",
+    "jetting-after-modification"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb7.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet.jpg",
+     "caption": "Round and hex main jets of different sizes"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_main_jets_can_made_brass_plastic.jpg",
+     "caption": "Section through a main jet"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet_mikuni_main_jet.jpg",
+     "caption": "Float bowl cap and main jet below a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet_mikuni_main_jet_2.jpg",
+     "caption": "Main jet reached through a cap in the bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_main_jet.jpg",
+     "caption": "Main jets in brass and plastic"
+    }
+   ]
+  },
+  {
+   "id": "idle-screw-set",
+   "title": "Find and set the idle mixture screw (air type or fuel type)",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "small screwdriver",
+    "tachometer or careful ear",
+    "thin pick or needle"
+   ],
+   "parts": [
+    "carb",
+    "carb_jets"
+   ],
+   "consumables": [],
+   "fixes": [
+    "stalls-at-idle",
+    "hunting-idle",
+    "rough-idle",
+    "high-idle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb3.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_air_adjust_idle_screw_1.jpg",
+     "caption": "Air type idle screw seen from the carburettor throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1.jpg",
+     "caption": "Fuel type idle screw below the carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1_fuel.jpg",
+     "caption": "Air screw above and fuel screw below, side by side"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_air_screw_may_covered_plug_similar.jpg",
+     "caption": "Plug that hides the idle screw"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_throttle_adjustment_screws.jpg",
+     "caption": "Throttle stop screw on a single carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_then_do_all_again_until_get.jpg",
+     "caption": "Idle port and throttle stop screw in the throat"
+    }
+   ]
+  },
+  {
+   "id": "float-height-set",
+   "title": "Measure and set the carburettor float height",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "ruler or depth gauge",
+    "small pliers",
+    "short piece of tubing"
+   ],
+   "parts": [
+    "carb_float",
+    "float_needle_valve",
+    "carb"
+   ],
+   "consumables": [
+    "bowl gasket, if damaged"
+   ],
+   "fixes": [
+    "carb-overflowing",
+    "flooded-engine",
+    "fuel-smell",
+    "oil-smells-fuel"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb8.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_tang.jpg",
+     "caption": "Float tang and the float height to be measured"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_float_level_set_single_float.jpg",
+     "caption": "Measuring the height of a single float"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_always_check_shop_manual.jpg",
+     "caption": "Ruler beside a float inside a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_bendable.jpg",
+     "caption": "Metal float tang that can be bent"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float_two_piece_float.jpg",
+     "caption": "Tang on a two-piece float"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_metal_plastic_both.jpg",
+     "caption": "Metal, plastic and metal, and all plastic floats"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "alcohol-fuel-trouble",
+   "title": "Problems after using ethanol blend fuel",
+   "system": "fuel",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "gasohol problems",
+    "ethanol fuel trouble",
+    "E10 problems",
+    "water and alcohol in the tank"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "fuel_tank",
+    "fuel_line",
+    "carb",
+    "fuel_filter",
+    "carb_float"
+   ],
+   "repairs": [
+    "alcohol-fuel-test",
+    "drain-fuel",
+    "fuel-filter-replace",
+    "carburettor-clean",
+    "fuel-stabiliser-use"
+   ],
+   "related": [
+    "water-in-fuel",
+    "stale-fuel",
+    "hard-cold-start",
+    "rusty-tank",
+    "fuel-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gasohol.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gas.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/061/061_other_words_stuff_just_will_not.jpg",
+     "caption": "Chart of fuel vapour pressure against ethanol content"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/061/061_pattakon_engine_pattakon_crank.jpg",
+     "caption": "Test tube with fill lines for a fuel alcohol test"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+     "caption": "Fuel above a layer of water in a jar"
+    }
+   ]
+  },
+  {
+   "id": "vacuum-tap-no-flow",
+   "title": "Vacuum fuel tap gives no fuel unless set to prime",
+   "system": "fuel",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "fuel only on prime",
+    "petcock vacuum diaphragm",
+    "tap leaks when off",
+    "tap does not open"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "fuel_tap",
+    "fuel_filter",
+    "fuel_line",
+    "intake_manifold"
+   ],
+   "repairs": [
+    "vacuum-fuel-tap-check",
+    "fuel-tap-line-check",
+    "fuel-filter-replace",
+    "inline-fuel-valve-fit",
+    "intake-leak-test"
+   ],
+   "related": [
+    "carb-no-fuel",
+    "fuel-starvation",
+    "starts-then-dies",
+    "fuel-leak",
+    "carb-overflowing"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gastank.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+     "caption": "Vacuum fuel tap with its vacuum fitting"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+     "caption": "Tap lever with ON, RES and PRI marks"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+     "caption": "Vacuum tap taken apart: filter and diaphragm"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+     "caption": "Intake rubber with the fitting for the vacuum hose"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all.jpg",
+     "caption": "Parts diagram of a vacuum fuel tap"
+    }
+   ]
+  },
+  {
+   "id": "jetting-after-modification",
+   "title": "Engine runs badly after an exhaust, air filter or carburettor change",
+   "system": "fuel",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "jetting wrong",
+    "runs lean after new exhaust",
+    "stumbles after new carburettor",
+    "needs rejetting"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "carb_jets",
+    "jet_needle",
+    "carb_slide",
+    "carb",
+    "exhaust",
+    "air_filter"
+   ],
+   "repairs": [
+    "spark-plug-reading",
+    "jet-needle-clip-set",
+    "main-jet-change",
+    "idle-screw-set",
+    "intake-leak-test"
+   ],
+   "related": [
+    "runs-lean",
+    "runs-rich",
+    "hesitation",
+    "flat-spot",
+    "bogs-full-throttle",
+    "pinking"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb3.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb7.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_carb_jet_range.jpg",
+     "caption": "Diagram showing which jet controls which throttle opening"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle.jpg",
+     "caption": "Jet needles of different tapers"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_main_jet.jpg",
+     "caption": "Main jets of different sizes"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/068/068_right_throttle_stop_adjustment.jpg",
+     "caption": "Throttle slides with left and right bevel cut-outs"
+    }
+   ]
+  },
+  {
+   "id": "carb-slow-to-rev",
+   "title": "Engine starts well but revs slowly and feels weak",
+   "system": "fuel",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "slow to pick up revs",
+    "weak throttle response",
+    "diaphragm torn",
+    "slide not lifting"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke"
+   ],
+   "parts": [
+    "carb_diaphragm",
+    "carb_slide",
+    "carb",
+    "carb_jets",
+    "air_filter"
+   ],
+   "repairs": [
+    "carb-diaphragm-check",
+    "carburettor-clean",
+    "intake-leak-test",
+    "air-filter-service",
+    "compression-test"
+   ],
+   "related": [
+    "low-power",
+    "hesitation",
+    "bogs-full-throttle",
+    "flat-spot",
+    "starts-only-with-choke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm.jpg",
+     "caption": "Rubber diaphragm slide beside a steel piston type"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_holes.jpg",
+     "caption": "Tear in a diaphragm, found with a thin probe"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_diaphragm.jpg",
+     "caption": "Carburettor with its diaphragm cover removed"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_piston_type.jpg",
+     "caption": "Steel piston type slide with a needle"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "carb_jets",
+   "name": "Carburettor jets (main, idle, needle jet)",
+   "category": "fuel",
+   "aliases": [
+    "jets",
+    "main jet",
+    "pilot jet",
+    "idle jet",
+    "needle jet"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "carb-jet-clear",
+    "main-jet-change",
+    "idle-screw-set",
+    "carburettor-clean",
+    "choke-circuit-clear"
+   ],
+   "problems": [
+    "starts-only-with-choke",
+    "stalls-at-idle",
+    "runs-lean",
+    "runs-rich",
+    "jetting-after-modification",
+    "stale-fuel"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb3.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb5.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb7.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_main_jet.jpg",
+     "caption": "Brass main jet"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_pilot_group.jpg",
+     "caption": "Idle jet group: air jet, idle jet and air screw"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_needle_jet.jpg",
+     "caption": "Needle jet, a tube that looks unlike a jet"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet.jpg",
+     "caption": "Round and hex main jets of different sizes"
+    }
+   ]
+  },
+  {
+   "id": "jet_needle",
+   "name": "Jet needle and clip",
+   "category": "fuel",
+   "aliases": [
+    "needle",
+    "carburettor needle",
+    "metering needle"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "jet-needle-clip-set",
+    "carburettor-clean",
+    "carb-jet-clear"
+   ],
+   "problems": [
+    "hesitation",
+    "flat-spot",
+    "runs-lean",
+    "runs-rich",
+    "jetting-after-modification"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb6.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_jet_needle.jpg",
+     "caption": "Jet needle with clip grooves at the top"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle.jpg",
+     "caption": "Jet needles with different tapers"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_clip.jpg",
+     "caption": "Jet needle with its clip and a second needle"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/070/070_several_stages.jpg",
+     "caption": "Single taper and double taper needle diagram"
+    }
+   ]
+  },
+  {
+   "id": "carb_slide",
+   "name": "Throttle slide (carburettor)",
+   "category": "fuel",
+   "aliases": [
+    "slide",
+    "throttle valve",
+    "carburettor slide"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "carb-diaphragm-check",
+    "carburettor-clean",
+    "carb-remove-refit",
+    "idle-screw-set"
+   ],
+   "problems": [
+    "throttle-sticks",
+    "carb-slow-to-rev",
+    "hesitation",
+    "stalls-at-idle",
+    "jetting-after-modification"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb4.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_slide.jpg",
+     "caption": "Plain round throttle slide"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/068/068_right_throttle_stop_adjustment.jpg",
+     "caption": "Slides with left and right idle bevels"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/068/068_some_racing_carburetors_there_no_idle.jpg",
+     "caption": "Slide cut-away sizes: leaner and richer"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_throttle_slide.jpg",
+     "caption": "Slide with the needle and clip beside it"
+    }
+   ]
+  },
+  {
+   "id": "float_needle_valve",
+   "name": "Float needle valve and seat",
+   "category": "fuel",
+   "aliases": [
+    "needle and seat",
+    "fuel inlet needle",
+    "float valve"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "carb-float-check",
+    "float-height-set",
+    "carburettor-clean",
+    "clear-flooded-engine"
+   ],
+   "problems": [
+    "carb-overflowing",
+    "flooded-engine",
+    "fuel-smell",
+    "oil-smells-fuel",
+    "fuel-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+     "caption": "Float needles with steel and rubber tips, and the brass seat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_groove_worn_them.jpg",
+     "caption": "Needle tip with a groove worn in it"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+     "caption": "Float bowl with the overflow tube marked"
+    }
+   ]
+  },
+  {
+   "id": "carb_float",
+   "name": "Carburettor float",
+   "category": "fuel",
+   "aliases": [
+    "float",
+    "float assembly",
+    "float bowl float"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "float-height-set",
+    "carb-float-check",
+    "carburettor-clean"
+   ],
+   "problems": [
+    "carb-overflowing",
+    "flooded-engine",
+    "fuel-smell",
+    "no-start-after-storage"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb8.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level_2.jpg",
+     "caption": "Floats: two plastic, all metal, plastic and metal, all plastic"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_carburetor_floats_2.jpg",
+     "caption": "Old cork float"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_crushing_floats.jpg",
+     "caption": "Crushed metal float"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float.jpg",
+     "caption": "One-piece and two-piece floats in their bowls"
+    }
+   ]
+  },
+  {
+   "id": "carb_diaphragm",
+   "name": "Carburettor diaphragm",
+   "category": "fuel",
+   "aliases": [
+    "slide diaphragm",
+    "carb diaphragm",
+    "vacuum diaphragm"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "carb-diaphragm-check",
+    "carburettor-clean",
+    "vacuum-fuel-tap-check"
+   ],
+   "problems": [
+    "carb-slow-to-rev",
+    "low-power",
+    "hesitation",
+    "stalls-at-idle",
+    "backfire-on-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm.jpg",
+     "caption": "Rubber diaphragm slide beside a steel piston type"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm_type.jpg",
+     "caption": "Diaphragm slide with its needle"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_holes.jpg",
+     "caption": "Tear in a diaphragm"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_diaphragm.jpg",
+     "caption": "Carburettor with its diaphragm cover removed"
+    }
+   ]
+  },
+  {
+   "id": "fuel_stabiliser",
+   "name": "Fuel stabiliser",
+   "category": "fuel",
+   "aliases": [
+    "fuel stabilizer",
+    "fuel additive",
+    "storage additive"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "fuel-stabiliser-use",
+    "recommission-after-storage",
+    "drain-fuel"
+   ],
+   "problems": [
+    "stale-fuel",
+    "no-start-after-storage",
+    "starts-only-with-choke",
+    "alcohol-fuel-trouble"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gas.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_exploded_carburetor.jpg",
+     "caption": "Dried varnish in a float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+     "caption": "Dirty carburettor parts laid out after standing"
+    }
+   ]
+  },
+  {
+   "id": "inline_fuel_valve",
+   "name": "Inline fuel shut-off valve",
+   "category": "fuel",
+   "aliases": [
+    "inline valve",
+    "fuel shut-off valve",
+    "plastic fuel valve"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "repairs": [
+    "inline-fuel-valve-fit",
+    "fuel-tap-line-check",
+    "vacuum-fuel-tap-check"
+   ],
+   "problems": [
+    "fuel-leak",
+    "carb-overflowing",
+    "vacuum-tap-no-flow"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/gastank.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg",
+     "caption": "Plastic inline fuel valve"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg",
+     "caption": "Standard fuel tap with ON, OFF and RES marks"
+    }
+   ]
+  }
+ ]
+}

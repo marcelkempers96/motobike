@@ -541,7 +541,7 @@ export default {
               "channel_url": "http://www.youtube.com/@TecknoMechanics",
               "duration": "6:08",
               "role": "How it works",
-              "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks."
+              "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks. Shows shift drum, forks and dogs, which explains false neutrals, jumping out and hard shifts."
             },
             {
               "id": "viWuolNYGyI",
@@ -1287,9 +1287,21 @@ export default {
           "caption": "Spoke tightening pattern: work round the wheel in small, even steps so the rim stays true."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/048_do_not_loosen_castle_nut_make.jpg",
+          "caption": "Castle nut with a cotter pin on a rear axle",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "plate",
           "id": "W02",
           "caption": "Hubs and bearings: exploded front hub with axle, spacers, sealed bearings and seals, and the rear hub with cush drive and sprocket carrier."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/048_if_happens_just_lever_two_pin.jpg",
+          "caption": "Slip pin on a rear brake rod",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "model",
@@ -1854,7 +1866,7 @@ export default {
               "channel_url": "http://www.youtube.com/@SabinCivil",
               "duration": "5:30",
               "role": "How it works",
-              "note": "Animation of how a disc brake works: lever, fluid, caliper and pads."
+              "note": "Animation of how a disc brake works: lever, fluid, caliper and pads. Shows the whole hydraulic path, so a soft lever, drag or weak braking can be traced to a part."
             }
           ]
         }
@@ -1907,12 +1919,24 @@ export default {
           ]
         },
         {
+          "type": "photo",
+          "src": "repair-photos/048_parts_tray.jpg",
+          "caption": "Parts tray holding bolts from one assembly",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "check",
           "q": "m4-27"
         },
         {
           "type": "h3",
           "text": "Pre-ride check: T-CLOCS"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/048_plastic_bags.jpg",
+          "caption": "Freezer bag labelled with its contents",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "steps",
@@ -1948,12 +1972,24 @@ export default {
           "text": "Chassis tune-up"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/048_there_several_ways_do_quickly.jpg",
+          "caption": "Cardboard template with each screw in its own hole",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "Lubricate and adjust cables, set clutch, brake and throttle free play, check fasteners, chain, wheels, tyres, fluids and lights, and aim the headlight (dipped cut-off typically about 1 % below lamp centre height). With the engine idling, turn the bars lock to lock: <strong>idle must not rise</strong>, or a cable is being pulled by the steering. Lay a new cable alongside the old before removal so it follows the same route."
         },
         {
           "type": "h3",
           "text": "Pre-delivery inspection"
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/051_oil_filter_cartridge_tools.jpg",
+          "caption": "Spin-on filter with a T-handle filter wrench",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "steps",
@@ -1993,6 +2029,12 @@ export default {
           "tone": "safety",
           "title": "Torque and road tests",
           "html": "A PDI is complete only when every fastener the dealer touched has been torqued to the manual’s figure and the bike has been road-tested in a safe place. Record the values: they are evidence if a fault is later disputed."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/052_oil_level_plug_2.jpg",
+          "caption": "Oil level plug in the side of a crankcase",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "callout",
