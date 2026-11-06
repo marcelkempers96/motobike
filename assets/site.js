@@ -119,7 +119,7 @@ function wireSubscribe(form) {
       // Save the address in the Supabase subscribers table (insert-only for visitors, see docs/supabase.sql)
       msg.textContent = 'Sending…';
       try {
-        const r = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, { method: 'POST', headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+        const r = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, { method: 'POST', headers: { apikey: SUPABASE_ANON_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
           body: JSON.stringify({ email, source: location.pathname }) });
         msg.textContent = r.ok || r.status === 409 ? 'Thank you. You are on the list.' : 'That did not work. Please try again later.';
         if (r.ok || r.status === 409) form.reset();

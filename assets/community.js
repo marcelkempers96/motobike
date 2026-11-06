@@ -25,7 +25,7 @@ export function pageKey(path = location.pathname) {
 let sbPromise = null;
 export function supabase() {
   if (!ON) return Promise.resolve(null);
-  if (!sbPromise) sbPromise = import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/+esm')
+  if (!sbPromise) sbPromise = import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/+esm')
     .then((m) => m.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, detectSessionInUrl: true } }))
     .catch(() => null);
   return sbPromise;
