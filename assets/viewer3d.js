@@ -75,7 +75,13 @@ export function createViewer(el, opts = {}) {
   const scene = new THREE.Scene();
   const pm = new THREE.PMREMGenerator(renderer);
   scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture;
-  const key = new THREE.DirectionalLight(0xffffff, 1.2); key.position.set(3, 5, 4); scene.add(key);
+  renderer.toneMappingExposure = 1.15;
+  // Key light, plus a fill from the opposite side and a soft sky/ground light, so the far side
+  // of a bike is lit enough to read its details (no near-black half).
+  const key = new THREE.DirectionalLight(0xffffff, 1.1); key.position.set(3, 5, 4); scene.add(key);
+  const fill = new THREE.DirectionalLight(0xffffff, 0.75); fill.position.set(-4, 3, -4); scene.add(fill);
+  const rim = new THREE.DirectionalLight(0xffffff, 0.35); rim.position.set(0, 2, -6); scene.add(rim);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x9a9a9a, 0.85));
   const camera = new THREE.PerspectiveCamera(32, 1, 0.01, 100);
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;

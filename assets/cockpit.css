@@ -141,3 +141,6 @@ html.mz-embed .mz-pagebar { display: none !important; }
 .mz-ov-links a { white-space: nowrap; }
 .mz-ov-static { padding: 40px; max-width: 900px; }
 @media (max-width: 720px) { .mz-ov-about { padding: 20px 16px; } .mz-ov-static { padding: 24px 16px; } }
+
+.mz3d-run { pointer-events: auto; margin-left: auto; margin-right: 8px; font: 700 13px/1 var(--sans); padding: 8px 12px; border: 1.5px solid var(--ink); background: #FFF; color: var(--ink); cursor: pointer; }
+.mz3d-run.is-on { background: var(--warm); border-color: var(--warm); color: #FFF; }

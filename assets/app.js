@@ -331,6 +331,7 @@ async function mount3D(wrap, token) {
     <div class="mz3d-tip" id="mz3d-tip" hidden></div>
     <div class="mz3d-bar">
       <span class="mz3d-hint">Drag to orbit · scroll or pinch to zoom · tap a part</span>
+      <button type="button" class="mz3d-run" id="mz3d-run" aria-pressed="false" title="Spin the wheels and run the engine">▶ Run the bike</button>
       <div class="ute-seg ute-cam" role="group" aria-label="Camera">
         <button type="button" data-cam="side" class="is-on">Side</button><button type="button" data-cam="threeq">3/4</button><button type="button" data-cam="front">Front</button>
       </div>
@@ -359,6 +360,15 @@ async function mount3D(wrap, token) {
   if (token !== mountToken) return;
   applyMotoHighlight();
   applyMotoCategory();
+  OV_SHAKE = null;
+  const runBtn = wrap.querySelector('#mz3d-run');
+  const setRun = (on) => {
+    S.ovRun = on; runBtn.setAttribute('aria-pressed', String(on)); runBtn.classList.toggle('is-on', on);
+    runBtn.textContent = on ? '■ Stop' : '▶ Run the bike';
+    if (!on && OV_SHAKE) { OV_SHAKE.forEach(([m, y]) => { m.position.y = y; }); V3 && V3.render(); }
+  };
+  runBtn.addEventListener('click', () => setRun(!S.ovRun));
+  setRun(!!S.ovRun);
   wrap.querySelectorAll('[data-cam]').forEach((b) => b.addEventListener('click', () => {
     wrap.querySelectorAll('[data-cam]').forEach((x) => x.classList.toggle('is-on', x === b));
     V3.view(b.dataset.cam);
@@ -389,7 +399,20 @@ function applyMotoCategory() {
   if (V3) V3.setCategory(c);
 }
 
+let OV_SHAKE = null, OV_T = 0;
 function updateOverviewTick(dt) {
+  if (V3 && S.ovRun) {
+    // "Run the bike": wheels, sprockets and discs turn; the engine vibrates (not on the electric bike)
+    V3.spin(220 * dt);
+    if (S.mode !== 'elec') {
+      if (!OV_SHAKE) OV_SHAKE = V3.meshes().filter((m) => /^(powertrain__(engine|exhaust|intake|clutch|kick_start|cvt|fuel_system|cooling|radiator)|electrical__(ignition|spark|cdi))/.test(m.name)).map((m) => [m, m.position.y]);
+      OV_T += dt;
+      const a = 0.0009 * Math.sin(OV_T * 2 * Math.PI * 22) + 0.0004 * Math.sin(OV_T * 2 * Math.PI * 37);
+      OV_SHAKE.forEach(([m, y]) => { m.position.y = y + a; });
+      V3.render();
+    }
+    return;
+  }
   if (!V3 || S.speed < 0.3) return;
   const wheelRPM = S.speed / 3.6 / (2 * Math.PI * GEAR.wheel_r_m) * 60;
   V3.spin(wheelRPM / 60 * 360 * dt / 10); // 10x slow-motion so the spokes stay readable
