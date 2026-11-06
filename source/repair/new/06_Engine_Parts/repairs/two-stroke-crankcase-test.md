@@ -33,6 +33,8 @@ A two-stroke engine needs a sealed crankcase. When the piston goes down it squee
 2. Fit the test fitting in the spark plug hole.
 3. Pressure test: pump up to the manual's pressure. The course gives six to fifteen pounds per square inch as the usual range, but use the manual figure. Watch the gauge for about five minutes. It should hold.
 4. If the gauge falls, spray soapy water on the crankshaft seal areas, the case joint, the cylinder base and the inlet flange. Bubbles show the leak.
+   - Other places a leak can hide: the spark plug threads and washer, the head gasket, a porous patch in the cylinder casting, the oil line and its banjo bolt and washers, and on engines with a rotary valve, its cover and O-rings. Check them all before blaming the crankshaft seals.
+   - An engine can pass the vacuum test and fail the pressure test, or the other way round, because seal lips hold better in one direction. Always do both tests.
 5. Vacuum test: use the pump in vacuum mode, take it to the manual vacuum (the course gives about five to seven inches of mercury as usual), and watch for about five minutes. It should hold.
 6. A seal that leaks only when cold may pass the test once warm. Repeat after the engine has stood overnight, and test cold.
 7. Cure the leak:

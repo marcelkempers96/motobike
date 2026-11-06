@@ -19,6 +19,7 @@ sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb12.htm"}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb8a.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs2.htm"}
 ---
 
 # Engine runs rich, smells of fuel and smokes black
@@ -81,3 +82,4 @@ After the fix, [measure fuel consumption](/moto-zero/repair/repairs/fuel-economy
 | Blocked airbox inlet, nest, or breather oil in the filter | Black plug and no fault found elsewhere | [Airbox blockage check](/moto-zero/repair/repairs/airbox-blockage-check) |
 | Broken choke plate spring or stuck starter plunger | Choke lever moves with no resistance, or plunger does not spring back | [Choke plate check](/moto-zero/repair/repairs/choke-plate-check), [Starter plunger check](/moto-zero/repair/repairs/starter-plunger-check) |
 | Needle tip worn, or dirt holding the needle off its seat | Ring worn round the needle tip, fuel overflows | [Replace the needle and seat](/moto-zero/repair/repairs/needle-seat-replace) |
+| Riding much higher, or in much hotter air, than where the bike was jetted | Plug black only since the move, better back at the old place | [Jetting for altitude and temperature](/moto-zero/repair/repairs/jetting-altitude-temperature) |

@@ -74,6 +74,13 @@ The top end is everything from the base gasket up: cylinder, piston, rings, head
 - A written list of measurements against the limits, and the old parts.
 - Run-in advice for new rings or a new piston.
 
+## What a full top end job usually includes
+The course lists what a proper top end job covers, so you can compare quotes. Not every engine needs every item; the workshop should measure and tell you.
+- Four-stroke: piston, rings, piston pin and clips (oversize after a rebore), cylinder rebore or new cylinder, top end gasket set, valves, valve seals, valve guides checked, valve springs measured, valve seats cut, cam chain, and the cam chain guides and tensioner checked.
+- Two-stroke single: piston, rings, piston pin, small end bearing and clips, rebore, top gasket set. A power valve may need a light grind to clear the new piston.
+- Do a full tune-up first. Many "worn engine" faults go away when the valves, plug, timing, filter and carburettor are set right: [Service schedule](/moto-zero/repair/repairs/service-schedule).
+- Removing only the head can make the cylinder base leak later, because old gaskets do not reseal once they are broken loose.
+
 ## Do not attempt at home
 - Honing, reboring, valve seat cutting or guide replacement without the tools and limits.
 - Reusing piston pin clips or head gaskets.
@@ -137,3 +144,4 @@ Workshop reference limits, measured with proper tools.
 - MAVCC Motorcycle Mechanic, PDF p. 784
 - MAVCC Motorcycle Mechanic, PDF p. 800
 - MAVCC Motorcycle Mechanic, PDF p. 823
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/definitions.htm

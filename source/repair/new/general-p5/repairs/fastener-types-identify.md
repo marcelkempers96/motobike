@@ -31,6 +31,11 @@ A bolt works like a spring. As it tightens it stretches, and the stretch is what
 7. Rolled threads are stronger than cut threads. Do not cut extra thread on a bolt unless you must.
 8. Tighten to the torque in your manual with a torque wrench: [Use a torque wrench](/moto-zero/repair/repairs/torque-wrench-use).
 
+## Thread standards
+- Metric (ISO, JIS) and American unified threads use a 60 degree thread. Older British Whitworth, BSF and BA threads have a different angle and rounded tops. They do not mix, even when the size looks the same.
+- Before buying a bolt, tap or thread insert, measure the size and pitch: [Identify a thread standard and pitch](/moto-zero/repair/repairs/thread-standard-identify).
+- A pulled-out thread in a casting: [A bolt hole thread is stripped](/moto-zero/repair/problems/bolt-hole-stripped).
+
 ## Check your work
 - The bolt is the right size, grade and thread, and has its washer or lock.
 - It stays tight after the first ride and a recheck.

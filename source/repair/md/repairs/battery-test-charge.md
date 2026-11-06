@@ -101,6 +101,7 @@ This job tells you whether the starter battery is just flat or is worn out, and 
 - Battery charges but goes flat while riding: [Test the charging system](/moto-zero/repair/repairs/charging-system-test).
 - Battery will not reach the charged value, or goes flat within a day on the bench: it is worn out (lead acid batteries often last only 2 to 3 years, K-Light 125 manual). Use [Replace a 12 V battery](/moto-zero/repair/repairs/battery-replace).
 - Cranking still slow with a good battery: [Engine turns over slowly](/moto-zero/repair/problems/slow-cranking).
+- Want to know how full the battery is, not only "good" or "bad": [Read a battery's state of charge from a chart](/moto-zero/repair/repairs/battery-charge-state-read).
 
 ## Reference values (K-Light 125)
 | Item | Value | PDF page |

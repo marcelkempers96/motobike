@@ -58,6 +58,7 @@ The stator is a ring of copper coils fixed inside the engine side cover. Magnets
 
 ## Replacing a stator (workshop)
 On most bikes the stator sits behind the flywheel. Replacement needs a flywheel holder and puller, a new cover gasket, and correct torque values for the flywheel nut and stator bolts. The K-Light 125 manual gives different values on different pages for some of these fasteners, so this page does not publish them. Ask the workshop to use the confirmed values for your engine and to check the flywheel key and magnets for damage.
+- Some replacement coil sets come with short leads, so the old leads must be joined on. Use crimp connectors and heat shrink sleeve, not solder alone: the joint sits close to the hot engine and soldered wires can separate when hot. Insulate and tie the joint so it cannot touch the case or the flywheel.
 
 ## Check your work
 - After repair, [Test the charging system](/moto-zero/repair/repairs/charging-system-test) gives a reading in range.

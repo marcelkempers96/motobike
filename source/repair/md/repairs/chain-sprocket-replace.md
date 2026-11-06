@@ -55,6 +55,7 @@ The chain, front sprocket and rear sprocket wear together and are replaced as a 
 
 ## What the workshop will do
 1. Remove the front sprocket cover and the front sprocket (bolt and plate or circlip). **K-Light 125 front (drive) sprocket bolt: 10 to 16 N·m.**
+   - The front sprocket is held by one of three retainers: a big nut with a tab lock washer (bend the tab back first; the recessed side of the nut faces the sprocket), a plate that twists into a groove and is bolted to the sprocket, or a large E-clip. Loosen the nut or bolts while the old chain is still fitted and the rear brake is held on, so the sprocket cannot turn. See [Front sprocket retainer](/moto-zero/repair/parts/sprocket_retainer).
 2. Remove the rear wheel. On a chain with no joining link, the swingarm must come out to fit it; the K-Light manual removes the swingarm.
 3. Remove the rear sprocket nuts in a criss-cross order, then the circlip, washer and sprocket from the hub carrier.
 4. While apart, check the cush drive rubbers ([Check the cush drive rubbers](/moto-zero/repair/repairs/cush-drive-check)), the chain slider and the wheel bearings.
@@ -64,6 +65,7 @@ The chain, front sprocket and rear sprocket wear together and are replaced as a 
 
 ## What to ask for
 - Chain and both sprockets replaced together, with the same sizes and tooth counts.
+- If you want different gearing, decide it before buying: [Choose sprocket sizes to change the gearing](/moto-zero/repair/repairs/sprocket-gearing-change).
 - Old parts back, so you can see the wear.
 - The joining link fitted with the proper tool, and the axle torque value used.
 

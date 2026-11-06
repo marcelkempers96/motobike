@@ -29,6 +29,7 @@ With care, for a short way. A fuel-injected bike will stop when the battery volt
 - Are the battery terminals and the main earth tight?
 - Look at the regulator connector and the stator connector: any brown, melted or green pins?
 - Any warning light for battery or charging on the dashboard?
+- Older small bike with one starter-generator (dynamo) unit on the crankshaft, and no separate starter? Go to [Starter-generator bike will not start on the button or will not charge](/moto-zero/repair/problems/starter-generator-fault).
 
 ## Diagnose it step by step
 

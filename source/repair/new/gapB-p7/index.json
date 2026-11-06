@@ -1,0 +1,547 @@
+{
+ "repairs": [
+  {
+   "id": "battery-charge-state-read",
+   "title": "Read a battery's state of charge from a chart",
+   "level": "home",
+   "time": "1 hour 15 min (mostly waiting for the battery to rest)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "digital multimeter",
+    "small battery hydrometer for flooded batteries",
+    "state-of-charge chart from the battery maker",
+    "gloves",
+    "eye protection"
+   ],
+   "parts": [
+    "battery",
+    "battery_charger"
+   ],
+   "consumables": [
+    "distilled water (flooded batteries only)"
+   ],
+   "fixes": [
+    "battery-flat",
+    "new-battery-dies",
+    "slow-cranking",
+    "no-start-after-storage",
+    "battery-volts-ok-fails-load"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/batteries.htm"
+    },
+    {
+     "doc": "K-Light 125 manual",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "bearing-number-identify",
+   "title": "Identify a ball bearing by its number and size",
+   "level": "home",
+   "time": "10 to 20 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "vernier caliper",
+    "magnifier",
+    "torch",
+    "clean rag",
+    "solvent"
+   ],
+   "parts": [
+    "wheel_bearing",
+    "engine_bearings",
+    "steering_bearings"
+   ],
+   "consumables": [
+    "parts cleaner"
+   ],
+   "fixes": [
+    "wheel-bearing-noise",
+    "wheel-bearing-play",
+    "bearing-rumble",
+    "parts-not-available"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/roller_bearings.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/wheelbearing.htm"
+    }
+   ]
+  },
+  {
+   "id": "cam-chain-replace",
+   "title": "Replace a cam chain (assessment and hand-off)",
+   "level": "workshop",
+   "time": "2 to 6 h in a workshop, more if the crankcase must be split (estimate)",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "shop manual",
+    "spanners and sockets",
+    "torque wrench",
+    "chain breaker and riveting tool for cam chain",
+    "paint pen",
+    "camera"
+   ],
+   "parts": [
+    "cam_chain",
+    "cam_tensioner",
+    "camshaft",
+    "gaskets"
+   ],
+   "consumables": [
+    "new gaskets and O-rings",
+    "engine oil",
+    "wire to tie the chain"
+   ],
+   "fixes": [
+    "cam-chain-rattle",
+    "rebuilt-engine-hard-start",
+    "metal-in-oil"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/camchain.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/camchain_adjust.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve_timing.htm"
+    }
+   ]
+  },
+  {
+   "id": "engine-hold-still",
+   "title": "Hold the engine still to undo a crankshaft, flywheel or clutch nut",
+   "level": "home",
+   "time": "10 to 15 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "tools": [
+    "flywheel holding tool or strap wrench",
+    "long breaker bar",
+    "socket for the nut",
+    "soft cotton rope",
+    "torque wrench",
+    "shop manual"
+   ],
+   "parts": [
+    "flywheel",
+    "clutch_basket",
+    "primary_drive",
+    "fasteners"
+   ],
+   "consumables": [],
+   "fixes": [
+    "stator-burnt",
+    "clutch-slip",
+    "clutch-drag"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/leakdown.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    }
+   ]
+  },
+  {
+   "id": "sprocket-gearing-change",
+   "title": "Choose sprocket sizes to change the gearing",
+   "level": "home",
+   "time": "30 min to plan; fitting as for a chain and sprocket change",
+   "applies_to": [
+    "chain"
+   ],
+   "tools": [
+    "notebook or calculator",
+    "steel rule",
+    "spanners and sockets",
+    "chain breaker and riveter if the chain length changes"
+   ],
+   "parts": [
+    "front_sprocket",
+    "rear_sprocket",
+    "chain",
+    "chain_master_link",
+    "sprocket_retainer"
+   ],
+   "consumables": [
+    "chain lube"
+   ],
+   "fixes": [
+    "poor-hill-climbing",
+    "low-top-speed",
+    "chain-adjuster-at-end"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    },
+    {
+     "doc": "K-Light 125 manual",
+     "page": 158
+    }
+   ]
+  },
+  {
+   "id": "starter-generator-test",
+   "title": "Test a starter-generator (dynamo) on an older small bike",
+   "level": "workshop",
+   "time": "1 to 2 h (estimate)",
+   "applies_to": [
+    "electric-start",
+    "two-stroke",
+    "four-stroke"
+   ],
+   "tools": [
+    "multimeter (volts and ohms)",
+    "test light",
+    "jumper wire with clips",
+    "fine abrasive paper",
+    "hacksaw blade for undercutting",
+    "shop manual with wiring diagram"
+   ],
+   "parts": [
+    "starter_generator",
+    "starter_brushes",
+    "regulator",
+    "battery",
+    "wiring"
+   ],
+   "consumables": [
+    "contact cleaner"
+   ],
+   "fixes": [
+    "starter-generator-fault",
+    "not-charging",
+    "starter-silent",
+    "slow-cranking",
+    "overcharging"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/genstarter.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electricaltesting.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ]
+  },
+  {
+   "id": "tdc-find",
+   "title": "Find top dead centre on the compression stroke",
+   "level": "home",
+   "time": "10 to 20 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "spanner or socket for the crankshaft nut",
+    "plug spanner",
+    "torch",
+    "thin plastic rod or drinking straw",
+    "shop manual"
+   ],
+   "parts": [
+    "flywheel",
+    "spark_plug",
+    "valves"
+   ],
+   "consumables": [],
+   "fixes": [
+    "tappet-tick",
+    "ignition-timing-suspect",
+    "rebuilt-engine-hard-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valveclearence.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/valve_timing.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "starter-generator-fault",
+   "title": "Starter-generator bike will not start on the button or will not charge",
+   "system": "charging",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "dynamo not charging",
+    "starter dynamo dead",
+    "dynastart fault",
+    "generator starter problem"
+   ],
+   "applies_to": [
+    "electric-start",
+    "two-stroke",
+    "four-stroke"
+   ],
+   "parts": [
+    "battery",
+    "starter_brushes",
+    "starter_generator",
+    "regulator",
+    "wiring",
+    "earth_strap"
+   ],
+   "repairs": [
+    "battery-test-charge",
+    "earth-clean",
+    "starter-generator-test",
+    "voltage-drop-test"
+   ],
+   "related": [
+    "not-charging",
+    "starter-silent",
+    "slow-cranking",
+    "overcharging",
+    "battery-flat"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/genstarter.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "battery_charger",
+   "name": "12 V battery charger",
+   "category": "electrical",
+   "aliases": [
+    "battery charger",
+    "trickle charger",
+    "maintenance charger",
+    "smart charger",
+    "float charger",
+    "battery tender type charger"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "battery-test-charge",
+    "battery-charge-state-read",
+    "bike-storage-prepare",
+    "battery-hydrometer-test"
+   ],
+   "problems": [
+    "battery-flat",
+    "no-start-after-storage",
+    "battery-swollen",
+    "new-battery-dies"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/batteries.htm"
+    },
+    {
+     "doc": "K-Light 125 manual",
+     "page": 59
+    },
+    {
+     "doc": "K-Light 125 manual",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "chain_adjusters",
+   "name": "Chain adjusters and alignment marks",
+   "category": "transmission",
+   "aliases": [
+    "chain tensioner bolts",
+    "axle adjusters",
+    "snail cam adjusters",
+    "chain pullers",
+    "swingarm adjuster blocks"
+   ],
+   "applies_to": [
+    "chain"
+   ],
+   "repairs": [
+    "chain-adjust",
+    "chain-sprocket-replace",
+    "wheel-remove-rear",
+    "sprocket-gearing-change"
+   ],
+   "problems": [
+    "chain-adjuster-at-end",
+    "pulls-to-side",
+    "chain-rubbing",
+    "sprocket-worn"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rearchain.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/rear_wheels.htm"
+    }
+   ]
+  },
+  {
+   "id": "coolant_hose",
+   "name": "Coolant hoses and clips",
+   "category": "cooling",
+   "aliases": [
+    "radiator hose",
+    "water hose",
+    "cooling hose",
+    "hose clamp",
+    "hose clip",
+    "overflow hose"
+   ],
+   "applies_to": [
+    "liquid-cooled"
+   ],
+   "repairs": [
+    "coolant-replace",
+    "coolant-check",
+    "cooling-leak-test",
+    "thermostat-check"
+   ],
+   "problems": [
+    "coolant-leak",
+    "overheating-liquid",
+    "temp-gauge-high"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/watercooling.htm"
+    }
+   ]
+  },
+  {
+   "id": "rim_tape",
+   "name": "Rim tape (rim strip) and rim lock",
+   "category": "wheels",
+   "aliases": [
+    "rim strip",
+    "rim band",
+    "rim rubber",
+    "spoke nipple cover",
+    "rim lock",
+    "tyre security bolt"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "tyre-replace",
+    "tube-puncture-repair",
+    "tyre-bead-seat",
+    "spoke-replace"
+   ],
+   "problems": [
+    "puncture-tube",
+    "new-tube-flat-after-fit",
+    "slow-puncture"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tires1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/spokewheels.htm"
+    }
+   ]
+  },
+  {
+   "id": "starter_generator",
+   "name": "Starter-generator (dynamo)",
+   "category": "electrical",
+   "aliases": [
+    "starter dynamo",
+    "dynastart",
+    "dynamo",
+    "generator starter",
+    "starter/generator"
+   ],
+   "applies_to": [
+    "electric-start",
+    "two-stroke",
+    "four-stroke"
+   ],
+   "repairs": [
+    "starter-generator-test",
+    "battery-test-charge",
+    "starter-armature-test"
+   ],
+   "problems": [
+    "starter-generator-fault",
+    "not-charging",
+    "starter-silent",
+    "slow-cranking"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/genstarter.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/electric_starters.htm"
+    }
+   ]
+  }
+ ]
+}

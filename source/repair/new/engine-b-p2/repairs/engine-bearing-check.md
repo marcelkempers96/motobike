@@ -37,6 +37,7 @@ Bearings let shafts turn with very little friction. They are found on the cranks
 6. Check the housing and shaft for scoring where the bearing sat.
 7. If a bearing must be removed again, always push on the inner race to take it off a shaft. If you must pull on the outer race, replace the bearing.
 8. Fit new bearings of the same size and type. A tight fit may need heat on the case and cold on the bearing, or the reverse for a shaft. Follow the manual's method and keep within its temperature limit.
+9. To buy the same bearing from a bearing supplier, read the number and the seal letters on the old one, or measure it: [Identify a ball bearing by its number and size](/moto-zero/repair/repairs/bearing-number-identify).
 
 ## Warning signs
 - A shaft that suddenly locks, then frees when turned back and forth, may have a failed bearing with missing balls. Do not start the engine again.

@@ -72,6 +72,9 @@ Each wheel turns on two ball bearings pressed into the hub. A worn bearing lets 
 
 ## Check your work
 - You know whether the play or noise comes from the bearing, the axle, the brake, the chain, the swingarm or the steering head.
+- Hub very hot after a ride while the brake is not dragging: the bearing grease has failed and the bearings are damaged. Replace them.
+- Axle blue or straw coloured, as if heated with a torch, when you take it out: the bearings have run hot. Replace both bearings and the axle.
+- Buying new bearings: read the number on the old one with [Identify a ball bearing by its number and size](/moto-zero/repair/repairs/bearing-number-identify).
 
 ## If it did not fix the problem
 - Rough or loose bearing: [Replace wheel bearings](/moto-zero/repair/repairs/wheel-bearing-replace). Replace both bearings in the hub.

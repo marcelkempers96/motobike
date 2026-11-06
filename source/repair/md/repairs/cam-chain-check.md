@@ -60,6 +60,7 @@ This page is only for overhead cam (OHC) engines, where a chain runs from the cr
 ## If it did not fix the problem
 - Noise is lower in the engine: [Deep knocking from the bottom of the engine](/moto-zero/repair/problems/deep-knock).
 - Noise only when cold: [Knocking from the cylinder when cold that fades when warm](/moto-zero/repair/problems/piston-slap).
+- Tensioner at the end of its travel, or noise stays after adjustment: the chain is worn out. See [Replace a cam chain (assessment and hand-off)](/moto-zero/repair/repairs/cam-chain-replace).
 
 ## Problems this repair helps with
 

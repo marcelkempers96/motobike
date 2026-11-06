@@ -1,0 +1,598 @@
+{
+ "repairs": [
+  {
+   "id": "carb-sync-twin",
+   "title": "Synchronise twin carburettors",
+   "level": "workshop",
+   "time": "1 to 2 hours (estimate)",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdrivers",
+    "spanners for cable adjusters and locknuts",
+    "torch",
+    "vacuum gauge set if the manual calls for one",
+    "plug spanner"
+   ],
+   "parts": [
+    "carb",
+    "throttle_cable",
+    "carb_slide",
+    "idle_mixture_screw",
+    "cable_adjuster",
+    "intake_manifold"
+   ],
+   "consumables": [],
+   "fixes": [
+    "twin-carbs-out-of-sync",
+    "rough-idle",
+    "hunting-idle",
+    "new-vibration",
+    "high-fuel-use"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ]
+  },
+  {
+   "id": "carb-tune-order",
+   "title": "Tune a slide carburettor in the right order",
+   "level": "home",
+   "time": "1 to 3 hours (estimate)",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdrivers",
+    "spanners for the jet holder",
+    "masking tape and pen",
+    "new spark plug of the correct type"
+   ],
+   "parts": [
+    "carb",
+    "carb_jets",
+    "jet_needle",
+    "carb_slide",
+    "idle_mixture_screw",
+    "spark_plug"
+   ],
+   "consumables": [
+    "carburettor gaskets or float bowl seal"
+   ],
+   "fixes": [
+    "runs-rich",
+    "runs-lean",
+    "flat-spot",
+    "hesitation",
+    "bogs-full-throttle",
+    "jetting-after-modification",
+    "carb-spitback",
+    "altitude-runs-rich"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb10.htm"
+    }
+   ]
+  },
+  {
+   "id": "drive-belt-check",
+   "title": "Check a toothed final drive belt",
+   "level": "rider",
+   "time": "15 to 20 min (estimate)",
+   "applies_to": [
+    "electric",
+    "four-stroke"
+   ],
+   "tools": [
+    "torch",
+    "belt tension gauge or the tool in the manual",
+    "mirror",
+    "soft brush"
+   ],
+   "parts": [
+    "drive_belt",
+    "rear_sprocket",
+    "front_sprocket",
+    "rear_wheel",
+    "axle"
+   ],
+   "consumables": [
+    "water and mild soap"
+   ],
+   "fixes": [
+    "chain-noise",
+    "revs-without-speed",
+    "rear-clunk",
+    "speed-vibration",
+    "ev-motor-noise"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/glossary/photos/beltdrive.htm"
+    }
+   ]
+  },
+  {
+   "id": "impact-wrench-use",
+   "title": "Use an air or cordless impact wrench safely",
+   "level": "home",
+   "time": "5 to 15 min per job (estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "impact wrench (air or battery)",
+    "impact sockets",
+    "eye protection",
+    "ear protection",
+    "torque wrench"
+   ],
+   "parts": [
+    "impact_sockets",
+    "fasteners"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/impactwenches.html"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/magneto1.htm"
+    }
+   ]
+  },
+  {
+   "id": "jetting-altitude-temperature",
+   "title": "Adjust carburettor jetting for altitude and air temperature",
+   "level": "home",
+   "time": "30 to 60 min (estimate)",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdrivers",
+    "spanner for the jet holder",
+    "jet chart or tuning slide rule for your carburettor make",
+    "new spark plug of the correct type"
+   ],
+   "parts": [
+    "carb_jets",
+    "jet_needle",
+    "carb",
+    "spark_plug"
+   ],
+   "consumables": [
+    "float bowl gasket if it tears"
+   ],
+   "fixes": [
+    "altitude-runs-rich",
+    "runs-rich",
+    "runs-lean",
+    "black-smoke",
+    "plug-black-sooty",
+    "high-fuel-use",
+    "low-power"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ]
+  },
+  {
+   "id": "stripped-thread-repair",
+   "title": "Repair a stripped thread in a bolt hole",
+   "level": "workshop",
+   "time": "30 to 90 min (estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "thread pitch gauge",
+    "correct tap and tap wrench",
+    "thread insert kit with its drill",
+    "inserting tool and tang breaker",
+    "drill",
+    "torch",
+    "magnet or vacuum",
+    "compressed air or brush"
+   ],
+   "parts": [
+    "thread_insert",
+    "fasteners",
+    "crankcase",
+    "cylinder_head"
+   ],
+   "consumables": [
+    "cutting oil",
+    "degreaser",
+    "thread locker if the manual calls for it"
+   ],
+   "fixes": [
+    "bolt-hole-stripped",
+    "oil-drain-thread-stripped",
+    "oil-leak-cover",
+    "bolts-keep-loosening"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tools2.htm"
+    }
+   ]
+  },
+  {
+   "id": "thread-standard-identify",
+   "title": "Identify a thread standard and pitch",
+   "level": "home",
+   "time": "5 to 15 min (estimate)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "thread pitch gauges (metric and inch)",
+    "vernier caliper",
+    "good light",
+    "magnifier"
+   ],
+   "parts": [
+    "fasteners",
+    "thread_insert"
+   ],
+   "consumables": [],
+   "fixes": [
+    "bolt-hole-stripped",
+    "bolts-keep-loosening"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "altitude-runs-rich",
+   "title": "Bike runs badly after moving to a higher or lower place",
+   "system": "fuel",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "runs rich in the mountains",
+    "black smoke at altitude",
+    "weak at the coast",
+    "jetting wrong after a move"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "carb_jets",
+    "jet_needle",
+    "air_filter",
+    "spark_plug",
+    "carb"
+   ],
+   "repairs": [
+    "spark-plug-reading",
+    "air-filter-service",
+    "jetting-altitude-temperature",
+    "carb-tune-order",
+    "idle-screw-set"
+   ],
+   "related": [
+    "runs-rich",
+    "runs-lean",
+    "black-smoke",
+    "plug-black-sooty",
+    "low-power",
+    "high-fuel-use",
+    "jetting-after-modification"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ]
+  },
+  {
+   "id": "bolt-hole-stripped",
+   "title": "A bolt hole thread is stripped",
+   "system": "body",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "stripped thread",
+    "bolt will not tighten",
+    "screw spins in the hole",
+    "thread pulled out",
+    "crankcase screw stripped"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "fasteners",
+    "thread_insert",
+    "crankcase",
+    "cylinder_head"
+   ],
+   "repairs": [
+    "thread-standard-identify",
+    "fastener-types-identify",
+    "stripped-thread-repair",
+    "torque-wrench-use"
+   ],
+   "related": [
+    "oil-drain-thread-stripped",
+    "bolts-keep-loosening",
+    "fastener-stuck-rounded",
+    "oil-leak-cover"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/impactwenches.html"
+    }
+   ]
+  },
+  {
+   "id": "carb-spitback",
+   "title": "Engine spits back through the carburettor",
+   "system": "fuel",
+   "urgency": "ride-with-care",
+   "also_called": [
+    "spitting back",
+    "coughs through the carb",
+    "pops through the intake",
+    "fuel mist from the air box"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "carb",
+    "carb_jets",
+    "intake_manifold",
+    "carb_slide",
+    "reed_valve",
+    "valves"
+   ],
+   "repairs": [
+    "intake-leak-test",
+    "carb-jet-clear",
+    "carb-tune-order",
+    "idle-screw-set",
+    "reed-valve-check",
+    "valve-clearance",
+    "ignition-timing-check"
+   ],
+   "related": [
+    "runs-lean",
+    "hesitation",
+    "flat-spot",
+    "backfire-on-start",
+    "reed-valve-fault",
+    "exhaust-popping"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb10.htm"
+    }
+   ]
+  },
+  {
+   "id": "twin-carbs-out-of-sync",
+   "title": "Twin-cylinder bike idles rough and vibrates (carburettors out of balance)",
+   "system": "fuel",
+   "urgency": "ok-to-ride",
+   "also_called": [
+    "carbs out of sync",
+    "carburettors not balanced",
+    "one cylinder working harder",
+    "uneven twin"
+   ],
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "carb",
+    "throttle_cable",
+    "cable_adjuster",
+    "intake_manifold",
+    "spark_plug",
+    "plug_cap"
+   ],
+   "repairs": [
+    "spark-plug-reading",
+    "throttle-cable-service",
+    "intake-leak-test",
+    "carb-sync-twin",
+    "spark-test",
+    "compression-test"
+   ],
+   "related": [
+    "rough-idle",
+    "hunting-idle",
+    "new-vibration",
+    "high-fuel-use",
+    "misfire-under-load"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "cable_adjuster",
+   "name": "Cable adjuster",
+   "category": "chassis",
+   "aliases": [
+    "barrel adjuster",
+    "cable adjusting screw",
+    "adjuster and locknut",
+    "cable adjuster nut"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/glossary/photos/cableadjuster.htm"
+    }
+   ],
+   "repairs": [
+    "clutch-cable-adjust",
+    "throttle-cable-adjust",
+    "choke-cable-adjust",
+    "drum-brake-adjust",
+    "two-stroke-pump-cable-set",
+    "carb-sync-twin"
+   ],
+   "problems": [
+    "throttle-free-play",
+    "cable-frayed",
+    "clutch-slip",
+    "clutch-drag",
+    "twin-carbs-out-of-sync"
+   ]
+  },
+  {
+   "id": "drive_belt",
+   "name": "Final drive belt",
+   "category": "drivetrain",
+   "aliases": [
+    "belt drive",
+    "toothed belt",
+    "rear drive belt",
+    "timing belt drive"
+   ],
+   "applies_to": [
+    "electric",
+    "four-stroke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://www.dansmc.com/glossary/photos/beltdrive.htm"
+    }
+   ],
+   "repairs": [
+    "drive-belt-check",
+    "service-schedule"
+   ],
+   "problems": [
+    "chain-noise",
+    "revs-without-speed",
+    "rear-clunk"
+   ]
+  },
+  {
+   "id": "impact_sockets",
+   "name": "Impact sockets",
+   "category": "engine",
+   "aliases": [
+    "impact socket set",
+    "black sockets",
+    "air gun sockets"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/impactwenches.html"
+    }
+   ],
+   "repairs": [
+    "impact-wrench-use",
+    "stuck-fastener-removal",
+    "flywheel-remove"
+   ],
+   "problems": [
+    "fastener-stuck-rounded"
+   ]
+  },
+  {
+   "id": "thread_insert",
+   "name": "Thread repair inserts",
+   "category": "engine",
+   "aliases": [
+    "thread insert",
+    "helicoil",
+    "wire thread insert",
+    "thread repair kit",
+    "solid thread insert"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    }
+   ],
+   "repairs": [
+    "stripped-thread-repair",
+    "thread-standard-identify",
+    "drain-bolt-tighten"
+   ],
+   "problems": [
+    "bolt-hole-stripped",
+    "oil-drain-thread-stripped"
+   ]
+  }
+ ]
+}

@@ -25,6 +25,7 @@ The flywheel (also called the rotor) carries magnets and sits on a tapered end o
 ## You need
 - A puller made for your engine. The thread in the flywheel centre differs between models.
 - A holding tool or strap to stop the flywheel turning while the nut is loosened and tightened.
+- No holding tool? Other safe ways to lock the engine (top gear with the rear brake on, or the soft rope method) are in [Hold the engine still to undo a crankshaft, flywheel or clutch nut](/moto-zero/repair/repairs/engine-hold-still). Never wedge a screwdriver through the flywheel.
 - The torque value for the nut.
 
 ## Steps

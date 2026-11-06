@@ -11,6 +11,7 @@ fixes: []
 photos: [{file: "source/dansmc/01_Basics_Tools_Manuals/016/016_sockets.jpg", caption: "Sockets in different sizes"}, {file: "source/dansmc/01_Basics_Tools_Manuals/016/016_12_point_has_weaker_grip.jpg", caption: "12-point and 6-point sockets compared"}, {file: "source/dansmc/01_Basics_Tools_Manuals/016/016_socket_drives.jpg", caption: "Socket drive sizes"}]
 sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tools.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/impactwenches.html"}
 ---
 
 # Choose and use spanners and sockets without rounding fasteners
@@ -36,6 +37,10 @@ Most damaged bolts and nuts are damaged by the wrong tool or the wrong way of pu
 6. Pull with a steady force. Do not jerk. For a very tight fastener, use a longer handle or an impact driver instead of a hammer on the spanner.
 7. If only an odd or damaged fastener has no fitting tool, use an adjustable spanner with the jaw closed tight on the flats and pulled so the fixed jaw takes the load.
 8. If the head starts to round, stop. Go to [Remove a rounded, seized or broken fastener](/moto-zero/repair/repairs/stuck-fastener-removal).
+
+## Power tools
+- On an air or cordless impact wrench, use only impact sockets. Chrome hand sockets can split: [Use an air or cordless impact wrench safely](/moto-zero/repair/repairs/impact-wrench-use).
+- Never do the final tightening with a power tool. Use a hand tool and a torque wrench.
 
 ## Check your work
 - The fastener head still has sharp corners or a clean recess.

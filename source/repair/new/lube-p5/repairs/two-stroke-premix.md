@@ -39,6 +39,11 @@ Oil per litre of petrol, in millilitres, is 1000 divided by the ratio. For examp
 
 A measuring cup with ratio marks makes this easy.
 
+## Reading a pre-mix chart
+- A chart has the ratio down one side and the amount of petrol across the top. Find your ratio row, follow it to the column for your amount of petrol, and read the oil.
+- Some charts give a percentage instead of a ratio. Percent is 100 divided by the ratio: 2 % is 50 to 1, 4 % is 25 to 1, 5 % is 20 to 1.
+- Check the units. Charts from the United States use ounces and US gallons; metric charts use millilitres and litres. Do not mix them.
+
 ## Steps
 1. Pour the right amount of oil into a clean fuel can.
 2. Add the petrol and shake the can to mix.

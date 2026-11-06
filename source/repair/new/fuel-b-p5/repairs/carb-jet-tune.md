@@ -11,6 +11,7 @@ fixes: ["runs-lean", "runs-rich", "flat-spot", "hesitation", "surging-cruise", "
 sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb9.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs2.htm"}
 photos: [{file: "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_tuning.jpg", caption: "Carburettor with the throttle range of each jet marked"}, {file: "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1.jpg", caption: "Chart of the throttle range each jet controls"}, {file: "source/dansmc/04_Fuel_Carburetors/075/075_roaring_down_road_120_mph_trying.jpg", caption: "Tape marks on the grip and housing show throttle position"}, {file: "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_2.jpg", caption: "Slide cutaway at idle"}, {file: "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg", caption: "Slide cutaway at three quarter throttle"}, {file: "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg", caption: "Slide cutaway at full throttle"}]
 ---
 
@@ -46,6 +47,12 @@ A carburettor that runs badly is running too rich or too lean. Each part of the 
 - Wear changes the mixture. As compression falls, suction in the carburettor falls and the engine may run lean. A big bore kit can do the reverse.
 - A fuel level a little higher in the bowl gives a very small richening, and lower a very small leaning. Stay inside the range in the manual.
 - Air jets can be screwed in, pressed in, or missing on some carburettors. Do not remove a pressed-in jet.
+
+## Tuning order and the choke test
+- Tune in this order: main jet at full throttle, then pilot at idle, then slide cutaway, then needle, then idle again. Each part affects the next. See [Tune a slide carburettor in the right order](/moto-zero/repair/repairs/carb-tune-order).
+- To tell rich from weak at the throttle position of the fault, close the choke a little. Better running means weak; worse running means rich.
+- Spitting back through the carburettor is a weak sign: [Engine spits back through the carburettor](/moto-zero/repair/problems/carb-spitback).
+- Altitude and air temperature change the mixture with no change to the jets: [Adjust jetting for altitude and air temperature](/moto-zero/repair/repairs/jetting-altitude-temperature).
 
 ## Check your work
 - Smooth running at every throttle position and a plug colour that reads normal.

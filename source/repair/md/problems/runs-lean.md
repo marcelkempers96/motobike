@@ -17,6 +17,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 264}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carbs2.htm"}
 ---
 
 # Engine runs hot and lean, pops and pinks
@@ -75,3 +76,5 @@ With care, gently and for short distances only. Avoid full throttle and long cli
 | Low fuel pressure or blocked injector | Workshop pressure test | [Injector check](/moto-zero/repair/repairs/injector-check) |
 | Worn engine, jets too small | Compression has fallen, so carburettor suction is lower; plug reads lean | [Read a plug and choose the jet](/moto-zero/repair/repairs/carb-jet-tune) |
 | Changed or cracked airbox, hard air tube, filter left off | Ran better with the original parts | [Check the mixture after an airbox change](/moto-zero/repair/repairs/airbox-change-check), [Replace the air tube](/moto-zero/repair/repairs/air-tube-replace) |
+| Riding much lower, or in much colder air, than where the bike was jetted | Plug pale and engine hot only since the move | [Jetting for altitude and temperature](/moto-zero/repair/repairs/jetting-altitude-temperature) |
+| Spitting back through the carburettor when opening the throttle | Better with the choke partly on | [Engine spits back through the carburettor](/moto-zero/repair/problems/carb-spitback) |

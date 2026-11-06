@@ -76,6 +76,9 @@ Valve clearance (tappet gap) is a small gap between the rocker and the valve ste
 ## If it did not fix the problem
 - Gap closes up again soon: the valve may be sinking into its seat. See [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment).
 - Noise remains: [Ticking noise from the top of the engine](/moto-zero/repair/problems/tappet-tick).
+- No timing marks, or unsure which stroke you are on: [Find top dead centre on the compression stroke](/moto-zero/repair/repairs/tdc-find).
+- One rocker working two valves with two adjusters: set both together with two feeler gauges, one under each screw, until both have the same light drag. This is more accurate than setting one and then the other.
+- Eccentric shaft adjusters (some older engines): the rocker shaft is turned with a screwdriver to set the gap, then locked. Set it at TDC compression with a feeler gauge, as the manual describes.
 - On a fuel-injected engine the K-Light manual links idle problems to clearance: exhaust clearance too large can raise idle, too small can drop it.
 
 ## Reference values (K-Light 125)
