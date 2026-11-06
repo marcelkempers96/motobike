@@ -1,0 +1,84 @@
+suzuki-gn125	Suzuki GN125	commuter
+suzuki-gn250	Suzuki GN250	commuter
+suzuki-en125	Suzuki EN125	commuter
+suzuki-gs125	Suzuki GS125	commuter
+suzuki-gs150	Suzuki GS150	commuter
+suzuki-gsx150-bandit	Suzuki GSX150 Bandit	commuter
+suzuki-gixxer-150	Suzuki Gixxer 150	commuter
+suzuki-gixxer-250	Suzuki Gixxer 250	commuter
+suzuki-sv650	Suzuki SV650	street
+suzuki-sv1000	Suzuki SV1000	street
+suzuki-sfv650	Suzuki SFV650	street
+suzuki-gsr600	Suzuki GSR600	street
+suzuki-gsr750	Suzuki GSR750	street
+suzuki-gsx-s125	Suzuki GSX-S125	street
+suzuki-gsx-s750	Suzuki GSX-S750	street
+suzuki-gsx-s1000	Suzuki GSX-S1000	street
+suzuki-gsx-8s	Suzuki GSX-8S	street
+suzuki-gsf600	Suzuki GSF600	street
+suzuki-gsx-r125	Suzuki GSX-R125	sport
+suzuki-gsx-r150	Suzuki GSX-R150	sport
+suzuki-gsx-r250	Suzuki GSX-R250	sport
+suzuki-gsx-r600	Suzuki GSX-R600	sport
+suzuki-gsx-r750	Suzuki GSX-R750	sport
+suzuki-gsx-r1000	Suzuki GSX-R1000	sport
+suzuki-gsx1300r	Suzuki GSX1300R	sport
+suzuki-dl250	Suzuki DL250	adventure
+suzuki-dl650	Suzuki DL650	adventure
+suzuki-dl1000	Suzuki DL1000	adventure
+suzuki-dl1050	Suzuki DL1050	adventure
+suzuki-v-strom-800de	Suzuki V-Strom 800DE	adventure
+suzuki-dr125	Suzuki DR125	adventure
+suzuki-dr200	Suzuki DR200	adventure
+suzuki-vl800	Suzuki VL800	cruiser
+suzuki-vl1500	Suzuki VL1500	cruiser
+suzuki-vzr1800	Suzuki VZR1800	cruiser
+suzuki-access-125	Suzuki Access 125	scooter
+suzuki-burgman-street-ex	Suzuki Burgman Street EX	scooter
+suzuki-an400	Suzuki AN400	scooter
+suzuki-an650	Suzuki AN650	scooter
+suzuki-raider-r150	Suzuki Raider R150	underbone
+tvs-hlx-100	TVS HLX 100	commuter
+tvs-star-hlx-125	TVS Star HLX 125	commuter
+tvs-hlx-125-5g	TVS HLX 125 5G	commuter
+tvs-hlx-150-5-gear	TVS HLX 150 5 Gear	commuter
+tvs-hlx-150x-5-gear	TVS HLX 150X 5 Gear	commuter
+tvs-zt-125	TVS ZT 125	commuter
+tvs-sport	TVS Sport	commuter
+tvs-raider-125	TVS Raider 125	commuter
+tvs-radeon	TVS Radeon	commuter
+tvs-apache-rtr-160	TVS Apache RTR 160	street
+tvs-apache-rtr-160-4v	TVS Apache RTR 160 4V	street
+tvs-apache-rtr-180	TVS Apache RTR 180	street
+tvs-apache-rtr-200-4v	TVS Apache RTR 200 4V	street
+tvs-apache-rtr-310	TVS Apache RTR 310	street
+tvs-apache-rr310	TVS Apache RR310	sport
+tvs-jupiter-110	TVS Jupiter 110	scooter
+tvs-jupiter-125	TVS Jupiter 125	scooter
+tvs-ntorq-125	TVS NTorq 125	scooter
+tvs-scooty-pep-plus	TVS Scooty Pep Plus	scooter
+tvs-iqube	TVS iQube	electric
+husqvarna-svartpilen-125	Husqvarna Svartpilen 125	street
+husqvarna-svartpilen-401	Husqvarna Svartpilen 401	street
+husqvarna-vitpilen-401	Husqvarna Vitpilen 401	street
+husqvarna-701-enduro	Husqvarna 701 Enduro	adventure
+husqvarna-norden-901	Husqvarna Norden 901	adventure
+husqvarna-701-supermoto	Husqvarna 701 Supermoto	supermoto
+husqvarna-fe350	Husqvarna FE350	offroad4
+husqvarna-fe450	Husqvarna FE450	offroad4
+husqvarna-te250	Husqvarna TE250	offroad2
+husqvarna-te300	Husqvarna TE300	offroad2
+vespa-primavera-125	Vespa Primavera 125	scooter
+vespa-primavera-150	Vespa Primavera 150	scooter
+vespa-sprint-125	Vespa Sprint 125	scooter
+vespa-sprint-150	Vespa Sprint 150	scooter
+vespa-gts125	Vespa GTS125	scooter
+vespa-gts300	Vespa GTS300	scooter
+vespa-lx125	Vespa LX125	scooter
+vespa-lx150	Vespa LX150	scooter
+moto-guzzi-v7	Moto Guzzi V7	classic
+moto-guzzi-v9	Moto Guzzi V9	classic
+moto-guzzi-v85tt	Moto Guzzi V85TT	adventure
+moto-guzzi-v100-mandello	Moto Guzzi V100 Mandello	touring
+livewire-one	LiveWire ONE	electric
+livewire-s2-del-mar	LiveWire S2 Del Mar	electric

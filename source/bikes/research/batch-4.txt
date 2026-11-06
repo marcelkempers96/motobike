@@ -1,0 +1,83 @@
+kawasaki-z125	Kawasaki Z125	street
+kawasaki-z250	Kawasaki Z250	street
+kawasaki-z300	Kawasaki Z300	street
+kawasaki-z400	Kawasaki Z400	street
+kawasaki-z500	Kawasaki Z500	street
+kawasaki-z650	Kawasaki Z650	street
+kawasaki-z750	Kawasaki Z750	street
+kawasaki-z800	Kawasaki Z800	street
+kawasaki-z900	Kawasaki Z900	street
+kawasaki-z1000	Kawasaki Z1000	street
+kawasaki-z900rs	Kawasaki Z900RS	street
+kawasaki-er-5	Kawasaki ER-5	street
+kawasaki-ninja-250	Kawasaki Ninja 250	sport
+kawasaki-ninja-300	Kawasaki Ninja 300	sport
+kawasaki-ninja-400	Kawasaki Ninja 400	sport
+kawasaki-ninja-500	Kawasaki Ninja 500	sport
+kawasaki-ninja-650	Kawasaki Ninja 650	sport
+kawasaki-ninja-zx-4r	Kawasaki Ninja ZX-4R	sport
+kawasaki-ninja-zx-6r	Kawasaki Ninja ZX-6R	sport
+kawasaki-ninja-zx-9r	Kawasaki Ninja ZX-9R	sport
+kawasaki-ninja-zx-10r	Kawasaki Ninja ZX-10R	sport
+kawasaki-ninja-h2	Kawasaki Ninja H2	sport
+kawasaki-versys-650	Kawasaki Versys 650	adventure
+kawasaki-versys-1000	Kawasaki Versys 1000	adventure
+kawasaki-versys-x-300	Kawasaki Versys-X 300	adventure
+kawasaki-kle500	Kawasaki KLE500	adventure
+kawasaki-klr650	Kawasaki KLR650	adventure
+kawasaki-klx150	Kawasaki KLX150	adventure
+kawasaki-klx230	Kawasaki KLX230	adventure
+kawasaki-klx250	Kawasaki KLX250	adventure
+kawasaki-vulcan-s	Kawasaki Vulcan S	cruiser
+kawasaki-vn800	Kawasaki VN800	cruiser
+kawasaki-vn900	Kawasaki VN900	cruiser
+kawasaki-vn1500	Kawasaki VN1500	cruiser
+kawasaki-1400gtr	Kawasaki 1400GTR	touring
+triumph-bonneville-t100	Triumph Bonneville T100	classic
+triumph-bonneville-t120	Triumph Bonneville T120	classic
+triumph-street-twin	Triumph Street Twin	classic
+triumph-speed-twin-900	Triumph Speed Twin 900	classic
+triumph-speed-twin-1200	Triumph Speed Twin 1200	classic
+triumph-thruxton-1200	Triumph Thruxton 1200	classic
+triumph-scrambler-900	Triumph Scrambler 900	classic
+triumph-scrambler-1200	Triumph Scrambler 1200	classic
+triumph-street-triple	Triumph Street Triple	street
+triumph-speed-triple	Triumph Speed Triple	street
+triumph-trident-660	Triumph Trident 660	street
+triumph-daytona-675	Triumph Daytona 675	sport
+triumph-daytona-660	Triumph Daytona 660	sport
+triumph-tiger-800	Triumph Tiger 800	adventure
+triumph-tiger-900	Triumph Tiger 900	adventure
+triumph-tiger-1200	Triumph Tiger 1200	adventure
+triumph-tiger-sport-660	Triumph Tiger Sport 660	adventure
+triumph-bonneville-bobber	Triumph Bonneville Bobber	cruiser
+triumph-bonneville-speedmaster	Triumph Bonneville Speedmaster	cruiser
+triumph-rocket-iii	Triumph Rocket III	cruiser
+cfmoto-125nk	CFMoto 125NK	street
+cfmoto-250nk	CFMoto 250NK	street
+cfmoto-300nk	CFMoto 300NK	street
+cfmoto-450nk	CFMoto 450NK	street
+cfmoto-650nk	CFMoto 650NK	street
+cfmoto-800nk	CFMoto 800NK	street
+cfmoto-700cl-x	CFMoto 700CL-X	street
+cfmoto-300sr	CFMoto 300SR	sport
+cfmoto-450sr	CFMoto 450SR	sport
+cfmoto-675sr-r	CFMoto 675SR-R	sport
+cfmoto-450mt	CFMoto 450MT	adventure
+cfmoto-650mt	CFMoto 650MT	adventure
+cfmoto-700mt	CFMoto 700MT	adventure
+cfmoto-800mt	CFMoto 800MT	adventure
+cfmoto-450cl-c	CFMoto 450CL-C	cruiser
+haojue-dk150s	Haojue DK150S	commuter
+haojue-eh150	Haojue EH150	commuter
+haojue-hj150-8	Haojue HJ150-8	commuter
+haojue-dh125	Haojue DH125	commuter
+haojue-tz125-pro	Haojue TZ125 PRO	commuter
+haojue-nk150	Haojue NK150	adventure
+haojue-dr160s	Haojue DR160S	street
+haojue-dl160	Haojue DL160	street
+niu-nqi-gts	NIU NQi GTS	electric
+niu-mqi-gt	NIU MQi GT	electric
+niu-rqi	NIU RQi	electric
+ather-450x	Ather 450X	electric
+ather-rizta	Ather Rizta	electric

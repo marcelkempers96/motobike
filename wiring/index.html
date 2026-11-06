@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261105b">
-  <style>body, .ute-page { background: #EAF2FB; } .ute-top { background: #FFFFFF; } .wb { background: #EAF2FB; } .wb fieldset { background: #FFFFFF; } .mz-footer { background: #FFFFFF; }
+  <link rel="stylesheet" href="../assets/circuit-builder.css?v=20261106">
+  <style>body, .ute-page { background: #EAF2FB; } .ute-top { background: #FFFFFF; } .wb, .cb-sec { background: #EAF2FB; } .wb fieldset { background: #FFFFFF; } .mz-footer { background: #FFFFFF; }
   .mz-wiring { display: block; width: 100%; min-height: 1200px; border: 0; background: transparent; }</style>
 
   <style>
@@ -37,6 +38,8 @@
     .wb-msg { margin: 12px 0 0; padding: 12px 14px; border-left: 4px solid var(--ink); background: #F6F6F6; font-size: 15px; min-height: 48px; }
     .wb-msg.is-warn { border-left-color: var(--warm); background: #FDF0EA; }
     .wb-msg.is-ok { border-left-color: #1E7A4A; background: #EAF5EF; }
+    .wb-chg { margin: 8px 0 0; padding: 9px 14px; border-left: 4px solid var(--warm); background: #FFFFFF; font-size: 14.5px; }
+    .wb-model { margin: 8px 0 0; font-size: 13px; color: var(--mute); }
     .wb-try { margin-top: 12px; border: 1px solid var(--line); padding: 10px 14px; }
     .wb-try summary { font-weight: 700; cursor: pointer; }
     .wb-try li { margin: 6px 0; font-size: 14.5px; }
@@ -60,12 +63,16 @@
     <div class="wb-grid">
       <div class="wb-controls">
         <fieldset><legend>Battery</legend>
-          <label class="wb-row">Battery voltage <b data-o="v">12.6 V</b></label>
+          <label class="wb-row">Battery open-circuit voltage <b data-o="v">12.6 V</b></label>
           <input type="range" data-i="v" min="10.5" max="14.6" step="0.1" value="12.6" aria-label="Battery voltage">
-          <div class="wb-presets"><button type="button" data-v="12.6">Charged, engine off</button><button type="button" data-v="14.2">Engine running</button><button type="button" data-v="11.6">Flat battery</button></div>
+          <div class="wb-presets"><button type="button" data-v="12.6">Charged, engine off</button><button type="button" data-v="14.2">Engine running</button><button type="button" data-v="11.9">Flat battery</button></div>
+          <label class="wb-row">Internal resistance <b data-o="rint">20 mΩ</b></label>
+          <input type="range" data-i="rint" min="5" max="300" step="1" value="20" aria-label="Battery internal resistance">
         </fieldset>
         <fieldset><legend>Loads switched on</legend>
           <div class="wb-loads" id="wb-loads"></div>
+          <label class="wb-row">Extra load of your own <b data-o="xw">0 W</b></label>
+          <input type="range" data-i="xw" min="0" max="150" step="5" value="0" aria-label="Extra load in watts">
         </fieldset>
         <fieldset><legend>Wiring</legend>
           <label class="wb-row">Fuse <select data-i="fuse"><option>5</option><option>10</option><option selected>15</option><option>20</option><option>30</option></select> A</label>
@@ -74,6 +81,8 @@
           <input type="range" data-i="len" min="0.3" max="4" step="0.1" value="1.5" aria-label="Wire length">
           <label class="wb-row">Earth connection <b data-o="earth">Clean</b></label>
           <input type="range" data-i="earth" min="0" max="100" step="1" value="0" aria-label="Earth corrosion">
+          <label class="wb-row">Corroded connector in the feed <b data-o="conn">0 mΩ</b></label>
+          <input type="range" data-i="conn" min="0" max="500" step="5" value="0" aria-label="Connector resistance">
           <label class="wb-row"><input type="checkbox" data-i="sw" checked> Ignition switch ON</label>
         </fieldset>
         <button type="button" class="ute-btn" id="wb-reset">Replace the fuse and reset</button>
@@ -87,8 +96,13 @@
           <div class="stat"><div class="stat-l">Heat in wire and earth</div><div class="stat-v"><span data-s="heat">0</span><small>W</small></div></div>
           <div class="stat"><div class="stat-l">Headlight brightness</div><div class="stat-v"><span data-s="lum">0</span><small>%</small></div></div>
           <div class="stat"><div class="stat-l">Wire load</div><div class="stat-v"><span data-s="amp">0</span><small>% of rating</small></div></div>
+          <div class="stat"><div class="stat-l">Power at the loads</div><div class="stat-v"><span data-s="pl">0</span><small>W</small></div></div>
+          <div class="stat"><div class="stat-l">Battery terminal voltage</div><div class="stat-v"><span data-s="vt">0</span><small>V</small></div></div>
+          <div class="stat"><div class="stat-l">Fuse load</div><div class="stat-v"><span data-s="fl">0</span><small>% of rating</small></div></div>
         </div>
         <p class="wb-msg" id="wb-msg" aria-live="polite"></p>
+        <p class="wb-chg" id="wb-chg" hidden></p>
+        <p class="wb-model">Model: lamps and loads as resistances from their 12 V rating (R = V² / P); feed wire R = ρ L / A with copper ρ = 1.68e-8 Ω m; battery as its open-circuit voltage behind an internal resistance; earth and connector resistances in series. Typical values, simplified for teaching.</p>
         <details class="wb-try"><summary>Things to try</summary><ul>
           <li>Turn on the headlight, then make the earth corroded: watch the voltage at the lamp fall and the light dim, the most common electrical fault on old bikes.</li>
           <li>Add the auxiliary lights and heated grips on a 10 A fuse: the fuse blows. Pick the fuse about 25 % above the normal current.</li>
@@ -99,20 +113,31 @@
     </div>
   </section>
 
+  <section class="cb-sec" id="builder" aria-labelledby="cb-h">
+    <div class="cb-head">
+      <span class="ute-label">Build · Circuit Builder</span>
+      <h2 id="cb-h">Circuit Builder</h2>
+      <p>A breadboard for 12 V circuits. Place parts, wire their terminals, then press Test to connect the battery. The circuit is solved with Ohm's law at every node: current shows as moving dots, each part shows its current and power, fuses blow and LEDs burn out. Use the meters as on a real bike, note readings in the log and work through the challenges. Part values are typical examples.</p>
+    </div>
+    <div id="cb-root"><noscript>The Circuit Builder needs JavaScript.</noscript></div>
+  </section>
+
   <footer data-mz-footer></footer>
 </div>
 <script>
 (function () {
   var f = document.getElementById('mz-wiring');
+  var isBuild = function (h) { return /^#?build(=|$)/.test(h || ''); };
   var tab = (location.hash || '').slice(1);
-  if (tab) f.src = '../assets/interactive/wiring/wiring.html#' + tab;
+  if (tab && !isBuild(tab)) f.src = '../assets/interactive/wiring/wiring.html#' + tab;
+  if (isBuild(tab)) window.addEventListener('load', function () { var b = document.getElementById('builder'); if (b) b.scrollIntoView(); });
   function fit() { try { f.style.height = Math.ceil(f.contentDocument.documentElement.scrollHeight) + 'px'; } catch (e) {} }
   f.addEventListener('load', function () {
     fit();
     try { new ResizeObserver(fit).observe(f.contentDocument.documentElement); } catch (e) { setInterval(fit, 1000); }
     try { f.contentWindow.addEventListener('hashchange', function () { history.replaceState(null, '', '#' + f.contentWindow.location.hash.slice(1)); }); } catch (e) {}
   });
-  window.addEventListener('hashchange', function () { try { f.contentWindow.location.hash = location.hash; } catch (e) {} });
+  window.addEventListener('hashchange', function () { if (isBuild(location.hash)) { var b = document.getElementById('builder'); if (b) b.scrollIntoView({ behavior: 'smooth' }); return; } try { f.contentWindow.location.hash = location.hash; } catch (e) {} });
 })();
 </script>
 
@@ -132,15 +157,16 @@
   function on() { return LOADS.filter(function (l) { return document.querySelector('[data-load="' + l[0] + '"]').checked; }); }
   function calc() {
     var V = val('v'), mm2 = val('mm2'), len = val('len'), earthPct = val('earth');
-    var Rw = 0.0172 * len / mm2;                // feed wire, copper
+    var Rw = 0.0168 * len / mm2;                // feed wire, copper: 1.68e-8 ohm m = 0.0168 ohm mm2/m
     var Re = 0.005 + Math.pow(earthPct / 100, 2) * 1.2; // earth path: clean ~5 mΩ, badly corroded ~1.2 Ω
     var loads = on();
-    var G = loads.reduce(function (a, l) { return a + l[2] / (12 * 12); }, 0); // conductance at 12 V rating
+    var xw = val('xw'), Rint = val('rint') / 1000, Rc = val('conn') / 1000;
+    var G = loads.reduce(function (a, l) { return a + l[2] / (12 * 12); }, 0) + xw / 144; // conductance at 12 V rating
     var Rl = G ? 1 / G : Infinity;
-    var closed = val('sw') && !blown && loads.length;
-    var i = closed ? V / (Rl + Rw + Re) : 0;
+    var closed = val('sw') && !blown && G > 0;
+    var i = closed ? V / (Rl + Rw + Re + Rc + Rint) : 0;
     var vl = i * Rl;
-    return { V: V, i: i, vl: closed ? vl : 0, drop: closed ? (1 - vl / V) * 100 : 0, heat: i * i * (Rw + Re), amp: i / AMPACITY[String(mm2)] * 100, fuse: val('fuse'), loads: loads, earthPct: earthPct, closed: closed, Re: Re };
+    return { V: V, i: i, vl: closed ? vl : 0, drop: closed ? (1 - vl / V) * 100 : 0, heat: i * i * (Rw + Re + Rc), amp: i / AMPACITY[String(mm2)] * 100, fuse: val('fuse'), loads: loads, earthPct: earthPct, closed: closed, Re: Re, pl: closed ? vl * vl / Rl : 0, vt: V - i * Rint, Rc: Rc };
   }
   function draw(r) {
     var svg = $('#wb-svg'), live = r.closed;
@@ -191,29 +217,53 @@
     draw(r);
     setS('i', r.i.toFixed(1)); setS('vl', r.vl.toFixed(2)); setS('drop', r.drop.toFixed(1)); setS('heat', r.heat.toFixed(1));
     setS('lum', head && r.closed ? Math.round(lum * 100) : 0); setS('amp', r.closed ? Math.round(r.amp) : 0);
+    setS('pl', r.pl.toFixed(1)); setS('vt', r.vt.toFixed(2)); setS('fl', Math.round(r.i / r.fuse * 100));
     var msg = $('#wb-msg'), m = '', cls = 'is-ok';
     if (blown) { m = 'The fuse has blown: the current went above ' + r.fuse + ' A. Find the cause before fitting a new fuse, then use "Replace the fuse".'; cls = 'is-warn'; }
     else if (!val('sw')) { m = 'Ignition switch off: no current flows.'; cls = ''; }
     else if (!r.loads.length) { m = 'Switch on a load to complete the circuit.'; cls = ''; }
     else if (r.amp > 100) { m = 'The wire is carrying more current than it is rated for and will overheat. Use thicker wire or a relay with its own feed.'; cls = 'is-warn'; }
-    else if (r.drop > 10) { m = 'More than 10 % of the voltage is lost before the loads' + (r.earthPct > 15 ? ', mostly in the corroded earth. Clean the earth point to bare metal.' : '. Shorten the run or use thicker wire.'); cls = 'is-warn'; }
+    else if (r.drop > 10) { m = 'More than 10 % of the voltage is lost before the loads' + (r.earthPct > 15 ? ', mostly in the corroded earth. Clean the earth point to bare metal.' : r.Rc > 0.05 ? ', much of it in the corroded connector. Clean or replace it.' : '. Shorten the run, use thicker wire or check the battery.'); cls = 'is-warn'; }
     else if (r.i > r.fuse * 0.8) { m = 'Working, but close to the fuse rating: a little extra load will blow it.'; cls = 'is-warn'; }
     else { m = 'Healthy circuit: ' + r.i.toFixed(1) + ' A through a ' + r.fuse + ' A fuse, and only ' + r.drop.toFixed(1) + ' % of the voltage lost on the way.'; }
     if (msg.textContent !== m) { msg.textContent = m; msg.className = 'wb-msg ' + cls; }
     requestAnimationFrame(frame);
   }
   document.querySelectorAll('.wb input, .wb select').forEach(function (el) { el.addEventListener('input', outs); el.addEventListener('change', outs); });
+  /* "what changed": compare the readings before and after each control is moved */
+  var before = null;
+  function snap() { var r = calc(); return { i: r.i, vl: r.vl, pl: r.pl, lum: r.closed ? Math.pow(r.vl / 12, 3.4) * 100 : 0 }; }
+  function ctlName(el) {
+    if (el.dataset.load) return el.parentNode.textContent.replace(/\d+ W$/, '').trim() + (el.checked ? ' switched on' : ' switched off');
+    return el.getAttribute('aria-label') || (el.closest('label') ? el.closest('label').textContent.replace(/\s+/g, ' ').trim().split(' ').slice(0, 3).join(' ') : 'Setting');
+  }
+  function what(el) {
+    if (!before) return;
+    var now = snap(), b = before;
+    var f = function (v, d) { return (Math.abs(v) < 0.5 * Math.pow(10, -d) ? 0 : v).toFixed(d).replace('-', '−'); };
+    var items = [['current', b.i, now.i, 'A', 2], ['voltage at the loads', b.vl, now.vl, 'V', 2], ['power at the loads', b.pl, now.pl, 'W', 1], ['filament light output', b.lum, now.lum, '%', 0]];
+    var txt = items.filter(function (x) { return Math.abs(x[2] - x[1]) >= 0.5 * Math.pow(10, -x[4]); }).map(function (x) { var d = x[2] - x[1]; return x[0] + ' ' + f(x[1], x[4]) + ' → ' + f(x[2], x[4]) + ' ' + x[3] + ' (' + (d > 0 ? '+' : '−') + f(Math.abs(d), x[4]) + ')'; });
+    var c = document.getElementById('wb-chg'); c.hidden = false;
+    c.textContent = 'What changed (' + ctlName(el) + '): ' + (txt.length ? txt.join('; ') + '.' : 'the readings stay the same.');
+  }
+  var wbEl = document.querySelector('.wb');
+  ['pointerdown', 'keydown'].forEach(function (ev) { wbEl.addEventListener(ev, function () { before = snap(); }, true); });
+  ['input', 'change'].forEach(function (ev) { wbEl.addEventListener(ev, function (e) { if (e.target.matches('input, select')) what(e.target); }); });
   function outs() {
     document.querySelector('[data-o="v"]').textContent = val('v').toFixed(1) + ' V';
     document.querySelector('[data-o="len"]').textContent = val('len').toFixed(1) + ' m';
+    document.querySelector('[data-o="rint"]').textContent = val('rint').toFixed(0) + ' mΩ';
+    document.querySelector('[data-o="xw"]').textContent = val('xw').toFixed(0) + ' W';
+    document.querySelector('[data-o="conn"]').textContent = val('conn').toFixed(0) + ' mΩ';
     var e = val('earth'); document.querySelector('[data-o="earth"]').textContent = e < 15 ? 'Clean' : e < 50 ? 'Slightly corroded' : e < 85 ? 'Corroded' : 'Badly corroded';
   }
-  document.querySelectorAll('[data-v]').forEach(function (b) { b.addEventListener('click', function () { document.querySelector('[data-i="v"]').value = b.dataset.v; outs(); }); });
+  document.querySelectorAll('[data-v]').forEach(function (b) { b.addEventListener('click', function () { var el = document.querySelector('[data-i="v"]'); el.value = b.dataset.v; outs(); what(el); }); });
   $('#wb-reset').addEventListener('click', function () { blown = false; over = 0; });
   outs();
   requestAnimationFrame(frame);
 })();
 </script>
+<script type="module">import { mountCircuitBuilder } from '../assets/circuit-builder.js?v=20261106'; mountCircuitBuilder(document.getElementById('cb-root'));</script>
 <script type="module" src="../assets/site.js"></script>
 </body>
 </html>

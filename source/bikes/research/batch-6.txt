@@ -1,0 +1,82 @@
+ktm-125-duke	KTM 125 Duke	street
+ktm-200-duke	KTM 200 Duke	street
+ktm-250-duke	KTM 250 Duke	street
+ktm-390-duke	KTM 390 Duke	street
+ktm-690-duke	KTM 690 Duke	street
+ktm-790-duke	KTM 790 Duke	street
+ktm-890-duke	KTM 890 Duke	street
+ktm-990-duke	KTM 990 Duke	street
+ktm-rc125	KTM RC125	sport
+ktm-rc200	KTM RC200	sport
+ktm-rc390	KTM RC390	sport
+ktm-390-adventure	KTM 390 Adventure	adventure
+ktm-690-enduro-r	KTM 690 Enduro R	adventure
+ktm-790-adventure	KTM 790 Adventure	adventure
+ktm-890-adventure	KTM 890 Adventure	adventure
+ktm-990-adventure	KTM 990 Adventure	adventure
+ktm-1090-adventure	KTM 1090 Adventure	adventure
+ktm-1190-adventure	KTM 1190 Adventure	adventure
+ktm-250exc-f	KTM 250EXC-F	offroad4
+ktm-350exc-f	KTM 350EXC-F	offroad4
+ktm-450exc-f	KTM 450EXC-F	offroad4
+ktm-250exc	KTM 250EXC	offroad2
+ktm-300exc	KTM 300EXC	offroad2
+ktm-690smc-r	KTM 690SMC R	supermoto
+bajaj-boxer-100-ks	Bajaj Boxer 100 KS	commuter
+bajaj-boxer-100-hd	Bajaj Boxer 100 HD	commuter
+bajaj-boxer-125-x	Bajaj Boxer 125 X	commuter
+bajaj-boxer-125-hd	Bajaj Boxer 125 HD	commuter
+bajaj-boxer-150-x	Bajaj Boxer 150 X	commuter
+bajaj-boxer-150-hd	Bajaj Boxer 150 HD	commuter
+bajaj-ct100	Bajaj CT100	commuter
+bajaj-ct110	Bajaj CT110	commuter
+bajaj-ct125x	Bajaj CT125X	commuter
+bajaj-platina-100	Bajaj Platina 100	commuter
+bajaj-platina-110	Bajaj Platina 110	commuter
+bajaj-pulsar-125	Bajaj Pulsar 125	street
+bajaj-pulsar-150	Bajaj Pulsar 150	street
+bajaj-pulsar-n160	Bajaj Pulsar N160	street
+bajaj-pulsar-ns160	Bajaj Pulsar NS160	street
+bajaj-pulsar-ns200	Bajaj Pulsar NS200	street
+bajaj-pulsar-n250	Bajaj Pulsar N250	street
+bajaj-pulsar-ns400z	Bajaj Pulsar NS400Z	street
+bajaj-dominar-250	Bajaj Dominar 250	street
+bajaj-pulsar-rs200	Bajaj Pulsar RS200	sport
+bajaj-pulsar-220f	Bajaj Pulsar 220F	sport
+bajaj-avenger-160	Bajaj Avenger 160	cruiser
+bajaj-avenger-220	Bajaj Avenger 220	cruiser
+bajaj-chetak	Bajaj Chetak	electric
+harley-davidson-iron-883	Harley-Davidson Iron 883	cruiser
+harley-davidson-forty-eight	Harley-Davidson Forty-Eight	cruiser
+harley-davidson-sportster-s	Harley-Davidson Sportster S	cruiser
+harley-davidson-nightster	Harley-Davidson Nightster	cruiser
+harley-davidson-street-750	Harley-Davidson Street 750	cruiser
+harley-davidson-street-bob	Harley-Davidson Street Bob	cruiser
+harley-davidson-fat-bob	Harley-Davidson Fat Bob	cruiser
+harley-davidson-fat-boy	Harley-Davidson Fat Boy	cruiser
+harley-davidson-low-rider-s	Harley-Davidson Low Rider S	cruiser
+harley-davidson-low-rider-st	Harley-Davidson Low Rider ST	cruiser
+harley-davidson-breakout	Harley-Davidson Breakout	cruiser
+harley-davidson-softail-standard	Harley-Davidson Softail Standard	cruiser
+harley-davidson-softail-slim	Harley-Davidson Softail Slim	cruiser
+harley-davidson-road-king	Harley-Davidson Road King	touring
+harley-davidson-road-glide	Harley-Davidson Road Glide	touring
+harley-davidson-street-glide	Harley-Davidson Street Glide	touring
+harley-davidson-electra-glide	Harley-Davidson Electra Glide	touring
+harley-davidson-pan-america-1250	Harley-Davidson Pan America 1250	adventure
+benelli-bn125	Benelli BN125	street
+benelli-bn302	Benelli BN302	street
+benelli-tnt125	Benelli TNT125	street
+benelli-leoncino-500	Benelli Leoncino 500	street
+benelli-leoncino-800	Benelli Leoncino 800	street
+benelli-752s	Benelli 752S	street
+benelli-trk251	Benelli TRK251	adventure
+benelli-trk502	Benelli TRK502	adventure
+benelli-trk702	Benelli TRK702	adventure
+benelli-imperiale-400	Benelli Imperiale 400	classic
+italika-ft125	Italika FT125	commuter
+italika-ft150	Italika FT150	commuter
+italika-ft200	Italika FT200	commuter
+italika-ft250-gts	Italika FT250 GTS	commuter
+italika-d125	Italika D125	scooter
+italika-ds150	Italika DS150	scooter

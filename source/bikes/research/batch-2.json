@@ -1,0 +1,4896 @@
+[
+ {
+  "id": "yamaha-mt-03",
+  "found": true,
+  "summary": "The MT-03 is Yamaha's small naked roadster from the MT range, aimed at newer riders and A2 licence holders. The current version has a 321 cc engine making about 41 hp, with an upright riding position and a low seat height of 780 mm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 321,
+    "source": "https://91wheels.com/bikes/yamaha/mt-03/specifications"
+   },
+   "power_hp": {
+    "value": 41.4,
+    "source": "https://www.moto-data.net/yamaha/mt-03-2020"
+   },
+   "power_rpm": {
+    "value": 10750,
+    "source": "https://www.moto-data.net/yamaha/mt-03-2020"
+   },
+   "torque_nm": {
+    "value": 29.6,
+    "source": "https://www.moto-data.net/yamaha/mt-03-2020"
+   },
+   "weight_kg": {
+    "value": 167,
+    "source": "https://www.yamaha-motor-india.com/yamaha-mt03.html"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.yamaha-motor-india.com/yamaha-mt03.html"
+   },
+   "seat_mm": {
+    "value": 780,
+    "source": "https://www.yamaha-motor-india.com/yamaha-mt03.html"
+   }
+  },
+  "spec_scope": "2020 onward 321 cc generation (older 660 cc single is a different bike)",
+  "highlights": [
+   {
+    "text": "About 41.4 hp at 10,750 rpm from 321 cc",
+    "source": "https://www.moto-data.net/yamaha/mt-03-2020"
+   },
+   {
+    "text": "Seat height 780 mm, wet weight 167 kg",
+    "source": "https://www.yamaha-motor-india.com/yamaha-mt03.html"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Current model is a 321 cc twin; an earlier 660 cc single-cylinder MT-03 existed in Europe.",
+  "sources": [
+   "https://www.moto-data.net/yamaha/mt-03-2020",
+   "https://91wheels.com/bikes/yamaha/mt-03/specifications",
+   "https://www.yamaha-motor-india.com/yamaha-mt03.html"
+  ]
+ },
+ {
+  "id": "yamaha-mt-07",
+  "found": true,
+  "summary": "The MT-07 is a middleweight naked bike announced in 2014 with a 689 cc parallel twin built for linear torque, positioned below the triple-cylinder MT-09. It also has A2 licence versions limited to 35 kW, and a Y-AMT automated manual variant.",
+  "specs": {
+   "displacement_cc": {
+    "value": 689,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC parallel twin",
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "power_hp": {
+    "value": 74.8,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "power_rpm": {
+    "value": 9000,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "torque_nm": {
+    "value": 68.0,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "weight_kg": {
+    "value": 179,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "seat_mm": {
+    "value": 805,
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   },
+   "final_drive": {
+    "value": "chain",
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   }
+  },
+  "spec_scope": "2014 launch model (later years quoted around 73 to 75 hp)",
+  "highlights": [
+   {
+    "text": "74.8 PS and 68 Nm at launch in 2014",
+    "source": "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Parallel twin, chain drive, 6-speed; A2 35 kW version and Y-AMT automated variant exist.",
+  "sources": [
+   "https://iamabiker.com/motorcycle-news-desk/2013/2014-yamaha-mt-07-announced-eicma/"
+  ]
+ },
+ {
+  "id": "yamaha-mt-09",
+  "found": true,
+  "summary": "The MT-09 is Yamaha's triple-cylinder naked bike, launched in 2014 as the FZ-09 in some markets. It started with an 847 cc engine and moved to an 889 cc engine from 2021.",
+  "specs": {
+   "displacement_cc": {
+    "value": 847,
+    "source": "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345"
+   },
+   "power_hp": {
+    "value": 115,
+    "source": "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345"
+   },
+   "torque_nm": {
+    "value": 87.5,
+    "source": "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345"
+   },
+   "torque_rpm": {
+    "value": 8500,
+    "source": "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345"
+   },
+   "weight_kg": {
+    "value": 188,
+    "source": "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014"
+   },
+   "seat_mm": {
+    "value": 815,
+    "source": "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014"
+   },
+   "brakes": {
+    "value": "twin 298 mm discs front, 245 mm disc rear",
+    "source": "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014"
+   }
+  },
+  "spec_scope": "2014 to about 2020 847 cc generation; 2021 on is 889 cc, about 119 PS and 93 Nm",
+  "highlights": [
+   {
+    "text": "847 cc triple making 115 hp in the first generation",
+    "source": "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345"
+   },
+   {
+    "text": "2021 on: 889 cc, 93 Nm at 7,000 rpm",
+    "source": "https://philharmonicmoto.com/product/yamaha-mt-09-my-21"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Liquid-cooled inline triple, chain drive; bigger 889 cc engine from 2021.",
+  "sources": [
+   "https://www.pakwheels.com/forums/t/yamaha-unveils-2014-fz-09-850-triple/223345",
+   "https://1000ps.com/en-us/model/7490/yamaha-mt-09/2014",
+   "https://philharmonicmoto.com/product/yamaha-mt-09-my-21"
+  ]
+ },
+ {
+  "id": "yamaha-mt-10",
+  "found": true,
+  "summary": "The MT-10 is the flagship of the MT range, a naked bike built around a 998 cc crossplane inline-four. It was revealed at EICMA 2015 and went on sale in 2016, with a second generation from 2022.",
+  "specs": {
+   "displacement_cc": {
+    "value": 998,
+    "source": "https://www.yamahamotorsports.com/models/mt-10/specs"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC inline four",
+    "source": "https://www.yamahamotorsports.com/models/mt-10/specs"
+   },
+   "power_hp": {
+    "value": 158.2,
+    "source": "https://www.bennetts.co.uk/bikesocial/news-and-views/news/2016/february/yamaha-announce-mt-10-price-and-power"
+   },
+   "power_rpm": {
+    "value": 11500,
+    "source": "https://www.bennetts.co.uk/bikesocial/news-and-views/news/2016/february/yamaha-announce-mt-10-price-and-power"
+   },
+   "torque_nm": {
+    "value": 111.0,
+    "source": "https://www.bennetts.co.uk/bikesocial/news-and-views/news/2016/february/yamaha-announce-mt-10-price-and-power"
+   },
+   "torque_rpm": {
+    "value": 9000,
+    "source": "https://www.bennetts.co.uk/bikesocial/news-and-views/news/2016/february/yamaha-announce-mt-10-price-and-power"
+   },
+   "weight_kg": {
+    "value": 210,
+    "source": "https://www.moto-data.net/yamaha/mt-10-2020"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.moto-data.net/yamaha/mt-10-2020"
+   },
+   "fuel_l": {
+    "value": 17,
+    "source": "https://www.moto-data.net/yamaha/mt-10-2020"
+   },
+   "seat_mm": {
+    "value": 825,
+    "source": "https://www.moto-data.net/yamaha/mt-10-2020"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://www.yamahamotorsports.com/models/mt-10/specs"
+   },
+   "final_drive": {
+    "value": "chain",
+    "source": "https://www.yamahamotorsports.com/models/mt-10/specs"
+   }
+  },
+  "spec_scope": "2016 to 2021 generation (2022 on: 165.9 PS, 212 kg wet, 835 mm seat)",
+  "highlights": [
+   {
+    "text": "About 158 hp and 111 Nm in the 2016 launch model",
+    "source": "https://www.bennetts.co.uk/bikesocial/news-and-views/news/2016/february/yamaha-announce-mt-10-price-and-power"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Inline-four, chain drive, 6-speed wet multi-plate slip/assist clutch.",
+  "sources": [
+   "https://www.yamahamotorsports.com/models/mt-10/specs",
+   "https://www.bennetts.co.uk/bikesocial/news-and-views/news/2016/february/yamaha-announce-mt-10-price-and-power",
+   "https://www.moto-data.net/yamaha/mt-10-2020"
+  ]
+ },
+ {
+  "id": "yamaha-mt-125",
+  "found": true,
+  "summary": "The MT-125 is the learner-legal 125 cc entry in Yamaha's MT naked range, first listed for 2014 to 2015. It uses a liquid-cooled single with variable valve actuation and a 6-speed gearbox, and later versions gained a TFT display and ABS.",
+  "specs": {
+   "displacement_cc": {
+    "value": 124.7,
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "engine": {
+    "value": "liquid-cooled SOHC 4-valve single",
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "power_hp": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "power_rpm": {
+    "value": 9000,
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "torque_nm": {
+    "value": 11.5,
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "seat_mm": {
+    "value": 810,
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   },
+   "final_drive": {
+    "value": "chain",
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   }
+  },
+  "spec_scope": "later generations; figures vary slightly by year",
+  "highlights": [
+   {
+    "text": "15 hp (11 kW) from 124.7 cc",
+    "source": "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Liquid-cooled with variable valve actuation.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/7818/yamaha-mt-125"
+  ]
+ },
+ {
+  "id": "yamaha-xsr125",
+  "found": true,
+  "summary": "The XSR125 is a retro-styled learner-legal roadster built on the MT-125 engine and chassis. It arrived in Europe in June 2021 and a Legacy edition followed for 2022.",
+  "specs": {
+   "displacement_cc": {
+    "value": 124,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "engine": {
+    "value": "liquid-cooled single, shared with MT-125",
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "power_hp": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "torque_nm": {
+    "value": 11.5,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "weight_kg": {
+    "value": 140,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "seat_mm": {
+    "value": 815,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "fuel_l": {
+    "value": 11,
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   },
+   "brakes": {
+    "value": "single disc front and rear, dual-channel ABS",
+    "source": "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125"
+   }
+  },
+  "spec_scope": "2021 on",
+  "highlights": [
+   {
+    "text": "European deliveries began in June 2021",
+    "source": "https://www.rideapart.com/news/506733/yamaha-xsr125-european-release-2021/"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Shares the MT-125 engine; ABS standard.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/10653/yamaha-xsr125",
+   "https://www.rideapart.com/news/506733/yamaha-xsr125-european-release-2021/"
+  ]
+ },
+ {
+  "id": "yamaha-xsr155",
+  "found": true,
+  "summary": "The XSR155 is a small retro roadster in Yamaha's XSR family, sold in Asian markets. It uses a 155 cc engine of about 18 to 19 hp in a light 137 kg package.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   },
+   "power_hp": {
+    "value": 18.1,
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   },
+   "weight_kg": {
+    "value": 137,
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   },
+   "seat_mm": {
+    "value": 810,
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   },
+   "fuel_l": {
+    "value": 10,
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   }
+  },
+  "spec_scope": "current generation",
+  "highlights": [
+   {
+    "text": "About 18 bhp at 10,000 rpm from 155 cc",
+    "source": "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Sources disagree on torque (14.2 to 14.7 Nm), so none recorded.",
+  "sources": [
+   "https://www.91wheels.com/bike/yamaha/xsr155/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-xsr700",
+  "found": true,
+  "summary": "The XSR700 is a retro-styled roadster built on the 689 cc parallel twin of the MT-07. A Legacy edition and an XTribute variant have also been sold.",
+  "specs": {
+   "displacement_cc": {
+    "value": 689,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC parallel twin",
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "power_hp": {
+    "value": 73.4,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "power_rpm": {
+    "value": 8750,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "torque_nm": {
+    "value": 67.0,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "weight_kg": {
+    "value": 186,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "seat_mm": {
+    "value": 835,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   }
+  },
+  "spec_scope": "about 2016 to 2021 generation (later years differ slightly)",
+  "highlights": [
+   {
+    "text": "About 73 hp and 67 Nm",
+    "source": "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "MT-07 based twin; XTribute variant has an 855 mm seat.",
+  "sources": [
+   "https://1000ps.com/en-us/model/8324/yamaha-xsr700"
+  ]
+ },
+ {
+  "id": "yamaha-xsr900",
+  "found": true,
+  "summary": "The XSR900 is a retro roadster on the CP3 triple platform of the MT-09. The first generation arrived in 2016 with 847 cc, and the second generation from 2022 uses the 890 cc engine.",
+  "specs": {
+   "displacement_cc": {
+    "value": 890,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC inline triple",
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "power_hp": {
+    "value": 117,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "torque_nm": {
+    "value": 93,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "torque_rpm": {
+    "value": 7000,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "weight_kg": {
+    "value": 193,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "seat_mm": {
+    "value": 810,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://www.torquepedia.com/yamaha/xsr900/2022"
+   }
+  },
+  "spec_scope": "2022 generation (890 cc)",
+  "highlights": [
+   {
+    "text": "First generation: 847 cc, 87.5 Nm at 8,500 rpm",
+    "source": "https://www.1000ps.com/en-us/model/8430/yamaha-xsr900"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "First generation (2016 to 2021) 847 cc, second generation 890 cc.",
+  "sources": [
+   "https://www.torquepedia.com/yamaha/xsr900/2022",
+   "https://www.1000ps.com/en-us/model/8430/yamaha-xsr900"
+  ]
+ },
+ {
+  "id": "yamaha-fz1",
+  "found": true,
+  "summary": "The FZ1 Fazer is a big four-cylinder street bike with a 998 cc engine making about 150 hp (claimed), sold from 2006 until about 2015.",
+  "specs": {
+   "years": {
+    "value": "2006 to 2015",
+    "source": "https://www.1000ps.com/en-gb/model/2601/yamaha-fz1-fazer"
+   },
+   "displacement_cc": {
+    "value": 998,
+    "source": "https://www.1000ps.com/en-gb/model/2601/yamaha-fz1-fazer"
+   },
+   "power_hp": {
+    "value": 150,
+    "source": "https://www.Wikipedia.org/wiki/Yamaha_FZ1"
+   },
+   "power_rpm": {
+    "value": 11000,
+    "source": "https://www.Wikipedia.org/wiki/Yamaha_FZ1"
+   },
+   "torque_nm": {
+    "value": 106.8,
+    "source": "https://www.Wikipedia.org/wiki/Yamaha_FZ1"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://www.Wikipedia.org/wiki/Yamaha_FZ1"
+   },
+   "seat_mm": {
+    "value": 815,
+    "source": "https://www.2smoto.com/m_news.asp?id=7691"
+   },
+   "fuel_l": {
+    "value": 18,
+    "source": "https://www.2smoto.com/m_news.asp?id=7691"
+   }
+  },
+  "spec_scope": "2006 to 2015",
+  "highlights": [
+   {
+    "text": "About 150 hp claimed from 998 cc",
+    "source": "https://www.Wikipedia.org/wiki/Yamaha_FZ1"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://www.Wikipedia.org/wiki/Yamaha_FZ1",
+  "notes": "Inline-four; weight varies by source so not recorded.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/2601/yamaha-fz1-fazer",
+   "https://www.Wikipedia.org/wiki/Yamaha_FZ1",
+   "https://www.2smoto.com/m_news.asp?id=7691"
+  ]
+ },
+ {
+  "id": "yamaha-fz6",
+  "found": true,
+  "summary": "The FZ6 is a middleweight street bike introduced in 2004, built around the engine of the 2003 YZF-R6. A 2007 update followed, and it was sold as naked FZ6 and half-faired Fazer versions.",
+  "specs": {
+   "displacement_cc": {
+    "value": 599,
+    "source": "https://www.autoevolution.com/moto/yamaha-fz6-2005.html"
+   },
+   "engine": {
+    "value": "liquid-cooled inline four",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_FZ6"
+   },
+   "power_hp": {
+    "value": 98,
+    "source": "https://www.autoevolution.com/moto/yamaha-fz6-2003.html"
+   },
+   "power_rpm": {
+    "value": 12000,
+    "source": "https://www.autoevolution.com/moto/yamaha-fz6-2003.html"
+   },
+   "torque_nm": {
+    "value": 63,
+    "source": "https://www.autoevolution.com/moto/yamaha-fz6-2003.html"
+   },
+   "torque_rpm": {
+    "value": 10000,
+    "source": "https://www.autoevolution.com/moto/yamaha-fz6-2003.html"
+   },
+   "fuel_l": {
+    "value": 19.4,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_FZ6"
+   }
+  },
+  "spec_scope": "2004 on",
+  "highlights": [
+   {
+    "text": "98 hp at 12,000 rpm from R6-derived 599 cc four",
+    "source": "https://www.autoevolution.com/moto/yamaha-fz6-2003.html"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_FZ6",
+  "notes": "R6 derived engine in a twin-spar aluminium frame; weight and seat height vary by source.",
+  "sources": [
+   "https://www.autoevolution.com/moto/yamaha-fz6-2005.html",
+   "https://en.wikipedia.org/wiki/Yamaha_FZ6",
+   "https://www.autoevolution.com/moto/yamaha-fz6-2003.html"
+  ]
+ },
+ {
+  "id": "yamaha-fz8",
+  "found": true,
+  "summary": "The FZ8 is a naked middleweight street bike with a half-faired Fazer8 sister model, unveiled for 2010. It makes about 106 PS.",
+  "specs": {
+   "power_hp": {
+    "value": 106.2,
+    "source": "https://www.asphaltandrubber.com/?p=9303"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://www.asphaltandrubber.com/?p=9303"
+   },
+   "torque_nm": {
+    "value": 82.0,
+    "source": "https://www.asphaltandrubber.com/?p=9303"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://www.asphaltandrubber.com/?p=9303"
+   },
+   "seat_mm": {
+    "value": 815,
+    "source": "https://wikipedia.com/wiki/Yamaha_FZ8"
+   },
+   "fuel_l": {
+    "value": 17,
+    "source": "https://wikipedia.com/wiki/Yamaha_FZ8"
+   }
+  },
+  "spec_scope": "FZ8 and Fazer8, from 2010",
+  "highlights": [
+   {
+    "text": "About 106 PS at 10,000 rpm and 82 Nm at 8,000 rpm",
+    "source": "https://www.asphaltandrubber.com/?p=9303"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://wikipedia.com/wiki/Yamaha_FZ8",
+  "notes": "Inline-four; weight sources conflict (211 to 215 kg).",
+  "sources": [
+   "https://www.visordown.com/news/new-bikes/yamaha-unveil-official-pics-and-specs-2010-fz8",
+   "https://www.asphaltandrubber.com/?p=9303",
+   "https://wikipedia.com/wiki/Yamaha_FZ8"
+  ]
+ },
+ {
+  "id": "yamaha-ybr125",
+  "found": true,
+  "summary": "The YBR125 is a simple 125 cc commuter sold in Europe, India and Latin America. Yamaha's own spec sheet lists about 10 PS and a carburetted air-cooled engine, with a low 780 mm seat.",
+  "specs": {
+   "displacement_cc": {
+    "value": 124,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "power_hp": {
+    "value": 10.1,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "power_rpm": {
+    "value": 7800,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "torque_nm": {
+    "value": 9.5,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "weight_kg": {
+    "value": 118,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "seat_mm": {
+    "value": 780,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "fuel_l": {
+    "value": 12.0,
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   },
+   "fuel_system": {
+    "value": "carburettor",
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   }
+  },
+  "spec_scope": "YBR125E per Yamaha global sheet (variants and markets differ)",
+  "highlights": [
+   {
+    "text": "10.1 PS at 7,800 rpm, wet weight 118 kg",
+    "source": "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Carburettor; Indian-market 2005 to 2016 bikes rated slightly higher (about 10.8 PS).",
+  "sources": [
+   "https://global.yamaha-motor.com/business/omdo/products/ybr125e/"
+  ]
+ },
+ {
+  "id": "yamaha-ys125",
+  "found": true,
+  "summary": "The YS125 is a fuel-injected, air-cooled 125 cc commuter aimed at European learners and everyday riders. Yamaha pairs its 14 litre tank with a claimed 2.0 l/100 km consumption.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "engine": {
+    "value": "air-cooled 4-stroke single",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "power_hp": {
+    "value": 10.5,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "torque_nm": {
+    "value": 10.8,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "weight_kg": {
+    "value": 129,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://www.moto-data.net/yamaha/ys-125-2017"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   }
+  },
+  "spec_scope": "2017 factsheet",
+  "highlights": [
+   {
+    "text": "Claimed 2.0 l/100 km with a 14 litre tank",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Fuel injected, air-cooled.",
+  "sources": [
+   "https://cdn2.yamaha-motor.eu/prod/product-assets/2017/YS125/Factsheets/2017-YS125_en.pdf",
+   "https://www.moto-data.net/yamaha/ys-125-2017"
+  ]
+ },
+ {
+  "id": "yamaha-yb125",
+  "found": false
+ },
+ {
+  "id": "yamaha-fz-s-fi",
+  "found": true,
+  "summary": "The FZ-S FI is a 149 cc fuel-injected street commuter sold in India, with versions V3, V4 and a Hybrid. Its air-cooled single makes about 12 bhp.",
+  "specs": {
+   "displacement_cc": {
+    "value": 149,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "engine": {
+    "value": "air-cooled single",
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "power_hp": {
+    "value": 12.2,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "torque_nm": {
+    "value": 13.3,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "weight_kg": {
+    "value": 135,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "seat_mm": {
+    "value": 790,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   }
+  },
+  "spec_scope": "BS6 V3 (V4 weighs 136 kg, Hybrid 138 kg)",
+  "highlights": [
+   {
+    "text": "12.2 bhp and 13.3 Nm",
+    "source": "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Fuel injected, air-cooled.",
+  "sources": [
+   "https://www.91wheels.com/bikes/yamaha/fzs-fi-bs6/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-fz-x",
+  "found": true,
+  "summary": "The FZ-X is a neo-retro 149 cc commuter sold in India, sharing its air-cooled single with the FZ series. Its 810 mm seat is not adjustable.",
+  "specs": {
+   "displacement_cc": {
+    "value": 149,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "engine": {
+    "value": "air-cooled single, 2-valve",
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "power_hp": {
+    "value": 12.2,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "torque_nm": {
+    "value": 13.3,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "weight_kg": {
+    "value": 139,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "seat_mm": {
+    "value": 810,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "fuel_l": {
+    "value": 10,
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   },
+   "gearbox": {
+    "value": "5-speed",
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   }
+  },
+  "spec_scope": "India model, Hybrid variant 141 kg",
+  "highlights": [
+   {
+    "text": "12.2 bhp and 13.3 Nm from 149 cc",
+    "source": "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Air-cooled, 5-speed.",
+  "sources": [
+   "https://91wheels.com/bikes/yamaha/fz-x/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-saluto",
+  "found": true,
+  "summary": "The Saluto 125 is a basic 125 cc commuter made for South Asian markets such as India, Bangladesh and Sri Lanka. It has a 180 mm ground clearance and a small 7.6 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "engine": {
+    "value": "air-cooled SOHC 2-valve single",
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "power_hp": {
+    "value": 8.3,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "power_rpm": {
+    "value": 7000,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "torque_nm": {
+    "value": 10.1,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "weight_kg": {
+    "value": 112,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "seat_mm": {
+    "value": 805,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   },
+   "fuel_l": {
+    "value": 7.6,
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   }
+  },
+  "spec_scope": "Saluto 125",
+  "highlights": [
+   {
+    "text": "Ground clearance 180 mm",
+    "source": "https://91wheels.com/bikes/yamaha/saluto/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Air-cooled single; power quoted as PS.",
+  "sources": [
+   "https://91wheels.com/bikes/yamaha/saluto/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-yzf-r1",
+  "found": true,
+  "summary": "The YZF-R1 is Yamaha's flagship superbike. The 2015 model was a clean-sheet redesign with a 998 cc crossplane four, an aluminium Deltabox frame and modern electronics, with a limited R1M version adding Ohlins electronic suspension and carbon bodywork.",
+  "specs": {
+   "displacement_cc": {
+    "value": 998,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "engine": {
+    "value": "liquid-cooled crossplane inline four",
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "power_hp": {
+    "value": 200,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "power_rpm": {
+    "value": 13500,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "torque_nm": {
+    "value": 112.5,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "torque_rpm": {
+    "value": 11500,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "weight_kg": {
+    "value": 199,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "seat_mm": {
+    "value": 855,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   },
+   "fuel_l": {
+    "value": 17,
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   }
+  },
+  "spec_scope": "2015 generation",
+  "highlights": [
+   {
+    "text": "About 200 hp at 13,500 rpm",
+    "source": "https://www.torquepedia.com/yamaha/r1/2015"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Crossplane crank four, Deltabox frame; R1M is a premium version.",
+  "sources": [
+   "https://www.torquepedia.com/yamaha/r1/2015"
+  ]
+ },
+ {
+  "id": "yamaha-yzf-r3",
+  "found": true,
+  "summary": "The YZF-R3 is Yamaha's 321 cc entry-level sportbike with a liquid-cooled DOHC parallel twin. It is sold worldwide, with about 41 bhp and a low 780 mm seat.",
+  "specs": {
+   "displacement_cc": {
+    "value": 321,
+    "source": "https://www.kiwirider.co.nz/kiwi-rider-04-2019-vol1/0102369001554269548/p56"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC parallel twin, 4 valves per cylinder",
+    "source": "https://www.kiwirider.co.nz/kiwi-rider-04-2019-vol1/0102369001554269548/p56"
+   },
+   "power_hp": {
+    "value": 41.4,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   },
+   "torque_nm": {
+    "value": 29.5,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   },
+   "torque_rpm": {
+    "value": 9000,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   },
+   "weight_kg": {
+    "value": 169,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   },
+   "seat_mm": {
+    "value": 780,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   }
+  },
+  "spec_scope": "2019 onward generation",
+  "highlights": [
+   {
+    "text": "About 41.4 bhp from 321 cc",
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Parallel twin.",
+  "sources": [
+   "https://www.kiwirider.co.nz/kiwi-rider-04-2019-vol1/0102369001554269548/p56",
+   "https://91wheels.com/bikes/yamaha/yzf-r3/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-yzf-r6",
+  "found": true,
+  "summary": "The YZF-R6 is Yamaha's 600 cc supersport, revving to about 14,500 rpm. A 2006 review gave a wet weight of 182 kg, while later models are heavier at around 190 kg.",
+  "specs": {
+   "power_hp": {
+    "value": 117,
+    "source": "https://www.motorcycledb.com/Yamaha_YZF-R6_2020/61969"
+   },
+   "power_rpm": {
+    "value": 14500,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   },
+   "torque_nm": {
+    "value": 61.7,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   },
+   "torque_rpm": {
+    "value": 10500,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   },
+   "weight_kg": {
+    "value": 190,
+    "source": "https://philharmonicmoto.com/?p=150"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   },
+   "seat_mm": {
+    "value": 850,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   },
+   "fuel_l": {
+    "value": 17,
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   }
+  },
+  "spec_scope": "about 2017 to 2021 generation (older models differ)",
+  "highlights": [
+   {
+    "text": "118.4 PS at 14,500 rpm",
+    "source": "https://91wheels.com/bikes/yamaha/yzf-r6/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Supersport four; figures vary by year.",
+  "sources": [
+   "https://www.motorcycledb.com/Yamaha_YZF-R6_2020/61969",
+   "https://91wheels.com/bikes/yamaha/yzf-r6/specifications",
+   "https://philharmonicmoto.com/?p=150"
+  ]
+ },
+ {
+  "id": "yamaha-yzf-r7",
+  "found": true,
+  "summary": "The YZF-R7 is a middleweight sportbike built on the 689 cc twin of the MT-07 and XSR700. It was announced on 18 May 2021 and reached dealers in June 2021.",
+  "specs": {
+   "displacement_cc": {
+    "value": 689,
+    "source": "https://yamahamotorsports.com/models/23_yzf-r7/specs"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC parallel twin",
+    "source": "https://yamahamotorsports.com/models/23_yzf-r7/specs"
+   },
+   "power_hp": {
+    "value": 72.4,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "power_rpm": {
+    "value": 8750,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "torque_nm": {
+    "value": 67.0,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "weight_kg": {
+    "value": 188,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "seat_mm": {
+    "value": 835,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   }
+  },
+  "spec_scope": "2022 model",
+  "highlights": [
+   {
+    "text": "Announced 18 May 2021, in dealers June 2021",
+    "source": "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_YZF-R7_(2022_bike)",
+  "notes": "MT-07 based twin; a 35 kW restricted version exists.",
+  "sources": [
+   "https://yamahamotorsports.com/models/23_yzf-r7/specs",
+   "https://www.revzilla.com/common-tread/2022-yamaha-yzf-r7-first-look"
+  ]
+ },
+ {
+  "id": "yamaha-yzf-r15",
+  "found": true,
+  "summary": "The YZF-R15 is Yamaha's small sportbike for India and Asia, first sold with a 150 cc engine. The V4 uses a 155 cc liquid-cooled engine with variable valve actuation.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   "engine": {
+    "value": "liquid-cooled single with VVA",
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   "power_hp": {
+    "value": 18.4,
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   "torque_nm": {
+    "value": 14.2,
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   "torque_rpm": {
+    "value": 7500,
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   "weight_kg": {
+    "value": 141,
+    "source": "https://www.autocarindia.com/bikes/yamaha/yzf-r15-v4/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.autocarindia.com/bikes/yamaha/yzf-r15-v4/specifications"
+   },
+   "seat_mm": {
+    "value": 815,
+    "source": "https://www.autocarindia.com/bikes/yamaha/yzf-r15-v4/specifications"
+   },
+   "fuel_l": {
+    "value": 11,
+    "source": "https://yamaha.lk/?p=21868"
+   }
+  },
+  "spec_scope": "R15 V4",
+  "highlights": [
+   {
+    "text": "V4: 18.4 PS at 10,000 rpm",
+    "source": "https://yamaha.lk/?p=21868"
+   },
+   {
+    "text": "V3 (150 cc) was 17 PS at 8,500 rpm",
+    "source": "https://www.91wheels.com/bike/yamaha/r15-v4/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_YZF-R15",
+  "notes": "V4 uses VVA; earlier versions are 150 cc.",
+  "sources": [
+   "https://yamaha.lk/?p=21868",
+   "https://www.autocarindia.com/bikes/yamaha/yzf-r15-v4/specifications",
+   "https://www.91wheels.com/bike/yamaha/r15-v4/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-yzf-r25",
+  "found": true,
+  "summary": "The YZF-R25 is Yamaha's 250 cc twin-cylinder sportbike, launched in Indonesia in 2014 and sold in Asia and Europe as the YZF-R25 and R250. It makes about 36 PS from a liquid-cooled twin.",
+  "specs": {
+   "displacement_cc": {
+    "value": 250,
+    "source": "https://iamabiker.com/?p=18348"
+   },
+   "power_hp": {
+    "value": 36,
+    "source": "https://iamabiker.com/?p=18348"
+   },
+   "power_rpm": {
+    "value": 12000,
+    "source": "https://iamabiker.com/?p=18348"
+   },
+   "torque_nm": {
+    "value": 22.1,
+    "source": "https://iamabiker.com/?p=18348"
+   },
+   "torque_rpm": {
+    "value": 10000,
+    "source": "https://iamabiker.com/?p=18348"
+   },
+   "weight_kg": {
+    "value": 166,
+    "source": "https://bikeswiki.com/Yamaha_YZF-R25"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://bikeswiki.com/Yamaha_YZF-R25"
+   },
+   "seat_mm": {
+    "value": 780,
+    "source": "https://motodealers.co.uk/bikes/yamaha/yzf-r25/2019/specs"
+   },
+   "fuel_l": {
+    "value": 14.0,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2016/YZF-R250/Factsheets/2016-YZF-R250_en.pdf"
+   }
+  },
+  "spec_scope": "2014 to 2018 models",
+  "highlights": [
+   {
+    "text": "36 PS at 12,000 rpm and 22.1 Nm at 10,000 rpm",
+    "source": "https://iamabiker.com/?p=18348"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_YZF-R25",
+  "notes": "Twin-cylinder; figures differ by market and year.",
+  "sources": [
+   "https://iamabiker.com/?p=18348",
+   "https://bikeswiki.com/Yamaha_YZF-R25",
+   "https://motodealers.co.uk/bikes/yamaha/yzf-r25/2019/specs",
+   "https://cdn2.yamaha-motor.eu/prod/product-assets/2016/YZF-R250/Factsheets/2016-YZF-R250_en.pdf"
+  ]
+ },
+ {
+  "id": "yamaha-tenere-700",
+  "found": true,
+  "summary": "The Tenere 700 is a middleweight adventure bike with a 689 cc liquid-cooled parallel twin, a tall 880 mm seat and a 16 litre tank. It was due in dealers in late 2019.",
+  "specs": {
+   "displacement_cc": {
+    "value": 689,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "engine": {
+    "value": "liquid-cooled parallel twin",
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "power_hp": {
+    "value": 72.15,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "power_rpm": {
+    "value": 9000,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "torque_nm": {
+    "value": 68,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "weight_kg": {
+    "value": 205,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "seat_mm": {
+    "value": 880,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   },
+   "fuel_l": {
+    "value": 16,
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   }
+  },
+  "spec_scope": "2019 launch model",
+  "highlights": [
+   {
+    "text": "16 litre tank and 880 mm seat",
+    "source": "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.com/wiki/Yamaha_T%C3%A9n%C3%A9r%C3%A9_700",
+  "notes": "Parallel twin; weight sources conflict (196 to 205 kg).",
+  "sources": [
+   "https://www.91wheels.com/bikes/yamaha/tenere-700/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-xt1200",
+  "found": true,
+  "summary": "The XT1200Z Super Tenere is Yamaha's large adventure tourer with a 23 litre tank and about 112 hp, with a ZE variant that has electronic suspension.",
+  "specs": {
+   "power_hp": {
+    "value": 112,
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "torque_nm": {
+    "value": 117,
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "weight_kg": {
+    "value": 261,
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "seat_mm": {
+    "value": 845,
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "fuel_l": {
+    "value": 23,
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-xt1200ze-super-tenere-2018"
+   }
+  },
+  "spec_scope": "XT1200Z and ZE",
+  "highlights": [
+   {
+    "text": "23 litre fuel tank",
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   },
+   {
+    "text": "About 112 hp and 117 Nm",
+    "source": "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Final drive not confirmed from sources; weight listed with ABS.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/4451/yamaha-xt1200z-super-tenere",
+   "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-xt1200ze-super-tenere-2018"
+  ]
+ },
+ {
+  "id": "yamaha-xt660",
+  "found": true,
+  "summary": "The XT660 name covers the XT660R dual-sport and the XT660X supermoto. Both make about 48 hp and carry a 15 litre tank.",
+  "specs": {
+   "power_hp": {
+    "value": 48,
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   },
+   "power_rpm": {
+    "value": 6000,
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   },
+   "torque_nm": {
+    "value": 60,
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   },
+   "torque_rpm": {
+    "value": 5250,
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   },
+   "seat_mm": {
+    "value": 865,
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   }
+  },
+  "spec_scope": "XT660R and XT660X",
+  "highlights": [
+   {
+    "text": "About 48 hp at 6,000 rpm",
+    "source": "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "XT660X supermoto has an 875 mm seat; weights range 165 to 189 kg by source.",
+  "sources": [
+   "https://www.1000ps.com/en-us/model/1667/yamaha-xt-660r"
+  ]
+ },
+ {
+  "id": "yamaha-xt600",
+  "found": true,
+  "summary": "The XT600 is an air-cooled 595 cc single-cylinder dual-sport produced from 1984 to about 2003. The XT600Z Tenere came out first in 1983 with a 28 litre tank.",
+  "specs": {
+   "years": {
+    "value": "1984 to 2003",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_XT_600"
+   },
+   "displacement_cc": {
+    "value": 595,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_XT_600"
+   },
+   "engine": {
+    "value": "air-cooled 4-stroke single",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_XT_600"
+   },
+   "power_hp": {
+    "value": 45,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "power_rpm": {
+    "value": 6500,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "torque_nm": {
+    "value": 50,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "weight_kg": {
+    "value": 155,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "seat_mm": {
+    "value": 855,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://moto-data.net/yamaha/xt-600e-1990-1992"
+   }
+  },
+  "spec_scope": "1984 to 2003 family; figures vary by variant",
+  "highlights": [
+   {
+    "text": "Original XT600Z Tenere introduced June 1983",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_XT_600"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "XT600E (1990 to 1992) specs shown; the Tenere has a 28 L tank.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yamaha_XT_600",
+   "https://moto-data.net/yamaha/xt-600e-1990-1992"
+  ]
+ },
+ {
+  "id": "yamaha-xt250",
+  "found": true,
+  "summary": "The XT250 is a light air-cooled 249 cc single dual-sport with fuel injection. Yamaha's own sheet lists a 74.0 x 58.0 mm bore and stroke.",
+  "specs": {
+   "displacement_cc": {
+    "value": 249,
+    "source": "https://yamahamotorsports.com/models/xt250/specs"
+   },
+   "engine": {
+    "value": "air-cooled SOHC 2-valve single",
+    "source": "https://yamahamotorsports.com/models/xt250/specs"
+   },
+   "power_hp": {
+    "value": 19,
+    "source": "https://philharmonicmoto.com/?p=874"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://philharmonicmoto.com/?p=874"
+   },
+   "torque_nm": {
+    "value": 20,
+    "source": "https://philharmonicmoto.com/?p=874"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://philharmonicmoto.com/?p=874"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://yamahamotorsports.com/models/xt250/specs"
+   }
+  },
+  "spec_scope": "2019 on model",
+  "highlights": [
+   {
+    "text": "249 cc air-cooled single",
+    "source": "https://yamahamotorsports.com/models/xt250/specs"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Fuel injected; wet weight about 132 to 134 kg depending on source.",
+  "sources": [
+   "https://yamahamotorsports.com/models/xt250/specs",
+   "https://philharmonicmoto.com/?p=874"
+  ]
+ },
+ {
+  "id": "yamaha-xt125",
+  "found": true,
+  "summary": "The XT125 name has been used for several small trail bikes, with the XT125R and XT125X sold in Europe from about 2005 to 2011 and the XTZ125 sold in Asia today. The XTZ125 gives about 10 hp.",
+  "specs": {
+   "power_hp": {
+    "value": 10.2,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "torque_nm": {
+    "value": 9.9,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "weight_kg": {
+    "value": 118,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "seat_mm": {
+    "value": 840,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   },
+   "fuel_l": {
+    "value": 11,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs"
+   }
+  },
+  "spec_scope": "XTZ125 (2022, Asia) as the current match",
+  "highlights": [
+   {
+    "text": "XT 125 X sold 2006 to 2011",
+    "source": "https://www.1000ps.com/en-us/model/1829/yamaha-xt-125-x/2010"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Specs are XTZ125; XT125R has an 860 mm seat and 9 L tank.",
+  "sources": [
+   "https://motodealers.co.uk/bikes/yamaha/xtz125/2022/specs",
+   "https://www.1000ps.com/en-us/model/1829/yamaha-xt-125-x/2010"
+  ]
+ },
+ {
+  "id": "yamaha-wr125",
+  "found": true,
+  "summary": "The WR125R is a small trail bike sold since about 2009, with a WR125X sister model. Older versions were rated about 15 hp, and a newer 2026 WR125R makes 14.5 hp.",
+  "specs": {
+   "power_hp": {
+    "value": 14.5,
+    "source": "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026"
+   },
+   "torque_nm": {
+    "value": 11.3,
+    "source": "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026"
+   },
+   "weight_kg": {
+    "value": 138,
+    "source": "https://www.torquepedia.com/yamaha/wr125r/2026"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.torquepedia.com/yamaha/wr125r/2026"
+   },
+   "seat_mm": {
+    "value": 875,
+    "source": "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026"
+   },
+   "fuel_l": {
+    "value": 8.1,
+    "source": "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026"
+   }
+  },
+  "spec_scope": "2026 WR125R",
+  "highlights": [
+   {
+    "text": "Older WR125R rated about 15 hp and 12.2 Nm",
+    "source": "https://1000ps.com/en-gb/model/3863/yamaha-wr-125-r/{alternativeLink}"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Older WR125R had a 930 mm seat.",
+  "sources": [
+   "https://www.1000ps.com/en-us/model/3863/yamaha-wr125r/2026",
+   "https://www.torquepedia.com/yamaha/wr125r/2026",
+   "https://1000ps.com/en-gb/model/3863/yamaha-wr-125-r/{alternativeLink}"
+  ]
+ },
+ {
+  "id": "yamaha-wr250r",
+  "found": true,
+  "summary": "The WR250R is a tall dual-sport with a liquid-cooled, fuel-injected 250 cc DOHC single and a 6-speed gearbox. Its seat is about 930 mm high and it weighs about 134 kg wet.",
+  "specs": {
+   "displacement_cc": {
+    "value": 250,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC single",
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "power_hp": {
+    "value": 30,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "power_rpm": {
+    "value": 10000,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "torque_nm": {
+    "value": 23.7,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "weight_kg": {
+    "value": 134,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "seat_mm": {
+    "value": 930,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "fuel_l": {
+    "value": 7.6,
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   }
+  },
+  "spec_scope": "all years",
+  "highlights": [
+   {
+    "text": "Seat height about 930 mm",
+    "source": "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_WR250R",
+  "notes": "Fuel injected, liquid-cooled.",
+  "sources": [
+   "https://1000ps.com/en-us/model/3201/yamaha-wr-250r"
+  ]
+ },
+ {
+  "id": "yamaha-wr450f",
+  "found": true,
+  "summary": "The WR450F is an off-road enduro bike with a liquid-cooled DOHC 450 cc fuel-injected engine. The 2024 model has a new more compact, lighter engine, and a 2019 update added a 7.9 litre plastic tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 450,
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC single",
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   },
+   "weight_kg": {
+    "value": 117,
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   },
+   "seat_mm": {
+    "value": 955,
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   },
+   "fuel_l": {
+    "value": 7.6,
+    "source": "https://www.yamahamotorsports.com/models/wr450f/specs"
+   }
+  },
+  "spec_scope": "2023 and 2024 models",
+  "highlights": [
+   {
+    "text": "2019 model got a 7.9 litre fuel tank",
+    "source": "https://www.yamaha-motor.com.au/discover/news-and-events/news/motorcycle/2023/september/2024-wrfs-revealed/2024-wr450f-features"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://Www.wikipedia.org/wiki/Yamaha_WR450F",
+  "notes": "Competition enduro bike.",
+  "sources": [
+   "https://www.yamahamotorsports.com/models/wr450f/specs",
+   "https://www.yamaha-motor.com.au/discover/news-and-events/news/motorcycle/2023/september/2024-wrfs-revealed/2024-wr450f-features"
+  ]
+ },
+ {
+  "id": "yamaha-fjr1300",
+  "found": true,
+  "summary": "The FJR1300 is a big sport-touring bike with a 1,298 cc inline-four and shaft drive, produced since 2001. It has a 25 litre tank, and AE/AS versions add an electronic clutch.",
+  "specs": {
+   "years": {
+    "value": "2001 on",
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "displacement_cc": {
+    "value": 1298,
+    "source": "https://ttechsuspension.com/?p=5647"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC inline four",
+    "source": "https://ttechsuspension.com/?p=5647"
+   },
+   "power_hp": {
+    "value": 144,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "torque_nm": {
+    "value": 134.4,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "torque_rpm": {
+    "value": 7000,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "weight_kg": {
+    "value": 291,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "seat_mm": {
+    "value": 805,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "fuel_l": {
+    "value": 25,
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "gearbox": {
+    "value": "5-speed, 6-speed from 2016",
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   "final_drive": {
+    "value": "shaft",
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   }
+  },
+  "spec_scope": "base model; 6-speed gearbox from 2016",
+  "highlights": [
+   {
+    "text": "Fuel tank 25 litres",
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   },
+   {
+    "text": "Shaft drive, 6-speed from the 2016 model",
+    "source": "https://www.wikipedia.com/wiki/Yamaha_FJR1300"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://www.wikipedia.com/wiki/Yamaha_FJR1300",
+  "notes": "Shaft drive; AE/AS have an electronic clutch.",
+  "sources": [
+   "https://www.wikipedia.com/wiki/Yamaha_FJR1300",
+   "https://ttechsuspension.com/?p=5647"
+  ]
+ },
+ {
+  "id": "yamaha-tdm850",
+  "found": true,
+  "summary": "The TDM850 was built from 1991 to 2001 and was succeeded by the TDM900. Power rose from about 77 hp on early bikes to 83 hp on 1999 to 2001 models.",
+  "specs": {
+   "years": {
+    "value": "1991 to 2001",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM850"
+   },
+   "power_hp": {
+    "value": 77,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM850"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://bikeswiki.com/Yamaha_TDM850"
+   },
+   "torque_nm": {
+    "value": 80,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM850"
+   },
+   "weight_kg": {
+    "value": 201,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM850"
+   },
+   "weight_type": {
+    "value": "dry",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM850"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM850"
+   },
+   "fuel_l": {
+    "value": 18,
+    "source": "https://bikeswiki.com/Yamaha_TDM850"
+   }
+  },
+  "spec_scope": "1991 to 2001, power by year",
+  "highlights": [
+   {
+    "text": "83 hp on 1999 to 2001 models, 80 hp on 1996 to 1998",
+    "source": "https://bikeswiki.com/Yamaha_TDM850"
+   },
+   {
+    "text": "Tank 18 L until 1995, 20 L from 1996",
+    "source": "https://bikeswiki.com/Yamaha_TDM850"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_TDM850",
+  "notes": "Figures differ by year; 1991 to 1995 specs shown for power and tank.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yamaha_TDM850",
+   "https://bikeswiki.com/Yamaha_TDM850"
+  ]
+ },
+ {
+  "id": "yamaha-tdm900",
+  "found": true,
+  "summary": "The TDM900 is an 897 cc parallel twin sold from about 2002, with sources listing model years through 2013. It has a 20 litre tank and an 825 mm seat.",
+  "specs": {
+   "displacement_cc": {
+    "value": 897,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM_900"
+   },
+   "engine": {
+    "value": "parallel twin",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_TDM_900"
+   },
+   "power_hp": {
+    "value": 86,
+    "source": "https://1000ps.com/en-us/model/926/{alternativeLink}"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://1000ps.com/en-us/model/926/{alternativeLink}"
+   },
+   "torque_nm": {
+    "value": 88.8,
+    "source": "https://1000ps.com/en-us/model/926/{alternativeLink}"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2003"
+   },
+   "weight_kg": {
+    "value": 223,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2003"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2003"
+   },
+   "seat_mm": {
+    "value": 825,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2003"
+   },
+   "fuel_l": {
+    "value": 20,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2003"
+   }
+  },
+  "spec_scope": "2002 on",
+  "highlights": [
+   {
+    "text": "Sold from 2002 and listed through model year 2013",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2013"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_TDM_900",
+  "notes": "Parallel twin; figures vary by source.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yamaha_TDM_900",
+   "https://1000ps.com/en-us/model/926/{alternativeLink}",
+   "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2003",
+   "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-tdm-900-2013"
+  ]
+ },
+ {
+  "id": "yamaha-tracer-700",
+  "found": true,
+  "summary": "The Tracer 700 is a 689 cc parallel-twin sport-tourer, with Yamaha launch figures of 74.8 PS and 68 Nm. It has a 17 litre tank and about 196 kg wet weight.",
+  "specs": {
+   "displacement_cc": {
+    "value": 689,
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   },
+   "engine": {
+    "value": "parallel twin",
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   },
+   "power_hp": {
+    "value": 74.8,
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   },
+   "power_rpm": {
+    "value": 9000,
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   },
+   "torque_nm": {
+    "value": 68.0,
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   },
+   "weight_kg": {
+    "value": 196,
+    "source": "https://issuu.com/yamaha-motor-europe-uk/docs/2020_tracer_700_uk"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://issuu.com/yamaha-motor-europe-uk/docs/2020_tracer_700_uk"
+   },
+   "seat_mm": {
+    "value": 835,
+    "source": "https://issuu.com/yamaha-motor-europe-uk/docs/2020_tracer_700_uk"
+   },
+   "fuel_l": {
+    "value": 17.0,
+    "source": "https://issuu.com/yamaha-motor-europe-uk/docs/2020_tracer_700_uk"
+   }
+  },
+  "spec_scope": "launch model; 2020 UK brochure lists 54 kW at 8,750 rpm",
+  "highlights": [
+   {
+    "text": "74.8 PS at 9,000 rpm and 68 Nm at 6,500 rpm at launch",
+    "source": "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.com/wiki/Yamaha_Tracer_700",
+  "notes": "Parallel twin; GT version has an 840 mm seat.",
+  "sources": [
+   "https://www.visordown.com/news/new-bikes/yamaha-tracer-700-revealed",
+   "https://issuu.com/yamaha-motor-europe-uk/docs/2020_tracer_700_uk"
+  ]
+ },
+ {
+  "id": "yamaha-xv250",
+  "found": true,
+  "summary": "The XV250 Virago is a small cruiser with an air-cooled 249 cc 60-degree SOHC V-twin, a 685 mm seat and a 5-speed gearbox with chain drive. Wikipedia lists a claimed top speed of 85 mph.",
+  "specs": {
+   "displacement_cc": {
+    "value": 249,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "engine": {
+    "value": "air-cooled SOHC 60 degree V-twin",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "power_hp": {
+    "value": 23,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "weight_kg": {
+    "value": 145,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "seat_mm": {
+    "value": 685,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "fuel_l": {
+    "value": 9.5,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "gearbox": {
+    "value": "5-speed",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "final_drive": {
+    "value": "chain",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   },
+   "top_speed_kmh": {
+    "value": 137,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_XV250"
+   },
+   "brakes": {
+    "value": "single 267 mm disc front",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs"
+   }
+  },
+  "spec_scope": "all years",
+  "highlights": [
+   {
+    "text": "Claimed top speed 137 km/h (85 mph)",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_XV250"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_XV250",
+  "notes": "Air-cooled V-twin, chain drive.",
+  "sources": [
+   "https://motodealers.co.uk/bikes/yamaha/xv250-virago/2022/specs",
+   "https://en.wikipedia.org/wiki/Yamaha_XV250"
+  ]
+ },
+ {
+  "id": "yamaha-xv535",
+  "found": true,
+  "summary": "The XV535 Virago is an air-cooled 535 cc 70-degree V-twin cruiser built from 1987 to 2003. A listing for the 1990 reduced-power version shows shaft drive and a 5-speed gearbox.",
+  "specs": {
+   "years": {
+    "value": "1987 to 2003",
+    "source": "https://www.wikipedia.org/wiki/Yamaha_XV535"
+   },
+   "displacement_cc": {
+    "value": 535,
+    "source": "https://www.wikipedia.org/wiki/Yamaha_XV535"
+   },
+   "engine": {
+    "value": "air-cooled SOHC 70 degree V-twin, 2 valves per cylinder",
+    "source": "https://www.wikipedia.org/wiki/Yamaha_XV535"
+   },
+   "gearbox": {
+    "value": "5-speed",
+    "source": "https://www.motorcycledb.com/Yamaha_XV_535_Virago_%28reduced_Effect%29_1990/29735"
+   },
+   "final_drive": {
+    "value": "shaft",
+    "source": "https://www.motorcycledb.com/Yamaha_XV_535_Virago_%28reduced_Effect%29_1990/29735"
+   },
+   "fuel_l": {
+    "value": 13.5,
+    "source": "https://www.wikipedia.org/wiki/Yamaha_XV535"
+   }
+  },
+  "spec_scope": "1987 to 2003; figures vary a lot by year",
+  "highlights": [
+   {
+    "text": "Power ranges from about 27 hp (1988) to about 46.7 hp (1994 XV535 S)",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-xv-535-s-virago-1994"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Shaft drive (per 1990 listing); power varies by year.",
+  "sources": [
+   "https://www.wikipedia.org/wiki/Yamaha_XV535",
+   "https://www.motorcycledb.com/Yamaha_XV_535_Virago_%28reduced_Effect%29_1990/29735",
+   "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-xv-535-s-virago-1994"
+  ]
+ },
+ {
+  "id": "yamaha-xv750",
+  "found": true,
+  "summary": "The XV750 Virago is an air-cooled 748 cc V-twin cruiser sold from 1981 to about 1998. Early bikes are listed at about 53 hp.",
+  "specs": {
+   "years": {
+    "value": "1981 to 1998",
+    "source": "https://en.enduro.team/Yamaha_XV750_Virago"
+   },
+   "displacement_cc": {
+    "value": 748,
+    "source": "https://en.enduro.team/Yamaha_XV750_Virago"
+   },
+   "engine": {
+    "value": "air-cooled V-twin",
+    "source": "https://en.enduro.team/Yamaha_XV750_Virago"
+   },
+   "power_hp": {
+    "value": 52.8,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV750"
+   },
+   "power_rpm": {
+    "value": 7000,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV750"
+   },
+   "torque_nm": {
+    "value": 58,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV750"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV750"
+   },
+   "fuel_l": {
+    "value": 14.5,
+    "source": "https://en.enduro.team/Yamaha_XV750_Virago"
+   }
+  },
+  "spec_scope": "all years",
+  "highlights": [
+   {
+    "text": "Early bikes claimed 52.8 hp at 7,000 rpm",
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV750"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Weight and seat height vary by year (672 to 724 mm).",
+  "sources": [
+   "https://en.enduro.team/Yamaha_XV750_Virago",
+   "https://www.cyclechaos.com/wiki/Yamaha_XV750"
+  ]
+ },
+ {
+  "id": "yamaha-xv1100",
+  "found": true,
+  "summary": "The XV1100 Virago is a big 1,063 cc V-twin cruiser, produced from 1986 to 1999. It makes about 62 hp and a strong 85 Nm at only 3,000 rpm.",
+  "specs": {
+   "years": {
+    "value": "1986 to 1999",
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "displacement_cc": {
+    "value": 1063,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "power_hp": {
+    "value": 62,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "power_rpm": {
+    "value": 6000,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "torque_nm": {
+    "value": 85,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "torque_rpm": {
+    "value": 3000,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "weight_kg": {
+    "value": 241,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "seat_mm": {
+    "value": 715,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   },
+   "fuel_l": {
+    "value": 17,
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   }
+  },
+  "spec_scope": "all years",
+  "highlights": [
+   {
+    "text": "85 Nm at 3,000 rpm",
+    "source": "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "V-twin.",
+  "sources": [
+   "https://www.cyclechaos.com/wiki/Yamaha_XV1100"
+  ]
+ },
+ {
+  "id": "yamaha-xvs650",
+  "found": true,
+  "summary": "The XVS650 is the Yamaha DragStar or V-Star 650 cruiser, produced between 1997 and 2017 around an air-cooled 649 cc 70-degree V-twin. The Custom has a very low seat at about 695 mm.",
+  "specs": {
+   "years": {
+    "value": "1997 to 2017",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_DragStar_650"
+   },
+   "displacement_cc": {
+    "value": 649,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_DragStar_650"
+   },
+   "engine": {
+    "value": "air-cooled SOHC 70 degree V-twin, 2 valves per cylinder",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_DragStar_650"
+   },
+   "power_hp": {
+    "value": 40,
+    "source": "https://moto-data.net/yamaha/xvs-650-v-star-classic-2008-2010"
+   },
+   "power_rpm": {
+    "value": 6500,
+    "source": "https://moto-data.net/yamaha/xvs-650-v-star-classic-2008-2010"
+   },
+   "torque_nm": {
+    "value": 50.9,
+    "source": "https://moto-data.net/yamaha/xvs-650-v-star-classic-2008-2010"
+   },
+   "torque_rpm": {
+    "value": 3000,
+    "source": "https://moto-data.net/yamaha/xvs-650-v-star-classic-2008-2010"
+   },
+   "seat_mm": {
+    "value": 695,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xvs650/2018/specs"
+   },
+   "fuel_l": {
+    "value": 16,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xvs650/2018/specs"
+   },
+   "weight_kg": {
+    "value": 233,
+    "source": "https://motodealers.co.uk/bikes/yamaha/xvs650/2018/specs"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://motodealers.co.uk/bikes/yamaha/xvs650/2018/specs"
+   }
+  },
+  "spec_scope": "Classic 2008 to 2010 power; Custom seat height",
+  "highlights": [
+   {
+    "text": "About 40 hp at 6,500 rpm and 51 Nm",
+    "source": "https://moto-data.net/yamaha/xvs-650-v-star-classic-2008-2010"
+   },
+   {
+    "text": "Produced 1997 to 2017",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_DragStar_650"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_DragStar_650",
+  "notes": "Air-cooled V-twin; Classic seat 708 mm.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yamaha_DragStar_650",
+   "https://moto-data.net/yamaha/xvs-650-v-star-classic-2008-2010",
+   "https://motodealers.co.uk/bikes/yamaha/xvs650/2018/specs"
+  ]
+ },
+ {
+  "id": "yamaha-xvs950",
+  "found": true,
+  "summary": "The XVS950 is the V-Star 950 family, which includes the Bolt (called XV950 outside the US), a 942 cc air-cooled V-twin cruiser. It has a 5-speed gearbox and belt final drive.",
+  "specs": {
+   "displacement_cc": {
+    "value": 942,
+    "source": "https://en.wikipedia.org/wiki/Yamaha_Bolt"
+   },
+   "engine": {
+    "value": "air-cooled 60 degree V-twin",
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "power_hp": {
+    "value": 52.4,
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "power_rpm": {
+    "value": 6000,
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "torque_nm": {
+    "value": 80.4,
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "torque_rpm": {
+    "value": 3000,
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "weight_kg": {
+    "value": 247,
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   "gearbox": {
+    "value": "5-speed",
+    "source": "https://www.moto-data.net/yamaha/xvs-950-v-star-bolt-2016-2017"
+   },
+   "final_drive": {
+    "value": "belt",
+    "source": "https://www.moto-data.net/yamaha/xvs-950-v-star-bolt-2016-2017"
+   }
+  },
+  "spec_scope": "Bolt 2018 to 2019 (power) and 2016 to 2017 (drive)",
+  "highlights": [
+   {
+    "text": "52.4 hp at 6,000 rpm",
+    "source": "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019"
+   },
+   {
+    "text": "Belt final drive",
+    "source": "https://www.moto-data.net/yamaha/xvs-950-v-star-bolt-2016-2017"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Yamaha_Bolt",
+  "notes": "Belt drive; sold as XV950 outside the US.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yamaha_Bolt",
+   "https://moto-data.net/yamaha/xvs-950-v-star-bolt-2018-2019",
+   "https://www.moto-data.net/yamaha/xvs-950-v-star-bolt-2016-2017"
+  ]
+ },
+ {
+  "id": "yamaha-nmax-125",
+  "found": true,
+  "summary": "The NMAX 125 is Yamaha's 125 cc maxi-style scooter, with the 2021 and later model replacing the 2015 to 2019 version. It makes about 12 hp and has a low 765 mm seat.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://1000ps.com/en-us/model/8313/yamaha-nmax-125"
+   },
+   "power_hp": {
+    "value": 12.2,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   },
+   "torque_nm": {
+    "value": 11.2,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   },
+   "weight_kg": {
+    "value": 131,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2021/G125YM/Factsheets/2021-G125YM_en-GB.pdf"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2021/G125YM/Factsheets/2021-G125YM_en-GB.pdf"
+   },
+   "seat_mm": {
+    "value": 765,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   },
+   "fuel_l": {
+    "value": 7.1,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   }
+  },
+  "spec_scope": "2021 on model",
+  "highlights": [
+   {
+    "text": "12.2 hp and 11.2 Nm",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   },
+   {
+    "text": "Seat height 765 mm",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Scooter; Tech MAX variant differs.",
+  "sources": [
+   "https://1000ps.com/en-us/model/8313/yamaha-nmax-125",
+   "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-nmax-125-2022",
+   "https://cdn2.yamaha-motor.eu/prod/product-assets/2021/G125YM/Factsheets/2021-G125YM_en-GB.pdf"
+  ]
+ },
+ {
+  "id": "yamaha-nmax-155",
+  "found": true,
+  "summary": "The NMAX 155 is Yamaha's 155 cc scooter sold in Asia, Europe and elsewhere. It uses a dry centrifugal clutch with a Variomatic CVT and belt drive, and makes about 15 hp.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "power_hp": {
+    "value": 15.1,
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "torque_nm": {
+    "value": 14,
+    "source": "https://bikedekho.com/yamaha/nmax-155/specifications"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://bikedekho.com/yamaha/nmax-155/specifications"
+   },
+   "weight_kg": {
+    "value": 131,
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "seat_mm": {
+    "value": 765,
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "fuel_l": {
+    "value": 7.1,
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   },
+   "final_drive": {
+    "value": "CVT belt",
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   }
+  },
+  "spec_scope": "2021 on",
+  "highlights": [
+   {
+    "text": "About 15 hp from 155 cc",
+    "source": "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "CVT scooter; tank is 6.6 or 7.1 L depending on source.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/8865/yamaha-nmax-155",
+   "https://bikedekho.com/yamaha/nmax-155/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-xmax-125",
+  "found": true,
+  "summary": "The XMAX 125 is a sporty 125 cc maxi-scooter sold in Europe. The Tech MAX variant makes 13.4 hp against 12.2 hp for the standard bike.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "power_hp": {
+    "value": 12.2,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "torque_nm": {
+    "value": 11.2,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "torque_rpm": {
+    "value": 6000,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "weight_kg": {
+    "value": 167,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "seat_mm": {
+    "value": 800,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   }
+  },
+  "spec_scope": "2021 to 2025 models",
+  "highlights": [
+   {
+    "text": "Tech MAX version 13.4 hp at 9,000 rpm",
+    "source": "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Scooter; Tech MAX variant differs.",
+  "sources": [
+   "https://1000ps.com/en-us/model/2500/yamaha-xmax-125"
+  ]
+ },
+ {
+  "id": "yamaha-xmax-300",
+  "found": true,
+  "summary": "The XMAX 300 is a maxi-scooter with a 292 cc single-cylinder engine. Yamaha's 2025 factsheet lists 20.6 kW and a 13 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 292,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "engine": {
+    "value": "single cylinder",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "power_hp": {
+    "value": 27.6,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "torque_nm": {
+    "value": 28.9,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "torque_rpm": {
+    "value": 5750,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "weight_kg": {
+    "value": 187,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   }
+  },
+  "spec_scope": "2025 Tech MAX",
+  "highlights": [
+   {
+    "text": "20.6 kW at 7,250 rpm and 28.9 Nm",
+    "source": "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "CVT scooter. Power converted from 20.6 kW.",
+  "sources": [
+   "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/XMAX300ASVH/Factsheets/2025-XMAX300ASVH_en.pdf"
+  ]
+ },
+ {
+  "id": "yamaha-tmax",
+  "found": true,
+  "summary": "The TMAX is Yamaha's maxi-scooter, first launched in Europe around 2000 with a 500 cc twin, followed by a second generation in 2004. The current 560 has a 562 cc liquid-cooled parallel twin, an A2-compliant version and a 15 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 562,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "engine": {
+    "value": "liquid-cooled DOHC parallel twin",
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "power_hp": {
+    "value": 47.6,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "torque_nm": {
+    "value": 55.7,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "torque_rpm": {
+    "value": 5250,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "weight_kg": {
+    "value": 216,
+    "source": "https://www.torquepedia.com/yamaha/tmax/2020/560"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.torquepedia.com/yamaha/tmax/2020/560"
+   },
+   "seat_mm": {
+    "value": 800,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   "final_drive": {
+    "value": "CVT",
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   }
+  },
+  "spec_scope": "TMAX 560, 2020 on",
+  "highlights": [
+   {
+    "text": "Original 500 cc TMAX launched in Europe in 2000, second generation 2004",
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   },
+   {
+    "text": "562 cc, 55.7 Nm at 5,250 rpm",
+    "source": "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://www.wikipedia.org/wiki/Yamaha_TMAX",
+  "notes": "CVT with a belt; sources differ on power (46.9 to 47.6 hp).",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/9942/yamaha-tmax-560",
+   "https://www.torquepedia.com/yamaha/tmax/2020/560"
+  ]
+ },
+ {
+  "id": "yamaha-aerox-155",
+  "found": true,
+  "summary": "The Aerox 155 is a sporty scooter with a 155 cc liquid-cooled single, sold in Asia and India. It has a 5.5 litre tank and 24.5 litre under-seat storage.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "engine": {
+    "value": "liquid-cooled single",
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "power_hp": {
+    "value": 14.75,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "torque_nm": {
+    "value": 13.9,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "weight_kg": {
+    "value": 126,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "seat_mm": {
+    "value": 790,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   },
+   "fuel_l": {
+    "value": 5.5,
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   }
+  },
+  "spec_scope": "India model",
+  "highlights": [
+   {
+    "text": "24.5 litre under-seat storage",
+    "source": "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Liquid-cooled single.",
+  "sources": [
+   "https://www.91wheels.com/scooter/yamaha/aerox-155/specifications"
+  ]
+ },
+ {
+  "id": "yamaha-mio",
+  "found": true,
+  "summary": "The Mio is a small Yamaha scooter family for Southeast Asia, built by PT Yamaha Indonesia Motor Manufacturing. The Mio i125 lists 9.5 PS, a 750 mm seat and 92 kg wet weight.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "power_hp": {
+    "value": 9.5,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "torque_nm": {
+    "value": 9.6,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "weight_kg": {
+    "value": 92,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "seat_mm": {
+    "value": 750,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   },
+   "fuel_l": {
+    "value": 4.2,
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   }
+  },
+  "spec_scope": "Mio i125 (Philippines, 2022)",
+  "highlights": [
+   {
+    "text": "9.5 PS at 8,000 rpm",
+    "source": "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://Www.wikipedia.org/wiki/Yamaha_Mio",
+  "notes": "Older Mio Sporty is carburetted with 7.6 hp.",
+  "sources": [
+   "https://motodealers.co.uk/bikes/yamaha/mio-i125/2022/specs"
+  ]
+ },
+ {
+  "id": "yamaha-fazzio",
+  "found": true,
+  "summary": "The Fazzio is a retro-styled 125 cc scooter sold in Southeast Asia, also called Mio Fazzio. It has a 750 mm seat and weighs about 95 kg.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "power_hp": {
+    "value": 8.3,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "power_rpm": {
+    "value": 6500,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "torque_nm": {
+    "value": 10.6,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "torque_rpm": {
+    "value": 4500,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "weight_kg": {
+    "value": 95,
+    "source": "https://www.oto.com/en/motor-baru/yamaha/fazzio/spesifikasi"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.oto.com/en/motor-baru/yamaha/fazzio/spesifikasi"
+   },
+   "seat_mm": {
+    "value": 750,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "fuel_l": {
+    "value": 5.1,
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "final_drive": {
+    "value": "CVT",
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   },
+   "brakes": {
+    "value": "disc front",
+    "source": "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php"
+   }
+  },
+  "spec_scope": "125 cc",
+  "highlights": [
+   {
+    "text": "Seat height 750 mm, kerb weight about 95 kg",
+    "source": "https://www.oto.com/en/motor-baru/yamaha/fazzio/spesifikasi"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "CVT; fuel injected per Philippine listing.",
+  "sources": [
+   "https://bikez.com/motorcycles/yamaha_fazzio_125_2023.php",
+   "https://www.oto.com/en/motor-baru/yamaha/fazzio/spesifikasi"
+  ]
+ },
+ {
+  "id": "yamaha-exciter",
+  "found": true,
+  "summary": "The Exciter is Yamaha's sporty underbone, popular in Vietnam. The 155 cc version, introduced in late 2020, uses the same engine as the R15 and MT-15, while the earlier 150 made 15.4 PS.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "power_hp": {
+    "value": 17.7,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "power_rpm": {
+    "value": 9500,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "torque_nm": {
+    "value": 14.4,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "weight_kg": {
+    "value": 121,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   },
+   "fuel_l": {
+    "value": 5.4,
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   }
+  },
+  "spec_scope": "Exciter 155",
+  "highlights": [
+   {
+    "text": "155 cc upgrade came in late 2020",
+    "source": "https://en.wikipedia.org/wiki/Yamaha_T-150"
+   },
+   {
+    "text": "Earlier 150: 15.4 PS at 8,500 rpm",
+    "source": "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Underbone with R15 derived engine.",
+  "sources": [
+   "https://www.autocarindia.com/stories/yamaha-exciter-155-in-pictures-1082",
+   "https://en.wikipedia.org/wiki/Yamaha_T-150"
+  ]
+ },
+ {
+  "id": "yamaha-finn",
+  "found": true,
+  "summary": "The Finn is a 115 cc air-cooled underbone sold in Thailand and Indonesia. The engine is an SOHC single with a 50.0 x 57.9 mm bore and stroke, with a front disc brake on Thai versions.",
+  "specs": {
+   "displacement_cc": {
+    "value": 115,
+    "source": "https://www.zigwheels.co.th/new-motorcycles/yamaha/finn/specifications"
+   },
+   "engine": {
+    "value": "air-cooled SOHC single",
+    "source": "https://www.zigwheels.co.th/new-motorcycles/yamaha/finn/specifications"
+   },
+   "brakes": {
+    "value": "disc front (Thai version)",
+    "source": "https://www.zigwheels.co.th/new-motorcycles/yamaha/finn/specifications"
+   }
+  },
+  "spec_scope": "115 cc",
+  "highlights": [
+   {
+    "text": "Indonesian claim of 96 km per litre",
+    "source": "https://www.zigwheels.co.id/motovaganza/yamaha-finn-terbaru-dijual-hanya-rp19-jutaan-klaim-efisiensi-bbm-96-km-liter/"
+   },
+   {
+    "text": "Thai claim up to 91.18 km per litre",
+    "source": "https://www.zigwheels.co.th/new-motorcycles/yamaha/finn/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Power, weight and tank not found.",
+  "sources": [
+   "https://www.zigwheels.co.th/new-motorcycles/yamaha/finn/specifications",
+   "https://www.zigwheels.co.id/motovaganza/yamaha-finn-terbaru-dijual-hanya-rp19-jutaan-klaim-efisiensi-bbm-96-km-liter/"
+  ]
+ },
+ {
+  "id": "yamaha-jupiter-z1",
+  "found": true,
+  "summary": "The Jupiter Z1 is an Indonesian underbone with a 4-stroke SOHC fuel-injected engine. Reported figures for the 2023 model are 9.9 hp and 9.8 Nm.",
+  "specs": {
+   "power_hp": {
+    "value": 9.9,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   },
+   "torque_nm": {
+    "value": 9.8,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   },
+   "torque_rpm": {
+    "value": 6750,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   },
+   "seat_mm": {
+    "value": 765,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   },
+   "fuel_l": {
+    "value": 4.1,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   },
+   "weight_kg": {
+    "value": 101,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   }
+  },
+  "spec_scope": "2023 model",
+  "highlights": [
+   {
+    "text": "Seat 765 mm, tank 4.1 L",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Displacement listed as 113.7 or 124.7 cc depending on source, so not recorded.",
+  "sources": [
+   "https://www.ultimatespecs.com/motorcycles-specs/yamaha/yamaha-jupiter-z1-2023"
+  ]
+ },
+ {
+  "id": "yamaha-jupiter-mx",
+  "found": true,
+  "summary": "The Jupiter MX 135 is a liquid-cooled 134.4 cc underbone with a 4-valve SOHC engine. Its blog-sourced figures are 9.21 kW and 12.41 Nm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 134.4,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "engine": {
+    "value": "liquid-cooled 4-valve SOHC",
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "power_hp": {
+    "value": 12.4,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "power_rpm": {
+    "value": 8500,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "torque_nm": {
+    "value": 12.41,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "seat_mm": {
+    "value": 765,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   },
+   "fuel_l": {
+    "value": 4,
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   }
+  },
+  "spec_scope": "Jupiter MX 135 LC",
+  "highlights": [
+   {
+    "text": "12.41 Nm at 5,500 rpm",
+    "source": "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Power converted from 9.21 kW; later models are the MX King 150.",
+  "sources": [
+   "https://bikedekho1.blogspot.com/2012/07/jupiter-mx-135.html"
+  ]
+ },
+ {
+  "id": "royal-enfield-classic-350",
+  "found": true,
+  "summary": "The Classic 350 is Royal Enfield's best known retro single, now built on the 349 cc J-series engine that replaced the old 346 cc unit. It makes about 20.2 bhp and weighs 195 kg with a full 13 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 349,
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "engine": {
+    "value": "J-series single",
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "power_hp": {
+    "value": 20.2,
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "power_rpm": {
+    "value": 6100,
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "torque_nm": {
+    "value": 27,
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "torque_rpm": {
+    "value": 4000,
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "weight_kg": {
+    "value": 195,
+    "source": "https://www.royalenfield.com/content/dam/royal-enfield/nepal/motorcycles/classic-350/specification/royal-enfield-classic-350-technical-specifications.pdf"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.royalenfield.com/content/dam/royal-enfield/nepal/motorcycles/classic-350/specification/royal-enfield-classic-350-technical-specifications.pdf"
+   },
+   "seat_mm": {
+    "value": 805,
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://www.royalenfield.com/content/dam/royal-enfield/nepal/motorcycles/classic-350/specification/royal-enfield-classic-350-technical-specifications.pdf"
+   }
+  },
+  "spec_scope": "J-series, 2021 on",
+  "highlights": [
+   {
+    "text": "20.2 bhp at 6,100 rpm and 27 Nm at 4,000 rpm",
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   },
+   {
+    "text": "Pre J-series 2020 model: 19.1 bhp and 28 Nm",
+    "source": "https://91wheels.com/bikes/royalenfield/classic-350/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Royal_Enfield_Classic",
+  "notes": "New J-series engine since 2021; the old model had a 346 cc engine.",
+  "sources": [
+   "https://91wheels.com/bikes/royalenfield/classic-350/specifications",
+   "https://www.royalenfield.com/content/dam/royal-enfield/nepal/motorcycles/classic-350/specification/royal-enfield-classic-350-technical-specifications.pdf"
+  ]
+ },
+ {
+  "id": "royal-enfield-bullet-350",
+  "found": true,
+  "summary": "The Bullet 350 is Royal Enfield's traditional single. The 2023 and later model uses the 349 cc J-series engine with 20.2 bhp, while the 2019 to 2023 model made 19.1 bhp.",
+  "specs": {
+   "displacement_cc": {
+    "value": 349,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   },
+   "power_hp": {
+    "value": 20.2,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   },
+   "power_rpm": {
+    "value": 6100,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   },
+   "torque_nm": {
+    "value": 27,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   },
+   "torque_rpm": {
+    "value": 4000,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   },
+   "weight_kg": {
+    "value": 195,
+    "source": "https://www.1000ps.com/en-us/model/12212/royal-enfield-bullet-350"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.1000ps.com/en-us/model/12212/royal-enfield-bullet-350"
+   },
+   "seat_mm": {
+    "value": 805,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   }
+  },
+  "spec_scope": "2023 on (2019 to 2023 version: 19.1 bhp, 28 Nm, 186 kg, 800 mm seat, 13.5 L)",
+  "highlights": [
+   {
+    "text": "20.2 bhp and 27 Nm from 349 cc",
+    "source": "https://91wheels.com/bikes/royalenfield/bullet-350/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "J-series engine from 2023.",
+  "sources": [
+   "https://91wheels.com/bikes/royalenfield/bullet-350/specifications",
+   "https://www.1000ps.com/en-us/model/12212/royal-enfield-bullet-350"
+  ]
+ },
+ {
+  "id": "royal-enfield-bullet-500",
+  "found": true,
+  "summary": "The Bullet 500 is Royal Enfield's long-running 499 cc single, sold with carburettor and later fuel-injected versions. The 2018 to 2020 standard model makes 26.1 bhp and has a 5-speed gearbox.",
+  "specs": {
+   "displacement_cc": {
+    "value": 499,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "power_hp": {
+    "value": 26.1,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "power_rpm": {
+    "value": 5100,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "torque_nm": {
+    "value": 40.9,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "torque_rpm": {
+    "value": 3800,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "weight_kg": {
+    "value": 193,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "seat_mm": {
+    "value": 800,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "fuel_l": {
+    "value": 13.5,
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "gearbox": {
+    "value": "5-speed",
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   },
+   "fuel_system": {
+    "value": "carburettor",
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   }
+  },
+  "spec_scope": "2018 to 2020 carburettor Standard (EFI ~27.2 hp)",
+  "highlights": [
+   {
+    "text": "EFI version about 27.2 hp",
+    "source": "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Carburettor 2018 to 2020; EFI version also existed.",
+  "sources": [
+   "https://www.91wheels.com/bikes/royalenfield/bullet-500/standard"
+  ]
+ },
+ {
+  "id": "royal-enfield-classic-500",
+  "found": true,
+  "summary": "The Classic 500 is the 499 cc version of Royal Enfield's retro single, with a 5-speed gearbox and chain drive. The 2017 to 2020 standard model has since been discontinued.",
+  "specs": {
+   "displacement_cc": {
+    "value": 499,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "power_hp": {
+    "value": 26.1,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "power_rpm": {
+    "value": 5100,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "torque_nm": {
+    "value": 40.9,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "torque_rpm": {
+    "value": 3800,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "weight_kg": {
+    "value": 193,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "seat_mm": {
+    "value": 800,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "fuel_l": {
+    "value": 13.5,
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   },
+   "gearbox": {
+    "value": "5-speed",
+    "source": "https://www.91wheels.com/bikes/royalenfield/classic-500/standard"
+   }
+  },
+  "spec_scope": "2017 to 2020 Standard (EFI 27.2 bhp)",
+  "highlights": [
+   {
+    "text": "EFI: 27.2 bhp at 5,250 rpm and 41.3 Nm at 4,000 rpm",
+    "source": "https://bikewale.com/royalenfield-bikes/classic-500/"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Chain drive; discontinued in India.",
+  "sources": [
+   "https://www.91wheels.com/bikes/royalenfield/classic-500/standard",
+   "https://bikewale.com/royalenfield-bikes/classic-500/"
+  ]
+ },
+ {
+  "id": "royal-enfield-meteor-350",
+  "found": true,
+  "summary": "The Meteor 350 is a single-cylinder Royal Enfield rated at about 20 bhp and 27 Nm. It has a 15 litre tank and a low 765 mm seat.",
+  "specs": {
+   "power_hp": {
+    "value": 20.2,
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   },
+   "power_rpm": {
+    "value": 6100,
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   },
+   "torque_nm": {
+    "value": 27,
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   },
+   "torque_rpm": {
+    "value": 4000,
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   },
+   "weight_kg": {
+    "value": 191,
+    "source": "https://www.visordown.com/news/new-bikes/official-specs-and-price-uk-bound-royal-enfield-meteor-350"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.visordown.com/news/new-bikes/official-specs-and-price-uk-bound-royal-enfield-meteor-350"
+   },
+   "seat_mm": {
+    "value": 765,
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "Seat height 765 mm, tank 15 L",
+    "source": "https://91wheels.com/bikes/royalenfield/meteor-350/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Kerb weight with 90% fuel and oil.",
+  "sources": [
+   "https://91wheels.com/bikes/royalenfield/meteor-350/specifications",
+   "https://www.visordown.com/news/new-bikes/official-specs-and-price-uk-bound-royal-enfield-meteor-350"
+  ]
+ },
+ {
+  "id": "royal-enfield-hunter-350",
+  "found": true,
+  "summary": "The Hunter 350 is a Royal Enfield 349 cc single rated at 20.2 bhp and 27 Nm, with a 13 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 349,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/hunter-350/specifications"
+   },
+   "power_hp": {
+    "value": 20.2,
+    "source": "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+   },
+   "power_rpm": {
+    "value": 6100,
+    "source": "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+   },
+   "torque_nm": {
+    "value": 27,
+    "source": "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+   },
+   "torque_rpm": {
+    "value": 4000,
+    "source": "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+   },
+   "weight_kg": {
+    "value": 181,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/hunter-350/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/hunter-350/specifications"
+   },
+   "seat_mm": {
+    "value": 790,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/hunter-350/specifications"
+   },
+   "fuel_l": {
+    "value": 13,
+    "source": "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "20.2 bhp at 6,100 rpm",
+    "source": "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Weight and seat height differ by source (177 to 181 kg, 790 to 800 mm).",
+  "sources": [
+   "https://www.autocarindia.com/bikes/royal-enfield/hunter-350/specifications",
+   "https://91wheels.com/bikes/royalenfield/hunter-350/specifications"
+  ]
+ },
+ {
+  "id": "royal-enfield-interceptor-650",
+  "found": true,
+  "summary": "The Interceptor 650 is a 648 cc parallel-twin with a 6-speed gearbox. It makes about 47 hp and 52 Nm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 648,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "engine": {
+    "value": "parallel twin",
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "power_hp": {
+    "value": 46.8,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "torque_nm": {
+    "value": 52.3,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "torque_rpm": {
+    "value": 5150,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "seat_mm": {
+    "value": 804,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "fuel_l": {
+    "value": 13.7,
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   },
+   "gearbox": {
+    "value": "6-speed",
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   }
+  },
+  "spec_scope": "all years",
+  "highlights": [
+   {
+    "text": "About 47 hp and 52 Nm",
+    "source": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650",
+  "notes": "Weight varies by source (202 to 218 kg).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Royal_Enfield_Interceptor_650"
+  ]
+ },
+ {
+  "id": "royal-enfield-continental-gt650",
+  "found": true,
+  "summary": "The Continental GT 650 is a 648 cc parallel-twin cafe racer with dual-channel ABS and a slipper clutch. It makes about 47 hp and 52 Nm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 648,
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "engine": {
+    "value": "air-cooled parallel twin",
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "power_hp": {
+    "value": 47.4,
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "torque_nm": {
+    "value": 52.3,
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "torque_rpm": {
+    "value": 5150,
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "seat_mm": {
+    "value": 793,
+    "source": "https://kiwirider.co.nz/kiwi-rider-march-2021-vol1/0479686001614571297/p56"
+   },
+   "fuel_l": {
+    "value": 12.5,
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   },
+   "brakes": {
+    "value": "disc front and rear, dual-channel ABS",
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   }
+  },
+  "spec_scope": "all years",
+  "highlights": [
+   {
+    "text": "47.4 PS at 7,250 rpm",
+    "source": "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Weights range from 202 to 214 kg by source; slipper clutch.",
+  "sources": [
+   "https://www.zigwheels.com/royal-enfield-bikes/continental-gt-650/specifications",
+   "https://kiwirider.co.nz/kiwi-rider-march-2021-vol1/0479686001614571297/p56"
+  ]
+ },
+ {
+  "id": "royal-enfield-super-meteor-650",
+  "found": true,
+  "summary": "The Super Meteor 650 is a cruiser-style bike with the 648 cc twin, a 740 mm seat and a 15.7 litre tank. It is heavy at 241 kg kerb.",
+  "specs": {
+   "displacement_cc": {
+    "value": 648,
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   },
+   "power_hp": {
+    "value": 46.3,
+    "source": "https://www.bikewale.com/news/royal-enfield-super-meteor-650-fuel-economy-engine-specifications-prices-and-more/"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://www.bikewale.com/news/royal-enfield-super-meteor-650-fuel-economy-engine-specifications-prices-and-more/"
+   },
+   "torque_nm": {
+    "value": 52.3,
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   },
+   "torque_rpm": {
+    "value": 5650,
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   },
+   "weight_kg": {
+    "value": 241,
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   },
+   "seat_mm": {
+    "value": 740,
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   },
+   "fuel_l": {
+    "value": 15.7,
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "52.3 Nm at 5,650 rpm",
+    "source": "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Parallel twin; seat 740 mm.",
+  "sources": [
+   "https://www.91wheels.com/bikes/royalenfield/super-meteor-650/specifications",
+   "https://www.bikewale.com/news/royal-enfield-super-meteor-650-fuel-economy-engine-specifications-prices-and-more/"
+  ]
+ },
+ {
+  "id": "royal-enfield-shotgun-650",
+  "found": true,
+  "summary": "The Shotgun 650 is built on the 648 cc twin and makes about 46.4 bhp and 52.3 Nm. It has a 795 mm seat and a 13.8 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 648,
+    "source": "https://www.91wheels.com:443/bikes/royalenfield/shotgun-650/specifications"
+   },
+   "power_hp": {
+    "value": 46.39,
+    "source": "https://www.91wheels.com:443/bikes/royalenfield/shotgun-650/specifications"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://www.91wheels.com:443/bikes/royalenfield/shotgun-650/specifications"
+   },
+   "torque_nm": {
+    "value": 52.3,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/specifications"
+   },
+   "torque_rpm": {
+    "value": 5650,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/specifications"
+   },
+   "weight_kg": {
+    "value": 240,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/price-in-shamli"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/price-in-shamli"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://www.91wheels.com:443/bikes/royalenfield/shotgun-650/specifications"
+   },
+   "fuel_l": {
+    "value": 13.8,
+    "source": "https://www.91wheels.com:443/bikes/royalenfield/shotgun-650/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "52.3 Nm at 5,650 rpm",
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Kerb weight with 90% fuel and oil.",
+  "sources": [
+   "https://www.91wheels.com:443/bikes/royalenfield/shotgun-650/specifications",
+   "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/specifications",
+   "https://www.autocarindia.com/bikes/royal-enfield/shotgun-650/price-in-shamli"
+  ]
+ },
+ {
+  "id": "royal-enfield-guerrilla-450",
+  "found": true,
+  "summary": "The Guerrilla 450 is a roadster with a 452 cc engine making about 39.5 bhp and 40 Nm. It has a 780 mm seat, which one source calls the lowest in its class, and 11 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 452,
+    "source": "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications"
+   },
+   "power_hp": {
+    "value": 39.47,
+    "source": "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications"
+   },
+   "torque_nm": {
+    "value": 40,
+    "source": "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications"
+   },
+   "weight_kg": {
+    "value": 185,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/guerrilla-450/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/guerrilla-450/specifications"
+   },
+   "seat_mm": {
+    "value": 780,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/guerrilla-450/specifications"
+   },
+   "fuel_l": {
+    "value": 11,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/guerrilla-450/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "About 40 PS at 8,000 rpm and 40 Nm",
+    "source": "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Kerb weight with 90% fuel and oil.",
+  "sources": [
+   "https://www.91wheels.com/bikes/royalenfield/guerrilla-450/specifications",
+   "https://www.autocarindia.com/bikes/royal-enfield/guerrilla-450/specifications"
+  ]
+ },
+ {
+  "id": "royal-enfield-classic-650",
+  "found": true,
+  "summary": "The Classic 650 is a 648 cc parallel twin with a 800 mm seat and a 14.8 litre tank per Royal Enfield. It makes about 46 to 47 bhp.",
+  "specs": {
+   "displacement_cc": {
+    "value": 648,
+    "source": "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/"
+   },
+   "engine": {
+    "value": "parallel twin",
+    "source": "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/"
+   },
+   "power_hp": {
+    "value": 46.3,
+    "source": "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/"
+   },
+   "power_rpm": {
+    "value": 7250,
+    "source": "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/"
+   },
+   "torque_nm": {
+    "value": 52.3,
+    "source": "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/"
+   },
+   "torque_rpm": {
+    "value": 5650,
+    "source": "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/"
+   },
+   "weight_kg": {
+    "value": 243,
+    "source": "https://www.royalenfield.com/uk/en/motorcycles/classic650"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.royalenfield.com/uk/en/motorcycles/classic650"
+   },
+   "seat_mm": {
+    "value": 800,
+    "source": "https://www.royalenfield.com/uk/en/motorcycles/classic650"
+   },
+   "fuel_l": {
+    "value": 14.8,
+    "source": "https://www.royalenfield.com/uk/en/motorcycles/classic650"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "Kerb weight 243 kg (90% fuel and oil)",
+    "source": "https://www.royalenfield.com/uk/en/motorcycles/classic650"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Parallel twin.",
+  "sources": [
+   "https://www.team-bhp.com/new-bikes/royal-enfield/classic-650/specifications/",
+   "https://www.royalenfield.com/uk/en/motorcycles/classic650"
+  ]
+ },
+ {
+  "id": "royal-enfield-thunderbird-350",
+  "found": true,
+  "summary": "The Thunderbird 350 is a discontinued 346 cc Twinspark single cruiser with a big 20 litre tank. It makes 19.8 bhp and 28 Nm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 346,
+    "source": "https://motodealers.co.uk/bike/enfield/thunderbird-350/2019/specs"
+   },
+   "engine": {
+    "value": "single cylinder 4-stroke Twinspark",
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "power_hp": {
+    "value": 19.8,
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "power_rpm": {
+    "value": 5250,
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "torque_nm": {
+    "value": 28,
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "torque_rpm": {
+    "value": 4000,
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "weight_kg": {
+    "value": 197,
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   "seat_mm": {
+    "value": 775,
+    "source": "https://motodealers.co.uk/bike/enfield/thunderbird-350/2019/specs"
+   },
+   "fuel_l": {
+    "value": 20,
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   }
+  },
+  "spec_scope": "last models (2017 to 2019)",
+  "highlights": [
+   {
+    "text": "20 litre fuel tank",
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   },
+   {
+    "text": "Facelift in October 2012",
+    "source": "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Discontinued; the 350X is a separate variant.",
+  "sources": [
+   "https://motodealers.co.uk/bike/enfield/thunderbird-350/2019/specs",
+   "https://www.91wheels.com/bikes/royalenfield/thunderbird-350/specifications"
+  ]
+ },
+ {
+  "id": "royal-enfield-himalayan-411",
+  "found": true,
+  "summary": "The Himalayan 411 is Royal Enfield's air-cooled 411 cc adventure bike, built from 2016 and replaced by the Himalayan 450. It makes about 24 bhp and 32 Nm, with a 15 litre tank and 800 mm seat.",
+  "specs": {
+   "years": {
+    "value": "2016 on",
+    "source": "https://www.cyclechaos.com/wiki/Royal_Enfield_Himalayan_411"
+   },
+   "displacement_cc": {
+    "value": 411,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "engine": {
+    "value": "air-cooled SOHC single",
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "power_hp": {
+    "value": 24.3,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "power_rpm": {
+    "value": 6500,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "torque_nm": {
+    "value": 32,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "torque_rpm": {
+    "value": 4500,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "seat_mm": {
+    "value": 800,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   }
+  },
+  "spec_scope": "2016 to about 2023",
+  "highlights": [
+   {
+    "text": "Succeeded by the Himalayan 450",
+    "source": "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Air-cooled; weight sources range 182 to 199 kg.",
+  "sources": [
+   "https://www.cyclechaos.com/wiki/Royal_Enfield_Himalayan_411",
+   "https://www.91wheels.com/bikes/royalenfield/himalayan/specifications"
+  ]
+ },
+ {
+  "id": "royal-enfield-himalayan-450",
+  "found": true,
+  "summary": "The Himalayan 450 is a liquid-cooled 452 cc adventure bike that replaced the 411. It has a 17 litre tank and 230 mm ground clearance, with an adjustable seat.",
+  "specs": {
+   "displacement_cc": {
+    "value": 452,
+    "source": "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications"
+   },
+   "engine": {
+    "value": "liquid-cooled single",
+    "source": "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications"
+   },
+   "power_hp": {
+    "value": 39.47,
+    "source": "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications"
+   },
+   "torque_nm": {
+    "value": 40,
+    "source": "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications"
+   },
+   "weight_kg": {
+    "value": 196,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/himalayan/specs"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/himalayan/specs"
+   },
+   "seat_mm": {
+    "value": 825,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/himalayan/specs"
+   },
+   "fuel_l": {
+    "value": 17,
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/himalayan/specs"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "17 litre tank and 230 mm ground clearance",
+    "source": "https://www.autocarindia.com/bikes/royal-enfield/himalayan/specs"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Liquid-cooled; seat adjustable (low seat 805 to 810 mm).",
+  "sources": [
+   "https://www.91wheels.com/bike/royalenfield/himalayan-450/specifications",
+   "https://www.autocarindia.com/bikes/royal-enfield/himalayan/specs"
+  ]
+ },
+ {
+  "id": "royal-enfield-scram-411",
+  "found": true,
+  "summary": "The Scram 411 is a 411 cc air-cooled single with a 795 mm seat and 200 mm ground clearance. It makes about 24.3 bhp and 32 Nm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 411,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "engine": {
+    "value": "air-cooled single",
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "power_hp": {
+    "value": 24.3,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "power_rpm": {
+    "value": 6500,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "torque_nm": {
+    "value": 32,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "weight_kg": {
+    "value": 185,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "200 mm ground clearance",
+    "source": "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Air-cooled single.",
+  "sources": [
+   "https://www.91wheels.com/bikes/royalenfield/scram-411/specifications"
+  ]
+ },
+ {
+  "id": "piaggio-liberty-125",
+  "found": true,
+  "summary": "The Liberty 125 is a Piaggio city scooter with a 6 litre tank and a seat of about 790 mm. The Euro 5 version makes about 10.9 hp.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://www.1000PS.com/en-us/model/10629/piaggio-liberty-125"
+   },
+   "power_hp": {
+    "value": 10.9,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   },
+   "power_rpm": {
+    "value": 8250,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   },
+   "torque_nm": {
+    "value": 10.8,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   },
+   "weight_kg": {
+    "value": 124,
+    "source": "https://www.1000PS.com/en-us/model/10629/piaggio-liberty-125"
+   },
+   "weight_type": {
+    "value": "dry",
+    "source": "https://www.1000PS.com/en-us/model/10629/piaggio-liberty-125"
+   },
+   "seat_mm": {
+    "value": 790,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   },
+   "fuel_l": {
+    "value": 6,
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   }
+  },
+  "spec_scope": "Euro 5 version",
+  "highlights": [
+   {
+    "text": "Euro 5 version rated 10.9 hp at 8,250 rpm",
+    "source": "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Weight basis (dry/wet) differs by source.",
+  "sources": [
+   "https://www.1000PS.com/en-us/model/10629/piaggio-liberty-125",
+   "https://www.ultimatespecs.com/motorcycles-specs/piaggio/piaggio-liberty-125-2023"
+  ]
+ },
+ {
+  "id": "piaggio-liberty-150",
+  "found": true,
+  "summary": "The Liberty 150 uses a 155 cc air-cooled single. Its tank holds 6 litres including reserve and the seat is about 790 mm.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "engine": {
+    "value": "air-cooled single",
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "power_hp": {
+    "value": 12.9,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "power_rpm": {
+    "value": 7750,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "torque_nm": {
+    "value": 13.0,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "torque_rpm": {
+    "value": 6750,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "weight_kg": {
+    "value": 124,
+    "source": "https://pitstopmoto.ge/en/bike-database/piaggio-liberty-150-2020-2024_581"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://pitstopmoto.ge/en/bike-database/piaggio-liberty-150-2020-2024_581"
+   },
+   "seat_mm": {
+    "value": 790,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   },
+   "fuel_l": {
+    "value": 6,
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   }
+  },
+  "spec_scope": "2016 on",
+  "highlights": [
+   {
+    "text": "The 2013 150ie had a 149.5 cc engine and 7 L tank",
+    "source": "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Power converted from 9.5 kW.",
+  "sources": [
+   "https://cdn.powergo.ca/media/document/2025/51/6db3a1414f304ef985f5608e04612560.pdf",
+   "https://pitstopmoto.ge/en/bike-database/piaggio-liberty-150-2020-2024_581"
+  ]
+ },
+ {
+  "id": "piaggio-medley-125",
+  "found": true,
+  "summary": "The Medley 125 is Piaggio's big-wheel scooter with a 125 cc single, a 799 mm seat and a 7 litre tank. A sporty S variant is also sold.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   },
+   "power_hp": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   },
+   "power_rpm": {
+    "value": 8750,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   },
+   "torque_nm": {
+    "value": 12,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   },
+   "weight_kg": {
+    "value": 144,
+    "source": "https://pitstopmoto.ge/ka/bike-database/piaggio-medley-125-s-2021_579"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://pitstopmoto.ge/ka/bike-database/piaggio-medley-125-s-2021_579"
+   },
+   "seat_mm": {
+    "value": 799,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   },
+   "fuel_l": {
+    "value": 7,
+    "source": "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125"
+   }
+  },
+  "spec_scope": "current model",
+  "highlights": [
+   {
+    "text": "Dry weight 136 kg, wet 144 kg",
+    "source": "https://pitstopmoto.ge/ka/bike-database/piaggio-medley-125-s-2021_579"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Dry weight 136 kg.",
+  "sources": [
+   "https://www.1000ps.com/en-us/model/10631/piaggio-medley-125",
+   "https://pitstopmoto.ge/ka/bike-database/piaggio-medley-125-s-2021_579"
+  ]
+ },
+ {
+  "id": "piaggio-medley-150",
+  "found": true,
+  "summary": "The Medley 150 uses a 155 cc single making about 16.9 hp. It has a 799 mm seat and a 7 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 155,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   },
+   "power_hp": {
+    "value": 16.9,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   },
+   "power_rpm": {
+    "value": 8750,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   },
+   "torque_nm": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   },
+   "weight_kg": {
+    "value": 144,
+    "source": "https://pitstopmoto.ge/en/bike-database/piaggio-medley-150-s-2021_578"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://pitstopmoto.ge/en/bike-database/piaggio-medley-150-s-2021_578"
+   },
+   "seat_mm": {
+    "value": 799,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   },
+   "fuel_l": {
+    "value": 7,
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   }
+  },
+  "spec_scope": "2022 to 2024 models (2017 to 2018 made 14.75 hp)",
+  "highlights": [
+   {
+    "text": "Older 2017 to 2018 version 14.75 hp at 7,750 rpm",
+    "source": "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Dry weight 136 kg.",
+  "sources": [
+   "https://www.1000ps.com/en-us/model/8902/piaggio-medley-150-s",
+   "https://pitstopmoto.ge/en/bike-database/piaggio-medley-150-s-2021_578"
+  ]
+ },
+ {
+  "id": "piaggio-beverly-300",
+  "found": true,
+  "summary": "The Beverly 300 is a 300 cc Piaggio maxi-scooter. The newer version is rated at 25.8 hp, against about 21 to 22 hp for the earlier i.e. model.",
+  "specs": {
+   "power_hp": {
+    "value": 25.8,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "power_rpm": {
+    "value": 8000,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "torque_nm": {
+    "value": 26,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "torque_rpm": {
+    "value": 6250,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "weight_kg": {
+    "value": 185,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "weight_type": {
+    "value": "dry",
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "seat_mm": {
+    "value": 790,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   },
+   "fuel_l": {
+    "value": 12,
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   }
+  },
+  "spec_scope": "about 2021 on",
+  "highlights": [
+   {
+    "text": "25.8 hp at 8,000 rpm",
+    "source": "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Earlier i.e. model: 22.5 Nm, 183 kg kerb, 12.5 L tank.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/10633/piaggio-beverly-300"
+  ]
+ },
+ {
+  "id": "piaggio-beverly-400",
+  "found": true,
+  "summary": "The Beverly 400 is a 400 cc liquid-cooled single maxi-scooter with fuel injection. A 139 km/h top speed and 12 litre tank are listed.",
+  "specs": {
+   "displacement_cc": {
+    "value": 400,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "engine": {
+    "value": "liquid-cooled single",
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "fuel_system": {
+    "value": "fuel injection",
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "power_hp": {
+    "value": 35.4,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "power_rpm": {
+    "value": 7500,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "torque_nm": {
+    "value": 37.7,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "torque_rpm": {
+    "value": 5500,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "weight_kg": {
+    "value": 195,
+    "source": "https://www.bikesales.com.au/bikes/details/2022-piaggio-beverly-400-s/OAG-AD-22824281"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.bikesales.com.au/bikes/details/2022-piaggio-beverly-400-s/OAG-AD-22824281"
+   },
+   "seat_mm": {
+    "value": 795,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "fuel_l": {
+    "value": 12,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   },
+   "top_speed_kmh": {
+    "value": 139,
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   }
+  },
+  "spec_scope": "2022 to 2025 models",
+  "highlights": [
+   {
+    "text": "35.4 hp and 37.7 Nm",
+    "source": "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Seat height varies by listing (790 to 821 mm).",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/6595/piaggio-beverly-400",
+   "https://www.bikesales.com.au/bikes/details/2022-piaggio-beverly-400-s/OAG-AD-22824281"
+  ]
+ },
+ {
+  "id": "piaggio-fly-125",
+  "found": true,
+  "summary": "The Fly 125 is a small single-cylinder Piaggio scooter produced from 2006 to 2011 in its first form, with later i.e. 3V versions. Power ranges from 14.5 hp on early bikes to 10 hp on the 2017 model.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "power_hp": {
+    "value": 14.48,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "power_rpm": {
+    "value": 9750,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "torque_nm": {
+    "value": 12.0,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "torque_rpm": {
+    "value": 8000,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "weight_kg": {
+    "value": 121,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "seat_mm": {
+    "value": 785,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   },
+   "fuel_l": {
+    "value": 7.5,
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   }
+  },
+  "spec_scope": "2006 to 2011 version power; 2017 version 10 hp",
+  "highlights": [
+   {
+    "text": "2017 model rated 10 hp at 8,250 rpm",
+    "source": "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Single cylinder four-stroke.",
+  "sources": [
+   "https://1000ps.com/en-gb/model/3296/piaggio-fly-125"
+  ]
+ },
+ {
+  "id": "aprilia-tuono-125",
+  "found": true,
+  "summary": "The Tuono 125 is Aprilia's 125 cc naked bike, making 15 hp per Aprilia's tech sheet. It has an 810 mm seat and a 14.5 litre tank.",
+  "specs": {
+   "displacement_cc": {
+    "value": 125,
+    "source": "https://www.1000ps.com/en-gb/model/2312/aprilia-tuono-125"
+   },
+   "power_hp": {
+    "value": 15,
+    "source": "https://www.motoboom.ro/image/catalog/0_motoboom/2025/aprilia/Tuono 125/Tuono_125_tech_spec_EN.pdf"
+   },
+   "power_rpm": {
+    "value": 10500,
+    "source": "https://www.motoboom.ro/image/catalog/0_motoboom/2025/aprilia/Tuono 125/Tuono_125_tech_spec_EN.pdf"
+   },
+   "torque_nm": {
+    "value": 11.4,
+    "source": "https://www.motoboom.ro/image/catalog/0_motoboom/2025/aprilia/Tuono 125/Tuono_125_tech_spec_EN.pdf"
+   },
+   "torque_rpm": {
+    "value": 8500,
+    "source": "https://www.motoboom.ro/image/catalog/0_motoboom/2025/aprilia/Tuono 125/Tuono_125_tech_spec_EN.pdf"
+   },
+   "weight_kg": {
+    "value": 144,
+    "source": "https://www.1000ps.com/en-gb/model/2312/aprilia-tuono-125"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://www.1000ps.com/en-gb/model/2312/aprilia-tuono-125"
+   },
+   "seat_mm": {
+    "value": 810,
+    "source": "https://www.1000ps.com/en-gb/model/2312/aprilia-tuono-125"
+   },
+   "fuel_l": {
+    "value": 14.5,
+    "source": "https://www.1000ps.com/en-gb/model/2312/aprilia-tuono-125"
+   }
+  },
+  "spec_scope": "2021 to 2025 models (2017 to 2019: 820 mm seat, 14 L)",
+  "highlights": [
+   {
+    "text": "15 hp at 10,500 rpm from Aprilia tech sheet",
+    "source": "https://www.motoboom.ro/image/catalog/0_motoboom/2025/aprilia/Tuono 125/Tuono_125_tech_spec_EN.pdf"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Four-stroke 125.",
+  "sources": [
+   "https://www.1000ps.com/en-gb/model/2312/aprilia-tuono-125",
+   "https://www.motoboom.ro/image/catalog/0_motoboom/2025/aprilia/Tuono 125/Tuono_125_tech_spec_EN.pdf"
+  ]
+ },
+ {
+  "id": "aprilia-tuono-660",
+  "found": true,
+  "summary": "The Tuono 660 is a naked bike built on a 659 cc parallel twin that makes about 95 PS and 67 Nm. A Factory version for 2026 is listed at 105 hp.",
+  "specs": {
+   "displacement_cc": {
+    "value": 659,
+    "source": "https://www.zigwheels.com/aprilia-bikes/tuono-660/specifications/"
+   },
+   "engine": {
+    "value": "parallel twin",
+    "source": "https://www.zigwheels.com/aprilia-bikes/tuono-660/specifications/"
+   },
+   "power_hp": {
+    "value": 95,
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   },
+   "power_rpm": {
+    "value": 10500,
+    "source": "https://www.zigwheels.com/aprilia-bikes/tuono-660/specifications/"
+   },
+   "torque_nm": {
+    "value": 67,
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   },
+   "torque_rpm": {
+    "value": 8500,
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   },
+   "weight_kg": {
+    "value": 183,
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   },
+   "weight_type": {
+    "value": "kerb",
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   },
+   "seat_mm": {
+    "value": 820,
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   }
+  },
+  "spec_scope": "standard bike, 2021 on",
+  "highlights": [
+   {
+    "text": "Factory 2026 listed at 105 HP and 70 Nm",
+    "source": "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "A 35 kW licence version exists.",
+  "sources": [
+   "https://www.zigwheels.com/aprilia-bikes/tuono-660/specifications/",
+   "https://www.1000ps.com/en-gb/model/9957/aprilia-tuono-660"
+  ]
+ },
+ {
+  "id": "aprilia-tuono-v4",
+  "found": true,
+  "summary": "The Tuono V4 1100 is Aprilia's flagship naked bike, with a V4 engine making about 175 hp and 121 Nm. Factory and RR versions have been sold since about 2015.",
+  "specs": {
+   "displacement_cc": {
+    "value": 1100,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "engine": {
+    "value": "V4",
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "power_hp": {
+    "value": 175,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "power_rpm": {
+    "value": 11350,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "torque_nm": {
+    "value": 121,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "torque_rpm": {
+    "value": 9000,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "weight_kg": {
+    "value": 209,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "seat_mm": {
+    "value": 825,
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   },
+   "fuel_l": {
+    "value": 18.5,
+    "source": "https://motodealers.co.uk/bikes/aprilia/tuono-v4-1100-factory/2021/specs"
+   }
+  },
+  "spec_scope": "2021 on 1100",
+  "highlights": [
+   {
+    "text": "175 hp at 11,350 rpm",
+    "source": "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "V4 engine. Seat height varies 825 to 837 mm.",
+  "sources": [
+   "https://1000ps.com/en-us/model/8727/aprilia-tuono-v4-1100",
+   "https://motodealers.co.uk/bikes/aprilia/tuono-v4-1100-factory/2021/specs"
+  ]
+ },
+ {
+  "id": "aprilia-rs125",
+  "found": true,
+  "summary": "The RS125 name covers two bikes. The original two-stroke RS125 was claimed at 28.2 bhp with production listed until 2004, and a newer four-stroke RS 125 has been sold since 2021 at about 14.7 hp.",
+  "specs": {
+   "years": {
+    "value": "1994 to 2004 (two-stroke)",
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   },
+   "power_hp": {
+    "value": 28.2,
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   },
+   "torque_nm": {
+    "value": 19.0,
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   },
+   "weight_kg": {
+    "value": 137,
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   },
+   "seat_mm": {
+    "value": 805,
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   },
+   "fuel_l": {
+    "value": 14,
+    "source": "https://en.wikipedia.org/wiki/Aprilia_RS125"
+   }
+  },
+  "spec_scope": "original two-stroke (Wikipedia)",
+  "highlights": [
+   {
+    "text": "Four-stroke RS 125 from 2021: 14.7 hp at 10,000 rpm",
+    "source": "https://fastcarcheck.uk/motorcycle-specs/make/aprilia/rs-125/934"
+   },
+   {
+    "text": "Four-stroke: 820 mm seat, 144 kg, 14.5 L",
+    "source": "https://www.1000ps.com/en-gb/model/10645/aprilia-rs-125"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://en.wikipedia.org/wiki/Aprilia_RS125",
+  "notes": "Original is a two-stroke (premix/oil injection). Years from 1994 model year to 2004.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Aprilia_RS125",
+   "https://fastcarcheck.uk/motorcycle-specs/make/aprilia/rs-125/934",
+   "https://www.1000ps.com/en-gb/model/10645/aprilia-rs-125"
+  ]
+ },
+ {
+  "id": "aprilia-rs660",
+  "found": true,
+  "summary": "The RS 660 is a sportbike with a 659 cc parallel twin making about 100 hp and 67 Nm. Aprilia India lists a wet weight of 183 kg.",
+  "specs": {
+   "displacement_cc": {
+    "value": 659,
+    "source": "https://1000ps.com/en-us/model/9956/aprilia-rs-660"
+   },
+   "engine": {
+    "value": "parallel twin",
+    "source": "https://1000ps.com/en-us/model/9956/aprilia-rs-660"
+   },
+   "power_hp": {
+    "value": 100,
+    "source": "https://kiwirider.co.nz/kiwi-rider-october-2021-vol1/0617503001633390217/p48"
+   },
+   "power_rpm": {
+    "value": 10500,
+    "source": "https://kiwirider.co.nz/kiwi-rider-october-2021-vol1/0617503001633390217/p48"
+   },
+   "torque_nm": {
+    "value": 67,
+    "source": "https://1000ps.com/en-us/model/9956/aprilia-rs-660"
+   },
+   "torque_rpm": {
+    "value": 8500,
+    "source": "https://1000ps.com/en-us/model/9956/aprilia-rs-660"
+   },
+   "weight_kg": {
+    "value": 183,
+    "source": "https://apriliaindia.com/images/rs-660/tech_specs.pdf"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://apriliaindia.com/images/rs-660/tech_specs.pdf"
+   },
+   "seat_mm": {
+    "value": 820,
+    "source": "https://1000ps.com/en-us/model/9956/aprilia-rs-660"
+   },
+   "fuel_l": {
+    "value": 15,
+    "source": "https://1000ps.com/en-us/model/9956/aprilia-rs-660"
+   }
+  },
+  "spec_scope": "2020 to 2024 models (2026 rated 105 hp)",
+  "highlights": [
+   {
+    "text": "Wet weight 183 kg",
+    "source": "https://apriliaindia.com/images/rs-660/tech_specs.pdf"
+   }
+  ],
+  "photo": null,
+  "wikipedia": null,
+  "notes": "Parallel twin.",
+  "sources": [
+   "https://1000ps.com/en-us/model/9956/aprilia-rs-660",
+   "https://kiwirider.co.nz/kiwi-rider-october-2021-vol1/0617503001633390217/p48",
+   "https://apriliaindia.com/images/rs-660/tech_specs.pdf"
+  ]
+ },
+ {
+  "id": "aprilia-tuareg-660",
+  "found": true,
+  "summary": "The Tuareg 660 is an adventure bike with a 659 cc twin making about 80 hp and 70 Nm. It has an 860 mm seat and an 18 litre tank, with a 204 kg wet weight.",
+  "specs": {
+   "displacement_cc": {
+    "value": 659,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "engine": {
+    "value": "twin",
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "power_hp": {
+    "value": 79.12,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "power_rpm": {
+    "value": 9250,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "torque_nm": {
+    "value": 70,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "torque_rpm": {
+    "value": 6500,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "weight_kg": {
+    "value": 204,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "weight_type": {
+    "value": "wet",
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "seat_mm": {
+    "value": 860,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   },
+   "fuel_l": {
+    "value": 18,
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   }
+  },
+  "spec_scope": "launch model",
+  "highlights": [
+   {
+    "text": "Dry weight 187 kg",
+    "source": "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+   }
+  ],
+  "photo": null,
+  "wikipedia": "https://wikipedia.com/wiki/Aprilia_Tuareg_660",
+  "notes": "Wet 204 kg, dry 187 kg.",
+  "sources": [
+   "https://91wheels.com/bikes/aprilia/tuareg-660/specifications"
+  ]
+ }
+]

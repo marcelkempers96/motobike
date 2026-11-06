@@ -1073,6 +1073,50 @@ export default {
           "type": "wiring",
           "tab": "starting",
           "caption": "Switch the key on, select neutral and hold START: follow the control current through the interlocks to the relay coil and the heavy current from battery to starter motor, then pull in the clutch with a gear selected and fold the side stand down to see which interlock breaks the circuit."
+        },
+        {
+          "type": "h3",
+          "text": "Exercises in the Circuit Builder"
+        },
+        {
+          "type": "p",
+          "html": "Each exercise opens a circuit in the Circuit Builder on the Wiring Lab page. Press <strong>Test</strong> to connect the battery, take the readings, then press <strong>Note reading</strong> to keep them in the log. Part values are typical examples, not the figures of a particular bike."
+        },
+        {
+          "type": "exercise",
+          "title": "Battery voltage at rest and under load",
+          "preset": "battery-load",
+          "task": "Press Test with switch S1 open and read V1. Close S1 to switch on the headlight and horn, read V1 and A1 again. Then select B1 and raise its internal resistance to 250 mΩ, as in a worn or sulphated battery.",
+          "measure": "Battery terminal voltage (V1) and load current (A1), with S1 open and closed, for 20 mΩ and 250 mΩ of internal resistance.",
+          "expect": "With S1 open, V1 shows the full 12.6 V in both cases. Loaded, a good battery holds about 12.4 V at close to 8 A; the worn one falls below 11 V and the current drops to about 7 A.",
+          "why": "Terminal voltage = EMF − I × internal resistance. No current flows at rest, so a resting voltage test cannot see a high internal resistance. Only a load test, at the battery or while cranking, shows it."
+        },
+        {
+          "type": "exercise",
+          "title": "Internal resistance from two readings",
+          "preset": "battery-load",
+          "task": "Use the readings of the previous exercise, or take them again: V1 with S1 open, then V1 and A1 with S1 closed.",
+          "measure": "Open-circuit voltage, loaded voltage and load current.",
+          "expect": "With the default battery: (12.60 − 12.44) / 7.8 ≈ 0.02 Ω, the 20 mΩ set on B1.",
+          "why": "The voltage lost inside the battery divided by the current that caused it is the internal resistance. Testers that quote a battery's condition use the same principle with a known load."
+        },
+        {
+          "type": "exercise",
+          "title": "Charging voltage and lamp brightness",
+          "preset": "bulb",
+          "task": "Press Test and read the bulb current in the part panel of L1. Then select B1 and set its EMF to 14.2 V, the voltage a regulator holds with the engine running.",
+          "measure": "Bulb current, power and light output at 12.6 V and at 14.2 V.",
+          "expect": "About 1.8 A and 23 W at 12.6 V; about 2.1 A and 29 W at 14.2 V. Light output rises by roughly half.",
+          "why": "The filament resistance stays roughly constant once hot, so current rises with voltage and power with its square. Light output of a filament rises faster still, roughly with the voltage to the power 3.4. Lamps blow early when a regulator fails and the voltage climbs."
+        },
+        {
+          "type": "exercise",
+          "title": "Parasitic drain with the ammeter",
+          "preset": "drain",
+          "task": "The ammeter A1 sits between the battery negative and the earth lead, as in a real drain test. Press Test with the light switch S1 open.",
+          "measure": "Current in A1 with everything switched off.",
+          "expect": "About 10 mA, through R1, which stands for a clock or ECU memory. Over a day that is 0.010 A × 24 h ≈ 0.25 Ah, a few percent of a small battery's capacity.",
+          "why": "Every always-on load drains the battery while the bike stands. A drain of tens of milliamps flattens a small battery in a few weeks; pull fuses one at a time while watching the ammeter to find the circuit that draws it."
         }
       ]
     },
@@ -1272,6 +1316,50 @@ export default {
           "type": "plate",
           "id": "EL02",
           "caption": "Where the electrical components sit on a road motorcycle."
+        },
+        {
+          "type": "h3",
+          "text": "Exercises in the Circuit Builder"
+        },
+        {
+          "type": "p",
+          "html": "Open each circuit in the Circuit Builder, press <strong>Test</strong> and compare your readings with the expected result. Use <strong>Note reading</strong> to keep a before and after pair in the log."
+        },
+        {
+          "type": "exercise",
+          "title": "Two bulbs in parallel on one fuse",
+          "preset": "parallel-bulbs",
+          "task": "Press Test. Select each bulb and the fuse to read their currents. Then select F1 and change it from 5 A to 3 A.",
+          "measure": "Current in L1, L2 and F1, and the voltage across each bulb.",
+          "expect": "Each 21 W bulb gets about 12.4 V and takes about 1.8 A; the fuse carries the sum, about 3.6 A. The 3 A fuse blows within a few seconds.",
+          "why": "Parallel branches each see the full supply voltage, and their currents add in the shared feed. The fuse must be rated above the total, with some margin: about 1.25 to 2 times the normal current."
+        },
+        {
+          "type": "exercise",
+          "title": "Voltage drop along a long thin wire",
+          "preset": "long-wire",
+          "task": "Press Test. Place a voltmeter and wire its leads to the two ends of the long feed wire. Then select the wire and change its cross-section from 0.5 mm² to 1.5 mm².",
+          "measure": "Voltmeter reading along the wire, and the lamp voltage, for both sizes.",
+          "expect": "About 0.46 V lost along 3 m of 0.5 mm² at 4.6 A; about 0.15 V with 1.5 mm².",
+          "why": "R = ρ L / A = 1.68e-8 × 3 / 0.5e-6 ≈ 0.10 Ω, and the drop is I × R. Three times the cross-section gives a third of the resistance. A voltage drop test with the circuit working finds bad wires that an ohm meter can miss."
+        },
+        {
+          "type": "exercise",
+          "title": "A relay drives the horn",
+          "preset": "relay-horn",
+          "task": "Press Test, then hold the push button P1 (press and hold it on the board or in its part panel).",
+          "measure": "A2, the current through the button and relay coil, and A1, the horn current through the relay contact.",
+          "expect": "About 0.15 A in the button circuit and about 3.1 A in the horn circuit.",
+          "why": "The 85 Ω coil draws only 12.6 / 85 ≈ 0.15 A, while the contact switches the heavy current. The handlebar switch and its long thin wires carry only the coil current, so they stay cool and the full voltage reaches the horn."
+        },
+        {
+          "type": "exercise",
+          "title": "Why an LED needs a series resistor",
+          "preset": "led-bare",
+          "task": "Press Test and close S1. LED1 is wired straight across the supply; LED2 has a 560 Ω resistor in series.",
+          "measure": "Current in each LED.",
+          "expect": "LED1 burns out at once. LED2 runs at about 18 mA, inside its 20 mA rating.",
+          "why": "An LED has an almost fixed forward voltage, about 2 V for red, so with no resistor nothing limits the current. The resistor sets it: R = (supply − forward voltage) / current = (12.6 − 2.0) / 0.018 ≈ 590 Ω. Try the LED challenge to find the value for 15 mA."
         }
       ]
     },
@@ -1517,6 +1605,50 @@ export default {
         {
           "type": "check",
           "q": "m3-30"
+        },
+        {
+          "type": "h3",
+          "text": "Exercises in the Circuit Builder"
+        },
+        {
+          "type": "p",
+          "html": "These exercises practise the meter work of this chapter on circuits with a fault built in. Press <strong>Test</strong> to connect the battery; press it again to disconnect it before any ohm reading."
+        },
+        {
+          "type": "exercise",
+          "title": "Voltage drop across a bad earth",
+          "preset": "bad-earth",
+          "task": "Press Test: the 55 W headlight is dim. Place a voltmeter and wire one lead to the lower terminal of the lamp, the other to a new clean earth point. Then select E2 and choose Clean.",
+          "measure": "Voltage across the earth connection, voltage across the lamp and its light output, before and after cleaning.",
+          "expect": "About 2.0 V across the corroded earth, so the lamp gets about 10.4 V and gives roughly 60 % of its light. Cleaned, the earth drops under 0.05 V and the lamp is at full brightness.",
+          "why": "The earth is in series with the lamp: the same 4 A flows through 0.5 Ω and loses 2 V there. A good connection should drop no more than about 0.1 V to 0.2 V with the circuit working."
+        },
+        {
+          "type": "exercise",
+          "title": "Find the open filament with the ohm meter",
+          "preset": "open-bulb",
+          "task": "Press Test: L2 stays dark. Press Test again to disconnect the battery. Wire DMM1, set to ohms, across L2. Read it with S2 closed, then with S2 open.",
+          "measure": "Resistance across L2 with its switch closed and open, and across a good bulb for comparison.",
+          "expect": "With S2 closed the meter reads about 0.35 Ω through the other two lamps. With S2 open it reads OL: the filament is open. A good cold 21 W bulb reads about 0.7 Ω.",
+          "why": "An ohm meter pushes its own small test current, so it needs a dead circuit, and any parallel path adds to the reading. Isolate the part first. A cold tungsten filament reads about a tenth of its hot resistance (144 / 21 ≈ 6.9 Ω)."
+        },
+        {
+          "type": "exercise",
+          "title": "A short circuit and the fuse",
+          "preset": "short",
+          "task": "Press Test: L1 lights. Close S2, which connects the feed straight to earth. Replace the fuse with S2 still closed, then open S2 and replace it again.",
+          "measure": "Battery current at the moment of the short, and the state of F1.",
+          "expect": "Over 200 A flows for an instant and the 10 A fuse blows at once. A new fuse blows again until the short is removed.",
+          "why": "With almost no resistance in the path, only the battery's internal resistance and the wires limit the current. The fuse protects the wiring, not the load; a fuse that blows again on replacement means a short still in the circuit."
+        },
+        {
+          "type": "exercise",
+          "title": "Ammeter in the wrong place",
+          "preset": "bulb",
+          "task": "Press Test. Place a multimeter, set it to amps, and wire it across the bulb L1 instead of in series. Then remove it and put an ammeter in series between the switch and the bulb.",
+          "measure": "What happens with the meter across the bulb, and the reading in series.",
+          "expect": "Across the bulb the meter shorts the circuit: its 10 A fuse or the 3 A circuit fuse blows and the bulb goes out. In series it reads about 1.8 A and the bulb stays lit.",
+          "why": "On the amps range a meter has almost no resistance, so it must replace a piece of wire in the path of the current. Voltage is measured across a part; current is measured through it."
         }
       ]
     }

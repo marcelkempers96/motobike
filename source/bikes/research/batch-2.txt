@@ -1,0 +1,84 @@
+yamaha-mt-03	Yamaha MT-03	street
+yamaha-mt-07	Yamaha MT-07	street
+yamaha-mt-09	Yamaha MT-09	street
+yamaha-mt-10	Yamaha MT-10	street
+yamaha-mt-125	Yamaha MT-125	street
+yamaha-xsr125	Yamaha XSR125	street
+yamaha-xsr155	Yamaha XSR155	street
+yamaha-xsr700	Yamaha XSR700	street
+yamaha-xsr900	Yamaha XSR900	street
+yamaha-fz1	Yamaha FZ1	street
+yamaha-fz6	Yamaha FZ6	street
+yamaha-fz8	Yamaha FZ8	street
+yamaha-ybr125	Yamaha YBR125	commuter
+yamaha-ys125	Yamaha YS125	commuter
+yamaha-yb125	Yamaha YB125	commuter
+yamaha-fz-s-fi	Yamaha FZ-S FI	commuter
+yamaha-fz-x	Yamaha FZ-X	commuter
+yamaha-saluto	Yamaha Saluto	commuter
+yamaha-yzf-r1	Yamaha YZF-R1	sport
+yamaha-yzf-r3	Yamaha YZF-R3	sport
+yamaha-yzf-r6	Yamaha YZF-R6	sport
+yamaha-yzf-r7	Yamaha YZF-R7	sport
+yamaha-yzf-r15	Yamaha YZF-R15	sport
+yamaha-yzf-r25	Yamaha YZF-R25	sport
+yamaha-tenere-700	Yamaha Tenere 700	adventure
+yamaha-xt1200	Yamaha XT1200	adventure
+yamaha-xt660	Yamaha XT660	adventure
+yamaha-xt600	Yamaha XT600	adventure
+yamaha-xt250	Yamaha XT250	adventure
+yamaha-xt125	Yamaha XT125	adventure
+yamaha-wr125	Yamaha WR125	adventure
+yamaha-wr250r	Yamaha WR250R	adventure
+yamaha-wr450f	Yamaha WR450F	adventure
+yamaha-fjr1300	Yamaha FJR1300	touring
+yamaha-tdm850	Yamaha TDM850	touring
+yamaha-tdm900	Yamaha TDM900	touring
+yamaha-tracer-700	Yamaha Tracer 700	touring
+yamaha-xv250	Yamaha XV250	cruiser
+yamaha-xv535	Yamaha XV535	cruiser
+yamaha-xv750	Yamaha XV750	cruiser
+yamaha-xv1100	Yamaha XV1100	cruiser
+yamaha-xvs650	Yamaha XVS650	cruiser
+yamaha-xvs950	Yamaha XVS950	cruiser
+yamaha-nmax-125	Yamaha NMAX 125	scooter
+yamaha-nmax-155	Yamaha NMAX 155	scooter
+yamaha-xmax-125	Yamaha XMAX 125	scooter
+yamaha-xmax-300	Yamaha XMAX 300	scooter
+yamaha-tmax	Yamaha TMAX	scooter
+yamaha-aerox-155	Yamaha Aerox 155	scooter
+yamaha-mio	Yamaha Mio	scooter
+yamaha-fazzio	Yamaha Fazzio	scooter
+yamaha-exciter	Yamaha Exciter	underbone
+yamaha-finn	Yamaha Finn	underbone
+yamaha-jupiter-z1	Yamaha Jupiter Z1	underbone
+yamaha-jupiter-mx	Yamaha Jupiter MX	underbone
+royal-enfield-classic-350	Royal Enfield Classic 350	classic
+royal-enfield-bullet-350	Royal Enfield Bullet 350	classic
+royal-enfield-bullet-500	Royal Enfield Bullet 500	classic
+royal-enfield-classic-500	Royal Enfield Classic 500	classic
+royal-enfield-meteor-350	Royal Enfield Meteor 350	classic
+royal-enfield-hunter-350	Royal Enfield Hunter 350	classic
+royal-enfield-interceptor-650	Royal Enfield Interceptor 650	classic
+royal-enfield-continental-gt650	Royal Enfield Continental GT650	classic
+royal-enfield-super-meteor-650	Royal Enfield Super Meteor 650	classic
+royal-enfield-shotgun-650	Royal Enfield Shotgun 650	classic
+royal-enfield-guerrilla-450	Royal Enfield Guerrilla 450	classic
+royal-enfield-classic-650	Royal Enfield Classic 650	classic
+royal-enfield-thunderbird-350	Royal Enfield Thunderbird 350	classic
+royal-enfield-himalayan-411	Royal Enfield Himalayan 411	adventure
+royal-enfield-himalayan-450	Royal Enfield Himalayan 450	adventure
+royal-enfield-scram-411	Royal Enfield Scram 411	adventure
+piaggio-liberty-125	Piaggio Liberty 125	scooter
+piaggio-liberty-150	Piaggio Liberty 150	scooter
+piaggio-medley-125	Piaggio Medley 125	scooter
+piaggio-medley-150	Piaggio Medley 150	scooter
+piaggio-beverly-300	Piaggio Beverly 300	scooter
+piaggio-beverly-400	Piaggio Beverly 400	scooter
+piaggio-fly-125	Piaggio Fly 125	scooter
+aprilia-tuono-125	Aprilia Tuono 125	street
+aprilia-tuono-660	Aprilia Tuono 660	street
+aprilia-tuono-v4	Aprilia Tuono V4	street
+aprilia-rs125	Aprilia RS125	sport
+aprilia-rs660	Aprilia RS660	sport
+aprilia-tuareg-660	Aprilia Tuareg 660	adventure

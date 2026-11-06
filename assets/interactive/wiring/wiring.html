@@ -153,6 +153,14 @@ footer a{color:var(--ink)}
   .dia .seg.on{animation:none!important;stroke-dasharray:none!important}
   .dia.cranking .gear,.dia.cranking #armHatch{animation:none!important}
 }
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 20px}
+.prm{min-width:0}
+.prm label{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}
+.prm output{font:600 13px/1.2 var(--mono);color:var(--ink);white-space:nowrap}
+.prm input,.prm select{width:100%;accent-color:var(--accent);margin-top:4px}
+.prm select{font:500 13px/1.1 var(--sans);color:var(--ink);background:var(--btn);border:1px solid var(--line2);border-radius:8px;padding:7px 9px}
+.chg{margin:10px 0 0;font-size:13.5px;padding:8px 11px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;color:var(--text)}
+.pnote{grid-column:1/-1;margin:0;font-size:12.5px;color:var(--muted)}
 @media (max-width: 1020px){
   .layout{grid-template-columns:minmax(0,1fr)}
   .panel{position:static;max-height:none}
@@ -1801,6 +1809,7 @@ footer a{color:var(--ink)}
           <option value="weak">Weak battery</option>
           <option value="neutralsw">Faulty neutral switch</option>
         </select></div>
+      <div class="grp wide prm-grp"><h3>Electrical parameters (example values)</h3><div class="pgrid" data-params="starting"></div><p class="chg" data-chg="starting" hidden></p></div>
       <div class="grp wide"><div class="btns"><button type="button" class="link" data-goto="start">Show the starting wires on the harness</button></div></div>
     </div>
 
@@ -1825,6 +1834,7 @@ footer a{color:var(--ink)}
           <option value="reg">Failed regulator</option>
           <option value="fuse">Blown 15 A fuse</option>
         </select></div>
+      <div class="grp wide prm-grp"><h3>Electrical parameters (example values)</h3><div class="pgrid" data-params="charging"></div><p class="chg" data-chg="charging" hidden></p></div>
       <div class="grp wide"><div class="btns"><button type="button" class="link" data-goto="charge">Show the charging wires on the harness</button></div></div>
     </div>
 
@@ -1841,6 +1851,7 @@ footer a{color:var(--ink)}
           <option value="pulser">Pulser coil open circuit</option>
           <option value="plug">Fouled spark plug</option>
         </select></div>
+      <div class="grp wide prm-grp"><h3>Electrical parameters (example values)</h3><div class="pgrid" data-params="ignition"></div><p class="chg" data-chg="ignition" hidden></p></div>
       <div class="grp wide"><div class="btns"><button type="button" class="link" data-goto="ign">Show the ignition wires on the harness</button></div></div>
     </div>
   </section>
@@ -2071,9 +2082,86 @@ function toggleSwitch(t, k) {
   }
 }
 
+/* ---------- electrical parameters (shared) ---------- */
+const RHO_CU = 1.68e-8; // copper resistivity, ohm m
+const SP = {soc: 85, temp: 20, r0: 25, len: 1.2, mm2: 10, bad: 0, draw: 95};
+const CP = {stator: 15.5, vset: 14.5, watts: 100};
+const IP = {vbat: 12.5, rp: 3.0, dwell: 3.0};
+const COIL_L = 0.006; // example primary inductance, H
+const PARAMS = {
+  starting: [
+    {k: "soc", o: SP, l: "Battery state of charge", min: 0, max: 100, step: 1, u: "%", d: 0},
+    {k: "temp", o: SP, l: "Battery temperature", min: -20, max: 40, step: 1, u: "°C", d: 0},
+    {k: "r0", o: SP, l: "Internal resistance, new, 25 °C", min: 8, max: 150, step: 1, u: "mΩ", d: 0},
+    {k: "len", o: SP, l: "Starter cable length, total", min: 0.4, max: 3, step: 0.1, u: "m", d: 1},
+    {k: "mm2", o: SP, l: "Starter cable cross-section", sel: [4, 6, 10, 16, 25], u: "mm²"},
+    {k: "bad", o: SP, l: "Corroded terminal or bad earth", min: 0, max: 150, step: 1, u: "mΩ", d: 0},
+    {k: "draw", o: SP, l: "Starter draw at 10 V", min: 40, max: 200, step: 5, u: "A", d: 0},
+  ],
+  charging: [
+    {k: "stator", o: CP, l: "Stator output, high rpm", min: 5, max: 30, step: 0.5, u: "A", d: 1},
+    {k: "vset", o: CP, l: "Regulator set point", min: 13.5, max: 15, step: 0.1, u: "V", d: 1},
+    {k: "watts", o: CP, l: "Load when switched on", min: 10, max: 300, step: 5, u: "W", d: 0},
+  ],
+  ignition: [
+    {k: "vbat", o: IP, l: "Supply voltage, panel B", min: 9, max: 14.8, step: 0.1, u: "V", d: 1},
+    {k: "rp", o: IP, l: "Coil primary resistance", min: 0.4, max: 6, step: 0.1, u: "Ω", d: 1},
+    {k: "dwell", o: IP, l: "Dwell time", min: 0.5, max: 8, step: 0.1, u: "ms", d: 1},
+  ],
+};
+const PNOTE = {
+  starting: "Model: open-circuit voltage 11.9 V flat to 12.7 V full; internal resistance rises as the battery discharges and gets cold. Cable R = ρ L / A with copper ρ = 1.68e-8 Ω m. The starter is treated as a fixed resistance while cranking.",
+  charging: "Model: permanent-magnet alternator whose short-circuit current rises with rpm towards the stator rating; shunt regulator holding the set point; loads are lamps with resistance from their 12 V rating.",
+  ignition: "Model: coil primary current rises as I = V / R × (1 − e^(−t R / L)) with an example inductance of 6 mH; stored energy ½ L I²; one spark per crank revolution.",
+};
+const fx = (v, d) => (Math.abs(v) < 0.5 * Math.pow(10, -d) ? 0 : v).toFixed(d).replace("-", "−");
+function metrics(t) {
+  if (t === "starting") { const m = startModel(); return [["cranking voltage at the starter", m.vst, "V", 2], ["starter current", m.I, "A", 0], ["battery terminal while cranking", m.vterm, "V", 2], ["lost in cables and earth", m.lost, "V", 2]]; }
+  if (t === "charging") { const m = chModel(); return [["battery voltage", m.Vb, "V", 2], ["alternator output", m.Ia, "A", 1], ["charging balance", m.Ia - m.Iload, "A", 1], ["shunted by the regulator", m.Ish, "A", 1]]; }
+  const m = ignModel(Math.max(1000, IG.speed * 100)); return [["peak primary current", m.Ipk, "A", 2], ["stored energy", m.E * 1000, "mJ", 0], ["coil heat", m.P, "W", 1]];
+}
+const prmBase = {};
+function buildParams() {
+  Object.entries(PARAMS).forEach(([t, list]) => {
+    const box = document.querySelector(`[data-params="${t}"]`);
+    box.innerHTML = list.map((p, i) => `<div class="prm"><label for="prm-${t}-${i}">${p.l}<output id="prmo-${t}-${i}"></output></label>` +
+      (p.sel ? `<select id="prm-${t}-${i}" data-t="${t}" data-i="${i}">${p.sel.map(v => `<option value="${v}"${v === p.o[p.k] ? " selected" : ""}>${v} ${p.u}</option>`).join("")}</select>`
+             : `<input type="range" id="prm-${t}-${i}" data-t="${t}" data-i="${i}" min="${p.min}" max="${p.max}" step="${p.step}" value="${p.o[p.k]}">`) + `</div>`).join("") +
+      `<p class="pnote">${PNOTE[t]}</p>`;
+    list.forEach((p, i) => { const o = $("#prmo-" + t + "-" + i); o.textContent = p.sel ? "" : `${(+p.o[p.k]).toFixed(p.d)} ${p.u}`; });
+    const onEv = e => {
+      const el = e.target.closest("[data-t]"); if (!el) return;
+      const p = list[+el.dataset.i];
+      if (!prmBase[t]) prmBase[t] = {m: metrics(t), v: p.o[p.k]};
+      p.o[p.k] = +el.value;
+      if (!p.sel) $("#prmo-" + t + "-" + el.dataset.i).textContent = `${(+p.o[p.k]).toFixed(p.d)} ${p.u}`;
+      if (t === "starting") updStarting();
+      const after = metrics(t), b = prmBase[t];
+      const diffs = after.map((m, j) => { const v0 = b.m[j][1], v1 = m[1]; if (Math.abs(v1 - v0) < 0.5 * Math.pow(10, -m[3])) return null; const d = v1 - v0; return `${m[0]} ${fx(v0, m[3])} → ${fx(v1, m[3])} ${m[2]} (${d > 0 ? "+" : "−"}${fx(Math.abs(d), m[3])})`; }).filter(Boolean);
+      const ch = document.querySelector(`[data-chg="${t}"]`);
+      ch.hidden = false;
+      ch.textContent = `What changed: ${p.l.toLowerCase()} ${p.sel ? b.v : (+b.v).toFixed(p.d)} → ${p.sel ? p.o[p.k] : (+p.o[p.k]).toFixed(p.d)} ${p.u}. ` + (diffs.length ? diffs.join("; ").replace(/^./, c => c.toUpperCase()) + "." : "The readings stay the same.") + (t === "starting" ? " (Values while cranking.)" : t === "ignition" ? ` (At ${Math.max(1000, IG.speed * 100)} rpm.)` : "");
+      if (e.type === "change") prmBase[t] = null;
+    };
+    box.addEventListener("input", onEv); box.addEventListener("change", onEv);
+  });
+}
+
 /* ---------- STARTING (F23) ---------- */
 const ST = {ign: true, stop: true, neutral: true, clutch: false, stand: true, start: false, fault: "none"};
 let chatterT = null, chatterOn = false;
+function startModel() {
+  const weak = ST.fault === "weak";
+  const soc = (weak ? Math.min(SP.soc, 20) : SP.soc) / 100;
+  const ocv = 11.9 + 0.8 * soc;                                    // typical lead-acid rest voltage
+  const cold = SP.temp < 25 ? 1 + 0.025 * (25 - SP.temp) : 1;      // internal resistance rises in the cold
+  const rint = SP.r0 / 1000 * (1 + 1.5 * (1 - soc)) * cold * (weak ? 4 : 1);
+  const rcab = RHO_CU * SP.len / (SP.mm2 * 1e-6), rbad = SP.bad / 1000, rcon = 0.002;
+  const rs = 10 / SP.draw;                                         // starter as a resistance while cranking
+  const I = ocv / (rint + rcab + rbad + rcon + rs);
+  const vterm = ocv - I * rint, vst = I * rs, lost = I * (rcab + rbad + rcon);
+  return {ocv, rint, rcab, rbad, I, vterm, vst, lost, P: I * vst, chatter: vterm < 7.5, slow: vst < 8};
+}
 function pressStart(v) { ST.start = v; $("#s-start").classList.toggle("down", v); updStarting(); }
 function syncStartBtns() {
   const lab = {ign: ["Ignition on", "Ignition off"], stop: ["Engine stop: RUN", "Engine stop: OFF"], neutral: ["Gear: neutral", "Gear: in gear"],
@@ -2089,7 +2177,7 @@ function updStarting() {
   const earth = neutralOK || (ST.clutch && ST.stand);
   const v2 = ST.ign, v3 = v2 && fuseOK, v4 = v3 && ST.stop, v5 = v4 && ST.start;
   const flow = v5 && earth;
-  const chatter = flow && F === "weak";
+  const chatter = flow && F !== "contacts" && startModel().chatter;
   if (chatter && !chatterT) chatterT = setInterval(() => { chatterOn = !chatterOn; drawStarting(); }, 120);
   if (!chatter && chatterT) { clearInterval(chatterT); chatterT = null; chatterOn = false; }
   ST._ = {v2, v3, v4, v5, flow, earth, neutralOK, chatter};
@@ -2130,12 +2218,17 @@ function drawStarting() {
   svg.classList.toggle("cranking", motor);
   $("#fuse10", svg).classList.toggle("blown", F === "fuse");
   // readouts
-  const rest = F === "weak" ? 11.9 : 12.7;
-  const volts = motor ? 10.4 : chatter ? (chatterOn ? 7.6 : 11.8) : flow ? rest - 0.1 : rest;
+  const M = startModel();
+  const dip = motor || (chatter && chatterOn);
+  const volts = dip ? M.vterm : flow ? M.ocv - 0.6 * M.rint : M.ocv;
   setReadouts([
-    ["Battery", volts.toFixed(1), "V", motor || chatter],
-    ["Relay coil", flow && (!chatter || chatterOn) ? "0.6" : "0.0", "A"],
-    ["Starter current", motor ? "≈ 95" : "0", "A", motor],
+    ["Battery", volts.toFixed(2), "V", motor || chatter],
+    ["Open-circuit", M.ocv.toFixed(2), "V"],
+    ["Internal resistance", (M.rint * 1000).toFixed(0), "mΩ", M.rint > 0.08],
+    ["Relay coil", flow && (!chatter || chatterOn) ? (volts / 20).toFixed(2) : "0.00", "A"],
+    ["Starter current", dip ? M.I.toFixed(0) : "0", "A", motor],
+    ["At the starter", dip ? M.vst.toFixed(2) : "0.00", "V", motor && M.slow],
+    ["Lost in cables, earth", dip ? M.lost.toFixed(2) : "0.00", "V", motor && M.lost > 0.5],
     ["Relay", chatter ? "Chattering" : relay ? "Closed" : "Open", "", relay || chatter],
     ["Starter motor", motor ? "Cranking" : "Stopped", "", motor],
   ]);
@@ -2149,9 +2242,9 @@ function drawStarting() {
   else if (!earth) { m = F === "neutralsw" && ST.neutral
       ? "Start pressed in neutral, but the neutral switch does not earth, so the coil has no return path. The N lamp is also out. Pull the clutch with the stand up to start, then replace the switch."
       : "Start pressed, but the relay coil has no earth path. Select neutral, or pull the clutch with the side-stand up."; k = "warn"; }
-  else if (chatter) { m = "The relay chatters. The coil pulls in, the starter load drags a weak battery below about 8 V, the coil drops out, the voltage recovers and it pulls in again. Charge or replace the battery."; k = "warn"; }
+  else if (chatter) { m = `The relay chatters. The coil pulls in, ${M.I.toFixed(0)} A through ${(M.rint * 1000).toFixed(0)} mΩ of internal resistance drags the battery to ${M.vterm.toFixed(1)} V, below the relay drop-out (about 7.5 V here), the coil releases, the voltage recovers and it pulls in again. Charge or replace the battery.`; k = "warn"; }
   else if (F === "contacts") { m = "The relay clicks but the starter does not turn. The burnt contact disc passes no current, so 12 V stays across the B and M studs. Replace the relay."; k = "warn"; }
-  else { m = "Cranking. About 95 A flows from the battery through the main fuse, the relay contacts and the starter motor to earth, while the coil circuit carries under 1 A."; k = "run"; }
+  else { m = `Cranking. ${M.I.toFixed(0)} A flows from the battery through the main fuse, the relay contacts and the starter motor to earth, while the coil circuit carries under 1 A. The battery sags to ${M.vterm.toFixed(1)} V, ${M.lost.toFixed(2)} V is lost in cables, contacts and earth, and the starter gets ${M.vst.toFixed(1)} V.` + (M.slow ? " Below about 8 V at the starter it turns slowly and the engine may not fire (example threshold)." : ""); k = M.slow ? "warn" : "run"; }
   if (tab === "starting") setMsg(m, k);
 }
 $$("#deck-starting [data-k]").forEach(b => b.addEventListener("click", () => { ST[b.dataset.k] = !ST[b.dataset.k]; updStarting(); select(b.dataset.k); }));
@@ -2168,12 +2261,17 @@ $("#s-fault").addEventListener("change", e => { ST.fault = e.target.value; updSt
 const CH = {rpm: 3500, loads: true, fault: "none", soc: 0.62, ang: 0};
 const CAP_AH = 5, SPEEDUP = 120;
 function chModel() {
+  // lamps are resistive: load current follows the bus voltage, so solve by a few fixed-point steps
+  let r = chModelAt(CH.loads ? CP.watts / 144 * 12.5 : 0);
+  for (let i = 0; i < 4 && CH.loads; i++) r = chModelAt(CP.watts / 144 * Math.max(0, r.Vb));
+  return r;
+}
+function chModelAt(Iload) {
   const rpm = CH.rpm, F = CH.fault;
   const phase = F === "phase";
   const Vll = 0.016 * rpm;
   const Voc = rpm > 0 ? 1.35 * Vll - 1.4 : 0;
-  const Isc = rpm > 0 ? 15.5 * (1 - Math.exp(-rpm / 2300)) * (phase ? 0.5 : 1) : 0;
-  const Iload = CH.loads ? 7.2 : 0;
+  const Isc = rpm > 0 ? CP.stator * (1 - Math.exp(-rpm / 2300)) * (phase ? 0.5 : 1) : 0;
   const OCV = 11.85 + 0.95 * CH.soc;
   const Rint = 0.045;
   let Ia = 0, Ib, Vb, Ish = 0;
@@ -2183,8 +2281,8 @@ function chModel() {
   const net = Ia - Iload;
   if (net > 0) {
     if (F === "reg") { Ib = net; Vb = Math.min(Voc, OCV + 0.42 * net + 0.4); }
-    else if (net > Imax) { Ib = Imax; Vb = 14.5; Ish = net - Imax; }
-    else { Ib = net; Vb = OCV + (14.5 - OCV) * (net / Imax); }
+    else if (net > Imax) { Ib = Imax; Vb = CP.vset; Ish = net - Imax; }
+    else { Ib = net; Vb = OCV + (CP.vset - OCV) * (net / Imax); }
   } else { Ib = net; Vb = OCV + net * Rint; }
   if (CH.soc <= 0.001 && Ib < 0) { Vb = Math.max(6, Vb - 4); }
   return {Vll, Voc, Ia, Ib, Vb, Ish, Iload, OCV, fuse, phase};
@@ -2228,6 +2326,9 @@ function stepCharging(dt) {
     ["Stator AC, unloaded", turning ? r.Vll.toFixed(0) : "0", "V"],
     ["B+ / battery", r.Vb.toFixed(1), "V", r.Vb > 15 || r.Vb < 12],
     ["Battery current", (r.Ib >= 0 ? "+" : "−") + Math.abs(r.Ib).toFixed(1), "A", r.Ib < -0.1],
+    ["Alternator output", r.Ia.toFixed(1), "A"],
+    ["Loads", r.Iload.toFixed(1), "A"],
+    ["Charging balance", (r.Ia - r.Iload >= 0 ? "+" : "−") + Math.abs(r.Ia - r.Iload).toFixed(1), "A", r.Ia - r.Iload < 0],
     ["Shunted to earth", r.Ish.toFixed(1), "A", sh],
     ["Battery charge", Math.round(CH.soc * 100), "%", CH.soc < 0.2],
   ]);
@@ -2237,7 +2338,7 @@ function stepCharging(dt) {
   else if (!turning) m = CH.loads ? "Engine off. The loads run from the battery alone, so its charge falls." : "Engine off and loads off. Nothing flows.";
   else if (CH.fault === "reg" && r.Vb > 14.8) { m = `The regulator has failed, so nothing caps the voltage. At ${r.Vb.toFixed(1)} V the battery gasses and bulbs blow. Replace the regulator/rectifier.`; k = "warn"; }
   else if (r.Ib < -0.1) { m = `At ${CH.rpm} rpm the alternator makes ${r.Ia.toFixed(1)} A but the loads need ${r.Iload.toFixed(1)} A, so the battery covers the shortfall.${r.phase ? " One stator phase is open, which halves the output." : ""}`; k = r.phase ? "warn" : ""; }
-  else if (sh) { m = `The battery is nearly full. The regulator holds 14.5 V and shorts ${r.Ish.toFixed(1)} A of stator current to earth through the SCRs, turning it into heat in the regulator and stator.`; k = "run"; }
+  else if (sh) { m = `The battery is nearly full. The regulator holds ${CP.vset.toFixed(1)} V and shorts ${r.Ish.toFixed(1)} A of stator current to earth through the SCRs, turning it into heat in the regulator and stator.`; k = "run"; }
   else { m = `Charging. The bridge rectifies three-phase AC to DC and ${r.Ib.toFixed(1)} A flows into the battery at ${r.Vb.toFixed(1)} V.${r.phase ? " One stator phase is open, so output is about half what it should be." : ""}`; k = r.phase ? "warn" : "run"; }
   setMsg(m, k);
 }
@@ -2257,6 +2358,16 @@ function syncIg() {
   $("#i-stop").setAttribute("aria-pressed", String(IG.run));
   $("#i-ign").textContent = IG.ign ? "Ignition on (panel B)" : "Ignition off (panel B)";
   $("#i-ign").setAttribute("aria-pressed", String(IG.ign));
+}
+function ignModel(rpm) {
+  const R = IP.rp, V = IP.vbat, tau = COIL_L / R, If = V / R;
+  const tmax = rpm > 0 ? 60000 / rpm : Infinity;             // ms between sparks (one per revolution)
+  const limited = IP.dwell > 0.85 * tmax;
+  const t = Math.min(IP.dwell, 0.85 * tmax) / 1000;          // s
+  const Ipk = If * (1 - Math.exp(-t / tau));
+  const E = 0.5 * COIL_L * Ipk * Ipk;
+  const heat = R * If * If * (t - 2 * tau * (1 - Math.exp(-t / tau)) + tau / 2 * (1 - Math.exp(-2 * t / tau))); // J per spark, integral of i² R
+  return {Ipk, E, P: heat * rpm / 60, deg: 6 * rpm * t, t, tau, If, limited};
 }
 function stepIgnition(dt) {
   const prev = IG.a;
@@ -2293,14 +2404,15 @@ function stepIgnition(dt) {
     ["supB1", "supB2", "supB3", "supB4a", "ecuFeed"].forEach(k => S[k] = "on slow");
     S.batgB = "on slow rev"; S.supB4b = "v"; S.ecuG = "on slow";
     const rpm = IG.speed * 100;
-    const dwellDeg = Math.min(120, 40 + rpm / 120);
+    const IM = ignModel(rpm);
+    const dwellDeg = Math.min(300, Math.max(20, IM.deg));
     dwell = turning && pulserOK && a > 360 - dwellDeg;
     if (dwell) {
       S.supB4b = "on"; S.igB = "on rev"; S.igbtC = "on rev"; S.igbtE = "on"; S.ecuG = "on"; S.gateB = "on";
       ["supB1", "supB2", "supB3"].forEach(k => S[k] = "on");
       S.batgB = "on rev";
       const t = (a - (360 - dwellDeg)) / dwellDeg;
-      IG.ip = 6 * (1 - Math.exp(-t * 3));
+      IG.ip = IM.If * (1 - Math.exp(-t * IM.t / IM.tau));
     } else IG.ip = 0;
     if (turning && pulserOK && sinceFire < 12) { S.pulB = "on"; S.pcB = "on"; S.pulgB = "on"; }
   } else IG.ip = 0;
@@ -2324,12 +2436,17 @@ function stepIgnition(dt) {
   setBlade($("[data-blade='stopB']", svg), IG.run, "M447,63 L480,46", "M447,66 L480,66");
   const rpm = IG.speed * 100;
   const adv = Math.round(Math.min(38, 8 + rpm / 300));
+  const IMs = ignModel(rpm);
   setReadouts([
     ["Engine", rpm, "rpm"],
     ["A: capacitor", Math.round(IG.cap), "V", IG.cap > 200],
     ["B: coil primary", IG.ip.toFixed(1), "A", IG.ip > 0.5],
     ["B: advance", powered && turning && pulserOK ? adv : "–", "° BTDC"],
     ["Ignition pulses", IG.sparks, ""],
+    ["B: peak current", powered && turning && pulserOK ? IMs.Ipk.toFixed(2) : "–", "A"],
+    ["B: spark energy", powered && turning && pulserOK ? (IMs.E * 1000).toFixed(0) : "–", "mJ", powered && turning && IMs.E < 0.015],
+    ["B: coil heat", powered && turning && pulserOK ? IMs.P.toFixed(1) : "0.0", "W", IMs.P > 25],
+    ["B: dwell angle", powered && turning && pulserOK ? IMs.deg.toFixed(0) : "–", "°"],
   ]);
   let m, k = "";
   if (!turning) m = "Engine stopped. Both systems need the crankshaft turning: panel A has no source coil output, and the ECU in panel B will not switch the coil on without a crank signal, which protects the coil from overheating.";
@@ -2338,7 +2455,8 @@ function stepIgnition(dt) {
   else {
     const A = fired ? "A: the pulser fires the SCR and the capacitor dumps into the coil primary." : `A: the source coil charges the capacitor through diode D (${Math.round(IG.cap)} V).`;
     const B = !IG.ign ? "B: ignition off, no feed." : dwell ? `B: dwell. The IGBT earths the coil primary and ${IG.ip.toFixed(1)} A builds up.` : sinceFire < 22 ? `B: the IGBT has switched off; the collapsing field fires the plug at ${adv}° before top dead centre.` : "B: waiting for the next dwell.";
-    m = `${A} ${B}${fouled ? " The plug is fouled: the high voltage leaks across carbon to earth and no spark crosses the gap." : ""}`;
+    const xtra = !IG.ign ? "" : (IMs.limited ? ` At ${rpm} rpm there are only ${(60000 / rpm).toFixed(1)} ms between sparks, so the ECU cuts the dwell to ${(IMs.t * 1000).toFixed(1)} ms.` : "") + (IMs.E < 0.015 ? ` Only ${(IMs.E * 1000).toFixed(0)} mJ is stored: a weak spark that may misfire under load (example threshold 15 mJ).` : "") + (IMs.P > 25 ? ` The coil dissipates ${IMs.P.toFixed(0)} W and will overheat.` : "");
+    m = `${A} ${B}${xtra}${fouled ? " The plug is fouled: the high voltage leaks across carbon to earth and no spark crosses the gap." : ""}`;
     k = fouled ? "warn" : "run";
   }
   setMsg(m, k);
@@ -2373,7 +2491,7 @@ function loop(now) {
   stepCharging(dt); stepIgnition(dt);
   requestAnimationFrame(loop);
 }
-buildHarnessDeck(); syncCh(); syncIg(); syncStartBtns();
+buildHarnessDeck(); buildParams(); syncCh(); syncIg(); syncStartBtns();
 updStarting();
 showTab(location.hash.slice(1) || "harness");
 requestAnimationFrame(loop);

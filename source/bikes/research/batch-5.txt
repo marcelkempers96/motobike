@@ -1,0 +1,83 @@
+bmw-g310gs	BMW G310GS	adventure
+bmw-f650gs	BMW F650GS	adventure
+bmw-f700gs	BMW F700GS	adventure
+bmw-f750gs	BMW F750GS	adventure
+bmw-f800gs	BMW F800GS	adventure
+bmw-f850gs	BMW F850GS	adventure
+bmw-f900gs	BMW F900GS	adventure
+bmw-r1100gs	BMW R1100GS	adventure
+bmw-r1150gs	BMW R1150GS	adventure
+bmw-r1200gs	BMW R1200GS	adventure
+bmw-g310r	BMW G310R	street
+bmw-f800r	BMW F800R	street
+bmw-f900r	BMW F900R	street
+bmw-r1200r	BMW R1200R	street
+bmw-r1250r	BMW R1250R	street
+bmw-r-ninet	BMW R nineT	street
+bmw-s1000rr	BMW S1000RR	sport
+bmw-r1200rt	BMW R1200RT	touring
+bmw-r1250rt	BMW R1250RT	touring
+bmw-k1600gt	BMW K1600GT	touring
+bmw-k1600gtl	BMW K1600GTL	touring
+bmw-s1000xr	BMW S1000XR	touring
+bmw-r18	BMW R18	cruiser
+bmw-c400gt	BMW C400GT	scooter
+bmw-ce04	BMW CE04	electric
+ducati-monster-696	Ducati Monster 696	street
+ducati-monster-796	Ducati Monster 796	street
+ducati-monster-797	Ducati Monster 797	street
+ducati-monster-821	Ducati Monster 821	street
+ducati-monster-1200	Ducati Monster 1200	street
+ducati-streetfighter-v2	Ducati Streetfighter V2	street
+ducati-748	Ducati 748	sport
+ducati-916	Ducati 916	sport
+ducati-996	Ducati 996	sport
+ducati-999	Ducati 999	sport
+ducati-848	Ducati 848	sport
+ducati-1098	Ducati 1098	sport
+ducati-1198	Ducati 1198	sport
+ducati-899-panigale	Ducati 899 Panigale	sport
+ducati-959-panigale	Ducati 959 Panigale	sport
+ducati-1199-panigale	Ducati 1199 Panigale	sport
+ducati-multistrada-950	Ducati Multistrada 950	adventure
+ducati-multistrada-1200	Ducati Multistrada 1200	adventure
+ducati-multistrada-1260	Ducati Multistrada 1260	adventure
+ducati-multistrada-v2	Ducati Multistrada V2	adventure
+ducati-diavel	Ducati Diavel	cruiser
+ducati-hypermotard-950	Ducati Hypermotard 950	supermoto
+hero-splendor-plus	Hero Splendor Plus	commuter
+hero-super-splendor	Hero Super Splendor	commuter
+hero-hf-deluxe	Hero HF Deluxe	commuter
+hero-hf100	Hero HF100	commuter
+hero-passion-plus	Hero Passion Plus	commuter
+hero-passion-pro	Hero Passion Pro	commuter
+hero-glamour	Hero Glamour	commuter
+hero-xtreme-125r	Hero Xtreme 125R	street
+hero-xtreme-160r	Hero Xtreme 160R	street
+hero-xtreme-200r	Hero Xtreme 200R	street
+hero-xtreme-250r	Hero Xtreme 250R	street
+hero-mavrick-440	Hero Mavrick 440	street
+hero-karizma-xmr	Hero Karizma XMR	sport
+hero-xpulse-200-4v	Hero Xpulse 200 4V	adventure
+hero-xpulse-210	Hero Xpulse 210	adventure
+hero-pleasure-plus	Hero Pleasure Plus	scooter
+hero-destini-125	Hero Destini 125	scooter
+hero-xoom-110	Hero Xoom 110	scooter
+hero-xoom-125	Hero Xoom 125	scooter
+hero-xoom-160	Hero Xoom 160	scooter
+zero-s	Zero S	electric
+zero-sr	Zero SR	electric
+zero-sr-f	Zero SR/F	electric
+zero-sr-s	Zero SR/S	electric
+zero-ds	Zero DS	electric
+zero-dsr	Zero DSR	electric
+zero-dsr-x	Zero DSR/X	electric
+zero-fx	Zero FX	electric
+zero-fxe	Zero FXE	electric
+sym-symphony-125	SYM Symphony 125	scooter
+sym-jet-x125	SYM Jet X125	scooter
+sym-jet14	SYM JET14	scooter
+sym-joyride-125	SYM Joyride 125	scooter
+sym-joyride-300	SYM Joyride 300	scooter
+sym-maxsym-400	SYM Maxsym 400	scooter
+roam-air	Roam Air	electric

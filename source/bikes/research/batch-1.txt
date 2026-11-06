@@ -1,0 +1,84 @@
+honda-cg125	Honda CG125	commuter
+honda-cbf125	Honda CBF125	commuter
+honda-cb125f	Honda CB125F	commuter
+honda-cb125	Honda CB125	commuter
+honda-cb250	Honda CB250	commuter
+honda-cb400	Honda CB400	commuter
+honda-cb500	Honda CB500	commuter
+honda-cb600f-hornet	Honda CB600F Hornet	commuter
+honda-cb750	Honda CB750	commuter
+honda-cb900	Honda CB900	commuter
+honda-cb1300	Honda CB1300	commuter
+honda-shine-125	Honda Shine 125	commuter
+honda-shine-100	Honda Shine 100	commuter
+honda-sp125	Honda SP125	commuter
+honda-sp160	Honda SP160	commuter
+honda-unicorn	Honda Unicorn	commuter
+honda-livo	Honda Livo	commuter
+honda-cg160	Honda CG160	commuter
+honda-cb650r	Honda CB650R	street
+honda-cb1000r	Honda CB1000R	street
+honda-hornet-750	Honda Hornet 750	street
+honda-cb500f	Honda CB500F	street
+honda-cb500-hornet	Honda CB500 Hornet	street
+honda-cb125r	Honda CB125R	street
+honda-cb1100	Honda CB1100	street
+honda-cbr125	Honda CBR125	sport
+honda-cbr150r	Honda CBR150R	sport
+honda-cbr250r	Honda CBR250R	sport
+honda-cbr250rr	Honda CBR250RR	sport
+honda-cbr300r	Honda CBR300R	sport
+honda-cbr500r	Honda CBR500R	sport
+honda-cbr600f	Honda CBR600F	sport
+honda-cbr600rr	Honda CBR600RR	sport
+honda-cbr650r	Honda CBR650R	sport
+honda-crf250l	Honda CRF250L	adventure
+honda-crf300l	Honda CRF300L	adventure
+honda-crf250-rally	Honda CRF250 Rally	adventure
+honda-crf300-rally	Honda CRF300 Rally	adventure
+honda-crf1000l-africa-twin	Honda CRF1000L Africa Twin	adventure
+honda-crf1100l-africa-twin	Honda CRF1100L Africa Twin	adventure
+honda-xl650v-transalp	Honda XL650V Transalp	adventure
+honda-xl750-transalp	Honda XL750 Transalp	adventure
+honda-nx500	Honda NX500	adventure
+honda-nx650	Honda NX650	adventure
+honda-xr150l	Honda XR150L	adventure
+honda-xr190l	Honda XR190L	adventure
+honda-xr250	Honda XR250	adventure
+honda-gl1500-gold-wing	Honda GL1500 Gold Wing	touring
+honda-gl1800-gold-wing	Honda GL1800 Gold Wing	touring
+honda-st1100	Honda ST1100	touring
+honda-st1300	Honda ST1300	touring
+honda-nt700v	Honda NT700V	touring
+honda-nt1100	Honda NT1100	touring
+honda-cmx250-rebel	Honda CMX250 Rebel	cruiser
+honda-cmx500-rebel	Honda CMX500 Rebel	cruiser
+honda-cmx1100-rebel	Honda CMX1100 Rebel	cruiser
+honda-vt125	Honda VT125	cruiser
+honda-activa-110	Honda Activa 110	scooter
+honda-activa-125	Honda Activa 125	scooter
+honda-dio	Honda Dio	scooter
+honda-beat	Honda BeAT	scooter
+honda-scoopy	Honda Scoopy	scooter
+honda-vario-125	Honda Vario 125	scooter
+honda-vario-160	Honda Vario 160	scooter
+honda-click-125	Honda Click 125	scooter
+honda-click-160	Honda Click 160	scooter
+honda-pcx125	Honda PCX125	scooter
+honda-pcx160	Honda PCX160	scooter
+honda-adv160	Honda ADV160	scooter
+honda-adv350	Honda ADV350	scooter
+honda-wave-110i	Honda Wave 110I	underbone
+honda-wave-125i	Honda Wave 125I	underbone
+honda-super-cub-c125	Honda Super Cub C125	underbone
+honda-ct125	Honda CT125	underbone
+honda-biz-125	Honda Biz 125	underbone
+kymco-agility-125	Kymco Agility 125	scooter
+kymco-like-125	Kymco Like 125	scooter
+kymco-super-8-125	Kymco Super 8 125	scooter
+kymco-downtown-300	Kymco Downtown 300	scooter
+kymco-x-town-300	Kymco X-Town 300	scooter
+kymco-ak550	Kymco AK550	scooter
+vmoto-tc	Vmoto TC	electric
+vmoto-tc-max	Vmoto TC Max	electric
+vmoto-cpx	Vmoto CPx	electric
