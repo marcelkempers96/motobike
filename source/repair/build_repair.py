@@ -128,10 +128,15 @@ for (_k, _i), _f in NEW_MD.items():
   if _ph: PHOTOS[_k][_i] = _ph + [x for x in PHOTOS[_k].get(_i, []) if all(x['file'] != y['file'] for y in _ph)]
 _apply_order()
 _done = {}
+MIN_PHOTO_PX = 320
 def photo_src(src):
   if src in _done: return _done[src]
   full = os.path.join(ROOT, src)
   if not os.path.exists(full): _done[src] = None; return None
+  # skip photos too small to show sharply (they appear up to ~600 px wide on the page)
+  try:
+    if max(_Image.open(full).size) < MIN_PHOTO_PX: _done[src] = None; return None
+  except Exception: _done[src] = None; return None
   name = re.sub(r'[^a-z0-9_-]+', '-', os.path.splitext(os.path.basename(src))[0].lower()) + '.jpg'
   out = os.path.join(PHOTO_DIR, name)
   if not os.path.exists(out):

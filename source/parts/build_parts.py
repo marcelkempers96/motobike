@@ -250,6 +250,10 @@ def dan_photos(pid, limit=8):
     for ph in _DAN.get(i, []):
       name = _re.sub(r'[^a-z0-9_-]+', '-', os.path.splitext(os.path.basename(ph['file']))[0].lower()) + '.jpg'
       if name in seen or not os.path.exists(os.path.join(ROOT, 'assets/repair-photos', name)): continue
+      try:  # skip photos too small to show sharply (same rule as build_repair.py)
+        from PIL import Image as _Im
+        if max(_Im.open(os.path.join(ROOT, 'assets/repair-photos', name)).size) < 320: continue
+      except Exception: continue
       seen.add(name); res.append({'src': 'assets/repair-photos/' + name, 'caption': ph.get('caption', '')})
   return res[:limit]
 def workshop(pid, limit=8):
