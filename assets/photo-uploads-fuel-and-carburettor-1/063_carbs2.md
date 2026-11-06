@@ -1,0 +1,199 @@
+# Dan's Motorcycle Carburator theory and Tuning
+
+Source: https://www.dansmc.com/carbs2.htm
+
+Carburator Theory and Tuning
+
+![063_carb_jet_range.jpg](<063_carb_jet_range.jpg>)
+
+![063_carburator_theory_tuning.jpg](<063_carburator_theory_tuning.jpg>)
+
+¶ For some reason everyone seems to think tuning a carb is just real easy. Change a jet or two and boom, your there. Yeah, right! There are quite literally millions and millions of jet combinations. A rough check on Bing carbs shows there are at least 13,860,000 different combinations of jets. If you are going to change carbs you'd better be prepared to spend some time and money on the job.
+
+![063_carb_venturi.jpg](<063_carb_venturi.jpg>)
+
+![063_if_going_change_carbs_d_better.jpg](<063_if_going_change_carbs_d_better.jpg>)
+
+![063_main_jet_sectioned.jpg](<063_main_jet_sectioned.jpg>)
+
+![063_if_going_change_carbs_d_better_2.jpg](<063_if_going_change_carbs_d_better_2.jpg>)
+
+If you look at a carburetor, you will notice a rather large hole going from one side to the other. This is called a Venturi. Air passes into the engine through this hole (Venturi). As the velocity of the air entering the carb (and then the engine) increases, it's pressure decreases, creating a low pressure or vacuum in the venturi. This vacuum moves around in the venturi, as the throttle is opened, and sucks gasoline through the different jets in the carb. The gas then mixes with the air going through the venturi. The way the jets are made
+
+![063_if_going_change_carbs_d_better_2.jpg](<063_if_going_change_carbs_d_better_2.jpg>)
+
+causes the fuel to vaporize as it goes into the venturi. Where the jets are placed in the carb and where the jet's outlet is located in the venturi, determines what part of the throttle opening that jet controls. The idle jet system (comprised of pilot air jet, pilot fuel jet and pilot fuel screw) controls from 0% to about 25% of the throttle opening. The throttle valve controls 0% to 35% of the throttle opening. The needle jet and jet needle control from 15% to 80% of the throttle opening and the main jet controls 60% to 100%. This means that when you open the throttle about one eighth of the way open, all of the gas/air mixture going into your engine is controlled by the idle jet. As you can see, the different jets over lap the operating range of each other. That is, the jet needle starts to effect things before the effect of the idle jet ends. This is something to remember when working on carbs... everything is interconnected. Change one thing and it will effect other things.
+
+OK, let's go over the different systems in the carb and see what they do.
+
+Fuel level.
+
+![063_fuel_level_3.jpg](<063_fuel_level_3.jpg>)
+
+![063_fuel_level.jpg](<063_fuel_level.jpg>)
+
+![063_fuel_level_4.jpg](<063_fuel_level_4.jpg>)
+
+![063_fuel_level_2.jpg](<063_fuel_level_2.jpg>)
+
+The fuel level is controlled by the fuel floats
+
+![063_fuel_level_2.jpg](<063_fuel_level_2.jpg>)
+
+and the fuel float valve. The floats are hollow or made of something that will float on gasoline, such as cork. Part of the float presses against the float valve, sometimes called a needle and seat. Most times the part of the float that touches the float valve needle is bendable
+
+![063_bendable.jpg](<063_bendable.jpg>)
+
+so you can adjust the level of the fuel in the float bowl. All plastic floats are not adjustable. If this level is way too high, gas can leak out the carb overflow tube or into the engine. If fuel gets into the engine it will thin out the engine oil, ruining it's ability to lubricate. This will, sooner or later, blow up your engine! If a full tank of gas in the evening turns into a half tank by morning, check your oil. If it's thin and smells like gas, change it and replace your float valve and/or check your fuel level. If the oil is OK, check under the overflow tube. If it's OK, then check where you are parking your bike 'cuse someone is walking away with your gas!
+
+If your fuel level is just a bit high, the mixture will tend to be a bit rich. If it's low, the mixture will tend to be a bit lean. This is because a high level takes less vacuum to suck fuel into the engine and a low level takes more vacuum to do the same.
+
+Pilot or idle jet system.
+
+![063_pilot_idle_jet_system.jpg](<063_pilot_idle_jet_system.jpg>)
+
+![063_pilot_group.jpg](<063_pilot_group.jpg>)
+
+![063_pilot_idle_jet_system.jpg](<063_pilot_idle_jet_system.jpg>)
+
+The idle jet controls the idle and on up to quarter throttle, give or take a bit. On some carbs, like Mikuni there is an air jet too. In conjunction with the idle jet there is an idle jet air screw. This screw leans or richens the fuel mixture for a smooth idle and on up to one quarter throttle. From the idle jet, there are little passages cast into the carb that lead to holes just in front of the throttle valve or plate. There can be just one hole
+
+![063_one_hole.jpg](<063_one_hole.jpg>)
+
+or there can be several
+
+![063_several.jpg](<063_several.jpg>)
+
+, depending on the carb design. They effect the mixture as long as the vacuum, in the venturi, is over them. As the throttle opens further, the vacuum moves to the needle jet and jet needle.
+
+The Throttle Valve
+
+![063_throttle_valve.jpg](<063_throttle_valve.jpg>)
+
+.
+
+![063_slide.jpg](<063_slide.jpg>)
+
+![063_throttle_valve.jpg](<063_throttle_valve.jpg>)
+
+The throttle Valve is the big slide that opens and closes your throttle has a bevel angle cut in one side of the big round (can be flat, too) slide, toward the air cleaner. This angle comes in several sizes and helps control the fuel mixture from idle to about 35% open throttle.
+
+Needle Jet
+
+![063_needle_jet.jpg](<063_needle_jet.jpg>)
+
+.
+
+![063_needle_jet_2.jpg](<063_needle_jet_2.jpg>)
+
+![063_needle_jet.jpg](<063_needle_jet.jpg>)
+
+This jet doesn't really even look like a jet, but it is! It controls the fuel mixture from 15% to 60% open throttle. It sets in the center of the carb, right over the Main Jet.
+
+Jet Needle
+
+![063_jet_needle.jpg](<063_jet_needle.jpg>)
+
+.
+
+![063_jet_needle_2.jpg](<063_jet_needle_2.jpg>)
+
+![063_jet_needle.jpg](<063_jet_needle.jpg>)
+
+This is the needle that rides in the throttle slide and goes into the needle jet. This Jet Needle controls the fuel mixture from 20% to 80% open throttle. It can come in many different sized tapers. Sometimes, one needle can have several tapers on it. The top end of the Jet Needle has grooves cut in it, usually five, and you can move the little clip up (which moves the Jet Needle down in relation to the Throttle Valve and Needle Jet) to lean the mixture or down (moving the Jet Needle up in relation to the Throttle Valve and Needle Jet) to richen the mixture. Most late model bikes have needles with only one groove cut in them. This is so you can't richen the mixture, thereby keeping the EPA happy.
+
+Main Jet
+
+![063_main_jet.jpg](<063_main_jet.jpg>)
+
+.
+
+![063_main_jet_2.jpg](<063_main_jet_2.jpg>)
+
+![063_main_jet.jpg](<063_main_jet.jpg>)
+
+This jet controls the fuel mixture from 60% to 100% open throttle.
+
+We want nice clean acceleration from idle to full throttle, with no stumbling or flat spots. This can be quite a tall order if we are starting with a new carb. Actually, it can be a real challenge to get things to carburate right after something as simple as an exhaust pipe change.
+
+Now, I wish I could tell I'm the great carb man, but, well... no one has ever been dumb enough to hire me to really work over a carb. Well, there was that one time with that Kaw 650 and aftermarket pipes. It had some kind of weird stock carbs that looked like Mikunis but really were not. It had TDK or KDT or DTK, something like that, carbs. It had aftermarket exhaust pipes and was running too lean, and stumbled at one point under acceleration. Worthless pig! The jet needles where not adjustable, so I put little washers under the needle clip, to raise the needles. The main jet only came in one size, so I drilled it out with ity-bity, expensive, jet drills. I could move the miss around, but I could not get rid of it. From the beginning I told the guy it wouldn't work and that he was wasting his money, and that at the least we needed carbs we could get parts for, but nooo. Just rise the needles, drill the jets he said... $200 later he finally gave up. I guess I shouldn't complain, I did get paid... but!
+
+But you want to try it, don't you? OK, the drill really isn't that hard. Simply run the engine at whatever throttle opening you want to test, for a mile or so, and look at the spark plug. Is the spark plug reading lean or rich? Now look for the jet that controls that particular throttle opening and exchange it for a richer or leaner one. Now that doesn't sound very hard, does it? Oh yes, the throttle transition from one jet to the next must be smooth too! Go back over the areas that each jet controls. They overlap each other. Some a little, some a lot. Make sure you have a good selection of jets!
+
+Most carb manufacturers have tables of specifications on the jet needles and needle jets, and other jets that you will find very useful. With these specs you can make a better guess as to what jet will work best. Some places use motorcycle dynamometers for testing.
+
+![063_old_carbs.gif](<063_old_carbs.gif>)
+
+![063_some_places_use_motorcycle_dynamometers_testing.gif](<063_some_places_use_motorcycle_dynamometers_testing.gif>)
+
+These can be a big help to get real close to the best jet setting. Working out the best main jet for a 170 MPH bike can be quite unhealthy if you only have a freeway to test on! Just remember one thing. A dynamometer is not the real world. A fact more then one factory has found out the hard way when their super hot, dyno tested, race machines didn't run so fast in the real world, on real pavement, in real air with real bugs on the windscreen.
+
+Anyway, what I'm trying to get over to you is that just because your buddy said he got new carb, changed a jet or two and now his bike gets 100 miles per gallon and has double the horse power, doesn't mean you can too. It just might require a lot more work than you bargained for.
+
+Look on the bright side. Carbs used to be real simple
+
+![063_some_places_use_motorcycle_dynamometers_testing.gif](<063_some_places_use_motorcycle_dynamometers_testing.gif>)
+
+at the turn of the century, but they didn't work as good as today's carbs.
+Oh, one last thing, seeing how we are talking carb theory. When an engine is cold, like when you first start it up. It doesn't evaporate the gas well. Liquid gas does not burn, so you have to put in lots of gas, because a lot of it does not vaporize. The choke helps the carb to put into the engine a very rich mixture, and at least some of that mixture will vaporize and burn.
+
+I had one guy tell me that the reason for a rich mixture when starting was so the pistons would be lubed by the raw gas and spin the engine over easier so it would start! He felt very strongly about this, so I didn't say a thing. Like the Bible says, don't cast your pearls before swine. (Matthew 7:6)
+
+![063_pocket_tuner.jpg](<063_pocket_tuner.jpg>)
+
+![063_pdf_file_above_mukuni_pocket_tuner.jpg](<063_pdf_file_above_mukuni_pocket_tuner.jpg>)
+
+For a PDf file of the above Mukuni Pocket Tuner click HERE
+
+[PDF: 063_6_pdf_file_above_mukuni_pocket.pdf](<063_6_pdf_file_above_mukuni_pocket.pdf>)
+
+5,000 KB
+Print it out on card stock, cut it out, staple it together and it will help you figure out Mikuni Main Jets.
+
+![063_6_pdf_file_above_mukuni_pocket.gif](<063_6_pdf_file_above_mukuni_pocket.gif>)
+
+Amal Tuning Guide in PDF
+557 KiloBytes
+Make your own Tuning Wheel
+
+![063_amal_tuning_guide_pdf_557_kilobytes.gif](<063_amal_tuning_guide_pdf_557_kilobytes.gif>)
+
+[PDF: 063_amal_tuning_guide_pdf_557_kilobytes.pdf](<063_amal_tuning_guide_pdf_557_kilobytes.pdf>)
+
+Amal Monobloc Tuning Guide in PDF
+
+2,610 KiloBytes
+
+Here are some Carb Manuals that might help.
+Mikuni
+Keihin
+Dellorto Tuning Guide 10,212 KB
+Dellorto Tuning Guide 2 655 KB
+
+But you want more, don't you? So click on the Carburetor to learn more then you will ever want to know about the inner workings of Carburetors.
+
+![063_so_click_carburetor_learn_more_then.gif](<063_so_click_carburetor_learn_more_then.gif>)
+
+![063_so_click_carburetor_learn_more_then_2.gif](<063_so_click_carburetor_learn_more_then_2.gif>)
+
+Back to M/C Repair Course
+
+BACK TO INDEX
+
+MOTORCYCLE HOME PAGE
+
+go to....
+Home
+Index
+
+Ultimate Shop Manual
+Online Shop Manuals
+MC Repair Course
+DONATION
+E-Mail To ME
+
+![063_home_index_ultimate_shop_manual_online.gif](<063_home_index_ultimate_shop_manual_online.gif>)
+
+Did this page help you? Would you like to help us? If so Click HERE
+
+Copyright © 1999-2015 dansmc.com. All rights reserved.
