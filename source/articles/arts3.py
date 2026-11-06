@@ -17,7 +17,7 @@ body=f'''
 <p>In practice, a 125-equivalent electric commuter uses about 2 to 4 kWh per 100 km at the battery terminals, depending on speed, load and hills. A 125 cc petrol commuter burning 2.5 litres per 100 km uses about 22 kWh of fuel energy for the same distance.</p>
 <figure>
   <img src="{A}illustrations/electrical/F25.png" alt="Block diagram of an electric motorcycle powertrain: battery pack with BMS, main fuse, pre-charge circuit and contactor, motor controller, motor with position sensor, vehicle control unit, DC-DC converter, charge port, CAN bus, throttle and brake inputs and regenerative path" width="2400" height="1500" loading="lazy">
-  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Moto Zero Module 05.</figcaption>
+  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Moto Zero Module 5.</figcaption>
 </figure>
 
 <h2 id="battery">The battery pack</h2>
@@ -25,7 +25,7 @@ body=f'''
 <p>The cell chemistry matters. Nickel manganese cobalt (NMC) cells store the most energy for their weight. Lithium iron phosphate (LFP) cells are heavier for the same range but last many more charge cycles, contain no cobalt or nickel and are more stable if damaged, so they are spreading in commuter and battery-swap fleets.</p>
 <figure>
   <img src="{A}illustrations/electrical/F26.png" alt="Technical plate of battery pack construction: cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and connector, with an inset section through one cell" width="2400" height="1500" loading="lazy">
-  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Moto Zero Module 05.</figcaption>
+  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Moto Zero Module 5.</figcaption>
 </figure>
 
 <h2 id="bms">The battery management system</h2>
@@ -55,10 +55,10 @@ body=f'''
 <div class="mz-art-note"><p>Packs above 60 V DC count as high voltage, and a so-called 72 V pack reaches 84 V when full. Work on traction circuits needs safe isolation, insulated tools and training. Orange cables mark the high-voltage circuit on electric motorcycles.</p></div>
 
 <h2 id="maintenance">What still needs maintenance</h2>
-<p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 05 of the course starts with <a href="{L}m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="{L}m5-batteries">batteries and the BMS</a>.</p>
+<p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 5 of the course starts with <a href="{L}m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="{L}m5-batteries">batteries and the BMS</a>.</p>
 <p>How the pack is charged and stored decides how long it lasts; our guide to <a href="../electric-motorcycle-battery-care/">electric motorcycle battery care</a> sets out the habits that matter. For faults, the Repair section has pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/parts/#controller">controller</a>, <a href="../../repair/parts/#motor">motor</a> and <a href="../../repair/parts/#charge_port">charge port</a>.</p>
 ''',
-cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/parts/#controller', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 05', False)]),
+cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/parts/#controller', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 5', False)]),
 faq=[
  ('Do electric motorcycles have gears?', 'Almost all use a single fixed ratio with no gearbox or clutch. The motor gives full torque from standstill and works across a wide speed range, so gears are not needed.'),
  ('What does a BMS do on an electric motorcycle?', 'It measures every cell group\'s voltage, the temperatures and the current, estimates state of charge, balances the cells and cuts the current if any limit is exceeded. It also tells the controller and charger how much current they may use.'),
@@ -85,7 +85,7 @@ body=f'''
 <p>A plain chain is lubricated only by what you spray on it. An <strong>O-ring chain</strong> traps factory grease in each joint behind rubber rings, and an <strong>X-ring</strong> chain uses a ring with four smaller sealing lips to reduce friction. Sealed chains typically last two to three times as long as plain chains on road machines.</p>
 <figure>
   <img src="{A}illustrations/transmission/F15.png" alt="Technical plate of a chain final drive: front and rear sprockets with the chain run, a section through an O-ring chain showing pin, bushing, roller, plates and O-rings, slack measured at the midpoint of the lower run, and a 20-link length measurement" width="2400" height="1632" loading="lazy">
-  <figcaption>Chain final drive: O-ring chain section, slack measurement and 20-link wear length. Plate F15, Moto Zero Module 04.</figcaption>
+  <figcaption>Chain final drive: O-ring chain section, slack measurement and 20-link wear length. Plate F15, Moto Zero Module 4.</figcaption>
 </figure>
 
 <h2 id="chain-sizes">Chain sizes</h2>
@@ -125,7 +125,7 @@ body=f'''
 <p>Clean the chain with a neutral chain cleaner and a soft brush. Do not use steam, petrol or strong solvents on an O-ring chain, because they swell or dissolve the rings. Dry it, then apply chain lubricant to the inside of the lower run where the plates overlap, so that the chain's own movement carries it into the joints, and wipe off the excess. Lubricate when the chain is warm after a ride, every 500 to 800 km, and after riding in rain.</p>
 <p>Chain drive is not the only option. Toothed belts, common on electric motorcycles and some cruisers, need no lubrication, and shaft drives are sealed but heavier. Chapter 4.3 of the course, <a href="{L}m4-final-drive">Final drive and CVT</a>, compares them and includes the full job sheet. The <a href="../../repair/parts/#chain">chain page in the Repair section</a> collects chain and sprocket faults such as noise, jumping and tight spots.</p>
 ''',
-cta=dict(label='Try it', h='See the final drive in 3D', p='Select the chain or the rear sprocket in the Overview to see the final drive turning, then check your knowledge with the Module 04 questions in the Quiz.', links=[(OV+'chain', 'Explore the chain', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-final-drive', 'Read chapter 4.3', False), ('../../repair/parts/#chain', 'Chain repairs', False)]),
+cta=dict(label='Try it', h='See the final drive in 3D', p='Select the chain or the rear sprocket in the Overview to see the final drive turning, then check your knowledge with the Module 4 questions in the Quiz.', links=[(OV+'chain', 'Explore the chain', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-final-drive', 'Read chapter 4.3', False), ('../../repair/parts/#chain', 'Chain repairs', False)]),
 faq=[
  ('How much slack should a motorcycle chain have?', 'Use the figure in your owner\'s manual. Many commuter motorcycles, including the K-Light 125, specify 20 to 40 mm of total up-and-down movement at the midpoint of the lower run, measured at the tightest point.'),
  ('How do I know when to replace my chain?', 'Measure the length over 10 or 20 pitches. For a 12.70 mm pitch chain, replace it when 10 pitches measure about 129 mm or 20 pitches about 258 to 259 mm, or at the chain maker\'s limit.'),

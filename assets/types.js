@@ -16,22 +16,22 @@ const pad = (n) => String(n).padStart(2, '0');
 
 /* Where each type is taught in the course. */
 const LEARN = {
-  pioneer: ['m1-history-systems', 'Module 01, chapter 1.1'],
-  'vintage-vtwin': ['m1-history-systems', 'Module 01, chapter 1.1'],
-  scooter: ['m4-final-drive', 'Module 04, final drive and CVT'],
-  'step-through': ['m1-types', 'Module 01, chapter 1.2'],
+  pioneer: ['m1-history-systems', 'Module 1, chapter 1.1'],
+  'vintage-vtwin': ['m1-history-systems', 'Module 1, chapter 1.1'],
+  scooter: ['m4-final-drive', 'Module 4, final drive and CVT'],
+  'step-through': ['m1-types', 'Module 1, chapter 1.2'],
   standard: ['m1-types', 'Modules 01 to 04'],
-  'cafe-racer': ['m1-types', 'Module 01, chapter 1.2'],
+  'cafe-racer': ['m1-types', 'Module 1, chapter 1.2'],
   motocross: ['m2-two-stroke', 'Modules 02 and 04'],
-  trials: ['m4-frame-steering', 'Module 04, chassis'],
-  cruiser: ['m1-types', 'Module 01, chapter 1.2'],
+  trials: ['m4-frame-steering', 'Module 4, chassis'],
+  cruiser: ['m1-types', 'Module 1, chapter 1.2'],
   superbike: ['m2-four-stroke', 'Modules 02 and 04'],
-  touring: ['m4-final-drive', 'Module 04, drivetrain'],
-  adventure: ['m4-suspension', 'Module 04, chassis'],
+  touring: ['m4-final-drive', 'Module 4, drivetrain'],
+  adventure: ['m4-suspension', 'Module 4, chassis'],
   'boda-boda': ['m1-types', 'Modules 01 and 05'],
-  naked: ['m4-frame-steering', 'Module 04, chassis'],
-  'electric-motorcycle': ['m5-architecture', 'Module 05'],
-  'electric-scooter': ['m5-batteries', 'Module 05'],
+  naked: ['m4-frame-steering', 'Module 4, chassis'],
+  'electric-motorcycle': ['m5-architecture', 'Module 5'],
+  'electric-scooter': ['m5-batteries', 'Module 5'],
 };
 
 let TYPES = [], FAMILIES = {}, filter = null, current = -1, view = 'plate', lastFocus = null, look = 'plate', photoIx = 0;

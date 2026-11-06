@@ -1,8 +1,8 @@
-/* Moto Zero: Module 05 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Moto Zero: Module 5 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "electric",
-  "num": "05",
+  "num": "5",
   "title": "Electric motorcycles",
   "intro": "How electric two-wheelers turn stored electrochemical energy into traction, and how to inspect, diagnose and service their motors, controllers, batteries and chargers safely.",
   "pdf": "moto-zero-module-5-electric.pdf",
@@ -214,7 +214,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Compare the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke</a> and <a href=\"../overview/?mode=elec&view=diagram\">electric</a> course plates. Using plate F06 (Module 01), list every assembly from Engine (14) to Drive chain (22) and from Battery (27) to Regulator/rectifier (29), and write for each whether an electric component replaces it, it remains unchanged, or it disappears. For example, the throttle body and injector have no electric equivalent, the battery becomes the auxiliary 12 V battery, and the regulator/rectifier is replaced by the <a href=\"../overview/?mode=elec&part=dc_dc\">DC-DC converter</a>."
+          "html": "Compare the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke</a> and <a href=\"../overview/?mode=elec&view=diagram\">electric</a> course plates. Using plate F06 (Module 1), list every assembly from Engine (14) to Drive chain (22) and from Battery (27) to Regulator/rectifier (29), and write for each whether an electric component replaces it, it remains unchanged, or it disappears. For example, the throttle body and injector have no electric equivalent, the battery becomes the auxiliary 12 V battery, and the regulator/rectifier is replaced by the <a href=\"../overview/?mode=elec&part=dc_dc\">DC-DC converter</a>."
         },
         {
           "type": "h3",

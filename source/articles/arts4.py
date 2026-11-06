@@ -128,7 +128,7 @@ body=f'''
 <h2 id="weekly">Weekly checks</h2>
 <figure>
   <img src="{A}illustrations/chassis/F19.png" alt="Technical plate of motorcycle brakes: a hydraulic disc system with master cylinder, reservoir, line, caliper and disc beside a drum brake with shoes, cam and return springs" width="2400" height="1620" loading="lazy">
-  <figcaption>Disc and drum brakes side by side. Most boda bodas use drums front and rear. Plate F19, Moto Zero Module 04.</figcaption>
+  <figcaption>Disc and drum brakes side by side. Most boda bodas use drums front and rear. Plate F19, Moto Zero Module 4.</figcaption>
 </figure>
 <ul>
   <li><strong>Tyre pressures.</strong> Set them cold with a gauge, to the figure for the load you carry. The K-Light 125's solo figures are 190 kPa (27.5 psi) front and 210 kPa (30.5 psi) rear; manuals give higher figures for a passenger and load. Under-inflation makes a loaded tyre overheat and wear its shoulders. Our <a href="../motorcycle-tyre-pressure-and-wear/">tyre pressure and wear guide</a> has the details.</li>

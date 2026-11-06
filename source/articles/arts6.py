@@ -15,7 +15,7 @@ body=f'''
 <h2 id="how-it-meters">How a carburettor meters fuel</h2>
 <p>As the piston descends on the intake stroke, air rushes through the carburettor. Where the passage narrows, at the venturi or under the throttle slide, the air speeds up and its pressure falls. A fuel nozzle opens into this low-pressure zone, while the float bowl above the fuel is vented to the atmosphere, so fuel is pushed up through calibrated jets into the airstream. The float and its needle valve keep the fuel in the bowl at a constant height, so that the jets always draw from the same level.</p>
 <p>Because a single jet cannot hold the mixture right from idle to full throttle, a carburettor has several overlapping circuits. Each one dominates a portion of the <strong>throttle opening</strong>, not of engine speed, and that is the key to diagnosis.</p>
-{fig('illustrations/powertrain/PT01.png', 2400, 1395, 'Technical section of a slide carburettor showing venturi, throttle slide and jet needle, needle jet, main jet, pilot circuit, float bowl, float and float needle, with fuel shaded', 'A slide carburettor in section, with the pilot circuit, jet needle, main jet and float. Plate PT01, Moto Zero Module 03.')}
+{fig('illustrations/powertrain/PT01.png', 2400, 1395, 'Technical section of a slide carburettor showing venturi, throttle slide and jet needle, needle jet, main jet, pilot circuit, float bowl, float and float needle, with fuel shaded', 'A slide carburettor in section, with the pilot circuit, jet needle, main jet and float. Plate PT01, Moto Zero Module 3.')}
 
 <h2 id="symptoms">Match the symptom to the circuit</h2>
 <div class="mz-art-table"><table>
@@ -118,7 +118,7 @@ body=f'''
 
 <h2 id="caps">Caps, resistors and misfires</h2>
 <p>The spark is a fast current pulse that radiates interference and can upset ECUs and instruments, so a resistor plug, a suppressor cap (typically 5 kΩ) or a resistive lead limits it. Fitting a non-resistor plug and a non-resistor cap to an ECU-controlled engine can cause erratic running. A cap that has cracked or absorbed water lets the spark track to earth, causing a misfire in wet weather.</p>
-{fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Moto Zero Module 03.')}
+{fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Moto Zero Module 3.')}
 <p>Two-strokes usually use capacitor discharge ignition (CDI), whose voltage rises so fast that the spark fires before it can leak away across an oily insulator. That suits engines whose plugs foul with oil, but the spark is short, so a two-stroke's plug colour also depends heavily on its oil ratio.</p>
 
 <h2 id="spark-test">Testing for a spark</h2>
@@ -162,7 +162,7 @@ body=f'''
 <h2 id="tread">Tread depth and wear indicators</h2>
 <p>Look for small raised blocks in the main grooves, marked by a triangle or the letters TWI on the shoulder. These <strong>tread wear indicators</strong> leave about 0.8 to 1 mm of tread when the surface is level with them. The K-Light 125 wear limit is <strong>1 mm</strong>, which is also the legal minimum in the UK for machines over 50 cc; check the rules in your country.</p>
 <p>Wear pattern matters as well as depth. A rear tyre used mostly in a straight line wears flat in the centre, and a <strong>square-worn</strong> tyre makes the bike drop suddenly into corners; replace it before it reaches the legal limit. Also look for cracks, nails, cuts and bulges on the tread and the sidewalls, and note any directional arrow, which must point in the direction of rotation.</p>
-{fig('illustrations/wheels/F20.png', 2400, 1530, 'Technical plate of a motorcycle tyre showing sidewall markings with size 110/70-17 54H, DOT date code and tread wear indicator position, and a section through bead, bead wire, carcass plies, belt, sidewall and tread', 'Tyre sidewall markings and construction. Plate F20, Moto Zero Module 04.')}
+{fig('illustrations/wheels/F20.png', 2400, 1530, 'Technical plate of a motorcycle tyre showing sidewall markings with size 110/70-17 54H, DOT date code and tread wear indicator position, and a section through bead, bead wire, carcass plies, belt, sidewall and tread', 'Tyre sidewall markings and construction. Plate F20, Moto Zero Module 4.')}
 
 <h2 id="markings">Reading the sidewall</h2>
 <p>A size of <strong>110/70-17 54H</strong> reads: section width 110 mm; aspect ratio 70 per cent, so the sidewall is 77 mm high; a dash for bias construction (R would mean radial, B bias-belted); a 17 inch rim; load index 54; and speed symbol H.</p>
@@ -223,7 +223,7 @@ body=f'''
 
 <h2 id="bms">What the BMS does for you</h2>
 <p>The <strong>battery management system</strong> measures the voltage of every series group of cells, the temperatures and the current. It estimates the state of charge shown on the dashboard, sets the maximum charge and discharge currents, and opens the circuit if a cell goes over or under voltage, overheats or sees a short circuit. It also <strong>balances</strong> the cells: near the top of a charge it bleeds a small current from any group that is higher than the rest, typically 30 to 200 mA, so a badly drifted pack can need several long charges to recover. Leaving the charger connected for the full balancing period after a full charge helps.</p>
-{fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Moto Zero Module 05.')}
+{fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Moto Zero Module 5.')}
 <p>Workshops read the group voltages from the BMS with diagnostic software. On an NMC pack at rest, a spread below 10 to 20 mV between the highest and lowest group is normal; a group that keeps falling within a few days of a balance charge points to a cell with high self-discharge, which balancing cannot cure.</p>
 
 <h2 id="swapping">Swapping instead of charging</h2>

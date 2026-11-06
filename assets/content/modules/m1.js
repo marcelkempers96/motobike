@@ -1,8 +1,8 @@
-/* Moto Zero: Module 01 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Moto Zero: Module 1 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "foundations",
-  "num": "01",
+  "num": "1",
   "title": "Foundations: the machine, its anatomy and the workshop",
   "intro": "How the motorcycle evolved, how its systems divide and connect, the physics that governs it, and the safe working methods, tools and measurements every later module depends on.",
   "pdf": "moto-zero-module-1-foundations.pdf",
@@ -980,7 +980,7 @@ export default {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
-          "html": "Open the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke course plate</a> and click, in order, the drive chain, rear sprocket, swingarm and rear tyre hotspots, and write down the order in which drive torque passes through them from the gearbox output to the road. Then find the throttle body, the side cover over the battery and the instrument cluster, and sketch the connections you expect between throttle body and injector, ECU, battery and regulator/rectifier before checking against Module 03. Plate F06 above numbers all 30 assemblies by name."
+          "html": "Open the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke course plate</a> and click, in order, the drive chain, rear sprocket, swingarm and rear tyre hotspots, and write down the order in which drive torque passes through them from the gearbox output to the road. Then find the throttle body, the side cover over the battery and the instrument cluster, and sketch the connections you expect between throttle body and injector, ECU, battery and regulator/rectifier before checking against Module 3. Plate F06 above numbers all 30 assemblies by name."
         },
         {
           "type": "h3",
@@ -1256,7 +1256,77 @@ export default {
         },
         {
           "type": "p",
-          "html": "A force F at radius r gives torque <strong>T = F &middot; r</strong> (N&middot;m). Power is torque times angular speed: <strong>P = T &times; &omega;</strong>, with <strong>&omega; = 2&pi; &times; n / 60</strong> to convert rev/min to rad/s. One metric horsepower (PS) is 0.7355 kW."
+          "html": "A force \\(F\\) pushing at a radius \\(r\\) from a shaft turns it with a torque. Power is how fast that torque does work, so it needs the shaft speed as well. One metric horsepower (PS) is 0.7355 kW."
+        },
+        {
+          "type": "eq",
+          "id": "torque",
+          "name": "Torque",
+          "tex": "T = F\\,r",
+          "where": [
+            [
+              "T",
+              "torque",
+              "N·m"
+            ],
+            [
+              "F",
+              "force at right angles to the lever",
+              "N"
+            ],
+            [
+              "r",
+              "lever length, axis to the force",
+              "m"
+            ]
+          ],
+          "why": "Every bolt, crank, sprocket and wheel turns by torque. It is why a longer spanner loosens a tight nut and why a torque wrench reads N·m.",
+          "example": "A 150 N pull on a 0.25 m spanner gives \\(T = 150 \\times 0.25 = 37.5\\ \\mathrm{N\\,m}\\)."
+        },
+        {
+          "type": "eq",
+          "id": "angular-speed",
+          "name": "Engine speed in radians per second",
+          "tex": "\\omega = \\frac{2\\pi\\,n}{60}",
+          "where": [
+            [
+              "\\omega",
+              "angular speed",
+              "rad/s"
+            ],
+            [
+              "n",
+              "engine or shaft speed",
+              "rev/min"
+            ]
+          ],
+          "why": "Power and torque equations work in rad/s, while rev counters read rev/min. This converts one to the other.",
+          "example": "At \\(n = 9000\\) rev/min, \\(\\omega = 2\\pi \\times 9000 / 60 = 942.5\\ \\mathrm{rad/s}\\)."
+        },
+        {
+          "type": "eq",
+          "id": "power-torque",
+          "name": "Power from torque and speed",
+          "tex": "P = T\\,\\omega",
+          "where": [
+            [
+              "P",
+              "power",
+              "W"
+            ],
+            [
+              "T",
+              "torque",
+              "N·m"
+            ],
+            [
+              "\\omega",
+              "angular speed",
+              "rad/s"
+            ]
+          ],
+          "why": "Explains why peak power comes at higher revs than peak torque, and lets you read a dyno chart or compare engines.",
+          "example": "7.8 kW at 942.5 rad/s means \\(T = 7800 / 942.5 = 8.28\\ \\mathrm{N\\,m}\\)."
         },
         {
           "type": "keys",

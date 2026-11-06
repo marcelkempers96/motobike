@@ -226,7 +226,7 @@ function render() {
     $('pr-continue').innerHTML = `<div class="mz-cont"><div><span class="ute-label">Continue where you left off</span><h2>${x.num} ${esc(x.c.title)}</h2><p>Module ${x.m.num} · last opened ${day(last.t)}</p></div><a class="mz-go" href="../learn/#${last.id}">Continue reading</a></div>`;
   } else {
     const first = MODULES[0].chapters[0];
-    $('pr-continue').innerHTML = `<div class="mz-cont"><div><span class="ute-label">Start here</span><h2>1.1 ${esc(first.title)}</h2><p>You have not opened a chapter yet. Module 01 is the place to begin.</p></div><a class="mz-go" href="../learn/#${first.id}">Start the course</a></div>`;
+    $('pr-continue').innerHTML = `<div class="mz-cont"><div><span class="ute-label">Start here</span><h2>1.1 ${esc(first.title)}</h2><p>You have not opened a chapter yet. Module 1 is the place to begin.</p></div><a class="mz-go" href="../learn/#${first.id}">Start the course</a></div>`;
   }
 
   $('pr-modules').innerHTML = MODULES.map((m, mi) => {
