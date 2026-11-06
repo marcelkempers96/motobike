@@ -53,7 +53,8 @@
     .hm-fix-search input { flex: 1; min-width: 0; font: 400 18px/1.2 var(--sans); padding: 15px 16px; border: 2px solid var(--ink); border-right: 0; border-radius: 0; background: #FFF; }
     .hm-fix-search button { font: 700 16px/1 var(--sans); padding: 0 22px; background: var(--ink); color: #FFF; border: 2px solid var(--ink); cursor: pointer; border-radius: 0; }
     .hm-ico { width: 40px; height: 40px; display: block; margin-bottom: 8px; }
-    .hm-fix-ways a:hover .hm-ico, .hm-fix-ways a.is-main .hm-ico { filter: invert(1); }
+    .hm-fix-ways a:hover .hm-ico { filter: invert(1); }
+    .hm-fix-ways a.is-main .hm-ico { filter: brightness(0) invert(1); }
     .hm-fix-ways { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
     .hm-fix-ways a { display: flex; flex-direction: column; gap: 4px; padding: 16px; border: 1.5px solid var(--ink); background: #FFF; color: var(--ink); text-decoration: none; }
     .hm-fix-ways a:hover { background: var(--ink); color: #FFF; }
@@ -236,12 +237,12 @@
         <p class="hm-lead">304 problems, 328 step-by-step repairs, 189 parts and 500 bikes, for petrol motorcycles, scooters and electric bikes, with workshop photos and videos.</p>
         <form class="hm-fix-search" action="repair/" method="get" role="search"><label class="r-sr" for="hm-q">Search repairs</label><input id="hm-q" name="q" type="search" placeholder="Describe it: for example, will not start" autocomplete="off"><button type="submit">Search</button></form>
         <div class="hm-fix-ways">
-          <a href="repair/diagnose/" class="is-main"><b>Diagnose a problem</b><span>Three questions to the likely fault and the fix</span></a>
+          <a href="repair/diagnose/" class="is-main"><img class="hm-ico" src="assets/icons/diagnose-a-problem.svg" alt="" width="40" height="40"><b>Diagnose a problem</b><span>Three questions to the likely fault and the fix</span></a>
           <a href="repair/problems/"><img class="hm-ico" src="assets/icons/by-problem.svg" alt="" width="40" height="40"><b>By problem</b><span>Start from what you see, hear or feel</span></a>
-          <a href="repair/repairs/"><b>By repair</b><span>Step-by-step jobs, rider to workshop</span></a>
+          <a href="repair/repairs/"><img class="hm-ico" src="assets/icons/by-repair.svg" alt="" width="40" height="40"><b>By repair</b><span>Step-by-step jobs, rider to workshop</span></a>
           <a href="repair/parts/"><img class="hm-ico" src="assets/icons/by-part.svg" alt="" width="40" height="40"><b>By part</b><span>What each part does and how it fails</span></a>
           <a href="repair/bikes/"><b>By bike</b><span>500 motorcycles: top repairs and problems</span></a>
-          <a href="parts/"><b>Spare parts</b><span>Prices and shops for 41 popular bikes</span></a>
+          <a href="parts/"><img class="hm-ico" src="assets/icons/spare-parts.svg" alt="" width="40" height="40"><b>Spare parts</b><span>Prices and shops for 41 popular bikes</span></a>
         </div>
         <h3 class="hm-fix-h">Common problems</h3>
         <div class="hm-fix-common"><a href="repair/problems/cranks-no-start/"><b>Engine turns over but will not start</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/battery-flat/"><b>Battery goes flat after the bike is parked</b><i class="ru is-care">Ride with care</i></a><a href="repair/problems/spongy-brake/"><b>Brake lever or pedal feels spongy</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/chain-noise/"><b>Chain is noisy, clattering or slapping</b><i class="ru is-care">Ride with care</i></a><a href="repair/problems/overheating-air/"><b>Air-cooled engine overheats</b><i class="ru is-now">Stop now</i></a><a href="repair/problems/sudden-power-loss/"><b>Sudden loss of power while riding</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/puncture-tube/"><b>Flat tyre on a wheel with an inner tube</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/brake-squeal/"><b>Brakes squeal</b><i class="ru is-care">Ride with care</i></a></div>
@@ -325,20 +326,20 @@
         <h2>Everything else</h2>
         <div class="hm-links">
           <a href="about/"><img class="hm-ico" src="assets/icons/about-moto-zero.svg" alt="" width="40" height="40"><b>About</b><span>The story behind it</span></a>
-          <a href="downloads/"><b>Downloads</b><span>PDFs, models, diagrams</span></a>
-          <a href="engine/"><b>Under the Engine</b><span>3D engine and gearbox, every part moving</span></a>
+          <a href="downloads/"><img class="hm-ico" src="assets/icons/downloads.svg" alt="" width="40" height="40"><b>Downloads</b><span>PDFs, models, diagrams</span></a>
+          <a href="engine/"><img class="hm-ico" src="assets/icons/under-the-engine.svg" alt="" width="40" height="40"><b>Under the Engine</b><span>3D engine and gearbox, every part moving</span></a>
           <a href="wiring/#builder"><b>Circuit Builder</b><span>Build and measure 12 V circuits</span></a>
           <a href="brand/"><b>Brand a bike</b><span>Put your logo on a 3D motorcycle</span></a>
-          <a href="types/"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a>
+          <a href="types/"><img class="hm-ico" src="assets/icons/motorcycle-types.svg" alt="" width="40" height="40"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a>
           <a href="articles/"><img class="hm-ico" src="assets/icons/articles.svg" alt="" width="40" height="40"><b>Articles</b><span>Guides to engines, chains and wiring</span></a>
           <a href="models/"><img class="hm-ico" src="assets/icons/3d-model-library.svg" alt="" width="40" height="40"><b>3D model library</b><span>369 models to explore</span></a>
           <a href="videos/"><b>Videos</b><span>The best motorcycle videos by topic</span></a>
-          <a href="sources/"><b>Sources and credits</b><span>Bibliography and licences</span></a>
-          <a href="progress/"><b>My progress</b><span>In this browser or your account</span></a>
+          <a href="sources/"><img class="hm-ico" src="assets/icons/sources-and-credits.svg" alt="" width="40" height="40"><b>Sources and credits</b><span>Bibliography and licences</span></a>
+          <a href="progress/"><img class="hm-ico" src="assets/icons/my-progress.svg" alt="" width="40" height="40"><b>My progress</b><span>In this browser or your account</span></a>
           <a href="account/"><b>Account</b><span>Comments, photos, downloads</span></a>
-          <a href="updates/"><b>Updates</b><span>What changed and when</span></a>
-          <a href="contact/"><b>Contact</b><span>Collaborate or ask</span></a>
-          <a href="kids/"><b>Kids: build a bike</b><span>For younger learners</span></a>
+          <a href="updates/"><img class="hm-ico" src="assets/icons/updates.svg" alt="" width="40" height="40"><b>Updates</b><span>What changed and when</span></a>
+          <a href="contact/"><img class="hm-ico" src="assets/icons/contact.svg" alt="" width="40" height="40"><b>Contact</b><span>Collaborate or ask</span></a>
+          <a href="kids/"><img class="hm-ico" src="assets/icons/kids-build-a-bike.svg" alt="" width="40" height="40"><b>Kids: build a bike</b><span>For younger learners</span></a>
         </div>
       </div>
     </section>
