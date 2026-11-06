@@ -1,0 +1,73 @@
+{
+  "asset_id": "bike_cruiser",
+  "title": "V-twin cruiser",
+  "type": "modern softail cruiser",
+  "reference": "Generic, unbranded modern softail cruiser in the idiom of a 2020-on softail standard: black steel softail frame with hidden under-seat monoshock and triangulated hardtail-look swingarm, big air-cooled 45 deg V-twin, staggered shotgun exhaust, solo saddle, bobbed rear guard, mini-ape bars",
+  "era": "2020 on",
+  "wheelbase_cm": 163,
+  "rake_deg": 28,
+  "wheels": "Polished five split-spoke cast wheels: 19 in front with 100/90-19 tyre, 16 in rear with 150/80B16 tyre, both with circumferential plus staggered lateral tread grooves; single 300 mm front disc and two-piston caliper on the left, rear disc and caliper on the right, belt pulley on the left of the rear hub",
+  "engine": "About 1,750 cc air-cooled 45 deg pushrod V-twin: black finned barrels and heads with polished fin edges (fins clipped on the V side), layered chrome rocker covers, chrome pushrod tubes in a V on the right, large round black air cleaner and throttle body on the right, polished teardrop cam cover with round chrome timer cover, two plugs per head, oil cooler low between the downtubes and chrome oil filter; separate black gearbox, polished oval primary cover with chrome derby and inspection covers on the left, belt final drive on the left with a gloss black belt guard; two staggered shotgun headers with heat shields into long slash-cut chrome silencers one above the other on the right",
+  "colours": "Gloss black tank, guards and side covers; gloss black steel frame and swingarm; satin and textured black engine castings; polished aluminium wheels, fork lowers, cam and primary covers, fin edges; chrome exhaust, fork tubes and covers, rocker covers, pushrod tubes, bars, risers, mirrors, headlight bucket and console; black seat and grips; amber indicator and fork reflector lenses, red tail lens; no lettering or logos",
+  "systems": {
+    "chassis": [
+      "footpegs",
+      "front_brake",
+      "front_fork",
+      "handlebar",
+      "rear_brake",
+      "rear_shock",
+      "side_stand",
+      "steering",
+      "swingarm"
+    ],
+    "electrical": [
+      "battery",
+      "headlight",
+      "horn",
+      "ignition_coil",
+      "indicators",
+      "instruments",
+      "number_plate_light",
+      "spark_plugs",
+      "tail_light",
+      "voltage_regulator"
+    ],
+    "frame_body": [
+      "frame",
+      "front_mudguard",
+      "fuel_tank",
+      "number_plate_bracket",
+      "rear_mudguard",
+      "seat",
+      "side_covers"
+    ],
+    "powertrain": [
+      "engine",
+      "exhaust",
+      "intake",
+      "oil_cooler",
+      "oil_filter"
+    ],
+    "transmission": [
+      "belt",
+      "belt_guard",
+      "front_pulley",
+      "gear_lever",
+      "gearbox",
+      "primary_cover",
+      "rear_pulley"
+    ],
+    "wheels": [
+      "front_wheel",
+      "rear_wheel"
+    ],
+    "wiring": [
+      "control_cables",
+      "harness_main"
+    ]
+  },
+  "objects": 126,
+  "triangles": 381832,
+  "weak_points": "Seat pleats and side covers are simple lofts/sheets; belt has no teeth and the front pulley sits mostly hidden behind the primary; fins are flat superellipse plates rather than cast tapered fins; rear pulley windows and lateral tread grooves are coarse close up; monoshock, battery and throttle body are modelled but hidden; no clutch or primary internals; headlight LED face is simplified."
+}
