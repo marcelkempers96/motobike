@@ -1,0 +1,69 @@
+{
+  "asset_id": "bike_pioneer",
+  "title": "Pioneer motor-bicycle, c. 1901",
+  "type": "early motor-bicycle (pedal-assisted)",
+  "reference": "1901 New-Werner layout and De Dion-engined motor-bicycles of 1900-1905 (generic, unbranded): bicycle diamond frame with dropped bottom loop, engine in the frame, belt drive",
+  "era": "1900-1905",
+  "wheelbase_cm": 120,
+  "rake_deg": 18,
+  "wheels": "26 x 2 in clincher tyres on light 28-spoke nickel wire wheels, spoon brake on the front tyre, rim plunger brake at the rear, belt rim and chain sprocket on the rear hub",
+  "engine": "About 250 cc air-cooled upright single (70 mm bore) with finned cylinder, automatic atmospheric inlet valve cap, mechanical exhaust valve with pushrod, flywheel crankcase, surface/spray carburettor, trembler-coil and battery ignition, exhaust to a cylindrical silencer under the engine, flat leather belt to the rear belt rim, pedal cranks and chain on the other side",
+  "colours": "Black enamel frame, fork and mudguards with gold pinstripe and tank bands; nickel fittings, wheels and handlebar; brass carbide lamp, carburettor and horn; brown leather saddle, tool bag and belt",
+  "systems": {
+    "chassis": [
+      "front_brake",
+      "front_fork",
+      "handlebar",
+      "rear_brake",
+      "rear_stand",
+      "steering"
+    ],
+    "electrical": [
+      "carbide_lamp",
+      "coil_box",
+      "horn",
+      "spark_plug",
+      "tail_lamp",
+      "trembler_coil"
+    ],
+    "frame_body": [
+      "frame",
+      "front_mudguard",
+      "fuel_tank",
+      "rear_mudguard",
+      "saddle",
+      "seat_post",
+      "tool_bag"
+    ],
+    "powertrain": [
+      "controls",
+      "engine",
+      "exhaust",
+      "fuel_system",
+      "intake"
+    ],
+    "transmission": [
+      "belt",
+      "belt_rim",
+      "chain",
+      "chainring",
+      "engine_pulley",
+      "pedal_axle",
+      "pedal_cranks",
+      "pedals",
+      "rear_sprocket"
+    ],
+    "wheels": [
+      "front_wheel",
+      "rear_wheel"
+    ],
+    "wiring": [
+      "control_rods",
+      "harness_main",
+      "ht_lead"
+    ]
+  },
+  "objects": 95,
+  "triangles": 220978,
+  "weak_points": "Fork is a plain straight-blade enamel tube pair with no crown lugs detail; flat leather belt and chain are thin and read faintly at catalogue scale; the tank is a compact rectangular box (about 15 cm long) because the down tube and exhaust pipe leave little room; no cylinder-head detail beyond the inlet cap and exhaust chamber; spoon brake and cables are small; no stitching on saddle or belt."
+}

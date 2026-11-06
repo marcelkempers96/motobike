@@ -1,0 +1,68 @@
+{
+  "asset_id": "bike_vintage_vtwin",
+  "title": "Vintage V-twin, 1915 to 1925",
+  "type": "vintage V-twin roadster",
+  "reference": "Generic, unbranded 1915-1925 American big-twin in the Model J / Powerplus idiom: loop frame, springer fork, F-head 45 deg V-twin, hand change and foot clutch",
+  "era": "1915-1925",
+  "wheelbase_cm": 151,
+  "rake_deg": 27,
+  "wheels": "28 x 3 in clincher tyres (lightly worn, ribbed tread) on olive-painted beaded-edge rims, 40 heavy-gauge spokes each, nickel hubs; front hub carries the speedometer drive; rear hub carries the band-brake drum and the 36T sprocket. No front brake (period correct)",
+  "engine": "About 1,000 cc air-cooled 45 deg F-head (inlet-over-exhaust) V-twin: finned cast-iron cylinders with exhaust valve pockets and exposed exhaust valve spring covers on the right, inlet valve cages with exposed springs, rockers and pushrods on top, Y manifold to a single brass carburettor hanging on the right, magneto ahead of the crankcase with HT leads to plugs on the left of the heads, timing case on the right, enclosed primary chain on the left to a separate three-speed gearbox with kick-start on the right, nickel exhaust pipes to a cylindrical silencer low on the right",
+  "colours": "Olive green enamel on frame, fork, tank, guards, rims, carrier and toolbox, with gold pinstripes on tank, guards and toolbox; nickel bars, pipes, silencer, fittings and caps; polished brass acetylene headlamp, carbide generator, carburettor and bulb horn; black cast-iron cylinders; aged aluminium cases; brown leather saddle; black tyres with light wear",
+  "systems": {
+    "chassis": [
+      "footboards",
+      "front_fork",
+      "handlebar",
+      "rear_brake",
+      "rear_stand",
+      "steering"
+    ],
+    "electrical": [
+      "acetylene_generator",
+      "headlight",
+      "horn",
+      "instruments",
+      "magneto",
+      "spark_plugs",
+      "tail_light"
+    ],
+    "frame_body": [
+      "carrier",
+      "frame",
+      "front_mudguard",
+      "fuel_tank",
+      "rear_mudguard",
+      "seat",
+      "toolbox"
+    ],
+    "powertrain": [
+      "engine",
+      "exhaust",
+      "fuel_system",
+      "intake"
+    ],
+    "transmission": [
+      "chain",
+      "chain_guard",
+      "clutch_pedal",
+      "front_sprocket",
+      "gear_lever",
+      "gearbox",
+      "primary_chaincase",
+      "rear_sprocket"
+    ],
+    "wheels": [
+      "front_wheel",
+      "rear_wheel"
+    ],
+    "wiring": [
+      "control_cables",
+      "harness_main",
+      "ht_leads"
+    ]
+  },
+  "objects": 108,
+  "triangles": 340172,
+  "weak_points": "No rear suspension or indicators by design (rigid frame, period correct); magneto sits ahead of the crankcase rather than behind the front cylinder because the 45 deg V leaves no room; frame tubes carry no pinstripes; the hand-change gate is a simple slotted quadrant; primary chain and clutch are enclosed and not modelled inside; tank is a bevelled extrusion with flat sides and no seams; saddle has no stitching."
+}
