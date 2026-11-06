@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Bike builder"><title>Bike builder</title><g fill="none" stroke="#FFFFFF" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="72" r="13"/><circle cx="22" cy="72" r="3"/><circle cx="74" cy="72" r="13"/><circle cx="74" cy="72" r="3"/>
+<path d="M22 59 V64 M74 59 V64"/>
+<path d="M30 34 L42 20 H62 L70 34"/><rect x="42" y="36" width="16" height="11" rx="2"/>
+<path d="M30 40 L24 52 M70 40 L74 52" stroke-dasharray="2.5 4"/><path d="M22 52 L24 55 L27 51 M72 51 L74 55 L77 52" /></g>
+<path d="M42 20 Q50 10 62 16 L62 20 Z" fill="#F07A55" stroke="#F07A55" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="82" cy="20" r="2" fill="#F07A55"/><path d="M76 20 H90" stroke="#F07A55" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
