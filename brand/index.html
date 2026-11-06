@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brand a motorcycle with your logo | Moto Zero</title>
+  <link rel="canonical" href="https://motobike-five.vercel.app/brand/">
+  <meta name="description" content="Put your logo on a 3D motorcycle. Pick one of eight bikes, add your logo, choose the colours, download a picture and ask us to brand bikes for your fleet, school or event.">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Moto Zero"><meta property="og:title" content="Brand a motorcycle with your logo | Moto Zero"><meta property="og:description" content="Put your logo on a 3D motorcycle, choose the colours and download a picture."><meta property="og:url" content="https://motobike-five.vercel.app/brand/"><meta property="og:image" content="https://motobike-five.vercel.app/assets/photos/home-ov-all-3q.webp"><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261106a">
+  <link rel="stylesheet" href="../assets/brand.css?v=20261106a">
+  <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="ute-page">
+  <header class="ute-top">
+    <a class="ute-brand" href="../" aria-label="Motopedia home"><img class="ute-brand-logo" src="../assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114"></a>
+    <nav data-mz-nav></nav>
+  </header>
+
+  <section class="ute-hero mzb-hero">
+    <span class="ute-label">Brand a bike</span>
+    <h1>Put your logo on a motorcycle</h1>
+    <p>See how your logo looks on a real bike before you paint or print anything. For delivery companies and fleets, boda boda groups, driving and mechanics schools, and sponsors of a team or an event.</p>
+    <ol class="mzb-steps">
+      <li><b>Pick a bike</b><span>Ten bikes, from a 1901 motor-bicycle, a scooter and a boda boda to a superbike.</span></li>
+      <li><b>Add your logo</b><span>Put it on the tank, the side panels, the mudguard or the tail, and choose the colours.</span></li>
+      <li><b>Download or ask us</b><span>Save a picture, or send the design to us for a quote.</span></li>
+    </ol>
+  </section>
+
+  <section class="mzb-studio" id="studio" aria-label="Brand a bike">
+    <div class="mzb-stage-wrap">
+      <div class="mzb-stage is-light" id="mzb-stage">
+        <p class="mzb-tip" id="mzb-tip" hidden>Tap the bike where the logo should go</p>
+      </div>
+      <div class="mzb-viewbar" role="group" aria-label="Camera">
+        <button type="button" data-view="left" class="is-on">Left</button>
+        <button type="button" data-view="right">Right</button>
+        <button type="button" data-view="threeq">3/4</button>
+        <button type="button" data-view="front">Front</button>
+        <span class="mzb-viewbar-sep"></span>
+        <button type="button" data-bg="light" class="is-on" aria-pressed="true">Light</button>
+        <button type="button" data-bg="dark" aria-pressed="false">Dark</button>
+      </div>
+      <p class="mzb-hint">Drag to turn the bike, pinch or scroll to zoom.</p>
+    </div>
+
+    <div class="mzb-panel">
+      <fieldset class="mzb-box">
+        <legend><span class="mzb-n">1</span> Bike</legend>
+        <div class="mzb-bikes" id="mzb-bikes" role="radiogroup" aria-label="Bike"></div>
+      </fieldset>
+
+      <fieldset class="mzb-box">
+        <legend><span class="mzb-n">2</span> Logo</legend>
+        <div class="mzb-logo-add">
+          <label class="ute-linkbtn is-warm mzb-file">Add a logo<input type="file" id="mzb-file" accept="image/png,image/jpeg,image/svg+xml,image/webp,.png,.jpg,.jpeg,.svg,.webp"></label>
+          <button type="button" class="ute-linkbtn" id="mzb-sample">Try a sample logo</button>
+        </div>
+        <p class="mzb-small">PNG, JPG, SVG or WebP, up to 5 MB. A transparent background looks best. Up to 3 logos. Your file stays on your device until you send a request.</p>
+        <p class="mzb-msg is-err" id="mzb-file-err" role="alert" hidden></p>
+        <ul class="mzb-logos" id="mzb-logos"></ul>
+        <div class="mzb-edit" id="mzb-edit" hidden>
+          <label class="mzb-row"><span>Place</span>
+            <select id="mzb-spot"></select>
+          </label>
+          <button type="button" class="ute-linkbtn mzb-place" id="mzb-place" aria-pressed="false">Tap the bike to place</button>
+          <label class="mzb-row"><span>Size</span><input type="range" id="mzb-size" min="4" max="60" step="1" value="18"><output id="mzb-size-out">18 cm</output></label>
+          <label class="mzb-row"><span>Rotation</span><input type="range" id="mzb-rot" min="-180" max="180" step="1" value="0"><output id="mzb-rot-out">0°</output></label>
+          <label class="mzb-check"><input type="checkbox" id="mzb-mirror" checked> Both sides (mirror)</label>
+          <button type="button" class="mzb-remove" id="mzb-remove">Remove this logo</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="mzb-box">
+        <legend><span class="mzb-n">3</span> Colours</legend>
+        <div class="mzb-schemes" id="mzb-schemes"></div>
+        <div class="mzb-colours">
+          <label class="mzb-colour"><input type="color" id="mzb-body" value="#c2502a"> Bodywork</label>
+          <label class="mzb-colour"><input type="color" id="mzb-frame" value="#0a0a0a"> Frame</label>
+          <button type="button" class="mzb-reset" id="mzb-reset">Original colours</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="mzb-box">
+        <legend><span class="mzb-n">4</span> Picture</legend>
+        <div class="mzb-radios">
+          <label><input type="radio" name="mzb-shot-bg" value="white" checked> White background</label>
+          <label><input type="radio" name="mzb-shot-bg" value="transparent"> Transparent</label>
+        </div>
+        <a class="ute-linkbtn is-warm mzb-dl" id="mzb-download" href="brand-preview.png" download="moto-zero-brand-preview.png">Download image</a>
+        <p class="mzb-small">A PNG at twice the size of the view.</p>
+      </fieldset>
+    </div>
+  </section>
+
+  <section class="ute-chapter mzb-ask" id="advertise">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">A</span><span class="ute-label">Advertise with us</span></div>
+    <h2>Brand real bikes with your logo</h2>
+    <p class="lead">Tell us about your company and your bikes. We send your logo and the picture above with the request, and reply by email within a few working days.</p>
+    <form class="mzb-form" id="mzb-form" novalidate>
+      <div class="mzb-grid">
+        <label class="mzb-field"><span>Company or group *</span><input name="company" required maxlength="200" autocomplete="organization"></label>
+        <label class="mzb-field"><span>Your name *</span><input name="name" required maxlength="200" autocomplete="name"></label>
+        <label class="mzb-field"><span>Email *</span><input name="email" type="email" required maxlength="320" autocomplete="email"></label>
+        <label class="mzb-field"><span>Country *</span><input name="country" required maxlength="100" autocomplete="country-name"></label>
+        <label class="mzb-field"><span>Bikes or fleet size</span>
+          <select name="fleet">
+            <option value="">Choose</option>
+            <option>1 to 5</option>
+            <option>6 to 20</option>
+            <option>21 to 100</option>
+            <option>More than 100</option>
+            <option>Event or sponsorship</option>
+          </select>
+        </label>
+        <label class="mzb-field mzb-wide"><span>Message</span><textarea name="message" rows="4" maxlength="4000" placeholder="Which bikes, where, and when you need them"></textarea></label>
+      </div>
+      <p class="mzb-small" id="mzb-attach">No logo added yet. You can still send a request; the picture of the bike is attached.</p>
+      <label class="mzb-check mzb-consent"><input type="checkbox" name="consent" required> I agree that Moto Zero stores this request, my logo and the picture to reply to me. *</label>
+      <div class="mzb-send">
+        <button type="submit" class="mzb-submit" id="mzb-submit">Send request</button>
+        <p class="mzb-msg" id="mzb-form-msg" role="status" aria-live="polite" hidden></p>
+      </div>
+    </form>
+  </section>
+
+  <section class="ute-chapter mzb-faq" id="faq">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">B</span><span class="ute-label">Questions</span></div>
+    <h2>Questions</h2>
+    <details><summary>Which files can I use?</summary><p>PNG, JPG, SVG or WebP, up to 5 MB. A PNG or SVG with a transparent background looks best on the bike. Light logos show up best on dark bodywork, and dark logos on light bodywork.</p></details>
+    <details><summary>Does the picture show the real bike?</summary><p>The bikes are generic, unbranded 3D models of common types. The picture shows where your logo sits and how big it is, not the exact shape of your own bikes.</p></details>
+    <details><summary>What happens after I send a request?</summary><p>We read every request and reply by email, usually within a few working days, with questions about your bikes, the options and a price.</p></details>
+    <details><summary>What do you do with my logo and details?</summary><p>Nothing is uploaded until you press Send request. Then your details, your logo and the picture are stored only to reply to your request. We do not share them or use them for anything else. Ask us any time to delete them. See the <a href="../privacy/">privacy page</a>.</p></details>
+    <details><summary>Why do I need an account to download the picture?</summary><p>Downloads on Moto Zero are for account holders. It is free and takes a minute: just your email, no password.</p></details>
+  </section>
+
+  <footer data-mz-footer></footer>
+</div>
+<script type="module" src="../assets/site.js"></script>
+<script type="module" src="../assets/brand.js?v=20261106a"></script>
+</body>
+</html>

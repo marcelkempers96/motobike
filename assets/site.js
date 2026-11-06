@@ -44,6 +44,7 @@ export const NAV = [
     ['engine/', 'Under the Engine', '3D engine: gearbox, clutch, starters, valves'],
     ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
     ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
+    ['brand/', 'Brand a bike', 'Put your logo on a 3D motorcycle'],
   ] },
   { key: 'library', title: 'Library', blurb: 'Articles, models, illustrations and downloads', items: [
     ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
