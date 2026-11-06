@@ -20,7 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 SRC = os.path.join(ROOT, 'source/repair')
 OUT = os.path.join(ROOT, 'repair')
 SITE = 'https://motobike-five.vercel.app'
-CSSV = '20261106a'
+CSSV = '20261106b'
 e = lambda s: html.escape(str(s if s is not None else ''), quote=True)
 
 D = json.load(open(os.path.join(SRC, 'repair-data.json'), encoding='utf-8'))

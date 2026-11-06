@@ -99,6 +99,19 @@ function photoRuns(blocks) {
   }
   return out;
 }
+/* "Compare the types": one card per variant, with its render linking to the 3D library */
+const VAR_ROWS = [['what', 'What it is'], ['good_for', 'Good for'], ['conditions', 'Ideal conditions'], ['watch', 'Watch for']];
+const attr = (s) => String(s || '').replace(/<[^>]+>/g, '').replace(/"/g, '&quot;');
+function variantsHTML(b) {
+  const items = (b.items || []).filter((it) => MODELS[it.model]);
+  if (!items.length) return '';
+  const img = (k) => `${ROOT}assets/renders/${k.startsWith('bike_') && !k.includes('__') ? k + '_side' : k}.webp`;
+  return `<section class="mz-vt"><div class="mz-vt-head"><span class="ute-label">Compare the types</span>${b.title ? `<h4>${b.title}</h4>` : ''}${b.intro ? `<p>${b.intro}</p>` : ''}</div>
+    <div class="mz-vt-grid">${items.map((it) => `<article class="mz-vt-card">
+      <a class="mz-vt-img" href="${ROOT}models/#${it.model}" aria-label="View ${attr(it.name)} in 3D"><img src="${img(it.model)}" alt="${attr(MODELS[it.model][1])}" loading="lazy" width="640" height="480"><span class="mz-vt-3d">View in 3D</span></a>
+      <div class="mz-vt-body"><h5>${it.name}</h5><dl>${VAR_ROWS.filter(([k]) => it[k]).map(([k, l]) => `<div><dt>${l}</dt><dd>${it[k]}</dd></div>`).join('')}</dl></div>
+    </article>`).join('')}</div></section>`;
+}
 function block(b, mod) {
   switch (b.type) {
     case 'p': return `<p>${b.html}</p>`;
@@ -122,6 +135,7 @@ function block(b, mod) {
       return `<figure class="ute-figure mz-learn-wiring"><a class="mz-wiring-card" href="${ROOT}wiring/#${b.tab || 'harness'}"><img src="${ROOT}assets/interactive/wiring/preview/${img}.png" alt="Wiring Lab: ${t[1]}" loading="lazy"><span class="ute-linkbtn is-warm">Open the Wiring Lab: ${t[1]} →</span></a>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Interactive</span> ${b.caption}</figcaption>` : ''}</figure>`;
     }
     case 'animation': return `<figure class="ute-figure mz-learn-anim"><iframe data-src="${ROOT}overview/?embed=1&mode=${b.mode || '4t'}&part=${b.part}" title="Interactive animation: ${b.part}" loading="lazy"></iframe>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption}</figcaption>` : ''}</figure>`;
+    case 'variants': return variantsHTML(b);
     case 'check': return `<div class="ute-check" data-q="${b.q}"></div>`;
     case 'exercise': return `<section class="mz-exercise"><div class="mz-ex-head"><span class="ute-label">Exercise · Circuit Builder</span><h4>${b.title}</h4></div><dl class="mz-ex-list"><div><dt>Task</dt><dd>${b.task}</dd></div><div><dt>Measure</dt><dd>${b.measure}</dd></div><div><dt>Expect</dt><dd>${b.expect}</dd></div>${b.why ? `<div><dt>Why</dt><dd>${b.why}</dd></div>` : ''}</dl><a class="ute-linkbtn is-warm" href="${ROOT}wiring/#build=${encodeURIComponent(b.preset)}">Open the circuit in the Circuit Builder →</a></section>`;
     case 'engine': return `<figure class="ute-figure mz-eng-shot"><a href="${ROOT}engine/#${b.view || 'overview'}"><img src="${ROOT}assets/engine/shots/${b.shot}.webp" alt="${(b.alt || b.caption || '').replace(/"/g, '&quot;')}" loading="lazy"><span class="mz-eng-go">Open in Under the Engine →</span></a>${b.caption ? `<figcaption class="ute-figure-cap"><span class="ute-label">Try it</span> ${b.caption}</figcaption>` : ''}</figure>`;

@@ -32,5 +32,5 @@ Fit a new pin each time the old one has been bent open and closed. A cheap new p
 ## Fitting notes
 - Round end forward, towards the front of the bike.
 - If the slots do not line up at the right torque, tighten further. Do not loosen the nut.
-- Bend one end at about 45 degrees so the pin can come out again.
+- Bend the ends as the manual shows. A pin bent only slightly can be removed and reused.
 - See [Fit and remove cotter pins](/moto-zero/repair/repairs/cotter-pin-fit).

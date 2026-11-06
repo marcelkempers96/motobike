@@ -61,7 +61,7 @@ Scooters with a CVT usually need the exhaust and sometimes the silencer bracket 
 3. Drum brake: remove the adjuster nut from the brake rod and pull the rod out of the brake arm. Remove the torque arm nut (split pin first).
 4. Disc brake: remove the caliper or let its bracket slide off as the axle comes out (K-Light: remove the rear caliper first).
 5. Loosen the axle nut and the chain adjusters. Remove the nut.
-6. Pull the axle out while you hold the wheel. Collect spacers in order.
+6. Pull the axle out while you hold the wheel. Collect spacers in order. If the axle is stuck, do not hammer a bare thread: see [Drive a stuck axle out with a nut and a brass rod](/moto-zero/repair/repairs/seized-axle-drive-out).
 7. Push the wheel forward, lift the chain off the sprocket, and roll the wheel out. Check the cush drive rubbers in the hub while it is out ([Check the cush drive rubbers](/moto-zero/repair/repairs/cush-drive-check)).
 
 ## Steps: refit
@@ -119,3 +119,4 @@ Scooters with a CVT usually need the exhaust and sometimes the silencer bracket 
 - K-Light 125 manual, PDF p. 49
 - K-Light 125 manual, PDF p. 106
 - MAVCC Motorcycle Mechanic, PDF p. 429
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/tips.htm

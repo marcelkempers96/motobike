@@ -39,3 +39,10 @@ A reed valve is a one-way valve. On many two-stroke engines it sits in the intak
 - [Find an intake air leak](/moto-zero/repair/repairs/intake-leak-test).
 - [Engine will not start or runs poorly with a reed valve fault](/moto-zero/repair/problems/reed-valve-fault).
 - [Test compression](/moto-zero/repair/repairs/compression-test).
+
+## Related notes
+
+- The curved stop plate screwed to the reed cage limits how far each petal opens. It stops the petal bending too far and breaking off.
+- Petal count varies with the engine. Motorcycles often have four or six, and some small engines have one.
+- A few four-stroke engines use a reed valve to stop mixture blowing back out of the carburettor.
+- Some fuel pumps and carburettors use a thin rubber reed as a one-way valve. This is a different part from the engine reed block.

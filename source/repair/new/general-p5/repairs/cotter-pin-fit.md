@@ -30,7 +30,7 @@ Cotter pins and slip pins stop castle nuts and plain nuts from turning off. This
 2. If the slots in the nut do not line up with the hole in the shaft, tighten a little more until they do. Never loosen the nut to line them up.
 3. Fit a new cotter pin when the old one is bent. Bending it again fatigues the metal.
 4. Fit the pin with the round, closed end towards the front of the bike, the direction of travel.
-5. Bend one of the two ends at about 45 degrees. Some manuals say to wrap both ends tightly around the nut. A single 45 degree bend holds, and the pin can be removed and reused.
+5. Bend the ends as your manual shows. Some manuals say to wrap both ends tightly around the nut. Some riders bend only one end at about 45 degrees so the pin can be removed and reused. If the manual shows a method, follow it, and never leave the pin straight.
 6. Check the pin again after the first ride.
 
 ## Slip pins

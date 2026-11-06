@@ -1,0 +1,336 @@
+{
+ "repairs": [
+  {
+   "id": "needle-jet-remove-refit",
+   "title": "Remove and refit the needle jet",
+   "level": "home",
+   "time": "45 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver or small spanner for the main jet",
+    "soft drift or wooden dowel",
+    "torch",
+    "clean rag",
+    "carburettor cleaner"
+   ],
+   "parts": [
+    "needle_jet",
+    "carb_jets",
+    "carb"
+   ],
+   "consumables": [
+    "new O-ring, if the old one is hard"
+   ],
+   "fixes": [
+    "starts-only-with-choke",
+    "hesitation",
+    "flat-spot",
+    "runs-lean"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb5.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_needle_jet_locating_pin.jpg",
+     "caption": "Needle jet with its locating groove above the main jet"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_main_jet_then_screws_into_bottom.jpg",
+     "caption": "Needle jet, locating pin and main jet in the carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_needle_jet.jpg",
+     "caption": "Needle jet seen in the carburettor, with the tap-out direction marked"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_needle_jet_locating_pin_mikuni_bleed.jpg",
+     "caption": "Keihin style needle jet screwed into the carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_washer.jpg",
+     "caption": "Main jet washers beside a main jet"
+    }
+   ]
+  },
+  {
+   "id": "float-pin-remove",
+   "title": "Remove a stuck float pin without breaking the posts",
+   "level": "home",
+   "time": "30 min plus soaking time",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "penetrating oil",
+    "very small punch",
+    "light hammer",
+    "support block or socket",
+    "clean rag"
+   ],
+   "parts": [
+    "carb",
+    "carb_float",
+    "float_needle_valve"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "carb-overflowing",
+    "flooded-engine",
+    "fuel-starvation"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles_don_t_get_so.jpg",
+     "caption": "Small punch with supports behind the posts"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_serrated_one_end.jpg",
+     "caption": "Float pin with one serrated end"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_tang.jpg",
+     "caption": "Float tang and the float height it sets"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_plastic.jpg",
+     "caption": "Plastic floats with needle and seat beside them"
+    }
+   ]
+  },
+  {
+   "id": "accelerator-pump-check",
+   "title": "Check the accelerator pump on a carburettor",
+   "level": "home",
+   "time": "30 min",
+   "applies_to": [
+    "carburettor",
+    "four-stroke"
+   ],
+   "tools": [
+    "screwdriver",
+    "clean rag",
+    "torch"
+   ],
+   "parts": [
+    "carb",
+    "carb_diaphragm"
+   ],
+   "consumables": [
+    "pump diaphragm, if damaged"
+   ],
+   "fixes": [
+    "hesitation",
+    "flat-spot",
+    "bogs-full-throttle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_accelerator_pump.jpg",
+     "caption": "Accelerator pump cover with its spring and screws"
+    }
+   ]
+  },
+  {
+   "id": "idle-jet-change",
+   "title": "Change the idle jet and read the plug",
+   "level": "home",
+   "time": "1 hour",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver that fits the jet slot",
+    "new or cleaned spark plug",
+    "clean rag"
+   ],
+   "parts": [
+    "carb_jets",
+    "idle_mixture_screw",
+    "carb"
+   ],
+   "consumables": [
+    "idle jet of the next size"
+   ],
+   "fixes": [
+    "stalls-at-idle",
+    "rough-idle",
+    "runs-rich",
+    "runs-lean"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb3.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_idle_jet_installed.jpg",
+     "caption": "Idle jet installed in a carburettor with the bowl removed"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_idle_jet_installed_idle_jet_out.jpg",
+     "caption": "Idle jet seat after the jet has been taken out"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_pilot_group.jpg",
+     "caption": "Idle jet group: air jet, idle jet and air screw"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_pressed.jpg",
+     "caption": "Pressed-in idle jet, which cannot be changed"
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "parts": [
+  {
+   "id": "needle_jet",
+   "name": "Needle jet (carburettor)",
+   "category": "fuel",
+   "aliases": [
+    "needle jet",
+    "jet tube",
+    "primary jet"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb5.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb6.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/063/063_needle_jet.jpg",
+     "caption": "Needle jet, a brass tube"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_mikuni_primary_style.jpg",
+     "caption": "Primary style needle jet with its main jet"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_mikuni_primary_style_keihin_style.jpg",
+     "caption": "Keihin style needle jet with its main jet below"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_needle_jet_locating_pin.jpg",
+     "caption": "Needle jet with its locating groove"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/069/069_needle_jet_sectioned_needle_jet_center_2.jpg",
+     "caption": "Carburettor cut open: needle jet, air bleed and main jet marked"
+    }
+   ],
+   "repairs": [
+    "needle-jet-remove-refit",
+    "jet-needle-clip-set",
+    "carb-jet-clear"
+   ],
+   "problems": [
+    "flat-spot",
+    "hesitation",
+    "runs-lean",
+    "runs-rich"
+   ]
+  },
+  {
+   "id": "idle_mixture_screw",
+   "name": "Idle mixture screw (carburettor)",
+   "category": "fuel",
+   "aliases": [
+    "idle screw",
+    "air screw",
+    "pilot screw",
+    "idle adjuster"
+   ],
+   "applies_to": [
+    "carburettor"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb3.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carbs2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1_fuel.jpg",
+     "caption": "Air idle screw above and fuel idle screw below"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_air_adjust_idle_screw_1.jpg",
+     "caption": "Air type idle screw seen from the carburettor throat"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1.jpg",
+     "caption": "Fuel type idle screw below the carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/064/064_air_screw_may_covered_plug_similar.jpg",
+     "caption": "Plug that hides the idle screw"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/067/067_while_i_have_never_seen_two.jpg",
+     "caption": "Tip of the idle adjuster screw seen in the throat"
+    }
+   ],
+   "repairs": [
+    "carb-idle-adjust",
+    "idle-screw-set",
+    "idle-jet-change"
+   ],
+   "problems": [
+    "stalls-at-idle",
+    "rough-idle",
+    "high-idle",
+    "hunting-idle"
+   ]
+  }
+ ]
+}

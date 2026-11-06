@@ -49,7 +49,7 @@ The left cover usually hides the generator (stator and flywheel) and sometimes t
 - Drains the oil, or tilts the bike so the oil stays away from the cover being removed.
 - Removes parts in the way: gear lever, kickstart lever, brake pedal, exhaust on some bikes.
 - Undoes the cover screws in a cross pattern and notes which screw goes where (lengths often differ).
-- Removes the old gasket without gouging the faces, using a plastic scraper.
+- Removes the old gasket without gouging the faces, using a plastic scraper. A hard gasket softens if sprayed with gasket remover and left for an hour or two, or overnight: [Remove a hard old gasket without gouging the faces](/moto-zero/repair/repairs/old-gasket-remove).
 - Checks the faces for flatness and damage. Checks dowels and O-rings.
 - On the clutch side, keeps the clutch push rod and any oil-filter parts in order.
 - Fits a new gasket (dry or with sealant only where the manual says).
@@ -98,3 +98,4 @@ The left cover usually hides the generator (stator and flywheel) and sometimes t
 - K-Light 125 manual, PDF p. 191
 - MAVCC Motorcycle Mechanic, PDF p. 857
 - MAVCC Motorcycle Mechanic, PDF p. 698
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/tips.htm

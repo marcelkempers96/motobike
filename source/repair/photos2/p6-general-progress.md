@@ -1,0 +1,1 @@
+- [x] new/general-p6 written (9 repairs, 4 parts, index.json); next: p6-general.json, md additions, p5 fixes, notes

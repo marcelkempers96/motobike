@@ -6,7 +6,7 @@ aliases: ["inline valve", "fuel shut-off valve", "plastic fuel valve"]
 applies_to: ["carburettor"]
 sources:
   - {"doc": "Dan's Motorcycle Repair Course", "url": "https://www.dansmc.com/gastank.htm"}
-photos: [{"file": "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg", "caption": "Plastic inline fuel valve"}, {"file": "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg", "caption": "Standard fuel tap with ON, OFF and RES marks"}]
+photos: [{"file": "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg", "caption": "Plastic inline fuel valve"}]
 ---
 
 # Inline fuel shut-off valve

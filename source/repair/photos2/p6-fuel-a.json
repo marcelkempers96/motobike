@@ -1,0 +1,632 @@
+{
+ "problems": {},
+ "repairs": {
+  "carburettor-clean": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_pressed.jpg",
+    "caption": "Pressed-in idle jet in a carburettor body"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_main_jet.jpg",
+    "caption": "Main jet in the carburettor body"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_needle_jet.jpg",
+    "caption": "Needle jet in the body, with the tap-out direction marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_careful_not_get_any_cleaner_rubber.jpg",
+    "caption": "Rubber part circled that cleaner must not touch"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lower_hole.jpg",
+    "caption": "Float bowl cover with overflow tube, lower hole and passage"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_2.jpg",
+    "caption": "Carburettor and its jets spread out for cleaning"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_s_not_my_body_won_t.jpg",
+    "caption": "Carburettor with its top off and the slide exposed"
+   }
+  ],
+  "carb-idle-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_three_idle_ports.jpg",
+    "caption": "Idle ports in the throat of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_throttle_closed.jpg",
+    "caption": "Throttle closed with the idle port in the throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_while_i_have_never_seen_two.jpg",
+    "caption": "Tip of the idle adjuster screw seen in the throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_then_do_all_again_until_get_2.jpg",
+    "caption": "Idle port and throttle stop screw in the throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_one_carburetors.jpg",
+    "caption": "Throttle stop screw on a carburettor with its cable"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_idle_circuit.jpg",
+    "caption": "Idle circuit ports in a carburettor throat"
+   }
+  ],
+  "carb-float-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_always_check_shop_manual.jpg",
+    "caption": "Measuring float height with a ruler, bowl removed"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_tang.jpg",
+    "caption": "Float tang and the float height it sets"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_cork.jpg",
+    "caption": "Old cork float, cracked and varnished"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_carburetor_floats.jpg",
+    "caption": "Black plastic twin floats"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_theory_being_two_piece_floats_help.jpg",
+    "caption": "Two-piece float in a carburettor body"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_plastic.jpg",
+    "caption": "Plastic floats with needle and seat beside them"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_plastic_float_has_metal_insert.jpg",
+    "caption": "Plastic float with a metal insert"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_sometimes_may_run_across_plastic_float.jpg",
+    "caption": "Float height measured at the tang"
+   }
+  ],
+  "choke-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_passages.jpg",
+    "caption": "Diagram of the enrichening passages"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_screwed.jpg",
+    "caption": "Starter jet in the float bowl cover"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_does_not_apply_carburetors_butterfly_choke.jpg",
+    "caption": "Four carburettors with butterfly plates in the throats"
+   }
+  ],
+  "choke-cable-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "caption": "Enrichening plunger and hole marked on a carburettor"
+   }
+  ],
+  "fuel-tap-line-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks.jpg",
+    "caption": "Exploded drawing of a standard fuel tap"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_sometimes_called_main_2.jpg",
+    "caption": "Fuel tap with ON mark and lever"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock.jpg",
+    "caption": "Exploded drawing of a vacuum fuel tap"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock_2.jpg",
+    "caption": "Vacuum tap parts: filter, diaphragm and screws"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all.jpg",
+    "caption": "Parts list of a vacuum fuel tap"
+   }
+  ],
+  "vacuum-fuel-tap-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock_2.jpg",
+    "caption": "Vacuum tap parts: filter, diaphragm and screws"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock.jpg",
+    "caption": "Exploded drawing of a vacuum fuel tap"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all.jpg",
+    "caption": "Parts list of a vacuum fuel tap"
+   }
+  ],
+  "tank-vent-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_under_seat_gas_tank_2.jpg",
+    "caption": "Fuel cap with its vent holes labelled"
+   }
+  ],
+  "fuel-cap-service": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_under_seat_gas_tank_2.jpg",
+    "caption": "Fuel cap with its vent holes labelled"
+   }
+  ],
+  "tank-rust-treat": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_rusty.jpg",
+    "caption": "Rust inside a tank filler opening"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust.jpg",
+    "caption": "Clean filler opening with no rust"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank.jpg",
+    "caption": "Blue tank interior clean after treatment"
+   }
+  ],
+  "clear-flooded-engine": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_groove_worn_them.jpg",
+    "caption": "Needle tip with a groove worn in it"
+   }
+  ],
+  "recommission-after-storage": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_rusty.jpg",
+    "caption": "Rust inside a tank filler after storage"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+    "caption": "Fuel above a layer of water in a jar"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_2.jpg",
+    "caption": "Carburettor and its jets spread out for cleaning"
+   }
+  ],
+  "fuel-filter-replace": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg",
+    "caption": "Vacuum tap taken apart: filter and diaphragm"
+   }
+  ],
+  "fuel-pump-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_i_haven_t_used_any_because.jpg",
+    "caption": "Under-seat tank with fuel pump, drawn in outline"
+   }
+  ],
+  "carb-diaphragm-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_s_not_my_body_won_t.jpg",
+    "caption": "Carburettor with its top off and the slide exposed"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_piston_type.jpg",
+    "caption": "Steel piston type slide with a needle"
+   }
+  ],
+  "carb-jet-clear": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_pressed.jpg",
+    "caption": "Pressed-in idle jet in a carburettor body"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_pilot_group.jpg",
+    "caption": "Idle jet group: air jet, idle jet and air screw"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/071/071_main_jets_can_made_brass_plastic.jpg",
+    "caption": "Main jet cut open to show its passage"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_lower_hole.jpg",
+    "caption": "Float bowl cover with overflow tube, lower hole and passage"
+   }
+  ],
+  "carb-remove-refit": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_assembly.jpg",
+    "caption": "Four carburettors with parts sorted in trays"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_does_not_apply_carburetors_butterfly_choke.jpg",
+    "caption": "Four carburettors on their common mount"
+   }
+  ],
+  "float-height-set": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_sometimes_may_run_across_plastic_float.jpg",
+    "caption": "Float height measured at the tang"
+   }
+  ],
+  "fuel-tank-leak-repair": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_steel_gas_tank_yamaha_plastic_gas.jpg",
+    "caption": "Montesa fiberglass tank with its filler"
+   }
+  ],
+  "fuel-tank-remove": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   }
+  ],
+  "idle-screw-set": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_three_idle_ports.jpg",
+    "caption": "Idle ports in the throat of a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_throttle_closed.jpg",
+    "caption": "Throttle closed with the idle port in the throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/067/067_while_i_have_never_seen_two.jpg",
+    "caption": "Tip of the idle adjuster screw seen in the throat"
+   }
+  ],
+  "jet-needle-clip-set": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle.jpg",
+    "caption": "Four jet needles of different taper"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/070/070_also_little_screw_even_plate_held.jpg",
+    "caption": "Needle with clips beside a needle jet"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/070/070_small_washer.jpg",
+    "caption": "Needle with a small washer"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/070/070_all_all_very_handy_jet.jpg",
+    "caption": "Diagram of needle clearance: small, medium, large"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_make_sure_goes_right_way.jpg",
+    "caption": "Slide and needle being refitted to a carburettor"
+   }
+  ],
+  "main-jet-change": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_how_proud.jpg",
+    "caption": "Main jet with its size number and maker mark"
+   }
+  ]
+ },
+ "parts": {
+  "fuel_cap": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_under_seat_gas_tank_2.jpg",
+    "caption": "Fuel cap with its vent holes labelled"
+   }
+  ],
+  "fuel_filter": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "caption": "Fuel tap with its tank and tap screens"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock_2.jpg",
+    "caption": "Vacuum tap parts: filter, diaphragm and screws"
+   }
+  ],
+  "carb": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_carburetor.jpg",
+    "caption": "Exploded drawing of a carburettor with its parts list"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_several.jpg",
+    "caption": "Two carburettor throats with idle holes marked"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "caption": "Enrichening tube inside the float bowl"
+   }
+  ],
+  "carb_diaphragm": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_piston_type.jpg",
+    "caption": "Steel piston type slide with a needle"
+   }
+  ],
+  "carb_float": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_carburetor_floats.jpg",
+    "caption": "Black plastic twin floats"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_cork.jpg",
+    "caption": "Old cork float, cracked and varnished"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/072/072_metal_plastic_both.jpg",
+    "caption": "Metal, plastic and metal, and all plastic floats"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_plastic.jpg",
+    "caption": "Plastic floats with needle and seat beside them"
+   }
+  ],
+  "carb_jets": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/071/071_main_jets_can_made_brass_plastic.jpg",
+    "caption": "Main jet cut open to show its passage"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/071/071_main_jet.jpg",
+    "caption": "Main jets in brass and plastic"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/069/069_washer.jpg",
+    "caption": "Main jet washers beside a main jet"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_how_proud.jpg",
+    "caption": "Main jet with its size number and maker mark"
+   }
+  ],
+  "carb_slide": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/068/068_throttle_slide.jpg",
+    "caption": "Throttle slide with its idle bevel"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/068/068_throttle_slide_cutaway.jpg",
+    "caption": "Carburettor cut open to show the slide, needle and jets"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/063/063_throttle_valve.jpg",
+    "caption": "Plain round throttle slide with its notch"
+   }
+  ],
+  "float_needle_valve": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_notice_too_top_seal_labyrinth_seal.jpg",
+    "caption": "Needle and seat marked in a carburettor body"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_plastic.jpg",
+    "caption": "Plastic floats with needle and seat beside them"
+   }
+  ],
+  "jet_needle": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/070/070_small_washer.jpg",
+    "caption": "Needle with a small washer"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/070/070_all_all_very_handy_jet.jpg",
+    "caption": "Diagram of needle clearance: small, medium, large"
+   }
+  ],
+  "choke_cable": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_passages.jpg",
+    "caption": "Diagram of the enrichening passages"
+   }
+  ]
+ },
+ "systems": {},
+ "course": [],
+ "order": {
+  "repairs": {
+   "carburettor-clean": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_assembly.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_s_not_my_body_won_t.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_careful_not_get_any_cleaner_rubber.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_main_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_needle_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_pressed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_lower_hole.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_2.jpg"
+   ],
+   "carb-idle-adjust": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_air_screw_may_covered_plug_similar.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_air_adjust_idle_screw_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1_fuel.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_idle_circuit.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_three_idle_ports.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_throttle_closed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_while_i_have_never_seen_two.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_throttle_adjustment_screws.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_one_carburetors.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_then_do_all_again_until_get_2.jpg"
+   ],
+   "carb-float-check": [
+    "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_always_check_shop_manual.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_sometimes_may_run_across_plastic_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_tang.jpg",
+    "source/dansmc/04_Fuel_Carburetors/063/063_bendable.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_float_level_set_single_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float_two_piece_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_theory_being_two_piece_floats_help.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_plastic.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_plastic_float_has_metal_insert.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_carburetor_floats.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_cork.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_crushing_floats.jpg"
+   ],
+   "choke-check": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_passages.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_screwed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_butterfly_choke.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_does_not_apply_carburetors_butterfly_choke.jpg"
+   ],
+   "choke-cable-adjust": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg"
+   ],
+   "fuel-tap-line-check": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_sometimes_called_main_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_petcock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg"
+   ],
+   "vacuum-fuel-tap-check": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_res_pri.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_vacuum_off_petcock_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all.jpg"
+   ],
+   "tank-rust-treat": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_rusty.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank_bmw_coated.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_what_do.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_internal_coating.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_no_rust_gas_tank.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_no_rust.jpg"
+   ],
+   "alcohol-fuel-test": [
+    "source/dansmc/04_Fuel_Carburetors/061/061_pattakon_engine_pattakon_crank.jpg",
+    "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+    "source/dansmc/04_Fuel_Carburetors/061/061_other_words_stuff_just_will_not.jpg"
+   ],
+   "clear-flooded-engine": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_over_flow.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_lubing_things_up_armor_all_warming.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_groove_worn_them.jpg"
+   ],
+   "recommission-after-storage": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_rusty.jpg",
+    "source/dansmc/04_Fuel_Carburetors/060/060_however_good_take_moisture_water_out.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_exploded_carburetor.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_crush_floats.jpg"
+   ],
+   "carb-diaphragm-check": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_diaphragm.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_s_not_my_body_won_t.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_rubber_diaphragm_type.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_piston_type.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_holes.jpg"
+   ],
+   "carb-jet-clear": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_main_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/063/063_pilot_group.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_pressed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/071/071_main_jets_can_made_brass_plastic.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_lower_hole.jpg",
+    "source/dansmc/04_Fuel_Carburetors/069/069_washer.jpg"
+   ],
+   "carb-remove-refit": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_assembly.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_slide_carb_cv_carburetors_slide_carb.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_does_not_apply_carburetors_butterfly_choke.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_center_between_carburetors.jpg"
+   ],
+   "choke-circuit-clear": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_passages.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_lower_hole.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_screwed.jpg"
+   ],
+   "float-height-set": [
+    "source/dansmc/04_Fuel_Carburetors/072/072_metal_plastic_both.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_always_check_shop_manual.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_float_level_set_single_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_tang.jpg",
+    "source/dansmc/04_Fuel_Carburetors/063/063_bendable.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float_two_piece_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_sometimes_may_run_across_plastic_float.jpg"
+   ],
+   "fuel-tank-remove": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_i_haven_t_used_any_because.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_some_crossover_tubes_front_gas_tank.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_some_crossover_tubes_front_gas_tank_2.jpg"
+   ],
+   "idle-screw-set": [
+    "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1_fuel.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_three_idle_ports.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_throttle_closed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_while_i_have_never_seen_two.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_then_do_all_again_until_get.jpg"
+   ],
+   "inline-fuel-valve-fit": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_off_fuel_petcocks_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_plastic_inline_valve.jpg"
+   ],
+   "jet-needle-clip-set": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_throttle_slide.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_needle_clip.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_clip.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_also_little_screw_even_plate_held.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_small_washer.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_clip_no_clip_needle.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_make_sure_goes_right_way.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_jet_needle_needle_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/070/070_all_all_very_handy_jet.jpg"
+   ],
+   "main-jet-change": [
+    "source/dansmc/04_Fuel_Carburetors/071/071_main_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_how_proud.jpg",
+    "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet_mikuni_main_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/071/071_section_main_jet_mikuni_main_jet_2.jpg"
+   ],
+   "needle-jet-remove-refit": [
+    "source/dansmc/04_Fuel_Carburetors/069/069_needle_jet_locating_pin.jpg",
+    "source/dansmc/04_Fuel_Carburetors/069/069_main_jet_then_screws_into_bottom.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_needle_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/069/069_needle_jet_locating_pin_mikuni_bleed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/069/069_washer.jpg"
+   ],
+   "float-pin-remove": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_tang.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles_don_t_get_so.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_serrated_one_end.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_plastic.jpg"
+   ],
+   "idle-jet-change": [
+    "source/dansmc/04_Fuel_Carburetors/067/067_idle_jet_installed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_idle_jet_installed_idle_jet_out.jpg",
+    "source/dansmc/04_Fuel_Carburetors/063/063_pilot_group.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_pressed.jpg"
+   ],
+   "fuel-filter-replace": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_fine_wire_filter_screens.jpg",
+    "source/dansmc/04_Fuel_Carburetors/062/062_not_all_fuel_petcocks_have_all_2.jpg"
+   ]
+  }
+ }
+}

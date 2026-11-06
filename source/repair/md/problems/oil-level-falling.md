@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 53}
   - {doc: "K-Light 125 manual", page: 196}
   - {doc: "MAVCC Motorcycle Mechanic", page: 654}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil2.htm"}
 ---
 
 # Oil level drops but there is no visible leak
@@ -59,6 +60,7 @@ Yes, if you keep the level between the marks and check it often. Do not let it f
 | Cause | How to confirm | Fix |
 |---|---|---|
 | Wrong reading method | Records vary | [Check the engine oil level](/moto-zero/repair/repairs/oil-level-check) |
+| Engine settling at its own level | Level drops a little after a fill, then stays steady over several checks | Check often; keep it between the marks |
 | Leak blown away while riding | Wet trail after a ride | [Trace an oil leak](/moto-zero/repair/repairs/oil-leak-trace) |
 | Breather discharge | Oil in air box | [Check the crankcase breather](/moto-zero/repair/repairs/breather-check) |
 | Worn rings | Blue smoke on load, low compression | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |

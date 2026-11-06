@@ -1,0 +1,271 @@
+{
+ "repairs": [
+  {
+   "id": "oil-filter-type-identify",
+   "title": "Find out which kind of oil filter the engine has",
+   "level": "rider",
+   "time": "10 to 15 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "torch",
+    "manual or parts list"
+   ],
+   "parts": [
+    "oil_filter",
+    "oil_filter_wrench",
+    "drain_plug"
+   ],
+   "consumables": [],
+   "fixes": [
+    "oil-filter-leak",
+    "oil-darkens-quickly",
+    "oil-warning-light"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_cartridge.jpg",
+     "caption": "Spin-on cartridge filter"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_hollow_bolt.jpg",
+     "caption": "Hollow bolt that holds a filter housing cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_paper_element.jpg",
+     "caption": "Paper oil filter element"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_chamber_located_hi_rear_engine_right.jpg",
+     "caption": "Fine screen and spring on a filter chamber cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_cup_centrifugal_oil_filter.jpg",
+     "caption": "Cup centrifugal oil filter"
+    }
+   ]
+  },
+  {
+   "id": "small-engine-oil-level",
+   "title": "Check the oil on a small engine without a level plug",
+   "level": "rider",
+   "time": "5 to 10 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "clean rag",
+    "funnel"
+   ],
+   "parts": [
+    "engine_oil",
+    "oil_dipstick"
+   ],
+   "consumables": [
+    "engine oil"
+   ],
+   "fixes": [
+    "oil-level-falling",
+    "oil-overfilled"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_small_engine_horizontal_shaft_oil_level.jpg",
+     "caption": "Oil filler of a horizontal shaft small engine"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_small_engine_vertical_shaft_oil_level.jpg",
+     "caption": "Oil filler of a vertical shaft small engine"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_if_worst_comes_worst_drain_all.jpg",
+     "caption": "Oil filler hole on a small engine casing"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-gearbox-oil",
+   "title": "Change the gearbox oil on a two-stroke",
+   "level": "home",
+   "time": "20 to 30 min",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "drain pan",
+    "spanner or socket",
+    "torque wrench",
+    "funnel",
+    "clean rags"
+   ],
+   "parts": [
+    "engine_oil",
+    "drain_plug",
+    "two_stroke_oil"
+   ],
+   "consumables": [
+    "gearbox oil of the type in the manual",
+    "new sealing washer"
+   ],
+   "fixes": [
+    "two-stroke-old-smokes-seals",
+    "oil-level-falling"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+     "caption": "Oil drain bolt on the side of the engine"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug.jpg",
+     "caption": "Oil level plug hole low on a side cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_changing_oil.jpg",
+     "caption": "Pouring fresh oil from a bottle into the filler"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "two-stroke-old-smokes-seals",
+   "title": "Old two-stroke smokes heavily",
+   "system": "oil",
+   "also_called": [
+    "blue smoke on an old two-stroke",
+    "smoke gets worse with age",
+    "gearbox oil in the engine"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "parts": [
+    "two_stroke_oil",
+    "oil_seals",
+    "two_stroke_oil_pump"
+   ],
+   "repairs": [
+    "two-stroke-premix",
+    "two-stroke-pump-output-test",
+    "oil-seal-fit",
+    "two-stroke-gearbox-oil"
+   ],
+   "related": [
+    "blue-smoke",
+    "two-stroke-crankcase-leak",
+    "two-stroke-oil-not-used"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_two_stroke_autolube_oil_pumps.jpg",
+     "caption": "Two oil injection pumps side by side"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+     "caption": "Oil tank, pump and throttle cable on a two-stroke"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "oil_filter_wrench",
+   "name": "Oil filter wrench",
+   "category": "engine",
+   "aliases": [
+    "filter wrench",
+    "strap wrench",
+    "cartridge tool",
+    "T-handle filter wrench"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "oil-filter-change",
+    "oil-filter-type-identify"
+   ],
+   "problems": [
+    "oil-filter-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_cartridge_tools.jpg",
+     "caption": "Spin-on filter with a T-handle filter wrench"
+    }
+   ]
+  },
+  {
+   "id": "ratio_cup",
+   "name": "Oil mixing cup (ratio cup)",
+   "category": "engine",
+   "aliases": [
+    "ratio rite",
+    "pre-mix cup",
+    "measuring jug"
+   ],
+   "applies_to": [
+    "two-stroke"
+   ],
+   "repairs": [
+    "two-stroke-premix"
+   ],
+   "problems": [
+    "two-stroke-oil-not-used"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2stroke_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/049/049_ratio_rite.jpg",
+     "caption": "Ratio cup for measuring pre-mix oil"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/049/049_now_if_any_oil_manufacturers_care.jpg",
+     "caption": "Plastic measuring jug with ratio scales"
+    }
+   ]
+  }
+ ]
+}

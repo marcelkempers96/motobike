@@ -44,6 +44,7 @@ The kickstarter has a pedal on a splined shaft, a ratchet that grips a gear only
 4. **Clutch.** If the pedal moves but the engine turns weakly or not at all, the clutch may be slipping. Check lever free play first: [Adjust clutch lever free play](/moto-zero/repair/repairs/clutch-cable-adjust).
 5. **Oil.** Check the oil level: [Check the engine oil level](/moto-zero/repair/repairs/oil-level-check). Very low oil can mean the engine is tight or damaged.
 6. **Engine turns?** With the plug out (cap fitted to a spark tester or earthed plug), the engine should turn smoothly. A locked engine is not a kickstart fault: [Engine has seized or locked up](/moto-zero/repair/problems/engine-seized).
+7. **Starting technique.** A big single can kick back or not turn through if the starting drill is wrong. Find top dead centre with the compression release or the kickstart indicator window if the engine has one: [Kick start a big single, or push start a bike with no kickstart](/moto-zero/repair/repairs/kick-push-start).
 
 ## Inside the engine (workshop)
 The kickstart parts sit behind the right crankcase cover, and on the K-Light 125 the kick shaft assembly is removed from the right crankcase (PDF page 225). The workshop will:
@@ -87,3 +88,4 @@ Ask for: which part failed, and whether the gearbox gears behind the kick idle g
 - MAVCC Motorcycle Mechanic, PDF p. 600
 - MAVCC Motorcycle Mechanic, PDF p. 602
 - Unit 2 The Motorcycle, PDF p. 26
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/starter.htm

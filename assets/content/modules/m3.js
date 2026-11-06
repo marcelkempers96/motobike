@@ -1284,6 +1284,61 @@ export default {
           "caption": "Other headlight styles: an angular LED unit with daytime running light, and a motocross number-plate shroud."
         },
         {
+          "type": "variants",
+          "title": "Headlight types",
+          "intro": "From gas lamps to sealed LED units. Repair page: <a href=\"../repair/parts/headlight/\">headlight</a>.",
+          "items": [
+            {
+              "model": "headlight_round",
+              "name": "Round halogen, chrome bucket",
+              "what": "A 7 in round reflector and glass lens, usually with an H4 halogen bulb holding dipped and main filaments.",
+              "good_for": "Cheap, a standard size, and bulbs on sale almost everywhere.",
+              "conditions": "General road riding.",
+              "watch": "Blown filaments, corroded connectors and aim knocked off. An LED bulb in a halogen reflector scatters light and dazzles."
+            },
+            {
+              "model": "headlight_led",
+              "name": "LED unit with DRL",
+              "what": "A sealed LED headlight with a daytime running light strip.",
+              "good_for": "Bright, low power, long life, instant on.",
+              "conditions": "Night riding and all weather.",
+              "watch": "Usually not repairable: a failed LED means a new unit. Moisture inside the lens and a poor earth."
+            },
+            {
+              "model": "bike_cruiser__headlight",
+              "name": "Round LED, cruiser",
+              "what": "A traditional round bucket with an LED face, on the modern cruiser.",
+              "good_for": "A classic look with modern light output and low power draw.",
+              "conditions": "Road riding at night and in all weather.",
+              "watch": "As for any LED unit: water ingress and connector corrosion. Aim it after any change to suspension or load."
+            },
+            {
+              "model": "headlight_mx",
+              "name": "Motocross number-plate light",
+              "what": "A small lamp set into the front number-plate shroud.",
+              "good_for": "Light and tough; enough for trail riding and short road sections.",
+              "conditions": "Off-road and short road links.",
+              "watch": "A weak beam, not meant for fast night riding. Vibration breaks bulbs and loosens connectors."
+            },
+            {
+              "model": "bike_vintage_vtwin__headlight",
+              "name": "Acetylene lamp, vintage",
+              "what": "Water drips onto calcium carbide in a separate generator, and the acetylene gas is piped to a burner in the lamp.",
+              "good_for": "A bright flame in the years before reliable dynamos and batteries.",
+              "conditions": "Display and period events.",
+              "watch": "Acetylene is flammable: carbide is stored dry and the lamp is never lit near a fuel leak. The burner jet needs cleaning."
+            },
+            {
+              "model": "bike_pioneer__headlight",
+              "name": "Carbide lamp, about 1901",
+              "what": "A compact brass lamp with the gas generator built into its body.",
+              "good_for": "Light with no wiring at all.",
+              "conditions": "Slow running at dusk; display.",
+              "watch": "Dim by modern standards. The same carbide and flame care as the acetylene lamp."
+            }
+          ]
+        },
+        {
           "type": "model",
           "file": "tail_light",
           "caption": "An LED tail light with number-plate light."

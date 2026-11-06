@@ -1,0 +1,206 @@
+{
+ "repairs": [
+  {
+   "id": "foam-filter-make",
+   "title": "Make a replacement foam air filter from foam sheet",
+   "level": "home",
+   "time": "1 to 2 hours plus glue time",
+   "applies_to": [
+    "carburettor",
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "old filter or frame as a pattern",
+    "sharp knife or scissors",
+    "hot glue gun",
+    "filter oil",
+    "clean tray"
+   ],
+   "parts": [
+    "air_filter",
+    "carb"
+   ],
+   "consumables": [
+    "air filter foam sheet",
+    "hot glue sticks",
+    "foam filter oil"
+   ],
+   "fixes": [
+    "air-change-runs-wrong",
+    "runs-rich",
+    "runs-lean"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/aircleaner.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_foam_make_filter.jpg",
+     "caption": "Foam air filter sheet before cutting"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg",
+     "caption": "Foam filter sheet cut to shape"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam.jpg",
+     "caption": "Oiled foam air filter element"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_just_never_know.jpg",
+     "caption": "Foam filter fitted with a clamp"
+    }
+   ]
+  },
+  {
+   "id": "auto-enrichener-check",
+   "title": "Check an automatic starter (thermowax or bimetal enrichener)",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "carburettor",
+    "scooter",
+    "electric-start"
+   ],
+   "tools": [
+    "multimeter",
+    "screwdrivers",
+    "scooter manual"
+   ],
+   "parts": [
+    "carb",
+    "choke_cable"
+   ],
+   "consumables": [],
+   "fixes": [
+    "hard-cold-start",
+    "runs-rich",
+    "high-idle"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb11.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_learn_more_about_them_check_scooter.jpg",
+     "caption": "Drawing of a thermowax starter with heater"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_mixture_enrichener_thermowax_type.jpg",
+     "caption": "Drawing of a bimetal starter"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/076/076_start_mixture_enrichment_circuit.jpg",
+     "caption": "Drawing of the starter fuel and air circuit"
+    }
+   ]
+  },
+  {
+   "id": "throttle-position-marks",
+   "title": "Mark the throttle grip to find where a jetting problem is",
+   "level": "rider",
+   "time": "10 to 15 min",
+   "applies_to": [
+    "carburettor"
+   ],
+   "tools": [
+    "masking tape",
+    "pen",
+    "tape measure or ruler"
+   ],
+   "parts": [
+    "carb",
+    "carb_jets"
+   ],
+   "consumables": [
+    "masking tape"
+   ],
+   "fixes": [
+    "hesitation",
+    "flat-spot",
+    "bogs-full-throttle",
+    "surging-cruise",
+    "runs-lean",
+    "runs-rich"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb10.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_throttle_marks_1.jpg",
+     "caption": "Tape marks on the throttle grip and housing"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_roaring_down_road_120_mph_trying.jpg",
+     "caption": "Tape marks on the grip and housing show throttle position"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_noticeable_lack_power.jpg",
+     "caption": "Chart: throttle opening where each carburettor part works"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_tuning.jpg",
+     "caption": "Carburettor with the throttle range of each jet marked"
+    }
+   ]
+  },
+  {
+   "id": "float-needle-tap",
+   "title": "Free a stuck float needle by tapping the carburettor",
+   "level": "rider",
+   "time": "5 to 10 min",
+   "applies_to": [
+    "carburettor"
+   ],
+   "tools": [
+    "plastic hammer or plastic screwdriver handle",
+    "rag",
+    "clean container"
+   ],
+   "parts": [
+    "carb",
+    "float_needle_valve"
+   ],
+   "consumables": [],
+   "fixes": [
+    "carb-overflowing",
+    "flooded-engine",
+    "fuel-leak",
+    "fuel-smell"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/carb8a.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+     "caption": "Needle and brass seat removed from a carburettor"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_worn_fuel_valve_needles.jpg",
+     "caption": "Needle and seat in section in the float bowl"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/073/073_if_after_tapping_carburetor_still_leaks.jpg",
+     "caption": "Worn needle tips, each with a ring"
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "parts": []
+}

@@ -1,0 +1,766 @@
+{
+ "problems": {},
+ "repairs": {
+  "needle-seat-replace": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+    "caption": "Needle and brass seat removed from a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_3.jpg",
+    "caption": "Needle seat beside the jets in a float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_4.jpg",
+    "caption": "Needle seat in a carburettor body, bowl removed"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_2.jpg",
+    "caption": "Float bowl with the needle seat and jets in view"
+   }
+  ],
+  "carb-float-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip.jpg",
+    "caption": "Steel tip needle valve"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip_steel_tip.jpg",
+    "caption": "Rubber tip needle valve"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed.jpg",
+    "caption": "Needle seat seen from the float bowl side"
+   }
+  ],
+  "carb-idle-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_noticeable_lack_power.jpg",
+    "caption": "Chart: idle screw and pilot jet work at the lowest throttle openings"
+   }
+  ],
+  "carburettor-clean": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/074/074_screw_air_jet_1_screw_air.jpg",
+    "caption": "Screw-in air jet in the carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_2.jpg",
+    "caption": "Starter jet fuel passage in the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet.jpg",
+    "caption": "Starter jet fuel pipe in the float bowl"
+   }
+  ],
+  "choke-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/077/077_carburetor_choke_plates.jpg",
+    "caption": "Choke slide in the throat of a carburettor"
+   }
+  ],
+  "choke-cable-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable_3.jpg",
+    "caption": "Cable-operated starter plunger on a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable.jpg",
+    "caption": "Starter plunger with a knob on top"
+   }
+  ],
+  "air-filter-service": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_fabric_filter.jpg",
+    "caption": "Oiled fabric filter held in the hand"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_oiled_fabric_dry_paper.jpg",
+    "caption": "Oiled foam filter element in good condition"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_worn_out_foam.jpg",
+    "caption": "Worn out foam element with torn spots"
+   }
+  ],
+  "throttle-cable-adjust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_throttle_marks_1.jpg",
+    "caption": "Tape marks on the throttle grip and housing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_3.jpg",
+    "caption": "Slide cutaway at quarter throttle"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg",
+    "caption": "Slide cutaway at three quarter throttle"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg",
+    "caption": "Slide cutaway at full throttle"
+   }
+  ],
+  "carb-jet-tune": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_throttle_marks_1.jpg",
+    "caption": "Throttle grip taped and marked for the throttle test"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_noticeable_lack_power.jpg",
+    "caption": "Chart: throttle opening where each carburettor part works"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2.jpg",
+    "caption": "Carburettor drawing with jets and passages labelled"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_3.jpg",
+    "caption": "Slide cutaway at quarter throttle"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp15_jpg_24335_bytes_3_31.jpg",
+    "caption": "Spark plug showing ideal tan insulator"
+   },
+   {
+    "file": "source/dansmc/05_Electrical_Ignition/098/098_sp22_jpg_24523_bytes_4_1.jpg",
+    "caption": "Spark plug with pale insulator, hot or lean but acceptable"
+   }
+  ],
+  "starter-plunger-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet.jpg",
+    "caption": "Starter jet fuel pipe in the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_2.jpg",
+    "caption": "Starter jet fuel passage in the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_4.jpg",
+    "caption": "Starter plunger housing and orifice"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_then_fuel_air_mixture_goes_through.jpg",
+    "caption": "Starter air intake in the carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable.jpg",
+    "caption": "Starter plunger with a knob on top"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable_3.jpg",
+    "caption": "Cable-operated starter plunger on a carburettor"
+   }
+  ],
+  "choke-plate-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/077/077_carburetor_choke_plates.jpg",
+    "caption": "Choke slide in the throat of a carburettor"
+   }
+  ],
+  "cv-carb-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_3.jpg",
+    "caption": "Vacuum intake under a diaphragm slide"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_labyrinth_piston_seal.jpg",
+    "caption": "Vacuum intake holes under a piston slide"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_labyrinth_piston_seal_vacuum_intake_top.jpg",
+    "caption": "Top of a piston slide with its groove"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_labyrinth_piston_seal_vacuum_intake_top_2.jpg",
+    "caption": "Peg in a piston carburettor body, wire in air intake"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_piston_slide_diaphragm_slide.jpg",
+    "caption": "Drawing of a CV carburettor without a diaphragm"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_bit_different_but_still_i_think.jpg",
+    "caption": "Drawing of a Honda CV carburettor with diaphragm and plunger"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_6.jpg",
+    "caption": "Atmospheric air intake in a carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_very_smoothly_no_stumbling_whatsoever_when.jpg",
+    "caption": "Four CV carburettors on a multi-cylinder engine"
+   }
+  ],
+  "reed-valve-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder.jpg",
+    "caption": "Reed petal with its slots held in the hand"
+   }
+  ],
+  "power-valve-service": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_closed.jpg",
+    "caption": "Drawing of a power valve closed with its governor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_open_2.jpg",
+    "caption": "Drawing of a power valve open with its governor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_closed_3.jpg",
+    "caption": "Power valve cover and linkage on the side of a cylinder"
+   }
+  ],
+  "intake-leak-test": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg",
+    "caption": "Intake port of a two-stroke cylinder without reeds"
+   }
+  ],
+  "carb-jet-clear": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/074/074_air_jet.jpg",
+    "caption": "Air jet beside the needle jet in the carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/074/074_screw_air_jet_1.jpg",
+    "caption": "Screw-in air jet in a carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg",
+    "caption": "Brass starter jet in the float bowl"
+   }
+  ],
+  "choke-circuit-clear": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_start_mixture_enrichment_circuit.jpg",
+    "caption": "Drawing of the starter fuel and air circuit"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_2.jpg",
+    "caption": "Starter jet fuel passage in the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg",
+    "caption": "Brass starter jet in the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake.jpg",
+    "caption": "Starter jet outlet in the carburettor throat"
+   }
+  ],
+  "carb-diaphragm-check": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_2.jpg",
+    "caption": "Diaphragm, slide and return spring in the carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+    "caption": "Diaphragm slide with its vacuum holes"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_3.jpg",
+    "caption": "Vacuum intake under a diaphragm slide"
+   }
+  ],
+  "main-jet-change": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1.jpg",
+    "caption": "Chart of the throttle range each jet controls"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg",
+    "caption": "Slide cutaway at full throttle"
+   }
+  ],
+  "jet-needle-clip-set": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_3.jpg",
+    "caption": "Slide cutaway at quarter throttle"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg",
+    "caption": "Slide cutaway at three quarter throttle"
+   }
+  ]
+ },
+ "parts": {
+  "carb": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_constant_velocity_carburetors.jpg",
+    "caption": "Two CV carburettors side by side"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/080/080_idle_jet_passages.jpg",
+    "caption": "Idle jet passages under a diaphragm cover"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/074/074_air_jet.jpg",
+    "caption": "Air jet beside the needle jet in the carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+    "caption": "Needle and brass seat removed from a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable.jpg",
+    "caption": "Starter plunger with a knob on top"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_tuning.jpg",
+    "caption": "Carburettor with the throttle range of each jet marked"
+   }
+  ],
+  "air_filter": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_paper_filter.jpg",
+    "caption": "Paper filter element held for inspection"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_fabric_filter.jpg",
+    "caption": "Oiled fabric filter held in the hand"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_oiled_fabric_dry_paper.jpg",
+    "caption": "Oiled foam filter element in good condition"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_worn_out_foam.jpg",
+    "caption": "Worn out foam element with torn spots"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg",
+    "caption": "Foam filter sheet cut to shape"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/085/085_foam_make_filter.jpg",
+    "caption": "Foam air filter sheet before cutting"
+   }
+  ],
+  "choke_cable": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable.jpg",
+    "caption": "Starter plunger with a knob on top"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable_3.jpg",
+    "caption": "Cable-operated starter plunger on a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/077/077_choke_plate.jpg",
+    "caption": "Spring-loaded lever on a plate choke"
+   }
+  ],
+  "intake_manifold": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_reed_valves.jpg",
+    "caption": "Fitting a reed valve in the intake port"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_parts_reed_valve.jpg",
+    "caption": "Reed valve block with its petals"
+   }
+  ],
+  "exhaust": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_dirty_power_valve_linkage.jpg",
+    "caption": "Carbon in the power valve linkage housing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_check_shop_manual.jpg",
+    "caption": "Power valve cover removed from a cylinder"
+   }
+  ],
+  "throttle_body": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_throttle_marks_1.jpg",
+    "caption": "Tape marks on the throttle grip and housing"
+   }
+  ],
+  "reed_valve": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder.jpg",
+    "caption": "Reed petal with its slots held in the hand"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_reed_valves.jpg",
+    "caption": "Fitting a reed valve in the intake port"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg",
+    "caption": "Intake port of a two-stroke cylinder without reeds"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_engines_usually_have_four_six.jpg",
+    "caption": "Reed stop plate screwed to the reed cage"
+   }
+  ],
+  "power_valve": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_open_2.jpg",
+    "caption": "Drawing of a power valve open with its governor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_dirty_power_valve_linkage.jpg",
+    "caption": "Carbon in the power valve linkage housing"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_setting_power_valve_linkage.jpg",
+    "caption": "Checking the power valve linkage setting"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_yamaha_yz125_governor.jpg",
+    "caption": "Governor with centrifugal weights on the valve shaft"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/083/083_check_shop_manual.jpg",
+    "caption": "Power valve cover removed from a cylinder"
+   }
+  ],
+  "carb_jets": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/074/074_air_jet.jpg",
+    "caption": "Air jet beside the needle jet in the carburettor throat"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/074/074_screw_air_jet_1_screw_air_2.jpg",
+    "caption": "Carburettor cutaway with no air jet"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1.jpg",
+    "caption": "Chart of the throttle range each jet controls"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_tuning.jpg",
+    "caption": "Carburettor with the throttle range of each jet marked"
+   }
+  ],
+  "jet_needle": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_3.jpg",
+    "caption": "Slide cutaway at quarter throttle"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg",
+    "caption": "Slide cutaway at three quarter throttle"
+   }
+  ],
+  "carb_slide": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_2.jpg",
+    "caption": "Slide cutaway at idle"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg",
+    "caption": "Slide cutaway at full throttle"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_piston_slide_diaphragm_slide.jpg",
+    "caption": "Drawing of a CV carburettor without a diaphragm"
+   }
+  ],
+  "carb_diaphragm": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_2.jpg",
+    "caption": "Diaphragm, slide and return spring in the carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+    "caption": "Diaphragm slide with its vacuum holes"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/081/081_bit_different_but_still_i_think.jpg",
+    "caption": "Drawing of a Honda CV carburettor with diaphragm and plunger"
+   }
+  ],
+  "float_needle_valve": [
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+    "caption": "Needle and brass seat removed from a carburettor"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip.jpg",
+    "caption": "Steel tip needle valve"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip_steel_tip.jpg",
+    "caption": "Rubber tip needle valve"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_worn_fuel_valve_needles.jpg",
+    "caption": "Needle and seat in section in the float bowl"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_if_after_tapping_carburetor_still_leaks.jpg",
+    "caption": "Worn needle tips, each with a ring"
+   },
+   {
+    "file": "source/dansmc/04_Fuel_Carburetors/073/073_maybe_just_sell_more_parts_think.jpg",
+    "caption": "Brass needle seats of two flow sizes"
+   }
+  ]
+ },
+ "systems": {},
+ "course": [],
+ "order": {
+  "repairs": {
+   "carb-float-check": [
+    "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip_steel_tip.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_5.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_worn_fuel_valve_needles.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_if_after_tapping_carburetor_still_leaks.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_maybe_just_sell_more_parts_think.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_crushing_floats.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_one_piece_float_two_piece_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/063/063_bendable.jpg",
+    "source/dansmc/04_Fuel_Carburetors/072/072_float_level_set_single_float.jpg",
+    "source/dansmc/04_Fuel_Carburetors/063/063_fuel_level.jpg"
+   ],
+   "needle-seat-replace": [
+    "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_steel_tip_rubber_tip_steel_tip.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_maybe_just_sell_more_parts_think.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_4.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_screwed_pressed_held_clip_screw_screwed_5.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_if_after_tapping_carburetor_still_leaks.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_worn_fuel_valve_needles.jpg"
+   ],
+   "carb-idle-adjust": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_air_screw_may_covered_plug_similar.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_throttle_adjustment_screws.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_air_adjust_idle_screw_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/067/067_fuel_adjust_idle_screw_1_fuel.jpg",
+    "source/dansmc/04_Fuel_Carburetors/080/080_idle_jet_passages.jpg",
+    "source/dansmc/04_Fuel_Carburetors/080/080_if_working_just_leave_alone.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_noticeable_lack_power.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/074/074_air_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_roaring_down_road_120_mph_trying.jpg"
+   ],
+   "carburettor-clean": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_dirty_carburetor.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_assembly.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "source/dansmc/04_Fuel_Carburetors/073/073_carburetor_fuel_valve_needle_seat.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake.jpg",
+    "source/dansmc/04_Fuel_Carburetors/074/074_air_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/074/074_screw_air_jet_1_screw_air.jpg",
+    "source/dansmc/04_Fuel_Carburetors/080/080_idle_jet_passages.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_jets.jpg"
+   ],
+   "choke-check": [
+    "source/dansmc/02_General_Repairs/026/026_carb_enrichening_circuit.jpg",
+    "source/dansmc/02_General_Repairs/026/026_if_engine_does_not_start_one.jpg",
+    "source/dansmc/02_General_Repairs/026/026_motorcycle_carburetors_have_either_enriching_circuit.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_carburetor_body.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_butterfly_choke.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_float_bowl.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_start_mixture_enrichment_circuit.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style_guillotine_style_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_carburetor_choke_plates.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_choke_plate.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_if_think_choke_but_engine_will.jpg"
+   ],
+   "choke-cable-adjust": [
+    "source/dansmc/02_General_Repairs/026/026_choke_lever.jpg",
+    "source/dansmc/02_General_Repairs/026/026_cable.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_enrichening_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_11.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_4.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_choke_plate.jpg"
+   ],
+   "air-filter-service": [
+    "source/dansmc/04_Fuel_Carburetors/085/085_paper_filter.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_care_they_last_quite_while.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_oiled_fabric_dry_paper.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_worn_out_foam.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_filters_real_filter.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_fabric_filter.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg"
+   ],
+   "intake-leak-test": [
+    "source/dansmc/04_Fuel_Carburetors/062/062_intake_manifold.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_i_m_not_sure_how_much.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_center_between_carburetors.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_just_never_know.jpg"
+   ],
+   "throttle-cable-adjust": [
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_throttle_marks_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_roaring_down_road_120_mph_trying.jpg"
+   ],
+   "carb-jet-tune": [
+    "source/dansmc/04_Fuel_Carburetors/075/075_throttle_marks_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_roaring_down_road_120_mph_trying.jpg",
+    "source/dansmc/05_Electrical_Ignition/098/098_sp15_jpg_24335_bytes_3_31.jpg",
+    "source/dansmc/05_Electrical_Ignition/098/098_sp22_jpg_24523_bytes_4_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_carburetor_tuning.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_noticeable_lack_power.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_4.jpg",
+    "source/dansmc/04_Fuel_Carburetors/075/075_jet_ranges_1_jet_ranges_2_5.jpg"
+   ],
+   "starter-plunger-check": [
+    "source/dansmc/04_Fuel_Carburetors/076/076_plunger.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_plunger_knob_plunger_lever_plunger_cable_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_start_mixture_enrichment_circuit.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_11.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_4.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_then_fuel_air_mixture_goes_through.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_12.jpg"
+   ],
+   "choke-plate-check": [
+    "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style_guillotine_style_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_guillotine_style_plate_style_guillotine_style_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_choke_plate.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_if_think_choke_but_engine_will.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_because_some_engines_need_bit_more.jpg",
+    "source/dansmc/04_Fuel_Carburetors/077/077_carburetor_choke_plates.jpg"
+   ],
+   "cv-carb-check": [
+    "source/dansmc/04_Fuel_Carburetors/081/081_again_i_put_wire_through_atmospheric.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_piston_constant_velocity_carburetor_vacuum_air.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_i_put_wire_through_atmospheric_air.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_labyrinth_piston_seal.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_labyrinth_piston_seal_vacuum_intake_top.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_labyrinth_piston_seal_vacuum_intake_top_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_piston_slide_diaphragm_slide.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_11.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_6.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_bit_different_but_still_i_think.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_very_smoothly_no_stumbling_whatsoever_when.jpg"
+   ],
+   "reed-valve-check": [
+    "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_reed_valves.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_parts_reed_valve.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_motorcycle_engines_usually_have_four_six.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_reed_petal.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder.jpg"
+   ],
+   "power-valve-service": [
+    "source/dansmc/04_Fuel_Carburetors/083/083_check_shop_manual.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_dirty_power_valve_linkage.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_closed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_open.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_closed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_open_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_yamaha_yz125_governor.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_honda_cr250_powervalve_closed_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_setting_power_valve_linkage.jpg"
+   ],
+   "air-filter-foam-service": [
+    "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_oiled_fabric_dry_paper.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_worn_out_foam.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam_filters_real_filter.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_just_never_know.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg"
+   ],
+   "airbox-blockage-check": [
+    "source/dansmc/04_Fuel_Carburetors/085/085_paper_filter.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_care_they_last_quite_while.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_spark_plug.jpg"
+   ],
+   "airbox-change-check": [
+    "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_foam_make_filter.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_spark_plug.jpg"
+   ],
+   "air-tube-replace": [
+    "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_just_never_know.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_fabric_filter.jpg"
+   ],
+   "carb-jet-clear": [
+    "source/dansmc/04_Fuel_Carburetors/064/064_wear_goggles.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_aware_some_idle_jets_pressed_cannot.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_main_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/064/064_needle_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/074/074_air_jet.jpg",
+    "source/dansmc/04_Fuel_Carburetors/074/074_screw_air_jet_1.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg",
+    "source/dansmc/04_Fuel_Carburetors/069/069_washer.jpg"
+   ],
+   "choke-circuit-clear": [
+    "source/dansmc/04_Fuel_Carburetors/076/076_start_mixture_enrichment_circuit.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/076/076_starter_jet_intake_starter_jet_outlet_3.jpg"
+   ],
+   "carb-diaphragm-check": [
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_3.jpg"
+   ]
+  },
+  "problems": {
+   "cv-carb-stumble": [
+    "source/dansmc/04_Fuel_Carburetors/081/081_cure_dying_stumbling_carburetor_manufacturers_invented.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_again_i_put_wire_through_atmospheric.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_diaphragm_constant_velocity_carburetor_vacuum_air_10.jpg",
+    "source/dansmc/04_Fuel_Carburetors/081/081_very_smoothly_no_stumbling_whatsoever_when.jpg"
+   ],
+   "reed-valve-fault": [
+    "source/dansmc/04_Fuel_Carburetors/084/084_eight.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_reed_petal.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_reed_valve_cylinder_2.jpg",
+    "source/dansmc/04_Fuel_Carburetors/084/084_cylinder_no_reeds.jpg"
+   ],
+   "powervalve-stuck": [
+    "source/dansmc/04_Fuel_Carburetors/083/083_dirty_power_valve_linkage.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_closed.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_power_valve_open.jpg",
+    "source/dansmc/04_Fuel_Carburetors/083/083_yamaha_yz125_governor.jpg"
+   ],
+   "air-change-runs-wrong": [
+    "source/dansmc/04_Fuel_Carburetors/085/085_spark_plug.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_air_filter_sock.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_anyway_if_easily_rips_get_new.jpg",
+    "source/dansmc/04_Fuel_Carburetors/085/085_cheaper_alternative_might_foam_fabric_air.jpg"
+   ]
+  }
+ }
+}

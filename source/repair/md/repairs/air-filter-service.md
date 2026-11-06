@@ -43,6 +43,8 @@ fixes:
 - rough-idle
 - runs-rich
 - stalls-at-idle
+sources:
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
 ---
 
 # Clean or replace the air filter
@@ -54,6 +56,8 @@ The air filter stops dust from entering the engine. A dirty filter starves the e
 
 ## Safety
 
+- Always run the bike with the air filter fitted. Very little dirt is needed to wear the piston and cylinder.
+- A paper element that has got wet stops passing air well. It may work again when dry but never flows as well, and one that has stood a long time soaks up damp from the air. Replace it rather than trying to clean it.
 - Work with the engine off and cool. Do not start or turn the engine while the filter is out: dirt can fall straight into the intake.
 - Never clean a filter in petrol. Petrol vapour in an airbox is a fire risk, and petrol damages foam.
 - Wear gloves if you use filter oil or detergent.
@@ -86,6 +90,11 @@ The air filter stops dust from entering the engine. A dirty filter starves the e
 
 ## If it did not fix the problem
 
+- Engine runs badly after a different filter or airbox was fitted: [Check the mixture after changing the air filter or airbox](/moto-zero/repair/repairs/airbox-change-check).
+- No filter on sale for an older bike: [Make a replacement foam air filter from foam sheet](/moto-zero/repair/repairs/foam-filter-make).
+- Hard, shrunk air tube between airbox and carburettor: [Replace a hard, shrunk air tube](/moto-zero/repair/repairs/air-tube-replace).
+- Rich running with a clean filter: look for a blocked airbox inlet, a nest or an oily breather in [Check the airbox inlet, filter and breather for a blockage](/moto-zero/repair/repairs/airbox-blockage-check).
+- In dusty or rural riding the filter needs service more often than in the city.
 - Still weak, rich or smoky: see [Engine runs rich](/moto-zero/repair/problems/runs-rich) and [Black smoke](/moto-zero/repair/problems/black-smoke).
 - Dust was on the clean side: ask for a [compression test](/moto-zero/repair/repairs/compression-test), because dust wears the top end.
 - Oil soaking the filter or airbox: see [Smoke from the crankcase breather](/moto-zero/repair/problems/breather-smoke).

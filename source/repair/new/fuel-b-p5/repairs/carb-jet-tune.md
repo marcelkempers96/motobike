@@ -55,3 +55,9 @@ A carburettor that runs badly is running too rich or too lean. Each part of the 
 - Before changing jets, rule out air leaks: [Find an intake air leak](/moto-zero/repair/repairs/intake-leak-test).
 - Clean the passages: [Clean the carburettor](/moto-zero/repair/repairs/carburettor-clean).
 - Fault at idle: [Adjust carburettor idle speed and mixture](/moto-zero/repair/repairs/carb-idle-adjust).
+
+## Related notes
+
+- To find which throttle position has the fault, see [Mark the throttle grip to find where a jetting problem is](/moto-zero/repair/repairs/throttle-position-marks).
+- Jetting can change as the engine wears. Falling compression gives less vacuum at the venturi and a lean tendency, which calls for richer jets. A big-bore kit can do the reverse.
+- Float level has a tolerance range. A level at the high end of the range makes the mixture very slightly richer, and one at the low end very slightly leaner.

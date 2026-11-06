@@ -86,6 +86,9 @@ A fuel filter catches rust, dirt and water before they reach the carburettor jet
 
 Follow your bike's service schedule. The K-Light 125 manual gives three different fuel filter intervals in different places (PDF pages 51, 274 and 275), so no single figure is given here. Change the filter early after any rust, water or dirty fuel.
 
+## More tips
+- Many fuel taps have a screen in the tank and another at the tap. Clean both. A vacuum tap may also have a filter behind its cover.
+
 ## Check your work
 
 - No drips, no fuel smell, filter arrow toward the engine.
@@ -132,3 +135,5 @@ Follow your bike's service schedule. The K-Light 125 manual gives three differen
 - K-Light 125 manual, PDF p. 274
 - K-Light 125 manual, PDF p. 275
 - MAVCC Motorcycle Mechanic, PDF p. 377
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/gastank.htm
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carbs.htm

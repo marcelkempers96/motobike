@@ -1,0 +1,3 @@
+- pages6.py written, new p6 pages generated (4 repairs, 2 parts)
+- fixed inline_fuel_valve duplicate/wrong photo in p5. Next: p6 json build (photos+order), md additions, notes
+- p6 json (json6.py) and md additions done; remaining: checks, notes

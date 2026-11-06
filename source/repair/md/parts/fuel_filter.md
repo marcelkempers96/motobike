@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 51}
   - {doc: "K-Light 125 manual", page: 180}
   - {doc: "K-Light 125 manual", page: 186}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
   - {doc: "K-Light 125 manual", page: 274}
   - {doc: "MAVCC Motorcycle Mechanic", page: 376}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/gastank.htm"}
@@ -40,6 +41,9 @@ At the interval in your bike's manual, and at once after rust or dirt has been f
 - Fit with the arrow toward the engine, use new clips, and check for leaks with the key on before starting.
 - A see-through filter in the line to the carburettor shows rust and dirt. Change it when it fills. It is the cheapest way to protect the carburettor from a rusty tank.
 
+
+## Tap screens
+Many taps carry a fine screen on the pickup tube in the tank, and some a second screen at the tap. They act as a filter too. Clean them with the tap, not only the inline filter.
 
 ## Reference (K-Light 125)
 

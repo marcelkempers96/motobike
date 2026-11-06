@@ -59,7 +59,7 @@ You remove the front wheel to repair a puncture, change a tyre, check bearings o
 4. Mechanical speedo: unscrew the cable at the hub. Electronic sensor or ABS sensor: unbolt it or move it clear, so the wire is not pulled.
 5. Drum brake: undo the cable adjuster nut at the brake arm and free the cable.
 6. Disc brake: on many bikes the disc slides out of the caliper as the wheel drops. If not, remove the two caliper bolts and tie the caliper up.
-7. Remove the nut, support the wheel, and pull the axle out. A stuck axle can be tapped out with a soft-faced mallet, never a steel hammer on the thread.
+7. Remove the nut, support the wheel, and pull the axle out. A stuck axle can be tapped out with a soft-faced mallet, never a steel hammer on the thread. If it will not move, see [Drive a stuck axle out with a nut and a brass rod](/moto-zero/repair/repairs/seized-axle-drive-out).
 8. Lower the wheel out. Collect spacers and keep them in order.
 
 ## Steps: refit
@@ -117,3 +117,4 @@ You remove the front wheel to repair a puncture, change a tyre, check bearings o
 - K-Light 125 manual, PDF p. 49
 - K-Light 125 manual, PDF p. 135
 - MAVCC Motorcycle Mechanic, PDF p. 410
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/tips.htm

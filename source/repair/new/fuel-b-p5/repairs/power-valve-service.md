@@ -42,3 +42,8 @@ This is a workshop-level job. Makers use different linkages, governors and setti
 - [Decarbonise a two-stroke exhaust and port](/moto-zero/repair/repairs/two-stroke-decoke).
 - [Test compression](/moto-zero/repair/repairs/compression-test).
 - [Two-stroke weak at one end of the rev range (power valve)](/moto-zero/repair/problems/powervalve-stuck).
+
+## Related notes
+
+- If the cylinder is bored to an oversize on a steel liner, the power valve may need a little grinding so it does not touch the new piston.
+- Carbon in the linkage housing is the usual reason a valve sticks, so look there first.

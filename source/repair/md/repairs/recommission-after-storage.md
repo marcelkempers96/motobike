@@ -65,6 +65,11 @@ A bike that stands for weeks or months goes stale in several ways at once: the b
 13. **Start.** Use the choke only if the engine is cold and the bike has one. Let it idle until it runs evenly.
 14. **Test ride slowly** close to home. Test the brakes at low speed first.
 
+## More tips
+- Fuel that sits in a carburettor turns to varnish. A small amount of fuel can go bad in a couple of weeks. A full tank can last about a year.
+- Drain old fuel and refill. Add fuel stabiliser to the new fuel. See [Protect stored fuel with a fuel stabiliser](/moto-zero/repair/repairs/fuel-stabiliser-use).
+- Look for a float crushed by pressure, and for varnish in the float bowl.
+
 ## Check your work
 - Engine starts, idles and revs cleanly. Lights, horn and indicators work.
 - Brakes feel firm and do not drag.
@@ -108,3 +113,5 @@ A bike that stands for weeks or months goes stale in several ways at once: the b
 - K-Light 125 manual, PDF p. 21
 - K-Light 125 manual, PDF p. 268
 - MAVCC Motorcycle Mechanic, PDF p. 264
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/gas.htm
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carbs.htm

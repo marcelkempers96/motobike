@@ -121,6 +121,15 @@ The carburettor mixes fuel with air using tiny passages called jets. The **pilot
 18. Refit the carburettor straight into the manifold and air box rubber. Tighten mounting nuts a little at a time, side to side.
 19. Reconnect hoses and cables as in your photos. Turn the fuel ON and check for leaks.
 
+## More tips
+- Wear goggles when blowing out passages. Do not hold the carburettor close to the face.
+- Hold small jets in a rag when blowing them with compressed air.
+- Spray penetrating oil on a stuck slide or float pin and wait several hours.
+- A needle jet breaks easily. See [Remove and refit the needle jet](/moto-zero/repair/repairs/needle-jet-remove-refit).
+- Some idle jets are pressed in and cannot be removed. Clean them in place with cleaner and air.
+- A small jet in the float bowl cover or bowl feeds the choke. If it is blocked, the choke does nothing. See [Clear the choke circuit](/moto-zero/repair/repairs/choke-circuit-clear).
+- Use the carburettor maker's own jets and kits. Genuine jets carry the maker's mark.
+
 ## Check your work
 
 - No fuel leaks from the bowl or overflow pipe after five minutes.
@@ -190,3 +199,4 @@ The carburettor mixes fuel with air using tiny passages called jets. The **pilot
 - MAVCC Motorcycle Mechanic, PDF p. 374
 - MAVCC Motorcycle Mechanic, PDF p. 69
 - Unit 2 The Motorcycle, PDF p. 29
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carbs.htm

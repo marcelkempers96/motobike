@@ -56,6 +56,9 @@ Oil wears out: it fills with fine metal, carbon and acid, and it gets thinner. F
 - Oil of the grade, type and quantity in your manual. The K-Light manual gives the quantity but not the grade; get the grade from the dealer or the label.
 - A new O-ring or sealing washer for the drain cap.
 - Check you have the right plug. Some engines have other plugs near the drain (for the gear stopper spring, for example). Removing the wrong one makes a mess and can damage the gearbox.
+- Some engines have two drain bolts, for example older twins. Drain both.
+- On some engines with a side drain bolt, a gearshift return spring bolt sits close by. Do not remove it: the spring must then be repositioned, which can mean taking the engine out of the frame. The manual shows which bolt is which.
+- Draining while the engine is warm gets more of the old oil out, but very hot oil burns. Running it briefly to warm and mix the oil is enough.
 
 ## Steps
 1. Ride or idle for a few minutes to warm the oil, then stop the engine.
@@ -76,6 +79,8 @@ Oil wears out: it fills with fine metal, carbon and acid, and it gets thinner. F
 - Level is between the marks after settling.
 - No leak at the drain cap after a short ride. If it leaks, do not just tighten harder: drain again and check the seal and threads.
 - Write the date and odometer reading on a label or in the service book.
+- If the oil filter was changed too, the level drops after the first run as the new filter fills. Run the engine for about a minute, let it rest for several minutes, check the level again and top up.
+- Dry-sump engines: run the engine for several minutes before reading the level. See [Check the oil level on a dry-sump engine](/moto-zero/repair/repairs/oil-level-dry-sump).
 
 ## If it did not fix the problem
 - Oil turns black again within a few hundred km: [Oil turns black very soon after a change](/moto-zero/repair/problems/oil-darkens-quickly).
@@ -130,3 +135,5 @@ Oil wears out: it fills with fine metal, carbon and acid, and it gets thinner. F
 - K-Light 125 manual, PDF p. 196
 - MAVCC Motorcycle Mechanic, PDF p. 694
 - Unit 2 The Motorcycle, PDF p. 15
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/change_oil.htm
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/change_oil2.htm

@@ -91,6 +91,9 @@ A four-stroke engine keeps its oil in the bottom of the engine (the sump) and us
 ## Two-stroke oil tank
 - On a bike with oil injection (autolube), the oil for burning is in a separate tank, often under the seat or a side cover. Keep it above the low mark or the warning line. If it runs dry, the engine can seize.
 - The gearbox on a two-stroke has its own oil. Check it at the level screw or dipstick as your manual shows.
+- A two-stroke has no oil filter and no oil pump for the crankcase. The gearbox oil is splashed around and still needs changing at the interval in the manual: [Change the gearbox oil on a two-stroke](/moto-zero/repair/repairs/two-stroke-gearbox-oil).
+- Small utility engines with no dipstick or plug are filled to the threads of the filler hole: [Check the oil on a small engine without a level plug](/moto-zero/repair/repairs/small-engine-oil-level).
+- Some engines settle at their own level. If the level sits a little low and stays there, check often over several rides to see whether the engine is using oil or finding its level.
 
 ## If it did not fix the problem
 - Level falls every week and there is no puddle: [Oil level drops but there is no visible leak](/moto-zero/repair/problems/oil-level-falling).
@@ -159,3 +162,4 @@ A four-stroke engine keeps its oil in the bottom of the engine (the sump) and us
 - K-Light 125 manual, PDF p. 53
 - K-Light 125 manual, PDF p. 54
 - MAVCC Motorcycle Mechanic, PDF p. 698
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/change_oil2.htm

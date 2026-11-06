@@ -46,6 +46,8 @@ fixes:
 - starts-only-with-choke
 - starts-then-dies
 - surging-cruise
+sources:
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb8a.htm"}
 ---
 
 # Check the carburettor float and needle valve
@@ -79,6 +81,12 @@ The float bowl holds a fixed level of fuel. As fuel is used, the float drops and
 10. If the height is wrong and the float has a metal tab, bend the tab a very small amount and measure again. Plastic floats with no tab are usually not adjustable; a wrong height means a worn needle or wrong float.
 11. Fit a new bowl gasket, refit the bowl, refit the carburettor and turn the fuel ON.
 
+## More tips
+- A stuck float pin or post that is badly gummed can be soaked in penetrating oil for several hours before it is driven out with a very small punch. The posts are weak and snap easily. See [Remove a stuck float pin without breaking the posts](/moto-zero/repair/repairs/float-pin-remove).
+- Floats may be all metal, plastic and metal, or all plastic. A metal tab can be bent to adjust the height. A plastic float with a metal insert may still have a bendable metal tab.
+- The overflow tube is a rough guide: the fuel level sits a little below its height. Use your manual's figure to set the level.
+- Leave the fuel tap off whenever the bike stands. If the inlet needle fails, fuel can fill the crankcase.
+
 ## Check your work
 
 - No fuel from the overflow pipe after ten minutes with the fuel ON and the engine off.
@@ -86,6 +94,8 @@ The float bowl holds a fixed level of fuel. As fuel is used, the float drops and
 
 ## If it did not fix the problem
 
+- A tiny piece of rust or dirt on the seat makes the carburettor overflow. A sharp tap with a plastic tool can free it: [Free a stuck float needle by tapping the carburettor](/moto-zero/repair/repairs/float-needle-tap).
+- A ring worn into the needle tip, or a leak that continues after tapping, means a new needle and seat: [Check and replace the carburettor needle valve and seat](/moto-zero/repair/repairs/needle-seat-replace).
 - Still overflowing with a new needle: the float height is wrong or the float is sinking. Check again, or ask a workshop.
 - Engine still rich: [Engine runs rich](/moto-zero/repair/problems/runs-rich). Lean and pinking: [Engine runs hot and lean](/moto-zero/repair/problems/runs-lean).
 
@@ -128,3 +138,5 @@ The float bowl holds a fixed level of fuel. As fuel is used, the float drops and
 - MAVCC Motorcycle Mechanic, PDF p. 370
 - MAVCC Motorcycle Mechanic, PDF p. 371
 - MAVCC Motorcycle Mechanic, PDF p. 373
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carbs.htm
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carb8.htm

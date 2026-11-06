@@ -1,0 +1,511 @@
+{
+ "repairs": [
+  {
+   "id": "breaker-bar-leverage-use",
+   "title": "Add leverage safely to a tight nut or bolt",
+   "level": "rider",
+   "time": "5 to 15 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "breaker bar",
+    "combination spanners",
+    "steel pipe (optional)"
+   ],
+   "parts": [
+    "fasteners"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_take_extra_combination_wrench_similar_size.jpg",
+     "caption": "Two combination spanners joined to make a longer handle"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_breaker_bar.jpg",
+     "caption": "Breaker bar on a rear axle nut"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_fork_tube_cheater.jpg",
+     "caption": "Old fork tube slipped over a breaker bar"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_bat_cheater.jpg",
+     "caption": "Old aluminium bat used as an extra long handle"
+    }
+   ]
+  },
+  {
+   "id": "seized-axle-drive-out",
+   "title": "Drive a stuck axle out with a nut and a brass rod",
+   "level": "rider",
+   "time": "15 to 60 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "hammer",
+    "brass rod",
+    "spanners",
+    "soft-faced mallet (optional)"
+   ],
+   "parts": [
+    "axle",
+    "fasteners"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/worrying.html"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_also_make_sure_hit_nut_square.jpg",
+     "caption": "Brass rod on an axle end, ready to be tapped"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_i_stuck_big_end_vice_crushed_2.jpg",
+     "caption": "Hammer tapping a nut threaded onto an axle end"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_i_need_new_piece_brass_rod.jpg",
+     "caption": "Rusted axle, nut and spacer laid in a tray"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/036/036_thing_do_gently_keep.jpg",
+     "caption": "Hammer used to work a rusted axle loose"
+    }
+   ]
+  },
+  {
+   "id": "seized-part-work-loose",
+   "title": "Free a rusted or glued part by working it back and forth",
+   "level": "rider",
+   "time": "30 to 90 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "penetrating oil",
+    "dead-blow hammer or rawhide mallet",
+    "soft brass drift"
+   ],
+   "parts": [
+    "fasteners",
+    "cylinder"
+   ],
+   "consumables": [
+    "penetrating oil"
+   ],
+   "fixes": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/worrying.html"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/036/036_thing_do_gently_keep_2.jpg",
+     "caption": "Wheel axle being worked with a hammer from both sides"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/036/036_thing_do_gently_keep.jpg",
+     "caption": "Hammer on a rear axle after oil has soaked in"
+    }
+   ]
+  },
+  {
+   "id": "circlip-fit",
+   "title": "Fit a circlip the right way round",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "circlip pliers",
+    "small screwdriver"
+   ],
+   "parts": [
+    "circlips",
+    "piston_pin"
+   ],
+   "consumables": [],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_clip_edge.jpg",
+     "caption": "Circlip with a round edge and a sharp edge"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_clip_edge_2.jpg",
+     "caption": "Thrust load on a circlip, with the chamfered edge shown"
+    }
+   ]
+  },
+  {
+   "id": "oil-pour-guide",
+   "title": "Pour oil into an awkward filler without spilling",
+   "level": "rider",
+   "time": "5 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "wire or a clean car dipstick",
+    "funnel"
+   ],
+   "parts": [
+    "engine_oil"
+   ],
+   "consumables": [
+    "engine oil"
+   ],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_oil_dipstick.jpg",
+     "caption": "Wire laid in the filler hole to guide oil down"
+    }
+   ]
+  },
+  {
+   "id": "old-gasket-remove",
+   "title": "Remove a hard old gasket without gouging the faces",
+   "level": "rider",
+   "time": "1 to 24 h (soak time)",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "plastic scraper",
+    "gasket remover spray",
+    "gloves",
+    "eye protection"
+   ],
+   "parts": [
+    "gaskets",
+    "gasket_sealant"
+   ],
+   "consumables": [
+    "gasket remover"
+   ],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_gasket_removal.jpg",
+     "caption": "Gasket remover sprayed onto an old gasket"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_2.jpg",
+     "caption": "Spray applied to a crankcase joint face"
+    }
+   ]
+  },
+  {
+   "id": "manual-cross-check",
+   "title": "Check a shop manual's steps against the engine before you trust them",
+   "level": "rider",
+   "time": "20 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "felt-tip marker",
+    "camera or phone"
+   ],
+   "parts": [
+    "camshaft",
+    "engine"
+   ],
+   "consumables": [],
+   "fixes": [
+    "rebuilt-engine-hard-start"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_wrong_picture.jpg",
+     "caption": "Manual picture labelled as one tool, but it shows another"
+    }
+   ]
+  },
+  {
+   "id": "screw-holder-make",
+   "title": "Hold a screw in a hard-to-reach place",
+   "level": "rider",
+   "time": "5 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "screwdriver",
+    "paperclip",
+    "pliers"
+   ],
+   "parts": [
+    "fasteners"
+   ],
+   "consumables": [],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_paperclip_screw_holder.jpg",
+     "caption": "Screwdriver with a paperclip holding the screw"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_screw_holder.jpg",
+     "caption": "Purpose-made screw holder on a screwdriver"
+    }
+   ]
+  },
+  {
+   "id": "bolt-stretch-measure",
+   "title": "Measure bolt stretch and learn what a failed bolt looks like",
+   "level": "rider",
+   "time": "30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "calipers or micrometer",
+    "vice",
+    "torque wrench",
+    "old bolt, washers and nut"
+   ],
+   "parts": [
+    "fasteners"
+   ],
+   "consumables": [],
+   "fixes": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_measure_bolt_stretch.jpg",
+     "caption": "Micrometer used to measure the length of a bolt"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_if_torqueing_bolt_engine_feel_yield.jpg",
+     "caption": "Bolts with different strength marks on the heads"
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "parts": [
+  {
+   "id": "penetrating_oil",
+   "name": "Penetrating oil",
+   "category": "chassis",
+   "aliases": [
+    "rust releaser",
+    "loosening spray",
+    "freeing oil",
+    "WD-40 type spray"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "seized-part-work-loose",
+    "seized-axle-drive-out",
+    "stuck-fastener-removal",
+    "breaker-bar-leverage-use"
+   ],
+   "problems": [
+    "fastener-stuck-rounded"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/worrying.html"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/032/032_chemicals.jpg",
+     "caption": "Shelf of sprays and chemicals in a workshop"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/036/036_thing_do_gently_keep_2.jpg",
+     "caption": "Wheel axle being worked loose after oil soaked in"
+    }
+   ]
+  },
+  {
+   "id": "thread_locker",
+   "name": "Thread locker",
+   "category": "chassis",
+   "aliases": [
+    "Loctite type",
+    "threadlock",
+    "screw lock",
+    "bolt locking compound"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "fastener-types-identify",
+    "fastener-check"
+   ],
+   "problems": [
+    "bolts-keep-loosening"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/bolts.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+     "caption": "Bolt with a lock washer and nut"
+    }
+   ]
+  },
+  {
+   "id": "anti_seize",
+   "name": "Anti-seize compound",
+   "category": "chassis",
+   "aliases": [
+    "copper grease",
+    "never-seez type",
+    "anti-seize paste"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "seized-axle-drive-out",
+    "heat-cool-fit"
+   ],
+   "problems": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/chemicals.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_also_make_sure_hit_nut_square.jpg",
+     "caption": "Axle end, a place where anti-seize helps"
+    }
+   ]
+  },
+  {
+   "id": "circlips",
+   "name": "Circlips (snap rings)",
+   "category": "engine",
+   "aliases": [
+    "snap ring",
+    "retaining ring",
+    "C-clip",
+    "wire clip",
+    "gudgeon pin clip"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "repairs": [
+    "circlip-fit",
+    "piston-inspect"
+   ],
+   "problems": [],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/tips.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_clip_edge.jpg",
+     "caption": "Circlip with a round edge and a sharp edge"
+    },
+    {
+     "file": "source/dansmc/02_General_Repairs/048/048_clip_edge_2.jpg",
+     "caption": "Thrust load and the chamfered side of a clip"
+    }
+   ]
+  }
+ ]
+}

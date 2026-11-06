@@ -1,0 +1,3 @@
+- [x] p6 plan made; photos chosen; next write p6 json + new pages + md bullets + fix pass1 bleed_bolt
+- [x] p6 json, 3 repairs, 1 problem, 2 parts, index.json written; todo: md bullets, fix bleed_bolt, checks, notes
+- [x] all done

@@ -60,7 +60,7 @@ page = f'''<!doctype html>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css?v=20261106a">
+  <link rel="stylesheet" href="../assets/styles.css?v=20261106b">
   <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
   <style>
 .ute-hero {{ padding: 64px 40px 40px; border-bottom: 1px solid var(--line); }}

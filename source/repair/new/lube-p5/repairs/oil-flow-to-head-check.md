@@ -10,7 +10,7 @@ consumables: [engine oil]
 fixes: [oil-warning-light, oil-starved-after-change, tappet-tick]
 sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil2.htm"}
-photos: [{file: "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg", caption: "Oil bleed bolt on the side of a cylinder head"}, {file: "source/dansmc/03_Lubrication_Oil/052/052_bleed_bolt.jpg", caption: "Engine with its oil check bolt location marked"}, {file: "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg", caption: "Coarse oil screen that can block and cut oil to the head"}]
+photos: [{file: "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg", caption: "Oil bleed bolt on the side of a cylinder head"}, {file: "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg", caption: "Coarse oil screen that can block and cut oil to the head"}]
 ---
 
 # Check that oil is reaching the top of the engine

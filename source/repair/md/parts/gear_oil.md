@@ -6,6 +6,7 @@ aliases: [transmission oil, scooter gear oil, hub oil]
 applies_to: [scooter-cvt]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 505}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil2.htm"}
 ---
 
 # Final drive gear oil
@@ -22,6 +23,8 @@ The oil coats the gears and bearings so metal does not touch metal. Gear oil is 
 
 ## When to replace it
 Change at the interval in your scooter's manual, and whenever the case seal or gears are serviced.
+
+Two-strokes have no oil filter, but the gearbox oil still needs regular changes: [Change the gearbox oil on a two-stroke](/moto-zero/repair/repairs/two-stroke-gearbox-oil).
 
 ## What to match when buying
 - Viscosity and type written in the manual or on the case, for example a gear oil grade or, on some scooters, engine oil. Do not guess.

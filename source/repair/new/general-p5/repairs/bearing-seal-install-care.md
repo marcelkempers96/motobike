@@ -10,7 +10,7 @@ consumables: [grease]
 fixes: [bearing-rumble, oil-leak]
 sources:
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tips.htm"}
-photos: [{file: "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing.jpg", caption: "Drive a bearing by its outer race only, never the inner race"}, {file: "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_drive_bearing.jpg", caption: "Bearing driver seated on the outer race"}, {file: "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg", caption: "Ball bearing with its steel cage marked"}, {file: "source/dansmc/02_General_Repairs/048/048_dudette_case_may_2.jpg", caption: "Seal with grease packed in its lip cavity"}]
+photos: [{file: "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing.jpg", caption: "Diagram: drive a reused bearing on its outer race"}, {file: "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_drive_bearing.jpg", caption: "Bearing driver seated on the outer race"}, {file: "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg", caption: "Ball bearing with its steel cage marked"}, {file: "source/dansmc/02_General_Repairs/048/048_dudette_case_may_2.jpg", caption: "Seal with grease packed in its lip cavity"}]
 ---
 
 # Fit seals and bearings the right way round without damage

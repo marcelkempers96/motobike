@@ -754,6 +754,61 @@ export default {
           "caption": "Final drive types: chain and sprockets, toothed belt, and shaft with bevel gears."
         },
         {
+          "type": "variants",
+          "title": "Final drive types",
+          "intro": "How the drive reaches the rear wheel on six machines. Shaft drive, described above, is not modelled here. Repair pages: <a href=\"../repair/parts/chain/\">chain</a>, <a href=\"../repair/parts/rear_sprocket/\">rear sprocket</a>, <a href=\"../repair/parts/cvt_belt/\">CVT belt</a>.",
+          "items": [
+            {
+              "model": "bike_classic_4t__chain",
+              "name": "Open roller chain",
+              "what": "A chain from the gearbox sprocket to the rear sprocket, with a guard over the top run.",
+              "good_for": "Light, efficient and cheap; gearing changes with a sprocket swap.",
+              "conditions": "All road riding, when kept clean and lubricated.",
+              "watch": "Slack, stretch, tight spots and hooked teeth. Lubricate after wet rides."
+            },
+            {
+              "model": "bike_boda_boda__chain",
+              "name": "Fully enclosed chain",
+              "what": "The chain runs inside a full chain case on the boda boda.",
+              "good_for": "The chain stays clean and lubricated far longer.",
+              "conditions": "Dust, rain, mud and heavy daily use.",
+              "watch": "The case hides wear, so slack is checked on schedule rather than by eye."
+            },
+            {
+              "model": "bike_cruiser__chain",
+              "name": "Toothed belt",
+              "what": "A toothed rubber belt from the gearbox to a pulley on the rear hub, with a guard.",
+              "good_for": "Quiet, clean, long life and no lubrication.",
+              "conditions": "Paved roads.",
+              "watch": "A stone between belt and pulley can crack or strip teeth. A belt cannot be split, so fitting one can mean removing the swingarm."
+            },
+            {
+              "model": "bike_scooter__cvt",
+              "name": "CVT belt drive",
+              "what": "A V-belt between two variable pulleys, then a reduction gearbox to the rear axle, inside the swinging engine unit.",
+              "good_for": "Automatic, smooth, no gear changes.",
+              "conditions": "City traffic.",
+              "watch": "Belt width wear, flat-spotted rollers and a slipping clutch. Dust and heat in the case."
+            },
+            {
+              "model": "bike_vintage_vtwin__chain",
+              "name": "Chains and a separate gearbox, vintage",
+              "what": "An enclosed primary chain to a separate three-speed gearbox, then an open chain to a 36-tooth rear sprocket.",
+              "good_for": "Each part can be removed and repaired on its own.",
+              "conditions": "Period roads at steady speed.",
+              "watch": "Primary and rear chains have separate adjustments. The open chain needs frequent oil."
+            },
+            {
+              "model": "bike_pioneer__chain",
+              "name": "Flat belt and pedal chain, about 1901",
+              "what": "A flat leather belt from the engine to a belt rim on the rear wheel, and a pedal chain on the other side.",
+              "good_for": "Smooth drive that slips rather than breaking parts.",
+              "conditions": "Dry weather.",
+              "watch": "Slips when wet or loose, and stretches. Pedalling helps on hills."
+            }
+          ]
+        },
+        {
           "type": "h3",
           "text": "The scooter CVT"
         },
@@ -1174,6 +1229,61 @@ export default {
           "html": "The K-Light 125 uses a simple <strong>damper-rod fork</strong>. Cartridge forks use shim-stacked pistons; <strong>USD forks</strong> put the big tube in the clamps for stiffness and lower unsprung mass but expose the seals. Fork oil: <strong>46# (ISO VG 46), 285 ± 2 ml per leg</strong>. The air gap acts as a progressive air spring, so a higher oil level resists bottoming more. <strong>Milky oil</strong> means water past the seals."
         },
         {
+          "type": "variants",
+          "title": "Front fork types",
+          "intro": "Six front ends from the library, from a rigid bicycle fork to an upside-down sport fork. Repair pages: <a href=\"../repair/parts/forks/\">forks</a>, <a href=\"../repair/parts/fork_seals/\">fork seals</a>, <a href=\"../repair/parts/fork_oil/\">fork oil</a>.",
+          "items": [
+            {
+              "model": "bike_classic_4t__forks",
+              "name": "Conventional telescopic",
+              "what": "Slim stanchions held in the yokes slide inside larger lower legs that carry the axle, with oil damping inside. This one has rubber gaiters over the stanchions.",
+              "good_for": "Simple, cheap and easy to service: the standard on roadsters and commuters.",
+              "conditions": "Road riding at the speeds of a typical roadster.",
+              "watch": "Oil weeping past the seals, pitted chrome, and soft or uneven action from old oil. Gaiters keep grit off the seals."
+            },
+            {
+              "model": "bike_mx_2t__forks",
+              "name": "Upside-down fork, long travel",
+              "what": "The large outer tubes are clamped in the yokes and the slim stanchions carry the axle, with long travel for jumps.",
+              "good_for": "Stiffness against twisting under braking and bumps, and less unsprung mass.",
+              "conditions": "Off-road: jumps, ruts and whoops.",
+              "watch": "The seals sit at the bottom and collect mud, so clean them after each ride. A scratched or dented stanchion ruins seals quickly."
+            },
+            {
+              "model": "bike_superbike__forks",
+              "name": "Upside-down sport fork",
+              "what": "A large inverted fork with adjusters for preload and damping, and radial calipers bolted to the lower legs.",
+              "good_for": "Precise feedback and stability under very hard braking.",
+              "conditions": "Smooth tarmac and track.",
+              "watch": "Stone chips on the stanchions, leaking seals, and settings changed without a record. Service intervals are shorter than for a simple fork."
+            },
+            {
+              "model": "bike_scooter__forks",
+              "name": "Scooter telescopic fork",
+              "what": "A short telescopic fork sized for a small wheel, mostly hidden behind the front panels.",
+              "good_for": "Light steering and low cost for town riding.",
+              "conditions": "Smooth city streets.",
+              "watch": "Limited travel bottoms out in deep holes, especially two-up. Leaks are hidden by the bodywork, so look at the lower legs."
+            },
+            {
+              "model": "bike_vintage_vtwin__forks",
+              "name": "Springer fork, vintage",
+              "what": "A fixed rear pair of legs and a moving front pair joined by short links at the bottom, with coil springs at the top. The girder fork, its close relative, uses a parallelogram of links and a central spring.",
+              "good_for": "A light, simple front end with a little travel, correct for the period.",
+              "conditions": "Moderate speeds on period roads.",
+              "watch": "Worn link pivots and bushes cause clunks and wobble, so grease them often. Travel is small and damping little or none."
+            },
+            {
+              "model": "bike_pioneer__forks",
+              "name": "Rigid bicycle fork, about 1901",
+              "what": "Two straight blades from the crown to the axle, with no springs. Tyre and sprung saddle do all the cushioning.",
+              "good_for": "Low weight and nothing to wear.",
+              "conditions": "Smooth roads at low speed.",
+              "watch": "Cracks at the crown and bent blades after a knock. Check alignment before riding."
+            }
+          ]
+        },
+        {
           "type": "h3",
           "text": "Rear suspension"
         },
@@ -1193,6 +1303,53 @@ export default {
         {
           "type": "p",
           "html": "Twin shocks (as on the K-Light 125) give a nearly linear ratio. A linkage monoshock gives a <strong>rising rate</strong>: soft on small bumps, firm near bottoming. With a motion ratio R, wheel rate ≈ k_shock / R², so a 50 N/mm spring at 2.5:1 gives about <strong>8 N/mm</strong> at the wheel."
+        },
+        {
+          "type": "variants",
+          "title": "Rear suspension types",
+          "intro": "Five ways to hold up the back of a motorcycle, from none at all to a linkage monoshock. Repair pages: <a href=\"../repair/parts/rear_shock/\">rear shock</a>, <a href=\"../repair/parts/swingarm/\">swingarm</a>.",
+          "items": [
+            {
+              "model": "bike_classic_4t__rear_shock",
+              "name": "Twin rear shocks",
+              "what": "Two spring and damper units, one each side, from the swingarm to the frame.",
+              "good_for": "Simple, cheap and easy to reach, with a nearly linear ratio. Preload is set by a collar on each shock.",
+              "conditions": "Road riding, solo or two-up with preload raised.",
+              "watch": "Oil on the body, weak damping (the tail keeps bouncing) and worn bushes. Both sides need the same preload."
+            },
+            {
+              "model": "bike_mx_2t__rear_shock",
+              "name": "Monoshock with linkage",
+              "what": "One shock with a gas reservoir, worked through a rocker and pull rod that give a rising rate.",
+              "good_for": "Long travel, soft on small bumps and firm near bottoming, with the mass kept near the middle of the bike.",
+              "conditions": "Off-road and sport riding.",
+              "watch": "Linkage bearings wear and seize without grease: check for play with the wheel lifted. The gas-charged damper needs specialist service."
+            },
+            {
+              "model": "bike_cruiser__rear_shock",
+              "name": "Hidden softail monoshock",
+              "what": "A monoshock hidden under the seat, so the triangulated swingarm looks like a rigid frame.",
+              "good_for": "The look of a rigid frame with some comfort.",
+              "conditions": "Smooth paved roads.",
+              "watch": "Travel is short, so big bumps and heavy loads reach the stops. Preload must suit a passenger; the shock is hard to reach and often neglected."
+            },
+            {
+              "model": "bike_scooter__rear_shock",
+              "name": "Scooter swinging-engine unit",
+              "what": "Engine, CVT and rear wheel pivot as one unit on a mounting link, held up by shocks (two on this scooter).",
+              "good_for": "A compact, cheap layout with a short belt drive that never changes length.",
+              "conditions": "City riding on fairly smooth roads.",
+              "watch": "The heavy unsprung unit makes the rear harsh on sharp bumps. Worn engine mount bushes show as a knock and vague handling."
+            },
+            {
+              "model": "bike_vintage_vtwin__frame",
+              "name": "Rigid frame, vintage",
+              "what": "The rear axle is fixed in the frame. Only the tyre and the sprung saddle absorb bumps.",
+              "good_for": "Simplicity and low weight, with nothing to wear out.",
+              "conditions": "Smooth roads at moderate speed.",
+              "watch": "Every bump reaches the frame and rider, so check frame joints and saddle springs. Tyre pressure matters even more, as the tyre is the only suspension."
+            }
+          ]
         },
         {
           "type": "callout",
@@ -1326,6 +1483,69 @@ export default {
           "caption": "Rear wheels: an 18 in wire-spoked roadster wheel and a 19 in motocross wheel."
         },
         {
+          "type": "variants",
+          "title": "Wheel types",
+          "intro": "Seven wheels from the model library, from a bicycle-type rim of about 1901 to a cast sport wheel. Sizes are those given for each model. Repair pages: <a href=\"../repair/parts/front_wheel/\">front wheel</a>, <a href=\"../repair/parts/spokes/\">spokes</a>, <a href=\"../repair/parts/wheel_rim/\">wheel rim</a>.",
+          "items": [
+            {
+              "model": "bike_cafe_racer__front_wheel",
+              "name": "Wire-spoked road wheel",
+              "what": "An alloy rim laced to the hub with 40 tensioned steel spokes: 19 in at the front of the 1960s cafe racer, 18 in at the rear.",
+              "good_for": "Road bikes that need a light wheel which flexes a little over bumps and can be rebuilt.",
+              "conditions": "Mixed roads, including rough and broken surfaces.",
+              "watch": "Loose or broken spokes (a dull note when tapped), rim run-out and rust at the nipples. Most need an inner tube, so a puncture can deflate the tyre quickly."
+            },
+            {
+              "model": "bike_step_through__front_wheel",
+              "name": "Steel-rim spoked commuter wheel",
+              "what": "A plain steel rim on spokes: 17 in on the step-through, with 2.25-17 front and 2.50-17 rear tyres.",
+              "good_for": "Cheap, tough daily transport. Bent rims and spokes can be trued or replaced in any small workshop.",
+              "conditions": "Poor roads, potholes and loads at moderate speed.",
+              "watch": "Rust on rim and spokes, spokes loosened by heavy loads, and dents that pinch the tube or make the brake pulse."
+            },
+            {
+              "model": "front_wheel_mx",
+              "name": "Motocross wheel, 21 in front",
+              "what": "A tall, narrow spoked wheel with a strong alloy rim and a rim lock. Off-road front wheels are usually 21 in and rears 18 or 19 in.",
+              "good_for": "Rolling over ruts, rocks and roots: a large wheel meets an obstacle at a shallower angle.",
+              "conditions": "Dirt, mud and sand, at low tyre pressure.",
+              "watch": "Spoke tension after every few rides, rim dents from rocks, and a loose rim lock, which lets the tyre creep and tear the valve out of the tube."
+            },
+            {
+              "model": "bike_superbike__front_wheel",
+              "name": "Cast alloy sport wheel",
+              "what": "One-piece cast aluminium with 12 thin split spokes, 17 in front and rear on the superbike, with tubeless 120/70 ZR17 and 190/50 ZR17 tyres.",
+              "good_for": "High speed and hard braking: stiff, true, and wide enough for a modern radial tyre. No truing.",
+              "conditions": "Good tarmac and track days.",
+              "watch": "Cracks near the spokes and bead seat after a pothole strike, a bent rim edge that leaks air, corrosion under chipped paint. A cracked cast wheel is replaced, not repaired."
+            },
+            {
+              "model": "bike_cruiser__front_wheel",
+              "name": "Cast cruiser wheel",
+              "what": "Polished five split-spoke cast wheels: 19 in front with a 100/90-19 tyre and 16 in rear with a 150/80B16.",
+              "good_for": "Tubeless tyres, easy cleaning and a long, low stance. The tall, narrow front steers slowly and steadily.",
+              "conditions": "Paved roads and long steady runs.",
+              "watch": "Kerb damage and corrosion under the polished finish. A heavy bike needs the correct pressure for the load."
+            },
+            {
+              "model": "bike_scooter__front_wheel",
+              "name": "Small cast scooter wheel",
+              "what": "Compact cast alloy wheels, 14 in front and 13 in rear, with 110/70-14 and 130/70-13 road tyres.",
+              "good_for": "A low floor, light steering and quick turns in traffic.",
+              "conditions": "Smooth city streets.",
+              "watch": "A small wheel drops into potholes and hits edges hard, so rims dent more easily. Its tyres turn more times per kilometre and wear sooner."
+            },
+            {
+              "model": "bike_pioneer__front_wheel",
+              "name": "Bicycle-type wheel, about 1901",
+              "what": "Light 28-spoke nickel wire wheels with 26 x 2 in clincher tyres, close to a heavy bicycle wheel.",
+              "good_for": "Low weight on a machine that is also pedalled.",
+              "conditions": "Dry, smooth roads at low speed.",
+              "watch": "Thin spokes and rims are not built for modern speeds or braking. Old rubber cracks, and a soft clincher can roll off the rim."
+            }
+          ]
+        },
+        {
           "type": "keys",
           "items": [
             {
@@ -1404,6 +1624,69 @@ export default {
         {
           "type": "p",
           "html": "<strong>Bias</strong> plies cross at 30–40°: stiff, tough, but hotter running. <strong>Radial</strong> plies run at about 90° with a belt under the tread: flatter, cooler contact patch, standard above about 400 cc. The DOT code ends in week and year: <strong>2324 = week 23 of 2024</strong>. Inspect from five years, replace at ten regardless of tread."
+        },
+        {
+          "type": "variants",
+          "title": "Tyre types",
+          "intro": "Tread pattern and carcass are chosen for the surface. Tube or tubeless matters as much: a tubeless tyre seals on the rim and usually loses air slowly when punctured, while a tubed tyre on a spoked rim can go flat at once. Repair pages: <a href=\"../repair/parts/front_tyre/\">front tyre</a>, <a href=\"../repair/parts/rear_tyre/\">rear tyre</a>, <a href=\"../repair/parts/inner_tube/\">inner tube</a>.",
+          "items": [
+            {
+              "model": "bike_boda_boda__front_wheel",
+              "name": "Ribbed road front",
+              "what": "Circumferential ribs and no blocks: 2.75-17 on the boda boda front.",
+              "good_for": "Precise steering and long life on a tyre that steers and brakes but does not drive.",
+              "conditions": "Tarmac and hard gravel, wet or dry.",
+              "watch": "Ribs can follow grooves in the road. Look for cracks between the ribs and uneven wear from low pressure."
+            },
+            {
+              "model": "bike_boda_boda__rear_wheel",
+              "name": "Block-tread commuter rear",
+              "what": "Square blocks across the crown: 3.00-17 on the boda boda rear, which carries rider, passenger and goods.",
+              "good_for": "Drive grip on mixed surfaces: tarmac, gravel and dirt roads.",
+              "conditions": "Mixed roads, dry or lightly muddy.",
+              "watch": "A squared-off centre from heavy loads and straight running, which reduces grip when leaning. Under-inflation for the load overheats the carcass."
+            },
+            {
+              "model": "bike_mx_2t__rear_wheel",
+              "name": "Knobby off-road",
+              "what": "Tall, widely spaced knobs that dig into loose ground and let mud clear between them.",
+              "good_for": "Traction for drive, braking and steering in dirt.",
+              "conditions": "Soft to intermediate soil, mud and sand, at low pressure.",
+              "watch": "Knobs squirm on tarmac and wear fast there. Rounded or torn knobs mean lost grip; check the rim lock and tube as well."
+            },
+            {
+              "model": "bike_superbike__rear_wheel",
+              "name": "Sport radial",
+              "what": "A radial carcass with a belt under a rounded, mostly slick tread: 120/70 ZR17 front and 190/50 ZR17 rear on the superbike. ZR marks a tyre rated above 240 km/h.",
+              "good_for": "A large, flat contact patch at deep lean angles, high speed and hard braking.",
+              "conditions": "Warm, dry tarmac. Grip is lower until the tyre is warm, and in the cold and wet.",
+              "watch": "Fast wear, mostly in the centre of the rear; cold tyres; age cracks. Pressures exactly to the maker’s figure."
+            },
+            {
+              "model": "bike_cruiser__rear_wheel",
+              "name": "Belted bias cruiser rear",
+              "what": "A wide, tall tyre with a bias carcass and a belt under the tread: 150/80B16 on the cruiser, where B means belted bias.",
+              "good_for": "Load capacity, comfort and long life on a heavy machine.",
+              "conditions": "Paved roads, steady cruising, two-up.",
+              "watch": "Squaring off from long straight runs, and pressure: raise it for a passenger as the maker specifies."
+            },
+            {
+              "model": "bike_scooter__rear_wheel",
+              "name": "Scooter tyre",
+              "what": "A small, wide, low-profile tubeless road tyre: 130/70-13 on the scooter rear.",
+              "good_for": "Stable grip for a short, low machine in town.",
+              "conditions": "City streets, dry and wet.",
+              "watch": "The rear carries most of the weight and all of the drive, so it wears much faster than the front. A small tyre holds little air: check pressure often."
+            },
+            {
+              "model": "bike_vintage_vtwin__front_wheel",
+              "name": "Beaded-edge clincher, period",
+              "what": "A tyre with hooked beads that lock into a beaded-edge rim, with an inner tube: 28 x 3 in with a ribbed tread on the vintage V-twin.",
+              "good_for": "Correct restoration of machines from before the well-base rim became common in the late 1920s.",
+              "conditions": "Dry roads at modest speed.",
+              "watch": "Air pressure holds the beads in the rim, so an under-inflated tyre can come off. Check old rubber for cracks and fit security bolts where the rim has them."
+            }
+          ]
         },
         {
           "type": "check",
@@ -1635,6 +1918,61 @@ export default {
         {
           "type": "p",
           "html": "A <strong>floating</strong> caliper (K-Light 125) has pistons on one side and slides on pins; seized pins cause uneven pad wear. A <strong>fixed</strong> caliper has opposed pistons. Square-section piston seals roll the piston back and make discs self-adjusting. <strong>Organic</strong> pads bite well cold but fade hot; <strong>sintered</strong> pads work wet and hot but wear discs faster."
+        },
+        {
+          "type": "variants",
+          "title": "Brake types",
+          "intro": "From a spoon on the tyre to twin floating discs. On all of them the front brake does most of the stopping on a dry road. Repair pages: <a href=\"../repair/parts/drum_brake/\">drum brake</a>, <a href=\"../repair/parts/brake_pads/\">brake pads</a>, <a href=\"../repair/parts/brake_disc/\">brake disc</a>.",
+          "items": [
+            {
+              "model": "bike_pioneer__brake",
+              "name": "Spoon brake, about 1901",
+              "what": "A shaped shoe pressed onto the top of the front tyre by a lever, as on early bicycles.",
+              "good_for": "A light, simple way to slow at low speed.",
+              "conditions": "Dry roads at gentle speed.",
+              "watch": "Weak, weaker still in the wet, and it wears the tyre. Long stopping distances must be allowed for."
+            },
+            {
+              "model": "bike_vintage_vtwin__rear_brake",
+              "name": "External band brake, vintage",
+              "what": "A lined steel band that tightens around a drum on the rear hub. The vintage V-twin has no front brake, which was normal for its time.",
+              "good_for": "Simple to make and to adjust.",
+              "conditions": "Dry roads at period speeds.",
+              "watch": "Water and grit on the band, worn lining and stretched linkage. With a rear brake only, stops are planned early."
+            },
+            {
+              "model": "bike_boda_boda__brake",
+              "name": "Single leading shoe drum",
+              "what": "Two shoes inside a drum in the hub, of which only the leading shoe self-servos. Cable-worked at the front and rod-worked at the rear on the boda boda.",
+              "good_for": "Cheap, enclosed, long-lasting linings that stand up to dust and mud.",
+              "conditions": "Commuting at moderate speed on rough or dusty roads.",
+              "watch": "Fade on long descents, stretched cables, worn shoes (the wear indicator on the arm) and water in the drum after washing."
+            },
+            {
+              "model": "bike_cafe_racer__brake",
+              "name": "Twin leading shoe drum",
+              "what": "Each shoe has its own cam, linked together, so both self-servo when going forwards. The cafe racer’s has an air scoop for cooling.",
+              "good_for": "Much stronger forward braking than a single leading shoe drum of the same size.",
+              "conditions": "Dry roads and moderate braking, without long steep descents.",
+              "watch": "Both cams must be set to touch at the same moment, or only one shoe works. Fades when hot."
+            },
+            {
+              "model": "bike_cruiser__brake",
+              "name": "Single disc, two-piston caliper",
+              "what": "One 300 mm front disc with a two-piston caliper, on the cruiser.",
+              "good_for": "Strong, consistent braking that copes with heat and water far better than a drum.",
+              "conditions": "Road riding in all weather.",
+              "watch": "Pad and disc thickness, disc run-out and fluid age. One disc on a heavy bike heats quickly in repeated hard stops."
+            },
+            {
+              "model": "bike_superbike__brake",
+              "name": "Twin floating discs, radial calipers",
+              "what": "Two 320 mm floating discs, each gripped by a radially mounted four-piston caliper.",
+              "good_for": "Maximum stopping power with fine control at high speed. The floating ring can expand without warping its carrier.",
+              "conditions": "Fast roads and track.",
+              "watch": "Seized or rattling floating buttons, pad wear and fluid boiled by hard use. Applied progressively, as the bite is very strong."
+            }
+          ]
         },
         {
           "type": "keys",

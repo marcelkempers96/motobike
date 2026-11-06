@@ -68,7 +68,7 @@ Vibration loosens bolts. A loose axle, handlebar clamp or engine mount can cause
 1. Set the torque wrench to the value for that fastener.
 2. Turn slowly in the tightening direction. If the wrench clicks before the fastener moves, it was tight. If it moves, it was loose: tighten to the value and write it down.
 3. A fastener found loose twice: find why. Look for a missing washer, a stripped thread, a crack, or a worn rubber mount.
-4. Mark checked fasteners with a paint line across the bolt head and the part. A broken line later shows movement.
+4. Mark checked fasteners with a paint line across the bolt head and the part. A broken line later shows movement. A nut scraped by its lock washer shows the washer has been working: replace it, and see [Nuts and bolts keep coming loose](/moto-zero/repair/problems/bolts-keep-loosening).
 5. Where several bolts hold one part, tighten in a criss-cross pattern in two or three stages, larger bolts first, smaller last.
 
 ## Order to work through
@@ -143,3 +143,4 @@ Only values that the K-Light manual gives consistently are listed. The manual's 
 - MAVCC Motorcycle Mechanic, PDF p. 183
 - MAVCC Motorcycle Mechanic, PDF p. 190
 - MAVCC Motorcycle Mechanic, PDF p. 730
+- Dan's Motorcycle Repair Course: https://www.dansmc.com/bolts.htm

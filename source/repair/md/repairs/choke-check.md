@@ -40,6 +40,9 @@ fixes:
 - runs-rich
 - starts-then-dies
 - starts-only-with-choke
+sources:
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb12.htm"}
 ---
 
 # Check the choke or starter valve
@@ -80,6 +83,10 @@ A cold engine needs a richer mixture to start, because cold fuel does not turn t
 
 8. A raised idle when cold is normal. The K-Light 125 ECU raises idle until the engine reaches 68 °C. If the idle stays high when fully warm, or starting cold is hard, the cause is usually the temperature sensor or idle air control. See [Check the engine sensors](/moto-zero/repair/repairs/efi-sensor-check) and [Read engine fault codes](/moto-zero/repair/repairs/efi-code-read).
 
+## More tips
+- Most carburettor chokes are an enrichening plunger that lifts to open a passage to a small jet cast in the float bowl. If that jet or tube is blocked, the choke does nothing. See [Clear the choke circuit](/moto-zero/repair/repairs/choke-circuit-clear).
+- A butterfly choke is a plate in the air inlet. Check that it closes fully and springs open.
+
 ## Check your work
 
 - Cold: the engine starts with the choke ON and idles fast.
@@ -87,6 +94,9 @@ A cold engine needs a richer mixture to start, because cold fuel does not turn t
 
 ## If it did not fix the problem
 
+- Spring-loaded plate choke: a broken spring is not always obvious, so feel the lever. See [Check a plate or guillotine choke and its spring](/moto-zero/repair/repairs/choke-plate-check).
+- Starter plunger (knob, lever or cable type): the throttle must be closed so the vacuum can work it. See [Check a starter plunger and its jet](/moto-zero/repair/repairs/starter-plunger-check).
+- Scooter with no choke lever: see [Check an automatic starter](/moto-zero/repair/repairs/auto-enrichener-check).
 - Starts only with the choke even when warm: the pilot circuit is blocked or there is an air leak. See [Starts only with the choke on](/moto-zero/repair/problems/starts-only-with-choke).
 - Hard cold start with a working choke: see [Hard to start when cold](/moto-zero/repair/problems/hard-cold-start).
 
@@ -131,3 +141,4 @@ A cold engine needs a richer mixture to start, because cold fuel does not turn t
 - Unit 2 The Motorcycle, PDF p. 29
 - K-Light 125 manual, PDF p. 276
 - K-Light 125 manual, PDF p. 266
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carbs.htm

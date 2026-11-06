@@ -1,0 +1,301 @@
+{
+ "repairs": {
+  "engine-oil-service": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_truly_amazing_huh.jpg",
+    "caption": "Filter cover and oil drain bolt marked on an engine side"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_changing_oil.jpg",
+    "caption": "Pouring fresh oil from a bottle into the filler"
+   }
+  ],
+  "oil-level-check": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dip_stick.jpg",
+    "caption": "Oil dipstick with its filler cap"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_sight_window.jpg",
+    "caption": "Dipstick being checked at the filler opening"
+   }
+  ],
+  "drain-plug-seal": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+    "caption": "Oil drain plug at the bottom of the engine"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+    "caption": "Oil drain plug on the side of the engine"
+   }
+  ],
+  "oil-filter-change": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_new_harley_davidsons_want_use_hand.jpg",
+    "caption": "Spin-on filter turned by hand over the drain pan"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_hollow_bolt.jpg",
+    "caption": "Hollow bolt that holds a filter housing cover"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_they_seem_work_both_ways.jpg",
+    "caption": "Filter cover removed from the engine side over the drain pan"
+   }
+  ],
+  "oil-screen-clean": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_chamber_located_hi_rear_engine_right.jpg",
+    "caption": "Fine screen and spring on a filter chamber cover"
+   }
+  ],
+  "oil-centrifugal-clean": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_if_does_get_plugged_can_cut_2.jpg",
+    "caption": "Clutch cover removed to reach a centrifugal filter"
+   }
+  ],
+  "oil-tank-drain": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_frame_oil_tank.jpg",
+    "caption": "Separate oil tank with the drain bolt marked"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_japanese_frame_oiltank.jpg",
+    "caption": "Frame drawing with oil filter and drain plug marked"
+   }
+  ],
+  "oil-level-dry-sump": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_wetsump_oiltank.jpg",
+    "caption": "Oil tank marked on a small bike frame"
+   }
+  ],
+  "oil-level-window-plug": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug.jpg",
+    "caption": "Oil level plug hole low on a side cover"
+   }
+  ],
+  "two-stroke-oil-pump": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_oilpump_setting_yamaha_twin.jpg",
+    "caption": "Pump lever mark and throttle valve mark diagram"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_mikuni_align_two_lines_2.jpg",
+    "caption": "Pump marks A and B seen beside the drive chain"
+   }
+  ],
+  "two-stroke-pump-cable-set": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_setting_yamaha_single_cylinder_oil_pump_2.jpg",
+    "caption": "Pump wire, adjust nut and pulley guide pin gap"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_oilpump_setting_yamaha_twin.jpg",
+    "caption": "Pump lever mark and throttle valve mark diagram"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_oil_pump_setting_3.jpg",
+    "caption": "Plug hole in the carburettor side to see the slide mark"
+   }
+  ]
+ },
+ "parts": {
+  "engine_oil": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/050/050_10w_40_20w_50_automotive_oil.jpg",
+    "caption": "API service symbol on an oil bottle label"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/050/050_we_don_t_want.jpg",
+    "caption": "API service symbol and grade on a label"
+   }
+  ],
+  "drain_plug": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+    "caption": "Oil drain plug at the bottom of the engine"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+    "caption": "Oil drain plug on the side of the engine"
+   }
+  ],
+  "oil_tank": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_frame_oil_tank.jpg",
+    "caption": "Separate oil tank with the drain bolt marked"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_japanese_frame_oiltank.jpg",
+    "caption": "Frame drawing with oil filter and drain plug marked"
+   }
+  ],
+  "oil_dipstick": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dip_stick.jpg",
+    "caption": "Oil dipstick with its filler cap"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_sight_window.jpg",
+    "caption": "Dipstick being checked at the filler opening"
+   }
+  ],
+  "two_stroke_oil_pump": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump_description.jpg",
+    "caption": "Exploded drawing of a Yamaha-type oil pump"
+   }
+  ],
+  "oil_pump_cable": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_oilpump_setting_yamaha_twin.jpg",
+    "caption": "Pump lever mark and throttle valve mark diagram"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_setting_yamaha_single_cylinder_oil_pump_2.jpg",
+    "caption": "Pump wire, adjust nut and pulley guide pin gap"
+   }
+  ]
+ },
+ "order": {
+  "repairs": {
+   "engine-oil-service": [
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_gear_return_spring_bolts.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_truly_amazing_huh.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_cartridge_tools.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_adding_oil.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_changing_oil.jpg"
+   ],
+   "oil-level-check": [
+    "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dip_stick.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_sight_window.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_checking_oil_level.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_dribble_oil_down.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg"
+   ],
+   "drain-plug-seal": [
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg"
+   ],
+   "drain-bolt-tighten": [
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_gear_return_spring_bolts.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg"
+   ],
+   "oil-inspect": [
+    "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg"
+   ],
+   "oil-filter-change": [
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_cartridge_tools.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_cartridge_oil_filter.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_new_harley_davidsons_want_use_hand.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_paper_element.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_hollow_bolt.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_large_thin_flat_washer_filter_spring.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_they_seem_work_both_ways.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_element.jpg"
+   ],
+   "oil-screen-clean": [
+    "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_fine_screen.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_chamber_located_hi_rear_engine_right.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg"
+   ],
+   "oil-centrifugal-clean": [
+    "source/dansmc/03_Lubrication_Oil/051/051_if_does_get_plugged_can_cut_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_clutch_hub_centrifugal_oil_filter.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_if_does_get_plugged_can_cut.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_cup_centrifugal_oil_filter.jpg"
+   ],
+   "oil-tank-drain": [
+    "source/dansmc/03_Lubrication_Oil/051/051_dry_sump_oil_tank.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_small_separate_tank_mounted_somewhere_frame.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_frame_oil_tank.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_japanese_frame_oiltank.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bolt.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_oil_drained_bottom_rear_frametube.jpg"
+   ],
+   "oil-level-dry-sump": [
+    "source/dansmc/03_Lubrication_Oil/051/051_dry_sump_oil_tank.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_wetsump_oiltank.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dipstick_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_dribble_oil_down.jpg"
+   ],
+   "oil-level-window-plug": [
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_checking_oil_level.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_3.jpg"
+   ],
+   "oil-flow-to-head-check": [
+    "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg"
+   ],
+   "two-stroke-oil-pump": [
+    "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_mikuni_autolube_pump.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump_description_exploded_yamaha_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_two_lines.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_mikuni_align_two_lines_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_oilpump_setting_yamaha_twin.jpg"
+   ],
+   "two-stroke-pump-bleed": [
+    "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_mikuni_autolube_pump.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen_2.jpg"
+   ],
+   "two-stroke-pump-cable-set": [
+    "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_two_lines.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_oil_pump_setting_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_setting_yamaha_single_cylinder_oil_pump_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_1_pre_mix_2000_rpm_while.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_oilpump_setting_yamaha_twin.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_mikuni_align_two_lines.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_oil_pump_setting_3.jpg"
+   ],
+   "two-stroke-pump-output-test": [
+    "source/dansmc/03_Lubrication_Oil/053/053_then_worst_will_happen_will_foul.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump_description_exploded_yamaha_2.jpg",
+    "source/dansmc/03_Lubrication_Oil/053/053_setting_yamaha_single_cylinder_oil_pump.jpg",
+    "source/dansmc/03_Lubrication_Oil/055/055_suzuki_gt185_2.jpg"
+   ],
+   "two-stroke-pump-restart": [
+    "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+    "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+    "source/dansmc/03_Lubrication_Oil/055/055_puch_1980_5.jpg"
+   ],
+   "two-stroke-premix": [
+    "source/dansmc/03_Lubrication_Oil/049/049_ratio_rite.jpg",
+    "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg"
+   ],
+   "oil-choose-four-stroke": [
+    "source/dansmc/03_Lubrication_Oil/050/050_labeled.jpg",
+    "source/dansmc/03_Lubrication_Oil/050/050_starburst.jpg",
+    "source/dansmc/03_Lubrication_Oil/050/050_lighter_weights_oil_10w_30_lighter.jpg",
+    "source/dansmc/03_Lubrication_Oil/051/051_adding_oil.jpg"
+   ]
+  }
+ }
+}

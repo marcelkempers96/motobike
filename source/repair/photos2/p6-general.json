@@ -1,0 +1,302 @@
+{
+ "problems": {},
+ "repairs": {
+  "cold-start-drill": [
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_choke_float_plunger.jpg",
+    "caption": "Float plunger carburettor in exploded view"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/026/026_if_engine_does_not_start_one.jpg",
+    "caption": "Internal choke spring inside a choke-type carburettor"
+   }
+  ],
+  "jis-screwdriver-fit": [
+   {
+    "file": "source/dansmc/02_General_Repairs/044/044_although_i_have_tried_get_all.jpg",
+    "caption": "Bit set with many Phillips sizes"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/044/044_napa_bits.jpg",
+    "caption": "Packet of Phillips insert bits with the size marked"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/044/044_look_closely_ends_these_two_phillips.jpg",
+    "caption": "Close view of a Phillips bit tip"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/044/044_good_bit_bad_bit.jpg",
+    "caption": "Bit tested in a screw head for fit"
+   }
+  ],
+  "blast-clean-parts": [
+   {
+    "file": "source/dansmc/02_General_Repairs/045/045_glass_beads.jpg",
+    "caption": "Glass bead media under magnification"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/045/045_sand.jpg",
+    "caption": "Sand media under magnification"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/045/045_notice_surface_looks_like_hit_million.jpg",
+    "caption": "Blasted surface beside the original surface"
+   }
+  ],
+  "fastener-types-identify": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_measure_bolt_stretch.jpg",
+    "caption": "Micrometer for measuring the length of a bolt"
+   }
+  ],
+  "cotter-pin-fit": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_slip_pin.jpg",
+    "caption": "Slip pin through a brake rod end"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_if_happens_just_lever_two_pin.jpg",
+    "caption": "Slip pin on a rear brake rod"
+   }
+  ],
+  "teardown-organise": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_spray_cheap_so_buy_several_cans.jpg",
+    "caption": "Screws laid out in order in a tray"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_then_place_right_screws_right_holes.jpg",
+    "caption": "Cover with screws of different lengths marked by position"
+   }
+  ],
+  "parts-source-choose": [
+   {
+    "file": "source/dansmc/02_General_Repairs/047/047_mobil_1_racing_4t.jpg",
+    "caption": "Motorcycle oil bottle, sold by some auto parts stores"
+   }
+  ],
+  "stuck-fastener-removal": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_screw_gripper.jpg",
+    "caption": "Bit seated in a rounded screw head"
+   }
+  ],
+  "cover-gasket-replace": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_2.jpg",
+    "caption": "Remover sprayed on a crankcase joint face"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_three_screws.jpg",
+    "caption": "Cover screws of different lengths, marked by position"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_tray.jpg",
+    "caption": "Cover screws kept in order in a tray"
+   }
+  ],
+  "heat-cool-fit": [
+   {
+    "file": "source/dansmc/02_General_Repairs/035/035_oxy_acetylene.jpg",
+    "caption": "Gas welding flame: only for a part that is being replaced"
+   }
+  ],
+  "bearing-seal-install-care": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_name_sizing_numbers.jpg",
+    "caption": "Bearing in a case with its name and size facing out"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_seal.jpg",
+    "caption": "Oil seal in a case with its lip side visible"
+   }
+  ],
+  "torque-wrench-use": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_measure_bolt_stretch.jpg",
+    "caption": "Micrometer used to measure a bolt before and after tightening"
+   }
+  ]
+ },
+ "parts": {
+  "seat": [
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_4.jpg",
+    "caption": "Seat raised on its hinge"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/030/030_honda_cb350_4.jpg",
+    "caption": "Seat bolt at the rear under the mudguard"
+   }
+  ],
+  "fasteners": [
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+    "caption": "Bolt with a lock washer and nut"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/039/039_measure_bolt_stretch.jpg",
+    "caption": "Micrometer for measuring the length of a bolt"
+   }
+  ],
+  "cotter_pin": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_do_not_loosen_castle_nut_make.jpg",
+    "caption": "Castle nut with a cotter pin on a rear axle"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_slip_pin.jpg",
+    "caption": "Slip pin through a brake rod end"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_make_sure_sharp_edge_away_line.jpg",
+    "caption": "Cutters used to pull a rusted cotter pin"
+   }
+  ],
+  "gasket_sealant": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_2.jpg",
+    "caption": "Remover sprayed on a crankcase joint face"
+   }
+  ],
+  "piston_pin": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_clip_edge.jpg",
+    "caption": "Circlip with a round edge and a sharp edge"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_clip_edge_2.jpg",
+    "caption": "Thrust load and the chamfered side of a clip"
+   }
+  ],
+  "axle": [
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_also_make_sure_hit_nut_square.jpg",
+    "caption": "Brass rod on an axle end, ready to be tapped"
+   },
+   {
+    "file": "source/dansmc/02_General_Repairs/048/048_i_stuck_big_end_vice_crushed_2.jpg",
+    "caption": "Hammer tapping a nut threaded onto an axle end"
+   }
+  ]
+ },
+ "systems": {},
+ "course": [],
+ "order": {
+  "repairs": {
+   "cold-start-drill": [
+    "source/dansmc/02_General_Repairs/026/026_cable.jpg",
+    "source/dansmc/02_General_Repairs/026/026_motorcycle_carburetors_have_either_enriching_circuit.jpg",
+    "source/dansmc/02_General_Repairs/026/026_carb_enrichening_circuit.jpg",
+    "source/dansmc/02_General_Repairs/026/026_choke_lever.jpg",
+    "source/dansmc/02_General_Repairs/026/026_if_engine_does_not_start_one.jpg",
+    "source/dansmc/02_General_Repairs/026/026_choke_type_carb.jpg",
+    "source/dansmc/02_General_Repairs/026/026_choke_float_plunger.jpg"
+   ],
+   "kick-push-start": [
+    "source/dansmc/02_General_Repairs/026/026_starter_kick_indicator_window.jpg",
+    "source/dansmc/02_General_Repairs/026/026_just_exactly_like_we_did_back.jpg",
+    "source/dansmc/02_General_Repairs/026/026_do_again.jpg",
+    "source/dansmc/02_General_Repairs/026/026_helps_if_can_push_down_hill.jpg"
+   ],
+   "seat-remove": [
+    "source/dansmc/02_General_Repairs/030/030_remove_motorcycle_s_seat.jpg",
+    "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_3.jpg",
+    "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250.jpg",
+    "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_2.jpg",
+    "source/dansmc/02_General_Repairs/030/030_honda_cb350_4.jpg",
+    "source/dansmc/02_General_Repairs/030/030_honda_cb350_4_old_honda_250_4.jpg"
+   ],
+   "parts-solvent-clean": [
+    "source/dansmc/02_General_Repairs/033/033_parts_cleaning_3.jpg",
+    "source/dansmc/02_General_Repairs/033/033_parts_cleaning_2.jpg",
+    "source/dansmc/02_General_Repairs/033/033_stiff_bristle_brush_old_tooth_brush.jpg",
+    "source/dansmc/02_General_Repairs/033/033_parts_cleaning.jpg"
+   ],
+   "heat-cool-fit": [
+    "source/dansmc/02_General_Repairs/035/035_hot_air_gun.jpg",
+    "source/dansmc/02_General_Repairs/035/035_oven.jpg",
+    "source/dansmc/02_General_Repairs/048/048_heat_heat_gun_will_very_helpful.jpg",
+    "source/dansmc/02_General_Repairs/035/035_propane_torch.jpg",
+    "source/dansmc/02_General_Repairs/035/035_oxy_acetylene.jpg"
+   ],
+   "bearing-seal-install-care": [
+    "source/dansmc/02_General_Repairs/048/048_name_sizing_numbers.jpg",
+    "source/dansmc/02_General_Repairs/048/048_small_steel_cage.jpg",
+    "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing.jpg",
+    "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_drive_bearing.jpg",
+    "source/dansmc/02_General_Repairs/048/048_seal.jpg",
+    "source/dansmc/02_General_Repairs/048/048_dudette_case_may_2.jpg"
+   ],
+   "blast-clean-parts": [
+    "source/dansmc/02_General_Repairs/045/045_portable_sand_blaster.jpg",
+    "source/dansmc/02_General_Repairs/045/045_can_really_grind_things_up_so_2.jpg",
+    "source/dansmc/02_General_Repairs/045/045_walnut.jpg",
+    "source/dansmc/02_General_Repairs/045/045_glass_beads.jpg",
+    "source/dansmc/02_General_Repairs/045/045_sand.jpg",
+    "source/dansmc/02_General_Repairs/045/045_can_really_grind_things_up_so.jpg",
+    "source/dansmc/02_General_Repairs/045/045_notice_surface_looks_like_hit_million.jpg"
+   ],
+   "jis-screwdriver-fit": [
+    "source/dansmc/02_General_Repairs/044/044_although_i_have_tried_get_all.jpg",
+    "source/dansmc/02_General_Repairs/044/044_napa_bits.jpg",
+    "source/dansmc/02_General_Repairs/044/044_look_closely_ends_these_two_phillips.jpg",
+    "source/dansmc/02_General_Repairs/044/044_jis_screw_specifications_iso_screw_specifications.jpg",
+    "source/dansmc/02_General_Repairs/044/044_good_fit_bad_fit.jpg",
+    "source/dansmc/02_General_Repairs/044/044_good_fit.jpg",
+    "source/dansmc/02_General_Repairs/044/044_good_bit_bad_bit.jpg",
+    "source/dansmc/02_General_Repairs/044/044_good_fit_bad_fit_phillips_screwdriver.jpg"
+   ],
+   "fastener-types-identify": [
+    "source/dansmc/02_General_Repairs/039/039_metric_bolt_grades.jpg",
+    "source/dansmc/02_General_Repairs/039/039_if_torqueing_bolt_engine_feel_yield.jpg",
+    "source/dansmc/02_General_Repairs/039/039_hurts_seeing_how_these_bolts_don.jpg",
+    "source/dansmc/02_General_Repairs/039/039_left_right_hand_threads.jpg",
+    "source/dansmc/02_General_Repairs/039/039_bolt_locknut_washer.jpg",
+    "source/dansmc/02_General_Repairs/039/039_obviously_lock_washer_fighting_keep_nut.jpg",
+    "source/dansmc/02_General_Repairs/039/039_measure_bolt_stretch.jpg"
+   ],
+   "cotter-pin-fit": [
+    "source/dansmc/02_General_Repairs/048/048_say_bend_cotter_pin_all_around.jpg",
+    "source/dansmc/02_General_Repairs/048/048_cotter_pin.jpg",
+    "source/dansmc/02_General_Repairs/048/048_do_not_loosen_castle_nut_make.jpg",
+    "source/dansmc/02_General_Repairs/048/048_make_sure_sharp_edge_away_line.jpg",
+    "source/dansmc/02_General_Repairs/048/048_if_happens_just_lever_two_pin.jpg",
+    "source/dansmc/02_General_Repairs/048/048_slip_pin.jpg"
+   ],
+   "teardown-organise": [
+    "source/dansmc/02_General_Repairs/048/048_if_screw_sticks_out_too_much.jpg",
+    "source/dansmc/02_General_Repairs/048/048_parts_tray.jpg",
+    "source/dansmc/02_General_Repairs/048/048_spray_cheap_so_buy_several_cans.jpg",
+    "source/dansmc/02_General_Repairs/048/048_felt_tip_marker.jpg",
+    "source/dansmc/02_General_Repairs/048/048_there_several_ways_do_quickly.jpg",
+    "source/dansmc/02_General_Repairs/048/048_then_place_right_screws_right_holes.jpg",
+    "source/dansmc/02_General_Repairs/048/048_plastic_bags.jpg"
+   ],
+   "workshop-chemicals-choose": [
+    "source/dansmc/02_General_Repairs/032/032_chemicals.jpg",
+    "source/dansmc/02_General_Repairs/048/048_gasket_removal.jpg",
+    "source/dansmc/02_General_Repairs/048/048_hand_cleaner.jpg"
+   ],
+   "stuck-fastener-removal": [
+    "source/dansmc/02_General_Repairs/036/036_thing_do_gently_keep.jpg",
+    "source/dansmc/02_General_Repairs/048/048_screw_gripper.jpg",
+    "source/dansmc/01_Basics_Tools_Manuals/017/017_easy_outs.jpg",
+    "source/dansmc/01_Basics_Tools_Manuals/022/022_impact_driver_3.jpg",
+    "source/dansmc/02_General_Repairs/048/048_take_extra_combination_wrench_similar_size.jpg",
+    "source/dansmc/02_General_Repairs/048/048_bat_cheater.jpg"
+   ],
+   "cover-gasket-replace": [
+    "source/dansmc/02_General_Repairs/048/048_gasket_removal.jpg",
+    "source/dansmc/02_General_Repairs/048/048_bad_way_drive_bearing_2.jpg",
+    "source/dansmc/02_General_Repairs/048/048_tray.jpg",
+    "source/dansmc/02_General_Repairs/048/048_three_screws.jpg"
+   ],
+   "parts-source-choose": [
+    "source/dansmc/02_General_Repairs/047/047_finding_motorcycle_parts.jpg",
+    "source/dansmc/02_General_Repairs/047/047_mobil_1_racing_4t.jpg",
+    "source/dansmc/02_General_Repairs/046/046_chinese_motorcycles.jpg"
+   ]
+  }
+ }
+}

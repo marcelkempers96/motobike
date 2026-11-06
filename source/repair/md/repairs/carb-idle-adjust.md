@@ -74,6 +74,13 @@ A carburettor has two idle screws. The **throttle stop screw** (idle speed screw
 7. Reset idle speed with the throttle stop screw.
 8. Blip the throttle two or three times. The engine should return to the same idle within a second or two.
 
+## More tips
+- An air screw controls how much air mixes with the idle fuel. A fuel screw meters the fuel itself. They turn in opposite senses, so check which type you have first.
+- If the idle is high, then drops and dies, check for an air leak at the manifold. See [Test for an intake air leak](/moto-zero/repair/repairs/intake-leak-test).
+- Tight valve clearances also upset the idle.
+- A cap or plug may cover the screw. It may be restricted to remove it where you live.
+- For a different idle jet size, see [Change the idle jet and read the plug](/moto-zero/repair/repairs/idle-jet-change).
+
 ## Check your work
 
 - Steady idle at the manual speed, warm, with no hunting.
@@ -120,3 +127,5 @@ A carburettor has two idle screws. The **throttle stop screw** (idle speed screw
 - MAVCC Motorcycle Mechanic, PDF p. 350
 - K-Light 125 manual, PDF p. 258
 - K-Light 125 manual, PDF p. 276
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carb3.htm
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/carbs.htm

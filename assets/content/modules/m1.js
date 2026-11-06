@@ -490,6 +490,77 @@ export default {
           "html": "Same firing intervals means same pulse rhythm: a 270&deg; parallel twin fires at 270&deg; then 450&deg;, exactly like a 90&deg; V-twin, so it sounds and pulls like one."
         },
         {
+          "type": "variants",
+          "title": "Engine layouts",
+          "intro": "Eight engines from the library. The layout sets the firing rhythm, balance, width and character of the bike. Repair page: <a href=\"../repair/parts/engine/\">engine</a>.",
+          "items": [
+            {
+              "model": "bike_classic_4t__engine",
+              "name": "Air-cooled four-stroke single",
+              "what": "One upright finned cylinder, firing once every two turns of the crank.",
+              "good_for": "Light, narrow and simple, with good pull at low revs and easy repairs.",
+              "conditions": "Commuting and touring at moderate speed.",
+              "watch": "Vibration at high revs, oil level and valve clearances."
+            },
+            {
+              "model": "bike_mx_2t__engine",
+              "name": "Two-stroke single",
+              "what": "Fires every turn of the crank. Ports in the cylinder wall replace valves, and an expansion chamber tunes the exhaust.",
+              "good_for": "High power for its size and weight, with few moving parts.",
+              "conditions": "Off-road competition.",
+              "watch": "The right oil mix, piston and ring wear, and plug fouling. The top end needs work much more often than on a four-stroke."
+            },
+            {
+              "model": "bike_cafe_racer__engine",
+              "name": "Vertical parallel twin",
+              "what": "A 650 cc air-cooled OHV twin with the cylinders side by side, a separate gearbox and magneto ignition.",
+              "good_for": "More power and smoother running than a big single in a compact width.",
+              "conditions": "Road riding.",
+              "watch": "Vibration at high revs (twins of this period usually have a 360 degree crank), oil leaks from old joints, and twin carburettors that must be balanced."
+            },
+            {
+              "model": "bike_vintage_vtwin__engine",
+              "name": "F-head V-twin, 1915 to 1925",
+              "what": "About 1,000 cc, 45 degree V-twin with the inlet valves above the exhaust valves (inlet over exhaust).",
+              "good_for": "Strong pull at low revs from an engine that is narrow across the frame.",
+              "conditions": "Steady speeds on period roads.",
+              "watch": "Exposed valve springs and rockers need regular oil and adjustment."
+            },
+            {
+              "model": "bike_cruiser__engine",
+              "name": "Modern big V-twin",
+              "what": "About 1,750 cc, air-cooled 45 degree pushrod V-twin with an oil cooler.",
+              "good_for": "Very high torque at low revs and a strong, uneven pulse.",
+              "conditions": "Cruising and touring.",
+              "watch": "Heat from the rear cylinder in slow traffic, oil level and leaks."
+            },
+            {
+              "model": "bike_superbike__engine",
+              "name": "Inline four",
+              "what": "A 1000 cc liquid-cooled DOHC four with the cylinders inclined 30 degrees forward.",
+              "good_for": "Smooth, high-revving and very powerful.",
+              "conditions": "Fast roads and track.",
+              "watch": "Coolant level and hoses. Valve clearance checks are long jobs with many parts to remove."
+            },
+            {
+              "model": "bike_pioneer__engine",
+              "name": "Atmospheric-valve single, about 1901",
+              "what": "About 250 cc. Suction from the falling piston opens the inlet valve against a light spring; only the exhaust valve is worked by a pushrod.",
+              "good_for": "Simplicity. The layout that put the first motor-bicycles on the road.",
+              "conditions": "Gentle runs at low speed.",
+              "watch": "A weak or sticking inlet valve spring stops it running. Ignition is by trembler coil and battery, so the battery must be charged."
+            },
+            {
+              "model": "bike_electric__motor",
+              "name": "Electric motor",
+              "what": "A permanent-magnet motor fed from the battery by a controller. No combustion and very few moving parts.",
+              "good_for": "Full torque from standstill, quiet running, and no oil changes or exhaust.",
+              "conditions": "Town and trail riding within the battery range.",
+              "watch": "Heat on long climbs, cable and connector condition, and water at the seals. High voltage: work on it only with the system made safe."
+            }
+          ]
+        },
+        {
           "type": "check",
           "q": "m1-10"
         },
@@ -952,6 +1023,77 @@ export default {
               "Instruments",
               "Speed, odometer, fuel, neutral, indicator and main-beam lamps; MIL on EFI bikes"
             ]
+          ]
+        },
+        {
+          "type": "variants",
+          "title": "Handlebar types",
+          "intro": "The bar sets where the hands sit, so it decides the riding position, the leverage on the steering and the comfort over a long day. Repair page: <a href=\"../repair/parts/handlebar/\">handlebar</a>.",
+          "items": [
+            {
+              "model": "bike_cafe_racer__handlebar",
+              "name": "Clip-ons, cafe racer",
+              "what": "Two short bars clamped to the fork legs, low and forward of the rider.",
+              "good_for": "Weight on the front tyre and a tucked position at speed.",
+              "conditions": "Fast roads and short to medium rides.",
+              "watch": "Strain on wrists and neck in town, and little lock or leverage at walking pace. Cables must not pull tight at full lock."
+            },
+            {
+              "model": "bike_superbike__handlebar",
+              "name": "Clip-ons, superbike",
+              "what": "Clip-ons on a modern sport bike, carrying levers, switch cubes and throttle.",
+              "good_for": "Track and fast road: the rider can move weight forward and down.",
+              "conditions": "Smooth, fast roads and track.",
+              "watch": "Clip-ons and levers bend or break in a fall. Check them after any drop."
+            },
+            {
+              "model": "bike_mx_2t__handlebar",
+              "name": "Wide motocross bar",
+              "what": "A wide, tall bar, usually aluminium, often with a crossbar or a pad.",
+              "good_for": "Leverage to steer through ruts and control while standing on the pegs.",
+              "conditions": "Off-road, riding standing up.",
+              "watch": "Bends in falls. A bent bar or a slipped clamp changes the lever angles and steering feel."
+            },
+            {
+              "model": "bike_classic_4t__handlebar",
+              "name": "Roadster bar",
+              "what": "A one-piece tube bar with a gentle rise and pull-back.",
+              "good_for": "An upright, relaxed position with easy control in traffic.",
+              "conditions": "General road riding.",
+              "watch": "Worn grips, loose clamps and cables that bind at full lock."
+            },
+            {
+              "model": "bike_cruiser__handlebar",
+              "name": "Pull-back cruiser bar",
+              "what": "Mini ape-hanger bars that rise high and sweep back towards the rider.",
+              "good_for": "A relaxed, upright position with the feet forward.",
+              "conditions": "Steady cruising.",
+              "watch": "Raised arms tire on long rides and catch the wind. Longer cables and wiring must be routed so they do not stretch at full lock; local rules may limit bar height."
+            },
+            {
+              "model": "bike_step_through__handlebar",
+              "name": "Step-through bar",
+              "what": "A short, narrow bar inside a plastic cowl.",
+              "good_for": "Easy upright control at low speed, and a narrow width for traffic.",
+              "conditions": "Town and village roads.",
+              "watch": "Little leverage with heavy loads. Notchy steering points to worn steering head bearings."
+            },
+            {
+              "model": "bike_scooter__handlebar",
+              "name": "Scooter bar",
+              "what": "A bar enclosed in a cowl with a brake lever on each side and no clutch.",
+              "good_for": "Twist-and-go riding with both hands on the brakes.",
+              "conditions": "City traffic.",
+              "watch": "On most scooters the left lever is the rear brake, not a clutch, which can surprise a motorcycle rider."
+            },
+            {
+              "model": "bike_pioneer__handlebar",
+              "name": "Bicycle bar, about 1901",
+              "what": "A swept bicycle-style bar with small levers for the engine controls.",
+              "good_for": "Light steering on a machine that is also pedalled.",
+              "conditions": "Slow roads.",
+              "watch": "The controls work nothing like modern ones; machines this old had no standard layout."
+            }
           ]
         },
         {

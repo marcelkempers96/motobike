@@ -21,6 +21,8 @@ fixes:
 - hard-cold-start
 - high-idle
 - runs-rich
+sources:
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
 ---
 
 # Adjust the choke cable
