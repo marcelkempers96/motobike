@@ -328,7 +328,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
-  <link rel="stylesheet" href="{rel}assets/repair2.css?v=4">
+  <link rel="stylesheet" href="{rel}assets/repair2.css?v=5">
   {''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)}
 </head>
 <body>
@@ -600,6 +600,13 @@ def bike_stats(b):
     if k == 'weight_kg' and sp.get('weight_type') and sp['weight_type'].get('value'): sub = str(sp['weight_type']['value'])
     out.append(f'<div class="bk-stat"><span>{label}</span><b>{e(fmt(sp[k]["value"]))}<small> {unit}</small></b>{f"<i>{e(sub)}</i>" if sub else ""}</div>')
   return ''.join(out)
+def bike_li(b, rel):
+  cc = b['specs'].get('displacement_cc'); kwh = b['specs'].get('battery_kwh')
+  meta = f'{fmt(cc["value"])} cc' if cc else (f'{fmt(kwh["value"])} kWh' if kwh else '')
+  return (f'<li data-cat="{b["category"]}" data-q="{e((b["title"] + " " + " ".join(b["aliases"])).lower())}"><a href="{rel}repair/bikes/{b["make_slug"]}/{b["id"]}/">{e(b["title"])}</a>'
+          f'{f" <span>{meta}</span>" if meta else ""}</li>')
+def bike_list(bs, rel):
+  return '<ul class="bk-list">' + ''.join(bike_li(b, rel) for b in sorted(bs, key=lambda x: x['title'].lower())) + '</ul>'
 def bike_card(b, rel):
   src, real = bike_img(b, rel)
   cc = b['specs'].get('displacement_cc'); kwh = b['specs'].get('battery_kwh')
@@ -638,7 +645,7 @@ for b in BIKES:
   srcs += [{'doc': 'VehiclesDB motorcycle catalogue (identity)', 'url': x['url']} for x in b['sources'] if 'vehiclesdb' in x['url']][:1]
   cap = 'Photo: ' + e(b['photo'].get('credit', '')) if real and b['photo'].get('credit') else f'Illustration of a typical {e(b["cat_label"].lower())} motorcycle, not this exact model.'
   intro = e(b['summary']) if b['summary'] else f'The {e(b["title"])} is a {e(b["cat_label"].lower())} {"scooter" if b["category"] == "scooter" else "motorcycle"}. This page collects the checks, repairs and parts that matter most for this type of bike, with links to step-by-step guides.'
-  html_ = f"""    <header class="r-head bk-head">
+  html_ = f"""    <header class="r-head{' bk-head' if real else ''}">
       <div>
         <span class="ute-label">{e(b["make"])} · {e(b["cat_label"])}</span>
         <h1>{e(b["title"])}: repairs, problems and specs</h1>
@@ -646,7 +653,7 @@ for b in BIKES:
         {f'<p class="r-meta"><span>Also called: {e(", ".join(b["aliases"]))}</span></p>' if b["aliases"] else ''}
         <p class="r-btns"><a class="r-btn" href="#top-repairs">Top repairs</a>{f'<a class="r-btn is-shop" href="{rel}{spare}">Spare parts for this bike →</a>' if spare else f'<a class="r-btn is-shop" href="{rel}parts/">Spare parts →</a>'}</p>
       </div>
-      <figure class="r-fig bk-fig"><img src="{src}" alt="{e(b["title"]) if real else ""}"><figcaption>{cap}</figcaption></figure>
+      {f'<figure class="r-fig bk-fig"><img src="{src}" alt="{e(b["title"])}"><figcaption>{cap}</figcaption></figure>' if real else ''}
     </header>
     {f'<section class="bk-stats" aria-label="Key numbers">{stats}</section>' if stats else ''}
     {f'<p class="r-note bk-scope">Figures for the {e(b["spec_scope"])}. Other years and markets can differ; check your bike\'s manual.</p>' if stats and b["spec_scope"] else (f'<p class="r-note bk-scope">Figures for one version; other years and markets can differ. Check your bike\'s manual.</p>' if stats else '')}
@@ -668,8 +675,8 @@ for b in BIKES:
         {f'<section><h2>Where it is found</h2><p class="r-note">Registered in: {e(countries)}. From public registers; not a complete list of markets.</p></section>' if countries else ''}
       </aside>
     </div>
-    {f'<section class="r-sec"><h2>More {e(b["make"])} bikes</h2><div class="bk-grid is-small">{"".join(bike_card(x, rel) for x in same_make)}</div><p><a href="{rel}repair/bikes/{b["make_slug"]}/">All {e(b["make"])} bikes →</a></p></section>' if same_make else ''}
-    {f'<section class="r-sec"><h2>Other {e(b["cat_plural"].lower())}</h2><div class="bk-grid is-small">{"".join(bike_card(x, rel) for x in same_cat)}</div></section>' if same_cat else ''}
+    {f'<section class="r-sec"><h2>More {e(b["make"])} bikes</h2>{bike_list(same_make, rel)}<p><a href="{rel}repair/bikes/{b["make_slug"]}/">All {e(b["make"])} bikes →</a></p></section>' if same_make else ''}
+    {f'<section class="r-sec"><h2>Other {e(b["cat_plural"].lower())}</h2>{bike_list(same_cat, rel)}</section>' if same_cat else ''}
     <section class="r-sec">{sources_html(srcs)}<p class="r-note">Repair and part links are general guides for this type of bike; exact fitment is not verified. Text CC BY-SA 4.0, Transitions Lab.</p></section>"""
   desc = f'{b["title"]} repairs, common problems and key specs: {", ".join(REP[x]["title"].lower() for x in b["repairs"][:3])} and more, with step-by-step guides and parts.'
   ld = {"@context": "https://schema.org", "@type": "Thing", "name": b['title'], "description": b['summary'] or desc}
@@ -682,7 +689,7 @@ for mk, bs in MAKES.items():
   path = f'repair/bikes/{bs[0]["make_slug"]}/'
   html_ = f"""    <header class="r-head"><span class="ute-label">Repair · By bike</span><h1>{e(mk)} motorcycle repairs and problems</h1>
       <p class="r-lead">{len(bs)} {e(mk)} models with their key numbers, top repairs and the problems to check. Pick your bike.</p></header>
-    <section class="r-sec"><div class="bk-grid">{''.join(bike_card(b, rel) for b in bs)}</div></section>"""
+    {''.join(f'<section class="r-sec"><h2>{e(_bd.CATEGORY[c][1])}</h2>{bike_list([b for b in bs if b["category"] == c], rel)}</section>' for c in cats_used if any(b["category"] == c for b in bs))}"""
   page(path, f'{mk} motorcycle repairs, problems and specs | Moto Zero', f'Repairs, common problems and key specs for {len(bs)} {mk} motorcycles and scooters, with step-by-step guides and parts.', html_,
        [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (mk, path)], rel)
   bike_urls.append(path)
@@ -693,13 +700,13 @@ html_ = f"""    <header class="r-head"><span class="ute-label">Repair · By bike
       <div class="r-search bk-search"><input type="search" id="bk-q" placeholder="Search a bike, for example: Boxer, Activa, Duke" aria-label="Search bikes" autocomplete="off"></div>
       <div class="bk-filter" role="group" aria-label="Type of bike"><button type="button" class="is-on" data-c="">All</button>{''.join(f'<button type="button" data-c="{c}">{e(_bd.CATEGORY[c][0])}</button>' for c in cats_used)}</div>
     </header>
-    <nav class="r-jump">{''.join(f'<a href="#mk-{bs[0]["make_slug"]}">{e(mk)}</a>' for mk, bs in sorted(MAKES.items()))}</nav>
-    {''.join(f'<section class="r-sec bk-mk" id="mk-{bs[0]["make_slug"]}"><h2><a href="{rel}repair/bikes/{bs[0]["make_slug"]}/">{e(mk)}</a> <small>{len(bs)}</small></h2><div class="bk-grid">{"".join(bike_card(b, rel) for b in bs)}</div></section>' for mk, bs in sorted(MAKES.items()))}
+    <nav class="r-jump" aria-label="Makes">{''.join(f'<a href="{rel}repair/bikes/{bs[0]["make_slug"]}/">{e(mk)}</a>' for mk, bs in sorted(MAKES.items()))}</nav>
+    {''.join(f'<section class="r-sec bk-mk" id="cat-{c}"><h2>{e(_bd.CATEGORY[c][1])} <small>{sum(1 for b in BIKES if b["category"] == c)}</small></h2>{bike_list([b for b in BIKES if b["category"] == c], rel)}</section>' for c in cats_used)}
     <p class="r-note bk-none" hidden>No bike matches. Try the make or a shorter name.</p>
     <script>
     (() => {{ const q = document.getElementById('bk-q'); let cat = '';
       const run = () => {{ const v = q.value.trim().toLowerCase(); let any = false;
-        document.querySelectorAll('.bk-mk').forEach((s) => {{ let n = 0; s.querySelectorAll('.bk-card').forEach((c) => {{ const ok = (!cat || c.dataset.cat === cat) && (!v || c.dataset.q.includes(v)); c.hidden = !ok; if (ok) n++; }}); s.hidden = !n; if (n) any = true; }});
+        document.querySelectorAll('.bk-mk').forEach((s) => {{ let n = 0; s.querySelectorAll('.bk-list li').forEach((c) => {{ const ok = (!cat || c.dataset.cat === cat) && (!v || c.dataset.q.includes(v)); c.hidden = !ok; if (ok) n++; }}); s.hidden = !n; if (n) any = true; }});
         const none = document.querySelector('.bk-none'); if (none) none.hidden = any; }};
       q.addEventListener('input', run);
       document.querySelectorAll('.bk-filter button').forEach((b) => b.addEventListener('click', () => {{ cat = b.dataset.c; document.querySelectorAll('.bk-filter button').forEach((x) => x.classList.toggle('is-on', x === b)); run(); }}));

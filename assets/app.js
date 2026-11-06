@@ -55,7 +55,11 @@ const S = {
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-const MODE_PART_NAME = { sb: { carb: 'Fuel injection and throttle bodies', spark_plug: 'Spark plugs and coils' }, cr: { carb: 'Twin carburettors', spark_plug: 'Spark plugs and magneto' } };
+const lcFirst = (t) => t.charAt(0).toLowerCase() + t.slice(1);
+const MODE_PART_NAME = {
+  pi: { headlight: 'Carbide lamp', carb: 'Surface carburettor', spark_plug: 'Trembler coil ignition', chain: 'Belt and pedal chain drive', rear_sprocket: 'Belt rim and rear sprocket', footpegs: 'Pedals and cranks', side_stand: 'Rear stand', seat: 'Saddle', handlebar: 'Handlebar and control levers', brake: 'Front brake' },
+  vt: { headlight: 'Acetylene headlight', spark_plug: 'Magneto ignition', footpegs: 'Footboards', side_stand: 'Rear stand', clutch: 'Foot clutch and primary chain', gearbox: 'Hand-change gearbox' },
+  sb: { carb: 'Fuel injection and throttle bodies', spark_plug: 'Spark plugs and coils' }, cr: { carb: 'Twin carburettors', spark_plug: 'Spark plugs and magneto' } };
 const partName = (k) => (MODE_PART_NAME[S.mode] && MODE_PART_NAME[S.mode][k]) || (PARTS[k] && PARTS[k].name) || 'Component';
 
 /* ---------- Icons ---------- */
@@ -174,7 +178,7 @@ ${PAGE === 'cockpit' ? `
 
 ` : ''}
 ${PAGE === 'overview' ? `<section class="mz-ov-about"><h2>Interactive motorcycle parts diagram</h2>
-      <p>Explore a motorcycle parts diagram in 3D: eight bikes, from a classic four-stroke, a two-stroke motocross bike and a scooter to a step-through, a boda boda, a café racer, a superbike and an electric scrambler. Choose a system to see where its parts sit, then tap a part to see what it does and how it fails.</p>
+      <p>Explore a motorcycle parts diagram in 3D: ten bikes, from a 1901 pioneer motor-bicycle and a 1920 V-twin to a classic four-stroke, a two-stroke motocross bike, a scooter, a step-through, a boda boda, a café racer, a superbike and an electric scrambler. Choose a system to see where its parts sit, then tap a part to see what it does and how it fails.</p>
       <p class="mz-ov-links"><a href="repair/parts/">All motorcycle parts, names and functions</a> · <a href="repair/problems/">Find a problem by symptom</a> · <a href="repair/repairs/">Repair tutorials</a> · <a href="repair/bikes/">Repairs by bike model</a> · <a href="learn/">Free course</a></p></section>` : ''}
     <footer data-mz-footer></footer>
 
@@ -641,7 +645,7 @@ async function mountAssetsPanel(key) {
       await viewer.load(BIKE_MODEL[S.mode], { view: 'threeq' });
       if (CV3 !== viewer) return;
       viewer.isolate(match, 'threeq');   // only the selected part, cut out of this bike's model
-      cap.textContent = `${partName(key)} from the ${MODE_INFO[S.mode].name.toLowerCase()}. Drag to rotate.`;
+      cap.textContent = `${partName(key)} from the ${lcFirst(MODE_INFO[S.mode].name)}. Drag to rotate.`;
       listSubs(match, 2);
       return;
     }
@@ -661,7 +665,7 @@ async function mountAssetsPanel(key) {
     if (CV3 !== viewer) return;
     viewer.setHighlight(match);
     viewer.focus(match);
-    cap.textContent = `Shown in place on the ${MODE_INFO[S.mode].name.toLowerCase()}.`;
+    cap.textContent = `Shown in place on the ${lcFirst(MODE_INFO[S.mode].name)}.`;
     listSubs(match, 2);
   }
 }
@@ -2176,7 +2180,7 @@ function pageShortcut(key, repeat) {
   if (key === '?' || key === '/') { openHelp(); return true; }
   if (key === ' ') { toggleRun(); return true; }
   if (repeat) return true;
-  if (['1', '2', '3', '4', '5', '6', '7', '8'].includes(key)) { const L = (document.getElementById('ute-root')?.dataset.page === 'cockpit') ? ['4t', '2t', 'elec'] : MODES; if (L[+key - 1]) switchMode(L[+key - 1]); return true; }
+  if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].includes(key)) { const L = (document.getElementById('ute-root')?.dataset.page === 'cockpit') ? ['4t', '2t', 'elec'] : MODES; const ix = key === '0' ? 9 : +key - 1; if (L[ix]) switchMode(L[ix]); return true; }
   if (key === 'g' || key === 'G') { toggleDyno(); return true; }
   return false;
 }

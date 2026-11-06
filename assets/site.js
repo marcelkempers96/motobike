@@ -46,7 +46,7 @@ export const NAV = [
   { key: 'library', title: 'Library', blurb: 'Articles, models, illustrations and downloads', items: [
     ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
     ['types/', 'Motorcycle types', 'Sixteen types, 1885 to today'],
-    ['models/', '3D models', 'All 289 models: 8 bikes and every part'],
+    ['models/', '3D models', 'All 337 models: 8 bikes and every part'],
     ['downloads/#plates', 'Technical illustrations', '50+ labelled plates to download'],
     ['downloads/', 'Downloads', 'PDF modules, plates, data and offline tools'],
   ] },

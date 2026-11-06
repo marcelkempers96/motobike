@@ -190,3 +190,10 @@
 .r-head.bk-head { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: center; }
 .bk-fig img { aspect-ratio: 16 / 10; object-fit: contain; }
 @media (max-width: 960px) { .r-head.bk-head { grid-template-columns: 1fr; gap: 16px; } .r-head.bk-head .bk-fig { order: -1; } }
+
+.bk-list { columns: 3 240px; column-gap: 28px; list-style: none; padding: 0; margin: 6px 0 0; }
+.bk-list li { break-inside: avoid; padding: 6px 0; border-bottom: 1px solid var(--line-soft); font-size: 15.5px; }
+.bk-list li[hidden] { display: none; }
+.bk-list a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.bk-list a:hover { color: var(--warm); text-decoration: underline; }
+.bk-list span { color: var(--mute); font-size: 13.5px; margin-left: 4px; }
