@@ -1,0 +1,1170 @@
+{
+ "repairs": [
+  {
+   "id": "oil-filter-change",
+   "title": "Change a spin-on or paper oil filter",
+   "level": "home",
+   "time": "30 to 45 min with the oil change",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "drain pan",
+    "filter wrench or strap wrench",
+    "torque wrench",
+    "clean rags",
+    "funnel"
+   ],
+   "parts": [
+    "oil_filter",
+    "engine_oil",
+    "drain_plug"
+   ],
+   "consumables": [
+    "new filter or element",
+    "new O-ring or gasket",
+    "fresh engine oil"
+   ],
+   "fixes": [
+    "oil-filter-leak",
+    "oil-starved-after-change",
+    "oil-darkens-quickly"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_cartridge_oil_filter.jpg",
+     "caption": "Spin-on cartridge oil filter"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_cartridge_tools.jpg",
+     "caption": "Spin-on filter with a T-handle filter wrench"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_paper_element.jpg",
+     "caption": "Paper oil filter element"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_large_thin_flat_washer_filter_spring.jpg",
+     "caption": "Filter housing parts: bolt, O-ring, spring and spring seat"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_element.jpg",
+     "caption": "Paper element for a one-bolt filter chamber"
+    }
+   ]
+  },
+  {
+   "id": "oil-screen-clean",
+   "title": "Clean the oil screen in the drain plug or filter chamber",
+   "level": "home",
+   "time": "20 to 30 min with the oil change",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "drain pan",
+    "spanner or socket",
+    "torque wrench",
+    "clean solvent",
+    "rags"
+   ],
+   "parts": [
+    "oil_filter",
+    "drain_plug"
+   ],
+   "consumables": [
+    "new drain plug washer or O-ring",
+    "fresh engine oil"
+   ],
+   "fixes": [
+    "oil-warning-light",
+    "oil-darkens-quickly",
+    "oil-starved-after-change"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+     "caption": "Coarse oil screen and spring on a plug"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_fine_screen.jpg",
+     "caption": "Fine filter element taken from its chamber"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+     "caption": "Drain plug with a magnet to catch steel particles"
+    }
+   ]
+  },
+  {
+   "id": "oil-centrifugal-clean",
+   "title": "Clean a centrifugal oil filter",
+   "level": "home",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "drain pan",
+    "spanners and sockets",
+    "clean solvent",
+    "scraper that will not scratch",
+    "torque wrench"
+   ],
+   "parts": [
+    "oil_filter",
+    "gaskets"
+   ],
+   "consumables": [
+    "new cover gasket",
+    "fresh engine oil"
+   ],
+   "fixes": [
+    "oil-darkens-quickly",
+    "oil-warning-light"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_clutch_hub_centrifugal_oil_filter.jpg",
+     "caption": "Centrifugal oil filter in the middle of a clutch hub"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_cup_centrifugal_oil_filter.jpg",
+     "caption": "Centrifugal filter cup behind a side cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_if_does_get_plugged_can_cut.jpg",
+     "caption": "Clutch hub filter cover with sludge around it"
+    }
+   ]
+  },
+  {
+   "id": "oil-tank-drain",
+   "title": "Drain and refill a dry-sump or frame oil tank",
+   "level": "home",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "drain pan big enough for all the oil",
+    "spanner or socket",
+    "torque wrench",
+    "funnel"
+   ],
+   "parts": [
+    "oil_tank",
+    "drain_plug",
+    "engine_oil",
+    "oil_filter"
+   ],
+   "consumables": [
+    "new drain plug washer",
+    "fresh engine oil"
+   ],
+   "fixes": [
+    "oil-level-falling",
+    "oil-warning-light"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_dry_sump_oil_tank.jpg",
+     "caption": "Separate oil tank of a dry-sump engine"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bolt.jpg",
+     "caption": "Oil drain bolt low on a frame downtube"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drained_bottom_rear_frametube.jpg",
+     "caption": "Oil tank formed by the frame, drained at the rear tube"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_small_separate_tank_mounted_somewhere_frame.jpg",
+     "caption": "Small separate oil tank mounted on the frame"
+    }
+   ]
+  },
+  {
+   "id": "oil-level-dry-sump",
+   "title": "Check the oil level on a dry-sump engine",
+   "level": "rider",
+   "time": "10 to 15 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "rag",
+    "funnel"
+   ],
+   "parts": [
+    "oil_tank",
+    "oil_dipstick",
+    "engine_oil"
+   ],
+   "consumables": [
+    "engine oil"
+   ],
+   "fixes": [
+    "oil-level-falling",
+    "oil-overfilled"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dipstick_2.jpg",
+     "caption": "Dipstick fitted in an oil filler"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+     "caption": "Dipstick with high and low marks"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_dribble_oil_down.jpg",
+     "caption": "Pouring oil down the dipstick tube"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_dry_sump_oil_tank.jpg",
+     "caption": "Separate oil tank of a dry-sump engine"
+    }
+   ]
+  },
+  {
+   "id": "oil-level-window-plug",
+   "title": "Check oil with a sight window or level plug",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "spanner or socket for the plug",
+    "rag",
+    "funnel"
+   ],
+   "parts": [
+    "oil_dipstick",
+    "engine_oil"
+   ],
+   "consumables": [
+    "engine oil"
+   ],
+   "fixes": [
+    "oil-sight-window-empty",
+    "oil-overfilled",
+    "oil-level-falling"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+     "caption": "Oil level sight window in a crankcase cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+     "caption": "Oil level plug in the side of a crankcase"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_3.jpg",
+     "caption": "Oil level plug low on an engine cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_checking_oil_level.jpg",
+     "caption": "Reading the oil level with a dipstick"
+    }
+   ]
+  },
+  {
+   "id": "oil-flow-to-head-check",
+   "title": "Check that oil is reaching the top of the engine",
+   "level": "workshop",
+   "time": "15 to 20 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [
+    "spanner for the bleed bolt",
+    "eye protection",
+    "rags"
+   ],
+   "parts": [
+    "oil_pump",
+    "engine_oil",
+    "oil_filter"
+   ],
+   "consumables": [
+    "engine oil"
+   ],
+   "fixes": [
+    "oil-warning-light",
+    "oil-starved-after-change",
+    "tappet-tick"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg",
+     "caption": "Oil bleed bolt on the side of a cylinder head"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_bleed_bolt.jpg",
+     "caption": "Engine with its oil check bolt location marked"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+     "caption": "Coarse oil screen that can block and cut oil to the head"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-pump-bleed",
+   "title": "Bleed air from a two-stroke oil pump",
+   "level": "home",
+   "time": "15 to 20 min",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "screwdriver or spanner for the bleed screw",
+    "rags",
+    "clean oil can or funnel"
+   ],
+   "parts": [
+    "two_stroke_oil_pump",
+    "two_stroke_oil"
+   ],
+   "consumables": [
+    "two-stroke oil",
+    "new bleed screw washer if worn"
+   ],
+   "fixes": [
+    "two-stroke-oil-not-used",
+    "oily-exhaust"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen.jpg",
+     "caption": "Oil pump with a bleed screw on its side"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen_2.jpg",
+     "caption": "Oil pump with inlet hose and bleed screw"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+     "caption": "Yamaha-type oil injection pump"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_mikuni_autolube_pump.jpg",
+     "caption": "Mikuni-type oil injection pump"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-pump-cable-set",
+   "title": "Set the oil pump cable so it follows the throttle",
+   "level": "home",
+   "time": "20 to 30 min",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "spanner for the cable adjuster and lock nut",
+    "screwdriver",
+    "rags"
+   ],
+   "parts": [
+    "two_stroke_oil_pump",
+    "oil_pump_cable"
+   ],
+   "consumables": [],
+   "fixes": [
+    "two-stroke-oil-not-used",
+    "oily-exhaust",
+    "plug-oily"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+     "caption": "Pin and dot marks on a Yamaha-type pump pulley"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_two_lines.jpg",
+     "caption": "Two lines to align on a Mikuni-type pump"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_oil_pump_setting_2.jpg",
+     "caption": "Pump marks A and B beside the engine sprocket"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_mikuni_align_two_lines.jpg",
+     "caption": "Carburettor slide mark used to set an older pump"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_1_pre_mix_2000_rpm_while.jpg",
+     "caption": "Pump adjustment diagram with wire adjuster and V mark"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-pump-restart",
+   "title": "Start an old oil-injection engine safely after a long stand",
+   "level": "home",
+   "time": "1 h",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "spanner",
+    "rags",
+    "fuel can",
+    "measuring cup"
+   ],
+   "parts": [
+    "two_stroke_oil_pump",
+    "two_stroke_oil",
+    "oil_seals"
+   ],
+   "consumables": [
+    "fresh two-stroke oil",
+    "fresh petrol"
+   ],
+   "fixes": [
+    "two-stroke-oil-not-used",
+    "blue-smoke",
+    "oily-exhaust"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+     "caption": "Yamaha-type oil injection pump"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+     "caption": "Oil tank, pump and throttle cable on a two-stroke"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/055/055_puch_1980_5.jpg",
+     "caption": "Manual note on bleeding the oil line before use"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-pump-output-test",
+   "title": "Test the output of a two-stroke oil pump",
+   "level": "workshop",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "tachometer",
+    "measuring cup",
+    "stopwatch",
+    "manual with the output figures"
+   ],
+   "parts": [
+    "two_stroke_oil_pump",
+    "oil_pump_cable"
+   ],
+   "consumables": [
+    "pre-mix fuel"
+   ],
+   "fixes": [
+    "two-stroke-oil-not-used"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump_description_exploded_yamaha_2.jpg",
+     "caption": "Table of pump output figures for several models"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_then_worst_will_happen_will_foul.jpg",
+     "caption": "Cutaway of an oil injection pump with labelled parts"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_setting_yamaha_single_cylinder_oil_pump.jpg",
+     "caption": "Pump stroke setting diagram"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/055/055_suzuki_gt185_2.jpg",
+     "caption": "Service manual page with a pump output graph"
+    }
+   ]
+  },
+  {
+   "id": "two-stroke-premix",
+   "title": "Mix two-stroke pre-mix oil and petrol",
+   "level": "rider",
+   "time": "5 min",
+   "applies_to": [
+    "two-stroke"
+   ],
+   "tools": [
+    "measuring cup with ratio marks",
+    "clean fuel can",
+    "funnel"
+   ],
+   "parts": [
+    "two_stroke_oil"
+   ],
+   "consumables": [
+    "two-stroke oil",
+    "fresh petrol"
+   ],
+   "fixes": [
+    "plug-oily",
+    "blue-smoke",
+    "oily-exhaust"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2stroke_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/049/049_ratio_rite.jpg",
+     "caption": "Ratio cup used to measure two-stroke oil"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+     "caption": "Oil tank and pump layout, the alternative to pre-mix"
+    }
+   ]
+  },
+  {
+   "id": "oil-choose-four-stroke",
+   "title": "Choose engine oil for a four-stroke",
+   "level": "rider",
+   "time": "10 min",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "tools": [],
+   "parts": [
+    "engine_oil"
+   ],
+   "consumables": [
+    "engine oil"
+   ],
+   "fixes": [
+    "clutch-slip-after-oil-change",
+    "oil-darkens-quickly"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/4stroke_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/050/050_labeled.jpg",
+     "caption": "API service mark with SAE 10W-40 and no Energy Conserving text"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/050/050_lighter_weights_oil_10w_30_lighter.jpg",
+     "caption": "API SJ 10W-30 mark with Energy Conserving text"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/050/050_starburst.jpg",
+     "caption": "API starburst symbol for gasoline engines"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_adding_oil.jpg",
+     "caption": "Pouring oil into a single-cylinder engine"
+    }
+   ]
+  },
+  {
+   "id": "drain-bolt-tighten",
+   "title": "Tighten drain and filter bolts without stripping them",
+   "level": "home",
+   "time": "10 min",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "tools": [
+    "torque wrench",
+    "socket that fits well",
+    "manual"
+   ],
+   "parts": [
+    "drain_plug",
+    "gaskets"
+   ],
+   "consumables": [
+    "new washer"
+   ],
+   "fixes": [
+    "oil-leak-drain-plug",
+    "oil-drain-thread-stripped"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+     "caption": "Strong drain plug with a flanged head"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+     "caption": "Drain plug with a weak Allen socket head"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+     "caption": "Drain plug with a magnet to catch steel particles"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_gear_return_spring_bolts.jpg",
+     "caption": "Diagram marking the gearshift spring bolt not to remove"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+     "caption": "Oil drain bolt on the side of the crankcase"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "oil-sight-window-empty",
+   "title": "Oil sight window looks empty or the level is unclear",
+   "system": "oil",
+   "also_called": [
+    "no oil in the window",
+    "cannot see the oil level",
+    "window shows nothing"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "parts": [
+    "engine_oil",
+    "oil_dipstick",
+    "crankcase_breather"
+   ],
+   "repairs": [
+    "oil-level-window-plug",
+    "oil-level-check",
+    "engine-oil-service",
+    "oil-leak-trace"
+   ],
+   "related": [
+    "oil-overfilled",
+    "oil-level-falling",
+    "oil-warning-light"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+     "caption": "Oil level sight window in a crankcase cover"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_sight_window_2.jpg",
+     "caption": "Checking the oil level beside a sight window"
+    }
+   ]
+  },
+  {
+   "id": "oil-filter-leak",
+   "title": "Oil leaks from the oil filter or its cover",
+   "system": "oil",
+   "also_called": [
+    "oil weeping at the filter",
+    "filter housing leaks",
+    "oil on the filter after an oil change"
+   ],
+   "urgency": "do-not-ride",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "parts": [
+    "oil_filter",
+    "gaskets",
+    "engine_oil"
+   ],
+   "repairs": [
+    "oil-filter-change",
+    "oil-leak-trace",
+    "oil-level-check"
+   ],
+   "related": [
+    "oil-leak",
+    "oil-leak-drain-plug",
+    "oil-leak-cover",
+    "oil-starved-after-change"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_screw_cartridge_internal_external_paper_cloth_2.jpg",
+     "caption": "Spin-on filter on the engine with oil drain pan below"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_external_element.jpg",
+     "caption": "Finned oil filter housing on the side of an engine"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_large_thin_flat_washer_filter_spring.jpg",
+     "caption": "Filter housing parts: bolt, O-ring, spring and spring seat"
+    }
+   ]
+  },
+  {
+   "id": "oil-starved-after-change",
+   "title": "Engine ticks, runs hot or seizes soon after an oil change",
+   "system": "oil",
+   "also_called": [
+    "engine noisy after oil change",
+    "seized after oil change",
+    "no oil after service",
+    "filter fitted backwards"
+   ],
+   "urgency": "stop-now",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "parts": [
+    "engine_oil",
+    "oil_filter",
+    "drain_plug",
+    "oil_pump"
+   ],
+   "repairs": [
+    "oil-level-check",
+    "oil-filter-change",
+    "oil-flow-to-head-check",
+    "oil-screen-clean",
+    "engine-internal-assessment"
+   ],
+   "related": [
+    "oil-warning-light",
+    "deep-knock",
+    "tappet-tick",
+    "engine-seized",
+    "oil-filter-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_make_sure_put_right_way.jpg",
+     "caption": "Filter element held in a hand before fitting"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_element.jpg",
+     "caption": "Paper element for a one-bolt filter chamber"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dipstick_2.jpg",
+     "caption": "Dipstick fitted in an oil filler"
+    }
+   ]
+  },
+  {
+   "id": "clutch-slip-after-oil-change",
+   "title": "Clutch slips after switching to a different engine oil",
+   "system": "oil",
+   "also_called": [
+    "clutch slipping after oil change",
+    "revs rise after fitting car oil",
+    "new oil makes clutch slip"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "four-stroke"
+   ],
+   "parts": [
+    "engine_oil",
+    "clutch_plates"
+   ],
+   "repairs": [
+    "oil-choose-four-stroke",
+    "engine-oil-service",
+    "clutch-plate-service"
+   ],
+   "related": [
+    "clutch-slip",
+    "oil-darkens-quickly"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/4stroke_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/050/050_lighter_weights_oil_10w_30_lighter.jpg",
+     "caption": "API SJ 10W-30 mark with Energy Conserving text"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/050/050_starburst.jpg",
+     "caption": "API starburst symbol for gasoline engines"
+    }
+   ]
+  },
+  {
+   "id": "oil-drain-thread-stripped",
+   "title": "Drain plug or oil filter bolt turns but will not tighten",
+   "system": "oil",
+   "also_called": [
+    "stripped sump plug",
+    "drain bolt spins",
+    "oil drain thread damaged"
+   ],
+   "urgency": "do-not-ride",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke"
+   ],
+   "parts": [
+    "drain_plug",
+    "gaskets",
+    "engine_oil"
+   ],
+   "repairs": [
+    "drain-bolt-tighten",
+    "drain-plug-seal",
+    "oil-leak-trace"
+   ],
+   "related": [
+    "oil-leak-drain-plug",
+    "oil-leak",
+    "oil-filter-leak"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+     "caption": "Drain plug with a weak Allen socket head"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+     "caption": "Strong drain plug with a flanged head"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+     "caption": "Oil drain plug at the bottom of the engine"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "oil_tank",
+   "name": "Oil tank (dry-sump and frame tank)",
+   "category": "engine",
+   "aliases": [
+    "oil reservoir",
+    "frame oil tank",
+    "dry sump tank"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "oil-tank-drain",
+    "oil-level-dry-sump",
+    "engine-oil-service",
+    "oil-leak-trace"
+   ],
+   "problems": [
+    "oil-leak",
+    "oil-level-falling",
+    "oil-warning-light"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_dry_sump_oil_tank.jpg",
+     "caption": "Separate oil tank of a dry-sump engine"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drained_bottom_rear_frametube.jpg",
+     "caption": "Oil tank formed by the frame, drained at the rear tube"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bolt.jpg",
+     "caption": "Oil drain bolt low on a frame downtube"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/051/051_small_separate_tank_mounted_somewhere_frame.jpg",
+     "caption": "Small separate oil tank mounted on the frame"
+    }
+   ]
+  },
+  {
+   "id": "oil_dipstick",
+   "name": "Oil dipstick, level plug and sight window",
+   "category": "engine",
+   "aliases": [
+    "dip stick",
+    "oil level plug",
+    "sight glass",
+    "oil window"
+   ],
+   "applies_to": [
+    "four-stroke"
+   ],
+   "repairs": [
+    "oil-level-check",
+    "oil-level-dry-sump",
+    "oil-level-window-plug"
+   ],
+   "problems": [
+    "oil-sight-window-empty",
+    "oil-overfilled",
+    "oil-level-falling"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/change_oil2.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+     "caption": "Dipstick with high and low marks"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_dipstick_2.jpg",
+     "caption": "Dipstick fitted in an oil filler"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+     "caption": "Oil level plug in the side of a crankcase"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+     "caption": "Oil level sight window in a crankcase cover"
+    }
+   ]
+  },
+  {
+   "id": "two_stroke_oil",
+   "name": "Two-stroke oil",
+   "category": "engine",
+   "aliases": [
+    "2T oil",
+    "pre-mix oil",
+    "injector oil",
+    "autolube oil"
+   ],
+   "applies_to": [
+    "two-stroke"
+   ],
+   "repairs": [
+    "two-stroke-premix",
+    "two-stroke-pump-bleed",
+    "two-stroke-pump-restart"
+   ],
+   "problems": [
+    "plug-oily",
+    "oily-exhaust",
+    "two-stroke-oil-not-used",
+    "blue-smoke"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2stroke_oil.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/049/049_ratio_rite.jpg",
+     "caption": "Ratio cup used to measure two-stroke oil"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+     "caption": "Oil tank, pump and throttle cable on a two-stroke"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_two_stroke_autolube_oil_pumps.jpg",
+     "caption": "Two oil injection pumps side by side"
+    }
+   ]
+  },
+  {
+   "id": "oil_pump_cable",
+   "name": "Oil pump cable and adjuster",
+   "category": "engine",
+   "aliases": [
+    "autolube cable",
+    "pump cable",
+    "oil injection cable"
+   ],
+   "applies_to": [
+    "two-stroke"
+   ],
+   "repairs": [
+    "two-stroke-pump-cable-set",
+    "two-stroke-pump-output-test",
+    "two-stroke-oil-pump"
+   ],
+   "problems": [
+    "two-stroke-oil-not-used",
+    "oily-exhaust"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/2_stroke_oilpump.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_oil_pump_setting_2.jpg",
+     "caption": "Pump marks A and B beside the engine sprocket"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+     "caption": "Pin and dot marks on a Yamaha-type pump pulley"
+    },
+    {
+     "file": "source/dansmc/03_Lubrication_Oil/053/053_two_lines.jpg",
+     "caption": "Two lines to align on a Mikuni-type pump"
+    }
+   ]
+  }
+ ]
+}

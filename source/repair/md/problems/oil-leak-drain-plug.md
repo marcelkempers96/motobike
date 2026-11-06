@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 53}
   - {doc: "K-Light 125 manual", page: 194}
   - {doc: "MAVCC Motorcycle Mechanic", page: 698}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil.htm"}
 ---
 
 # Oil leaking from the drain plug
@@ -26,6 +27,8 @@ No, not until you know the plug is secure. A loose plug can fall out and empty t
 - Is the oil level still above the lower mark?
 - Was the oil changed recently? Was a new washer fitted?
 - Is the area above the plug dry?
+- On some engines a gearshift spring bolt sits close to the side drain bolt. Do not undo the spring bolt. Putting it right means taking the engine out of the frame.
+- Allen head flange plugs can be weak. Use a key that fits well and a torque wrench.
 
 ## Diagnose it step by step
 
@@ -59,6 +62,7 @@ No, not until you know the plug is secure. A loose plug can fall out and empty t
 | Damaged plug threads | Torn threads on plug | New plug and washer |
 | Stripped case thread or cracked seat | Plug will not tighten | Workshop thread repair |
 | Leak from above | Oil runs down to plug | [Trace an oil leak](/moto-zero/repair/repairs/oil-leak-trace) |
+| Plug over-tightened at the last change | Thread pulled, plug turns without resistance | [Tighten drain and filter bolts without stripping them](/moto-zero/repair/repairs/drain-bolt-tighten) |
 
 ## Reference values (K-Light 125)
 

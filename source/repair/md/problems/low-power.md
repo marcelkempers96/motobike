@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 257}
   - {doc: "MAVCC Motorcycle Mechanic", page: 664}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/engine_breakin.htm"}
 ---
 
 # Engine feels weak and down on power
@@ -31,6 +32,7 @@ Yes, with care. Allow more distance for overtaking and joining traffic.
 - Is the choke fully off and the air filter clean?
 - Do the revs rise without the bike speeding up (slip)?
 - Fuel-injected: is the warning light on?
+- After a rebuild or on a new engine, power rises slowly while the rings seat. See [Break in a new or rebuilt engine](/moto-zero/repair/repairs/engine-break-in).
 
 ## Diagnose it step by step
 

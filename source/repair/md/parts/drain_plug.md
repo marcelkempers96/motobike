@@ -8,6 +8,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 53}
   - {doc: "K-Light 125 manual", page: 194}
   - {doc: "MAVCC Motorcycle Mechanic", page: 694}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil.htm"}
 ---
 
 # Drain plug and washer
@@ -22,6 +23,8 @@ The plug holds oil in; the washer crushes slightly to make the seal. Over-tighte
 - A plug that keeps turning and will not get tight: the thread is stripped.
 - Rounded hex from the wrong spanner.
 - On a magnetic plug, a beard of metal: see [Metal particles in the oil](/moto-zero/repair/problems/metal-in-oil).
+- Some plugs have a magnet for steel particles. Some have an Allen socket head, which can be strong or weak by design.
+- Check that you are not undoing the gearshift spring bolt that sits near some side drain bolts. See [Tighten drain and filter bolts without stripping them](/moto-zero/repair/repairs/drain-bolt-tighten).
 
 ## When to replace it
 Replace the washer or O-ring at every oil change. Replace the plug if the hex is rounded or the thread is damaged. A stripped crankcase thread needs a workshop repair insert.

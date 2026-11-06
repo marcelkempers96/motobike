@@ -7,6 +7,7 @@ applies_to: [all]
 sources:
   - {doc: "K-Light 125 manual", page: 179}
   - {doc: "K-Light 125 manual", page: 182}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/seats.htm"}
 ---
 
 # Seat and seat lock
@@ -33,6 +34,8 @@ Replace a cracked base, broken hooks or a lock that will not hold. Recover a tor
 - Lightly oil the lock and latch.
 - Push down after fitting and pull up hard to check it is locked.
 - See [Check chassis fasteners](/moto-zero/repair/repairs/fastener-check) and [Find and fix rattles](/moto-zero/repair/repairs/rattle-fix).
+- Seat fixings vary: tool box, bolts at the rear, lever or key latch, push button or hinge. If the seat will not come off, see [Remove the seat when you cannot find how](/moto-zero/repair/repairs/seat-remove).
+- Where a rod or cable links both latch sides, check that both release. They can stretch or break.
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

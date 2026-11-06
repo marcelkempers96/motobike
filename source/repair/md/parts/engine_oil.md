@@ -10,6 +10,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 196}
   - {doc: "Unit 2 The Motorcycle", page: 14}
   - {doc: "Lubrizol: Understanding JASO MA and MB", url: "https://360.lubrizol.com/2016/Understanding-JASO-MA-and-MB-Specific-Performance-for-the-Right-Applications"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/4stroke_oil.htm"}
 ---
 
 # Engine oil
@@ -34,6 +35,8 @@ At the interval in your bike's manual, and sooner in dust, heavy loads or short 
 - **Quality:** an API letter (SJ, SL and later) shows engine protection.
 - **Clutch:** for a bike with a wet clutch, choose **JASO MA** (MA1 or MA2). **JASO MB** oil is made for scooters with a dry CVT clutch and can make a wet clutch slip. Car oils marked "energy conserving" contain friction modifiers that can also cause slip (Lubrizol).
 - Fakes are common. Buy sealed bottles from a known shop. Check the cap seal, clear printing, a batch code and a price that is not far below normal.
+- Oil labelled "Energy Conserving", with a starburst mark, can make a wet clutch slip and may lack additives some bike engines need. See [Choose engine oil for a four-stroke](/moto-zero/repair/repairs/oil-choose-four-stroke).
+- If one oil serves engine, gearbox and clutch, change it sooner than an engine-only oil.
 
 ## Fitting notes
 - Home job: [Change the engine oil and clean the strainer](/moto-zero/repair/repairs/engine-oil-service). Change it warm so dirt drains out.

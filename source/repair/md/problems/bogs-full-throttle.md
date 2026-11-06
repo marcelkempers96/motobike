@@ -13,6 +13,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 353}
   - {doc: "MAVCC Motorcycle Mechanic", page: 349}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
 ---
 
 # Bogs down or chokes at full throttle
@@ -30,6 +32,7 @@ Yes, with care. You may not have the power you expect for overtaking or climbing
 - Does it improve if you open the fuel cap?
 - Is there black smoke at full throttle?
 - Two-stroke: when was the exhaust last decarbonised?
+- Is the filter oily, wet or packed with dust? A blocked airbox inlet or filter gives a rich bog.
 
 ## Diagnose it step by step
 
@@ -68,3 +71,5 @@ Yes, with care. You may not have the power you expect for overtaking or climbing
 | Blocked main jet or low float (carburettor) | Good flow but starves | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Weak pump (injection) | Low pressure at workshop | [Fuel pump](/moto-zero/repair/repairs/fuel-pump-check) |
 | Blocked exhaust or catalyst | Carbon, rattle in catalyst, back-pressure | [Two-stroke decoke](/moto-zero/repair/repairs/two-stroke-decoke) |
+| Blocked airbox inlet or filter | Dirty or wet filter, black plug | [Airbox blockage check](/moto-zero/repair/repairs/airbox-blockage-check) |
+| Main jet wrong after a filter or exhaust change | Plug reads lean or rich at full throttle | [Read a plug and choose the jet](/moto-zero/repair/repairs/carb-jet-tune) |

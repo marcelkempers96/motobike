@@ -14,6 +14,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 659}
   - {doc: "MAVCC Motorcycle Mechanic", page: 349}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb8a.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
 ---
 
 # Engine stalls at idle or at junctions
@@ -76,6 +78,8 @@ What happens if you ignore it: the bike stalls at the worst moment in traffic, a
 | Intake air leak | Idle changes with water spray | [Find an intake leak](/moto-zero/repair/repairs/intake-leak-test) |
 | Clutch drag pulling the engine down | Stalls only in gear | [Clutch drags](/moto-zero/repair/problems/clutch-drag) |
 | Valve clearance too small, low compression | Feeler gauge, compression gauge | [Valve clearance](/moto-zero/repair/repairs/valve-clearance) |
+| Needle held off its seat by dirt (flooding) | Fuel smell, wet plug; tapping the carburettor sometimes cures it | [Replace the needle and seat](/moto-zero/repair/repairs/needle-seat-replace) |
+| Starter plunger not fully closed | Engine stalls after warm-up with the plunger pressed home | [Starter plunger check](/moto-zero/repair/repairs/starter-plunger-check) |
 
 ## Reference values (K-Light 125)
 

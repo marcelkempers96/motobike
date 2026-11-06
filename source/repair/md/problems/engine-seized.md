@@ -14,6 +14,8 @@ sources:
   - {doc: "Unit 2 The Motorcycle", page: 19}
   - {doc: "MAVCC Motorcycle Mechanic", page: 782}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/pistons.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/seizure.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/engine_breakin.htm"}
 ---
 
 # Engine has seized or locked up
@@ -28,6 +30,8 @@ No. If it happens while riding, pull the clutch lever in at once (or let the sco
 - Did the engine overheat, lose power or squeal first?
 - Oil level (four-stroke) or oil tank level (two-stroke)?
 - Is it the engine that is locked, or the gearbox, chain or rear brake?
+- On a two-stroke, long steady running at one throttle setting can seize it even when it is not pushed hard. See [Two-stroke seizes after long steady running](/moto-zero/repair/problems/two-stroke-steady-seizure).
+- A new or rebuilt engine run hard before it is broken in can also seize: [Break in a new or rebuilt engine](/moto-zero/repair/repairs/engine-break-in).
 
 ## Diagnose it step by step
 
@@ -64,3 +68,5 @@ No. If it happens while riding, pull the clutch lever in at once (or let the sco
 | Bearing seizure | Crank locked with piston free | [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment) |
 | Hard riding on a new rebuild | Seized soon after rebuild | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
 | Overheated cylinder and melted piston | Smeared aluminium on the bore, blued or discoloured wall | Workshop: new cylinder or liner, and check the head for flatness |
+| Long steady throttle on a two-stroke | Piston scored or melted over the exhaust port after a steady-speed ride | Rebuild the top end; vary the throttle in future |
+

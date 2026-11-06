@@ -12,6 +12,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 53}
   - {doc: "K-Light 125 manual", page: 196}
   - {doc: "MAVCC Motorcycle Mechanic", page: 698}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil2.htm"}
 ---
 
 # Oil pressure or oil level light is on
@@ -26,6 +28,8 @@ No. Stop the engine as soon as it is safe. Running without oil pressure can dest
 - Check the oil level (four-stroke) or the oil tank (two-stroke).
 - Look under the bike for a big oil loss.
 - Does the light come on at key-on and go out after starting?
+- Was the oil filter changed recently? An element fitted backwards can cut off the oil supply.
+- A coarse screen in the drain plug can block with debris and starve the top of the engine.
 
 ## Diagnose it step by step
 
@@ -61,3 +65,6 @@ No. Stop the engine as soon as it is safe. Running without oil pressure can dest
 | Blocked strainer or filter | Workshop pressure test | [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment) |
 | Worn oil pump | Low pressure | [Assess bottom end and internal engine damage](/moto-zero/repair/repairs/engine-internal-assessment) |
 | Two-stroke oil tank empty or pump fault | Tank level | [Check the two-stroke oil pump and lines](/moto-zero/repair/repairs/two-stroke-oil-pump) |
+| Oil screen in the drain plug blocked | Screen clogged when removed | [Clean the oil screen in the drain plug or filter chamber](/moto-zero/repair/repairs/oil-screen-clean) |
+| Paper element fitted the wrong way | Light came on after a filter change | [Change a spin-on or paper oil filter](/moto-zero/repair/repairs/oil-filter-change) |
+| No oil reaching the cylinder head | Little oil at the head check bolt | [Check that oil is reaching the top of the engine](/moto-zero/repair/repairs/oil-flow-to-head-check) |

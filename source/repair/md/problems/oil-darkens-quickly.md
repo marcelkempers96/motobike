@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 195}
   - {doc: "MAVCC Motorcycle Mechanic", page: 694}
   - {doc: "Unit 2 The Motorcycle", page: 14}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/4stroke_oil.htm"}
 ---
 
 # Oil turns black very soon after a change
@@ -27,6 +28,7 @@ Yes. Plan the checks below and change oil more often until the cause is found.
 - Is the air filter in good condition and sealed in its box?
 - Any blue smoke or smoke from the breather?
 - Is the oil black and smooth, or gritty?
+- If one oil serves the engine, gearbox and clutch, it breaks down faster than engine-only oil. Meshing gears and the clutch add contaminants.
 
 ## Diagnose it step by step
 
@@ -61,6 +63,7 @@ Yes. Plan the checks below and change oil more often until the cause is found.
 | Dust entry (filter or intake) | Gritty oil | [Clean or replace the air filter](/moto-zero/repair/repairs/air-filter-service) |
 | Blow-by from worn rings | Breather smoke, low compression | [Test engine compression](/moto-zero/repair/repairs/compression-test) |
 | Rich running | Black smoke, sooty plug | [Black smoke from the exhaust](/moto-zero/repair/problems/black-smoke) |
+| Shared engine, gearbox and clutch oil | Oil darkens sooner than a bike with separate oils | Change at a shorter interval, see [Choose engine oil for a four-stroke](/moto-zero/repair/repairs/oil-choose-four-stroke) |
 
 ## Reference values (K-Light 125)
 

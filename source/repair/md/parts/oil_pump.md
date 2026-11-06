@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 196}
   - {doc: "K-Light 125 manual", page: 199}
   - {doc: "Unit 2 The Motorcycle", page: 13}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil2.htm"}
 ---
 
 # Oil pump
@@ -23,6 +24,7 @@ The pump draws oil from the sump through the [strainer](/moto-zero/repair/parts/
 - [Ticking from the top of the engine](/moto-zero/repair/problems/tappet-tick) because oil is slow to reach the rockers.
 - [Engine overheats](/moto-zero/repair/problems/overheating-air), then [knocks](/moto-zero/repair/problems/deep-knock) or [seizes](/moto-zero/repair/problems/engine-seized).
 - Pump failure is rare; check oil level, oil grade and the strainer first.
+- No oil at the cylinder head check bolt, or a weak flow, with the right level. See [Check that oil is reaching the top of the engine](/moto-zero/repair/repairs/oil-flow-to-head-check).
 
 ## When to replace it
 When rotor clearances are past the limit, the rotors are scored, or the drive gear is damaged. Follow your bike's manual.

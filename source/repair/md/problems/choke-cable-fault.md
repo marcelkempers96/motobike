@@ -12,6 +12,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 346}
   - {doc: "MAVCC Motorcycle Mechanic", page: 734}
   - {doc: "Unit 2 The Motorcycle", page: 29}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/starter.htm"}
 ---
 
 # Choke lever or cable does not work
@@ -28,6 +29,8 @@ Yes, with care, if the engine runs normally. A choke stuck ON makes the engine r
 - Move the lever: does it feel connected, or loose with no resistance?
 - When warm with the choke OFF, is the idle high or does the exhaust smell rich?
 - Look at the cable end at the carburettor: is it attached?
+- Some small carburettors have a spring on the choke shaft that keeps the choke shut. If it breaks, the choke looks closed but is not, the engine is hard to start and the starter overheats from cranking.
+- Know which starting aid you have: choke plate, enrichener plunger or float plunger. Each needs its own drill: [Start a cold carburettor engine](/moto-zero/repair/repairs/cold-start-drill).
 
 ## Diagnose it step by step
 

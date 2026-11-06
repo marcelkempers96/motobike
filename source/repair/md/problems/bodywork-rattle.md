@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 129}
   - {doc: "K-Light 125 manual", page: 73}
   - {doc: "MAVCC Motorcycle Mechanic", page: 730}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bolts.htm"}
 ---
 
 # Rattling from panels, mudguards or the seat
@@ -27,6 +28,7 @@ Yes, as long as nothing is about to fall off. A loose mudguard, number plate or 
 - Look for missing screws and rubber grommets.
 - Open the seat: is the toolkit or battery loose?
 - Is a heat shield or chain guard loose?
+- Check lock washers and locknuts on the panel bolts. A flat or worn lock washer lets the bolt work loose.
 
 ## Diagnose it step by step
 

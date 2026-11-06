@@ -17,6 +17,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 664}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/compression_test.htm"}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/comp_release4.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hot_cold.html"}
 ---
 
 # Low compression
@@ -34,6 +35,7 @@ Yes with care if it runs. Expect poor power on hills. Do not ride if compression
 - Blow dirt away from around the plug with air before unscrewing it, so none falls into the cylinder.
 - On an engine with more than one cylinder, one low cylinder stops it ever running well. Test compression before cleaning carburettors again.
 - Some off-road singles have an automatic compression release and read low on purpose when cranked. Compare with the value in your bike's manual.
+- For the most accurate compression reading, test with a warm engine. Valve clearance, by contrast, is checked cold.
 
 ## Diagnose it step by step
 

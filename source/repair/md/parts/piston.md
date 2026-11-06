@@ -11,6 +11,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 218}
   - {doc: "Unit 2 The Motorcycle", page: 8}
   - {doc: "MAVCC Motorcycle Mechanic", page: 790}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/seizure.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/engine_breakin.htm"}
 ---
 
 # Piston
@@ -39,6 +41,7 @@ When it is scored, cracked, holed, or past the size limit, or whenever the cylin
 - Workshop job. Fit with the "IN" or arrow mark the way the manual says (on the K-Light, IN toward the inlet valve).
 - Use new clips with the gap away from the slot, and cover the crankcase opening so a clip cannot drop in.
 - Measure the skirt at right angles to the pin, at the height the manual gives. See [Assess the top end](/moto-zero/repair/repairs/top-end-assessment).
+- A two-stroke piston can melt after long steady running at one throttle setting. A new piston needs a careful break-in: [Break in a new or rebuilt engine](/moto-zero/repair/repairs/engine-break-in).
 
 ## Reference (K-Light 125)
 

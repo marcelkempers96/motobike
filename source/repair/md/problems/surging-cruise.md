@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 61}
   - {doc: "K-Light 125 manual", page: 55}
   - {doc: "K-Light 125 manual", page: 264}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
 ---
 
 # Surges or jerks at steady cruising speed
@@ -68,6 +69,7 @@ Yes, with care. Check the chain first: a very slack chain can jump the sprockets
 | Throttle free play wrong | Grip moves over bumps | [Free play](/moto-zero/repair/repairs/throttle-cable-adjust) |
 | Lean at light throttle | Popping, white plug, air leak | [Intake leak test](/moto-zero/repair/repairs/intake-leak-test) |
 | O2 sensor or sensor fault (injection) | Code, live data | [O2 check](/moto-zero/repair/repairs/o2-sensor-check) |
+| Needle or needle jet worn, or needle clip in the wrong position, for mid throttle | Plug reading at half throttle is off | [Read a plug and choose the jet](/moto-zero/repair/repairs/carb-jet-tune) |
 
 ## Reference values (K-Light 125)
 

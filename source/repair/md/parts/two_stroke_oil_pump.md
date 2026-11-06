@@ -7,6 +7,8 @@ applies_to: [two-stroke]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 255}
   - {doc: "MAVCC Motorcycle Mechanic", page: 256}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/2_stroke_oilpump.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"}
 ---
 
 # Two-stroke oil pump
@@ -20,6 +22,8 @@ A two-stroke has no oil sump; it burns a small amount of oil with every charge t
 - [Two-stroke oil tank level is not going down](/moto-zero/repair/problems/two-stroke-oil-not-used): stop riding.
 - Too much oil: [Blue smoke](/moto-zero/repair/problems/blue-smoke), [oil dripping from the exhaust](/moto-zero/repair/problems/oily-exhaust), a [blocked exhaust](/moto-zero/repair/problems/exhaust-blocked) and [oily plugs](/moto-zero/repair/problems/plug-oily).
 - Too little: [Engine seized](/moto-zero/repair/problems/engine-seized) or a [white plug](/moto-zero/repair/problems/plug-white).
+- Pumps from the Yamaha and Mikuni families are common. The delivery rises with the throttle through a cable, which must be set to the marks in the manual. See [Set the oil pump cable so it follows the throttle](/moto-zero/repair/repairs/two-stroke-pump-cable-set).
+- Parts for old pumps may be old stock only, and some parts are sold only with the whole pump.
 
 ## When to replace it
 When it does not deliver oil after bleeding, the shaft seal leaks, or the drive is damaged. Replace cracked oil lines and the line clips at the same time.

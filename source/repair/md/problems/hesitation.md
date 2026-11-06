@@ -14,6 +14,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 259}
   - {doc: "K-Light 125 manual", page: 274}
   - {doc: "K-Light 125 manual", page: 55}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cv_carb.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
 ---
 
 # Hesitates or stumbles when opening the throttle
@@ -31,6 +33,7 @@ Yes, with care. A stumble when pulling out at a junction can leave you in the pa
 - Does the throttle have only a little free play (K-Light 125: 3 to 5 mm)? A lot of slack feels like a delay.
 - Is the air filter clean?
 - Did it start after the bike stood unused, or after a fuel stop?
+- CV (vacuum slide) carburettor: engine suction lifts the slide, not the cable. A stumble then points to the slide, diaphragm or an air leak, not the cable.
 
 ## Diagnose it step by step
 
@@ -73,3 +76,4 @@ Scooters: a judder or stumble only when pulling away can be the drive clutch, no
 | Torn CV diaphragm | Pinholes when held to light | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Dirty air filter (rich) | Black smoke, clogged filter | [Air filter](/moto-zero/repair/repairs/air-filter-service) |
 | TPS fault or dirty throttle body (injection) | Code, uneven live data | [Sensor check](/moto-zero/repair/repairs/efi-sensor-check) |
+| CV slide sticking or diaphragm torn | Slide does not lift or drop freely | [CV carburettor check](/moto-zero/repair/repairs/cv-carb-check) |

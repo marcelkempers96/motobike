@@ -11,6 +11,8 @@ related: [engine-seized, oil-warning-light, overheating-air, low-compression]
 sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 250}
   - {doc: "MAVCC Motorcycle Mechanic", page: 800}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/2_stroke_oilpump.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"}
 ---
 
 # Two-stroke oil tank level is not going down
@@ -25,6 +27,8 @@ No. Do not ride until oil delivery is confirmed. If you must move the bike in an
 - Is the oil line connected at both ends, with no kinks?
 - Is the pump cable connected and does the pump lever move when you open the throttle?
 - Is the tank cap vent clear?
+- Most pumps have a small bleed screw on the side. If there is none, loosen the oil inlet hose bolt to bleed.
+- The cable must be set so the pump delivers more oil as the throttle opens.
 
 ## Diagnose it step by step
 
@@ -59,3 +63,5 @@ No. Do not ride until oil delivery is confirmed. If you must move the bike in an
 | Pump cable broken or loose | Lever does not move | [Check the two-stroke oil pump and lines](/moto-zero/repair/repairs/two-stroke-oil-pump) |
 | Blocked tank vent | Vacuum when cap opened | Clean vent |
 | Failed pump or drive | Everything else correct | [Check the two-stroke oil pump and lines](/moto-zero/repair/repairs/two-stroke-oil-pump) |
+| Air in the pump after the tank ran dry | Bubbles from the bleed screw | [Bleed air from a two-stroke oil pump](/moto-zero/repair/repairs/two-stroke-pump-bleed) |
+| Pump cable set wrongly | Pump marks do not align at the throttle position in the manual | [Set the oil pump cable so it follows the throttle](/moto-zero/repair/repairs/two-stroke-pump-cable-set) |

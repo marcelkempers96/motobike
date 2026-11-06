@@ -14,6 +14,11 @@ sources:
   - {doc: "K-Light 125 manual", page: 23}
   - {doc: "K-Light 125 manual", page: 57}
   - {doc: "K-Light 125 manual", page: 276}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb12.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb8a.htm"}
 ---
 
 # Engine runs rich, smells of fuel and smokes black
@@ -31,6 +36,8 @@ With care. Fix it soon: a very rich engine can foul its plug and stop, overheat 
 - Is fuel dripping from the carburettor overflow pipe?
 - Does the engine oil smell of petrol or is the level rising?
 - Fuel-injected: is the warning light on?
+- Does it improve a little with the air cleaner off? That points to a blocked or over-oiled filter (use this as a very short test only, then refit the cleaner). A dull, uneven engine note that gets worse when hot is another sign of a rich mixture.
+- Is anything pushed against the airbox inlet, such as a cloth under the seat, or has a nest been built inside it?
 
 ## Diagnose it step by step
 
@@ -71,3 +78,6 @@ After the fix, [measure fuel consumption](/moto-zero/repair/repairs/fuel-economy
 | Wrong or worn jets and needle | Parts history, inspection | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Temperature sensor fault (injection) | Code, live data | [Sensor check](/moto-zero/repair/repairs/efi-sensor-check) |
 | Loose O2 sensor or leaking injector | Workshop live data | [O2 check](/moto-zero/repair/repairs/o2-sensor-check) |
+| Blocked airbox inlet, nest, or breather oil in the filter | Black plug and no fault found elsewhere | [Airbox blockage check](/moto-zero/repair/repairs/airbox-blockage-check) |
+| Broken choke plate spring or stuck starter plunger | Choke lever moves with no resistance, or plunger does not spring back | [Choke plate check](/moto-zero/repair/repairs/choke-plate-check), [Starter plunger check](/moto-zero/repair/repairs/starter-plunger-check) |
+| Needle tip worn, or dirt holding the needle off its seat | Ring worn round the needle tip, fuel overflows | [Replace the needle and seat](/moto-zero/repair/repairs/needle-seat-replace) |

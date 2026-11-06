@@ -1,0 +1,11 @@
+# lube progress
+- [x] read lessons 049-055, viewed all 150 tsv rows (6 sheets)
+- plan: 14 repairs, 5 problems, 4 parts in new/lube-p5 (generator script in scratchpad gen_lube.py)
+- [ ] new pages written
+- [ ] photos2/p5-lube.json
+- [ ] md edits (problems oil/cooling, parts in lube categories)
+- [ ] checks + notes
+- [x] new pages written via scratchpad g_main.py (14 repairs, 5 problems, 4 parts, index.json)
+- [x] photos2/p5-lube.json written (g_photos.py)
+- [x] md edits done (g_edit.py): 5 problems, 6 parts
+- [x] checks + notes done

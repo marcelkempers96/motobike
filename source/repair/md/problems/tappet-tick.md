@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 202}
   - {doc: "MAVCC Motorcycle Mechanic", page: 671}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/valveclearence.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hot_cold.html"}
 ---
 
 # Ticking noise from the top of the engine
@@ -27,6 +28,7 @@ Usually yes, gently, for a short distance. Stop if the tick turns into a knock, 
 - Is the spark plug tight? Touch the plug cap; a loose plug puffs and ticks.
 - Is the exhaust nut at the head tight? Look for soot streaks at the port.
 - When did it start: after a service, a long ride or a fall?
+- Set and check valve clearance with a cold engine. Metal grows as it warms, so a hot reading is wrong.
 
 ## Diagnose it step by step
 

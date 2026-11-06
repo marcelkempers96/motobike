@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 349}
   - {doc: "MAVCC Motorcycle Mechanic", page: 374}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cv_carb.htm"}
 ---
 
 # Revs hang or drop slowly after closing the throttle
@@ -69,6 +70,7 @@ Only if the throttle grip snaps shut by itself in every steering position. If th
 | Intake air leak | Water spray changes revs | [Intake leak test](/moto-zero/repair/repairs/intake-leak-test) |
 | Sticky slide or lean idle mixture | Slide slow to drop; popping on overrun | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Dirty throttle body or idle control (injection) | Black deposits, idle codes | [Throttle body](/moto-zero/repair/repairs/throttle-body-clean) |
+| CV slide slow to drop (dirty, sticking, weak spring) | Slide does not fall freely by hand | [CV carburettor check](/moto-zero/repair/repairs/cv-carb-check) |
 
 ## Reference values (K-Light 125)
 

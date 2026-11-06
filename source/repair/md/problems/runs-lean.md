@@ -15,6 +15,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 23}
   - {doc: "K-Light 125 manual", page: 57}
   - {doc: "K-Light 125 manual", page: 264}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
 ---
 
 # Engine runs hot and lean, pops and pinks
@@ -32,6 +34,7 @@ With care, gently and for short distances only. Avoid full throttle and long cli
 - Is fuel flow good, or worse on a low tank?
 - Is the exhaust leaking at the head joint (black soot, ticking)?
 - Fuel-injected: is the warning light on?
+- Does it get better with the choke on? A lean engine often does. Other signs are a whitish or burnt-looking plug, engine speed that rises and falls, poor acceleration and overheating.
 
 ## Diagnose it step by step
 
@@ -70,3 +73,5 @@ With care, gently and for short distances only. Avoid full throttle and long cli
 | Low float or blocked jets | Carburettor inspection | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Free-flow filter or exhaust fitted | Parts changed | Refit standard parts or re-jet |
 | Low fuel pressure or blocked injector | Workshop pressure test | [Injector check](/moto-zero/repair/repairs/injector-check) |
+| Worn engine, jets too small | Compression has fallen, so carburettor suction is lower; plug reads lean | [Read a plug and choose the jet](/moto-zero/repair/repairs/carb-jet-tune) |
+| Changed or cracked airbox, hard air tube, filter left off | Ran better with the original parts | [Check the mixture after an airbox change](/moto-zero/repair/repairs/airbox-change-check), [Replace the air tube](/moto-zero/repair/repairs/air-tube-replace) |

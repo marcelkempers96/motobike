@@ -13,6 +13,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 356}
   - {doc: "MAVCC Motorcycle Mechanic", page: 350}
   - {doc: "K-Light 125 manual", page: 259}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb10.htm"}
 ---
 
 # Flat spot in the middle of the rev range
@@ -29,6 +30,7 @@ Yes. Avoid relying on that throttle range for overtaking until it is fixed.
 - Is the air filter clean and the airbox closed properly?
 - Has anyone changed the jets, needle clip or exhaust?
 - Fuel-injected: is the warning light on?
+- Note where in the throttle range the flat spot is. Put tape on the grip and housing and mark closed, quarter, half, three quarter and full. Each jet and the needle work over one part of the range, so the position shows which part to look at.
 
 ## Diagnose it step by step
 
@@ -67,3 +69,4 @@ Yes. Avoid relying on that throttle range for overtaking until it is fixed.
 | Dirty or worn needle and needle jet, wrong clip | Parts history, inspection | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Torn CV diaphragm | Pinholes against light | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | TPS dead spot (injection) | Live data jumps | [Sensor check](/moto-zero/repair/repairs/efi-sensor-check) |
+| Needle, needle jet or slide cutaway wrong for that throttle range | Fault matches one quarter of the throttle travel | [Read a plug and choose the jet](/moto-zero/repair/repairs/carb-jet-tune) |

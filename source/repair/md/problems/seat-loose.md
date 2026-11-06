@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 181}
   - {doc: "K-Light 125 manual", page: 182}
   - {doc: "Unit 2 The Motorcycle", page: 3}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/seats.htm"}
 ---
 
 # Seat is loose or the seat lock does not work
@@ -27,6 +28,8 @@ With care if the seat stays in place. If it lifts, slides or could come off, do 
 - Push and pull the seat: which end moves?
 - Look under the seat for missing rubber pads and broken hooks.
 - Does the key turn the lock, and does the latch move?
+- Seat fixings can be hidden: in the tool box, under the rear mudguard, behind side covers, or on a hinge bolt. See [Remove the seat when you cannot find how](/moto-zero/repair/repairs/seat-remove).
+- Where a rod or cable links both sides of the latch, check that both sides release. These parts stretch and break, and a spring can fail too.
 
 ## Diagnose it step by step
 

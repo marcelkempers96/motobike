@@ -13,6 +13,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 274}
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 349}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
 ---
 
 # Idle speed rises and falls on its own
@@ -66,3 +68,5 @@ Yes, with care. If the idle surges high enough to make the bike creep or the clu
 | Throttle cable too tight | No free play | [Adjust free play](/moto-zero/repair/repairs/throttle-cable-adjust) |
 | Dirty idle passage, idle not relearned (injection) | Black deposits; after cleaning or battery work | [Throttle body](/moto-zero/repair/repairs/throttle-body-clean), [idle reset](/moto-zero/repair/repairs/idle-relearn) |
 | Sensor or O2 fault (injection) | Stored code, odd live data | [Sensor check](/moto-zero/repair/repairs/efi-sensor-check) |
+| Starter plunger leaking on one carburettor | Idle steadier when the plunger is pressed fully home | [Starter plunger check](/moto-zero/repair/repairs/starter-plunger-check) |
+| Hard, cracked or shrunk air tube | Cracks or gaps at the clamps | [Replace the air tube](/moto-zero/repair/repairs/air-tube-replace) |

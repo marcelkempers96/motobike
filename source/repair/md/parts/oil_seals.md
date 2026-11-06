@@ -8,6 +8,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 9}
   - {doc: "K-Light 125 manual", page: 227}
   - {doc: "MAVCC Motorcycle Mechanic", page: 254}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/2_stroke_oilpump.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/Oil_injection_page/oil_injection.htm"}
 ---
 
 # Engine oil seals
@@ -21,6 +23,7 @@ A thin rubber lip, held by a small spring, wipes the turning shaft so oil stays 
 - [Oil leaking behind the front sprocket](/moto-zero/repair/problems/oil-leak-sprocket).
 - Oil weeping around the gear lever or kickstart shaft: [Oil leaking under the bike](/moto-zero/repair/problems/oil-leak).
 - On a two-stroke, a high or [hunting idle](/moto-zero/repair/problems/hunting-idle) and [hard starting](/moto-zero/repair/problems/hard-cold-start) from a crank seal leak.
+- On an old two-stroke, hard or worn crankshaft seals let gearbox oil into the engine, causing heavy smoke. Replace both crankshaft seals before replacing an oil pump.
 
 ## When to replace it
 When it leaks, and always when it has been removed. The K-Light manual says crankcase seals removed with the puller are never reused. Follow your bike's manual.

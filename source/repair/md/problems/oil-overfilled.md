@@ -12,6 +12,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 29}
   - {doc: "K-Light 125 manual", page: 53}
   - {doc: "MAVCC Motorcycle Mechanic", page: 698}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/change_oil2.htm"}
 ---
 
 # Too much oil in the engine
@@ -26,6 +27,8 @@ Yes with care for a short way if only a little high. Drain to the correct level 
 - Was the oil just changed or topped up?
 - Does the oil smell of petrol, or look milky?
 - Is the air box drain full of oil?
+- Too much oil cuts the air space inside the engine and raises the internal pressure. This can cause smoke and push oil out through seals and the breather.
+- With a sight window, clean oil at a high level can look like no oil. Lean the bike slightly to find the real level before adding more.
 
 ## Diagnose it step by step
 
@@ -61,6 +64,7 @@ Yes with care for a short way if only a little high. Drain to the correct level 
 | Too much added | Recent top-up | Drain to correct level |
 | Fuel in the oil | Petrol smell, thin | [Oil smells of petrol or the level rises](/moto-zero/repair/problems/oil-smells-fuel) |
 | Coolant or water in the oil | Milky | [Oil is milky or creamy](/moto-zero/repair/problems/milky-oil) |
+| Oil added when a sight window looked empty | Level shows when the bike leans slightly | [Check oil with a sight window or level plug](/moto-zero/repair/repairs/oil-level-window-plug) |
 
 ## Reference values (K-Light 125)
 

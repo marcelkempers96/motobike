@@ -11,6 +11,8 @@ sources:
   - {doc: "RS Components: SKF 6202-2RSL bearing", url: "https://uk.rs-online.com/web/p/ball-bearings/2077086"}
   - {doc: "webBikeWorld: fake or genuine parts", url: "https://www.webbikeworld.com/how-to-find-whether-a-spare-part-is-fake-or-genuine"}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/wheelbearing.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/tips.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/hot_cold.html"}
 ---
 
 # Wheel bearings
@@ -43,6 +45,7 @@ Replace if rough, noisy or loose when turned by finger with the wheel out. Repla
 - Warming an aluminium hub gently with a hot air gun makes bearings come out and go in more easily.
 - A bearing driven out with a drift or pulled with a puller is damaged and must be replaced. Tapered roller bearings can be cleaned and regreased, because the rollers are not driven.
 - On cast wheels, keep the drift on the bearing and not on the casting. A slip can crack the hub. Some cast hubs take the centre spacer from one side only.
+- Fit the bearing with the maker's marks facing out and drive it by the outer race only. Warm the hub and chill the bearing for an easy fit: [Use heat and cold](/moto-zero/repair/repairs/heat-cool-fit).
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |

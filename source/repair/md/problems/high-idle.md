@@ -15,6 +15,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 258}
   - {doc: "K-Light 125 manual", page: 276}
   - {doc: "MAVCC Motorcycle Mechanic", page: 659}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb12.htm"}
 ---
 
 # Idle speed is too high
@@ -73,6 +75,7 @@ With care, as long as the throttle snaps shut when you let go. If the throttle s
 | Air leak | Water spray changes idle | [Intake leak test](/moto-zero/repair/repairs/intake-leak-test) |
 | Idle screw set too high (carburettor) | Warm idle above manual figure | [Adjust idle](/moto-zero/repair/repairs/carb-idle-adjust) |
 | Idle control or throttle body fault (injection) | Code, dirty bypass | [Throttle body](/moto-zero/repair/repairs/throttle-body-clean) |
+| Starter plunger or choke plate not fully off | Idle falls when the plunger or choke is pressed home by hand | [Starter plunger check](/moto-zero/repair/repairs/starter-plunger-check), [Choke plate check](/moto-zero/repair/repairs/choke-plate-check) |
 
 ## Reference values (K-Light 125)
 

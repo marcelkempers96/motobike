@@ -11,6 +11,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 245}
   - {doc: "K-Light 125 manual", page: 249}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/Exhaust_4.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/powervalve.htm"}
 ---
 
 # Exhaust and silencer
@@ -21,6 +22,7 @@ The exhaust carries burnt gas from the cylinder head to the back of the bike. It
 The exhaust lets the engine breathe out, cuts noise, and on newer bikes cleans the gas: the catalytic converter burns leftover fuel and carbon monoxide. The pipe and silencer rust from the inside, mounts crack from vibration, and carbon builds up, especially on two-strokes and engines that burn oil. A melted or blocked catalyst chokes the engine.
 
 ## Signs it is worn or failing
+- Many modern two-stroke engines have a [power valve](/moto-zero/repair/parts/power_valve) in the exhaust port. Carbon makes it stick and the engine goes flat at one end of the rev range: [Two-stroke is weak at one end of the rev range](/moto-zero/repair/problems/powervalve-stuck).
 - [Exhaust much louder](/moto-zero/repair/problems/exhaust-loud) or [rattling](/moto-zero/repair/problems/exhaust-rattle).
 - [Ticking or puffing from a leak](/moto-zero/repair/problems/exhaust-leak) and [popping on overrun](/moto-zero/repair/problems/exhaust-popping).
 - [Pipe glows red or catalyst overheats](/moto-zero/repair/problems/exhaust-glowing): stop the engine.

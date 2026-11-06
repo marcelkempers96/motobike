@@ -13,6 +13,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 734}
   - {doc: "K-Light 125 manual", page: 51}
   - {doc: "K-Light 125 manual", page: 222}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/chemicals.htm"}
 ---
 
 # A control cable is frayed or stiff
@@ -27,6 +28,7 @@ Do not ride with a frayed or sticking **throttle** or **brake** cable. A frayed 
 - Look at both ends, especially where the inner leaves the outer at the lever.
 - Squeeze the lever: smooth, or gritty and heavy?
 - Follow the cable: sharp bends, kinks, crushed outer, melted by the exhaust?
+- A dry graphite lubricant sprayed into a stiff cable with a cracked outer can free it for a while. Replace a cable that is frayed.
 
 ## Diagnose it step by step
 

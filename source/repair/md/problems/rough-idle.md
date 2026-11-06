@@ -16,6 +16,8 @@ sources:
   - {doc: "K-Light 125 manual", page: 60}
   - {doc: "K-Light 125 manual", page: 202}
   - {doc: "MAVCC Motorcycle Mechanic", page: 656}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/aircleaner.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/carb11.htm"}
 ---
 
 # Rough, lumpy or uneven idle
@@ -76,6 +78,8 @@ Yes, with care. If it also misfires on the move or loses power, read [Misfires w
 | Idle mixture wrong or pilot jet blocked | Pilot screw no effect | [Clean carburettor](/moto-zero/repair/repairs/carburettor-clean) |
 | Dirty throttle body or injector | Deposits, codes | [Throttle body](/moto-zero/repair/repairs/throttle-body-clean) |
 | Wrong valve clearance, low compression | Feeler gauge, gauge reading | [Valve clearance](/moto-zero/repair/repairs/valve-clearance) |
+| Hard or cracked air tube between airbox and carburettor | Visible cracks, gap at clamp | [Replace the air tube](/moto-zero/repair/repairs/air-tube-replace) |
+| One starter plunger stuck on a multi-carburettor set | One cylinder runs rich and rough | [Starter plunger check](/moto-zero/repair/repairs/starter-plunger-check) |
 
 ## Reference values (K-Light 125)
 

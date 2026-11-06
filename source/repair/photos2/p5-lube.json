@@ -1,0 +1,336 @@
+{
+ "problems": {
+  "oil-leak-drain-plug": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+    "caption": "Strong drain plug with a flanged head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+    "caption": "Drain plug with a weak Allen socket head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "caption": "Drain plug with a magnet to catch steel particles"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+    "caption": "Oil drain plug at the bottom of the engine"
+   }
+  ],
+  "oil-overfilled": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+    "caption": "Dipstick with high and low marks"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+    "caption": "Oil level sight window in a crankcase cover"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+    "caption": "Oil level plug in the side of a crankcase"
+   }
+  ],
+  "two-stroke-oil-not-used": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_two_stroke_autolube_oil_pumps.jpg",
+    "caption": "Two oil injection pumps side by side"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_then_worst_will_happen_will_foul.jpg",
+    "caption": "Cutaway of an oil injection pump with labelled parts"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen.jpg",
+    "caption": "Oil pump with a bleed screw on its side"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+    "caption": "Oil tank, pump and throttle cable on a two-stroke"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+    "caption": "Pin and dot marks on a Yamaha-type pump pulley"
+   }
+  ],
+  "oil-darkens-quickly": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_paper_element.jpg",
+    "caption": "Paper oil filter element"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+    "caption": "Coarse oil screen and spring on a plug"
+   }
+  ],
+  "oil-level-falling": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+    "caption": "Dipstick with high and low marks"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+    "caption": "Oil level sight window in a crankcase cover"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+    "caption": "Oil level plug in the side of a crankcase"
+   }
+  ],
+  "oil-warning-light": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+    "caption": "Coarse oil screen that can block and cut oil to the head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg",
+    "caption": "Oil bleed bolt on the side of a cylinder head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_clutch_hub_centrifugal_oil_filter.jpg",
+    "caption": "Centrifugal oil filter in the middle of a clutch hub"
+   }
+  ],
+  "oil-leak-cover": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_3.jpg",
+    "caption": "Oil level plug low on an engine cover"
+   }
+  ]
+ },
+ "repairs": {
+  "oil-level-check": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+    "caption": "Dipstick with high and low marks"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_checking_oil_level.jpg",
+    "caption": "Reading the oil level with a dipstick"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+    "caption": "Oil level plug in the side of a crankcase"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_sight_window.jpg",
+    "caption": "Oil level sight window in a crankcase cover"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_dribble_oil_down.jpg",
+    "caption": "Pouring oil down the dipstick tube"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/052/052_check_owners_manual.jpg",
+    "caption": "Oil bleed bolt on the side of a cylinder head"
+   }
+  ],
+  "engine-oil-service": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_bottom.jpg",
+    "caption": "Oil drain plug at the bottom of the engine, pan below"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_drain_side.jpg",
+    "caption": "Oil drain bolt on the side of the crankcase"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "caption": "Drain plug with a magnet to catch steel particles"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_cartridge_tools.jpg",
+    "caption": "Spin-on filter with a T-handle filter wrench"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_adding_oil.jpg",
+    "caption": "Pouring oil into a single-cylinder engine"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_gear_return_spring_bolts.jpg",
+    "caption": "Diagram marking the gearshift spring bolt not to remove"
+   }
+  ],
+  "drain-plug-seal": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+    "caption": "Strong drain plug with a flanged head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+    "caption": "Drain plug with a weak Allen socket head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "caption": "Drain plug with a magnet to catch steel particles"
+   }
+  ],
+  "two-stroke-oil-pump": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+    "caption": "Yamaha-type oil injection pump"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_mikuni_autolube_pump.jpg",
+    "caption": "Mikuni-type oil injection pump"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+    "caption": "Pin and dot marks on a Yamaha-type pump pulley"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_two_lines.jpg",
+    "caption": "Two lines to align on a Mikuni-type pump"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_if_there_no_bleed_screw_loosen.jpg",
+    "caption": "Oil pump with a bleed screw on its side"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump_description_exploded_yamaha_2.jpg",
+    "caption": "Table of pump output figures for several models"
+   }
+  ],
+  "oil-inspect": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "caption": "Magnet on a drain plug collects steel particles"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+    "caption": "Coarse oil screen and spring on a plug"
+   }
+  ]
+ },
+ "parts": {
+  "engine_oil": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/050/050_labeled.jpg",
+    "caption": "API service mark with SAE 10W-40 and no Energy Conserving text"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/050/050_lighter_weights_oil_10w_30_lighter.jpg",
+    "caption": "API SJ 10W-30 mark with Energy Conserving text"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/050/050_starburst.jpg",
+    "caption": "API starburst symbol for gasoline engines"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_adding_oil.jpg",
+    "caption": "Pouring oil into a single-cylinder engine"
+   }
+  ],
+  "oil_filter": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_cartridge_oil_filter.jpg",
+    "caption": "Spin-on cartridge oil filter"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_paper_element.jpg",
+    "caption": "Paper oil filter element"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_large_thin_flat_washer_filter_spring.jpg",
+    "caption": "Filter housing parts: bolt, O-ring, spring and spring seat"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_coarse_oil_screen.jpg",
+    "caption": "Coarse oil screen and spring on a plug"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_clutch_hub_centrifugal_oil_filter.jpg",
+    "caption": "Centrifugal oil filter in the middle of a clutch hub"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_cup_centrifugal_oil_filter.jpg",
+    "caption": "Centrifugal filter cup behind a side cover"
+   }
+  ],
+  "drain_plug": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+    "caption": "Strong drain plug with a flanged head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_i_took_one.jpg",
+    "caption": "Drain plug with a weak Allen socket head"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/051/051_small_magnets.jpg",
+    "caption": "Drain plug with a magnet to catch steel particles"
+   }
+  ],
+  "two_stroke_oil_pump": [
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_yamaha_autolube_pump.jpg",
+    "caption": "Yamaha-type oil injection pump"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_mikuni_autolube_pump.jpg",
+    "caption": "Mikuni-type oil injection pump"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_then_worst_will_happen_will_foul.jpg",
+    "caption": "Cutaway of an oil injection pump with labelled parts"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+    "caption": "Oil tank, pump and throttle cable on a two-stroke"
+   },
+   {
+    "file": "source/dansmc/03_Lubrication_Oil/053/053_pin_dot.jpg",
+    "caption": "Pin and dot marks on a Yamaha-type pump pulley"
+   }
+  ]
+ },
+ "course": [
+  {
+   "chapter": "m2-lubrication-cooling",
+   "file": "source/dansmc/03_Lubrication_Oil/051/051_cartridge_oil_filter.jpg",
+   "caption": "Spin-on cartridge oil filter"
+  },
+  {
+   "chapter": "m2-lubrication-cooling",
+   "file": "source/dansmc/03_Lubrication_Oil/051/051_dry_sump_oil_tank.jpg",
+   "caption": "Separate oil tank of a dry-sump engine"
+  },
+  {
+   "chapter": "m2-lubrication-cooling",
+   "file": "source/dansmc/03_Lubrication_Oil/052/052_high_low_marks.jpg",
+   "caption": "Dipstick with high and low marks"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/03_Lubrication_Oil/053/053_then_worst_will_happen_will_foul.jpg",
+   "caption": "Cutaway of an oil injection pump with labelled parts"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/03_Lubrication_Oil/054/054_yamaha_autolube_rotary_valve.jpg",
+   "caption": "Oil tank, pump and throttle cable on a two-stroke"
+  },
+  {
+   "chapter": "m2-two-stroke",
+   "file": "source/dansmc/03_Lubrication_Oil/049/049_ratio_rite.jpg",
+   "caption": "Ratio cup used to measure two-stroke oil"
+  },
+  {
+   "chapter": "m4-maintenance",
+   "file": "source/dansmc/03_Lubrication_Oil/051/051_oil_filter_cartridge_tools.jpg",
+   "caption": "Spin-on filter with a T-handle filter wrench"
+  },
+  {
+   "chapter": "m4-maintenance",
+   "file": "source/dansmc/03_Lubrication_Oil/052/052_oil_level_plug_2.jpg",
+   "caption": "Oil level plug in the side of a crankcase"
+  },
+  {
+   "chapter": "m4-maintenance",
+   "file": "source/dansmc/03_Lubrication_Oil/051/051_bmw_twin_quite_strong.jpg",
+   "caption": "Strong drain plug with a flanged head"
+  }
+ ],
+ "systems": {}
+}

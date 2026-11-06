@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 70}
   - {doc: "K-Light 125 manual", page: 191}
   - {doc: "K-Light 125 manual", page: 235}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/bolts.htm"}
 ---
 
 # New or increased engine vibration
@@ -27,6 +28,7 @@ Yes with care while you check for loose bolts. Stop if the vibration comes with 
 - Shake the exhaust, the handlebar and the footpegs by hand. Anything loose?
 - Is the engine misfiring or idling roughly?
 - Any recent crash, engine work or new parts?
+- Check for loose bolts and worn lock washers before looking inside the engine. Vibration loosens fasteners, and a nut scraped by its lock washer shows the washer was working: [Nuts and bolts keep coming loose](/moto-zero/repair/problems/bolts-keep-loosening).
 
 ## Diagnose it step by step
 
