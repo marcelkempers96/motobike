@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="About Moto Zero"><title>About Moto Zero</title><g fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 28 C26 23 38 23 48 30 C58 23 70 23 82 28 V72 C70 67 58 67 48 74 C38 67 26 67 14 72 Z"/><path d="M48 30 V74"/>
+<path d="M22 40 H40 M22 48 H40 M22 56 H35"/></g>
+<circle cx="65" cy="49" r="11" fill="none" stroke="#C4452B" stroke-width="3.5"/><circle cx="65" cy="49" r="3" fill="#C4452B"/>
+<path d="M65 38 V60 M54 49 H76" stroke="#C4452B" stroke-width="1.5"/></svg>
