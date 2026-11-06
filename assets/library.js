@@ -2,6 +2,7 @@
    only starts when a model is opened, and is released when you go back. */
 import { MODELS } from './content/assets-map.js';
 import SIZES from './content/model-sizes.js';
+import { BIKE_PART_GROUPS } from './content/bike-part-models.js';
 const DL = (k) => `../assets/models-download/${k}.glb`;
 import { createViewer, webglOK, humanize, renderFor } from './viewer3d.js';
 import { recordTool } from './progress.js';
@@ -11,6 +12,7 @@ const $ = (s) => document.querySelector(s);
 const root = $('#lib');
 const RB = '../assets/renders/';
 const CATS = { bikes: 'Complete motorcycles', powertrain: 'Powertrain', transmission: 'Transmission', chassis: 'Chassis', frame_body: 'Frame and body', wheels: 'Wheels', electrical: 'Electrical', wiring: 'Wiring' };
+Object.entries(BIKE_PART_GROUPS).forEach(([b, n]) => { CATS['from_' + b] = `Parts of the ${n.toLowerCase()}`; });
 const BIKE_CATS = ['powertrain', 'transmission', 'chassis', 'frame_body', 'wheels', 'electrical', 'wiring'];
 const KEYS = Object.keys(MODELS);
 let viewer = null;

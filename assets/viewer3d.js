@@ -25,7 +25,7 @@ export function webglOK() {
 }
 
 /* Rendered stills (assets/renders/*.webp) — bikes use their side view */
-export const renderFor = (base, name) => `${base}${name.startsWith('bike_') ? name + '_side' : name}.webp`;
+export const renderFor = (base, name) => `${base}${name.startsWith('bike_') && !name.includes('__') ? name + '_side' : name}.webp`;
 
 export const humanize = (s) => s.replace(/(\d{2,}|\.\d+)(?=$|\s|_)/g, '').replace(/_/g, ' ').replace(/\s+/g, ' ').trim().replace(/\b12v\b/i, '12 V').replace(/\bhv\b/i, 'HV').replace(/\bdc dc\b/i, 'DC-DC').replace(/\btft\b/i, 'TFT').replace(/\bcdi\b/i, 'CDI').replace(/\blv\b/i, 'LV').replace(/^./, (c) => c.toUpperCase());
 
@@ -235,6 +235,25 @@ export function createViewer(el, opts = {}) {
     };
     step(); loop();
   };
+  /* Show only the meshes that match pred (a part cut out of a whole bike) and frame them closely. */
+  api.isolate = (pred, view = 'threeq') => {
+    if (!root) return 0;
+    const ms = meshes.filter((m) => pred(m.name));
+    meshes.forEach((m) => { m.visible = !ms.length || ms.includes(m); });
+    if (!ms.length) return 0;
+    const box = new THREE.Box3();
+    ms.forEach((m) => box.expandByObject(m));
+    const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+    const d = Math.max(size.length() * (view === 'side' ? 1.25 : 1.6), 0.05);
+    const dir = view === 'side' ? new THREE.Vector3(0, 0.12, 1) : view === 'front' ? new THREE.Vector3(1, 0.25, 0.2) : new THREE.Vector3(-0.62, 0.34, 0.85);
+    camera.position.copy(c).add(dir.normalize().multiplyScalar(d));
+    camera.near = d / 100; camera.far = d * 40; camera.updateProjectionMatrix();
+    controls.target.copy(c); controls.update();
+    shadow.position.set(c.x, box.min.y + 0.001, c.z);
+    shadow.scale.setScalar(Math.max(size.x, size.z) * 0.9);
+    dirty = true; loop();
+    return ms.length;
+  };
   api.reframe = (view) => { if (root) frame(null, view || opts.view); };
   api.spin = (deg) => {
     if (!wheels.length || !deg) return;
@@ -251,7 +270,7 @@ export function createViewer(el, opts = {}) {
     const r = canvas.getBoundingClientRect();
     ndc.set(((ev.clientX - r.left) / r.width) * 2 - 1, -((ev.clientY - r.top) / r.height) * 2 + 1);
     ray.setFromCamera(ndc, camera);
-    const hits = ray.intersectObjects(meshes, false).filter((h) => !(category && !h.object.name.startsWith(category + '__')) || true);
+    const hits = ray.intersectObjects(meshes.filter((m) => m.visible), false).filter((h) => !(category && !h.object.name.startsWith(category + '__')) || true);
     const visibleHit = hits.find((h) => h.object.material.opacity > 0.5) || hits[0];
     return visibleHit ? visibleHit.object : null;
   }

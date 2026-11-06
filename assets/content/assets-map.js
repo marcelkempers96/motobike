@@ -1,3 +1,4 @@
+import { BIKE_PART_MODELS } from './bike-part-models.js';
 /* ==========================================================================
    Asset map: ties every part key to the course's real assets:
    3D models (assets/models/*.glb), course plates (assets/illustrations/**.png),
@@ -126,6 +127,7 @@ export const MODELS = {
   instruments_tft: ['electrical', 'Instruments, colour TFT'],
   tail_light: ['electrical', 'LED tail light and plate light'],
   wiring_harness: ['wiring', 'Main wiring harness'],
+  ...BIKE_PART_MODELS,
 };
 
 /* Part key → models. A string, a per-mode object, or an array of variants. */

@@ -617,11 +617,10 @@ async function mountAssetsPanel(key) {
     if (name === '@bike') {
       CV3_MODEL = null;
       const match = (n) => partForMesh(n) === key;
-      await viewer.load(BIKE_MODEL[S.mode], { view: 'side' });
+      await viewer.load(BIKE_MODEL[S.mode], { view: 'threeq' });
       if (CV3 !== viewer) return;
-      viewer.setHighlight(match);
-      viewer.focus(match, false);
-      cap.textContent = `Shown in place on the ${MODE_INFO[S.mode].name.toLowerCase()}.`;
+      viewer.isolate(match, 'threeq');   // only the selected part, cut out of this bike's model
+      cap.textContent = `${partName(key)} from the ${MODE_INFO[S.mode].name.toLowerCase()}. Drag to rotate.`;
       listSubs(match, 2);
       return;
     }
@@ -632,7 +631,7 @@ async function mountAssetsPanel(key) {
     listSubs(() => true, 1);
   };
   if (models.length) {
-    vbox.innerHTML = models.length > 1 ? `<div class="ute-seg" role="group" aria-label="Model variants">${models.map((m) => `<button type="button" data-model="${m}">${m === '@bike' ? 'On this bike' : MODELS[m] ? MODELS[m][1].split(/[,(]/)[0].trim() : m}</button>`).join('')}</div>` : '';
+    vbox.innerHTML = models.length > 1 ? `<div class="ute-seg" role="group" aria-label="Model variants">${models.map((m) => `<button type="button" data-model="${m}">${m === '@bike' ? 'This bike\'s part' : MODELS[m] ? MODELS[m][1].split(/[,(]/)[0].trim() : m}</button>`).join('')}</div>` : '';
     vbox.querySelectorAll('[data-model]').forEach((b) => b.addEventListener('click', () => loadModel(b.dataset.model)));
     loadModel(models[0]);
   } else {
