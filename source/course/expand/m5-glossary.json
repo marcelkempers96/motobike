@@ -1,0 +1,138 @@
+[
+ [
+  "Active balancing",
+  "balancing that moves charge from high cell groups to low ones through switched capacitors, inductors or small transformers, at up to a few amperes with 80–90 % efficiency."
+ ],
+ [
+  "Arc flash",
+  "the burst of heat, light and molten metal released when a short circuit is drawn across battery terminals or busbars; a 72 V pack can deliver several thousand amperes."
+ ],
+ [
+  "AVD extinguisher",
+  "an aqueous vermiculite dispersion extinguisher, used to cool and coat small lithium-ion packs."
+ ],
+ [
+  "Back-EMF constant (Ke)",
+  "the back-EMF a motor generates per unit of angular speed, in V·s/rad; in SI units numerically equal to the torque constant for an ideal machine."
+ ],
+ [
+  "Battery-to-wheel efficiency",
+  "the fraction of energy taken from the traction battery that reaches the rear tyre, typically about 80 %."
+ ],
+ [
+  "Black mass",
+  "the shredded mixture of electrode materials from recycled cells, leached to recover lithium, nickel, cobalt and manganese."
+ ],
+ [
+  "Calendar ageing",
+  "capacity loss and resistance growth that proceed with time even when a battery is not used, faster at high temperature and high state of charge."
+ ],
+ [
+  "Cell-to-pack mass ratio",
+  "the fraction of a battery pack's mass that is cells; typically 60–75 % for two-wheeler packs."
+ ],
+ [
+  "Clarke and Park transforms",
+  "the coordinate changes used in field-oriented control: three phase currents to two stationary components, then to the rotor-fixed d and q components."
+ ],
+ [
+  "Coercivity",
+  "a magnet's resistance to demagnetisation by an opposing field; in NdFeB it falls by about 0.5–0.6 % per kelvin."
+ ],
+ [
+  "Common-port BMS",
+  "a BMS that charges and discharges through the same terminals and switches; a separate-port BMS has its own, usually lower-rated, charge path."
+ ],
+ [
+  "Current interrupt device (CID)",
+  "a pressure-operated disconnect inside a cylindrical cell that opens the circuit before the cell vents."
+ ],
+ [
+  "Curie temperature",
+  "the temperature above which a permanent magnet loses its magnetism entirely; 310–400 °C for NdFeB, although damage occurs far below it."
+ ],
+ [
+  "Cycle ageing",
+  "capacity loss caused by charging and discharging, depending on depth of discharge, current and temperature."
+ ],
+ [
+  "Duty cycle",
+  "the fraction of each PWM switching period during which the high-side switch conducts; it sets the average phase voltage."
+ ],
+ [
+  "Efficiency map",
+  "a plot of contours of constant motor efficiency on the torque-speed plane."
+ ],
+ [
+  "Four-wire measurement",
+  "a resistance measurement that injects current through one pair of leads and measures voltage with another, so lead resistance does not affect milliohm readings."
+ ],
+ [
+  "Lorentz force",
+  "the force on a current-carrying conductor in a magnetic field, F = B × I × L, the origin of motor torque."
+ ],
+ [
+  "Maximum continuous rated power",
+  "the power an electric drive can sustain for 30 minutes on a test bench (UNECE R85), used for vehicle category limits."
+ ],
+ [
+  "Open-circuit voltage (OCV)",
+  "the voltage of a cell at rest with no current; used with a lookup table to estimate state of charge."
+ ],
+ [
+  "Passive balancing",
+  "balancing that bleeds charge from high cell groups as heat through resistors, typically at 30–200 mA near the top of charge."
+ ],
+ [
+  "Performance ratio",
+  "the fraction of a solar array's rated output actually delivered after temperature, soiling, inverter and wiring losses, typically 0.7–0.8."
+ ],
+ [
+  "Pole pair",
+  "one north and one south magnetic pole on a motor rotor; the electrical frequency equals pole pairs times revolutions per second."
+ ],
+ [
+  "Reluctance torque",
+  "torque produced by rotor iron tending to align with the stator field; present in interior permanent-magnet motors where Lq exceeds Ld."
+ ],
+ [
+  "Remanence",
+  "the flux density a magnet retains with no applied field; 1.2–1.45 T for NdFeB, falling about 0.11–0.12 % per kelvin."
+ ],
+ [
+  "Second life",
+  "reuse of a retired traction battery, typically at 70–80 % SOH, in less demanding stationary storage."
+ ],
+ [
+  "Shoot-through",
+  "simultaneous conduction of the high-side and low-side switches of one inverter leg, which short-circuits the DC link."
+ ],
+ [
+  "Slip",
+  "the amount by which the rotor of an induction motor runs slower than the rotating field, typically 2–5 % at rated load."
+ ],
+ [
+  "Space-vector PWM",
+  "a modulation method for three-phase inverters that uses the DC-link voltage about 15 % more effectively than simple sinusoidal PWM."
+ ],
+ [
+  "Surface permanent-magnet (SPM) motor",
+  "a motor with magnets bonded to the rotor surface; magnetically round, so torque comes only from the magnets."
+ ],
+ [
+  "Tank-to-wheel efficiency",
+  "the fraction of fuel energy that reaches the rear tyre of a petrol motorcycle, about 10–20 % in urban riding."
+ ],
+ [
+  "Live-dead-live",
+  "the zero-voltage verification method of proving a meter on a known live source, testing the isolated circuit, then proving the meter again."
+ ],
+ [
+  "Axial-flux motor",
+  "a motor in which flux crosses a flat disc-shaped air gap parallel to the shaft, giving high torque in a short axial length."
+ ],
+ [
+  "Induction motor",
+  "a magnet-free motor in which the stator field induces currents in a squirrel-cage rotor that runs with slip."
+ ]
+]

@@ -1,0 +1,130 @@
+[
+ [
+  "Blowdown period (exhaust lead)",
+  "in a two-stroke, the crank angle between the exhaust port opening and the transfer ports opening, during which cylinder pressure falls below crankcase pressure."
+ ],
+ [
+  "Boost port",
+  "a transfer port opposite the exhaust port that sends charge up the rear cylinder wall, filling the region the main transfer streams leave stagnant."
+ ],
+ [
+  "Bore/stroke ratio",
+  "bore divided by stroke; above 1 is over-square (short stroke), below 1 is under-square (long stroke)."
+ ],
+ [
+  "Brake thermal efficiency",
+  "brake power divided by the rate of chemical energy supplied in the fuel; about 28–32 % at best in a small air-cooled petrol engine."
+ ],
+ [
+  "Cam chain tensioner",
+  "spring-loaded ratchet or wedge plunger that presses a slipper blade against the cam chain to take up slack; automatic types can advance but not retreat."
+ ],
+ [
+  "Centrifugal oil filter",
+  "a rotor on the crankshaft of CG-type engines that spins sludge to its outer wall and must be opened and cleaned at service."
+ ],
+ [
+  "Collets (cotters)",
+  "two split tapered pieces that lock the valve spring retainer into a groove near the tip of the valve stem."
+ ],
+ [
+  "Crossplane crankshaft",
+  "inline-four crankshaft with crankpins at 90° intervals, which cancels inertial torque fluctuations and gives uneven firing intervals."
+ ],
+ [
+  "Delivery ratio",
+  "two-stroke equivalent of volumetric efficiency, based on one induction per revolution."
+ ],
+ [
+  "Effective (dynamic) compression ratio",
+  "compression ratio counted from the point where the inlet valve (four-stroke) or exhaust port (two-stroke) actually closes, lower than the geometric ratio."
+ ],
+ [
+  "Keystone ring",
+  "piston ring of tapered section, common in two-strokes, that flexes in its groove and resists sticking with carbon."
+ ],
+ [
+  "Leakage percentage",
+  "in a leak-down test, the fall from input pressure to cylinder pressure as a percentage of input pressure."
+ ],
+ [
+  "Lobe centre",
+  "crank angle at which a cam lobe gives maximum valve lift, used to check that a camshaft is correctly timed."
+ ],
+ [
+  "Napier ring",
+  "second compression ring with a hooked lower edge that scrapes oil downward; fitted with the notch pointing down."
+ ],
+ [
+  "Over-square",
+  "engine whose bore is larger than its stroke, favouring high rpm."
+ ],
+ [
+  "Plug chop",
+  "stopping the engine under load to read the spark plug for the combustion at that load, free of idling soot."
+ ],
+ [
+  "Pressed-up crankshaft",
+  "built-up crankshaft of two flywheel webs joined by a pressed-in crankpin, used with one-piece rods and roller big ends."
+ ],
+ [
+  "Pressure cap",
+  "radiator or header tank cap that holds the cooling system at typically 0.9–1.4 bar above atmospheric, raising the coolant boiling point."
+ ],
+ [
+  "Pumping work",
+  "work the piston spends drawing charge in and pushing exhaust out, greatest at part throttle where it works against manifold vacuum."
+ ],
+ [
+  "Residual gas",
+  "burnt gas left in the clearance volume at the end of the exhaust stroke, typically 5–15 % of the charge."
+ ],
+ [
+  "Ring end gap",
+  "gap between the ends of a piston ring fitted in the bore, allowing for thermal expansion; measured with feeler gauges."
+ ],
+ [
+  "Rotary (disc) valve",
+  "two-stroke inlet valve formed by a disc with a cut-out sector on the crankshaft, giving fixed asymmetric inlet timing."
+ ],
+ [
+  "Secondary inertia force",
+  "reciprocating force at twice crank frequency, about r/l of the primary force, caused by the finite length of the connecting rod."
+ ],
+ [
+  "Short-circuiting",
+  "loss of fresh two-stroke charge straight from the transfer ports out of the exhaust port during scavenging."
+ ],
+ [
+  "Stoichiometric ratio",
+  "chemically correct air-fuel ratio for complete combustion, about 14.7:1 by mass for petrol."
+ ],
+ [
+  "Thermostat",
+  "wax-element valve that keeps coolant in the engine until about 80–85 °C, then opens progressively to the radiator."
+ ],
+ [
+  "Trochoid pump",
+  "oil pump with an inner rotor having one lobe fewer than the outer rotor, so the chambers between them pump oil as they turn."
+ ],
+ [
+  "Under-square",
+  "engine whose stroke is longer than its bore, favouring low-speed torque."
+ ],
+ [
+  "Valve duration",
+  "crank angle during which a valve is open, for the inlet IVO + 180° + IVC."
+ ],
+ [
+  "Valve seat",
+  "hard ring of sintered iron or bronze alloy shrunk into the head, with a 45° sealing face on which the valve closes."
+ ],
+ [
+  "Valve stem seal",
+  "seal on top of the valve guide that meters oil to the stem and stops vacuum drawing oil down the inlet guide."
+ ],
+ [
+  "Wet compression test",
+  "compression test repeated with about 5 mL of oil in the cylinder; a large rise points to rings, piston or bore rather than valves."
+ ]
+]

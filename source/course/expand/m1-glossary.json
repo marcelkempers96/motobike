@@ -1,0 +1,102 @@
+[
+ [
+  "Balance shaft",
+  "a counterweighted shaft driven from the crankshaft, at engine speed or twice engine speed, that cancels part of the primary or secondary shaking force."
+ ],
+ [
+  "Battery swapping",
+  "replacing a discharged traction battery with a charged one at a station in one to two minutes instead of charging it on the vehicle."
+ ],
+ [
+  "Brake thermal efficiency",
+  "the fraction of the fuel's chemical energy that an engine delivers as work at the crankshaft."
+ ],
+ [
+  "Cush drive",
+  "rubber blocks between the rear sprocket carrier and the wheel hub that absorb drive-line shocks."
+ ],
+ [
+  "False neutral",
+  "a gear lever position between two gears in which no gear is engaged, caused by an incomplete lever movement."
+ ],
+ [
+  "Final drive ratio",
+  "rear sprocket teeth divided by front sprocket teeth."
+ ],
+ [
+  "Free play",
+  "the movement of a lever, pedal or throttle before it starts to act, set so the control returns fully without dragging."
+ ],
+ [
+  "Gradient resistance",
+  "the component of weight acting down a slope, m × g × sin θ."
+ ],
+ [
+  "Hub motor",
+  "an electric motor built into the wheel hub; simple, but it adds unsprung mass."
+ ],
+ [
+  "Lean angle",
+  "the angle of the motorcycle from vertical in a turn; in a steady turn tan θ = v² / (g × r)."
+ ],
+ [
+  "Mid-drive",
+  "an electric motor mounted in the frame that drives the rear wheel by chain or belt, keeping unsprung mass low."
+ ],
+ [
+  "Nut factor",
+  "the empirical constant K in T = K × d × F linking tightening torque to clamp load, about 0.20 dry and 0.15 oiled."
+ ],
+ [
+  "Outside micrometer",
+  "a screw-thread measuring instrument that reads external dimensions to 0.01 mm."
+ ],
+ [
+  "Overall ratio",
+  "the product of primary reduction, gear ratio and final drive ratio: engine turns per rear-wheel turn."
+ ],
+ [
+  "Power-to-mass ratio",
+  "maximum power divided by mass, in kW/kg; limited to 0.1 for L3e-A1 and 0.2 for L3e-A2."
+ ],
+ [
+  "Primary inertia force",
+  "the shaking force from the reciprocating piston and small end at crankshaft frequency."
+ ],
+ [
+  "Rolling radius",
+  "the effective radius of a loaded tyre, smaller than half its unloaded diameter."
+ ],
+ [
+  "Secondary inertia force",
+  "the shaking force at twice crankshaft frequency caused by connecting-rod angularity."
+ ],
+ [
+  "Screw extractor",
+  "a hardened, left-hand tapered tool driven into a drilled hole to unscrew a broken bolt."
+ ],
+ [
+  "Stoichiometric mixture",
+  "the air-fuel ratio at which all fuel and oxygen can react, 14.7:1 for petrol (λ = 1)."
+ ],
+ [
+  "Thread insert",
+  "a coiled wire insert fitted in an oversize tapped hole to restore a damaged thread to its original size."
+ ],
+ [
+  "Three-way catalytic converter",
+  "an exhaust catalyst that converts HC, CO and NOx together, effective only near λ = 1."
+ ],
+ [
+  "Total indicator reading (TIR)",
+  "the difference between the highest and lowest dial gauge readings over one turn of a part."
+ ],
+ [
+  "Underbone",
+  "a frame with a single spine tube or pressed-steel backbone and the engine hung beneath it, used on step-throughs."
+ ],
+ [
+  "Waisted bolt",
+  "a bolt whose shank is thinner than its thread so that it stretches evenly under high load."
+ ]
+]

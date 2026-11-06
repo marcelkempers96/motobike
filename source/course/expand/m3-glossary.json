@@ -1,0 +1,114 @@
+[
+ [
+  "Accelerator pump",
+  "a throttle-linked diaphragm pump on some carburettors that squirts fuel into the bore when the throttle snaps open, covering the lean stumble caused by fuel lag."
+ ],
+ [
+  "Air bleed",
+  "a calibrated air passage that emulsifies fuel with air before it reaches a carburettor nozzle, helping hold the mixture steady as airflow rises."
+ ],
+ [
+  "Air screw",
+  "a pilot-circuit adjuster on the intake side of the slide; turning it out admits more air and leans the idle mixture (compare fuel screw)."
+ ],
+ [
+  "Atomisation",
+  "the break-up of fuel into fine droplets as it leaves a nozzle or injector, before it evaporates (vaporisation)."
+ ],
+ [
+  "Back-probing",
+  "measuring at a connector from the wire side, beside the seal or with a purpose-made pin, so the circuit keeps working and the insulation is not pierced."
+ ],
+ [
+  "Dead time",
+  "the delay between an injector being energised and its valve opening fully, typically 0.6 to 1.2 ms and longer at low battery voltage; the ECU adds it to every pulse."
+ ],
+ [
+  "Deceleration fuel cut-off",
+  "an ECU strategy that stops injection entirely with the throttle closed above a threshold speed and resumes near idle."
+ ],
+ [
+  "Enricher",
+  "a cold-start plunger circuit in a carburettor that draws extra fuel through a starter jet; it works best with the throttle closed."
+ ],
+ [
+  "Exciter coil",
+  "a stator winding that charges the capacitor of an AC-CDI ignition to 100 to 400 V without a battery."
+ ],
+ [
+  "Freeze frame",
+  "engine data (speed, temperature, load) stored by the ECU at the moment a fault code was set."
+ ],
+ [
+  "Fuel screw",
+  "a pilot-circuit adjuster on the engine side of the slide; turning it out richens the idle mixture (compare air screw)."
+ ],
+ [
+  "Helmholtz resonator",
+  "an enclosed volume with a neck, such as an airbox, whose air resonates at one frequency; used to tune intake pressure waves and reduce intake noise."
+ ],
+ [
+  "Ignition reserve",
+  "the margin between the voltage an ignition coil can deliver and the voltage the spark plug needs to break down."
+ ],
+ [
+  "Inductive kick",
+  "the high self-induced voltage, typically 200 to 400 V, in a coil primary when its current is suddenly interrupted."
+ ],
+ [
+  "Injector duty cycle",
+  "the fraction of the available time between injections for which an injector is held open; kept below about 80 to 85 % at peak power."
+ ],
+ [
+  "Internal resistance",
+  "the resistance inside a battery that lowers its terminal voltage under load; it rises as a battery ages or sulphates and is seen only by a load test."
+ ],
+ [
+  "Light-off temperature",
+  "the temperature, about 250 to 300 °C, above which a catalytic converter begins to convert pollutants effectively."
+ ],
+ [
+  "NTC thermistor",
+  "a temperature sensor whose resistance falls as temperature rises; used for engine and intake air temperature."
+ ],
+ [
+  "Peak-voltage adapter",
+  "a meter accessory that captures the peak of short pulses from pulser, exciter and coil primary circuits, which a normal multimeter cannot register."
+ ],
+ [
+  "Pulser coil",
+  "a pick-up coil facing a tab on the flywheel that tells the ignition unit when to fire."
+ ],
+ [
+  "Reach",
+  "the threaded length of a spark plug; it must match the cylinder head so the plug neither strikes the piston nor leaves exposed threads."
+ ],
+ [
+  "Self-learning",
+  "long-term adaptive fuel corrections stored by the ECU for each load region, so that closed-loop trim stays near zero as the engine wears."
+ ],
+ [
+  "Slide cutaway",
+  "the angled cut on the intake side of a carburettor slide that controls mixture from about 1/8 to 1/4 throttle; a higher cutaway leans it."
+ ],
+ [
+  "Stick coil",
+  "an ignition coil mounted directly on the spark plug, one per cylinder, with no HT lead."
+ ],
+ [
+  "Sulphation",
+  "the growth of hard lead sulphate crystals in a lead-acid battery left partly discharged, permanently reducing capacity and cranking current."
+ ],
+ [
+  "Synchronisation (balancing)",
+  "adjusting the throttle linkage of a multi-cylinder engine so that every intake depression agrees, typically within 10 to 20 mmHg."
+ ],
+ [
+  "Vacuum-operated fuel tap",
+  "a fuel tap with a diaphragm worked by intake depression, so fuel flows only while the engine turns; PRI bypasses it to fill an empty bowl."
+ ],
+ [
+  "Wideband oxygen sensor",
+  "a five-wire sensor that pumps oxygen ions to hold a measuring cell at lambda 1 and reports the pump current, giving a proportional lambda reading."
+ ]
+]
