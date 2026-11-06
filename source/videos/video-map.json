@@ -26,7 +26,10 @@
  "toVfvRhWbj8": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "carb-overflowing",
+   "runs-lean"
+  ],
   "parts": [],
   "course": [
    "m3-mixture"
@@ -36,7 +39,13 @@
  "eKUEZY3R3cI": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "low-compression",
+   "two-stroke-crankcase-leak",
+   "exhaust-blocked",
+   "oily-exhaust",
+   "two-stroke-oil-not-used"
+  ],
   "parts": [
    "engine",
    "cylinder"
@@ -60,7 +69,12 @@
   "repairs": [],
   "problems": [
    "cvt-slip",
-   "cvt-low-top-speed"
+   "cvt-low-top-speed",
+   "cvt-judder",
+   "cvt-noise",
+   "cvt-belt-broken",
+   "cvt-creeps",
+   "revs-without-speed"
   ],
   "parts": [
    "cvt_belt",
@@ -75,7 +89,9 @@
  "mdOJ717PKRc": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "cranks-no-start"
+  ],
   "parts": [
    "engine"
   ],
@@ -145,7 +161,16 @@
  "g8xnIFf4id4": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "clunk-into-first",
+   "false-neutral",
+   "hard-gear-change",
+   "jumps-out-of-gear",
+   "stuck-in-gear",
+   "gear-lever-no-return",
+   "gearbox-whine",
+   "hard-to-find-neutral"
+  ],
   "parts": [
    "gearbox",
    "gearbox_gears",
@@ -154,7 +179,7 @@
   "course": [
    "m4-gearbox"
   ],
-  "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks."
+  "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks. Shows shift drum, forks and dogs, which explains false neutrals, jumping out and hard shifts."
  },
  "VnPYdcbcAe0": {
   "role": "explainer",
@@ -195,7 +220,20 @@
  "6c4deRAhqcA": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "spongy-brake",
+   "brake-fluid-dark",
+   "lever-sinks",
+   "lever-to-bar",
+   "brake-fluid-leak",
+   "brake-drag",
+   "caliper-sticking",
+   "brake-fade",
+   "weak-brakes",
+   "brake-grinding",
+   "brake-squeal",
+   "pads-uneven"
+  ],
   "parts": [
    "brake",
    "brake_caliper",
@@ -204,7 +242,7 @@
   "course": [
    "m4-brakes"
   ],
-  "note": "Animation of how a disc brake works: lever, fluid, caliper and pads."
+  "note": "Animation of how a disc brake works: lever, fluid, caliper and pads. Shows the whole hydraulic path, so a soft lever, drag or weak braking can be traced to a part."
  },
  "XgPpLKCUlbA": {
   "role": "tutorial",
@@ -212,7 +250,9 @@
    "chain-clean-lube"
   ],
   "problems": [
-   "chain-dry-rusty"
+   "chain-dry-rusty",
+   "chain-noise",
+   "chain-stretches-fast"
   ],
   "parts": [
    "chain"
@@ -223,7 +263,10 @@
  "zhUI7MWE_Fc": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "pinking",
+   "poor-hill-climbing"
+  ],
   "parts": [],
   "course": [
    "m2-fundamentals"
@@ -246,7 +289,10 @@
    "spark-plug-service",
    "front-end-align"
   ],
-  "problems": [],
+  "problems": [
+   "chain-snapped",
+   "pulls-to-side"
+  ],
   "parts": [],
   "course": [],
   "note": "Four jobs: wheel balance, plug gap, joining a chain and wheel alignment. Check specs for your bike."
@@ -254,7 +300,10 @@
  "ZRNfyz1Cgvg": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "injector-fault",
+   "dirty-throttle-body"
+  ],
   "parts": [
    "injector",
    "throttle_body"
@@ -268,7 +317,12 @@
  "AwXRvgyFUG4": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "injector-fault",
+   "dirty-throttle-body",
+   "engine-warning-light",
+   "fuel-pump-silent"
+  ],
   "parts": [
    "injector"
   ],
@@ -339,7 +393,13 @@
    "chain-adjust"
   ],
   "problems": [
-   "chain-noise"
+   "chain-noise",
+   "chain-stretches-fast",
+   "chain-tight-spots",
+   "chain-rubbing",
+   "chain-jumps",
+   "sprocket-worn",
+   "chain-adjuster-at-end"
   ],
   "parts": [
    "chain"
@@ -378,7 +438,13 @@
  "4zAplxUyWm0": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "weak-brakes",
+   "brake-grinding",
+   "wheel-bearing-noise",
+   "fork-leak",
+   "chain-snapped"
+  ],
   "parts": [],
   "course": [],
   "note": "Neglected maintenance items that can fail dangerously (brakes, chain, fork seals, bearings); motivation, not a procedure."
@@ -386,19 +452,27 @@
  "6rXmT8KU0fQ": {
   "role": "case-study",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "cranks-no-start",
+   "misfire-ignition-or-fuel"
+  ],
   "parts": [],
   "course": [
    "m2-diagnosis"
   ],
-  "note": "Cheap Suzuki: diagnose why it will not run, step by step; a good example of reasoning order."
+  "note": "Cheap Suzuki: diagnose why it will not run, step by step; a good example of reasoning order. Worth watching for the order of checks: fuel, spark, compression."
  },
  "jAZd_3o5TQ8": {
   "role": "explainer",
   "repairs": [],
   "problems": [
    "clutch-slip",
-   "clutch-drag"
+   "clutch-drag",
+   "heavy-clutch",
+   "clutch-judder",
+   "clutch-noise",
+   "auto-clutch-fault",
+   "revs-without-speed"
   ],
   "parts": [
    "clutch",
@@ -413,7 +487,9 @@
  "t1G1VWd9B90": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "oil-warning-light"
+  ],
   "parts": [
    "engine_oil",
    "oil_pump"
@@ -475,7 +551,8 @@
    "chain-clean-lube"
   ],
   "problems": [
-   "chain-dry-rusty"
+   "chain-dry-rusty",
+   "chain-noise"
   ],
   "parts": [
    "chain"
@@ -564,7 +641,10 @@
  "eIXDDj1MSLE": {
   "role": "tutorial",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "wet-connectors",
+   "no-start-after-rain"
+  ],
   "parts": [],
   "course": [
    "m4-maintenance"
@@ -588,7 +668,13 @@
   "problems": [
    "hard-cold-start",
    "rough-idle",
-   "stalls-at-idle"
+   "stalls-at-idle",
+   "starts-only-with-choke",
+   "hunting-idle",
+   "stale-fuel",
+   "no-start-after-storage",
+   "cranks-no-start",
+   "starts-then-dies"
   ],
   "parts": [
    "carb"
@@ -610,13 +696,19 @@
    "carburettor-clean"
   ],
   "problems": [
-   "rough-idle"
+   "rough-idle",
+   "carb-no-fuel",
+   "stalls-at-idle",
+   "fuel-starvation",
+   "water-in-fuel",
+   "stale-fuel",
+   "hesitation"
   ],
   "parts": [
    "carb"
   ],
   "course": [],
-  "note": "Take a carburettor apart, clean jets and passages, keep parts organised; values are for that carb."
+  "note": "Take a carburettor apart, clean jets and passages, keep parts organised; values are for that carb. Useful when fuel is not reaching the engine or idle is unstable; carburettor passages are the usual culprit."
  },
  "fUWO0SQX6-U": {
   "role": "tutorial",
@@ -625,7 +717,10 @@
   ],
   "problems": [
    "spongy-brake",
-   "brake-fluid-dark"
+   "brake-fluid-dark",
+   "lever-sinks",
+   "lever-to-bar",
+   "brake-fade"
   ],
   "parts": [
    "brake_fluid"
@@ -696,7 +791,12 @@
  "Xtghypx8mII": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "clunk-into-first",
+   "false-neutral",
+   "hard-gear-change",
+   "hard-to-find-neutral"
+  ],
   "parts": [
    "gearbox"
   ],
@@ -732,7 +832,12 @@
   "problems": [
    "clutch-drag",
    "clutch-slip",
-   "heavy-clutch"
+   "heavy-clutch",
+   "clutch-judder",
+   "clutch-no-resistance",
+   "hard-to-find-neutral",
+   "hard-gear-change",
+   "clunk-into-first"
   ],
   "parts": [
    "clutch_cable"
@@ -749,7 +854,15 @@
   ],
   "problems": [
    "not-charging",
-   "overcharging"
+   "overcharging",
+   "regulator-hot",
+   "dim-lights-idle",
+   "new-battery-dies",
+   "battery-flat",
+   "headlight-dim",
+   "headlight-flicker",
+   "bulbs-blow-often",
+   "battery-swollen"
   ],
   "parts": [
    "stator",
@@ -758,7 +871,7 @@
   "course": [
    "m3-battery-charging"
   ],
-  "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific."
+  "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific. Shows the multimeter tests and what a good or bad reading means; values are for that bike."
  },
  "98nldJ0RPCA": {
   "role": "skip",
@@ -788,7 +901,12 @@
    "chain-size-identify"
   ],
   "problems": [
-   "sprocket-worn"
+   "sprocket-worn",
+   "chain-stretches-fast",
+   "chain-tight-spots",
+   "chain-jumps",
+   "chain-snapped",
+   "chain-adjuster-at-end"
   ],
   "parts": [
    "front_sprocket",
@@ -863,7 +981,12 @@
  "2m2EGXlwMIs": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "tappet-tick",
+   "cam-chain-rattle",
+   "bearing-rumble",
+   "deep-knock"
+  ],
   "parts": [
    "clutch"
   ],
@@ -880,13 +1003,27 @@
   ],
   "problems": [
    "carb-overflowing",
-   "rough-idle"
+   "rough-idle",
+   "carb-no-fuel",
+   "bogs-full-throttle",
+   "hesitation",
+   "flat-spot",
+   "runs-rich",
+   "runs-lean",
+   "black-smoke",
+   "flooded-engine",
+   "fuel-leak",
+   "fuel-smell",
+   "high-fuel-use",
+   "surging-cruise",
+   "fuel-starvation",
+   "starts-then-dies"
   ],
   "parts": [
    "carb"
   ],
   "course": [],
-  "note": "Five common carburettor problems (jets, float, worn parts) and how to deal with them."
+  "note": "Five common carburettor problems (jets, float, worn parts) and how to deal with them. Good first watch for a faulty carburettor: float, jet and worn-part symptoms."
  },
  "Y0c1rVgTg5g": {
   "role": "tutorial",
@@ -927,7 +1064,10 @@
  "T2qsXdZYY_M": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "jumps-out-of-gear",
+   "gearbox-whine"
+  ],
   "parts": [
    "gearbox_gears"
   ],
@@ -939,7 +1079,9 @@
   "repairs": [
    "chain-clean-lube"
   ],
-  "problems": [],
+  "problems": [
+   "chain-dry-rusty"
+  ],
   "parts": [],
   "course": [],
   "note": "Clean and lube a chain the right way; a newer take on the standard procedure."
@@ -947,10 +1089,25 @@
  "Xd-4ccKrerE": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "carb-overflowing",
+   "hard-cold-start",
+   "starts-only-with-choke",
+   "choke-stuck",
+   "hunting-idle",
+   "bogs-full-throttle",
+   "hesitation",
+   "flat-spot",
+   "runs-rich",
+   "runs-lean",
+   "black-smoke",
+   "high-fuel-use",
+   "surging-cruise",
+   "hanging-revs"
+  ],
   "parts": [],
   "course": [],
-  "note": "Carburettor basics for motorcycles and ATVs: what each part does."
+  "note": "Carburettor basics for motorcycles and ATVs: what each part does. Shows which carburettor circuit (pilot, needle, main) controls which throttle range, to place a fault."
  },
  "6DA_b0uuuVc": {
   "role": "skip",
@@ -993,7 +1150,13 @@
  "uz_p-iu9C_s": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "fork-bottoming",
+   "fork-harsh",
+   "rear-bouncy",
+   "rear-harsh",
+   "rear-sagging"
+  ],
   "parts": [
    "rear_shock",
    "forks"
@@ -1021,7 +1184,12 @@
  "Nmz1QJTDzO8": {
   "role": "explainer",
   "repairs": [],
-  "problems": [],
+  "problems": [
+   "headshake",
+   "weave",
+   "heavy-steering",
+   "pulls-to-side"
+  ],
   "parts": [
    "frame",
    "steering_stem"
@@ -1038,20 +1206,26 @@
   ],
   "problems": [
    "not-charging",
-   "stator-burnt"
+   "stator-burnt",
+   "dim-lights-idle"
   ],
   "parts": [
    "stator"
   ],
   "course": [],
-  "note": "Test a dirt bike stator, single phase and three phase; values are for that bike only."
+  "note": "Test a dirt bike stator, single phase and three phase; values are for that bike only. Also a good stator test for dim lights or a flat battery; values are for that bike only."
  },
  "Bt2eYZMlTFI": {
   "role": "tutorial",
   "repairs": [
    "coolant-replace"
   ],
-  "problems": [],
+  "problems": [
+   "overheating-liquid",
+   "coolant-leak",
+   "temp-gauge-high",
+   "radiator-damage"
+  ],
   "parts": [
    "coolant",
    "radiator"
@@ -1075,7 +1249,13 @@
    "engine-oil-service",
    "drain-plug-seal"
   ],
-  "problems": [],
+  "problems": [
+   "oil-darkens-quickly",
+   "oil-overfilled",
+   "oil-leak-drain-plug",
+   "oil-level-falling",
+   "oil-warning-light"
+  ],
   "parts": [
    "engine_oil",
    "oil_filter",
