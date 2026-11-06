@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: Brand a bike (/brand/). Pick one of the eight bikes, add up to
+   Moto Zero: Brand a bike (/brand/). Pick one of the ten bikes, add up to
    three logos as decals (three.js DecalGeometry) at preset spots or where the
    visitor taps, recolour the bodywork, download a PNG and send a branding
    request (Supabase storage + table, then a FormSubmit email).
