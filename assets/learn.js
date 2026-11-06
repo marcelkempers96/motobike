@@ -266,9 +266,10 @@ function renderModuleIndex(mod) {
         <p>${mod.intro}</p>
         <div class="ute-chapter-foot">
           <a class="ute-linkbtn is-warm" href="#${mod.chapters[0].id}">Start chapter ${mod.num}.1 →</a>
-          <a class="ute-linkbtn" href="${ROOT}assets/pdf/${mod.pdf}" target="_blank" rel="noopener">Download the PDF</a>
+          <a class="ute-linkbtn" href="${ROOT}assets/pdf/${mod.pdf}" target="_blank" rel="noopener" title="Earlier, shorter edition. Sign in to download.">Download the PDF (older edition)</a>
           <a class="ute-linkbtn" href="${ROOT}quiz/?topic=${mod.id}">Quiz this module</a>
         </div>
+        <p class="mz-pdf-note-small">The PDF is the earlier, shorter edition of this module; the chapters on this page are the current, fuller version. Sign in with a free account to download it.</p>
       </div>
     </section>
     <section class="ute-chapter">

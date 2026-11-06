@@ -1306,3 +1306,4 @@ font[style] { background: none !important; box-shadow: none !important; }
 .mz-eqsum-jump a { font: 700 13.5px/1 var(--sans); padding: 8px 10px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
 .prose .katex { font-size: 1.08em; }
 @media print { .mz-eq { break-inside: avoid; } }
+#learn-main p.mz-pdf-note-small, p.mz-pdf-note-small { margin: 10px 0 0; font-size: 14px; line-height: 1.45; color: var(--mute); max-width: 640px; }
