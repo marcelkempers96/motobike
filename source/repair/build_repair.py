@@ -103,6 +103,17 @@ for _pm in [os.path.join(SRC, 'photo-map.json')] + sorted(_glob.glob(os.path.joi
       _cur = PHOTOS[_k].setdefault(_i, [])
       for _ph in _l:
         if _ph.get('file') and all(_ph['file'] != _c['file'] for _c in _cur): _cur.append(_ph)
+def _apply_order():
+  # photos2/*.json may hold "order": {kind: {id: [file, ...]}}: listed photos first, in that order (job order)
+  for _pm in sorted(_glob.glob(os.path.join(SRC, 'photos2', '*.json'))):
+    _o = (json.load(open(_pm, encoding='utf-8')).get('order') or {})
+    for _k, _ids in _o.items():
+      if _k not in PHOTOS: continue
+      for _i, _files in (_ids or {}).items():
+        cur = PHOTOS[_k].get(_i)
+        if not cur: continue
+        rank = {f: n for n, f in enumerate(_files)}
+        PHOTOS[_k][_i] = sorted(cur, key=lambda x: (rank.get(x['file'], len(rank)), cur.index(x)))
 def _fm_photos(path):
   t = open(path, encoding='utf-8').read()
   if not t.startswith('---'): return []
@@ -115,6 +126,7 @@ def _fm_photos(path):
 for (_k, _i), _f in NEW_MD.items():
   _ph = _fm_photos(_f)
   if _ph: PHOTOS[_k][_i] = _ph + [x for x in PHOTOS[_k].get(_i, []) if all(x['file'] != y['file'] for y in _ph)]
+_apply_order()
 _done = {}
 def photo_src(src):
   if src in _done: return _done[src]
