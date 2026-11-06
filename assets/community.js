@@ -216,7 +216,14 @@ export async function syncProgress() {
 }
 
 /* ---------- Start ---------- */
-if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mountSection); else mountSection();
+function start() {
+  mountSection();
+  // Apps (Overview, Cockpit) draw their footer later and may redraw the page: keep the section in place.
+  let t = null;
+  new MutationObserver(() => { clearTimeout(t); t = setTimeout(() => { if (!document.querySelector('.mzc')) mountSection(); }, 200); })
+    .observe(document.body, { childList: true, subtree: true });
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 // Sync quietly on pages where progress changes, once the browser is idle.
 if (ON) setTimeout(() => {
   let signed = false;

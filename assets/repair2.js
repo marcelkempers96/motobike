@@ -10,7 +10,7 @@ if (h && /\/repair\/(parts|problems|repairs)\/$/.test(location.pathname) && /^[a
   fetch(`${ROOT}repair/${kind}/${h}/`, { method: 'HEAD' }).then((r) => { if (r.ok) location.replace(`${ROOT}repair/${kind}/${h}/`); }).catch(() => {});
 }
 
-const box = $('.r-search');
+const box = $('.r-search:not(.bk-search)');
 if (box) {
   import('./content/repair-index.js').then(({ default: D }) => {
     const U = { 'ok-to-ride': 'OK to ride', 'ride-with-care': 'Ride with care', 'do-not-ride': 'Do not ride', 'stop-now': 'Stop now' };

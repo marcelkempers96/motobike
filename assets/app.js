@@ -175,6 +175,9 @@ ${PAGE === 'cockpit' ? `
     </section>
 
 ` : ''}
+${PAGE === 'overview' ? `<section class="mz-ov-about"><h2>Interactive motorcycle parts diagram</h2>
+      <p>Explore a motorcycle parts diagram in 3D: eight bikes, from a classic four-stroke, a two-stroke motocross bike and a scooter to a step-through, a boda boda, a café racer, a superbike and an electric scrambler. Choose a system to see where its parts sit, then tap a part to see what it does and how it fails.</p>
+      <p class="mz-ov-links"><a href="repair/parts/">All motorcycle parts, names and functions</a> · <a href="repair/problems/">Find a problem by symptom</a> · <a href="repair/repairs/">Repair tutorials</a> · <a href="repair/bikes/">Repairs by bike model</a> · <a href="learn/">Free course</a></p></section>` : ''}
     <footer data-mz-footer></footer>
 
     <div class="ute-modal" id="ute-help" role="dialog" aria-modal="true" aria-labelledby="help-h">

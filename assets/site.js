@@ -32,6 +32,7 @@ export const NAV = [
     ['repair/problems/', 'By problem', '274 problems, step-by-step checks'],
     ['repair/repairs/', 'By repair', '185 jobs, rider to workshop'],
     ['repair/parts/', 'By part', 'What each part does and how it fails'],
+    ['repair/bikes/', 'By bike', '500 motorcycles: specs, top repairs, problems'],
     ['parts/', 'Spare parts', 'What wears, when, where to buy'],
   ] },
   { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [

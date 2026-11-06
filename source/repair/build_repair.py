@@ -64,6 +64,23 @@ for _k, _x in list(NEW_MD):
   for _pt in PROB[_x].get('parts', []):
     if _pt in PART and _x not in PART[_pt].setdefault('problems', []): PART[_pt]['problems'].append(_x)
 
+# bikes (Repair > By bike): source/bikes/bikedata.py merges the bible, research and Wikipedia
+import sys as _sys
+_sys.path.insert(0, os.path.join(ROOT, 'source', 'bikes'))
+import bikedata as _bd
+BIKES = [b for b in _bd.load()]
+for _b in BIKES:
+  _b['repairs'] = [x for x in _b['repairs'] if x in REP]; _b['problems'] = [x for x in _b['problems'] if x in PROB]; _b['parts'] = [x for x in _b['parts'] if x in PART]
+BIKES_BY = {'repairs': {}, 'problems': {}}
+for _b in sorted(BIKES, key=lambda b: (not b['rich'], b['n'])):
+  for _k in ('repairs', 'problems'):
+    for _x in _b[_k]: BIKES_BY[_k].setdefault(_x, []).append(_b)
+def bikes_html(kind, i, rel, limit=12):
+  bs = BIKES_BY[kind].get(i, [])
+  if not bs: return ''
+  li = ''.join(f'<li><a href="{rel}repair/bikes/{b["make_slug"]}/{b["id"]}/">{e(b["title"])}</a></li>' for b in bs[:limit])
+  return f'<section class="r-sec"><h2>Bikes this {"job" if kind == "repairs" else "problem"} often comes up on</h2><ul class="r-bikelinks">{li}</ul><p class="r-note">{len(bs)} bikes in the <a href="{rel}repair/bikes/">bike directory</a> list this. Check your own bike\'s manual for its values.</p></section>'
+
 # photos from the repair course (used with permission): photo-map.json for existing pages,
 # `photos:` frontmatter for new pages. Copied as web-size JPEGs to assets/repair-photos/.
 from PIL import Image as _Image
@@ -268,7 +285,18 @@ def partcard(i, rel):
   p = PART[i]; src = part_thumb(i)
   return f'<div class="rpc"><a class="rpc-main" href="{rel}repair/parts/{i}/"><span class="rpc-img{' is-photo' if src.endswith(('.jpg', '.jpeg', '.webp')) and '/renders/' not in src else ''}"><img src="{rel}{src}" alt="" loading="lazy"></span><b>{e(p["name"])}</b></a><a class="rpc-shop" href="{rel}{shop_url(i)}">Find this part</a></div>'
 
-def page(path, title, desc, body, crumbs, rel, extra_ld=None):
+SEO = {
+  'repair/': ('Motorcycle Troubleshooting & Repair Guides | Moto Zero', 'Motorcycle troubleshooting and repair guides', None),
+  'repair/parts/': ('Motorcycle Parts: Names & Functions | Moto Zero', 'Motorcycle parts: names, functions and common faults', 'Explore motorcycle parts by system. Learn what each part does, signs of failure and the related diagnostic and repair guides.'),
+  'repair/problems/': ('Motorcycle Problems & Diagnostic Guides | Moto Zero', 'Find a motorcycle problem by symptom', None),
+  'repair/repairs/': ('Motorcycle Maintenance & Repair Tutorials | Moto Zero', 'Motorcycle maintenance and repair tutorials', None),
+  'repair/problems/cranks-no-start/': ('Motorcycle Cranks but Won’t Start? | Moto Zero', 'Motorcycle cranks but won’t start: what to check', 'Motorcycle cranks but won’t start? Follow a structured guide to starting checks, fuel, ignition and compression, with model-specific cautions.'),
+  'repair/problems/ev-wont-charge/': ('Electric Motorcycle Won’t Charge? | Moto Zero', 'Electric motorcycle won’t charge: checks and next steps', 'Electric motorcycle not charging? Check external connections and manufacturer guidance, and learn when a qualified technician is needed.'),
+  'repair/repairs/chain-adjust/': ('How to Adjust Motorcycle Chain Slack | Moto Zero', 'How to check and adjust motorcycle chain slack', 'Learn how to check motorcycle chain slack and understand adjustment, alignment and wear checks. Use your model’s manual for specifications.'),
+  'repair/repairs/engine-oil-service/': ('How to Change Motorcycle Engine Oil | Moto Zero', 'How to change motorcycle engine oil', 'Follow a motorcycle oil-change guide covering preparation, draining, strainers and filters, with clear notes on model-specific requirements.'),
+  'repair/parts/brake_pads/': ('Motorcycle Brake Pads Explained | Moto Zero', 'Motorcycle brake pads: function, wear and replacement', None),
+}
+def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": c, "item": SITE + '/' + u} for n, (c, u) in enumerate(crumbs)]}]
   if extra_ld: ld.append(extra_ld)
   cr = ' / '.join(f'<a href="{rel}{u}">{e(c)}</a>' if n < len(crumbs) - 1 else e(c) for n, (c, u) in enumerate(crumbs))
@@ -279,13 +307,13 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(title)}</title>
   <meta name="description" content="{e(desc)}">
-  <link rel="canonical" href="{SITE}/{path}">
+  <link rel="canonical" href="{SITE}/{path}">{'<meta name="robots" content="noindex, follow">' if noindex else ''}
   <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{SITE}/{path}">
   <link rel="icon" href="{rel}assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
-  <link rel="stylesheet" href="{rel}assets/repair2.css?v=3">
+  <link rel="stylesheet" href="{rel}assets/repair2.css?v=4">
   {''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)}
 </head>
 <body>
@@ -301,10 +329,16 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None):
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="{rel}assets/site.js"></script>
-<script type="module" src="{rel}assets/repair2.js?v=2"></script>
+<script type="module" src="{rel}assets/repair2.js?v=3"></script>
 </body>
 </html>
 '''
+  if path in SEO:  # titles, headings and descriptions from the SEO plan (source/Moto_Zero_SEO_Keyword_and_Growth_Plan.md)
+    t2, h2_, d2 = SEO[path]
+    doc = re.sub(r'<title>.*?</title>', f'<title>{e(t2)}</title>', doc, count=1)
+    doc = doc.replace(f'<meta property="og:title" content="{e(title)}">', f'<meta property="og:title" content="{e(t2)}">')
+    if d2: doc = doc.replace(f'content="{e(desc)}"', f'content="{e(d2)}"')
+    if h2_: doc = re.sub(r'<h1>.*?</h1>', f'<h1>{e(h2_)}</h1>', doc, count=1, flags=re.S)
   d = os.path.join(ROOT, path)
   os.makedirs(d, exist_ok=True)
   open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(doc)
@@ -349,6 +383,7 @@ for i, p in PROB.items():
       </aside>
     </div>
     {f'<section class="r-sec"><h2>Related problems</h2><ul class="r-list is-cols">{rel_p}</ul></section>' if rel_p else ''}
+    {bikes_html('problems', i, rel)}
     <section class="r-sec">{sources_html(p.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/problems/{i}/'
   page(path, f'{p["title"]}: causes and step-by-step checks | Moto Zero', f'{p["title"]} on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.',
@@ -380,6 +415,7 @@ for i, r in REP.items():
       </aside>
     </div>
     {f'<section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols">{fixes}</ul></section>' if fixes else ''}
+    {bikes_html('repairs', i, rel)}
     <section class="r-sec">{sources_html(r.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/repairs/{i}/'
   page(path, f'{r["title"]}: step by step | Moto Zero', f'{r["title"]}: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.',
@@ -515,6 +551,147 @@ ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": "Moto
 page('repair/diagnose/', 'Motorcycle diagnostics tool: find what is wrong with your bike | Moto Zero', f'Free motorcycle diagnostics tool. Pick your bike and the symptom to find the likely fault, whether it is safe to ride and the step-by-step repair. {len(PROB)} problems covered.', html_,
      [('Repair', 'repair/'), ('Diagnostics', 'repair/diagnose/')], rel, extra_ld=ld)
 urls.insert(1, 'repair/diagnose/')
+
+# ---------- By bike: directory, make pages and one page per model ----------
+from PIL import Image as _Img
+SPARE_MODELS = []
+for _d in _glob.glob(os.path.join(ROOT, 'parts', '*', '*', 'index.html')):
+  _b, _m = _d.split(os.sep)[-3:-1]
+  if _b != 'part': SPARE_MODELS.append((_b, _m))
+def spare_for(b):
+  toks = [t for t in re.split(r'[^a-z0-9]+', b['model'].lower()) if len(t) >= 3 and not t.isdigit()]
+  for br, m in SPARE_MODELS:
+    if br == b['make_slug'] and any(t in m.split('-') for t in toks): return f'parts/{br}/{m}/'
+  return None
+def bike_img(b, rel):
+  if b.get('photo'):
+    name = b['id'] + '.jpg'; out = os.path.join(ROOT, 'assets', 'bike-photos', name)
+    if not os.path.exists(out):
+      os.makedirs(os.path.dirname(out), exist_ok=True)
+      im = _Img.open(b['photo']['file']).convert('RGB'); im.thumbnail((1200, 1200)); im.save(out, 'JPEG', quality=82, optimize=True, progressive=True)
+    return f'{rel}assets/bike-photos/{name}', True
+  return f'{rel}assets/renders/{b["render"]}_side.webp', False
+def fmt(v):
+  if isinstance(v, float) and v.is_integer(): v = int(v)
+  return f'{v:,}' if isinstance(v, int) and v >= 10000 else str(v)
+def bike_stats(b):
+  sp = b['specs']; out = []
+  for k, label, unit in _bd.SPEC_ORDER:
+    if k not in sp: continue
+    sub = ''
+    if k == 'power_hp' and sp.get('power_rpm'): sub = f'at {fmt(sp["power_rpm"]["value"])} rpm'
+    if k == 'torque_nm' and sp.get('torque_rpm'): sub = f'at {fmt(sp["torque_rpm"]["value"])} rpm'
+    if k == 'weight_kg' and sp.get('weight_type') and sp['weight_type'].get('value'): sub = str(sp['weight_type']['value'])
+    out.append(f'<div class="bk-stat"><span>{label}</span><b>{e(fmt(sp[k]["value"]))}<small> {unit}</small></b>{f"<i>{e(sub)}</i>" if sub else ""}</div>')
+  return ''.join(out)
+def bike_card(b, rel):
+  src, real = bike_img(b, rel)
+  cc = b['specs'].get('displacement_cc'); kwh = b['specs'].get('battery_kwh')
+  meta = f'{fmt(cc["value"])} cc' if cc else (f'{fmt(kwh["value"])} kWh' if kwh else '')
+  return (f'<a class="bk-card" href="{rel}repair/bikes/{b["make_slug"]}/{b["id"]}/" data-cat="{b["category"]}" data-q="{e((b["title"] + " " + " ".join(b["aliases"])).lower())}">'
+          f'<span class="bk-img{" is-photo" if real else ""}"><img src="{src}" alt="" loading="lazy"></span><b>{e(b["title"])}</b><span>{e(b["cat_label"])}{" · " + meta if meta else ""}</span></a>')
+
+MAKES = {}
+for b in BIKES: MAKES.setdefault(b['make'], []).append(b)
+cats_used = [c for c in _bd.CATEGORY if any(b['category'] == c for b in BIKES)]
+bike_urls = []
+for b in BIKES:
+  rel = '../../../../'
+  path = f'repair/bikes/{b["make_slug"]}/{b["id"]}/'
+  src, real = bike_img(b, rel)
+  sp = b['specs']
+  stats = bike_stats(b)
+  textspecs = ''.join(f'<tr><th>{lab}</th><td>{e(fmt(sp[k]["value"]))}</td></tr>' for k, lab in _bd.TEXT_SPECS if k in sp)
+  facts = ''.join(f'<li>{e(f["text"].replace(" Specification source", ""))} <span class="r-note">({e(f["scope"])})</span></li>' for f in b['facts'])
+  highs = ''.join(f'<li>{e(h["text"])}</li>' for h in b['highlights'])
+  countries = ', '.join(_bd.COUNTRY.get(c, c) for c in b['countries'])
+  reps = ''.join(rlink(x, rel) for x in b['repairs'])
+  probs = ''.join(plink(x, rel) for x in b['problems'])
+  parts = ''.join(partcard(x, rel) for x in b['parts'][:12])
+  spare = spare_for(b)
+  same_make = [x for x in MAKES[b['make']] if x['id'] != b['id']][:8]
+  same_cat = [x for x in BIKES if x['category'] == b['category'] and x['make'] != b['make'] and x['rich']][:8]
+  srcs = [{'doc': 'Wikipedia: ' + b['title'], 'url': b['wikipedia']}] if b.get('wikipedia') else []
+  seen = set()
+  for v in sp.values():
+    u = v.get('source') if isinstance(v, dict) else None
+    if u and u not in seen and u != b.get('wikipedia'): seen.add(u); srcs.append({'doc': re.sub(r'^https?://(www\.)?', '', u).split('/')[0], 'url': u})
+  for f in b['facts']:
+    for u in f['sources']:
+      if u not in seen: seen.add(u); srcs.append({'doc': 'Manufacturer: ' + re.sub(r'^https?://(www\.)?', '', u).split('/')[0], 'url': u})
+  srcs += [{'doc': 'VehiclesDB motorcycle catalogue (identity)', 'url': x['url']} for x in b['sources'] if 'vehiclesdb' in x['url']][:1]
+  cap = 'Photo: ' + e(b['photo'].get('credit', '')) if real and b['photo'].get('credit') else f'Illustration of a typical {e(b["cat_label"].lower())} motorcycle, not this exact model.'
+  intro = e(b['summary']) if b['summary'] else f'The {e(b["title"])} is a {e(b["cat_label"].lower())} {"scooter" if b["category"] == "scooter" else "motorcycle"}. This page collects the checks, repairs and parts that matter most for this type of bike, with links to step-by-step guides.'
+  html_ = f"""    <header class="r-head bk-head">
+      <div>
+        <span class="ute-label">{e(b["make"])} · {e(b["cat_label"])}</span>
+        <h1>{e(b["title"])}: repairs, problems and specs</h1>
+        <p class="r-lead">{intro}</p>
+        {f'<p class="r-meta"><span>Also called: {e(", ".join(b["aliases"]))}</span></p>' if b["aliases"] else ''}
+        <p class="r-btns"><a class="r-btn" href="#top-repairs">Top repairs</a>{f'<a class="r-btn is-shop" href="{rel}{spare}">Spare parts for this bike →</a>' if spare else f'<a class="r-btn is-shop" href="{rel}parts/">Spare parts →</a>'}</p>
+      </div>
+      <figure class="r-fig bk-fig"><img src="{src}" alt="{e(b["title"]) if real else ""}"><figcaption>{cap}</figcaption></figure>
+    </header>
+    {f'<section class="bk-stats" aria-label="Key numbers">{stats}</section>' if stats else ''}
+    {f'<p class="r-note bk-scope">Figures for the {e(b["spec_scope"])}. Other years and markets can differ; check your bike\'s manual.</p>' if stats and b["spec_scope"] else (f'<p class="r-note bk-scope">Figures for one version; other years and markets can differ. Check your bike\'s manual.</p>' if stats else '')}
+    <div class="r-grid">
+      <article class="r-body">
+        {f'<h2>Good to know</h2><ul>{highs}</ul>' if highs else ''}
+        {f'<h2>Manufacturer facts</h2><ul>{facts}</ul>' if facts else ''}
+        {f'<h2>Specifications</h2><table class="bk-spec">{textspecs}</table>' if textspecs else ''}
+        {f'<p><b>For repairs:</b> {e(b["notes"])}</p>' if b["notes"] else ''}
+        <h2 id="top-repairs">Top repairs for the {e(b["title"])}</h2>
+        <p>The jobs that keep a {e(b["cat_label"].lower())} bike like this safe and running, from rider checks to workshop jobs. These are routine maintenance and common checks for this type of bike, not a ranking of faults.</p>
+        <ul class="r-list is-cols">{reps}</ul>
+        <div class="r-callout"><b>Check your version first.</b> {e(b["check_first"].replace("These are not model-specific “most common failures”.", "").strip())} Use the values in your bike's manual.</div>
+        {f'<h2>Problems to check on the {e(b["title"])}</h2><ul class="r-list">{probs}</ul>' if probs else ''}
+        <p><a href="{rel}repair/diagnose/">Something else is wrong? Use the diagnostics tool →</a></p>
+      </article>
+      <aside class="r-side">
+        <section><h2>Parts to know</h2><div class="rpcs">{parts}</div></section>
+        {f'<section><h2>Where it is found</h2><p class="r-note">Registered in: {e(countries)}. From public registers; not a complete list of markets.</p></section>' if countries else ''}
+      </aside>
+    </div>
+    {f'<section class="r-sec"><h2>More {e(b["make"])} bikes</h2><div class="bk-grid is-small">{"".join(bike_card(x, rel) for x in same_make)}</div><p><a href="{rel}repair/bikes/{b["make_slug"]}/">All {e(b["make"])} bikes →</a></p></section>' if same_make else ''}
+    {f'<section class="r-sec"><h2>Other {e(b["cat_plural"].lower())}</h2><div class="bk-grid is-small">{"".join(bike_card(x, rel) for x in same_cat)}</div></section>' if same_cat else ''}
+    <section class="r-sec">{sources_html(srcs)}<p class="r-note">Repair and part links are general guides for this type of bike; exact fitment is not verified. Text CC BY-SA 4.0, Transitions Lab.</p></section>"""
+  desc = f'{b["title"]} repairs, common problems and key specs: {", ".join(REP[x]["title"].lower() for x in b["repairs"][:3])} and more, with step-by-step guides and parts.'
+  ld = {"@context": "https://schema.org", "@type": "Thing", "name": b['title'], "description": b['summary'] or desc}
+  page(path, f'{b["title"]}: repairs, problems and specs | Moto Zero', desc[:300], html_,
+       [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (b['make'], f'repair/bikes/{b["make_slug"]}/'), (b['title'], path)], rel, extra_ld=ld, noindex=not b['rich'])
+  if b['rich']: bike_urls.append(path)
+
+for mk, bs in MAKES.items():
+  rel = '../../../'
+  path = f'repair/bikes/{bs[0]["make_slug"]}/'
+  html_ = f"""    <header class="r-head"><span class="ute-label">Repair · By bike</span><h1>{e(mk)} motorcycle repairs and problems</h1>
+      <p class="r-lead">{len(bs)} {e(mk)} models with their key numbers, top repairs and the problems to check. Pick your bike.</p></header>
+    <section class="r-sec"><div class="bk-grid">{''.join(bike_card(b, rel) for b in bs)}</div></section>"""
+  page(path, f'{mk} motorcycle repairs, problems and specs | Moto Zero', f'Repairs, common problems and key specs for {len(bs)} {mk} motorcycles and scooters, with step-by-step guides and parts.', html_,
+       [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (mk, path)], rel)
+  bike_urls.append(path)
+
+rel = '../../'
+html_ = f"""    <header class="r-head"><span class="ute-label">Repair · By bike</span><h1>Motorcycle repairs by bike model</h1>
+      <p class="r-lead">{len(BIKES)} motorcycles and scooters from {len(MAKES)} makes. Find your bike for its key numbers, the top repairs for it and the problems to check first.</p>
+      <div class="r-search bk-search"><input type="search" id="bk-q" placeholder="Search a bike, for example: Boxer, Activa, Duke" aria-label="Search bikes" autocomplete="off"></div>
+      <div class="bk-filter" role="group" aria-label="Type of bike"><button type="button" class="is-on" data-c="">All</button>{''.join(f'<button type="button" data-c="{c}">{e(_bd.CATEGORY[c][0])}</button>' for c in cats_used)}</div>
+    </header>
+    <nav class="r-jump">{''.join(f'<a href="#mk-{bs[0]["make_slug"]}">{e(mk)}</a>' for mk, bs in sorted(MAKES.items()))}</nav>
+    {''.join(f'<section class="r-sec bk-mk" id="mk-{bs[0]["make_slug"]}"><h2><a href="{rel}repair/bikes/{bs[0]["make_slug"]}/">{e(mk)}</a> <small>{len(bs)}</small></h2><div class="bk-grid">{"".join(bike_card(b, rel) for b in bs)}</div></section>' for mk, bs in sorted(MAKES.items()))}
+    <p class="r-note bk-none" hidden>No bike matches. Try the make or a shorter name.</p>
+    <script>
+    (() => {{ const q = document.getElementById('bk-q'); let cat = '';
+      const run = () => {{ const v = q.value.trim().toLowerCase(); let any = false;
+        document.querySelectorAll('.bk-mk').forEach((s) => {{ let n = 0; s.querySelectorAll('.bk-card').forEach((c) => {{ const ok = (!cat || c.dataset.cat === cat) && (!v || c.dataset.q.includes(v)); c.hidden = !ok; if (ok) n++; }}); s.hidden = !n; if (n) any = true; }});
+        const none = document.querySelector('.bk-none'); if (none) none.hidden = any; }};
+      q.addEventListener('input', run);
+      document.querySelectorAll('.bk-filter button').forEach((b) => b.addEventListener('click', () => {{ cat = b.dataset.c; document.querySelectorAll('.bk-filter button').forEach((x) => x.classList.toggle('is-on', x === b)); run(); }}));
+    }})();
+    </script>"""
+page('repair/bikes/', 'Motorcycle repairs by bike model: 500 bikes | Moto Zero', f'Find your motorcycle or scooter: key specs, top repairs and the problems to check for {len(BIKES)} models from {len(MAKES)} makes, with step-by-step guides.', html_,
+     [('Repair', 'repair/'), ('By bike', 'repair/bikes/')], rel)
+urls += ['repair/bikes/'] + bike_urls
 
 # search index
 idx = {'p': [[x['id'], x['title'], ' '.join(x.get('also_called', [])), SYS.get(x['system'], ''), x.get('urgency', ''), x['system'], x.get('repairs', [])[:3], x.get('parts', [])[:4]] for x in PROB.values()],
