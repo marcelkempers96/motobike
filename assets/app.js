@@ -95,10 +95,8 @@ function render() {
   const info = MODE_INFO[S.mode];
   root.innerHTML = `
     <header class="ute-top">
-      <a class="ute-brand" href="./" aria-label="Moto Zero home">
-        <img class="ute-brand-mark" src="assets/brand-mark.svg" alt="">
-        <span class="ute-brand-word">moto zero</span>
-        <span class="ute-brand-sub">Transitions Lab</span>
+      <a class="ute-brand" href="./" aria-label="Motopedia home">
+        <img class="ute-brand-logo" src="assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114">
       </a>
       <nav data-mz-nav></nav>
       <span class="ute-top-spacer"></span>

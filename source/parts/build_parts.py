@@ -191,7 +191,7 @@ def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
 <body>
 <div class="ute-page sp">
   <header class="ute-top">
-    <a class="ute-brand" href="{rel}" aria-label="Moto Zero home"><img class="ute-brand-mark" src="{rel}assets/brand-mark.svg" alt=""><span class="ute-brand-word">moto zero</span><span class="ute-brand-sub">Transitions Lab</span></a>
+    <a class="ute-brand" href="{rel}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{rel}assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114"></a>
     <nav data-mz-nav></nav>
   </header>
   <main class="sp-main">

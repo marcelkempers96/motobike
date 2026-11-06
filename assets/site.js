@@ -97,7 +97,7 @@ export function footerHTML() {
     </form>
     <div class="mz-foot">
       <div class="mz-foot-about">
-        <a class="mz-foot-brand" href="${url('')}"><span>moto zero</span></a>
+        <a class="mz-foot-brand" href="${url('')}" aria-label="Motopedia home"><img src="${new URL('assets/brand/motopedia-logo-tagline-800.webp', ROOT).pathname}" alt="Motopedia, the open motorcycle encyclopedia" width="800" height="237"></a>
         <p>An open technical course on how motorcycles work, from the first combustion stroke to the battery management system of an electric bike. Built for technician trainees, students, researchers, fleet operators and riders.</p>
         <p>Created by <a href="https://www.transitionslab.org" target="_blank" rel="noopener">Transitions Lab</a> as an open educational programme. Text, plates and 3D models are CC BY-SA 4.0.</p>
       </div>
