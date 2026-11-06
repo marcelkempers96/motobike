@@ -300,31 +300,31 @@ export default {
           "title": "Watch",
           "items": [
             {
-              "id": "toVfvRhWbj8",
-              "title": "How Does A Carburetor Work? | Transparent Carburetor at 28,546 fps Slow Mo - Smarter Every Day 259",
-              "channel": "SmarterEveryDay",
-              "channel_url": "http://www.youtube.com/@smartereveryday",
-              "duration": "24:38",
-              "role": "How it works",
-              "note": "Slow-motion transparent carburettor shows how air and fuel mix; a science demo, not a service guide."
+              "id": "OK8_r7Ge2k4",
+              "title": "How to increase mileage of motorcycle | 70cc Air fuel ratio setting for best performance",
+              "channel": "Technology Expert",
+              "channel_url": "http://www.youtube.com/@TechnologyExpertAsif",
+              "duration": "3:20",
+              "role": "How-to",
+              "note": "Set the idle mixture screw on a 70 cc carb; mileage claims are unverified, start from the manual setting."
             },
             {
-              "id": "ZRNfyz1Cgvg",
-              "title": "Carburetor vs Fuel Injection - Why Motorcycle Riders Should Think Again",
-              "channel": "FortNine",
-              "channel_url": "http://www.youtube.com/@FortNine",
-              "duration": "7:51",
-              "role": "How it works",
-              "note": "Carburettor against fuel injection compared; useful for deciding which diagnosis path applies."
+              "id": "QOnHVExumjY",
+              "title": "Bike or Scooter carburetor tuning for mileage, carburetor setting. TVS Jupiter, Wego. #carburetor",
+              "channel": "AUTOBOT GEEKS E",
+              "channel_url": "http://www.youtube.com/@autobotgeekse",
+              "duration": "8:03",
+              "role": "How-to",
+              "note": "Set idle speed and mixture on a scooter carb (TVS Jupiter, Wego); mileage claims are unverified, values for those scooters."
             },
             {
-              "id": "AwXRvgyFUG4",
-              "title": "Carburetors vs. Electronic Fuel Injection—What’s Better? | MC Garage",
-              "channel": "Motorcyclist Magazine",
-              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
-              "duration": "3:41",
-              "role": "How it works",
-              "note": "Short side by side of carburettor and EFI, how each meters fuel."
+              "id": "I_uH72wDTL0",
+              "title": "S&S Cycle - Carb Jetting and Tuning - S&S Super E & G Carburetor",
+              "channel": "S&S Cycle, Inc",
+              "channel_url": "http://www.youtube.com/@SSCycleInc",
+              "duration": "17:31",
+              "role": "How-to",
+              "note": "Maker guide to jetting S&S carbs; jet sizes are for those carbs only, but the method transfers."
             }
           ]
         }
@@ -635,6 +635,15 @@ export default {
               "duration": "3:41",
               "role": "How it works",
               "note": "Short side by side of carburettor and EFI, how each meters fuel."
+            },
+            {
+              "id": "mJ5Ovg6ADpI",
+              "title": "Why Motorcycle Ride Modes are Mostly Useless",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "8:59",
+              "role": "How it works",
+              "note": "What ride modes change in throttle map and power; mostly software, not a repair topic."
             }
           ]
         }
@@ -1217,6 +1226,15 @@ export default {
               "duration": "7:07",
               "role": "How-to",
               "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific. Shows the multimeter tests and what a good or bad reading means; values are for that bike."
+            },
+            {
+              "id": "c5JB6HjKiF4",
+              "title": "**Solved!** Starter relay problem! Works for most bikes/vehicles!",
+              "channel": "MotoCos88",
+              "channel_url": "http://www.youtube.com/@MotoCos88",
+              "duration": "7:32",
+              "role": "How-to",
+              "note": "Test and replace a starter relay; check the battery and earth first, the 'most bikes' claim needs checking."
             }
           ]
         }
@@ -1806,6 +1824,21 @@ export default {
           "measure": "What happens with the meter across the bulb, and the reading in series.",
           "expect": "Across the bulb the meter shorts the circuit: its 10 A fuse or the 3 A circuit fuse blows and the bulb goes out. In series it reads about 1.8 A and the bulb stays lit.",
           "why": "On the amps range a meter has almost no resistance, so it must replace a piece of wire in the path of the current. Voltage is measured across a part; current is measured through it."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "NB5F_Qu4ixE",
+              "title": "OH NO! My motorcycle wont start. Now what?",
+              "channel": "Srkcycles",
+              "channel_url": "http://www.youtube.com/@Srkcycles",
+              "duration": "4:34",
+              "role": "How it works",
+              "note": "Top reasons a modern bike will not start: kill switch, side stand, battery; quick first checks."
+            }
+          ]
         }
       ]
     }

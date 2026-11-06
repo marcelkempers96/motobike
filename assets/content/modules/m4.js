@@ -279,6 +279,24 @@ export default {
           "title": "Watch",
           "items": [
             {
+              "id": "d3ju716gxOU",
+              "title": "Cd70 motorbike pickup increase just 1 item | clutch setting | clutch problem solved",
+              "channel": "Ustaad Abdul Ghafoor",
+              "channel_url": "http://www.youtube.com/@UstaadAbdulGhafoor",
+              "duration": "8:19",
+              "role": "How-to",
+              "note": "Set the clutch adjuster on a Honda CD70; the pickup claim is unverified, values for that model."
+            },
+            {
+              "id": "JhTf7cBeGcs",
+              "title": "Understanding Motorcycle Clutch",
+              "channel": "TecknoMechanics",
+              "channel_url": "http://www.youtube.com/@TecknoMechanics",
+              "duration": "5:33",
+              "role": "How it works",
+              "note": "How a wet multi-plate clutch engages and frees, and why free play matters for slip and drag."
+            },
+            {
               "id": "jAZd_3o5TQ8",
               "title": "How a Motorcycle Clutch Works",
               "channel": "EMecha3D",
@@ -286,15 +304,6 @@ export default {
               "duration": "4:20",
               "role": "How it works",
               "note": "Animation of a clutch: basket, plates, springs and lever; shows how drag and slip arise."
-            },
-            {
-              "id": "2m2EGXlwMIs",
-              "title": "From cylinder to clutch to transmission: a complete Motorcycle Engine explained",
-              "channel": "Al's Garage",
-              "channel_url": "http://www.youtube.com/@AlsGarage",
-              "duration": "24:36",
-              "role": "How it works",
-              "note": "Yamaha SR250 engine explained from cylinder through clutch to gearbox on a real engine."
             }
           ]
         }
@@ -544,22 +553,22 @@ export default {
               "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks. Shows shift drum, forks and dogs, which explains false neutrals, jumping out and hard shifts."
             },
             {
-              "id": "viWuolNYGyI",
-              "title": "The Truth About Clutchless Shifting | MC Garage",
+              "id": "mlBhPZdVqb8",
+              "title": "Motorcycle Quickshifters Explained | MC Garage",
               "channel": "Motorcyclist Magazine",
               "channel_url": "http://www.youtube.com/@MotorcyclistMag",
-              "duration": "4:29",
+              "duration": "4:31",
               "role": "How it works",
-              "note": "What clutchless shifting does inside the gearbox and its limits."
+              "note": "How a quickshifter cuts ignition or fuel for a clutchless change; only on bikes made or fitted for it."
             },
             {
-              "id": "Xtghypx8mII",
-              "title": "How a Motorcycle Transmission Works | MC GARAGE",
-              "channel": "Motorcyclist Magazine",
-              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
-              "duration": "3:45",
+              "id": "E2CybLSrN5Q",
+              "title": "How a Motorcycle Transmission Works! (Animation)",
+              "channel": "Thomas Schwenke",
+              "channel_url": "http://www.youtube.com/@ThomasSchwenke-knowledge",
+              "duration": "3:32",
               "role": "How it works",
-              "note": "Answers common questions about how a motorcycle gearbox behaves."
+              "note": "Animation of a sequential gearbox: dogs, forks and shift drum; helps explain why a bike jumps out of gear."
             }
           ]
         }
@@ -900,6 +909,24 @@ export default {
           "title": "Watch",
           "items": [
             {
+              "id": "zB4DsHV8SAQ",
+              "title": "Motorcycle Chain Adjustment Done Right",
+              "channel": "CanyonChasers",
+              "channel_url": "http://www.youtube.com/@CanyonChasers",
+              "duration": "5:51",
+              "role": "How-to",
+              "note": "Adjust chain slack at the tightest spot and keep the wheel aligned; use your manual's slack figure."
+            },
+            {
+              "id": "Tqu7WGELU5s",
+              "title": "How To Adjust a Motorcycle Chain and Sprockets at RevZilla.com",
+              "channel": "RevZilla",
+              "channel_url": "http://www.youtube.com/@RevZilla",
+              "duration": "14:15",
+              "role": "How-to",
+              "note": "Check wear, clean, lube and adjust a chain and inspect sprockets; use your manual's slack figure."
+            },
+            {
               "id": "9cKbzUgFdS0",
               "title": "How a Scooter Transmission works",
               "channel": "TecknoMechanics",
@@ -1070,13 +1097,31 @@ export default {
           "title": "Watch",
           "items": [
             {
-              "id": "Nmz1QJTDzO8",
-              "title": "Motorcycle Geometry | EXPLAINED",
-              "channel": "Mike on Bikes",
-              "channel_url": "http://www.youtube.com/@MikeonBikes",
-              "duration": "11:55",
+              "id": "uDmn-zngFRY",
+              "title": "How To Check Your Wheel Alignment | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "3:30",
+              "role": "How-to",
+              "note": "Check that the wheels line up with a straight edge or string, not only the adjuster marks."
+            },
+            {
+              "id": "IzXE32thS1g",
+              "title": "Tank Slappers and the Quest for Perfect Suspension",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:15",
               "role": "How it works",
-              "note": "Rake, trail and wheelbase explained with diagrams."
+              "note": "What causes a tank slapper and how geometry, damping and dampers control it; check bearings and tyres first on a real bike."
+            },
+            {
+              "id": "vSZiKrtJ7Y0",
+              "title": "Can a Flat-Tread Motorcycle Turn? How Motorbikes Steer",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:58",
+              "role": "How it works",
+              "note": "How a bike steers by leaning on a round tyre profile; a flat tread test shows why."
             }
           ]
         }
@@ -1407,13 +1452,31 @@ export default {
           "title": "Watch",
           "items": [
             {
-              "id": "uz_p-iu9C_s",
-              "title": "Motorcycle Suspension Terminology Explained | The Shop Manual",
-              "channel": "RevZilla",
-              "channel_url": "http://www.youtube.com/@RevZilla",
-              "duration": "7:22",
-              "role": "How it works",
-              "note": "Suspension terms explained: travel, sag, preload, damping."
+              "id": "mm2F08Ys_zU",
+              "title": "Delboy's Garage, USD Fork Seal Replacement",
+              "channel": "Delboy's Garage",
+              "channel_url": "http://www.youtube.com/@Moonfleet41",
+              "duration": "45:21",
+              "role": "How-to",
+              "note": "Replace seals on an inverted fork, set oil level and refit; long real workshop video, values for that fork only."
+            },
+            {
+              "id": "k884DfM2LsU",
+              "title": "Motorcycle Suspension Tech and Maintenance: How To Rebuild Your Fork | MC GARAGE",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "10:10",
+              "role": "How-to",
+              "note": "Strip a fork, renew seals, bushes and oil, set the oil level; use your manual's oil grade and level."
+            },
+            {
+              "id": "vrmYJgcGX30",
+              "title": "Delboy's Garage, How-To replace regular type fork seals.",
+              "channel": "Delboy's Garage",
+              "channel_url": "http://www.youtube.com/@Moonfleet41",
+              "duration": "30:00",
+              "role": "How-to",
+              "note": "Replace seals on a conventional fork, including the damper bolt; long and thorough, values for that fork only."
             }
           ]
         }
@@ -1793,6 +1856,39 @@ export default {
             {
               "title": "Pass criteria",
               "html": "Runout within limits, axle straight within 0.2 mm, bearings smooth with no play, seals fitted and axle nut at torque."
+            }
+          ]
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "5Zf6bZLkhKA",
+              "title": "How to Repair a Tubeless Tire Puncture (Motorcycle)",
+              "channel": "199Xray",
+              "channel_url": "http://www.youtube.com/@199Xray",
+              "duration": "6:54",
+              "role": "How-to",
+              "note": "Plug a tubeless tyre puncture step by step; a plug is a get-home repair, check tyre maker limits and fit a new tyre if in doubt."
+            },
+            {
+              "id": "dAKIuSjPXxA",
+              "title": "How To Change & Balance Your Own Motorcycle Tires | MC GARAGE",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "10:24",
+              "role": "How-to",
+              "note": "Change a tyre with levers and rim protectors, seat the bead and balance the wheel; check direction arrows and pressures after."
+            },
+            {
+              "id": "Qm6fTWaj3QE",
+              "title": "This Tire Plug Can Kill You – How to Best Fix a Flat",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "9:14",
+              "role": "How-to",
+              "note": "Compares puncture plug types and which ones hold; any plug is temporary, replace the tyre when you can."
             }
           ]
         }
@@ -2189,22 +2285,22 @@ export default {
               "note": "Replace and bleed brake fluid so the lever feels firm; check the fluid type on your master cylinder."
             },
             {
-              "id": "sDbWZiaUeDY",
-              "title": "Out-braking the ABS Myth",
-              "channel": "FortNine",
-              "channel_url": "http://www.youtube.com/@FortNine",
-              "duration": "7:02",
-              "role": "How it works",
-              "note": "Braking test of ABS against a skilled rider; results depend on bike, tyres and surface."
+              "id": "1xITumgvvS4",
+              "title": "How To Change Motorcycle Brake Pads at RevZilla.com",
+              "channel": "RevZilla",
+              "channel_url": "http://www.youtube.com/@RevZilla",
+              "duration": "19:44",
+              "role": "How-to",
+              "note": "Check pad wear and fit new pads, clean pins and pistons; pump the lever before riding."
             },
             {
-              "id": "6c4deRAhqcA",
-              "title": "Understanding your motorcycle's brake | Disc Brake",
-              "channel": "Sabin Civil Engineering",
-              "channel_url": "http://www.youtube.com/@SabinCivil",
-              "duration": "5:30",
-              "role": "How it works",
-              "note": "Animation of how a disc brake works: lever, fluid, caliper and pads. Shows the whole hydraulic path, so a soft lever, drag or weak braking can be traced to a part."
+              "id": "kb0ox9Ue6fw",
+              "title": "How to Clean, Repair and Rebuild Motorcycle Brake Calipers",
+              "channel": "TheRideAdvice",
+              "channel_url": "http://www.youtube.com/@Therideadviceonline",
+              "duration": "3:01",
+              "role": "How-to",
+              "note": "Strip, clean and reseal a brake caliper; short overview, bleed the brakes and test before riding."
             }
           ]
         }
@@ -2389,6 +2485,15 @@ export default {
           "title": "Watch",
           "items": [
             {
+              "id": "u74jYkItdD8",
+              "title": "How to Break In Your New Motorcycle",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "6:16",
+              "role": "How-to",
+              "note": "How to run in a new bike: vary revs, avoid long full load, first oil change; follow your manual's limits."
+            },
+            {
               "id": "eIXDDj1MSLE",
               "title": "How To Wash Your Motorcycle | MC Garage",
               "channel": "Motorcyclist Magazine",
@@ -2398,22 +2503,13 @@ export default {
               "note": "How to wash a bike without forcing water into bearings and electrics; good time to inspect."
             },
             {
-              "id": "C3pipJRwyrk",
-              "title": "Motorcycle Maintenance For Beginners - What You Need To Know - The Basics",
-              "channel": "Gas Works ISO",
-              "channel_url": "http://www.youtube.com/@GasWorksISO",
-              "duration": "11:27",
+              "id": "hnNN6c7lb8c",
+              "title": "How to Change Motorcycle Oil at RevZilla.com",
+              "channel": "RevZilla",
+              "channel_url": "http://www.youtube.com/@RevZilla",
+              "duration": "16:38",
               "role": "How-to",
-              "note": "Beginner checks: tyres, chain, oil level, lights and battery, all in one list."
-            },
-            {
-              "id": "oyZBX_Bw-pI",
-              "title": "How to Winterize Your Motorcycle | MC Garage",
-              "channel": "Motorcyclist Magazine",
-              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
-              "duration": "7:41",
-              "role": "How-to",
-              "note": "Prepare a bike for winter storage: fuel, battery, tyres and cover."
+              "note": "Change oil and filter, new washer, torque the drain bolt; use your manual's grade and quantity."
             }
           ]
         }

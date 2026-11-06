@@ -314,6 +314,39 @@ export default {
         {
           "type": "check",
           "q": "m5-05"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "O2zlYpy6QCM",
+              "title": "Why Electric Motorcycles are Failing",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "8:48",
+              "role": "How it works",
+              "note": "Opinion on why electric motorcycles struggle: pack cost, weight, range and charging; market claims are the creator's."
+            },
+            {
+              "id": "dUYcdWJeAyo",
+              "title": "Why Electric Motorcycles are Probably Cursed",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "12:19",
+              "role": "How it works",
+              "note": "Why electric bikes are hard: pack weight, cost and charging; an opinion piece, check claims."
+            },
+            {
+              "id": "gYs_jYUyaoY",
+              "title": "Building An Electric Motorcycle - DIY E-Moto!",
+              "channel": "James Biggar",
+              "channel_url": "http://www.youtube.com/@JamesBiggar",
+              "duration": "32:23",
+              "role": "Case study",
+              "note": "DIY electric motorcycle build shows how motor, controller and pack fit a frame; high voltage work needs qualified review, not a DIY guide."
+            }
+          ]
         }
       ]
     },
@@ -604,6 +637,21 @@ export default {
           "tone": "safety",
           "title": "A spinning motor is a generator",
           "html": "A permanent-magnet motor makes voltage whenever it turns, even with the battery disconnected. A hub motor spun by hand can produce tens of volts; a high-voltage IPM motor towed at road speed several hundred. Never connect or disconnect phase wires with the wheel turning, and do not tow with the rear wheel on the ground unless the manufacturer permits it."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "XaSngTcPw40",
+              "title": "Building Insanely Fast Electric Motorcycle From Scratch / New @ridevoltic Build",
+              "channel": "Build Studio",
+              "channel_url": "http://www.youtube.com/@BuildStudioHQ",
+              "duration": "19:46",
+              "role": "Case study",
+              "note": "Electric motorcycle built from scratch; shows motor and controller choices, high voltage needs qualified review."
+            }
+          ]
         }
       ]
     },
@@ -1192,6 +1240,39 @@ export default {
           "tone": "safety",
           "title": "Damaged and swollen packs",
           "html": "A pack that has been dropped, crashed or submerged, or that shows swelling, a sweet solvent smell, hissing, smoke, heat without use or leakage must <strong>never be charged or reinstalled</strong>. If safe, move it outdoors away from buildings and vehicles and treat it as hazardous waste."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "O2zlYpy6QCM",
+              "title": "Why Electric Motorcycles are Failing",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "8:48",
+              "role": "How it works",
+              "note": "Opinion on why electric motorcycles struggle: pack cost, weight, range and charging; market claims are the creator's."
+            },
+            {
+              "id": "dUYcdWJeAyo",
+              "title": "Why Electric Motorcycles are Probably Cursed",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "12:19",
+              "role": "How it works",
+              "note": "Why electric bikes are hard: pack weight, cost and charging; an opinion piece, check claims."
+            },
+            {
+              "id": "Oo2xAQ4ULw8",
+              "title": "I Was NOT Expecting what’s Inside Harley's $100M Motorcycle Battery",
+              "channel": "Bikes and Beards",
+              "channel_url": "http://www.youtube.com/@BikesandBeards",
+              "duration": "52:21",
+              "role": "Case study",
+              "note": "Opening a traction pack to see cells and BMS; high voltage, advanced case study, not a DIY guide."
+            }
+          ]
         }
       ]
     },
@@ -1843,6 +1924,39 @@ export default {
         {
           "type": "p",
           "html": "Attractive for large fleets of serviceable petrol frames such as East African boda bodas. <strong>Legal first:</strong> the original type approval no longer covers the vehicle; it needs inspection and individual approval or re-registration (the RDW in the Netherlands; AIS-123 for kits in India), and the insurer must be told. <strong>Engineering:</strong> battery placement changes weight distribution and steering; the engine may have been a stressed frame member; the chain must take the motor's low-speed torque; and the build needs fusing, isolation, contactor and pre-charge, a charging interlock and a DC-DC converter for the 12 V loads."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "yrrH1W4tgVg",
+              "title": "I'm cutting into Harley's $100m motorcycle myself",
+              "channel": "Bikes and Beards",
+              "channel_url": "http://www.youtube.com/@BikesandBeards",
+              "duration": "34:13",
+              "role": "Case study",
+              "note": "Cutting into a failed electric bike pack; high voltage risk, advanced case study, not a DIY guide."
+            },
+            {
+              "id": "f6yDy2KcBlI",
+              "title": "Attempting the Repair Harley Told me was Impossible. $100m Motorcycle",
+              "channel": "Bikes and Beards",
+              "channel_url": "http://www.youtube.com/@BikesandBeards",
+              "duration": "35:53",
+              "role": "Case study",
+              "note": "Attempted repair of a failed electric bike pack; high voltage risk, advanced case study only."
+            },
+            {
+              "id": "8j04GyMHxbg",
+              "title": "Everyone was WRONG about why Harley $100m Motorcycle Failed",
+              "channel": "Bikes and Beards",
+              "channel_url": "http://www.youtube.com/@BikesandBeards",
+              "duration": "1:10:48",
+              "role": "Case study",
+              "note": "Follow-up on why an electric bike pack failed; advanced diagnosis story, high voltage, not a DIY guide."
+            }
+          ]
         }
       ]
     }

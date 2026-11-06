@@ -75,3 +75,26 @@ transcript-verified, so check each video before embedding. video-map.json holds 
 - Comparison tests only work with stated criteria; do not copy a "winner" into our pages.
 - Always show the symptom first (revs rise, bike creeps), then the part. Matches our problem to part to repair flow.
 - Embed after our text answer, not before; keep the video optional.
+
+## Second collection (V101 to V300)
+- Mapped 200 more: 27 tutorials, 48 explainers, 94 case studies, 31 skips (speed builds, styling time-lapses, product lists).
+- New tutorial topics: fork seals and full fork rebuilds (conventional and inverted, plus a home-made seal driver), tyre
+  change and balance, tubeless plugs and roadside puncture repair, tyre replacement signs, wheel bearing check and
+  replacement, brake pads and caliper rebuild, shim-type valve clearance, chain adjust and sprockets, wheel alignment,
+  rider sag, oil and filter change, starter relay test, engine break-in, and two Indian carb idle and mixture videos.
+- New explainers: ABS (three), quickshifter, gearbox animation, clutch animations, Yamaha EFI training film, octane,
+  fuel stabiliser test, oil and filter tests, forks RSU against USD, chain against belt against shaft, two-stroke
+  expansion chambers, desmodromic valves, rotary engines, frame metals.
+- Case studies: about 15 will-it-run revivals now sit on m2-diagnosis (fault-led journeys; extract the real check
+  order before quoting them). 11 electric videos are case studies on motor, controller, traction_battery, bms and
+  m5-architecture, m5-batteries, m5-safety: high voltage, not DIY instructions.
+- Hindi Splendor top-end videos and Jawa, Vespa and BMW engine films go on piston, cylinder, crankcase and m2 chapters.
+- Gaps that remain: no tutorial for any EV repair or problem page; nothing on m3-ignition, m3-lighting-wiring,
+  m5-controllers or m5-charging; no compression test, plug reading or coil test, no-spark, smoke diagnosis (blue, white),
+  drum brakes, CVT belt and roller service, cooling (coolant, thermostat, fan), battery test and charge, cam chain.
+- Pages that most need a video still: compression-test, battery-test-charge, ignition-coil-test and no-spark,
+  cvt-belt-replace and cvt-roller-check, drum-brake-service, coolant-check and thermostat-test, blue-smoke and
+  white-smoke, wiring-fault-find, air-filter-service, steering-bearing-check, and the ev-no-ready and ev-wont-charge
+  problem pages.
+- Caution for editors: many tutorials quote one model's values (fork oil level, valve clearance, chain slack). Our
+  pages must give the method and send readers to their own manual for numbers.

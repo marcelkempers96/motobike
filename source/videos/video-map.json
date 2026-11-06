@@ -1263,5 +1263,2306 @@
   ],
   "course": [],
   "note": "Oil and filter change step by step; check oil grade, amount and torque in your manual."
+ },
+ "lauBrgjxi-I": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Long ZXR400 four-cylinder restoration; transformation story, no measurements or values."
+ },
+ "11kqKXgOti0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "49 cc replica minibike restoration; cosmetic focus, no measurements."
+ },
+ "vf1li2XGrpQ": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Jawa restoration condensed to 50 minutes; shows order of work only, no values."
+ },
+ "0LYMQg_nItA": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "One year Jawa restoration film; inspiration only, no measurements or road test."
+ },
+ "IvanIhBAl4A": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Turbo scrambler build time-lapse; a speed build, not a repair lesson."
+ },
+ "gYs_jYUyaoY": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "motor",
+   "controller",
+   "traction_battery",
+   "bms"
+  ],
+  "course": [
+   "m5-architecture"
+  ],
+  "note": "DIY electric motorcycle build shows how motor, controller and pack fit a frame; high voltage work needs qualified review, not a DIY guide."
+ },
+ "D-Wr2hkc-RM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-anatomy"
+  ],
+  "note": "Africa Twin factory line shows assembly stages and checks; production methods are not repair methods."
+ },
+ "uastud9HHsA": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Jawa two-stroke restoration episode; order of work only, no values."
+ },
+ "ARb1eGT06Hw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "crankcase"
+  ],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "BMW engine assembly line shows how crankcase, crank and heads go together; no torque or clearance values."
+ },
+ "UQjfSdNHT5k": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Factory assembly of a 70 cc engine; part order only, no specifications."
+ },
+ "W_58mM7UBL0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Mini dirt bike restoration; cosmetic and parts swap, no measurements."
+ },
+ "3LiDoHm4ge8": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Edited restoration story; inspiration only, no measurements or test results shown."
+ },
+ "z-lUr1RmZe0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Edited restoration story; inspiration only, no measurements or test results shown."
+ },
+ "8Ppma7iCf6E": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Jawa from scrap to show bike; visual finish is not proof of safety."
+ },
+ "zu-GWp8SDDI": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Ural chopper restoration; inspiration only, no values."
+ },
+ "-OWL0OEuqrY": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Split wheel novelty build; entertainment, not a repair lesson."
+ },
+ "KYcmjjXD0BY": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "CBR250RR revival after ant damage; story of a high revving four, no values."
+ },
+ "5Zf6bZLkhKA": {
+  "role": "tutorial",
+  "repairs": [
+   "tubeless-plug"
+  ],
+  "problems": [
+   "puncture-tubeless",
+   "slow-puncture"
+  ],
+  "parts": [
+   "front_tyre",
+   "rear_tyre"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Plug a tubeless tyre puncture step by step; a plug is a get-home repair, check tyre maker limits and fit a new tyre if in doubt."
+ },
+ "lT-DzFQ4XW4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "1962 Vespa restoration time-lapse; order of work only, no values."
+ },
+ "vS3AuKz-Li8": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "crankcase"
+  ],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Jawa two-stroke engine strip and rebuild; shows where parts sit, values for that engine only."
+ },
+ "-LI8bCNGLuo": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Yamaha DT125 two-stroke restoration; order of work, no measurements."
+ },
+ "XDjG4_m1bSY": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "abs"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Short side by side stop with and without ABS; a controlled demo, real grip and stopping distance vary."
+ },
+ "g2Iequ76eC8": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda CRM250 restoration; inspiration only, no values."
+ },
+ "-3HBAvkc4a0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m1-types"
+  ],
+  "note": "Why the Wankel rotary engine never took off in motorcycles; design history, not service information."
+ },
+ "T5zrICN5eIo": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Factory assembly of a complete 70 cc bike; shows build order, no specifications."
+ },
+ "VKGZdsIkLog": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "Five warning signs to check on a used bike before you buy; a quick list, follow it with a full inspection and test ride."
+ },
+ "JhTf7cBeGcs": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "clutch-slip",
+   "clutch-drag"
+  ],
+  "parts": [
+   "clutch",
+   "clutch_plates",
+   "clutch_cable"
+  ],
+  "course": [
+   "m4-clutch"
+  ],
+  "note": "How a wet multi-plate clutch engages and frees, and why free play matters for slip and drag."
+ },
+ "hR_JkXv4z0Y": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cinematic custom build time-lapse; no learning value for repair."
+ },
+ "rSRh5ANsUDo": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Fast factory assembly of a 70 cc engine; part order only, no specifications."
+ },
+ "9uEhyiIAEKE": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Royal Enfield Bullet restoration with styling changes; no values."
+ },
+ "-D81UzH-hTw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Will-it-run revival of an old Honda; shows a check order and fire risk from fuel leaks, values for that bike only."
+ },
+ "-ooue7i73zo": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "cylinder_head"
+  ],
+  "course": [
+   "m2-fundamentals"
+  ],
+  "note": "Compares two big V-twin designs and where the power comes from; power figures are the creator's claim."
+ },
+ "dAKIuSjPXxA": {
+  "role": "tutorial",
+  "repairs": [
+   "tyre-replace",
+   "wheel-balance",
+   "tyre-bead-seat"
+  ],
+  "problems": [
+   "speed-vibration"
+  ],
+  "parts": [
+   "front_tyre",
+   "rear_tyre",
+   "wheel_rim"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Change a tyre with levers and rim protectors, seat the bead and balance the wheel; check direction arrows and pressures after."
+ },
+ "aZABUucHNQY": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Custom build showcase; entertainment, not a repair lesson."
+ },
+ "hEZeR9E3JyY": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "rear_tyre"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Car tyre on a motorcycle experiment shows why tyre profile matters; not a recommendation, do not copy."
+ },
+ "nuZ_bafNtvk": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda CG125 complete restoration; useful model context, no values."
+ },
+ "TXQXeX19GzE": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Pocket bike restoration; cosmetic focus, no measurements."
+ },
+ "qhje1ePHEzM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Mini bike restoration; cosmetic focus, no measurements."
+ },
+ "3QCIIDSYJLc": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "exhaust-loud"
+  ],
+  "parts": [
+   "exhaust",
+   "silencer_baffle"
+  ],
+  "course": [],
+  "note": "What an aftermarket exhaust changes: sound, weight, small power gains only with retuning; noise rules apply."
+ },
+ "x-ogXwhCzVI": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "cylinder"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Old style boring of a worn cylinder in a small shop; machine shop work, measure piston and bore first."
+ },
+ "OK8_r7Ge2k4": {
+  "role": "tutorial",
+  "repairs": [
+   "idle-screw-set",
+   "carb-idle-adjust"
+  ],
+  "problems": [
+   "high-fuel-use"
+  ],
+  "parts": [
+   "idle_mixture_screw"
+  ],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Set the idle mixture screw on a 70 cc carb; mileage claims are unverified, start from the manual setting."
+ },
+ "tBuwSkjruk0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "carb"
+  ],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Review of an electronic aftermarket carburettor; product claims are the maker's, shows how fuel metering differs."
+ },
+ "YdrR9EFNdqo": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "brake"
+  ],
+  "course": [
+   "m4-brakes",
+   "m1-physics"
+  ],
+  "note": "Why the front brake does most of the stopping and how to use both; riding technique, not a repair."
+ },
+ "tic_D3n0s5k": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda CB400 restoration; order of work, no values."
+ },
+ "01k-EwoQVWY": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cheap Ninja restoration; inspiration only, no measurements."
+ },
+ "IU0_E37z_9I": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cafe racer build time-lapse; styling, not a repair lesson."
+ },
+ "Nt-dAN6qFWI": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m2-two-stroke",
+   "m2-four-stroke",
+   "m1-types"
+  ],
+  "note": "Two-stroke against four-stroke: power delivery, maintenance and use; a fair summary for choosing a bike."
+ },
+ "b0ZjDSn2jD0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "valves"
+  ],
+  "course": [
+   "m2-fundamentals"
+  ],
+  "note": "How a small 1990s Honda four reached very high revs: bore, stroke and valve train; design story, no service values."
+ },
+ "z1FuokFL4mk": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Barn find Harley revival; follow the order of checks, values for that bike only."
+ },
+ "ON719HaS-SM": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Blown turbo Hayabusa teardown; a speed build failure, not a repair lesson."
+ },
+ "O2zlYpy6QCM": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m5-architecture",
+   "m5-batteries"
+  ],
+  "note": "Opinion on why electric motorcycles struggle: pack cost, weight, range and charging; market claims are the creator's."
+ },
+ "RYNtJxE5h-c": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "CBR250RR MC22 restoration; order of work, no values."
+ },
+ "-uSVXAF3IEw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis",
+   "m2-two-stroke"
+  ],
+  "note": "1960s Yamaha revival; shows a fault-led check order, values for that bike only."
+ },
+ "EMFVETUYXv8": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Show chopper build; styling, not a repair lesson."
+ },
+ "yaSXqrvNZOM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-anatomy"
+  ],
+  "note": "Harley factory tour from frame to finished bike; production methods are not repair methods."
+ },
+ "lXLHeb-qacY": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Scrambler styling build time-lapse; no learning value for repair."
+ },
+ "u74jYkItdD8": {
+  "role": "tutorial",
+  "repairs": [
+   "engine-break-in"
+  ],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "How to run in a new bike: vary revs, avoid long full load, first oil change; follow your manual's limits."
+ },
+ "kMM1T8rmqA4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Long Yamaha DT250 barn find restoration; order of work, no measurements."
+ },
+ "xFfy7uNaS0Q": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Scrambler build time-lapse; styling, not a repair lesson."
+ },
+ "yH20mXVQL6g": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "CBR600 from scrap to finished bike; visual finish is not proof of safety."
+ },
+ "ovl515j7yKw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Stored Yamaha revival; shows fuel, spark and compression checks in order, values for that bike only."
+ },
+ "Qm6fTWaj3QE": {
+  "role": "tutorial",
+  "repairs": [
+   "tubeless-plug",
+   "tube-puncture-repair"
+  ],
+  "problems": [
+   "puncture-tubeless",
+   "slow-puncture"
+  ],
+  "parts": [
+   "rear_tyre",
+   "front_tyre"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Compares puncture plug types and which ones hold; any plug is temporary, replace the tyre when you can."
+ },
+ "KJRY4eSU-Tc": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Cheap YZ250 two-stroke revived start to finish; values for that bike only."
+ },
+ "6yIRpy8eI7Y": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "valves",
+   "camshaft",
+   "rocker_arms"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Why Ducati closes its valves with a cam instead of springs; valve train idea, not an adjustment guide."
+ },
+ "nFgqFfHKEzU": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Hardware store parts build; entertainment, not a repair lesson."
+ },
+ "-D-1qgHRbKo": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Turbo kit fitting on a Hayabusa; a speed modification with no repair value."
+ },
+ "G8RuBLbS9kw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "1960s Vespa restoration; order of work, no values."
+ },
+ "KdWyDOvLzuE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "exhaust-loud"
+  ],
+  "parts": [
+   "exhaust",
+   "silencer_baffle"
+  ],
+  "course": [],
+  "note": "What removing the silencer does to noise, mixture and power; usually illegal on the road and can make it run lean."
+ },
+ "M7fluO1Ohs4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m1-types"
+  ],
+  "note": "Revival of Suzuki's rotary bike; shows why the Wankel design is hard to keep alive, values for that bike only."
+ },
+ "OiwXSquU4MI": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Small engine swap for fun; not a repair lesson."
+ },
+ "Qn9JrN1JERI": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "crankshaft",
+   "counterbalancer"
+  ],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "Why the 270 degree parallel twin feels and sounds like a V-twin; read with the crossplane correction video."
+ },
+ "mlBhPZdVqb8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "gearbox",
+   "shift_mechanism"
+  ],
+  "course": [
+   "m4-gearbox"
+  ],
+  "note": "How a quickshifter cuts ignition or fuel for a clutchless change; only on bikes made or fitted for it."
+ },
+ "pxsRHqPF5os": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "One minute first start of a hand-built engine; a showcase, no learning content."
+ },
+ "lsRjupN8daM": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Turbo and nitrous build; a speed build, not a repair lesson."
+ },
+ "9GAUo8eUXeU": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine_oil"
+  ],
+  "course": [
+   "m2-lubrication-cooling"
+  ],
+  "note": "Laboratory style comparison across makes; results apply to those samples only, not a ranking to copy."
+ },
+ "SHVjbmM0758": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "carb-no-fuel",
+   "fuel-starvation",
+   "vacuum-tap-no-flow"
+  ],
+  "parts": [
+   "fuel_tap",
+   "fuel_line",
+   "fuel_filter",
+   "carb"
+  ],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "How fuel gets from tank to carb on a four-stroke scooter, including the vacuum tap; helps find where flow stops."
+ },
+ "E2CybLSrN5Q": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "jumps-out-of-gear",
+   "false-neutral"
+  ],
+  "parts": [
+   "gearbox",
+   "gearbox_gears",
+   "shift_drum",
+   "shift_mechanism"
+  ],
+  "course": [
+   "m4-gearbox"
+  ],
+  "note": "Animation of a sequential gearbox: dogs, forks and shift drum; helps explain why a bike jumps out of gear."
+ },
+ "mm2F08Ys_zU": {
+  "role": "tutorial",
+  "repairs": [
+   "fork-oil-seals",
+   "fork-seal-drive-fit",
+   "fork-oil-level-set"
+  ],
+  "problems": [
+   "fork-leak"
+  ],
+  "parts": [
+   "fork_seals",
+   "fork_oil",
+   "forks"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Replace seals on an inverted fork, set oil level and refit; long real workshop video, values for that fork only."
+ },
+ "muP8nZ6-tXE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "front_tyre",
+   "rear_tyre"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Why new tyres need gentle riding at first: release agent, heat and bead seating; ride with care for the first miles."
+ },
+ "_v9gnC5PiWk": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "exhaust"
+  ],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "How a two-stroke expansion chamber pushes mixture back into the cylinder; a short clear animation."
+ },
+ "yBJzjMndyp0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Hayabusa full restoration; order of work, no values."
+ },
+ "ez8StqBQ0d8": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Edited restoration story; inspiration only, no measurements or test results shown."
+ },
+ "QunGk6tnR7s": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Scooter assembly line; production stages only, no service values."
+ },
+ "5WltJ5vRkMA": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "abs"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Maker film on how motorcycle ABS keeps the wheel turning under hard braking; promotional, not a repair guide."
+ },
+ "IzXE32thS1g": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "headshake",
+   "weave"
+  ],
+  "parts": [
+   "forks",
+   "steering_bearings"
+  ],
+  "course": [
+   "m4-frame-steering",
+   "m4-suspension"
+  ],
+  "note": "What causes a tank slapper and how geometry, damping and dampers control it; check bearings and tyres first on a real bike."
+ },
+ "Oo2xAQ4ULw8": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "traction_battery",
+   "bms"
+  ],
+  "course": [
+   "m5-batteries"
+  ],
+  "note": "Opening a traction pack to see cells and BMS; high voltage, advanced case study, not a DIY guide."
+ },
+ "eLSfj_-2yZ0": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Tyre product picks for one year; shopping list, no repair value."
+ },
+ "I9KIxKP0Wlw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Hand-built V10 special maintenance and ride; one-off engineering, no general values."
+ },
+ "GpJTd4CGbkE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "chain",
+   "rear_sprocket"
+  ],
+  "course": [
+   "m4-final-drive"
+  ],
+  "note": "Chain, belt and shaft drive compared on weight, wear and upkeep; a short clear summary."
+ },
+ "n8gn8MWj_yI": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "motor",
+   "controller",
+   "traction_battery"
+  ],
+  "course": [
+   "m5-architecture"
+  ],
+  "note": "Budget electric build with a parts list; shows integration choices, check legality and high voltage safety."
+ },
+ "nIzA5WYePNM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Part 1 of a Honda NC30 restoration series; model hub material, no values in this episode."
+ },
+ "z_IVvVz4SSg": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "pinking"
+  ],
+  "parts": [],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Octane is knock resistance, not energy; use the grade the maker states, higher gives no gain on most bikes."
+ },
+ "qP48YRhebv0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "clutch-slip"
+  ],
+  "parts": [
+   "clutch",
+   "clutch_plates",
+   "clutch_springs",
+   "clutch_basket"
+  ],
+  "course": [
+   "m4-clutch"
+  ],
+  "note": "Animation of plates, springs and basket in a wet clutch; short and clear."
+ },
+ "uP525mTCAz0": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "List of illegal mods; legality content, no repair value."
+ },
+ "duwIOAFexIw": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Tyre product picks for one year; shopping list, no repair value."
+ },
+ "9dSrHKXyHJ8": {
+  "role": "tutorial",
+  "repairs": [
+   "tubeless-plug"
+  ],
+  "problems": [
+   "puncture-tubeless"
+  ],
+  "parts": [
+   "rear_tyre"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Roadside puncture repair with a plug kit; a get-home fix only, check the tyre properly after."
+ },
+ "SmNH1hdGWQE": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Mini cross dirt bike restoration; cosmetic focus, no measurements."
+ },
+ "FPG9X6fe7ZY": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Classic Vespa restoration in German; order of work, no values."
+ },
+ "g0HfZkitybE": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Crashed CBR600RR rebuild time-lapse; a frame and crash check is not shown in detail."
+ },
+ "yrrH1W4tgVg": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "traction_battery"
+  ],
+  "course": [
+   "m5-safety"
+  ],
+  "note": "Cutting into a failed electric bike pack; high voltage risk, advanced case study, not a DIY guide."
+ },
+ "h5NvlvQbwvY": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Hardtail bobber fabrication; frame cutting and styling, not a repair lesson."
+ },
+ "BdSxeZfzfc8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine_oil"
+  ],
+  "course": [
+   "m2-lubrication-cooling"
+  ],
+  "note": "Whether to warm up an engine: ride gently until warm rather than long idling."
+ },
+ "HfZ4YsrcsLA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Gadget opinion list; no repair value."
+ },
+ "W3BGPX2b8yw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Part 2 of the Honda NC30 restoration series; order of work, no values."
+ },
+ "pLx8h-unqMI": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "forks",
+   "fork_tubes"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Conventional against inverted forks: stiffness, weight and seal exposure; short and clear."
+ },
+ "3tX3lsoHO7o": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Wrecked Ninja 636 rebuild; visual result is not proof of a safe frame."
+ },
+ "bocug7iVzhc": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-anatomy"
+  ],
+  "note": "Honda factory tour, from parts to finished bikes; production methods are not repair methods."
+ },
+ "dUYcdWJeAyo": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m5-architecture",
+   "m5-batteries"
+  ],
+  "note": "Why electric bikes are hard: pack weight, cost and charging; an opinion piece, check claims."
+ },
+ "uA_jRnmTZco": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "high-fuel-use"
+  ],
+  "parts": [],
+  "course": [],
+  "note": "What does and does not cut fuel use: tyre pressure, chain, riding style; gains are the creator's figures."
+ },
+ "xpoglovyy_8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston_rings"
+  ],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "Argues against gentle break-in and explains ring seating; it is one view, follow the maker's manual."
+ },
+ "f6yDy2KcBlI": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "traction_battery",
+   "bms"
+  ],
+  "course": [
+   "m5-safety"
+  ],
+  "note": "Attempted repair of a failed electric bike pack; high voltage risk, advanced case study only."
+ },
+ "3NFB7jnsAMc": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "cylinder",
+   "piston",
+   "piston_rings"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Rebore or new cylinder kit: cost, fit and when each makes sense; decide by measuring the bore."
+ },
+ "QOnHVExumjY": {
+  "role": "tutorial",
+  "repairs": [
+   "idle-screw-set",
+   "carb-idle-adjust"
+  ],
+  "problems": [
+   "high-fuel-use",
+   "rough-idle"
+  ],
+  "parts": [
+   "idle_mixture_screw",
+   "carb"
+  ],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Set idle speed and mixture on a scooter carb (TVS Jupiter, Wego); mileage claims are unverified, values for those scooters."
+ },
+ "6VegmGS-oMs": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston",
+   "cylinder"
+  ],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Freeing a seized Honda engine; shows how to decide between freeing it and stripping it, values for that bike only."
+ },
+ "I5o8lFq-Ego": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Budget parts novelty build; entertainment, not a repair lesson."
+ },
+ "-JQYbBePg20": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Part 6 of the Honda NC30 restoration series; long film, check for values before use."
+ },
+ "66J4SeFtEuc": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Wrecked GSX-R600 rebuild time-lapse; no frame or crash measurements."
+ },
+ "ZJAVnPAvKTM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Abused GSX-R600 rebuild; cosmetic and parts swap, no values."
+ },
+ "r3Q0_yYeG3c": {
+  "role": "tutorial",
+  "repairs": [
+   "spark-test",
+   "fuel-shot-test",
+   "recommission-after-storage",
+   "non-running-bike-assess"
+  ],
+  "problems": [
+   "cranks-no-start",
+   "no-start-after-storage",
+   "stale-fuel"
+  ],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Cheap checks for an old bike that will not start: fuel, spark, air and kill switch, in order."
+ },
+ "QoIFaPFMmv4": {
+  "role": "tutorial",
+  "repairs": [
+   "tyre-inspect",
+   "tyre-age-check"
+  ],
+  "problems": [
+   "tyre-centre-wear",
+   "tyre-cracked"
+  ],
+  "parts": [
+   "front_tyre",
+   "rear_tyre"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Read wear bars, cracks and the date code to know when to replace a tyre; short and clear."
+ },
+ "9-WlJsjmed4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "motor",
+   "controller",
+   "traction_battery"
+  ],
+  "course": [
+   "m5-architecture"
+  ],
+  "note": "Silent build converting a vintage Honda to electric; shows packaging of motor and pack, not a DIY guide."
+ },
+ "zB4DsHV8SAQ": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-adjust"
+  ],
+  "problems": [
+   "chain-noise",
+   "chain-jumps"
+  ],
+  "parts": [
+   "chain",
+   "rear_sprocket"
+  ],
+  "course": [
+   "m4-final-drive"
+  ],
+  "note": "Adjust chain slack at the tightest spot and keep the wheel aligned; use your manual's slack figure."
+ },
+ "rbtZspspRI4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston",
+   "piston_rings",
+   "cylinder"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Hindi workshop video fitting a new top end on a Splendor BS6 to cure smoke; costs and parts are for that model and date."
+ },
+ "GGxBqS0R-oI": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Scrambler build time-lapse; styling, not a repair lesson."
+ },
+ "vSZiKrtJ7Y0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "front_tyre"
+  ],
+  "course": [
+   "m1-physics",
+   "m4-frame-steering"
+  ],
+  "note": "How a bike steers by leaning on a round tyre profile; a flat tread test shows why."
+ },
+ "1lrH1U4FnRY": {
+  "role": "tutorial",
+  "repairs": [
+   "valve-clearance",
+   "valve-shim-adjust",
+   "valve-check"
+  ],
+  "problems": [
+   "tappet-tick"
+  ],
+  "parts": [
+   "valve_shims",
+   "valves",
+   "camshaft"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Measure valve clearance with feeler gauges and swap shims; clearances and cam timing marks are model specific."
+ },
+ "cDCeOjHQZsM": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "exhaust"
+  ],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Long animated explainer of two-stroke expansion chamber waves; theory, not tuning values."
+ },
+ "BALoiHotB-I": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "oil_filter"
+  ],
+  "course": [
+   "m2-lubrication-cooling"
+  ],
+  "note": "Cutting open two oil filters to compare build; brand claims are the creator's."
+ },
+ "chsGBhB5g7o": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "stale-fuel"
+  ],
+  "parts": [
+   "fuel_stabiliser"
+  ],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Test of fuel stabilisers for storage; results apply to that test, follow product directions."
+ },
+ "4Xfkju3VENM": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Two-stroke engine swap for fun; not a repair lesson."
+ },
+ "Se8-W7rK0H4": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine_oil"
+  ],
+  "course": [
+   "m2-lubrication-cooling"
+  ],
+  "note": "Synthetic against conventional oil: myths and facts; use the grade and spec in your manual."
+ },
+ "ah7Ubbq5EAA": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "frame",
+   "swingarm"
+  ],
+  "course": [
+   "m4-frame-steering"
+  ],
+  "note": "Why frames and parts use steel, aluminium or titanium: strength, weight and cost."
+ },
+ "P7hPNyr7fSc": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Wrecked CBR1000RR rebuild; visual result is not proof of a safe frame."
+ },
+ "ZQK3A3vik8o": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "abs-light"
+  ],
+  "parts": [
+   "abs"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "How ABS works with wheel sensors and a modulator, single and dual channel; helps explain an ABS light."
+ },
+ "aSvc1-8nBvg": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Barn stored bike revival; shows a fault-led check order, values for that bike only."
+ },
+ "wN_VhjPbUag": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Rare Honda sport bike fault hunt; useful reasoning order, values for that bike only."
+ },
+ "WGfb3sBnrwQ": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Adventure styling conversion; not a repair lesson."
+ },
+ "1xITumgvvS4": {
+  "role": "tutorial",
+  "repairs": [
+   "brake-pad-replace",
+   "brake-pad-check",
+   "caliper-clean"
+  ],
+  "problems": [
+   "brake-squeal",
+   "brake-grinding"
+  ],
+  "parts": [
+   "brake_pads",
+   "brake_caliper"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Check pad wear and fit new pads, clean pins and pistons; pump the lever before riding."
+ },
+ "qd6o14_CvQ4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Hand-built V10 special, part 2; one-off engineering, no general values."
+ },
+ "8coBJQD3MWQ": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston"
+  ],
+  "course": [
+   "m2-two-stroke",
+   "m2-diagnosis"
+  ],
+  "note": "Seized two-stroke Suzuki revival; freeing and checking the top end, values for that bike only."
+ },
+ "CtyCKiMPx_w": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Vintage Yamaha racer restoration, part 3; order of work, no values."
+ },
+ "2LTfbtDA-1Q": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Bike stored 30 years brought back; fuel system and checks in order, values for that bike only."
+ },
+ "XaSngTcPw40": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "motor",
+   "controller"
+  ],
+  "course": [
+   "m5-architecture",
+   "m5-motors"
+  ],
+  "note": "Electric motorcycle built from scratch; shows motor and controller choices, high voltage needs qualified review."
+ },
+ "v-LspowrMLQ": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Dirt bike stored 20 years revived; check order, values for that bike only."
+ },
+ "8j04GyMHxbg": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "traction_battery",
+   "bms"
+  ],
+  "course": [
+   "m5-batteries",
+   "m5-safety"
+  ],
+  "note": "Follow-up on why an electric bike pack failed; advanced diagnosis story, high voltage, not a DIY guide."
+ },
+ "qUo9OhctDfU": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "crankshaft",
+   "cylinder_head"
+  ],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "Silent build of a BMW boxer engine; shows part order, values for that engine only."
+ },
+ "1MfvbmkHuKA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Budget tyre picks for one year; shopping list, no repair value."
+ },
+ "sRII-ZAnimM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda dirt bike built from boxed parts; order of work, no values."
+ },
+ "ir6m8ivn7VU": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "High mileage BMW R1200GS engine noise traced and repaired; values for that model only."
+ },
+ "k884DfM2LsU": {
+  "role": "tutorial",
+  "repairs": [
+   "fork-oil-seals",
+   "fork-oil-level-set",
+   "fork-inspect"
+  ],
+  "problems": [
+   "fork-leak",
+   "fork-bottoming"
+  ],
+  "parts": [
+   "forks",
+   "fork_oil",
+   "fork_seals",
+   "fork_bushes",
+   "fork_springs"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Strip a fork, renew seals, bushes and oil, set the oil level; use your manual's oil grade and level."
+ },
+ "UDQMGi2g-MU": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Abandoned Honda Magna fixed cheaply then dyno tested; check order, values for that bike only."
+ },
+ "ZtRnAI1jHao": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Hand-built V10 special, part 1; one-off engineering, no general values."
+ },
+ "vrmYJgcGX30": {
+  "role": "tutorial",
+  "repairs": [
+   "fork-oil-seals",
+   "fork-damper-bolt-release",
+   "fork-seal-drive-fit",
+   "fork-oil-level-set"
+  ],
+  "problems": [
+   "fork-leak"
+  ],
+  "parts": [
+   "fork_seals",
+   "fork_oil",
+   "forks",
+   "fork_bushes"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Replace seals on a conventional fork, including the damper bolt; long and thorough, values for that fork only."
+ },
+ "kb0ox9Ue6fw": {
+  "role": "tutorial",
+  "repairs": [
+   "caliper-rebuild",
+   "caliper-clean"
+  ],
+  "problems": [
+   "caliper-sticking",
+   "brake-drag"
+  ],
+  "parts": [
+   "brake_caliper",
+   "caliper_seals"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Strip, clean and reseal a brake caliper; short overview, bleed the brakes and test before riding."
+ },
+ "9syCr3iqa74": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "crankcase"
+  ],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Vespa PX80 engine restoration; shows part order, values for that engine only."
+ },
+ "aBpc8JBY3jo": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Anecdotal fuel additive test; product claim, no repair value."
+ },
+ "XHSyda8rqp8": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "cylinder_head"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "BMW F650 single cylinder engine rebuild; part order and inspection, values for that engine only."
+ },
+ "ocfIYUc5bpU": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "valves",
+   "camshaft",
+   "rocker_arms"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "One minute animation of desmodromic valve opening and closing."
+ },
+ "hnNN6c7lb8c": {
+  "role": "tutorial",
+  "repairs": [
+   "engine-oil-service",
+   "oil-filter-change",
+   "drain-bolt-tighten"
+  ],
+  "problems": [
+   "oil-leak-drain-plug"
+  ],
+  "parts": [
+   "engine_oil",
+   "oil_filter",
+   "drain_plug"
+  ],
+  "course": [
+   "m4-maintenance",
+   "m2-lubrication-cooling"
+  ],
+  "note": "Change oil and filter, new washer, torque the drain bolt; use your manual's grade and quantity."
+ },
+ "SEYQg35pInA": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Izh Jupiter family restoration; order of work, no values."
+ },
+ "mJ5Ovg6ADpI": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "ecu",
+   "throttle_sensor"
+  ],
+  "course": [
+   "m3-efi"
+  ],
+  "note": "What ride modes change in throttle map and power; mostly software, not a repair topic."
+ },
+ "4rgi9B8BKUE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "oil_filter"
+  ],
+  "course": [
+   "m2-lubrication-cooling"
+  ],
+  "note": "Compares paper, glass fibre and steel filter media; test method limits the conclusions."
+ },
+ "s_FhKbrdvWQ": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-two-stroke",
+   "m2-diagnosis"
+  ],
+  "note": "Old Yamaha two-stroke twin revival; check order, values for that bike only."
+ },
+ "QLZJoLKH03w": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Wrecked GSX-R1000 restoration; visual result is not proof of a safe frame."
+ },
+ "dQa4UQRfd3k": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "frame"
+  ],
+  "course": [],
+  "note": "Hand-built chopper frame fabrication; shows welding and jigs, not a repair method."
+ },
+ "c5JB6HjKiF4": {
+  "role": "tutorial",
+  "repairs": [
+   "starter-relay-test",
+   "starter-circuit-test"
+  ],
+  "problems": [
+   "starter-clicks",
+   "starter-silent"
+  ],
+  "parts": [
+   "starter_relay"
+  ],
+  "course": [
+   "m3-battery-charging"
+  ],
+  "note": "Test and replace a starter relay; check the battery and earth first, the 'most bikes' claim needs checking."
+ },
+ "0cwEvciA2j0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston",
+   "cylinder"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Hindi top end fitting on a Hero Splendor with cost talk; costs depend on place and date."
+ },
+ "d11UxowPSLc": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Four hour crashed ZX-6R rebuild; long film, no frame measurements shown."
+ },
+ "ZtzTyCKh5fY": {
+  "role": "tutorial",
+  "repairs": [
+   "sag-measure",
+   "rear-preload-adjust"
+  ],
+  "problems": [
+   "rear-sagging"
+  ],
+  "parts": [
+   "rear_shock",
+   "fork_springs"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Measure rider sag front and rear and set preload; target sag numbers depend on the bike and use."
+ },
+ "JERukuQYaT4": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Weight reduction mods; a performance experiment, not a repair lesson."
+ },
+ "1GR6CRKDR1I": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston",
+   "cylinder"
+  ],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Seized Kawasaki engine stripped to find the cause; decision making story, values for that engine only."
+ },
+ "yHYL_UuuAbA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Street tracker build time-lapse; styling, not a repair lesson."
+ },
+ "MD1UPdOi7Zg": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "chain"
+  ],
+  "course": [
+   "m4-final-drive"
+  ],
+  "note": "Chain, belt and shaft drives compared with diagrams; wear and upkeep differences."
+ },
+ "uDmn-zngFRY": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-adjust",
+   "front-end-align"
+  ],
+  "problems": [
+   "pulls-to-side"
+  ],
+  "parts": [
+   "rear_wheel"
+  ],
+  "course": [
+   "m4-frame-steering"
+  ],
+  "note": "Check that the wheels line up with a straight edge or string, not only the adjuster marks."
+ },
+ "PteNx9qMmrM": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m2-two-stroke",
+   "m2-four-stroke"
+  ],
+  "note": "Same frame, two-stroke against four-stroke engine; power delivery and upkeep compared."
+ },
+ "Tqu7WGELU5s": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-adjust",
+   "chain-clean-lube",
+   "chain-wear-check",
+   "sprocket-inspect"
+  ],
+  "problems": [
+   "chain-noise",
+   "sprocket-worn",
+   "chain-stretches-fast"
+  ],
+  "parts": [
+   "chain",
+   "front_sprocket",
+   "rear_sprocket"
+  ],
+  "course": [
+   "m4-final-drive"
+  ],
+  "note": "Check wear, clean, lube and adjust a chain and inspect sprockets; use your manual's slack figure."
+ },
+ "qaKcgFy6e64": {
+  "role": "tutorial",
+  "repairs": [
+   "wheel-bearing-replace",
+   "wheel-bearing-check"
+  ],
+  "problems": [
+   "wheel-bearing-play",
+   "wheel-bearing-noise"
+  ],
+  "parts": [
+   "wheel_bearing"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Check for play and replace wheel bearings; drive the new bearing by its outer race only."
+ },
+ "vnCamwNd_IU": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "motor",
+   "controller",
+   "traction_battery"
+  ],
+  "course": [
+   "m5-architecture"
+  ],
+  "note": "KLX250 converted to electric twice; shows what changed between builds, not a DIY guide."
+ },
+ "rvtrkm65p2o": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "Cheap YZ125 two-stroke brought back; values for that bike only."
+ },
+ "00SUbs4CElM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-two-stroke",
+   "m2-diagnosis"
+  ],
+  "note": "Two-stroke minibike will-it-run; simple check order, values for that bike only."
+ },
+ "j3GauxjTOCg": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "crankcase"
+  ],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "Hindi full engine repair on a Hero Splendor, part 1; check model before copying."
+ },
+ "FJQFEr__wOI": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "GSX400 restored after a fire; wiring and plastics renewal story, no values."
+ },
+ "NB5F_Qu4ixE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "cranks-no-start",
+   "start-blocked-interlock",
+   "starter-silent"
+  ],
+  "parts": [],
+  "course": [
+   "m3-diagnosis"
+  ],
+  "note": "Top reasons a modern bike will not start: kill switch, side stand, battery; quick first checks."
+ },
+ "UQmPt20csEM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "BMW R60/5 restoration; order of work, no values."
+ },
+ "u3Yw5WiYg4o": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Neglected GSX-R tidied in 72 hours; shows service items, values for that bike only."
+ },
+ "I_uH72wDTL0": {
+  "role": "tutorial",
+  "repairs": [
+   "carb-jet-tune",
+   "main-jet-change"
+  ],
+  "problems": [
+   "jetting-after-modification"
+  ],
+  "parts": [
+   "carb",
+   "carb_jets"
+  ],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Maker guide to jetting S&S carbs; jet sizes are for those carbs only, but the method transfers."
+ },
+ "Vah6SVg6O8Q": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Four hour Harley Big Twin restoration; long film, no values."
+ },
+ "xsJaGyiT2DE": {
+  "role": "tutorial",
+  "repairs": [
+   "fork-seal-drive-fit",
+   "make-simple-special-tool"
+  ],
+  "problems": [
+   "fork-leak"
+  ],
+  "parts": [
+   "fork_seals"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Drive in fork seals with a home-made tool; keep the seal square and do not scratch the tube."
+ },
+ "1bQdwwUC7go": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Scrambler kit build time-lapse; styling, not a repair lesson."
+ },
+ "aRd0bmxNVRY": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Touring tyre picks; shopping list, no repair value."
+ },
+ "GMxfJ2IYUgc": {
+  "role": "tutorial",
+  "repairs": [
+   "wheel-bearing-check",
+   "wheel-bearing-replace",
+   "wheel-bearing-race-remove"
+  ],
+  "problems": [
+   "wheel-bearing-play",
+   "wheel-bearing-noise",
+   "bearing-rumble"
+  ],
+  "parts": [
+   "wheel_bearing",
+   "wheel_hub"
+  ],
+  "course": [
+   "m4-wheels-tyres"
+  ],
+  "note": "Check, remove and fit wheel bearings, with the spacer; heat the hub only as shown and use correct bearings."
+ },
+ "d3ju716gxOU": {
+  "role": "tutorial",
+  "repairs": [
+   "clutch-cable-adjust"
+  ],
+  "problems": [
+   "clutch-slip",
+   "clutch-drag"
+  ],
+  "parts": [
+   "clutch_release",
+   "clutch"
+  ],
+  "course": [
+   "m4-clutch"
+  ],
+  "note": "Set the clutch adjuster on a Honda CD70; the pickup claim is unverified, values for that model."
+ },
+ "j59S-oULL-k": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "1980s Honda dirt bike revival; check order, values for that bike only."
+ },
+ "btR1tdPNaPg": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Styling design talk; not a repair lesson."
+ },
+ "bvhsCzSSfZA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cafe racer build time-lapse; styling, not a repair lesson."
+ },
+ "qrnrykGynu8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "exhaust-loud"
+  ],
+  "parts": [
+   "silencer_baffle",
+   "exhaust"
+  ],
+  "course": [],
+  "note": "Baffle types and what they change in sound and flow; removing them is often illegal and can upset fuelling."
+ },
+ "8rKONj33bPA": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "Habits that prevent damage: warm up gently, chain care, storage; the longevity claim is not proven."
+ },
+ "IxmzCoeLPPE": {
+  "role": "tutorial",
+  "repairs": [
+   "engine-oil-service",
+   "oil-level-check"
+  ],
+  "problems": [],
+  "parts": [
+   "engine_oil"
+  ],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "Oil service and checks for engine life; the 'triple lifespan' claim is the creator's."
+ },
+ "fujeAFAjb4A": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "engine-warning-light"
+  ],
+  "parts": [
+   "injector",
+   "fuel_pump",
+   "ecu",
+   "efi_sensors",
+   "throttle_body"
+  ],
+  "course": [
+   "m3-efi"
+  ],
+  "note": "Maker training film on how fuel injection works: pump, injector, sensors and ECU."
+ },
+ "pg503gZLuto": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Ducati factory production line; production methods are not repair methods."
  }
 }

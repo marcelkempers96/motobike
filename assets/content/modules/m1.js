@@ -701,6 +701,15 @@ export default {
           "title": "Watch",
           "items": [
             {
+              "id": "-3HBAvkc4a0",
+              "title": "The Rare Engine that Kills Everything it Touches",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "10:02",
+              "role": "How it works",
+              "note": "Why the Wankel rotary engine never took off in motorcycles; design history, not service information."
+            },
+            {
               "id": "aOTz0Ol8fLA",
               "title": "The Pros and Cons of Every Motorcycle Engine Type",
               "channel": "FortNine",
@@ -710,22 +719,13 @@ export default {
               "note": "Compares single, twin, triple, four and V engine layouts with pros and cons."
             },
             {
-              "id": "XjwTPY_fwKM",
-              "title": "Logic Defying V5 Engine - Honda's RC211V Explained Like Never Before",
-              "channel": "driving 4 answers",
-              "channel_url": "http://www.youtube.com/@d4a",
-              "duration": "16:59",
+              "id": "Nt-dAN6qFWI",
+              "title": "2 STROKE VS 4 STROKE | Which is Better for YOU!?",
+              "channel": "Ride With The Knights",
+              "channel_url": "http://www.youtube.com/@ridewiththeknights",
+              "duration": "12:20",
               "role": "How it works",
-              "note": "Honda RC211V V5 explained; advanced engine layout idea."
-            },
-            {
-              "id": "uA-kglFSq5I",
-              "title": "Ducati's Brilliant V4 Engine — Putting Supercars To Shame!",
-              "channel": "Engineering Explained",
-              "channel_url": "http://www.youtube.com/@EngineeringExplained",
-              "duration": "12:48",
-              "role": "How it works",
-              "note": "Ducati V4 engine layout and design ideas."
+              "note": "Two-stroke against four-stroke: power delivery, maintenance and use; a fair summary for choosing a bike."
             }
           ]
         }
@@ -1231,6 +1231,15 @@ export default {
               "duration": "7:07",
               "role": "How it works",
               "note": "Fast teardown naming the main parts; a map of the bike, not a procedure."
+            },
+            {
+              "id": "D-Wr2hkc-RM",
+              "title": "Honda Africa Twin Production Motorcycles In Japan",
+              "channel": "Automotive garage",
+              "channel_url": "http://www.youtube.com/@Automotivegarage",
+              "duration": "13:29",
+              "role": "Case study",
+              "note": "Africa Twin factory line shows assembly stages and checks; production methods are not repair methods."
             }
           ]
         }
@@ -1469,6 +1478,30 @@ export default {
           "type": "figure",
           "fig": "steering-geometry",
           "caption": "Try rake 25&ndash;28&deg; and see where trail lands against the 90&ndash;110 mm commuter range."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "YdrR9EFNdqo",
+              "title": "Front or Rear Brake - which one is Safer?",
+              "channel": "Moto Control",
+              "channel_url": "http://www.youtube.com/@MotoControlEn",
+              "duration": "12:45",
+              "role": "How it works",
+              "note": "Why the front brake does most of the stopping and how to use both; riding technique, not a repair."
+            },
+            {
+              "id": "vSZiKrtJ7Y0",
+              "title": "Can a Flat-Tread Motorcycle Turn? How Motorbikes Steer",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:58",
+              "role": "How it works",
+              "note": "How a bike steers by leaning on a round tyre profile; a flat tread test shows why."
+            }
+          ]
         }
       ]
     },
