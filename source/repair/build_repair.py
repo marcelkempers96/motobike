@@ -302,7 +302,14 @@ def sources_html(srcs):
 
 def plink(i, rel):
   p = PROB[i]; u = URG.get(p.get('urgency'), ('', ''))
-  return f'<li><a href="{rel}repair/problems/{i}/"><b>{e(p["title"])}</b><i class="ru is-{u[1]}">{u[0]}</i></a></li>'
+  return f'<li class="ru-li is-{u[1]}"><a href="{rel}repair/problems/{i}/" title="{u[0]}"><b>{e(p["title"])}</b><i class="ru-sr">{u[0]}</i></a></li>'
+LEGEND = '<div class="ru-legend" aria-hidden="true"><span class="is-ok">OK to ride</span><span class="is-care">Ride with care</span><span class="is-stop">Do not ride</span><span class="is-now">Stop now</span></div>'
+def add_legend(html):
+  # one colour key per page, next to the first heading that sits above a list of problems
+  if 'ru-li' not in html or 'ru-legend' in html: return html
+  m = re.search(r'<h2>((?:(?!</h2>).)*)</h2>(\s*<ul class="r-list[^"]*"><li class="ru-li)', html)
+  if m: return html[:m.start()] + f'<div class="ru-h2row"><h2>{m.group(1)}</h2>{LEGEND}</div>' + html[m.start() + len(m.group(0)) - len(m.group(2)):]
+  return html
 def tm(r): return re.sub(r'\s*\((editorial )?estimate\)', '', r.get('time') or '')
 def rlink(i, rel):
   r = REP[i]; l = LEVEL.get(r.get('level'), ('', ''))
@@ -331,6 +338,7 @@ SEO = {
   'repair/parts/brake_pads/': ('Motorcycle Brake Pads Explained | Moto Zero', 'Motorcycle brake pads: function, wear and replacement', None),
 }
 def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
+  body = add_legend(body)
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": c, "item": SITE + '/' + u} for n, (c, u) in enumerate(crumbs)]}]
   if extra_ld: ld.extend(extra_ld if isinstance(extra_ld, list) else [extra_ld])
   cr = ' / '.join(f'<a href="{rel}{u}">{e(c)}</a>' if n < len(crumbs) - 1 else e(c) for n, (c, u) in enumerate(crumbs))
@@ -347,7 +355,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
-  <link rel="stylesheet" href="{rel}assets/repair2.css?v=5">
+  <link rel="stylesheet" href="{rel}assets/repair2.css?v=6">
   {''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)}
 </head>
 <body>
@@ -364,7 +372,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="{rel}assets/site.js"></script>
-<script type="module" src="{rel}assets/repair2.js?v=3"></script>
+<script type="module" src="{rel}assets/repair2.js?v=4"></script>
 <script type="module" src="{rel}assets/videos.js"></script>
 </body>
 </html>
@@ -528,7 +536,7 @@ for sid, name in SYS.items():
 # index pages
 rel = '../../'
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By problem</h1><p class="r-lead">Start from what you notice. Each page tells you if it is safe to ride, then walks you through the checks.</p>{search_box()}</header>
-    <nav class="r-jump">{''.join(f'<a href="#{s}">{e(n)}</a>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}</nav>
+    {LEGEND}<nav class="r-jump">{''.join(f'<a href="#{s}">{e(n)}</a>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}</nav>
     {''.join(f'<section class="r-sec" id="{s}"><h2>{e(n)}</h2><ul class="r-list is-cols">' + ''.join(plink(x["id"], rel) for x in PROB.values() if x["system"] == s) + '</ul></section>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}'''
 page('repair/problems/', 'Motorcycle problems: find the fault step by step | Moto Zero', f'{len(PROB)} motorcycle, scooter and electric bike problems, each with safety advice, quick checks and a step-by-step diagnosis.', html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/')], rel)
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By repair</h1><p class="r-lead">Every job, grouped by who can do it. Workshop jobs explain what to check safely and what to ask the workshop for.</p>{search_box("Search repairs, for example: chain")}</header>

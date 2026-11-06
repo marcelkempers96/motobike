@@ -61,6 +61,18 @@
     .hm-fix-ways a.is-main { background: var(--warm); border-color: var(--warm); color: #FFF; }
     .hm-fix-ways b { font: 900 18px/1.2 var(--sans); } .hm-fix-ways span { font-size: 14px; }
     .hm-fix-h { font-size: 18px; margin: 26px 0 10px; }
+    .hm-fix-common a.ru-li { background: var(--ubg); color: var(--uink); border: 0; border-left: 6px solid var(--u); justify-content: center; min-height: 64px; }
+    .hm-fix-common a.ru-li:hover { box-shadow: inset 0 0 0 2px var(--u); }
+    .ru-li.is-ok, .ru-legend .is-ok { --u: #2E8B57; --ubg: #EAF5EE; --uink: #14432B; }
+    .ru-li.is-care, .ru-legend .is-care { --u: #E3A008; --ubg: #FFF6DC; --uink: #4A3400; }
+    .ru-li.is-stop, .ru-legend .is-stop { --u: #D2382C; --ubg: #FDE8E6; --uink: #5E120C; }
+    .ru-li.is-now, .ru-legend .is-now { --u: #8E1810; --ubg: #8E1810; --uink: #FFFFFF; }
+    .ru-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .hm-fix-hrow { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; margin: 26px 0 10px; }
+    .hm-fix-hrow .hm-fix-h { margin: 0; }
+    .ru-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 600 13px/1.2 var(--sans); color: var(--ink); }
+    .ru-legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .ru-legend span::before { content: ""; width: 16px; height: 16px; background: var(--ubg); border-left: 5px solid var(--u); box-shadow: inset 0 0 0 1px var(--u); }
     .hm-fix-common { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
     .hm-fix-common a { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 14px; background: #FFF; border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
     .hm-fix-common a:hover { border-color: var(--ink); }
@@ -259,8 +271,8 @@
           <a href="repair/bikes/"><img class="hm-ico" src="assets/icons/by-bike.svg" alt="" width="40" height="40"><b>By bike</b><span>500 motorcycles: top repairs and problems</span></a>
           <a href="parts/"><img class="hm-ico" src="assets/icons/spare-parts.svg" alt="" width="40" height="40"><b>Spare parts</b><span>Prices and shops for 41 popular bikes</span></a>
         </div>
-        <h3 class="hm-fix-h">Common problems</h3>
-        <div class="hm-fix-common"><a href="repair/problems/cranks-no-start/"><b>Engine turns over but will not start</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/battery-flat/"><b>Battery goes flat after the bike is parked</b><i class="ru is-care">Ride with care</i></a><a href="repair/problems/spongy-brake/"><b>Brake lever or pedal feels spongy</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/chain-noise/"><b>Chain is noisy, clattering or slapping</b><i class="ru is-care">Ride with care</i></a><a href="repair/problems/overheating-air/"><b>Air-cooled engine overheats</b><i class="ru is-now">Stop now</i></a><a href="repair/problems/sudden-power-loss/"><b>Sudden loss of power while riding</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/puncture-tube/"><b>Flat tyre on a wheel with an inner tube</b><i class="ru is-stop">Do not ride</i></a><a href="repair/problems/brake-squeal/"><b>Brakes squeal</b><i class="ru is-care">Ride with care</i></a></div>
+        <div class="hm-fix-hrow"><h3 class="hm-fix-h">Common problems</h3><div class="ru-legend" aria-hidden="true"><span class="is-ok">OK to ride</span><span class="is-care">Ride with care</span><span class="is-stop">Do not ride</span><span class="is-now">Stop now</span></div></div>
+        <div class="hm-fix-common"><a class="ru-li is-stop" href="repair/problems/cranks-no-start/" title="Do not ride"><b>Engine turns over but will not start</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-care" href="repair/problems/battery-flat/" title="Ride with care"><b>Battery goes flat after the bike is parked</b><i class="ru-sr">Ride with care</i></a><a class="ru-li is-stop" href="repair/problems/spongy-brake/" title="Do not ride"><b>Brake lever or pedal feels spongy</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-care" href="repair/problems/chain-noise/" title="Ride with care"><b>Chain is noisy, clattering or slapping</b><i class="ru-sr">Ride with care</i></a><a class="ru-li is-now" href="repair/problems/overheating-air/" title="Stop now"><b>Air-cooled engine overheats</b><i class="ru-sr">Stop now</i></a><a class="ru-li is-stop" href="repair/problems/sudden-power-loss/" title="Do not ride"><b>Sudden loss of power while riding</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-stop" href="repair/problems/puncture-tube/" title="Do not ride"><b>Flat tyre on a wheel with an inner tube</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-care" href="repair/problems/brake-squeal/" title="Ride with care"><b>Brakes squeal</b><i class="ru-sr">Ride with care</i></a></div>
       </div>
     </section>
 

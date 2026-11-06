@@ -197,3 +197,29 @@
 .bk-list a { color: var(--ink); text-decoration: none; font-weight: 600; }
 .bk-list a:hover { color: var(--warm); text-decoration: underline; }
 .bk-list span { color: var(--mute); font-size: 13.5px; margin-left: 4px; }
+
+/* safety colours: the whole problem card carries the colour, one key per page */
+.ru-li { --u: #8A8A8A; --ubg: #F6F6F6; --uink: var(--ink); }
+.ru-li.is-ok, .ru-legend .is-ok { --u: #2E8B57; --ubg: #EAF5EE; --uink: #14432B; }
+.ru-li.is-care, .ru-legend .is-care { --u: #E3A008; --ubg: #FFF6DC; --uink: #4A3400; }
+.ru-li.is-stop, .ru-legend .is-stop { --u: #D2382C; --ubg: #FDE8E6; --uink: #5E120C; }
+.ru-li.is-now, .ru-legend .is-now { --u: #8E1810; --ubg: #8E1810; --uink: #FFFFFF; }
+.r-list .ru-li > a { background: var(--ubg); color: var(--uink); border-bottom: 0; border-left: 6px solid var(--u); padding: 11px 12px; }
+.r-list .ru-li > a:hover { background: var(--ubg); box-shadow: inset 0 0 0 2px var(--u); }
+.r-list .ru-li > a b { color: inherit; }
+.r-list:has(.ru-li) { border-top: 0; display: grid; gap: 6px; }
+.r-list.is-cols:has(.ru-li) { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); column-gap: 12px; }
+.r-list.is-cols .ru-li { border-top: 0; }
+.ru-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ru-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 14px; font: 600 13px/1.2 var(--sans); color: var(--ink); }
+.ru-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.ru-legend span::before { content: ""; width: 16px; height: 16px; background: var(--ubg); border-left: 5px solid var(--u); box-shadow: inset 0 0 0 1px var(--u); }
+.ru-h2row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; }
+.ru-h2row .ru-legend { margin: 0 0 10px; }
+.r-head + .ru-legend { margin-top: 18px; } .ru-legend + .r-jump { padding-top: 4px; }
+@media (max-width: 700px) { .r-list.is-cols:has(.ru-li) { grid-template-columns: 1fr; } }
+.dg-opts button.ru-li { background: var(--ubg); color: var(--uink); border: 0; border-left: 6px solid var(--u); }
+.dg-opts button.ru-li:hover, .dg-opts button.ru-li:focus-visible { box-shadow: inset 0 0 0 2px var(--u); }
+.r-list .ru-li { display: flex; } .r-list .ru-li > a { flex: 1; }
+.r-head + .ru-legend { justify-content: flex-end; }
+@media (max-width: 700px) { .r-head + .ru-legend { justify-content: flex-start; } }

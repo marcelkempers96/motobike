@@ -82,7 +82,8 @@ if (dg) {
     const q = () => Object.fromEntries(new URLSearchParams(location.hash.slice(1)));
     const go = (o) => { location.hash = new URLSearchParams(o).toString(); };
     const steps = (n) => `<div class="dg-steps">${['Your bike', 'Where', 'What you notice', 'Result'].map((x, i) => `<span class="${i === n ? 'is-on' : i < n ? 'is-done' : ''}">${i + 1}. ${x}</span>`).join('')}</div>`;
-    const card = (p, st) => `<button type="button" data-p="${p.id}"><b>${esc(p.t)}</b><i class="ru is-${(U[p.u] || [])[1] || ''}">${(U[p.u] || [''])[0]}</i></button>`;
+    const card = (p, st) => `<button type="button" class="ru-li is-${(U[p.u] || [])[1] || ''}" data-p="${p.id}" title="${(U[p.u] || [''])[0]}"><b>${esc(p.t)}</b><i class="ru-sr">${(U[p.u] || [''])[0]}</i></button>`;
+    const LEGEND = '<div class="ru-legend" aria-hidden="true"><span class="is-ok">OK to ride</span><span class="is-care">Ride with care</span><span class="is-stop">Do not ride</span><span class="is-now">Stop now</span></div>';
     const render = () => {
       const s = q();
       if (s.p) {
@@ -99,7 +100,7 @@ if (dg) {
         </div>`;
       } else if (s.sys && s.bike) {
         const list = P.filter((x) => x.sys === s.sys);
-        dg.innerHTML = `${steps(2)}<button class="dg-back" data-back="bike">← Back</button><h2>What do you notice?</h2><div class="dg-opts">${list.map((p) => card(p)).join('')}</div>`;
+        dg.innerHTML = `${steps(2)}<button class="dg-back" data-back="bike">← Back</button><div class="ru-h2row"><h2>What do you notice?</h2>${LEGEND}</div><div class="dg-opts">${list.map((p) => card(p)).join('')}</div>`;
       } else if (s.bike) {
         const B = BIKES[s.bike]; if (!B) return go({});
         const sys = Object.entries(D.s).filter(([k]) => !B.hide.includes(k)).map(([k, n]) => [k, n, P.filter((x) => x.sys === k).length]).filter((x) => x[2]);
