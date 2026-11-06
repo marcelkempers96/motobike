@@ -16,6 +16,11 @@ import './gate.js';
 import './speech.js';
 import { pickerHTML, wire as wireLang } from './translate.js';
 
+// Sign-in links from Supabase emails can land on any page: send them to the account page,
+// which finishes the sign-in (the token stays in the hash, so nothing is lost).
+if (/[#&](access_token|error_description)=|[?&]code=/.test(location.hash + location.search) && !/\/account\/$/.test(location.pathname)) {
+  location.replace(new URL('account/', ROOT).pathname + location.search + location.hash);
+}
 export const MAIN = [['overview/', 'Overview']];
 export const NAV = [
   { key: 'course', title: 'Course', blurb: 'Five modules, quizzes and your progress', items: [

@@ -58,6 +58,8 @@ const box = document.getElementById('mza');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const next = new URLSearchParams(location.search).get('next');
 const sb = await supabase();
+const hashErr = new URLSearchParams(location.hash.slice(1)).get('error_description');
+if (hashErr) box.insertAdjacentHTML('beforebegin', `<p class="msg" style="padding:0 40px">${esc(hashErr)}. Ask for a new link below.</p>`);
 if (!sb) {
   box.innerHTML = `<div class="mza-card"><h2>Accounts are coming soon</h2><p>Your course progress is saved in this browser in the meantime: see <a href="../progress/">My progress</a>.</p></div>`;
 } else {
