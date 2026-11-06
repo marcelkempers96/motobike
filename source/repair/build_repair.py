@@ -165,6 +165,10 @@ def photos_html(kind, i, rel, limit=4, skip=None):
   return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div></section>'
 
 SYS = D['systems']
+def sys_icon(name, rel, size=40):
+  # icon file named after the system's title, e.g. "Battery and charging" -> battery-and-charging.svg
+  sl = re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+  return f'<img class="r-ico" src="{rel}assets/icons/{sl}.svg" alt="" width="{size}" height="{size}">' if os.path.exists(os.path.join(ROOT, 'assets/icons', sl + '.svg')) else ''
 
 URG = {'ok-to-ride': ('OK to ride', 'ok'), 'ride-with-care': ('Ride with care', 'care'), 'do-not-ride': ('Do not ride', 'stop'), 'stop-now': ('Stop now', 'now')}
 LEVEL = {'rider': ('Rider job', 'No special tools'), 'home': ('Home workshop', 'Basic tools and some experience'), 'workshop': ('Workshop job', 'Check safely, then hand it to a workshop')}
@@ -355,7 +359,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
-  <link rel="stylesheet" href="{rel}assets/repair2.css?v=6">
+  <link rel="stylesheet" href="{rel}assets/repair2.css?v=7">
   {''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)}
 </head>
 <body>
@@ -372,7 +376,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="{rel}assets/site.js"></script>
-<script type="module" src="{rel}assets/repair2.js?v=4"></script>
+<script type="module" src="{rel}assets/repair2.js?v=5"></script>
 <script type="module" src="{rel}assets/videos.js"></script>
 </body>
 </html>
@@ -523,7 +527,7 @@ for sid, name in SYS.items():
       for y in x.get('parts', []):
         if y not in seen: seen.append(y)
     part_ids = seen
-  html_ = f'''    <header class="r-head"><span class="ute-label">System</span><h1>{e(name)}</h1><p class="r-lead">Problems, repairs and parts for the {e(name.lower())}.</p></header>
+  html_ = f'''    <header class="r-head"><span class="ute-label">System</span><h1 class="r-h1-ico">{sys_icon(name, rel, 56)}{e(name)}</h1><p class="r-lead">Problems, repairs and parts for the {e(name.lower())}.</p></header>
     {photos_html('systems', sid, rel, 6)}
     <section class="r-sec"><h2>Problems</h2><ul class="r-list is-cols">{''.join(plink(x['id'], rel) for x in probs)}</ul></section>
     <section class="r-sec"><h2>Repairs</h2><ul class="r-list is-cols">{''.join(rlink(x, rel) for x in rep_ids)}</ul></section>
@@ -536,8 +540,8 @@ for sid, name in SYS.items():
 # index pages
 rel = '../../'
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By problem</h1><p class="r-lead">Start from what you notice. Each page tells you if it is safe to ride, then walks you through the checks.</p>{search_box()}</header>
-    {LEGEND}<nav class="r-jump">{''.join(f'<a href="#{s}">{e(n)}</a>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}</nav>
-    {''.join(f'<section class="r-sec" id="{s}"><h2>{e(n)}</h2><ul class="r-list is-cols">' + ''.join(plink(x["id"], rel) for x in PROB.values() if x["system"] == s) + '</ul></section>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}'''
+    {LEGEND}<nav class="r-jump">{''.join(f'<a href="#{s}">{sys_icon(n, rel, 22)}{e(n)}</a>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}</nav>
+    {''.join(f'<section class="r-sec" id="{s}"><h2 class="r-h2-ico">{sys_icon(n, rel, 32)}{e(n)}</h2><ul class="r-list is-cols">' + ''.join(plink(x["id"], rel) for x in PROB.values() if x["system"] == s) + '</ul></section>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}'''
 page('repair/problems/', 'Motorcycle problems: find the fault step by step | Moto Zero', f'{len(PROB)} motorcycle, scooter and electric bike problems, each with safety advice, quick checks and a step-by-step diagnosis.', html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/')], rel)
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By repair</h1><p class="r-lead">Every job, grouped by who can do it. Workshop jobs explain what to check safely and what to ask the workshop for.</p>{search_box("Search repairs, for example: chain")}</header>
     {''.join(f'<section class="r-sec"><h2>{LEVEL[l][0]} <small>{LEVEL[l][1]}</small></h2><ul class="r-list is-cols">' + ''.join(rlink(x["id"], rel) for x in sorted(REP.values(), key=lambda r: r["title"]) if x.get("level") == l) + '</ul></section>' for l in LEVEL)}'''
@@ -569,7 +573,7 @@ html_ = f'''    <header class="r-head is-home">
       <div><h2>Start here</h2><ul class="r-list">{''.join(rlink(x, rel) for x in start)}</ul></div>
       <div><h2>Common problems</h2><ul class="r-list">{''.join(plink(x, rel) for x in common)}</ul></div>
     </section>
-    <section class="r-sec"><h2>Systems</h2><div class="r-systems">{''.join(f'<a href="{rel}repair/systems/{s}/"><b>{e(n)}</b><span>{sum(1 for x in PROB.values() if x["system"] == s)} problems</span></a>' for s, n in SYS.items())}</div></section>
+    <section class="r-sec"><h2>Systems</h2><div class="r-systems">{''.join(f'<a href="{rel}repair/systems/{s}/">{sys_icon(n, rel)}<b>{e(n)}</b><span>{sum(1 for x in PROB.values() if x["system"] == s)} problems</span></a>' for s, n in SYS.items())}</div></section>
     <section class="r-sec r-safe"><h2>Before you work on a bike</h2><ul>
       <li>Work on a stable, level surface with the engine off and cool, unless a step says otherwise.</li>
       <li>Keep fuel away from sparks and flames. Battery acid, brake fluid and coolant harm skin, eyes and paint.</li>

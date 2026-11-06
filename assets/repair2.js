@@ -79,6 +79,8 @@ if (dg) {
       electric: { t: 'Electric motorcycle or scooter', d: 'Battery, controller and motor', hide: ['starting', 'running', 'fuel', 'ignition', 'engine', 'smoke', 'oil', 'cooling', 'clutch', 'gearbox', 'cvt', 'power'] },
     };
     const L = { rider: 'Rider job', home: 'Home workshop', workshop: 'Workshop job' };
+    // icon named after the title, e.g. "Petrol scooter" -> assets/icons/petrol-scooter.svg; hidden if there is none
+    const ico = (name, size = 40) => `<img class="r-ico" src="${ROOT}assets/icons/${name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.svg" alt="" width="${size}" height="${size}" onerror="this.remove()">`;
     const q = () => Object.fromEntries(new URLSearchParams(location.hash.slice(1)));
     const go = (o) => { location.hash = new URLSearchParams(o).toString(); };
     const steps = (n) => `<div class="dg-steps">${['Your bike', 'Where', 'What you notice', 'Result'].map((x, i) => `<span class="${i === n ? 'is-on' : i < n ? 'is-done' : ''}">${i + 1}. ${x}</span>`).join('')}</div>`;
@@ -106,7 +108,7 @@ if (dg) {
         const sys = Object.entries(D.s).filter(([k]) => !B.hide.includes(k)).map(([k, n]) => [k, n, P.filter((x) => x.sys === k).length]).filter((x) => x[2]);
         dg.innerHTML = `${steps(1)}<button class="dg-back" data-back="">← Back</button><h2>Where is the problem?</h2>
           <div class="dg-search r-search"><label class="r-sr" for="dg-q">Or describe it</label><input id="dg-q" type="search" placeholder="Or type it: for example, brakes squeal" autocomplete="off"><ul class="r-results" hidden></ul></div>
-          <div class="dg-opts">${sys.map(([k, n, c]) => `<button type="button" data-sys="${k}"><b>${esc(n)}</b><span>${c} problems</span></button>`).join('')}</div>`;
+          <div class="dg-opts">${sys.map(([k, n, c]) => `<button type="button" data-sys="${k}">${ico(n)}<b>${esc(n)}</b><span>${c} problems</span></button>`).join('')}</div>`;
         const inp = dg.querySelector('#dg-q'), ul = dg.querySelector('.r-results');
         inp.addEventListener('input', () => {
           const w = inp.value.toLowerCase().split(/\s+/).filter((x) => x.length > 1);
@@ -115,7 +117,7 @@ if (dg) {
           ul.innerHTML = r.length ? r.map((x) => `<li><a href="#bike=${s.bike}&sys=${x.sys}&p=${x.id}"><span>Problem</span><b>${esc(x.t)}</b><em>${esc(x.sysName)}</em></a></li>`).join('') : '<li class="none">Nothing found. Pick an area below.</li>';
         });
       } else {
-        dg.innerHTML = `${steps(0)}<h2>What are you riding?</h2><div class="dg-opts is-big">${Object.entries(BIKES).map(([k, b]) => `<button type="button" data-bike="${k}"><b>${b.t}</b><span>${b.d}</span></button>`).join('')}</div>`;
+        dg.innerHTML = `${steps(0)}<h2>What are you riding?</h2><div class="dg-opts is-big">${Object.entries(BIKES).map(([k, b]) => `<button type="button" data-bike="${k}">${ico(b.t, 56)}<b>${b.t}</b><span>${b.d}</span></button>`).join('')}</div>`;
       }
       dg.scrollIntoView({ block: 'nearest' });
     };

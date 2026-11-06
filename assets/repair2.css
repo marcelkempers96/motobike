@@ -223,3 +223,9 @@
 .r-list .ru-li { display: flex; } .r-list .ru-li > a { flex: 1; }
 .r-head + .ru-legend { justify-content: flex-end; }
 @media (max-width: 700px) { .r-head + .ru-legend { justify-content: flex-start; } }
+/* system and bike-type icons */
+.r-ico { display: block; width: 40px; height: 40px; margin-bottom: 8px; }
+.dg-opts.is-big .r-ico { width: 56px; height: 56px; }
+.r-h1-ico { display: flex; align-items: center; gap: 14px; } .r-h1-ico .r-ico { width: 56px; height: 56px; margin: 0; }
+.r-h2-ico { display: flex; align-items: center; gap: 10px; } .r-h2-ico .r-ico { width: 32px; height: 32px; margin: 0; }
+.r-jump a { display: inline-flex; align-items: center; gap: 7px; } .r-jump .r-ico { width: 22px; height: 22px; margin: 0; }
