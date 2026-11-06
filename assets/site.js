@@ -13,6 +13,8 @@ export const SUBSCRIBE_ENDPOINT = '';
 const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './community-config.js';
 import './gate.js';
+import './speech.js';
+import { pickerHTML, wire as wireLang } from './translate.js';
 
 export const MAIN = [['overview/', 'Overview']];
 export const NAV = [
@@ -81,6 +83,7 @@ export function navHTML() {
             <ul>${g.items.map(([h, t, d]) => `<li><a href="${url(h)}"${isCur(h) ? ' aria-current="page"' : ''}><b>${t}</b><span>${d}</span></a></li>`).join('')}</ul>
           </div>
         </div>`).join('')}
+      ${pickerHTML('mz-lang-sel')}
       ${/\/(overview|cockpit)\/$/.test(location.pathname) ? '' : `<a class="mz-menu-cta" href="${url('progress/')}">My progress</a>`}
     </div>`;
 }
@@ -122,6 +125,8 @@ function wireSubscribe(form) {
         const r = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, { method: 'POST', headers: { apikey: SUPABASE_ANON_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
           body: JSON.stringify({ email, source: location.pathname }) });
         msg.textContent = r.ok || r.status === 409 ? 'Thank you. You are on the list.' : 'That did not work. Please try again later.';
+        // a copy to the team inbox
+        if (r.ok) fetch('https://formsubmit.co/ajax/marcel@transitionslab.org', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'New Moto Zero subscriber', email, page: location.href }) }).catch(() => {});
         if (r.ok || r.status === 409) form.reset();
       } catch (err) { msg.textContent = 'That did not work. Please check your connection.'; }
       return;
@@ -174,6 +179,7 @@ export function mountSite(root = document) {
     nav.setAttribute('aria-label', 'Site');
     nav.innerHTML = navHTML();
     wireNav(nav);
+    const ls = nav.querySelector('#mz-lang-sel'); if (ls) wireLang(ls);
   });
   root.querySelectorAll('[data-mz-signup]').forEach((b) => {
     if (b.dataset.mounted) return;

@@ -59,6 +59,7 @@
 .mz-field [aria-invalid="true"] { border-color: #B8322A; }
 .mz-send { padding: 13px 20px !important; font-size: 15px !important; }
 .mz-err { color: #B8322A; font-size: 14.5px; margin: 0; }
+.mz-ok { color: #1D6B3A; font-size: 15px; font-weight: 600; margin: 0; }
 .mz-how { font-size: 14px; color: var(--mute); margin: 0; }
 @media (max-width: 960px) { .mz-contact { grid-template-columns: 1fr; gap: 48px; max-width: 640px; } }
 .mz-cphotos { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 8px; padding: 0 40px 8px; }
@@ -123,8 +124,10 @@
           <div class="mz-field"><label for="cf-topic">Topic</label><select id="cf-topic" name="topic"><option>A missing model, part or plate</option><option>A correction</option><option>A translation</option><option>A teaching adaptation</option><option>A collaboration or partnership</option><option>Piloting the course or repair guides</option><option>Training for a fleet</option><option>Funding or partnership</option><option>Something else</option></select></div>
           <div class="mz-field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="7" required></textarea></div>
           <p class="mz-err" id="cf-err" role="alert" hidden></p>
-          <div><button type="submit" class="ute-btn is-primary mz-send">Open in my email app</button></div>
-          <p class="mz-how">This opens your own email app with the message filled in, addressed to marcel@transitionslab.org. You then send it from there. The site has no server: nothing you type here is sent or stored by the site. If no email app opens, write to the address above directly.</p>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+          <div><button type="submit" class="ute-btn is-primary mz-send">Send message</button></div>
+          <p class="mz-ok" id="cf-ok" role="status" hidden></p>
+          <p class="mz-how">Your message goes straight to marcel@transitionslab.org; we use your email only to reply. If sending fails, your own email app opens with the message filled in.</p>
         </form>
       </div>
     </div>
@@ -148,7 +151,15 @@
     err.hidden = true;
     var subject = 'Moto Zero: ' + topic;
     var body = msg + '\n\n' + name + '\n' + email;
-    location.href = 'mailto:marcel@transitionslab.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var btn = f.querySelector('.mz-send'), ok = document.getElementById('cf-ok');
+    if (el('_honey') && el('_honey').value) return;
+    btn.disabled = true; btn.textContent = 'Sending…';
+    // Delivered by email to the team (FormSubmit); if that fails, the visitor's email app opens instead.
+    fetch('https://formsubmit.co/ajax/marcel@transitionslab.org', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ _subject: subject, _template: 'table', _replyto: email, name: name, email: email, topic: topic, message: msg, page: location.href }) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) === 'false') throw new Error(j.message || 'failed'); }); })
+      .then(function () { f.reset(); ok.hidden = false; ok.textContent = 'Thank you, your message has been sent. We reply by email, usually within a few days.'; btn.textContent = 'Send message'; btn.disabled = false; })
+      .catch(function () { btn.textContent = 'Send message'; btn.disabled = false; location.href = 'mailto:marcel@transitionslab.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); });
   });
 })();
 </script>
