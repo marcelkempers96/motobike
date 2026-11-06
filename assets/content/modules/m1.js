@@ -246,6 +246,21 @@ export default {
         {
           "type": "check",
           "q": "m1-05"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "mdOJ717PKRc",
+              "title": "How Motorcycles Work - The Basics",
+              "channel": "TecknoMechanics",
+              "channel_url": "http://www.youtube.com/@TecknoMechanics",
+              "duration": "4:29",
+              "role": "How it works",
+              "note": "Short animated tour of the main systems of a four-stroke motorcycle."
+            }
+          ]
         }
       ]
     },
@@ -608,6 +623,39 @@ export default {
               "Fewest parts, least mass",
               "Scooters, racing and electric bikes"
             ]
+          ]
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "aOTz0Ol8fLA",
+              "title": "The Pros and Cons of Every Motorcycle Engine Type",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "15:23",
+              "role": "How it works",
+              "note": "Compares single, twin, triple, four and V engine layouts with pros and cons."
+            },
+            {
+              "id": "XjwTPY_fwKM",
+              "title": "Logic Defying V5 Engine - Honda's RC211V Explained Like Never Before",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "16:59",
+              "role": "How it works",
+              "note": "Honda RC211V V5 explained; advanced engine layout idea."
+            },
+            {
+              "id": "uA-kglFSq5I",
+              "title": "Ducati's Brilliant V4 Engine — Putting Supercars To Shame!",
+              "channel": "Engineering Explained",
+              "channel_url": "http://www.youtube.com/@EngineeringExplained",
+              "duration": "12:48",
+              "role": "How it works",
+              "note": "Ducati V4 engine layout and design ideas."
+            }
           ]
         }
       ]
@@ -1019,6 +1067,30 @@ export default {
         {
           "type": "check",
           "q": "m1-16"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "mdOJ717PKRc",
+              "title": "How Motorcycles Work - The Basics",
+              "channel": "TecknoMechanics",
+              "channel_url": "http://www.youtube.com/@TecknoMechanics",
+              "duration": "4:29",
+              "role": "How it works",
+              "note": "Short animated tour of the main systems of a four-stroke motorcycle."
+            },
+            {
+              "id": "rL6O-jHjSp8",
+              "title": "7 Minute Motorcycle Teardown – Mechanic Crash Course",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:07",
+              "role": "How it works",
+              "note": "Fast teardown naming the main parts; a map of the bike, not a procedure."
+            }
+          ]
         }
       ]
     },
@@ -1529,6 +1601,30 @@ export default {
         {
           "type": "p",
           "html": "<strong>Broken bolt (1.5.4):</strong> soak at least 15 minutes in penetrating oil, punch the exact centre, drill along the axis (typically 4&ndash;5 mm for M8), turn the extractor anticlockwise with steady force. If stuck, heat the <em>casting</em> (not the bolt) to 100&ndash;150 &deg;C. Extractors are brittle: a broken one needs spark erosion (EDM), shattering or carbide burrs, then an insert."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "JKZVc4JRY4A",
+              "title": "Special Tools Every Motorcyclist Should Own",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "10:48",
+              "role": "How-to",
+              "note": "Which specialist tools are worth owning; ties tools to tasks, check price and need first."
+            },
+            {
+              "id": "Y0c1rVgTg5g",
+              "title": "10 Time-Saving Motorcycle Tools",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "10:05",
+              "role": "How-to",
+              "note": "Tools that save time in the workshop; weigh cost against how often you use them."
+            }
+          ]
         }
       ]
     }

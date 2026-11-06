@@ -34,7 +34,7 @@ export const photoURL = (path) => `${SUPABASE_URL}/storage/v1/object/public/uplo
 
 /* ---------- Tool notes: what the tool does, how to use it, its limits ---------- */
 const TOOLS = {
-  '/overview/': ['3D Overview', 'An x-ray of complete motorcycles: ten bikes from a 1901 motor-bicycle and a 1920 V-twin to a superbike, a scooter, a boda boda and an electric scrambler.', [
+  '/overview/': ['3D Overview', 'An x-ray of complete motorcycles: eleven bikes from a 1901 motor-bicycle and a 1920 V-twin to a modern cruiser, a superbike, a scooter, a boda boda and an electric scrambler.', [
     'Pick a bike from the list, then a category (Powertrain, Chassis, Electrical...) to see where those parts sit.',
     'Tap any part on the bike or in the list below it for a close-up, how it works and links to its repairs and spare parts.',
     'The models are generic, unbranded types. Use your own bike\'s manual for its exact parts and values.']],

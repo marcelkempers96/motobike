@@ -12,7 +12,7 @@ const $ = (s) => document.querySelector(s);
 const root = $('#lib');
 const RB = '../assets/renders/';
 const CATS = { bikes: 'Complete motorcycles', powertrain: 'Powertrain', transmission: 'Transmission', chassis: 'Chassis', frame_body: 'Frame and body', wheels: 'Wheels', electrical: 'Electrical', wiring: 'Wiring' };
-Object.entries(BIKE_PART_GROUPS).forEach(([b, n]) => { CATS['from_' + b] = `Parts of the ${n.charAt(0).toLowerCase() + n.slice(1)}`; });
+Object.entries(BIKE_PART_GROUPS).forEach(([b, n]) => { CATS['from_' + b] = `Parts of the ${/^[A-Z][a-z]/.test(n) ? n.charAt(0).toLowerCase() + n.slice(1) : n}`; });
 const BIKE_CATS = ['powertrain', 'transmission', 'chassis', 'frame_body', 'wheels', 'electrical', 'wiring'];
 const KEYS = Object.keys(MODELS);
 let viewer = null;

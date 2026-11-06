@@ -68,6 +68,13 @@ for _k, _x in list(NEW_MD):
 import sys as _sys
 _sys.path.insert(0, os.path.join(ROOT, 'source', 'bikes'))
 import bikedata as _bd
+_sys.path.insert(0, os.path.join(ROOT, 'source', 'videos'))
+import videolib as _vl
+VIDS, VMAP, VBY = _vl.load()
+def videos_html(kind, i, title='Videos'):
+  return _vl.section(VBY[kind].get(i, []), VIDS, VMAP, title)
+def videos_ld(kind, i):
+  return [_vl.ld(VIDS[v], VMAP.get(v)) for v in VBY[kind].get(i, [])]
 BIKES = [b for b in _bd.load()]
 for _b in BIKES:
   _b['repairs'] = [x for x in _b['repairs'] if x in REP]; _b['problems'] = [x for x in _b['problems'] if x in PROB]; _b['parts'] = [x for x in _b['parts'] if x in PART]
@@ -313,7 +320,7 @@ SEO = {
 }
 def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": c, "item": SITE + '/' + u} for n, (c, u) in enumerate(crumbs)]}]
-  if extra_ld: ld.append(extra_ld)
+  if extra_ld: ld.extend(extra_ld if isinstance(extra_ld, list) else [extra_ld])
   cr = ' / '.join(f'<a href="{rel}{u}">{e(c)}</a>' if n < len(crumbs) - 1 else e(c) for n, (c, u) in enumerate(crumbs))
   doc = f'''<!doctype html>
 <html lang="en">
@@ -346,6 +353,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
 </div>
 <script type="module" src="{rel}assets/site.js"></script>
 <script type="module" src="{rel}assets/repair2.js?v=3"></script>
+<script type="module" src="{rel}assets/videos.js"></script>
 </body>
 </html>
 '''
@@ -398,12 +406,13 @@ for i, p in PROB.items():
         {f'<section><h2>Parts you may need</h2><div class="rpcs">{parts}</div></section>' if parts else ''}
       </aside>
     </div>
+    {videos_html('problems', i, 'Videos that help with this problem')}
     {f'<section class="r-sec"><h2>Related problems</h2><ul class="r-list is-cols">{rel_p}</ul></section>' if rel_p else ''}
     {bikes_html('problems', i, rel)}
     <section class="r-sec">{sources_html(p.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/problems/{i}/'
   page(path, f'{p["title"]}: causes and step-by-step checks | Moto Zero', f'{p["title"]} on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.',
-       html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/'), (SYS.get(p['system'], ''), f'repair/systems/{p["system"]}/'), (p['title'], path)], rel)
+       html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/'), (SYS.get(p['system'], ''), f'repair/systems/{p["system"]}/'), (p['title'], path)], rel, extra_ld=videos_ld('problems', i) or None)
   urls.append(path)
 
 # repairs
@@ -430,12 +439,13 @@ for i, r in REP.items():
         {f'<section><h2>Parts for this job</h2><div class="rpcs">{parts}</div></section>' if parts else ''}
       </aside>
     </div>
+    {videos_html('repairs', i, 'Watch it done')}
     {f'<section class="r-sec"><h2>Problems this repair helps with</h2><ul class="r-list is-cols">{fixes}</ul></section>' if fixes else ''}
     {bikes_html('repairs', i, rel)}
     <section class="r-sec">{sources_html(r.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/repairs/{i}/'
   page(path, f'{r["title"]}: step by step | Moto Zero', f'{r["title"]}: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.',
-       html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/'), (r['title'], path)], rel)
+       html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/'), (r['title'], path)], rel, extra_ld=videos_ld('repairs', i) or None)
   urls.append(path)
 
 # parts
@@ -465,10 +475,11 @@ for i, p in PART.items():
         {f'<section><h2>Repairs</h2><ul class="r-list">{reps}</ul></section>' if reps else ''}
       </aside>
     </div>
+    {videos_html('parts', i, 'Videos: how it works')}
     <section class="r-sec">{sources_html(p.get("sources"))}</section>'''
   path = f'repair/parts/{i}/'
   page(path, f'{p["name"]}: what it does, how it fails, what to buy | Moto Zero', f'{p["name"]} on a motorcycle or scooter: what it does, signs it is failing, when to replace it, what to match when buying, and the repairs.',
-       html_, [('Repair', 'repair/'), ('Parts', 'repair/parts/'), (p['name'], path)], rel)
+       html_, [('Repair', 'repair/'), ('Parts', 'repair/parts/'), (p['name'], path)], rel, extra_ld=videos_ld('parts', i) or None)
   urls.append(path)
 
 # systems

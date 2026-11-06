@@ -5,13 +5,14 @@ import { BIKE_PART_MODELS } from './bike-part-models.js';
    bike mesh names and diagram hotspots.
    ========================================================================== */
 
-export const BIKE_MODEL = { '4t': 'bike_classic_4t', '2t': 'bike_mx_2t', sc: 'bike_scooter', st: 'bike_step_through', bb: 'bike_boda_boda', cr: 'bike_cafe_racer', sb: 'bike_superbike', vt: 'bike_vintage_vtwin', pi: 'bike_pioneer', elec: 'bike_electric' };
-export const MODES = ['4t', '2t', 'sc', 'st', 'bb', 'cr', 'sb', 'vt', 'pi', 'elec'];
+export const BIKE_MODEL = { '4t': 'bike_classic_4t', '2t': 'bike_mx_2t', sc: 'bike_scooter', st: 'bike_step_through', bb: 'bike_boda_boda', cr: 'bike_cafe_racer', sb: 'bike_superbike', vt: 'bike_vintage_vtwin', pi: 'bike_pioneer', cu: 'bike_cruiser', elec: 'bike_electric' };
+export const MODES = ['4t', '2t', 'sc', 'st', 'bb', 'cr', 'sb', 'cu', 'vt', 'pi', 'elec'];
 /* Bikes shown with their own model only (no 4T animations or generic part models of their own) */
-export const OWN_MODEL_MODES = new Set(['sc', 'st', 'bb', 'cr', 'sb', 'vt', 'pi']);
+export const OWN_MODEL_MODES = new Set(['sc', 'st', 'bb', 'cr', 'sb', 'vt', 'pi', 'cu']);
 /* Scooter, step-through, boda boda, cafe racer and superbike are four-stroke petrol bikes: they borrow the 4T data where they have none of their own. */
 export const baseMode = (m) => (OWN_MODEL_MODES.has(m) ? '4t' : m);
 export const MODE_PARTS = {
+  cu: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'cooling', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
   vt: ['headlight', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'tail_light', 'frame', 'forks', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
   pi: ['headlight', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'chain', 'rear_sprocket', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
   bb: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
@@ -20,8 +21,8 @@ export const MODE_PARTS = {
   sc: ['headlight', 'indicators', 'instruments', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'cvt', 'rear_shock', 'swingarm', 'spark_plug', 'starter', 'footpegs', 'side_stand', 'wiring'],
   st: ['headlight', 'indicators', 'instruments', 'horn', 'handlebar', 'bodywork', 'seat', 'fuel_tank', 'battery', 'charging', 'tail_light', 'frame', 'forks', 'brake', 'rear_brake', 'front_wheel', 'rear_wheel', 'engine', 'carb', 'exhaust', 'clutch', 'gearbox', 'chain', 'rear_sprocket', 'rear_shock', 'swingarm', 'spark_plug', 'footpegs', 'side_stand', 'wiring'],
 };
-export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', sc: 'overview/F04.png', st: 'overview/F01.png', bb: 'overview/F01.png', cr: 'overview/F01.png', sb: 'overview/F01.png', vt: 'overview/F01.png', pi: 'overview/F01.png', elec: 'overview/F03.png' };
-export const PLATE_RATIO = { '4t': 2400 / 1620, '2t': 2400 / 1185, sc: 2400 / 1620, st: 2400 / 1620, bb: 2400 / 1620, cr: 2400 / 1620, sb: 2400 / 1620, vt: 2400 / 1620, pi: 2400 / 1620, elec: 2400 / 1185 };
+export const OVERVIEW_PLATE = { '4t': 'overview/F01.png', '2t': 'overview/F02.png', sc: 'overview/F04.png', st: 'overview/F01.png', bb: 'overview/F01.png', cr: 'overview/F01.png', sb: 'overview/F01.png', vt: 'overview/F01.png', pi: 'overview/F01.png', cu: 'overview/F01.png', elec: 'overview/F03.png' };
+export const PLATE_RATIO = { '4t': 2400 / 1620, '2t': 2400 / 1185, sc: 2400 / 1620, st: 2400 / 1620, bb: 2400 / 1620, cr: 2400 / 1620, sb: 2400 / 1620, vt: 2400 / 1620, pi: 2400 / 1620, cu: 2400 / 1620, elec: 2400 / 1185 };
 
 /* All course plates (id → category/title) */
 export const PLATES = {
@@ -78,6 +79,7 @@ export const MODELS = {
   bike_superbike: ['bikes', '1000 cc superbike'],
   bike_vintage_vtwin: ['bikes', 'Vintage V-twin, 1915 to 1925'],
   bike_pioneer: ['bikes', 'Pioneer motor-bicycle, c. 1901'],
+  bike_cruiser: ['bikes', 'V-twin cruiser, 1,750 cc'],
   engine_4t: ['powertrain', 'Four-stroke horizontal single engine'],
   engine_2t: ['powertrain', '125 cc two-stroke single engine'],
   cylinder: ['powertrain', 'Cylinder and head (quarter cutaway)'],
@@ -209,6 +211,7 @@ export const PART_CHAPTER = {
 
 /* Bike mesh component (<category>__<component>) → part key */
 const MESH_PART = {
+  powertrain__oil_cooler: 'cooling', powertrain__oil_filter: 'engine', transmission__primary_cover: 'clutch',
   chassis__rear_stand: 'side_stand', chassis__footboards: 'footpegs', electrical__carbide_lamp: 'headlight', electrical__acetylene_generator: 'headlight',
   electrical__coil_box: 'spark_plug', electrical__trembler_coil: 'spark_plug', electrical__tail_lamp: 'tail_light', powertrain__controls: 'handlebar',
   transmission__belt_rim: 'rear_sprocket', transmission__chainring: 'footpegs', transmission__engine_pulley: 'chain', transmission__pedal_axle: 'footpegs',

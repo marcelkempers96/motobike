@@ -264,6 +264,39 @@ export default {
         {
           "type": "check",
           "q": "m3-03"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "toVfvRhWbj8",
+              "title": "How Does A Carburetor Work? | Transparent Carburetor at 28,546 fps Slow Mo - Smarter Every Day 259",
+              "channel": "SmarterEveryDay",
+              "channel_url": "http://www.youtube.com/@smartereveryday",
+              "duration": "24:38",
+              "role": "How it works",
+              "note": "Slow-motion transparent carburettor shows how air and fuel mix; a science demo, not a service guide."
+            },
+            {
+              "id": "ZRNfyz1Cgvg",
+              "title": "Carburetor vs Fuel Injection - Why Motorcycle Riders Should Think Again",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:51",
+              "role": "How it works",
+              "note": "Carburettor against fuel injection compared; useful for deciding which diagnosis path applies."
+            },
+            {
+              "id": "AwXRvgyFUG4",
+              "title": "Carburetors vs. Electronic Fuel Injection—What’s Better? | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "3:41",
+              "role": "How it works",
+              "note": "Short side by side of carburettor and EFI, how each meters fuel."
+            }
+          ]
         }
       ]
     },
@@ -550,6 +583,30 @@ export default {
         {
           "type": "p",
           "html": "Euro 5 (all new vehicles from 2021) brought OBD stage II. <strong>Euro 5+</strong> (all new registrations from 1 January 2025) adds catalyst monitoring with a second, downstream oxygen sensor: a healthy catalyst stores oxygen, so the downstream signal stays steady while the upstream one switches. India's BS VI (April 2020) uses aligned limits and is designed for E20."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "ZRNfyz1Cgvg",
+              "title": "Carburetor vs Fuel Injection - Why Motorcycle Riders Should Think Again",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:51",
+              "role": "How it works",
+              "note": "Carburettor against fuel injection compared; useful for deciding which diagnosis path applies."
+            },
+            {
+              "id": "AwXRvgyFUG4",
+              "title": "Carburetors vs. Electronic Fuel Injection—What’s Better? | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "3:41",
+              "role": "How it works",
+              "note": "Short side by side of carburettor and EFI, how each meters fuel."
+            }
+          ]
         }
       ]
     },
@@ -1117,6 +1174,21 @@ export default {
           "measure": "Current in A1 with everything switched off.",
           "expect": "About 10 mA, through R1, which stands for a clock or ECU memory. Over a day that is 0.010 A × 24 h ≈ 0.25 Ah, a few percent of a small battery's capacity.",
           "why": "Every always-on load drains the battery while the bike stands. A drain of tens of milliamps flattens a small battery in a few weeks; pull fuses one at a time while watching the ammeter to find the circuit that draws it."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "qqSZWaWEe3s",
+              "title": "How to Test Your Motorcycle’s Stator and Regulator Rectifier | The Shop Manual",
+              "channel": "RevZilla",
+              "channel_url": "http://www.youtube.com/@RevZilla",
+              "duration": "7:07",
+              "role": "How-to",
+              "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific."
+            }
+          ]
         }
       ]
     },

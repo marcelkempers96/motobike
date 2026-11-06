@@ -273,6 +273,30 @@ export default {
         {
           "type": "check",
           "q": "m4-04"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "jAZd_3o5TQ8",
+              "title": "How a Motorcycle Clutch Works",
+              "channel": "EMecha3D",
+              "channel_url": "http://www.youtube.com/@EMecha3D",
+              "duration": "4:20",
+              "role": "How it works",
+              "note": "Animation of a clutch: basket, plates, springs and lever; shows how drag and slip arise."
+            },
+            {
+              "id": "2m2EGXlwMIs",
+              "title": "From cylinder to clutch to transmission: a complete Motorcycle Engine explained",
+              "channel": "Al's Garage",
+              "channel_url": "http://www.youtube.com/@AlsGarage",
+              "duration": "24:36",
+              "role": "How it works",
+              "note": "Yamaha SR250 engine explained from cylinder through clutch to gearbox on a real engine."
+            }
+          ]
         }
       ]
     },
@@ -505,6 +529,39 @@ export default {
         {
           "type": "check",
           "q": "m4-07"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "g8xnIFf4id4",
+              "title": "How a motorcycle transmission works (Animation)",
+              "channel": "TecknoMechanics",
+              "channel_url": "http://www.youtube.com/@TecknoMechanics",
+              "duration": "6:08",
+              "role": "How it works",
+              "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks."
+            },
+            {
+              "id": "viWuolNYGyI",
+              "title": "The Truth About Clutchless Shifting | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "4:29",
+              "role": "How it works",
+              "note": "What clutchless shifting does inside the gearbox and its limits."
+            },
+            {
+              "id": "Xtghypx8mII",
+              "title": "How a Motorcycle Transmission Works | MC GARAGE",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "3:45",
+              "role": "How it works",
+              "note": "Answers common questions about how a motorcycle gearbox behaves."
+            }
+          ]
         }
       ]
     },
@@ -782,6 +839,21 @@ export default {
               "html": "Belt above the width limit with no cracks or glazing, rollers round and equal, variator free, clutch lining and bell within limits, no slip or judder on take-off."
             }
           ]
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "9cKbzUgFdS0",
+              "title": "How a Scooter Transmission works",
+              "channel": "TecknoMechanics",
+              "channel_url": "http://www.youtube.com/@TecknoMechanics",
+              "duration": "3:33",
+              "role": "How it works",
+              "note": "How a scooter CVT works: belt, variator and clutch. Not the same as a geared motorcycle box."
+            }
+          ]
         }
       ]
     },
@@ -937,6 +1009,21 @@ export default {
         {
           "type": "check",
           "q": "m4-15"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "Nmz1QJTDzO8",
+              "title": "Motorcycle Geometry | EXPLAINED",
+              "channel": "Mike on Bikes",
+              "channel_url": "http://www.youtube.com/@MikeonBikes",
+              "duration": "11:55",
+              "role": "How it works",
+              "note": "Rake, trail and wheelbase explained with diagrams."
+            }
+          ]
         }
       ]
     },
@@ -1155,6 +1242,21 @@ export default {
             {
               "title": "Pass criteria",
               "html": "Equal oil in both legs, no leaks after repeated compression, smooth travel, legs at equal height, fasteners at torque and a firm brake lever."
+            }
+          ]
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "uz_p-iu9C_s",
+              "title": "Motorcycle Suspension Terminology Explained | The Shop Manual",
+              "channel": "RevZilla",
+              "channel_url": "http://www.youtube.com/@RevZilla",
+              "duration": "7:22",
+              "role": "How it works",
+              "note": "Suspension terms explained: travel, sag, preload, damping."
             }
           ]
         }
@@ -1722,6 +1824,39 @@ export default {
               "html": "Linings and drum within limits, no contamination, free cam, correct free play, no drag, brake light on before the brake bites, and a confident stop on the road test."
             }
           ]
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "fUWO0SQX6-U",
+              "title": "How To Bleed Your Motorcycle Brakes | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "5:06",
+              "role": "How-to",
+              "note": "Replace and bleed brake fluid so the lever feels firm; check the fluid type on your master cylinder."
+            },
+            {
+              "id": "sDbWZiaUeDY",
+              "title": "Out-braking the ABS Myth",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "7:02",
+              "role": "How it works",
+              "note": "Braking test of ABS against a skilled rider; results depend on bike, tyres and surface."
+            },
+            {
+              "id": "6c4deRAhqcA",
+              "title": "Understanding your motorcycle's brake | Disc Brake",
+              "channel": "Sabin Civil Engineering",
+              "channel_url": "http://www.youtube.com/@SabinCivil",
+              "duration": "5:30",
+              "role": "How it works",
+              "note": "Animation of how a disc brake works: lever, fluid, caliper and pads."
+            }
+          ]
         }
       ]
     },
@@ -1868,6 +2003,39 @@ export default {
         {
           "type": "check",
           "q": "m4-28"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "eIXDDj1MSLE",
+              "title": "How To Wash Your Motorcycle | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "3:44",
+              "role": "How-to",
+              "note": "How to wash a bike without forcing water into bearings and electrics; good time to inspect."
+            },
+            {
+              "id": "C3pipJRwyrk",
+              "title": "Motorcycle Maintenance For Beginners - What You Need To Know - The Basics",
+              "channel": "Gas Works ISO",
+              "channel_url": "http://www.youtube.com/@GasWorksISO",
+              "duration": "11:27",
+              "role": "How-to",
+              "note": "Beginner checks: tyres, chain, oil level, lights and battery, all in one list."
+            },
+            {
+              "id": "oyZBX_Bw-pI",
+              "title": "How to Winterize Your Motorcycle | MC Garage",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "7:41",
+              "role": "How-to",
+              "note": "Prepare a bike for winter storage: fuel, battery, tyres and cover."
+            }
+          ]
         }
       ]
     }

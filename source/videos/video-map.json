@@ -1,0 +1,1087 @@
+{
+ "mPoCEHreGS0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Factory assembly film of a 70 cc engine; shows part order only, no torque or clearance values."
+ },
+ "Dy7fc6wbINU": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Long classic restoration; inspiration only, no measurements or road test shown."
+ },
+ "0nuIulimsPE": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cosmetic restoration story; no evidence of mechanical testing."
+ },
+ "toVfvRhWbj8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m3-mixture"
+  ],
+  "note": "Slow-motion transparent carburettor shows how air and fuel mix; a science demo, not a service guide."
+ },
+ "eKUEZY3R3cI": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "cylinder"
+  ],
+  "course": [
+   "m2-four-stroke",
+   "m2-two-stroke"
+  ],
+  "note": "Long animated comparison of four-stroke and two-stroke engines and why they differ."
+ },
+ "oqfxt2hhAT4": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Factory assembly of a 70 cc engine; shows how parts fit together, no specifications."
+ },
+ "9cKbzUgFdS0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "cvt-slip",
+   "cvt-low-top-speed"
+  ],
+  "parts": [
+   "cvt_belt",
+   "cvt_clutch",
+   "cvt_rollers"
+  ],
+  "course": [
+   "m4-final-drive"
+  ],
+  "note": "How a scooter CVT works: belt, variator and clutch. Not the same as a geared motorcycle box."
+ },
+ "mdOJ717PKRc": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine"
+  ],
+  "course": [
+   "m1-anatomy",
+   "m1-history-systems"
+  ],
+  "note": "Short animated tour of the main systems of a four-stroke motorcycle."
+ },
+ "nhZA8ESmEMo": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Abandoned Honda 100 cc restoration; transformation story with no values."
+ },
+ "IrrDqpCBH90": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "18 minute time-lapse rebuild; no measurements, shows only the sequence."
+ },
+ "xmRq_jVxFsE": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Home-made turbo on a small engine; a speed experiment, not a repair lesson."
+ },
+ "uM-ycHS9uvw": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "crankshaft"
+  ],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "Why the crossplane crankshaft changes firing order and feel; engine design depth."
+ },
+ "qtKqDWzhRJo": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "crankcase"
+  ],
+  "course": [],
+  "note": "Honda CG125 engine restoration; shows the engine stripped and rebuilt, values are for that engine only."
+ },
+ "aOTz0Ol8fLA": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-types",
+   "m2-fundamentals"
+  ],
+  "note": "Compares single, twin, triple, four and V engine layouts with pros and cons."
+ },
+ "g8xnIFf4id4": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "gearbox",
+   "gearbox_gears",
+   "shift_drum"
+  ],
+  "course": [
+   "m4-gearbox"
+  ],
+  "note": "Animation of a constant-mesh sequential gearbox: gears, dogs, shift drum and forks."
+ },
+ "VnPYdcbcAe0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Comparison test of chain lubes; results hold only for that test, not a universal pick."
+ },
+ "a09tyRWrP1k": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Long British bike restoration; transformation only, no values."
+ },
+ "q_XAiydgOQg": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Accessory and comfort mods list; no repair learning."
+ },
+ "sDbWZiaUeDY": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "abs"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Braking test of ABS against a skilled rider; results depend on bike, tyres and surface."
+ },
+ "6c4deRAhqcA": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "brake",
+   "brake_caliper",
+   "brake_pads"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Animation of how a disc brake works: lever, fluid, caliper and pads."
+ },
+ "XgPpLKCUlbA": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-clean-lube"
+  ],
+  "problems": [
+   "chain-dry-rusty"
+  ],
+  "parts": [
+   "chain"
+  ],
+  "course": [],
+  "note": "Step by step chain clean and lube with products and order of work; no model-specific values."
+ },
+ "zhUI7MWE_Fc": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-fundamentals"
+  ],
+  "note": "Why engine load and rpm choice affect wear and feel; not a universal rpm rule."
+ },
+ "hoGt1sBMSms": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cafe racer build time-lapse; style project, no repair teaching."
+ },
+ "zsGN9GVjBwo": {
+  "role": "tutorial",
+  "repairs": [
+   "wheel-balance",
+   "chain-join",
+   "spark-plug-service",
+   "front-end-align"
+  ],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Four jobs: wheel balance, plug gap, joining a chain and wheel alignment. Check specs for your bike."
+ },
+ "ZRNfyz1Cgvg": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "injector",
+   "throttle_body"
+  ],
+  "course": [
+   "m3-mixture",
+   "m3-efi"
+  ],
+  "note": "Carburettor against fuel injection compared; useful for deciding which diagnosis path applies."
+ },
+ "AwXRvgyFUG4": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "injector"
+  ],
+  "course": [
+   "m3-mixture",
+   "m3-efi"
+  ],
+  "note": "Short side by side of carburettor and EFI, how each meters fuel."
+ },
+ "gwtZkHoVMso": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "cylinder",
+   "crankshaft"
+  ],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "Why offsetting the cylinder from the crank line changes piston side force and friction."
+ },
+ "-mQh6b6UfYQ": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Performance mods for speed; not repair learning."
+ },
+ "FnXUx4cYdHA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "One-off V12 engine build; engineering showpiece, not repair guidance."
+ },
+ "X6CTlfLwEIQ": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "crankcase"
+  ],
+  "course": [],
+  "note": "Hindi workshop video fitting a 100 cc commuter engine; model variants differ, check before copying."
+ },
+ "rX-JcChxn6I": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Legality-sensitive mods; no repair learning and rules differ by country."
+ },
+ "eM46hWtBbTA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Budget accessory list; no repair learning."
+ },
+ "RA6OPG_cFms": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-adjust"
+  ],
+  "problems": [
+   "chain-noise"
+  ],
+  "parts": [
+   "chain"
+  ],
+  "course": [],
+  "note": "Check and adjust chain slack with the bike on the stand; use your own bike spec for the slack figure."
+ },
+ "UrEpAUi_QKA": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Test of chain cleaners; shows what cleans best but not seal compatibility."
+ },
+ "JKZVc4JRY4A": {
+  "role": "tutorial",
+  "repairs": [
+   "special-tool-choice"
+  ],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-workshop"
+  ],
+  "note": "Which specialist tools are worth owning; ties tools to tasks, check price and need first."
+ },
+ "G_at02IT9Jw": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "ASMR rebuild of a Honda CT90; engine and bike stripped and rebuilt, no values spoken."
+ },
+ "4zAplxUyWm0": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Neglected maintenance items that can fail dangerously (brakes, chain, fork seals, bearings); motivation, not a procedure."
+ },
+ "6rXmT8KU0fQ": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Cheap Suzuki: diagnose why it will not run, step by step; a good example of reasoning order."
+ },
+ "jAZd_3o5TQ8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "clutch-slip",
+   "clutch-drag"
+  ],
+  "parts": [
+   "clutch",
+   "clutch_plates",
+   "clutch_basket"
+  ],
+  "course": [
+   "m4-clutch"
+  ],
+  "note": "Animation of a clutch: basket, plates, springs and lever; shows how drag and slip arise."
+ },
+ "t1G1VWd9B90": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine_oil",
+   "oil_pump"
+  ],
+  "course": [
+   "m2-lubrication-cooling",
+   "m2-four-stroke"
+  ],
+  "note": "Four-stroke animation showing engine, clutch and gearbox sharing one oil supply."
+ },
+ "6f2s5ddyDg0": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Recommended mods list; no repair learning."
+ },
+ "kkQhPt7cNXg": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cafe racer build time-lapse; style project."
+ },
+ "p3OrWnIG-J8": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Turbo on a Harley; a power stunt."
+ },
+ "rL6O-jHjSp8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine",
+   "frame"
+  ],
+  "course": [
+   "m1-anatomy"
+  ],
+  "note": "Fast teardown naming the main parts; a map of the bike, not a procedure."
+ },
+ "WPsxCqI5F14": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Burned Harley restoration; transformation story, no values."
+ },
+ "C_c_Wi1l3Fg": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-clean-lube"
+  ],
+  "problems": [
+   "chain-dry-rusty"
+  ],
+  "parts": [
+   "chain"
+  ],
+  "course": [],
+  "note": "Short sealed chain lube, with the reason before the steps; applies to O-ring and X-ring chains."
+ },
+ "xIzD2_bJRsk": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Budget cafe racer build; style project."
+ },
+ "DS4eev-EbqY": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Soda blasting against ultrasonic cleaning for carburettors; shop methods, check part compatibility."
+ },
+ "-21MwnRHvl8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [
+   "no-start-after-storage",
+   "stale-fuel"
+  ],
+  "parts": [],
+  "course": [],
+  "note": "Corrects a storage myth; points to fuel and battery care. Climate differs, so check your own case."
+ },
+ "sjxiHLZdSGw": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "One-off V8 engine build; engineering showpiece."
+ },
+ "No8JZCdIF3I": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Five-bike upgrade list; no repair learning."
+ },
+ "viWuolNYGyI": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "gearbox",
+   "clutch",
+   "shift_mechanism"
+  ],
+  "course": [
+   "m4-gearbox"
+  ],
+  "note": "What clutchless shifting does inside the gearbox and its limits."
+ },
+ "j8DSBH2GG8s": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "cylinder",
+   "crankshaft"
+  ],
+  "course": [
+   "m2-fundamentals"
+  ],
+  "note": "Bore against stroke explained and why neither is simply better."
+ },
+ "tjyAlddhXbg": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Second turbo test on a 125 cc; a power experiment."
+ },
+ "eIXDDj1MSLE": {
+  "role": "tutorial",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "How to wash a bike without forcing water into bearings and electrics; good time to inspect."
+ },
+ "6B2sqD8TfbA": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Yamaha TY250 barn find restoration; transformation story."
+ },
+ "6_EXK7RpKMM": {
+  "role": "tutorial",
+  "repairs": [
+   "carburettor-clean",
+   "carb-idle-adjust"
+  ],
+  "problems": [
+   "hard-cold-start",
+   "rough-idle",
+   "stalls-at-idle"
+  ],
+  "parts": [
+   "carb"
+  ],
+  "course": [],
+  "note": "Clogged pilot jet causes hard starting, rough or low idle and stalling; shows the cleaning."
+ },
+ "C-WtZ1VrAFM": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "ASMR rebuild of a 1969 Yamaha DT-1; sequence only, no values."
+ },
+ "p44VNddZ7Zc": {
+  "role": "tutorial",
+  "repairs": [
+   "carburettor-clean"
+  ],
+  "problems": [
+   "rough-idle"
+  ],
+  "parts": [
+   "carb"
+  ],
+  "course": [],
+  "note": "Take a carburettor apart, clean jets and passages, keep parts organised; values are for that carb."
+ },
+ "fUWO0SQX6-U": {
+  "role": "tutorial",
+  "repairs": [
+   "brake-bleed"
+  ],
+  "problems": [
+   "spongy-brake",
+   "brake-fluid-dark"
+  ],
+  "parts": [
+   "brake_fluid"
+  ],
+  "course": [
+   "m4-brakes"
+  ],
+  "note": "Replace and bleed brake fluid so the lever feels firm; check the fluid type on your master cylinder."
+ },
+ "548RzO8LZ_E": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "crankcase"
+  ],
+  "course": [],
+  "note": "Honda SS50 strip down, rebuild and first start; shows where parts sit, values for that engine only."
+ },
+ "KD0l3dOD18U": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda V3 with electric compressor; advanced engine concept, not for beginners."
+ },
+ "FC82Xk9zPdo": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Hindi overhaul of a 100 cc engine, piston and cylinder work; a long film, check model before copying."
+ },
+ "tM9AqyQrrPk": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Honda XL175 engine repair and decisions with workshop tools; values for that engine only."
+ },
+ "I-Xr1bmbZ_s": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "One-off V twin build; engineering showpiece."
+ },
+ "SHsNIfQr7d4": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-diagnosis"
+  ],
+  "note": "Hindi talk on engine work, service choices and cost; costs depend on place and date."
+ },
+ "Xtghypx8mII": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "gearbox"
+  ],
+  "course": [
+   "m4-gearbox"
+  ],
+  "note": "Answers common questions about how a motorcycle gearbox behaves."
+ },
+ "EhOl9Uh_nyw": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "valve_springs",
+   "valves"
+  ],
+  "course": [],
+  "note": "Why engines have a redline: valve float, piston speed and loads; limit differs per engine."
+ },
+ "GhrLg6mZQIo": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Making cylinder barrels for a custom engine; showpiece, not repair guidance."
+ },
+ "8MW4h1Rk9AA": {
+  "role": "tutorial",
+  "repairs": [
+   "clutch-cable-adjust"
+  ],
+  "problems": [
+   "clutch-drag",
+   "clutch-slip",
+   "heavy-clutch"
+  ],
+  "parts": [
+   "clutch_cable"
+  ],
+  "course": [],
+  "note": "Adjust clutch lever free play and why it matters; follow your manual for the free play figure."
+ },
+ "qqSZWaWEe3s": {
+  "role": "tutorial",
+  "repairs": [
+   "stator-test",
+   "regulator-test",
+   "charging-system-test"
+  ],
+  "problems": [
+   "not-charging",
+   "overcharging"
+  ],
+  "parts": [
+   "stator",
+   "regulator"
+  ],
+  "course": [
+   "m3-battery-charging"
+  ],
+  "note": "Test the stator and regulator rectifier with a multimeter to tell charging faults from a weak battery; values are bike-specific."
+ },
+ "98nldJ0RPCA": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Turbo on a budget bike; a speed stunt."
+ },
+ "_G57AWMvHkc": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston"
+  ],
+  "course": [
+   "m2-two-stroke"
+  ],
+  "note": "1990 KX250 two-stroke rebuild; shows parts order and traceability, values for that bike only."
+ },
+ "7i8ff_1HhFs": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-sprocket-replace",
+   "chain-join",
+   "chain-size-identify"
+  ],
+  "problems": [
+   "sprocket-worn"
+  ],
+  "parts": [
+   "front_sprocket",
+   "rear_sprocket"
+  ],
+  "course": [],
+  "note": "Replace chain and sprockets: identify chain type, sprocket sizes and joining method; check your manual."
+ },
+ "eIfdcRprKQY": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda CB400 restoration; transformation story, no values."
+ },
+ "XjwTPY_fwKM": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-types"
+  ],
+  "note": "Honda RC211V V5 explained; advanced engine layout idea."
+ },
+ "4yYHvzvl9bA": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Making four cylinder crankcases from scratch; shows what a crankcase does, not repairs."
+ },
+ "uA-kglFSq5I": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-types"
+  ],
+  "note": "Ducati V4 engine layout and design ideas."
+ },
+ "j7m35Yts0AI": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "One-off V twin conversion; showpiece."
+ },
+ "3-t29QQrr1E": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Abandoned bike restoration; time-lapse, no measurements."
+ },
+ "jcgfacc_2TE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "brake_caliper",
+   "master_cylinder"
+  ],
+  "course": [],
+  "note": "Axial against radial caliper mounting; what changes in stiffness and what stays the same."
+ },
+ "2m2EGXlwMIs": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "clutch"
+  ],
+  "course": [
+   "m2-four-stroke",
+   "m4-clutch"
+  ],
+  "note": "Yamaha SR250 engine explained from cylinder through clutch to gearbox on a real engine."
+ },
+ "pqxCPt6pQJU": {
+  "role": "tutorial",
+  "repairs": [
+   "carb-float-check"
+  ],
+  "problems": [
+   "carb-overflowing",
+   "rough-idle"
+  ],
+  "parts": [
+   "carb"
+  ],
+  "course": [],
+  "note": "Five common carburettor problems (jets, float, worn parts) and how to deal with them."
+ },
+ "Y0c1rVgTg5g": {
+  "role": "tutorial",
+  "repairs": [
+   "basic-tool-kit"
+  ],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m1-workshop"
+  ],
+  "note": "Tools that save time in the workshop; weigh cost against how often you use them."
+ },
+ "w0PBlc1b0vo": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m2-bottom-end"
+  ],
+  "note": "A correction on crossplane twin balance; shows why assumptions matter in engine claims."
+ },
+ "C3pipJRwyrk": {
+  "role": "tutorial",
+  "repairs": [
+   "pre-ride-check",
+   "oil-level-check",
+   "tyre-pressure-check"
+  ],
+  "problems": [],
+  "parts": [],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "Beginner checks: tyres, chain, oil level, lights and battery, all in one list."
+ },
+ "T2qsXdZYY_M": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "gearbox_gears"
+  ],
+  "course": [],
+  "note": "Constant-mesh gearbox, gear ratios and the link between torque and speed."
+ },
+ "KRgG21OBjcE": {
+  "role": "tutorial",
+  "repairs": [
+   "chain-clean-lube"
+  ],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Clean and lube a chain the right way; a newer take on the standard procedure."
+ },
+ "Xd-4ccKrerE": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Carburettor basics for motorcycles and ATVs: what each part does."
+ },
+ "6DA_b0uuuVc": {
+  "role": "skip",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Cheap cafe racer build; style project."
+ },
+ "Nk9BW0FQW7s": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "engine_bearings"
+  ],
+  "course": [],
+  "note": "Building a four cylinder bottom end from scratch; shows crank and bearings in context."
+ },
+ "66r4wdk3u1M": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Honda Supra X restoration detailing; cosmetic work."
+ },
+ "hp66Sx62Aj0": {
+  "role": "case-study",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "piston"
+  ],
+  "course": [
+   "m2-top-end"
+  ],
+  "note": "Custom top end and cylinder rebore; shows cylinder and piston in context, not a how-to."
+ },
+ "uz_p-iu9C_s": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "rear_shock",
+   "forks"
+  ],
+  "course": [
+   "m4-suspension"
+  ],
+  "note": "Suspension terms explained: travel, sag, preload, damping."
+ },
+ "oyZBX_Bw-pI": {
+  "role": "tutorial",
+  "repairs": [
+   "recommission-after-storage"
+  ],
+  "problems": [
+   "no-start-after-storage",
+   "battery-flat"
+  ],
+  "parts": [],
+  "course": [
+   "m4-maintenance"
+  ],
+  "note": "Prepare a bike for winter storage: fuel, battery, tyres and cover."
+ },
+ "Nmz1QJTDzO8": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [
+   "frame",
+   "steering_stem"
+  ],
+  "course": [
+   "m4-frame-steering"
+  ],
+  "note": "Rake, trail and wheelbase explained with diagrams."
+ },
+ "NSV8iU65bH8": {
+  "role": "tutorial",
+  "repairs": [
+   "stator-test"
+  ],
+  "problems": [
+   "not-charging",
+   "stator-burnt"
+  ],
+  "parts": [
+   "stator"
+  ],
+  "course": [],
+  "note": "Test a dirt bike stator, single phase and three phase; values are for that bike only."
+ },
+ "Bt2eYZMlTFI": {
+  "role": "tutorial",
+  "repairs": [
+   "coolant-replace"
+  ],
+  "problems": [],
+  "parts": [
+   "coolant",
+   "radiator"
+  ],
+  "course": [
+   "m2-lubrication-cooling"
+  ],
+  "note": "Flush and refill the cooling system; bleeding and coolant type differ per bike."
+ },
+ "qDDCliRKHbY": {
+  "role": "explainer",
+  "repairs": [],
+  "problems": [],
+  "parts": [],
+  "course": [],
+  "note": "Tour of every engine layout and why makers choose them."
+ },
+ "Q8cl3bFPgxo": {
+  "role": "tutorial",
+  "repairs": [
+   "engine-oil-service",
+   "drain-plug-seal"
+  ],
+  "problems": [],
+  "parts": [
+   "engine_oil",
+   "oil_filter",
+   "drain_plug"
+  ],
+  "course": [],
+  "note": "Oil and filter change step by step; check oil grade, amount and torque in your manual."
+ }
+}

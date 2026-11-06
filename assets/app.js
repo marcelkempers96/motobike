@@ -55,8 +55,9 @@ const S = {
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-const lcFirst = (t) => t.charAt(0).toLowerCase() + t.slice(1);
+const lcFirst = (t) => (/^[A-Z][a-z]/.test(t) ? t.charAt(0).toLowerCase() + t.slice(1) : t);
 const MODE_PART_NAME = {
+  cu: { carb: 'Fuel injection and throttle body', chain: 'Belt final drive', rear_sprocket: 'Rear belt pulley', cooling: 'Oil cooler', clutch: 'Primary drive and clutch', spark_plug: 'Spark plugs and coil' },
   pi: { headlight: 'Carbide lamp', carb: 'Surface carburettor', spark_plug: 'Trembler coil ignition', chain: 'Belt and pedal chain drive', rear_sprocket: 'Belt rim and rear sprocket', footpegs: 'Pedals and cranks', side_stand: 'Rear stand', seat: 'Saddle', handlebar: 'Handlebar and control levers', brake: 'Front brake' },
   vt: { headlight: 'Acetylene headlight', spark_plug: 'Magneto ignition', footpegs: 'Footboards', side_stand: 'Rear stand', clutch: 'Foot clutch and primary chain', gearbox: 'Hand-change gearbox' },
   sb: { carb: 'Fuel injection and throttle bodies', spark_plug: 'Spark plugs and coils' }, cr: { carb: 'Twin carburettors', spark_plug: 'Spark plugs and magneto' } };
@@ -178,7 +179,7 @@ ${PAGE === 'cockpit' ? `
 
 ` : ''}
 ${PAGE === 'overview' ? `<section class="mz-ov-about"><h2>Interactive motorcycle parts diagram</h2>
-      <p>Explore a motorcycle parts diagram in 3D: ten bikes, from a 1901 pioneer motor-bicycle and a 1920 V-twin to a classic four-stroke, a two-stroke motocross bike, a scooter, a step-through, a boda boda, a café racer, a superbike and an electric scrambler. Choose a system to see where its parts sit, then tap a part to see what it does and how it fails.</p>
+      <p>Explore a motorcycle parts diagram in 3D: eleven bikes, from a 1901 pioneer motor-bicycle and a 1920 V-twin to a modern V-twin cruiser, a classic four-stroke, a two-stroke motocross bike, a scooter, a step-through, a boda boda, a café racer, a superbike and an electric scrambler. Choose a system to see where its parts sit, then tap a part to see what it does and how it fails.</p>
       <p class="mz-ov-links"><a href="repair/parts/">All motorcycle parts, names and functions</a> · <a href="repair/problems/">Find a problem by symptom</a> · <a href="repair/repairs/">Repair tutorials</a> · <a href="repair/bikes/">Repairs by bike model</a> · <a href="learn/">Free course</a></p></section>` : ''}
     <footer data-mz-footer></footer>
 

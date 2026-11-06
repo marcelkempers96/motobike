@@ -9,6 +9,7 @@ export const MODE_INFO = {
   bb: { short: 'Boda boda', name: 'Boda boda commuter', blurb: '150 cc air-cooled single with kick start, four gears and a fully enclosed chain, in taxi fit-out. Click any part to look inside.' },
   cr: { short: 'Cafe racer', name: '1960s cafe racer', blurb: '650 cc parallel twin with magneto ignition, twin carburettors and a separate gearbox. Click any part to look inside.' },
   sb: { short: 'Superbike', name: '1000 cc superbike', blurb: 'Liquid-cooled inline four with fuel injection, twin front discs and a twin-spar frame. Click any part to look inside.' },
+  cu: { short: 'Cruiser', name: 'V-twin cruiser', blurb: 'Modern 1,750 cc air-cooled pushrod V-twin with fuel injection, an oil cooler, a six-speed gearbox and a belt final drive. Click any part to look inside.' },
   vt: { short: 'V-twin 1920', name: 'Vintage V-twin', blurb: '1,000 cc F-head V-twin of about 1920 with magneto ignition, a hand-change three-speed gearbox, foot clutch and acetylene lights. Click any part to look inside.' },
   pi: { short: 'Pioneer 1901', name: 'Pioneer motor-bicycle', blurb: 'About 250 cc single of around 1901 in a bicycle frame: belt drive, pedals for starting and hills, trembler-coil ignition and a carbide lamp. Click any part to look inside.' },
   elec: { short: 'Electric', name: 'Electric scrambler', blurb: 'Battery, controller and motor, with the rotor as the only moving part in the powertrain. Click any part to look inside.' },

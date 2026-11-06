@@ -1239,3 +1239,19 @@ font[style] { background: none !important; box-shadow: none !important; }
 .mz-listen .mz-listen-play[aria-pressed="true"] { background: var(--ink); color: #FFF; }
 .mz-listen .mz-listen-stop, .mz-listen .mz-listen-rate { border-color: var(--line); font-weight: 600; }
 .mz-reading { background: #FFF1E6; box-shadow: -6px 0 0 #FFF1E6, 6px 0 0 #FFF1E6; transition: background .2s; }
+
+/* Video cards (assets/videos.js) */
+.mz-yts { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 10px 0 0; }
+.mz-yt { border: 1px solid var(--line); background: #FFF; display: flex; flex-direction: column; }
+.mz-yt-stage { position: relative; aspect-ratio: 16 / 9; background: #111; }
+.mz-yt-stage iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mz-yt-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: #111; cursor: pointer; }
+.mz-yt-play img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .92; }
+.mz-yt-play i { position: absolute; left: 50%; top: 50%; width: 62px; height: 44px; margin: -22px 0 0 -31px; background: rgba(20,20,20,.82); border-radius: 12px; }
+.mz-yt-play i::after { content: ""; position: absolute; left: 25px; top: 13px; border-style: solid; border-width: 9px 0 9px 15px; border-color: transparent transparent transparent #FFF; }
+.mz-yt-play:hover i, .mz-yt-play:focus-visible i { background: #E62117; }
+.mz-yt-info { padding: 10px 12px 12px; font-size: 14px; line-height: 1.45; }
+.mz-yt-info b { display: block; font-size: 15px; color: var(--ink); }
+.mz-yt-info span { color: var(--mute); font-size: 13px; }
+.mz-yt-info p { margin: 6px 0 0; color: var(--ink-soft); }
+.mz-yt-role { display: inline-block; font: 700 11px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--warm); margin-bottom: 4px; }

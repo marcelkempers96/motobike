@@ -224,6 +224,39 @@ export default {
         {
           "type": "check",
           "q": "m2-03"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "aOTz0Ol8fLA",
+              "title": "The Pros and Cons of Every Motorcycle Engine Type",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "15:23",
+              "role": "How it works",
+              "note": "Compares single, twin, triple, four and V engine layouts with pros and cons."
+            },
+            {
+              "id": "zhUI7MWE_Fc",
+              "title": "Motorcycle Riders: You're Using the Wrong RPM",
+              "channel": "FortNine",
+              "channel_url": "http://www.youtube.com/@FortNine",
+              "duration": "5:36",
+              "role": "How it works",
+              "note": "Why engine load and rpm choice affect wear and feel; not a universal rpm rule."
+            },
+            {
+              "id": "j8DSBH2GG8s",
+              "title": "Let's Settle This. Bore vs Stroke - It's Not That Simple",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "25:10",
+              "role": "How it works",
+              "note": "Bore against stroke explained and why neither is simply better."
+            }
+          ]
         }
       ]
     },
@@ -428,6 +461,39 @@ export default {
         {
           "type": "check",
           "q": "m2-10"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "eKUEZY3R3cI",
+              "title": "The Only Video You'll Ever Need to Watch to Know how 4 Stroke and 2 Stroke Engines Work and Differ",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "28:42",
+              "role": "How it works",
+              "note": "Long animated comparison of four-stroke and two-stroke engines and why they differ."
+            },
+            {
+              "id": "t1G1VWd9B90",
+              "title": "4-Stroke Motor Cycle Animation",
+              "channel": "Lubrizol360",
+              "channel_url": "http://www.youtube.com/@LubrizolAdditives360",
+              "duration": "2:51",
+              "role": "How it works",
+              "note": "Four-stroke animation showing engine, clutch and gearbox sharing one oil supply."
+            },
+            {
+              "id": "2m2EGXlwMIs",
+              "title": "From cylinder to clutch to transmission: a complete Motorcycle Engine explained",
+              "channel": "Al's Garage",
+              "channel_url": "http://www.youtube.com/@AlsGarage",
+              "duration": "24:36",
+              "role": "How it works",
+              "note": "Yamaha SR250 engine explained from cylinder through clutch to gearbox on a real engine."
+            }
+          ]
         }
       ]
     },
@@ -660,6 +726,30 @@ export default {
           "tone": "try",
           "title": "Try it in the Overview",
           "html": "Switch to the <a href=\"../overview/?mode=2t&part=engine\">two-stroke engine</a> and run the animation slowly. Pause when the exhaust port starts to open and when the transfer ports start to open, read both crank angles from the status line and calculate the blowdown period. Then raise the RPM slider and compare the number of power strokes per second with the <a href=\"../overview/?mode=4t&part=engine\">four-stroke</a> at the same speed."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "eKUEZY3R3cI",
+              "title": "The Only Video You'll Ever Need to Watch to Know how 4 Stroke and 2 Stroke Engines Work and Differ",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "28:42",
+              "role": "How it works",
+              "note": "Long animated comparison of four-stroke and two-stroke engines and why they differ."
+            },
+            {
+              "id": "_G57AWMvHkc",
+              "title": "🤩 Incredible 2-Stroke Engine Rebuild! | 1990 KX250",
+              "channel": "mad marc",
+              "channel_url": "http://www.youtube.com/@madmarc",
+              "duration": "31:41",
+              "role": "Case study",
+              "note": "1990 KX250 two-stroke rebuild; shows parts order and traceability, values for that bike only."
+            }
+          ]
         }
       ]
     },
@@ -872,6 +962,30 @@ export default {
         {
           "type": "check",
           "q": "m2-18"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "FC82Xk9zPdo",
+              "title": "Bike में full engine का काम ! 100 cc bike repairing ! bike engine full overhaul ! change piston cyli",
+              "channel": "My Mechanical Support",
+              "channel_url": "http://www.youtube.com/@mymechanicalsupport",
+              "duration": "50:32",
+              "role": "Case study",
+              "note": "Hindi overhaul of a 100 cc engine, piston and cylinder work; a long film, check model before copying."
+            },
+            {
+              "id": "hp66Sx62Aj0",
+              "title": "Kawasaki S1 four cylinder top end build and cylinder rebore - How its made - Episode 6",
+              "channel": "Allen Millyard",
+              "channel_url": "http://www.youtube.com/@AllenMillyard",
+              "duration": "20:14",
+              "role": "Case study",
+              "note": "Custom top end and cylinder rebore; shows cylinder and piston in context, not a how-to."
+            }
+          ]
         }
       ]
     },
@@ -1063,6 +1177,39 @@ export default {
           "tone": "warm",
           "title": "Workshop tip",
           "html": "A two-stroke with a <strong>high idle and hanging revs</strong> is often drawing air past a leaking crank seal or base gasket. And the K-Light manual warns that its thin-walled crankcase must never be struck heavily."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "uM-ycHS9uvw",
+              "title": "CROSSPLANE inline 4 EXPLAINED in detail - How the YAMAHA R1 i4 differs from all other INLINE FOURS",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "26:30",
+              "role": "How it works",
+              "note": "Why the crossplane crankshaft changes firing order and feel; engine design depth."
+            },
+            {
+              "id": "gwtZkHoVMso",
+              "title": "Cylinder Offset Changes Everything",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "23:45",
+              "role": "How it works",
+              "note": "Why offsetting the cylinder from the crank line changes piston side force and friction."
+            },
+            {
+              "id": "w0PBlc1b0vo",
+              "title": "Fortnine is Wrong. 285 Crossplane Twin Engines Do Not Have Better Balance than 270 Twins",
+              "channel": "driving 4 answers",
+              "channel_url": "http://www.youtube.com/@d4a",
+              "duration": "21:57",
+              "role": "How it works",
+              "note": "A correction on crossplane twin balance; shows why assumptions matter in engine claims."
+            }
+          ]
         }
       ]
     },
@@ -1237,6 +1384,30 @@ export default {
         {
           "type": "check",
           "q": "m2-26"
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "Bt2eYZMlTFI",
+              "title": "How To Flush And Service Your Motorcycle's Radiator And Cooling System | MC GARAGE",
+              "channel": "Motorcyclist Magazine",
+              "channel_url": "http://www.youtube.com/@MotorcyclistMag",
+              "duration": "3:15",
+              "role": "How-to",
+              "note": "Flush and refill the cooling system; bleeding and coolant type differ per bike."
+            },
+            {
+              "id": "t1G1VWd9B90",
+              "title": "4-Stroke Motor Cycle Animation",
+              "channel": "Lubrizol360",
+              "channel_url": "http://www.youtube.com/@LubrizolAdditives360",
+              "duration": "2:51",
+              "role": "How it works",
+              "note": "Four-stroke animation showing engine, clutch and gearbox sharing one oil supply."
+            }
+          ]
         }
       ]
     },
@@ -1520,6 +1691,39 @@ export default {
           "type": "figure",
           "fig": "afr",
           "caption": "Slide from rich to lean and connect each zone with a plug colour: rich = dry black soot, lean = chalk-white and blistered."
+        },
+        {
+          "type": "videos",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "SHsNIfQr7d4",
+              "title": "इंजन का काम कैसे करवाना चाहिए // कितना खर्च पड़ जाता है // Best Engine Service Hero Splendor /QA",
+              "channel": "QASIM AUTO",
+              "channel_url": "http://www.youtube.com/@QASIMAUTO",
+              "duration": "15:06",
+              "role": "How it works",
+              "note": "Hindi talk on engine work, service choices and cost; costs depend on place and date."
+            },
+            {
+              "id": "6rXmT8KU0fQ",
+              "title": "Can I Get This $300 Old Suzuki Motorcycle Running?",
+              "channel": "The Bearded Mechanic",
+              "channel_url": "http://www.youtube.com/@The_Bearded_Mechanic",
+              "duration": "29:29",
+              "role": "Case study",
+              "note": "Cheap Suzuki: diagnose why it will not run, step by step; a good example of reasoning order."
+            },
+            {
+              "id": "tM9AqyQrrPk",
+              "title": "Honda XL175 engine repair",
+              "channel": "Allen Millyard",
+              "channel_url": "http://www.youtube.com/@AllenMillyard",
+              "duration": "13:20",
+              "role": "Case study",
+              "note": "Honda XL175 engine repair and decisions with workshop tools; values for that engine only."
+            }
+          ]
         }
       ]
     }
