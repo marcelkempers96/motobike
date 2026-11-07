@@ -17,10 +17,10 @@ desc='The main types of motorcycle explained: standard, sport and touring bikes,
 label='Motorcycle types',
 lead='Motorcycle types are defined less by style than by what the machine is built to do: carry goods through a city, cross a continent, climb a rock or lap a circuit. The frame, engine, wheels and riding position follow from that job.',
 summary='Sixteen types in five families, from the 1885 Reitwagen to the electric boda, and the parts that define each.',
-hero=dict(src=TH+'standard.jpg', w=720, h=486, alt='Labelled line plate of a standard roadster motorcycle in side view with upright handlebars, flat seat, visible engine and twin rear shocks', cap='The standard roadster, the all-rounder most riders learn on. Plate from the Moto Zero motorcycle types collection.'),
+hero=dict(src=TH+'standard.jpg', w=720, h=486, alt='Labelled line plate of a standard roadster motorcycle in side view with upright handlebars, flat seat, visible engine and twin rear shocks', cap='The standard roadster, the all-rounder most riders learn on. Plate from the Motopedia motorcycle types collection.'),
 thumb=TH+'standard.jpg',
 body=f'''
-<p>The Moto Zero <a href="../../types/">motorcycle types</a> page groups sixteen types into five families: pioneers, road, off-road, urban and work, and electric. This guide walks through each family, explains what sets each type apart, and links to the full entry with its labelled plate, history and typical specifications.</p>
+<p>The Motopedia <a href="../../types/">motorcycle types</a> page groups sixteen types into five families: pioneers, road, off-road, urban and work, and electric. This guide walks through each family, explains what sets each type apart, and links to the full entry with its labelled plate, history and typical specifications.</p>
 
 <h2 id="pioneers">Pioneers</h2>
 <p>The <a href="{T}pioneer">pioneer motor-bicycle</a> was a bicycle with an engine bolted in. Gottlieb Daimler and Wilhelm Maybach's wooden Reitwagen of 1885 was the first petrol-engined two-wheeler, and the Hildebrand &amp; Wolfmüller of 1894 was the first offered for sale. These machines used a diamond bicycle frame, a single-cylinder engine of 200 to 500 cc, a belt drive with no clutch or gearbox, and pedals for starting and climbing.</p>
@@ -35,7 +35,7 @@ body=f'''
 <p>The <a href="{T}cruiser">cruiser</a> has a low stepped seat, a raked fork, forward foot controls and usually a large air-cooled V-twin built for torque at low revs. The long wheelbase gives stability in a straight line rather than quick steering.</p>
 <h3 id="superbike">Superbike and sport bike</h3>
 <p>The <a href="{T}superbike">superbike</a> is a road machine built like a racing bike: an aluminium twin-spar frame, a liquid-cooled engine that revs past 14,000 rpm, an upside-down fork, radial brake calipers, a full fairing and a tucked riding position. The Honda CB750 Four of 1969 started the line, and the CBR900RR Fireblade of 1992 set the pattern of light weight over outright power.</p>
-{tfig('superbike', 720, 405, 'Labelled line plate of a sport bike in side view with full fairing, clip-on bars, upside-down fork and three-spoke cast wheels', 'The superbike: full fairing, twin-spar frame and racing brakes. Moto Zero types collection.')}
+{tfig('superbike', 720, 405, 'Labelled line plate of a sport bike in side view with full fairing, clip-on bars, upside-down fork and three-spoke cast wheels', 'The superbike: full fairing, twin-spar frame and racing brakes. Motopedia types collection.')}
 <h3 id="naked">Naked and streetfighter</h3>
 <p>The <a href="{T}naked">naked</a> takes a sport bike's engine and chassis and removes the fairing, adding wide flat bars and an upright, slightly forward riding position. Engines are usually tuned for mid-range torque rather than peak power.</p>
 <h3 id="touring">Touring</h3>
@@ -44,7 +44,7 @@ body=f'''
 <h2 id="off-road">Off-road motorcycles</h2>
 <h3 id="motocross">Motocross</h3>
 <p>The <a href="{T}motocross">motocross</a> machine is built to race over jumps and ruts. It has about 300 mm of suspension travel, a 21 in front wheel and an 18 or 19 in rear wheel with knobbly tyres, a liquid-cooled single of 125 to 450 cc, either <a href="../two-stroke-vs-four-stroke/">two-stroke or four-stroke</a>, and no lights, mirrors or stand.</p>
-{tfig('motocross', 720, 356, 'Labelled line plate of a motocross motorcycle in side view with long-travel fork, high front mudguard, knobbly tyres and expansion chamber', 'Motocross: long-travel suspension, knobbly tyres and no road equipment. Moto Zero types collection.')}
+{tfig('motocross', 720, 356, 'Labelled line plate of a motocross motorcycle in side view with long-travel fork, high front mudguard, knobbly tyres and expansion chamber', 'Motocross: long-travel suspension, knobbly tyres and no road equipment. Motopedia types collection.')}
 <h3 id="trials">Trials</h3>
 <p>The <a href="{T}trials">trials</a> bike climbs rocks at walking pace and is ridden standing up, so it has almost no seat, a tiny tank, a very short wheelbase and soft tyres run at about 0.3 to 0.5 bar. A complete machine weighs only 65 to 75 kg.</p>
 <h3 id="adventure">Adventure</h3>
@@ -57,7 +57,7 @@ body=f'''
 <p>The <a href="{T}step-through">step-through underbone</a>, led by the Honda Super Cub of 1958, has a pressed-steel backbone frame, leg shields, 17 in wheels and a horizontal single under the backbone with a semi-automatic gearbox: the rider changes gear with the foot but has no clutch lever. More than 100 million have been built.</p>
 <h3 id="boda-boda">Boda boda commuter</h3>
 <p>The <a href="{T}boda-boda">boda boda</a> is the motorcycle taxi and light truck of East Africa: a rugged air-cooled single of 100 to 150 cc with kick and electric start, a long flat dual seat, a heavy rear carrier, crash guards, drum brakes, a full chain case and a centre stand. The Bajaj Boxer and TVS HLX are common examples. Our <a href="../boda-boda-maintenance-checklist/">boda boda maintenance checklist</a> covers the daily and weekly checks these machines need.</p>
-{tfig('boda-boda', 720, 405, 'Labelled line plate of a boda boda commuter motorcycle with round headlight, fork gaiters, air-cooled single, long dual seat, rear carrier, crash guards and full chain case', 'The boda boda commuter, built to carry passengers and loads every day. Moto Zero types collection.')}
+{tfig('boda-boda', 720, 405, 'Labelled line plate of a boda boda commuter motorcycle with round headlight, fork gaiters, air-cooled single, long dual seat, rear carrier, crash guards and full chain case', 'The boda boda commuter, built to carry passengers and loads every day. Motopedia types collection.')}
 
 <h2 id="electric">Electric motorcycles</h2>
 <p>The <a href="{T}electric-motorcycle">electric motorcycle</a> puts a lithium-ion battery where the engine was, with a controller and a permanent-magnet motor driving the rear wheel through a single-speed belt or chain. There is no clutch or gearbox, and regenerative braking returns energy to the battery. The <a href="{T}electric-scooter">electric moped and e-boda</a> goes further, with a hub motor in the rear wheel and a removable battery that can be carried or swapped. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains each part.</p>
@@ -84,11 +84,11 @@ desc='Daily, weekly and monthly maintenance checks for boda boda and motorcycle 
 label='Maintenance',
 lead='A boda boda works harder than almost any other motorcycle: long days, a passenger or a heavy load, dust, rain and rough roads. A few minutes of checks each morning and a longer session each week prevent most breakdowns and keep the rider and passenger safe.',
 summary='Daily, weekly and monthly checks for motorcycle taxi riders: tyres, brakes, chain, oil, lights and electrics.',
-hero=dict(src=TH+'boda-boda.jpg', w=720, h=405, alt='Labelled line plate of a boda boda commuter motorcycle with round headlight, fork gaiters, air-cooled single, long dual seat, rear carrier, crash guards, drum brakes and full chain case', cap='The parts a boda boda rider checks every day: tyres, drum brakes, chain case, carrier, crash guards and stands. Plate from the Moto Zero motorcycle types collection.'),
+hero=dict(src=TH+'boda-boda.jpg', w=720, h=405, alt='Labelled line plate of a boda boda commuter motorcycle with round headlight, fork gaiters, air-cooled single, long dual seat, rear carrier, crash guards, drum brakes and full chain case', cap='The parts a boda boda rider checks every day: tyres, drum brakes, chain case, carrier, crash guards and stands. Plate from the Motopedia motorcycle types collection.'),
 thumb=TH+'boda-boda.jpg',
 body=f'''
 <h2 id="why">Why a commercial motorcycle needs more care</h2>
-<p>Service schedules are written for average riders. The K-Light 125 manual, used as the worked example in the Moto Zero course, bases its schedule on about 1,000 km a month and asks for shorter intervals on dusty roads and at high mileage. A boda boda rider covering 120 km a day reaches 1,000 km in little more than a week, often two-up or loaded, on roads that are dusty in the dry season and muddy in the wet. Every interval in the manual therefore arrives several times sooner than it would for a private rider.</p>
+<p>Service schedules are written for average riders. The K-Light 125 manual, used as the worked example in the Motopedia course, bases its schedule on about 1,000 km a month and asks for shorter intervals on dusty roads and at high mileage. A boda boda rider covering 120 km a day reaches 1,000 km in little more than a week, often two-up or loaded, on roads that are dusty in the dry season and muddy in the wet. Every interval in the manual therefore arrives several times sooner than it would for a private rider.</p>
 <figure class="is-portrait">
   <img src="{A}photos/kenya-flag-ride.jpg" alt="Rider seen from behind on a black dual-purpose motorcycle in a wide green field in Kenya, with a Kenyan flag fixed to the rear and parked vehicles in the distance" width="1125" height="1500" loading="lazy">
   <figcaption>A ride out in Kenya, where motorcycle taxis carry a large share of urban trips. Photograph: Transitions Lab collection.</figcaption>
@@ -128,7 +128,7 @@ body=f'''
 <h2 id="weekly">Weekly checks</h2>
 <figure>
   <img src="{A}illustrations/chassis/F19.png" alt="Technical plate of motorcycle brakes: a hydraulic disc system with master cylinder, reservoir, line, caliper and disc beside a drum brake with shoes, cam and return springs" width="2400" height="1620" loading="lazy">
-  <figcaption>Disc and drum brakes side by side. Most boda bodas use drums front and rear. Plate F19, Moto Zero Module 4.</figcaption>
+  <figcaption>Disc and drum brakes side by side. Most boda bodas use drums front and rear. Plate F19, Motopedia Module 4.</figcaption>
 </figure>
 <ul>
   <li><strong>Tyre pressures.</strong> Set them cold with a gauge, to the figure for the load you carry. The K-Light 125's solo figures are 190 kPa (27.5 psi) front and 210 kPa (30.5 psi) rear; manuals give higher figures for a passenger and load. Under-inflation makes a loaded tyre overheat and wear its shoulders. Our <a href="../motorcycle-tyre-pressure-and-wear/">tyre pressure and wear guide</a> has the details.</li>

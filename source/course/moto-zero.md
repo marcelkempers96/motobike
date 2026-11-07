@@ -1,12 +1,12 @@
 ---
-title: "Moto Zero: an open technical course on how motorcycles work"
+title: "Motopedia: an open technical course on how motorcycles work"
 description: "Five free PDF modules on four-stroke, two-stroke and electric motorcycles: how every system works, every component and sub-component, and how to inspect, diagnose and repair them. Published by Transitions Lab under CC BY-SA 4.0."
 slug: /moto-zero
 ---
 
-![Moto Zero, Transitions Lab](/assets/moto-zero/lockup.svg)
+![Motopedia, Transitions Lab](/assets/moto-zero/lockup.svg)
 
-# Moto Zero
+# Motopedia
 
 **An open technical course on how motorcycles work**, from the first combustion stroke to the battery management system of an electric motorcycle. The course follows the motorcycle from its anatomy and physics through the four-stroke and two-stroke engine, fuel, ignition and electrics, and drivetrain and chassis, to electric drive. Every chapter closes with review questions and worked answers, and every module contains workshop job sheets with tools, reference values and pass criteria.
 
@@ -20,13 +20,13 @@ The course is written for **technician trainees, engineering and transitions stu
 
 | Module | What it covers | Pages | Download |
 |---|---|---|---|
-| **01 Foundations: the machine, its anatomy and the workshop** | History, the motorcycle as a set of systems, every category from pedelec to superbike, engine and frame configurations, the 30 assemblies of the exploded diagram, controls, the physics of power, gearing, braking and cornering, workshop safety, tools, measurement and fasteners | 35 | [PDF, 10.2 MB](/downloads/moto-zero-module-1-foundations.pdf) |
-| **02 The engine: four-stroke and two-stroke** | Displacement, compression and efficiency, the four-stroke and two-stroke cycles, valve and port timing, top end, bottom end, lubrication and cooling, compression and leak-down testing, valve clearance and a full top-end rebuild | 43 | [PDF, 7.5 MB](/downloads/moto-zero-module-2-engine.pdf) |
-| **03 Fuel, ignition and electrical systems** | Mixture and lambda, carburettors, electronic fuel injection and its sensors, Euro 5+ and BS VI emissions control, CDI, TCI and ECU ignition, battery, charging and starting circuits, lighting and wiring, multimeter diagnosis | 51 | [PDF, 6.6 MB](/downloads/moto-zero-module-3-fuel-ignition-electrical.pdf) |
-| **04 Drivetrain and chassis** | Clutch, gearbox and shift mechanism, chain, belt, shaft and CVT final drive, frame and steering geometry, suspension and sag, wheels and tyres, drum, disc, CBS and ABS brakes, the periodic service schedule and pre-delivery inspection | 61 | [PDF, 10.9 MB](/downloads/moto-zero-module-4-drivetrain-chassis.pdf) |
-| **05 Electric motorcycles** | Electric two-wheeler architecture and efficiency, hub and mid-drive motors, controllers and regenerative braking, cells, packs and the BMS, charging, battery swapping and standards, high-voltage safety and diagnosis | 58 | [PDF, 5.9 MB](/downloads/moto-zero-module-5-electric.pdf) |
+| **01 Foundations: the machine, its anatomy and the workshop** | History, the motorcycle as a set of systems, every category from pedelec to superbike, engine and frame configurations, the 30 assemblies of the exploded diagram, controls, the physics of power, gearing, braking and cornering, workshop safety, tools, measurement and fasteners | 35 | [PDF, 10.2 MB](/downloads/motopedia-module-1-foundations.pdf) |
+| **02 The engine: four-stroke and two-stroke** | Displacement, compression and efficiency, the four-stroke and two-stroke cycles, valve and port timing, top end, bottom end, lubrication and cooling, compression and leak-down testing, valve clearance and a full top-end rebuild | 43 | [PDF, 7.5 MB](/downloads/motopedia-module-2-engine.pdf) |
+| **03 Fuel, ignition and electrical systems** | Mixture and lambda, carburettors, electronic fuel injection and its sensors, Euro 5+ and BS VI emissions control, CDI, TCI and ECU ignition, battery, charging and starting circuits, lighting and wiring, multimeter diagnosis | 51 | [PDF, 6.6 MB](/downloads/motopedia-module-3-fuel-ignition-electrical.pdf) |
+| **04 Drivetrain and chassis** | Clutch, gearbox and shift mechanism, chain, belt, shaft and CVT final drive, frame and steering geometry, suspension and sag, wheels and tyres, drum, disc, CBS and ABS brakes, the periodic service schedule and pre-delivery inspection | 61 | [PDF, 10.9 MB](/downloads/motopedia-module-4-drivetrain-chassis.pdf) |
+| **05 Electric motorcycles** | Electric two-wheeler architecture and efficiency, hub and mid-drive motors, controllers and regenerative braking, cells, packs and the BMS, charging, battery swapping and standards, high-voltage safety and diagnosis | 58 | [PDF, 5.9 MB](/downloads/motopedia-module-5-electric.pdf) |
 
-[Download all five modules (ZIP, 39.5 MB)](/downloads/moto-zero-all-modules.zip)
+[Download all five modules (ZIP, 39.5 MB)](/downloads/motopedia-all-modules.zip)
 
 ---
 
@@ -86,7 +86,7 @@ The part names below are used identically in the PDFs and in the explorer.
 
 ## Licence and use
 
-**Moto Zero** is an open educational programme of Transitions Lab. Text and illustrations are released under the [Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). You may copy, print, translate, adapt and redistribute the material, including in paid training, provided you credit **Transitions Lab, Moto Zero** and release adaptations under the same licence. Photographs credited to the Transitions Lab collection are included for illustration and are not covered by that licence.
+**Motopedia** is an open educational programme of Transitions Lab. Text and illustrations are released under the [Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). You may copy, print, translate, adapt and redistribute the material, including in paid training, provided you credit **Transitions Lab, Motopedia** and release adaptations under the same licence. Photographs credited to the Transitions Lab collection are included for illustration and are not covered by that licence.
 
 Workshop procedures are general guidance. Specifications differ between machines, so always confirm values and torque settings in the manufacturer's service manual for the motorcycle in front of you.
 

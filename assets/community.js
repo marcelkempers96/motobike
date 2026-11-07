@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero community: Share, About this tool, and Comments with photos
+   Motopedia community: Share, About this tool, and Comments with photos
    at the end of every page; accounts and saved course progress (Supabase).
    Loaded by site.js. Supabase is only fetched when the section comes into
    view, so pages stay fast. With no keys in community-config.js the section
@@ -91,7 +91,7 @@ function mountSection() {
   const foot = document.querySelector('footer[data-mz-footer], footer.mz-footer');
   const slot = document.querySelector('[data-mz-community]');
   if (!foot && !slot) return;
-  const title = document.title.replace(/\s*\|\s*Moto Zero\s*$/, '');
+  const title = document.title.replace(/\s*\|\s*Motopedia\s*$/, '');
   const sec = document.createElement('section');
   sec.className = 'mzc';
   sec.setAttribute('aria-label', 'Share and comments');

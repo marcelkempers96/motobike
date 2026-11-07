@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero — shared three.js GLB viewer
+   Motopedia — shared three.js GLB viewer
    Based on the reference implementation in assets/interactive/viewer.html.
    Models are meshopt-compressed GLBs in assets/models/<name>.glb whose mesh
    names follow <category>__<component>[__sub] (bikes) or <part>__<sub> (parts).

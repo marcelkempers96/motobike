@@ -1,11 +1,11 @@
-/* Moto Zero: Module 4 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 4 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "drivetrain-chassis",
   "num": "4",
   "title": "Drivetrain and chassis",
   "intro": "How engine torque is switched, multiplied and delivered to the rear tyre, and how the frame, steering, suspension, wheels and brakes turn that torque into controlled motion, with the checks and repairs for each.",
-  "pdf": "moto-zero-module-4-drivetrain-chassis.pdf",
+  "pdf": "motopedia-module-4-drivetrain-chassis.pdf",
   "chapters": [
     {
       "id": "m4-clutch",

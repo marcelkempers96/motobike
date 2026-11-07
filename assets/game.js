@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: Build a bike. A drag-and-drop game on the course plates.
+   Motopedia: Build a bike. A drag-and-drop game on the course plates.
    Pick up each part (shown as its 3D render) and drop it where it belongs.
    ========================================================================== */
 import { HOTSPOTS, OVERVIEW_PLATE, PLATE_RATIO } from './content/assets-map.js';

@@ -1,11 +1,11 @@
-/* Moto Zero: Module 5 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 5 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "electric",
   "num": "5",
   "title": "Electric motorcycles",
   "intro": "How electric two-wheelers turn stored electrochemical energy into traction, and how to inspect, diagnose and service their motors, controllers, batteries and chargers safely.",
-  "pdf": "moto-zero-module-5-electric.pdf",
+  "pdf": "motopedia-module-5-electric.pdf",
   "chapters": [
     {
       "id": "m5-architecture",

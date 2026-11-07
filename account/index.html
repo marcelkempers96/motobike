@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your account | Moto Zero</title>
+  <title>Your account | Motopedia</title>
   <link rel="canonical" href="https://motobike-five.vercel.app/account/">
   <meta name="robots" content="noindex, follow">
-  <meta name="description" content="Sign in to Moto Zero with your email to comment, share photos, save your course progress and open members-only content.">
+  <meta name="description" content="Sign in to Motopedia with your email to comment, share photos, save your course progress and open members-only content.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +75,7 @@
 
   <section class="ute-hero">
     <span class="ute-label">Account</span>
-    <h1>Your Moto Zero account</h1>
+    <h1>Your Motopedia account</h1>
     <p>Free, with just your email. Sign in to comment and share photos on any page, keep your course progress on every device, and open members-only content.</p>
   </section>
 
@@ -165,7 +165,7 @@ const VIEWS = {
   async messages(el) {
     const { data, error } = await sb.from('messages').select('id, from_admin, body, created_at, read').eq('user_id', ME.id).order('created_at');
     if (error) throw error;
-    el.innerHTML = `<div class="mza-thread">${data.length ? data.map((m) => `<div class="mza-msg ${m.from_admin ? 'is-team' : ''}">${esc(m.body).replace(/\n/g, '<br>')}<small>${m.from_admin ? 'Moto Zero team' : 'You'} · ${day(m.created_at)}</small></div>`).join('') : '<p class="msg">No messages yet. Ask the team anything: a correction, a missing part, help with a repair.</p>'}</div>
+    el.innerHTML = `<div class="mza-thread">${data.length ? data.map((m) => `<div class="mza-msg ${m.from_admin ? 'is-team' : ''}">${esc(m.body).replace(/\n/g, '<br>')}<small>${m.from_admin ? 'Motopedia team' : 'You'} · ${day(m.created_at)}</small></div>`).join('') : '<p class="msg">No messages yet. Ask the team anything: a correction, a missing part, help with a repair.</p>'}</div>
       <form id="f-msg"><textarea name="body" rows="3" maxlength="4000" required placeholder="Write to the team"></textarea><div class="row"><button type="submit">Send</button></div><p class="msg" id="m-msg"></p></form>`;
     const ids = data.filter((m) => m.from_admin && !m.read).map((m) => m.id);
     if (ids.length) await sb.from('messages').update({ read: true }).in('id', ids);
@@ -173,7 +173,7 @@ const VIEWS = {
       e.preventDefault(); const body = e.target.body.value.trim(); if (!body) return;
       const { error: er } = await sb.from('messages').insert({ user_id: ME.id, body });
       if (er) { el.querySelector('#m-msg').textContent = 'Could not send: ' + er.message; return; }
-      fetch(TEAM, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'New member message on Moto Zero', from: ME.email, message: body }) }).catch(() => {});
+      fetch(TEAM, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'New member message on Motopedia', from: ME.email, message: body }) }).catch(() => {});
       VIEWS.messages(el);
     };
   },
@@ -247,7 +247,7 @@ const VIEWS = {
         const { data, error } = await sb.from('subscribers').select('email, source, created_at').order('created_at', { ascending: false });
         if (error) { A.innerHTML = `<p class="msg">${esc(error.message)}</p>`; return; }
         A.innerHTML = `<p><button type="button" id="csv">Download CSV</button></p><table><tr><th>Email</th><th>Signed up on</th><th>Date</th></tr>${data.map((r) => `<tr><td>${esc(r.email)}</td><td>${esc(r.source || '')}</td><td>${day(r.created_at)}</td></tr>`).join('')}</table>`;
-        A.querySelector('#csv').onclick = () => { const csv = 'email,source,created_at\n' + data.map((r) => [r.email, r.source || '', r.created_at].map((x) => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n'); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'moto-zero-subscribers.csv'; a.click(); };
+        A.querySelector('#csv').onclick = () => { const csv = 'email,source,created_at\n' + data.map((r) => [r.email, r.source || '', r.created_at].map((x) => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n'); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'motopedia-subscribers.csv'; a.click(); };
       },
       async brand() {
         const { data, error } = await sb.from('brand_requests').select('*').order('created_at', { ascending: false });

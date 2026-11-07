@@ -1,4 +1,4 @@
-# Under the Engine (Moto Zero)
+# Under the Engine (Motopedia)
 
 This is an interactive 3D model of a 125 cc air-cooled single-cylinder four-stroke motorcycle engine, built with Three.js. Every gear, chain, fork, roller and valve moves in sync with the crank. It covers the crank and piston, the cam chain and valvetrain, the magneto, stator, pickup, CDI and ignition coil, kick and electric starting with the roller one-way clutch, the balancer, the wet multi-plate clutch with its cable lifter and push rod, the five-speed constant-mesh gearbox with its dog clutches, the shift drum, forks, star detent, ratchet and gear pedal, and the front sprocket and chain.
 

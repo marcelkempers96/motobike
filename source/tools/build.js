@@ -1,4 +1,4 @@
-// Build Moto Zero module PDFs.  usage: node build.js 1 2 3 4 5
+// Build Motopedia module PDFs.  usage: node build.js 1 2 3 4 5
 const fs = require('fs'), path = require('path'), { execSync } = require('child_process');
 const MarkdownIt = require('markdown-it'), container = require('markdown-it-container');
 const { chromium } = require('playwright');
@@ -78,9 +78,9 @@ function build(n) {
   const logo = fs.readFileSync(path.join(ROOT, 'brand/lockup.svg'), 'utf8');
   const mark = fs.readFileSync(path.join(ROOT, 'brand/mark.svg'), 'utf8');
   const css = fs.readFileSync(path.join(ROOT, 'tools/book.css'), 'utf8');
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moto Zero · ${esc(modLabel)} · ${esc(title)}</title>
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Motopedia · ${esc(modLabel)} · ${esc(title)}</title>
 <link rel="stylesheet" href="file://${ROOT}/fonts/fonts.css"><style>${css}
-@page { @top-left { content: "${esc(modLabel)}  ·  ${esc(title).replace(/"/g, '')}"; } @top-right { content: "Moto Zero"; } }
+@page { @top-left { content: "${esc(modLabel)}  ·  ${esc(title).replace(/"/g, '')}"; } @top-right { content: "Motopedia"; } }
 </style></head><body>
 <section class="cover">
   <div class="cv-panel">
@@ -105,7 +105,7 @@ function build(n) {
 <p class="howto">Each chapter opens with learning objectives and closes with review questions and worked answers. Reference data comes from the K-Light 125 maintenance manual unless stated otherwise; always use the manual for the machine in front of you. Explorer exercises refer to the interactive anatomy explorer at transitionslab.org/motorcycle-anatomy.</p></div>
 </section>
 <main>${body}</main>
-<section class="colophon"><div class="col-mark">${mark}</div><p><b>Moto Zero</b> is an open course of Transitions Lab. Text and illustrations are released under the Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0): you may copy, translate, adapt and redistribute them, including commercially, provided you credit Transitions Lab and share adaptations under the same licence.</p><p>Workshop procedures are general guidance. Specifications differ between machines: always confirm values and torque settings in the manufacturer's service manual, and observe the safety notes in Module 1 and Module 5.</p></section>
+<section class="colophon"><div class="col-mark">${mark}</div><p><b>Motopedia</b> is an open course of Transitions Lab. Text and illustrations are released under the Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0): you may copy, translate, adapt and redistribute them, including commercially, provided you credit Transitions Lab and share adaptations under the same licence.</p><p>Workshop procedures are general guidance. Specifications differ between machines: always confirm values and torque settings in the manufacturer's service manual, and observe the safety notes in Module 1 and Module 5.</p></section>
 </body></html>`;
   const htmlPath = path.join(ROOT, 'build', `m${n}.html`);
   fs.writeFileSync(htmlPath, html);
@@ -218,7 +218,7 @@ for f in sorted(glob.glob('${dir}/p-*.pgm')):
       return '';
     });
     await render(pages);
-    const out = path.join(ROOT, 'out', `moto-zero-module-${n}-${SLUG[n]}.pdf`);
+    const out = path.join(ROOT, 'out', `motopedia-module-${n}-${SLUG[n]}.pdf`);
     fs.copyFileSync(tmp, out);
     const big = A.gaps.map((g, i) => [i + 1, g]).filter(([i, g]) => g > 0.18 && i > 2);
     console.log(out, A.np, 'pages; gaps>18%:', JSON.stringify(big), 'shifts', JSON.stringify(shifts));

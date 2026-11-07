@@ -2,6 +2,41 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] }
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/assets/pdf/moto-zero-module-1-foundations.pdf",
+      "destination": "/assets/pdf/motopedia-module-1-foundations.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/assets/pdf/moto-zero-module-2-engine.pdf",
+      "destination": "/assets/pdf/motopedia-module-2-engine.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/assets/pdf/moto-zero-module-3-fuel-ignition-electrical.pdf",
+      "destination": "/assets/pdf/motopedia-module-3-fuel-ignition-electrical.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/assets/pdf/moto-zero-module-4-drivetrain-chassis.pdf",
+      "destination": "/assets/pdf/motopedia-module-4-drivetrain-chassis.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/assets/pdf/moto-zero-module-5-electric.pdf",
+      "destination": "/assets/pdf/motopedia-module-5-electric.pdf",
+      "permanent": true
+    }
   ]
 }

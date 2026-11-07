@@ -1,4 +1,4 @@
-"""Shared helpers for YouTube videos on Moto Zero pages.
+"""Shared helpers for YouTube videos on Motopedia pages.
 
 videos.json      100 researched videos (parse_videos.py)
 video-map.json   which pages each video belongs on, with a role and a note (editorial)

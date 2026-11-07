@@ -44,7 +44,7 @@ https://brandmymac.com/ (pick a product, upload a logo, see it on the product, o
    public read, insert allowed for anon/authenticated into any `<uuid>/` folder, 5 MB limit, image
    MIME types only.
 7. **Page copy**: plain, short, like the rest of the site. Title "Brand a motorcycle with your logo |
-   Moto Zero", H1, a short intro (for fleets, delivery companies, boda boda groups, schools,
+   Motopedia", H1, a short intro (for fleets, delivery companies, boda boda groups, schools,
    sponsors), how it works in 3 steps, FAQ (formats, what happens next, privacy: files are only used
    to reply to the request). Use the header/footer pattern of other pages (`<header class="ute-top">`
    with the logo markup used across the site, `<nav data-mz-nav>`, `<footer data-mz-footer>`,

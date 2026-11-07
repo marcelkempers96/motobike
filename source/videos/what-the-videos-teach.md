@@ -1,4 +1,4 @@
-# What the 100 videos teach, and how Moto Zero pages should use them
+# What the 100 videos teach, and how Motopedia pages should use them
 
 Source: videos.json (100 videos, 42 channels, 506k to 35.5M views). Descriptions are editorial summaries, not
 transcript-verified, so check each video before embedding. video-map.json holds the page mapping.

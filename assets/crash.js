@@ -1,4 +1,4 @@
-/* Moto Zero crash course: systems explorer, power calculator, animations on demand,
+/* Motopedia crash course: systems explorer, power calculator, animations on demand,
    reading progress. Progress is saved in this browser (assets/progress.js). */
 import { recordTool, load } from './progress.js';
 

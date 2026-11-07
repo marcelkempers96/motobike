@@ -49,4 +49,4 @@ Diagnose problems, follow repairs and find the right parts for commuter motorcyc
 - Brakes, steering, tyres and electric high-voltage systems are safety-critical. If you are unsure, use a workshop.
 - Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values.
 
-Text released under CC BY-SA 4.0 by Transitions Lab, Moto Zero. Photographs carry their own licence and credit.
+Text released under CC BY-SA 4.0 by Transitions Lab, Motopedia. Photographs carry their own licence and credit.

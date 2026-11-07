@@ -1,10 +1,10 @@
-# Research brief: Moto Zero Repair section
+# Research brief: Motopedia Repair section
 
 Copy this whole file into a new agent session that has the `marcelkempers96/motobike` repo checked out.
 
 ## 1. Context
 
-Moto Zero is an open, free motorcycle course by Transitions Lab (CC BY-SA 4.0). It's a static website: plain HTML, CSS and ES modules, no build step, deployed on Vercel. Its readers are mechanics in training (many in East Africa, working on 100 to 150 cc boda bodas), students, fleet operators and riders.
+Motopedia is an open, free motorcycle course by Transitions Lab (CC BY-SA 4.0). It's a static website: plain HTML, CSS and ES modules, no build step, deployed on Vercel. Its readers are mechanics in training (many in East Africa, working on 100 to 150 cc boda bodas), students, fleet operators and riders.
 
 The site is adding a **Repair** section with two ways in:
 

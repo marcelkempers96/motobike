@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Moto Zero Wiring Lab: interactive SVGs, data JSON and the HTML page."""
+"""Build the Motopedia Wiring Lab: interactive SVGs, data JSON and the HTML page."""
 import json, re, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 import data as D

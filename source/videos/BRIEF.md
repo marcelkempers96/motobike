@@ -1,4 +1,4 @@
-# Brief: map the 100 YouTube videos to Moto Zero pages, and write SEO notes
+# Brief: map the 100 YouTube videos to Motopedia pages, and write SEO notes
 
 Repo: /home/user/motobike. Input: `source/videos/videos.json` (100 records: id, title, channel, views,
 category, topic, description, learning, keywords, captions, best_use) and the full research
@@ -28,12 +28,12 @@ For each video: `{"<video id>": {"role": "tutorial" | "explainer" | "case-study"
 ## Task 2: `source/videos/what-the-videos-teach.md` (at most 120 lines)
 For the team: per category, what these videos teach, what formats work (animation, cutaway,
 step-by-step, comparison test, numbered list), common gaps (missing measurements, model-specific
-values), and how Moto Zero pages should pair with them (part, problem, repair, course).
+values), and how Motopedia pages should pair with them (part, problem, repair, course).
 
 ## Task 3: `source/videos/seo-notes.md` (at most 80 lines)
 Keyword and title lessons from the titles, uploader keywords and view counts: the phrases people
 search ("how does a ... work", "how to clean ...", "... not charging", Hindi and Indonesian
-queries), title patterns, which Moto Zero pages should target which phrases (give page paths and
+queries), title patterns, which Motopedia pages should target which phrases (give page paths and
 a suggested title or H1 for 15 to 25 pages), and how embedded videos plus VideoObject structured
 data can help (honestly: no guarantees). Plain text, no em or en dashes.
 

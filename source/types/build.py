@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Moto Zero motorcycle types page, MD, JSON and asset folder."""
+"""Build the Motopedia motorcycle types page, MD, JSON and asset folder."""
 import base64, io, json, os, re, sys, urllib.parse, shutil
 from PIL import Image
 sys.path.insert(0, os.path.dirname(__file__))
@@ -92,7 +92,7 @@ json.dump({"families": FAMILIES, "types": out}, open(f"{OUT}/motorcycle-types.js
 
 # ---------------- Markdown page
 L = ["---", 'title: "Motorcycle types"',
-     'description: "Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda, with photographs, labelled plates, history and the parts that define each type. Part of Moto Zero by Transitions Lab."',
+     'description: "Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda, with photographs, labelled plates, history and the parts that define each type. Part of Motopedia by Transitions Lab."',
      "---", "", "# Motorcycle types", "",
      "From Daimler's wooden **Reitwagen** of 1885 to the battery-swapping **e-boda**, motorcycles have been reshaped again and again by roads, money, sport and fuel. Each of the sixteen types below has a photograph, a labelled plate of the parts that define it, its typical figures and the story of how it came to be. The order follows the story rather than strict dates, and each entry ends with what came next.", "",
      "[Open the interactive version](/moto-zero/types) to browse the types on a timeline, filter by family and open each one full screen.", "",
@@ -124,7 +124,7 @@ for i, t in enumerate(TYPES):
     if t.get("module"): L += [f"**In the course:** {t['module']}.", ""]
     L += [f"**What came next.** {t['next']}", ""]
 L += ["## About this page", "",
-      "Plates F01 to F04 come from Module 1 of the course; plates T01 to T12 were drawn for this page in the same style. Figures are typical ranges for each type, not the specification of any one model. Text and plates are released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by **Transitions Lab, Moto Zero**. Photographs are from Wikimedia Commons under the licence on each file page, or from the Transitions Lab collection.", "",
+      "Plates F01 to F04 come from Module 1 of the course; plates T01 to T12 were drawn for this page in the same style. Figures are typical ranges for each type, not the specification of any one model. Text and plates are released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by **Transitions Lab, Motopedia**. Photographs are from Wikimedia Commons under the licence on each file page, or from the Transitions Lab collection.", "",
       "Download the course PDFs, 3D models and interactive tools at [transitionslab.org/motorcycle-anatomy](https://www.transitionslab.org/motorcycle-anatomy). Questions or corrections: marcel@transitionslab.org", ""]
 open(f"{OUT}/motorcycle-types.md", "w").write("\n".join(L))
 print("ok", len(page) // 1024, "KB")

@@ -17,9 +17,9 @@ def title_of(svg):
     m = re.search(r'<title>(.*?)</title>', open(svg, encoding='utf8').read(), re.S); return (m.group(1).strip() if m else '').replace('\n', ' ')
 
 # PDFs and page
-for f in sorted(glob.glob(f'{R}/out/moto-zero-module-*.pdf')):
+for f in sorted(glob.glob(f'{R}/out/motopedia-module-*.pdf')):
     cp(f, f'{P}/pdf/{os.path.basename(f)}'); rows.append(('pdf', 'course', os.path.basename(f), 'Course module PDF'))
-cp(f'{R}/out/moto-zero-all-modules.zip', f'{P}/pdf/moto-zero-all-modules.zip')
+cp(f'{R}/out/motopedia-all-modules.zip', f'{P}/pdf/motopedia-all-modules.zip')
 cp(f'{R}/web/moto-zero.md', f'{P}/pages/moto-zero.md')
 # brand
 for f in glob.glob(f'{R}/brand/*.svg') + glob.glob(f'{R}/brand/*.png'):
@@ -69,7 +69,7 @@ for f in glob.glob(f'{R}/web/controls/*'):
 
 # manifest
 cats = ['bikes', 'overview', 'powertrain', 'transmission', 'chassis', 'frame_body', 'wheels', 'electrical', 'wiring', 'controls', 'brand', 'course']
-out = ['# Moto Zero: website asset package', '',
+out = ['# Motopedia: website asset package', '',
        'Every file for the Transitions Lab motorcycle anatomy pages, grouped by category. Text, illustrations, 3D models and renders are CC BY-SA 4.0 (Transitions Lab); photographs from the Transitions Lab collection are excluded from that licence.', '',
        '**Folders.** `pdf/` course modules · `pages/` download-page Markdown · `illustrations/<category>/` SVG plates (layered files carry `data-part` and `data-category` on each component group; `png/` holds previews) · `models/<category>/` GLB files for three.js, `models-compressed/` the same files with meshopt compression (about a quarter of the size; load with three.js GLTFLoader plus MeshoptDecoder, as in `interactive/viewer.html`) (object names follow `<category>__<component>` on bikes and `<part>__<subpart>` on parts, so click-to-highlight can match by name) · `renders/<category>/` transparent PNG renders of the same models · `interactive/` the controls simulator · `brand/` logo · `source/3d/` the Blender scripts that generate every model.', '']
 for c in cats:

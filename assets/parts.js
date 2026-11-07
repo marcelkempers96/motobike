@@ -1,4 +1,4 @@
-/* Moto Zero spare parts: search on the parts hub. */
+/* Motopedia spare parts: search on the parts hub. */
 const box = document.querySelector('.sp-search');
 if (box) {
   const ROOT = new URL('../', import.meta.url).pathname;

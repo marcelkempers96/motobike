@@ -1,4 +1,4 @@
-/* Moto Zero · Circuit Builder.
+/* Motopedia · Circuit Builder.
    Place parts on a grid, wire terminals together and test the circuit. The DC circuit is solved by
    modified nodal analysis: batteries as EMF with internal resistance (Norton form), diodes and LEDs as
    piecewise-linear parts iterated to a consistent on/off state, relays switched by coil current with

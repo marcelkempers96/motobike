@@ -1,4 +1,4 @@
-/* Moto Zero Repair: search, tick-off steps, and redirects for old links. */
+/* Motopedia Repair: search, tick-off steps, and redirects for old links. */
 const ROOT = new URL('../', import.meta.url).pathname;
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));

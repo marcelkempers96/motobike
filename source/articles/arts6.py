@@ -15,7 +15,7 @@ body=f'''
 <h2 id="how-it-meters">How a carburettor meters fuel</h2>
 <p>As the piston descends on the intake stroke, air rushes through the carburettor. Where the passage narrows, at the venturi or under the throttle slide, the air speeds up and its pressure falls. A fuel nozzle opens into this low-pressure zone, while the float bowl above the fuel is vented to the atmosphere, so fuel is pushed up through calibrated jets into the airstream. The float and its needle valve keep the fuel in the bowl at a constant height, so that the jets always draw from the same level.</p>
 <p>Because a single jet cannot hold the mixture right from idle to full throttle, a carburettor has several overlapping circuits. Each one dominates a portion of the <strong>throttle opening</strong>, not of engine speed, and that is the key to diagnosis.</p>
-{fig('illustrations/powertrain/PT01.png', 2400, 1395, 'Technical section of a slide carburettor showing venturi, throttle slide and jet needle, needle jet, main jet, pilot circuit, float bowl, float and float needle, with fuel shaded', 'A slide carburettor in section, with the pilot circuit, jet needle, main jet and float. Plate PT01, Moto Zero Module 3.')}
+{fig('illustrations/powertrain/PT01.png', 2400, 1395, 'Technical section of a slide carburettor showing venturi, throttle slide and jet needle, needle jet, main jet, pilot circuit, float bowl, float and float needle, with fuel shaded', 'A slide carburettor in section, with the pilot circuit, jet needle, main jet and float. Plate PT01, Motopedia Module 3.')}
 
 <h2 id="symptoms">Match the symptom to the circuit</h2>
 <div class="mz-art-table"><table>
@@ -32,7 +32,7 @@ body=f'''
 
 <h2 id="check-first">Check these before blaming the carburettor</h2>
 <ul>
-  <li><strong>Air filter.</strong> A blocked filter increases the depression on every jet and makes the mixture rich at all openings. It is the first check for an over-rich mixture in the K-Light 125 fault trees, the manual used as the worked example in the Moto Zero course.</li>
+  <li><strong>Air filter.</strong> A blocked filter increases the depression on every jet and makes the mixture rich at all openings. It is the first check for an over-rich mixture in the K-Light 125 fault trees, the manual used as the worked example in the Motopedia course.</li>
   <li><strong>Air leaks.</strong> A split intake rubber, a loose clamp or a cracked heat insulator lets in unmetered air and leans the mixture, mostly at idle.</li>
   <li><strong>Tank vent.</strong> A blocked vent lets the engine run for a few kilometres, then stop; it restarts after the filler cap is opened with a hiss.</li>
   <li><strong>Fuel tap.</strong> Check the filter gauze on the tap's standpipe, the ON and reserve positions, and on a vacuum-operated tap the diaphragm and its vacuum hose.</li>
@@ -45,7 +45,7 @@ body=f'''
 <p>Clean the carburettor when the symptom matches a circuit and the simpler causes above have been ruled out, when fuel has been left to stand in the bowl and the bike now runs only on the choke, or when you find dirt or water in the float bowl. Cleaning is not a cure for wrong jetting: a change of altitude, exhaust or air filter alters the airflow, and the course's jetting chapter explains how to correct the mixture in the right order, main jet first.</p>
 
 <h2 id="how-to-clean">How to clean and inspect</h2>
-<p>The MAVCC Motorcycle Mechanic course, one of the sources for the Moto Zero modules, sets out a workshop procedure for a full clean in a dip tank. The main points apply to any method.</p>
+<p>The MAVCC Motorcycle Mechanic course, one of the sources for the Motopedia modules, sets out a workshop procedure for a full clean in a dip tank. The main points apply to any method.</p>
 <ol>
   <li><strong>Drain and remove.</strong> Drain the float bowl into a container, never onto a hot engine, and work in a ventilated area away from sparks and flames.</li>
   <li><strong>Strip it.</strong> Note the pilot screw position by counting the turns to lightly seated before removing it. Remove the float, needle, jets, slide or piston and the enricher.</li>
@@ -91,7 +91,7 @@ body=f'''
 
 <h2 id="heat-range">Heat range: why plugs run at a set temperature</h2>
 <p>The insulator nose must run between about <strong>450 °C</strong>, below which carbon and oil deposits build up and the plug fouls, and about <strong>850 °C</strong>, above which the tip glows and can ignite the mixture before the spark. The <strong>heat range</strong> describes how quickly the insulator passes heat to the shell and the cylinder head. A hot plug has a long insulator nose and suits low-load commuting; a cold plug has a short nose and suits sustained high load.</p>
-<p>Plug codes encode heat range, and the direction varies by brand. In the NGK system, and the brands that follow it, a higher number means a colder plug; Bosch and Champion number heat ranges the other way. The K-Light 125, the commuter used as the worked example in the Moto Zero course, uses a <strong>D7RTC</strong>: D for the M12 × 1.25 thread family, 7 for the heat rating, R for a built-in resistor and C for a copper-cored centre electrode. Always confirm an equivalent from a published cross-reference rather than by matching digits.</p>
+<p>Plug codes encode heat range, and the direction varies by brand. In the NGK system, and the brands that follow it, a higher number means a colder plug; Bosch and Champion number heat ranges the other way. The K-Light 125, the commuter used as the worked example in the Motopedia course, uses a <strong>D7RTC</strong>: D for the M12 × 1.25 thread family, 7 for the heat rating, R for a built-in resistor and C for a copper-cored centre electrode. Always confirm an equivalent from a published cross-reference rather than by matching digits.</p>
 
 <h2 id="when-to-read">When to read a plug</h2>
 <p>Read the plug after a run at steady load, not after idling, which leaves soot on any plug. For a precise reading of the full-throttle mixture, mechanics use a <strong>plug chop</strong>: the engine is stopped while running under load at the throttle opening being tested, so that it never idles before the plug comes out. Clean round the plug before removing it so that dirt cannot fall into the cylinder.</p>
@@ -118,7 +118,7 @@ body=f'''
 
 <h2 id="caps">Caps, resistors and misfires</h2>
 <p>The spark is a fast current pulse that radiates interference and can upset ECUs and instruments, so a resistor plug, a suppressor cap (typically 5 kΩ) or a resistive lead limits it. Fitting a non-resistor plug and a non-resistor cap to an ECU-controlled engine can cause erratic running. A cap that has cracked or absorbed water lets the spark track to earth, causing a misfire in wet weather.</p>
-{fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Moto Zero Module 3.')}
+{fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Motopedia Module 3.')}
 <p>Two-strokes usually use capacitor discharge ignition (CDI), whose voltage rises so fast that the spark fires before it can leak away across an oily insulator. That suits engines whose plugs foul with oil, but the spark is short, so a two-stroke's plug colour also depends heavily on its oil ratio.</p>
 
 <h2 id="spark-test">Testing for a spark</h2>
@@ -152,7 +152,7 @@ body=f'''
 <p>All the propulsive, cornering and braking forces finally act at the tyre <strong>contact patch</strong>, roughly 20 to 40 cm² on a commuter tyre. Its friction limits every acceleration, every corner and every stop. Pressure sets the size and shape of that patch, and the tread clears water from it.</p>
 
 <h2 id="pressure">Setting the pressure</h2>
-<p>Set pressures <strong>cold</strong>, before riding, with an accurate gauge, to the figures in the handbook. Riding warms the air in the tyre and raises the reading, so a pressure set warm will be too low once the tyre cools. The K-Light 125, the commuter used as the worked example in the Moto Zero course, runs <strong>190 ± 10 kPa (27.5 psi) front and 210 ± 10 kPa (30.5 psi) rear</strong> solo. Many handbooks give a higher rear pressure for a passenger or a heavy load.</p>
+<p>Set pressures <strong>cold</strong>, before riding, with an accurate gauge, to the figures in the handbook. Riding warms the air in the tyre and raises the reading, so a pressure set warm will be too low once the tyre cools. The K-Light 125, the commuter used as the worked example in the Motopedia course, runs <strong>190 ± 10 kPa (27.5 psi) front and 210 ± 10 kPa (30.5 psi) rear</strong> solo. Many handbooks give a higher rear pressure for a passenger or a heavy load.</p>
 <ul>
   <li><strong>Under-inflation</strong> makes the tyre flex and overheat, wears the shoulders, and makes the steering heavy and vague. The K-Light manual lists low pressure as a cause of heavy steering and instability.</li>
   <li><strong>Over-inflation</strong> shrinks the contact patch, reducing grip and comfort.</li>
@@ -162,7 +162,7 @@ body=f'''
 <h2 id="tread">Tread depth and wear indicators</h2>
 <p>Look for small raised blocks in the main grooves, marked by a triangle or the letters TWI on the shoulder. These <strong>tread wear indicators</strong> leave about 0.8 to 1 mm of tread when the surface is level with them. The K-Light 125 wear limit is <strong>1 mm</strong>, which is also the legal minimum in the UK for machines over 50 cc; check the rules in your country.</p>
 <p>Wear pattern matters as well as depth. A rear tyre used mostly in a straight line wears flat in the centre, and a <strong>square-worn</strong> tyre makes the bike drop suddenly into corners; replace it before it reaches the legal limit. Also look for cracks, nails, cuts and bulges on the tread and the sidewalls, and note any directional arrow, which must point in the direction of rotation.</p>
-{fig('illustrations/wheels/F20.png', 2400, 1530, 'Technical plate of a motorcycle tyre showing sidewall markings with size 110/70-17 54H, DOT date code and tread wear indicator position, and a section through bead, bead wire, carcass plies, belt, sidewall and tread', 'Tyre sidewall markings and construction. Plate F20, Moto Zero Module 4.')}
+{fig('illustrations/wheels/F20.png', 2400, 1530, 'Technical plate of a motorcycle tyre showing sidewall markings with size 110/70-17 54H, DOT date code and tread wear indicator position, and a section through bead, bead wire, carcass plies, belt, sidewall and tread', 'Tyre sidewall markings and construction. Plate F20, Motopedia Module 4.')}
 
 <h2 id="markings">Reading the sidewall</h2>
 <p>A size of <strong>110/70-17 54H</strong> reads: section width 110 mm; aspect ratio 70 per cent, so the sidewall is 77 mm high; a dash for bias construction (R would mean radial, B bias-belted); a 17 inch rim; load index 54; and speed symbol H.</p>
@@ -223,7 +223,7 @@ body=f'''
 
 <h2 id="bms">What the BMS does for you</h2>
 <p>The <strong>battery management system</strong> measures the voltage of every series group of cells, the temperatures and the current. It estimates the state of charge shown on the dashboard, sets the maximum charge and discharge currents, and opens the circuit if a cell goes over or under voltage, overheats or sees a short circuit. It also <strong>balances</strong> the cells: near the top of a charge it bleeds a small current from any group that is higher than the rest, typically 30 to 200 mA, so a badly drifted pack can need several long charges to recover. Leaving the charger connected for the full balancing period after a full charge helps.</p>
-{fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Moto Zero Module 5.')}
+{fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Motopedia Module 5.')}
 <p>Workshops read the group voltages from the BMS with diagnostic software. On an NMC pack at rest, a spread below 10 to 20 mV between the highest and lowest group is normal; a group that keeps falling within a few days of a balance charge points to a cell with high self-discharge, which balancing cannot cure.</p>
 
 <h2 id="swapping">Swapping instead of charging</h2>

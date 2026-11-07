@@ -22,13 +22,13 @@ body=f'''
 
 <h2 id="where-the-force-comes-from">Where the force comes from</h2>
 <p>Petrol burned with the right amount of air releases a large amount of heat. At the chemically correct ratio of about 14.7 kg of air for each kilogram of fuel, the gas temperature in the combustion chamber climbs to roughly 2,300 to 2,600 K and the pressure peaks at around 4 to 7 MPa in a typical road engine. That pressure acting on the piston crown is the source of all the engine's work.</p>
-<p>Combustion is not an explosion. The spark starts a small flame kernel, and a turbulent flame front crosses the chamber over roughly 40 to 60 degrees of crank rotation. For that reason the spark fires before the piston reaches the top of its stroke, so that peak pressure arrives just after top dead centre, when the crank has leverage. The K-Light 125 commuter used as the worked example in the Moto Zero course fires at 15 degrees before top dead centre at idle, and its engine management advances the timing as speed rises.</p>
+<p>Combustion is not an explosion. The spark starts a small flame kernel, and a turbulent flame front crosses the chamber over roughly 40 to 60 degrees of crank rotation. For that reason the spark fires before the piston reaches the top of its stroke, so that peak pressure arrives just after top dead centre, when the crank has leverage. The K-Light 125 commuter used as the worked example in the Motopedia course fires at 15 degrees before top dead centre at idle, and its engine management advances the timing as speed rises.</p>
 
 <h2 id="the-four-strokes">The four-stroke cycle, one stroke at a time</h2>
 <p>A full cycle takes two crankshaft revolutions, or 720 degrees. The camshaft that opens the valves is driven at half crankshaft speed, so each valve opens once per cycle.</p>
 <figure>
   <img src="{A}illustrations/powertrain/F07.png" alt="Four-panel technical plate of a single-cylinder overhead-camshaft engine in section, showing valve positions, piston travel and gas flow during the intake, compression, power and exhaust strokes" width="2400" height="1515" loading="lazy">
-  <figcaption>The four strokes of a single-cylinder overhead-camshaft engine, with crank angle and gas flow for each. Plate F07, Moto Zero Module 2.</figcaption>
+  <figcaption>The four strokes of a single-cylinder overhead-camshaft engine, with crank angle and gas flow for each. Plate F07, Motopedia Module 2.</figcaption>
 </figure>
 <h3 id="intake">1. Intake</h3>
 <p>The piston moves down from top dead centre with the inlet valve open. The volume above it grows faster than air can follow, so cylinder pressure drops slightly below atmospheric, and air and fuel are drawn in through the throttle body or carburettor. At full throttle the incoming air moves at 50 to 100 m/s, and its momentum keeps it flowing into the cylinder even after the piston has passed bottom dead centre.</p>
@@ -51,7 +51,7 @@ body=f'''
 <h2 id="engine-parts">The main parts, top to bottom</h2>
 <figure>
   <img src="{A}illustrations/powertrain/F09.png" alt="Sectional plate through a single-cylinder four-stroke engine showing cam chain, camshaft, rockers, valves and springs, spark plug, piston with rings, connecting rod, crankshaft, balancer and oil sump" width="2400" height="2368" loading="lazy">
-  <figcaption>A single-cylinder four-stroke in section, from the camshaft at the top to the oil sump at the bottom. Plate F09, Moto Zero Module 2.</figcaption>
+  <figcaption>A single-cylinder four-stroke in section, from the camshaft at the top to the oil sump at the bottom. Plate F09, Motopedia Module 2.</figcaption>
 </figure>
 <ul>
   <li><strong>Cylinder head.</strong> Holds the inlet and exhaust valves (<a href="{OV}valve_in">inlet valve</a>, <a href="{OV}valve_ex">exhaust valve</a>), their springs, the camshaft and the spark plug. On most commuter singles a chain from the crankshaft drives a single overhead camshaft, which opens the valves through rocker arms.</li>
@@ -94,7 +94,7 @@ body=f'''
 <h2 id="how-two-stroke-works">How the two-stroke cycle works</h2>
 <figure>
   <img src="{A}illustrations/powertrain/F08.png" alt="Two-panel technical plate of the two-stroke cycle: on the upstroke the charge above the piston is compressed while fresh mixture enters the crankcase through a reed valve; on the downstroke the exhaust port opens and then the transfer ports scavenge the cylinder" width="2400" height="1410" loading="lazy">
-  <figcaption>The two-stroke cycle in two panels: upstroke and downstroke. Plate F08, Moto Zero Module 2.</figcaption>
+  <figcaption>The two-stroke cycle in two panels: upstroke and downstroke. Plate F08, Motopedia Module 2.</figcaption>
 </figure>
 <h3 id="upstroke">Upstroke</h3>
 <p>As the piston rises, its crown covers the transfer ports and then the exhaust port, and the charge trapped above it is compressed and ignited near top dead centre. At the same time, the volume of the crankcase below the piston grows, its pressure falls to about 0.6 to 0.8 bar absolute, and fresh mixture is drawn into the crankcase through a reed valve.</p>

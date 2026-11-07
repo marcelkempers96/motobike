@@ -1,4 +1,4 @@
-/* Moto Zero crash course */
+/* Motopedia crash course */
 .cc-progress { position: sticky; top: 0; z-index: 40; height: 4px; background: transparent; }
 .cc-progress i { display: block; height: 100%; width: 0; background: var(--warm); transition: width .1s linear; }
 .cc-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; padding: 48px 40px 40px; border-bottom: 1px solid var(--line); }

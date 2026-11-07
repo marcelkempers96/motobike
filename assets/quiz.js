@@ -1,4 +1,4 @@
-/* Moto Zero: Quiz. Easy, mixed or hard; no login; scores saved in this browser. */
+/* Motopedia: Quiz. Easy, mixed or hard; no login; scores saved in this browser. */
 import { MODULES, QUESTIONS, TOPIC_ALIAS } from './content/index.js';
 import { questionCard, shuffle } from './quizkit.js';
 import * as PG from './progress.js';

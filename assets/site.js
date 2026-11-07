@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: shared site shell. One navigation (three columns: Explore,
+   Motopedia: shared site shell. One navigation (three columns: Explore,
    Course, More) and one footer for every page, so the site stays consistent.
    Pages add <header class="ute-top"><nav data-mz-nav></nav></header> and
    <footer data-mz-footer></footer>, then load this module.
@@ -142,13 +142,13 @@ function wireSubscribe(form) {
           body: JSON.stringify({ email, source: location.pathname }) });
         msg.textContent = r.ok || r.status === 409 ? 'Thank you. You are on the list.' : 'That did not work. Please try again later.';
         // a copy to the team inbox
-        if (r.ok) fetch('https://formsubmit.co/ajax/marcel@transitionslab.org', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'New Moto Zero subscriber', email, page: location.href }) }).catch(() => {});
+        if (r.ok) fetch('https://formsubmit.co/ajax/marcel@transitionslab.org', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ _subject: 'New Motopedia subscriber', email, page: location.href }) }).catch(() => {});
         if (r.ok || r.status === 409) form.reset();
       } catch (err) { msg.textContent = 'That did not work. Please check your connection.'; }
       return;
     }
     if (!SUBSCRIBE_ENDPOINT) {
-      location.href = `mailto:${SUBSCRIBE_MAILTO}?subject=${encodeURIComponent('Subscribe me to Moto Zero updates')}&body=${encodeURIComponent('Please add ' + email + ' to the Moto Zero update list.')}`;
+      location.href = `mailto:${SUBSCRIBE_MAILTO}?subject=${encodeURIComponent('Subscribe me to Motopedia updates')}&body=${encodeURIComponent('Please add ' + email + ' to the Motopedia update list.')}`;
       msg.textContent = 'Your email app should open with the request ready to send.';
       return;
     }

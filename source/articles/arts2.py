@@ -19,7 +19,7 @@ body=f'''
 <h2 id="parts">The parts, in the order torque passes through them</h2>
 <figure>
   <img src="{A}illustrations/transmission/F13.png" alt="Exploded technical plate of a wet multiplate clutch: basket with primary driven gear and cushion springs, alternating friction and steel plates, hub, pressure plate, coil springs and release mechanism" width="2400" height="1500" loading="lazy">
-  <figcaption>The wet multiplate clutch exploded. Plate F13, Moto Zero Module 4.</figcaption>
+  <figcaption>The wet multiplate clutch exploded. Plate F13, Motopedia Module 4.</figcaption>
 </figure>
 <ul>
   <li><strong>Primary drive.</strong> A small gear on the crankshaft drives a large gear on the back of the clutch basket. This first reduction means the clutch turns at only a quarter to a third of crankshaft speed. A 20-tooth pinion driving a 68-tooth gear gives a ratio of 3.40, so at 9,000 rpm the clutch turns at about 2,650 rpm.</li>
@@ -90,7 +90,7 @@ body=f'''
 <p>The <a href="{OV}wiring">wiring harness</a> is a bundle of colour-coded wires, wrapped together into a trunk that runs along the frame, with branches to every electrical component. It connects the <a href="{OV}battery">battery</a>, the charging system, the starter, the ignition and engine management, the lights, the horn and the instruments. Each branch ends in a multi-pin connector, and the fuse box and relays are usually plugged into the harness near the battery.</p>
 <figure>
   <img src="{A}illustrations/wiring/WR01.png" alt="Technical plate of a motorcycle main harness laid flat, showing the trunk, branches to each component, connectors, fuse box, relays, earth points and wire colour codes" width="2400" height="1665" loading="lazy">
-  <figcaption>The main harness laid flat: trunk, branches, connectors, fuses, relays and earth points. Plate WR01, Moto Zero Module 3.</figcaption>
+  <figcaption>The main harness laid flat: trunk, branches, connectors, fuses, relays and earth points. Plate WR01, Motopedia Module 3.</figcaption>
 </figure>
 
 <h2 id="earth-return">Single-wire earth return</h2>
@@ -119,7 +119,7 @@ body=f'''
 <p>The <strong>regulator/rectifier</strong> turns that AC into DC through a diode bridge and holds battery voltage in a safe window, generally 13.5 to 15.0 V at 5,000 rpm on a lead-acid system. The K-Light 125 specifies 14.5 ± 0.5 V. Too low and the battery slowly goes flat; too high and the battery dries out and bulbs blow. Traditional shunt regulators short the surplus current to earth as heat, which is why they carry large fins and why stators on small bikes can fail from overheating. Series (MOSFET) regulators disconnect the stator instead and run much cooler.</p>
 <figure>
   <img src="{A}illustrations/wiring/F21.png" alt="Charging circuit schematic: three-phase permanent-magnet alternator, shunt-type regulator/rectifier, main fuse, battery and electrical load" width="2400" height="1171" loading="lazy">
-  <figcaption>The charging circuit: alternator, regulator/rectifier, fuse, battery and load. Plate F21, Moto Zero Module 3.</figcaption>
+  <figcaption>The charging circuit: alternator, regulator/rectifier, fuse, battery and load. Plate F21, Motopedia Module 3.</figcaption>
 </figure>
 <p>A quick health check needs only a multimeter. A rested flooded lead-acid battery reading about 12.7 V is fully charged and one reading 12.2 V is half charged; sealed AGM batteries read a little higher, about 12.8 to 13.1 V when full. With the engine held at about 5,000 rpm, the voltage across the battery should rise into the specified charging window.</p>
 
@@ -127,7 +127,7 @@ body=f'''
 <p>An electric <a href="{OV}starter">starter motor</a> draws tens to over a hundred amps, far more than a handlebar switch can carry. So the start button only energises the coil of a <strong>starter relay</strong>, which uses a few hundred milliamps and switches the heavy cable from battery to motor. The relay coil circuit runs through a chain of safety interlocks: the neutral switch, the clutch switch, the side-stand switch, the engine stop switch and, on many scooters and on the K-Light 125, a brake lever switch. If any of them is open, the starter will not turn, which is the first thing to check when the starter is silent.</p>
 <figure>
   <img src="{A}illustrations/wiring/F23.png" alt="Electric starting circuit schematic with battery, main fuse, ignition switch, start button, clutch, neutral and side-stand interlocks, starter relay, starter motor and starter clutch" width="2400" height="1350" loading="lazy">
-  <figcaption>The starting circuit, with the interlocks that must all be closed before the relay can work. Plate F23, Moto Zero Module 3.</figcaption>
+  <figcaption>The starting circuit, with the interlocks that must all be closed before the relay can work. Plate F23, Motopedia Module 3.</figcaption>
 </figure>
 
 <h2 id="tracing">How to trace a wiring fault</h2>

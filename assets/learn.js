@@ -1,4 +1,4 @@
-/* Moto Zero — Learn page: course home + one module at a time, teaching style. */
+/* Motopedia — Learn page: course home + one module at a time, teaching style. */
 import { MODULES, QBYID, TOPIC_ALIAS } from './content/index.js';
 import { mountFigure } from './figures.js';
 import { questionCard } from './quizkit.js';
@@ -36,7 +36,7 @@ function renderTOC(active, page) {
 }
 
 function home() {
-  document.title = 'Moto Zero · Learn';
+  document.title = 'Motopedia · Learn';
   renderTOC(null);
   main.innerHTML = `
     <section class="ute-hero">
@@ -180,7 +180,7 @@ function allEquations() {
   return out;
 }
 function renderEquations() {
-  document.title = 'Moto Zero · Course summary: every equation';
+  document.title = 'Motopedia · Course summary: every equation';
   renderTOC(null, 'equations');
   const eqs = allEquations();
   main.innerHTML = `<div class="mz-page">
@@ -254,7 +254,7 @@ function crumbs(mod, here) {
 }
 
 function renderModuleIndex(mod) {
-  document.title = `Moto Zero · ${mod.title}`;
+  document.title = `Motopedia · ${mod.title}`;
   renderTOC(mod, null);
   main.innerHTML = `
     <section class="ute-hero mz-hero-cover">
@@ -299,7 +299,7 @@ function renderPage(p) {
   const i = FLAT.indexOf(p);
   const prev = FLAT[i - 1], next = FLAT[i + 1];
   const ci = chap ? mod.chapters.indexOf(chap) : mod.chapters.length;
-  document.title = `Moto Zero · ${pageTitle(p)}`;
+  document.title = `Motopedia · ${pageTitle(p)}`;
   renderTOC(mod, pageHash(p));
   const pager = `<nav class="mz-pager" aria-label="Chapter navigation">
       ${prev ? `<a class="mz-pager-prev" href="#${pageHash(prev)}"><span class="ute-label">← Previous</span><b>${pageTitle(prev)}</b></a>` : '<span></span>'}

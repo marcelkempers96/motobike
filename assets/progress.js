@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: learner progress, kept only in this browser (localStorage).
+   Motopedia: learner progress, kept only in this browser (localStorage).
    No login and nothing is sent anywhere. Export/import lets a learner move
    their progress to another device.
    ========================================================================== */
@@ -33,7 +33,7 @@ export function recordTool(name, data = {}) { const d = load(); d.tools[name] = 
 
 export function reset() { try { localStorage.removeItem(KEY); } catch (e) { /* noop */ } window.dispatchEvent(new CustomEvent('mz-progress')); }
 export function exportText() { return btoa(unescape(encodeURIComponent(JSON.stringify(load())))); }
-export function importText(t) { const d = JSON.parse(decodeURIComponent(escape(atob(t.trim())))); if (!d || d.v !== 1) throw new Error('Not a Moto Zero progress code'); save(d); }
+export function importText(t) { const d = JSON.parse(decodeURIComponent(escape(atob(t.trim())))); if (!d || d.v !== 1) throw new Error('Not a Motopedia progress code'); save(d); }
 
 /** Summary per module: chapters done / total, quiz bests. */
 export function summary(MODULES) {

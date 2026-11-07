@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero · Bike builder
+   Motopedia · Bike builder
    Guided 3D assembly of the three course bikes plus a configuration designer
    (wheel size, final drive, colours) with live gearing and geometry effects.
    Bike GLBs: assets/models/bike_*.glb, mesh names <category>__<component>[__sub].

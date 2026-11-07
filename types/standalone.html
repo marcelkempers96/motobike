@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Moto Zero Motorcycle Types</title>
+<title>Motopedia Motorcycle Types</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda: photographs, labelled cutaway plates, history and the parts that define each type.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,7 +134,7 @@ body.locked{overflow:hidden}
 <body>
 <div class="wrap">
 <header class="top">
-  <p class="brand"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="60" cy="60" r="9" fill="#C8502A"/></svg>Moto Zero <span>by Transitions Lab</span></p>
+  <p class="brand"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="38" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="60" cy="60" r="9" fill="#C8502A"/></svg>Motopedia <span>by Transitions Lab</span></p>
   <h1>Motorcycle types</h1>
   <p class="lede">From Daimler's wooden <b>Reitwagen</b> of 1885 to the battery-swapping <b>e-boda</b>, motorcycles have been reshaped again and again by roads, money, sport and fuel. Sixteen types, each with a photograph, a labelled plate of the parts that define it and the story of how it came to be. Pick one to open it.</p>
 </header>
@@ -147,7 +147,7 @@ body.locked{overflow:hidden}
 <div class="filters" id="filters" role="group" aria-label="Filter by family"></div>
 <main class="grid" id="grid"></main>
 
-<footer>Moto Zero by Transitions Lab. Text and plates CC BY-SA 4.0; photographs from Wikimedia Commons under the licences shown with each, and from the Transitions Lab collection. Figures are typical ranges for each type, not the specification of any one model. Download the course and models at <a href="https://www.transitionslab.org/motorcycle-anatomy" target="_blank" rel="noopener">transitionslab.org/motorcycle-anatomy</a>.</footer>
+<footer>Motopedia by Transitions Lab. Text and plates CC BY-SA 4.0; photographs from Wikimedia Commons under the licences shown with each, and from the Transitions Lab collection. Figures are typical ranges for each type, not the specification of any one model. Download the course and models at <a href="https://www.transitionslab.org/motorcycle-anatomy" target="_blank" rel="noopener">transitionslab.org/motorcycle-anatomy</a>.</footer>
 </div>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
@@ -10184,7 +10184,7 @@ function renderStage(t) {
     const tpl = document.getElementById("plate-" + t.plate);
     st.innerHTML = `<div class="plate"></div>`;
     st.firstChild.appendChild(tpl.content.cloneNode(true));
-    cr.innerHTML = `Plate ${t.plate}, Moto Zero, CC BY-SA 4.0. Scroll sideways on small screens.`;
+    cr.innerHTML = `Plate ${t.plate}, Motopedia, CC BY-SA 4.0. Scroll sideways on small screens.`;
   } else if (view === "photo" || view === "photo2") {
     const p = m[view];
     st.innerHTML = `<div class="photo"><img alt="${esc(p.subject)}" src="${esc(p.src)}"><div class="fallback" hidden>The photograph is hosted on Wikimedia Commons and could not load here. <a href="${esc(p.page)}" target="_blank" rel="noopener">Open it on Wikimedia Commons</a>.</div></div>`;

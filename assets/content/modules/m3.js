@@ -1,11 +1,11 @@
-/* Moto Zero: Module 3 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 3 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "fuel-ignition",
   "num": "3",
   "title": "Fuel, ignition and electrical systems",
   "intro": "How a motorcycle meters air and fuel, times its spark, generates and stores electrical energy, and how a technician measures each circuit from battery to sensor.",
-  "pdf": "moto-zero-module-3-fuel-ignition-electrical.pdf",
+  "pdf": "motopedia-module-3-fuel-ignition-electrical.pdf",
   "chapters": [
     {
       "id": "m3-mixture",

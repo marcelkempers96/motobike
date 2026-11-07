@@ -1,11 +1,11 @@
-/* Moto Zero: Module 2 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 2 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "engine",
   "num": "2",
   "title": "The engine: four-stroke and two-stroke",
   "intro": "How a petrol engine turns burning fuel into crankshaft torque, how four-strokes and two-strokes are built, lubricated and cooled, and how a technician measures, diagnoses and repairs them.",
-  "pdf": "moto-zero-module-2-engine.pdf",
+  "pdf": "motopedia-module-2-engine.pdf",
   "chapters": [
     {
       "id": "m2-fundamentals",

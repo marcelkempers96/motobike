@@ -1,5 +1,5 @@
 /* Under the Engine: page styles. Replace the :root tokens with your site theme; component rules only read tokens. */
-/* Layout: workbench, same family as the Moto Zero Wiring Lab. 3D stand on the left with gauges and bench controls under it, part card and parts register on the right, data sheets below. */
+/* Layout: workbench, same family as the Motopedia Wiring Lab. 3D stand on the left with gauges and bench controls under it, part card and parts register on the right, data sheets below. */
 :root{
   --bg:#FFFFFF; --card:#FFFFFF; --ink:#0A0A0A; --text:#26282C; --muted:#5F6166;
   --line:#E1E1E1; --line2:#CFCFCF; --accent:#C2502A; --accent-soft:#FBEDE7; --accent-line:#EBC3B3;
@@ -111,7 +111,7 @@ section.data p.sub{margin:0 0 10px;color:var(--muted);max-width:880px}
 @media (max-width:700px){.view{aspect-ratio:4/5;max-height:none} .ue h1{font-size:26px} .ro .v{font-size:17px} .view .stroke{transform:scale(.85);transform-origin:top right}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
 
-/* Moto Zero site fit: square corners, sticky panel below the site header */
+/* Motopedia site fit: square corners, sticky panel below the site header */
 .ue .view,.ue .ro,.ue .msgbar,.ue .deck,.ue .panel,.ue .tbl,.ue .views button,.ue .deck button,.ue .focus,.ue .focus button,.ue .tip,.ue .tags span,.ue .plist button,.ue .sys summary button,.ue .view .stroke{border-radius:0}
 .ue .panel{top:76px;max-height:calc(100vh - 88px)}
 .ue .ro .v,.ue table.kv td:last-child,.ue .tbl td.num,.ue .slider output{font-family:var(--sans);font-weight:700}

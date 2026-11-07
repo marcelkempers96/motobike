@@ -61,18 +61,6 @@
     <loc>https://motobike-five.vercel.app/terms/</loc>
   </url>
   <url>
-    <loc>https://motobike-five.vercel.app/community/</loc>
-  </url>
-  <url>
-    <loc>https://motobike-five.vercel.app/disclaimer/</loc>
-  </url>
-  <url>
-    <loc>https://motobike-five.vercel.app/accessibility/</loc>
-  </url>
-  <url>
-    <loc>https://motobike-five.vercel.app/legal/</loc>
-  </url>
-  <url>
     <loc>https://motobike-five.vercel.app/articles/</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
@@ -152,15 +140,24 @@
   <url>
     <loc>https://motobike-five.vercel.app/repair/fix/</loc>
   </url>
+  <url>
+    <loc>https://motobike-five.vercel.app/community/</loc>
+  </url>
+  <url>
+    <loc>https://motobike-five.vercel.app/disclaimer/</loc>
+  </url>
+  <url>
+    <loc>https://motobike-five.vercel.app/accessibility/</loc>
+  </url>
+  <url>
+    <loc>https://motobike-five.vercel.app/legal/</loc>
+  </url>
   <url><loc>https://motobike-five.vercel.app/crash-course/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/brand/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/videos/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/work-with-us/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/repair/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/diagnose/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/repair/problems/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/repair/parts/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/abs-light/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/accessory-wiring-fault/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/all-lights-out/</loc><lastmod>2026-11-02</lastmod></url>

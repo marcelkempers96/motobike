@@ -1,4 +1,4 @@
-# Moto Zero Wiring Lab
+# Motopedia Wiring Lab
 
 Interactive version of the Module 3 wiring plates: WR01 main harness, F23 starting circuit, F21 charging circuit and F22 ignition circuits (AC-CDI and DC-TCI/ECU).
 
@@ -17,7 +17,7 @@ Interactive version of the Module 3 wiring plates: WR01 main harness, F23 starti
 ## Embed
 
 ```html
-<iframe src="/moto-zero/wiring.html" title="Moto Zero Wiring Lab" style="width:100%;height:1400px;border:0" loading="lazy"></iframe>
+<iframe src="/moto-zero/wiring.html" title="Motopedia Wiring Lab" style="width:100%;height:1400px;border:0" loading="lazy"></iframe>
 ```
 
 Deep links open a view directly: `#harness`, `#starting`, `#charging`, `#ignition`.
@@ -33,4 +33,4 @@ Wires show three states: animated orange where current flows, pale orange where 
 
 Source: `src/build.py` regenerates everything from the course plates in `figs/`, `src/data.py` (text) and `src/template.html` (page and script).
 
-Licence: CC BY-SA 4.0, Transitions Lab, Moto Zero.
+Licence: CC BY-SA 4.0, Transitions Lab, Motopedia.

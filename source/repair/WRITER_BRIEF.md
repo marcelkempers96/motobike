@@ -1,6 +1,6 @@
-# Moto Zero repair pages: writer brief
+# Motopedia repair pages: writer brief
 
-You are writing pages for the **repair section** of the Moto Zero website (Transitions Lab, published under CC BY-SA 4.0). Readers are riders, informal mechanics (fundis), technician trainees and students, many in East Africa and South Asia, many reading English as a second language. The site has three ways in: **by problem** (what the rider notices), **by repair** (a job you do) and **by part** (each part links to the spare parts shop).
+You are writing pages for the **repair section** of the Motopedia website (Transitions Lab, published under CC BY-SA 4.0). Readers are riders, informal mechanics (fundis), technician trainees and students, many in East Africa and South Asia, many reading English as a second language. The site has three ways in: **by problem** (what the rider notices), **by repair** (a job you do) and **by part** (each part links to the spare parts shop).
 
 Every problem page is a **diagnosis**: it walks the reader from the symptom, through yes/no checks ("if this, then that; if you do this, this happens"), to the cause, the repair and the part to buy.
 

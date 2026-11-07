@@ -1,4 +1,4 @@
-// Under the Engine: Three.js model, kinematics and UI wiring for the Moto Zero engine explorer.
+// Under the Engine: Three.js model, kinematics and UI wiring for the Motopedia engine explorer.
 // Requires three@0.160.0 (see importmap.json). Units: millimetres. Axes: +x right (clutch side), +y up, +z forward.
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';

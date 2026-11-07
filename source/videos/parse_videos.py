@@ -22,7 +22,7 @@ for i in range(0, len(rec), 2):
   kw = f(c, 'Uploader keyword sample').rstrip('.')
   out.append({'rank': n, 'id': vid, 'title': title, 'channel': ch.group(1) if ch else '', 'channel_url': ch.group(2) if ch else '',
               'views': views, 'published': f(c, 'Published'), 'duration': f(c, 'Duration'), 'likes': f(c, 'Likes'),
-              'category': cat_main.strip(), 'topic': topic.strip(), 'description': f(c, 'Description'), 'learning': f(c, 'Learning / Moto Zero use'),
+              'category': cat_main.strip(), 'topic': topic.strip(), 'description': f(c, 'Description'), 'learning': f(c, 'Learning / Motopedia use'),
               'keywords': [k.strip() for k in kw.split(',') if k.strip()], 'captions': (meta.group(1).strip() if meta else ''),
               'best_use': best.get(vid, '')})
 # second collection: V101 to V300

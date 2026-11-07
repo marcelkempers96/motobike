@@ -1,4 +1,4 @@
-# Content for the Moto Zero Wiring Lab. Single source for the page and wiring-data.json.
+# Content for the Motopedia Wiring Lab. Single source for the page and wiring-data.json.
 
 SYSTEMS = {
     "power": "Power and earths",

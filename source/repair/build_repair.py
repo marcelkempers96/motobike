@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Moto Zero Repair section from the writers' Markdown.
+"""Build the Motopedia Repair section from the writers' Markdown.
 
 Input:  source/repair/md/{problems,repairs,parts,systems}/*.md and source/repair/repair-data.json
 Output: static pages under /repair/ (home, problems, repairs, parts, systems), the
@@ -336,15 +336,15 @@ def partcard(i, rel):
 
 SIGNUP = {p: '<section data-mz-signup data-title="Get new repair guides by email"></section>' for p in ('repair/', 'repair/problems/', 'repair/repairs/', 'repair/parts/', 'repair/bikes/', 'repair/diagnose/')}
 SEO = {
-  'repair/': ('Motorcycle Troubleshooting & Repair Guides | Moto Zero', 'Motorcycle troubleshooting and repair guides', None),
-  'repair/parts/': ('Motorcycle Parts: Names & Functions | Moto Zero', 'Motorcycle parts: names, functions and common faults', 'Explore motorcycle parts by system. Learn what each part does, signs of failure and the related diagnostic and repair guides.'),
-  'repair/problems/': ('Motorcycle Problems & Diagnostic Guides | Moto Zero', 'Find a motorcycle problem by symptom', None),
-  'repair/repairs/': ('Motorcycle Maintenance & Repair Tutorials | Moto Zero', 'Motorcycle maintenance and repair tutorials', None),
-  'repair/problems/cranks-no-start/': ('Motorcycle Cranks but Won’t Start? | Moto Zero', 'Motorcycle cranks but won’t start: what to check', 'Motorcycle cranks but won’t start? Follow a structured guide to starting checks, fuel, ignition and compression, with model-specific cautions.'),
-  'repair/problems/ev-wont-charge/': ('Electric Motorcycle Won’t Charge? | Moto Zero', 'Electric motorcycle won’t charge: checks and next steps', 'Electric motorcycle not charging? Check external connections and manufacturer guidance, and learn when a qualified technician is needed.'),
-  'repair/repairs/chain-adjust/': ('How to Adjust Motorcycle Chain Slack | Moto Zero', 'How to check and adjust motorcycle chain slack', 'Learn how to check motorcycle chain slack and understand adjustment, alignment and wear checks. Use your model’s manual for specifications.'),
-  'repair/repairs/engine-oil-service/': ('How to Change Motorcycle Engine Oil | Moto Zero', 'How to change motorcycle engine oil', 'Follow a motorcycle oil-change guide covering preparation, draining, strainers and filters, with clear notes on model-specific requirements.'),
-  'repair/parts/brake_pads/': ('Motorcycle Brake Pads Explained | Moto Zero', 'Motorcycle brake pads: function, wear and replacement', None),
+  'repair/': ('Motorcycle Troubleshooting & Repair Guides | Motopedia', 'Motorcycle troubleshooting and repair guides', None),
+  'repair/parts/': ('Motorcycle Parts: Names & Functions | Motopedia', 'Motorcycle parts: names, functions and common faults', 'Explore motorcycle parts by system. Learn what each part does, signs of failure and the related diagnostic and repair guides.'),
+  'repair/problems/': ('Motorcycle Problems & Diagnostic Guides | Motopedia', 'Find a motorcycle problem by symptom', None),
+  'repair/repairs/': ('Motorcycle Maintenance & Repair Tutorials | Motopedia', 'Motorcycle maintenance and repair tutorials', None),
+  'repair/problems/cranks-no-start/': ('Motorcycle Cranks but Won’t Start? | Motopedia', 'Motorcycle cranks but won’t start: what to check', 'Motorcycle cranks but won’t start? Follow a structured guide to starting checks, fuel, ignition and compression, with model-specific cautions.'),
+  'repair/problems/ev-wont-charge/': ('Electric Motorcycle Won’t Charge? | Motopedia', 'Electric motorcycle won’t charge: checks and next steps', 'Electric motorcycle not charging? Check external connections and manufacturer guidance, and learn when a qualified technician is needed.'),
+  'repair/repairs/chain-adjust/': ('How to Adjust Motorcycle Chain Slack | Motopedia', 'How to check and adjust motorcycle chain slack', 'Learn how to check motorcycle chain slack and understand adjustment, alignment and wear checks. Use your model’s manual for specifications.'),
+  'repair/repairs/engine-oil-service/': ('How to Change Motorcycle Engine Oil | Motopedia', 'How to change motorcycle engine oil', 'Follow a motorcycle oil-change guide covering preparation, draining, strainers and filters, with clear notes on model-specific requirements.'),
+  'repair/parts/brake_pads/': ('Motorcycle Brake Pads Explained | Motopedia', 'Motorcycle brake pads: function, wear and replacement', None),
 }
 def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   body = add_legend(body)
@@ -440,7 +440,7 @@ for i, p in PROB.items():
     {bikes_html('problems', i, rel)}
     <section class="r-sec">{sources_html(p.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/problems/{i}/'
-  page(path, f'{p["title"]}: causes and step-by-step checks | Moto Zero', f'{p["title"]} on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.',
+  page(path, f'{p["title"]}: causes and step-by-step checks | Motopedia', f'{p["title"]} on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.',
        html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/'), (SYS.get(p['system'], ''), f'repair/systems/{p["system"]}/'), (p['title'], path)], rel, extra_ld=videos_ld('problems', i) or None)
   urls.append(path)
 
@@ -473,7 +473,7 @@ for i, r in REP.items():
     {bikes_html('repairs', i, rel)}
     <section class="r-sec">{sources_html(r.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/repairs/{i}/'
-  page(path, f'{r["title"]}: step by step | Moto Zero', f'{r["title"]}: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.',
+  page(path, f'{r["title"]}: step by step | Motopedia', f'{r["title"]}: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.',
        html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/'), (r['title'], path)], rel, extra_ld=videos_ld('repairs', i) or None)
   urls.append(path)
 
@@ -507,7 +507,7 @@ for i, p in PART.items():
     {videos_html('parts', i, 'Videos: how it works')}
     <section class="r-sec">{sources_html(p.get("sources"))}</section>'''
   path = f'repair/parts/{i}/'
-  page(path, f'{p["name"]}: what it does, how it fails, what to buy | Moto Zero', f'{p["name"]} on a motorcycle or scooter: what it does, signs it is failing, when to replace it, what to match when buying, and the repairs.',
+  page(path, f'{p["name"]}: what it does, how it fails, what to buy | Motopedia', f'{p["name"]} on a motorcycle or scooter: what it does, signs it is failing, when to replace it, what to match when buying, and the repairs.',
        html_, [('Repair', 'repair/'), ('Parts', 'repair/parts/'), (p['name'], path)], rel, extra_ld=videos_ld('parts', i) or None)
   urls.append(path)
 
@@ -538,7 +538,7 @@ for sid, name in SYS.items():
     <section class="r-sec"><h2>Repairs</h2><ul class="r-list is-cols">{''.join(rlink(x, rel) for x in rep_ids)}</ul></section>
     <section class="r-sec"><h2>Parts</h2><div class="rpcs is-grid">{''.join(partcard(x, rel) for x in part_ids)}</div></section>'''
   path = f'repair/systems/{sid}/'
-  page(path, f'{name}: motorcycle problems and repairs | Moto Zero', f'Motorcycle {name.lower()} problems, step-by-step repairs and parts, from rider checks to workshop jobs.', html_,
+  page(path, f'{name}: motorcycle problems and repairs | Motopedia', f'Motorcycle {name.lower()} problems, step-by-step repairs and parts, from rider checks to workshop jobs.', html_,
        [('Repair', 'repair/'), (name, path)], rel)
   urls.append(path)
 
@@ -547,15 +547,15 @@ rel = '../../'
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By problem</h1><p class="r-lead">Start from what you notice. Each page tells you if it is safe to ride, then walks you through the checks.</p>{search_box()}</header>
     {LEGEND}<nav class="r-jump">{''.join(f'<a href="#{s}">{sys_icon(n, rel, 22)}{e(n)}</a>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}</nav>
     {''.join(f'<section class="r-sec" id="{s}"><h2 class="r-h2-ico">{sys_icon(n, rel, 32)}{e(n)}</h2><ul class="r-list is-cols">' + ''.join(plink(x["id"], rel) for x in PROB.values() if x["system"] == s) + '</ul></section>' for s, n in SYS.items() if any(x["system"] == s for x in PROB.values()))}'''
-page('repair/problems/', 'Motorcycle problems: find the fault step by step | Moto Zero', f'{len(PROB)} motorcycle, scooter and electric bike problems, each with safety advice, quick checks and a step-by-step diagnosis.', html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/')], rel)
+page('repair/problems/', 'Motorcycle problems: find the fault step by step | Motopedia', f'{len(PROB)} motorcycle, scooter and electric bike problems, each with safety advice, quick checks and a step-by-step diagnosis.', html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/')], rel)
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By repair</h1><p class="r-lead">Every job, grouped by who can do it. Workshop jobs explain what to check safely and what to ask the workshop for.</p>{search_box("Search repairs, for example: chain")}</header>
     {''.join(f'<section class="r-sec"><h2>{LEVEL[l][0]} <small>{LEVEL[l][1]}</small></h2><ul class="r-list is-cols">' + ''.join(rlink(x["id"], rel) for x in sorted(REP.values(), key=lambda r: r["title"]) if x.get("level") == l) + '</ul></section>' for l in LEVEL)}'''
-page('repair/repairs/', 'Motorcycle repairs step by step | Moto Zero', f'{len(REP)} motorcycle repair and service jobs, from rider checks to home workshop jobs and workshop hand-offs.', html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/')], rel)
+page('repair/repairs/', 'Motorcycle repairs step by step | Motopedia', f'{len(REP)} motorcycle repair and service jobs, from rider checks to home workshop jobs and workshop hand-offs.', html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/')], rel)
 cats = {}
 for p in PART.values(): cats.setdefault(p['category'], []).append(p['id'])
 html_ = f'''    <header class="r-head"><span class="ute-label">Repair</span><h1>By part</h1><p class="r-lead">What each part does, how it fails, what to match when you buy one, and where to find it.</p>{search_box("Search parts, for example: brake pads")}</header>
     {''.join(f'<section class="r-sec"><h2>{e(CATNAME.get(c, c.replace("-", " ").capitalize()))}</h2><div class="rpcs is-grid">' + ''.join(partcard(x, rel) for x in ids) + '</div></section>' for c, ids in cats.items())}'''
-page('repair/parts/', 'Motorcycle parts: what they do and how they fail | Moto Zero', f'{len(PART)} motorcycle parts explained: what each does, signs of wear, what to match when buying, and the repairs.', html_, [('Repair', 'repair/'), ('Parts', 'repair/parts/')], rel)
+page('repair/parts/', 'Motorcycle parts: what they do and how they fail | Motopedia', f'{len(PART)} motorcycle parts explained: what each does, signs of wear, what to match when buying, and the repairs.', html_, [('Repair', 'repair/'), ('Parts', 'repair/parts/')], rel)
 
 # repair home
 rel = '../'
@@ -585,7 +585,7 @@ html_ = f'''    <header class="r-head is-home">
       <li>Brakes, steering, tyres and electric high-voltage systems are safety-critical. If you are unsure, use a workshop.</li>
       <li>Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values.</li>
     </ul></section>'''
-page('repair/', 'Motorcycle repair: find the fault, fix it, get the part | Moto Zero', f'Diagnose {len(PROB)} motorcycle, scooter and electric bike problems, follow {len(REP)} step-by-step repairs and find the right parts.', html_, [('Repair', 'repair/')], rel)
+page('repair/', 'Motorcycle repair: find the fault, fix it, get the part | Motopedia', f'Diagnose {len(PROB)} motorcycle, scooter and electric bike problems, follow {len(REP)} step-by-step repairs and find the right parts.', html_, [('Repair', 'repair/')], rel)
 urls = ['repair/', 'repair/problems/', 'repair/repairs/', 'repair/parts/'] + urls
 
 # diagnostics tool
@@ -601,10 +601,10 @@ html_ = f'''    <header class="r-head is-home">
       <li>Each answer opens a full diagnosis: is it safe to ride, two-minute checks, then yes/no steps that end at a repair, a part or a workshop.</li>
       <li>Brakes, steering, tyres, fuel leaks and high-voltage faults are marked Do not ride or Stop now. Fix them before riding.</li>
     </ul><p class="r-note">Prefer to browse? <a href="{rel}repair/problems/">All problems</a> · <a href="{rel}repair/repairs/">All repairs</a> · <a href="{rel}repair/parts/">All parts</a> · <a href="{rel}parts/">Spare parts</a></p></section>'''
-ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": "Moto Zero motorcycle diagnostics", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)",
+ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": "Motopedia motorcycle diagnostics", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)",
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": SITE + '/repair/diagnose/', "publisher": {"@type": "Organization", "name": "Transitions Lab"},
       "description": f"Free motorcycle diagnostics: find the fault from {len(PROB)} symptoms, check if it is safe to ride and follow the step-by-step repair."}
-page('repair/diagnose/', 'Motorcycle diagnostics tool: find what is wrong with your bike | Moto Zero', f'Free motorcycle diagnostics tool. Pick your bike and the symptom to find the likely fault, whether it is safe to ride and the step-by-step repair. {len(PROB)} problems covered.', html_,
+page('repair/diagnose/', 'Motorcycle diagnostics tool: find what is wrong with your bike | Motopedia', f'Free motorcycle diagnostics tool. Pick your bike and the symptom to find the likely fault, whether it is safe to ride and the step-by-step repair. {len(PROB)} problems covered.', html_,
      [('Repair', 'repair/'), ('Diagnostics', 'repair/diagnose/')], rel, extra_ld=ld)
 urls.insert(1, 'repair/diagnose/')
 
@@ -720,7 +720,7 @@ for b in BIKES:
     <section class="r-sec">{sources_html(srcs)}<p class="r-note">Repair and part links are general guides for this type of bike; exact fitment is not verified. Text CC BY-SA 4.0, Transitions Lab.</p></section>"""
   desc = f'{b["title"]} repairs, common problems and key specs: {", ".join(REP[x]["title"].lower() for x in b["repairs"][:3])} and more, with step-by-step guides and parts.'
   ld = {"@context": "https://schema.org", "@type": "Thing", "name": b['title'], "description": b['summary'] or desc}
-  page(path, f'{b["title"]}: repairs, problems and specs | Moto Zero', desc[:300], html_,
+  page(path, f'{b["title"]}: repairs, problems and specs | Motopedia', desc[:300], html_,
        [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (b['make'], f'repair/bikes/{b["make_slug"]}/'), (b['title'], path)], rel, extra_ld=ld, noindex=not b['rich'])
   if b['rich']: bike_urls.append(path)
 
@@ -730,7 +730,7 @@ for mk, bs in MAKES.items():
   html_ = f"""    <header class="r-head"><span class="ute-label">Repair · By bike</span><h1>{e(mk)} motorcycle repairs and problems</h1>
       <p class="r-lead">{len(bs)} {e(mk)} models with their key numbers, top repairs and the problems to check. Pick your bike.</p></header>
     {''.join(f'<section class="r-sec"><h2>{e(_bd.CATEGORY[c][1])}</h2>{bike_list([b for b in bs if b["category"] == c], rel)}</section>' for c in cats_used if any(b["category"] == c for b in bs))}"""
-  page(path, f'{mk} motorcycle repairs, problems and specs | Moto Zero', f'Repairs, common problems and key specs for {len(bs)} {mk} motorcycles and scooters, with step-by-step guides and parts.', html_,
+  page(path, f'{mk} motorcycle repairs, problems and specs | Motopedia', f'Repairs, common problems and key specs for {len(bs)} {mk} motorcycles and scooters, with step-by-step guides and parts.', html_,
        [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (mk, path)], rel)
   bike_urls.append(path)
 
@@ -752,7 +752,7 @@ html_ = f"""    <header class="r-head"><span class="ute-label">Repair · By bike
       document.querySelectorAll('.bk-filter button').forEach((b) => b.addEventListener('click', () => {{ cat = b.dataset.c; document.querySelectorAll('.bk-filter button').forEach((x) => x.classList.toggle('is-on', x === b)); run(); }}));
     }})();
     </script>"""
-page('repair/bikes/', 'Motorcycle repairs by bike model: 500 bikes | Moto Zero', f'Find your motorcycle or scooter: key specs, top repairs and the problems to check for {len(BIKES)} models from {len(MAKES)} makes, with step-by-step guides.', html_,
+page('repair/bikes/', 'Motorcycle repairs by bike model: 500 bikes | Motopedia', f'Find your motorcycle or scooter: key specs, top repairs and the problems to check for {len(BIKES)} models from {len(MAKES)} makes, with step-by-step guides.', html_,
      [('Repair', 'repair/'), ('By bike', 'repair/bikes/')], rel)
 urls += ['repair/bikes/'] + bike_urls
 

@@ -1,6 +1,6 @@
-# Moto Zero Spare Parts Pages: Build Guide
+# Motopedia Spare Parts Pages: Build Guide
 
-This guide turns `motorcycle-spare-parts-research.xlsx` (41 models, 28 part types, 767 model-part pages) into a spare parts section on transitionslab.org that ranks for searches such as "Honda BeAT CVT drive belt" or "Bajaj Boxer brake shoes", sends buyers to shops through affiliate links in phase 1, and is structured so Transitions Lab's own components can replace third-party offers in phase 2. Every parts page links to the matching Moto Zero repair guide, and every repair guide links back to the parts it needs, so the two sections reinforce each other in search and for the reader.
+This guide turns `motorcycle-spare-parts-research.xlsx` (41 models, 28 part types, 767 model-part pages) into a spare parts section on transitionslab.org that ranks for searches such as "Honda BeAT CVT drive belt" or "Bajaj Boxer brake shoes", sends buyers to shops through affiliate links in phase 1, and is structured so Transitions Lab's own components can replace third-party offers in phase 2. Every parts page links to the matching Motopedia repair guide, and every repair guide links back to the parts it needs, so the two sections reinforce each other in search and for the reader.
 
 ## 1. Site structure and URLs
 
@@ -14,7 +14,7 @@ Three page types cover the whole catalogue, and the URLs mirror the `Shop page U
 | Repair guide | `/moto-zero/repair/{repair-slug}` | `/moto-zero/repair/drum-brake-shoe-replacement` | 26 |
 | Component (existing) | `/motorcycle-anatomy` | interactive anatomy explorer | 1 |
 
-Repair guides are written once per job (drum brake shoes are replaced the same way on a Boxer and a Splendor) and receive model context through a query parameter or a model-specific section, which avoids 767 near-duplicate repair pages. If the live Moto Zero repair pages already use other paths, edit `README!B6` and keep a single mapping from `Parts!L` (repair slug) to the real path.
+Repair guides are written once per job (drum brake shoes are replaced the same way on a Boxer and a Splendor) and receive model context through a query parameter or a model-specific section, which avoids 767 near-duplicate repair pages. If the live Motopedia repair pages already use other paths, edit `README!B6` and keep a single mapping from `Parts!L` (repair slug) to the real path.
 
 For Indonesian-language pages (BeAT, Vario, Scoopy, NMAX, Aerox, Mio, Satria), add a locale prefix `/id/moto-zero/parts/...` with the `Local-language variant` column as the H1 and `hreflang="id"` / `hreflang="en"` alternates on both versions.
 
@@ -56,7 +56,7 @@ Any static generator works (Astro, Eleventy, Hugo or Next.js static export). The
 Each model-part page must stand on its own as useful content, because 767 templated pages with only a product list read as thin content to Google and get filtered out. The fields below come straight from the workbook, so the uniqueness is real rather than spun.
 
 ```
-<title>  {Primary keyword}: fitment, price and where to buy | Moto Zero
+<title>  {Primary keyword}: fitment, price and where to buy | Motopedia
 <meta description>  {Part} for the {Brand} {Model}: replacement interval {interval},
                     typical price {price range}, and how to fit it yourself.
 H1       {Brand} {Model} {part}
@@ -102,7 +102,7 @@ const pagesForJob = data.pages.filter(p =>
 
 **Hub pages.** Each model hub lists all parts for that model grouped by `Parts!C` (category) and links to a "Service schedule for the {Model}" section that combines the interval column with links to every relevant repair guide. That section is the natural landing page for "{model} service" searches.
 
-**Breadcrumbs.** Parts > {Brand} > {Model} > {Part} on parts pages and Moto Zero > Repair > {Job} on repair pages, each emitted as `BreadcrumbList` structured data.
+**Breadcrumbs.** Parts > {Brand} > {Model} > {Part} on parts pages and Motopedia > Repair > {Job} on repair pages, each emitted as `BreadcrumbList` structured data.
 
 ## 5. Structured data and on-page SEO
 
@@ -110,7 +110,7 @@ Use `BreadcrumbList` and `FAQPage` on every model-part page and `HowTo`-style ma
 
 Other on-page rules that matter at this scale: one H1 per page matching the primary keyword; the OEM part number in the body copy and in an `<h2>` on high-priority pages (people search exact numbers); image alt text naming model and part; canonical URL on every page; a separate XML sitemap for `/moto-zero/parts/` submitted in Search Console so indexing of the parts section can be tracked on its own.
 
-Internal link equity matters more than external links early on. Link the parts hub from the main Moto Zero navigation and from the anatomy explorer, and link each model hub from the repair guides that mention that model.
+Internal link equity matters more than external links early on. Link the parts hub from the main Motopedia navigation and from the anatomy explorer, and link each model hub from the repair guides that mention that model.
 
 ## 6. Monetisation in phase 1
 
@@ -130,10 +130,10 @@ Design the offer block so a Transitions Lab product is just another shop row wit
 
 ## 8. Launch checklist
 
-- Replace placeholder base URLs in `README!B5:B7` with the live Moto Zero paths.
+- Replace placeholder base URLs in `README!B5:B7` with the live Motopedia paths.
 - Verify brake and drivetrain flags for the rows marked "verify" (Haojue, Roam Air, Spiro Ekon).
 - Add OEM part numbers and fitment-checked affiliate deep links for the 84 priority rows; set them to `live`.
-- Build the 26 repair-slug pages or map them to existing Moto Zero repair content; every slug in `Parts!L` must resolve.
+- Build the 26 repair-slug pages or map them to existing Motopedia repair content; every slug in `Parts!L` must resolve.
 - Add the Part ID to anatomy anchor mapping and test links from both directions.
 - Publish priority 12+ pages, submit the parts sitemap, then add the score-9 batch after Search Console shows the first batch indexed.
 - Review clicks per shop and per region monthly and move under-performing shops down the offer block.

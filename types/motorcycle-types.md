@@ -1,6 +1,6 @@
 ---
 title: "Motorcycle types"
-description: "Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda, with photographs, labelled plates, history and the parts that define each type. Part of Moto Zero by Transitions Lab."
+description: "Sixteen kinds of motorcycle from the 1885 Reitwagen to the electric boda boda, with photographs, labelled plates, history and the parts that define each type. Part of Motopedia by Transitions Lab."
 ---
 
 # Motorcycle types
@@ -690,6 +690,6 @@ The same model now drives electrification in Africa and India. Boda boda riders 
 
 ## About this page
 
-Plates F01 to F04 come from Module 1 of the course; plates T01 to T12 were drawn for this page in the same style. Figures are typical ranges for each type, not the specification of any one model. Text and plates are released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by **Transitions Lab, Moto Zero**. Photographs are from Wikimedia Commons under the licence on each file page, or from the Transitions Lab collection.
+Plates F01 to F04 come from Module 1 of the course; plates T01 to T12 were drawn for this page in the same style. Figures are typical ranges for each type, not the specification of any one model. Text and plates are released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by **Transitions Lab, Motopedia**. Photographs are from Wikimedia Commons under the licence on each file page, or from the Transitions Lab collection.
 
 Download the course PDFs, 3D models and interactive tools at [transitionslab.org/motorcycle-anatomy](https://www.transitionslab.org/motorcycle-anatomy). Questions or corrections: marcel@transitionslab.org

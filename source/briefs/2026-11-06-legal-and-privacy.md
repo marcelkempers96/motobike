@@ -1,7 +1,7 @@
 # Brief: legal pages complete, and remove the founder's name and face from the site
 
 Repo: /home/user/motobike (static site). Owner: Transitions Lab (transitionslab.org), Netherlands-based
-open educational programme; the site is Moto Zero (new brand name Motopedia, domain motopedia.org).
+open educational programme; the site is Motopedia (new brand name Motopedia, domain motopedia.org).
 Data processing on the site now (read the code to be exact):
 - Optional accounts, comments with photo uploads, saved course progress, members-only content,
   messages with the team, brand requests: Supabase (`assets/community.js`, `account/`,

@@ -29,7 +29,7 @@ function ask(a) {
     dlg.setAttribute('role', 'dialog'); dlg.setAttribute('aria-modal', 'true'); dlg.setAttribute('aria-labelledby', 'mz-gate-h');
     dlg.innerHTML = `<div class="mz-gate-box">
       <h2 id="mz-gate-h">Downloads are for account holders</h2>
-      <p>Create a free Moto Zero account to download 3D models, illustrations and the course PDFs. It takes a minute: just your email, no password.</p>
+      <p>Create a free Motopedia account to download 3D models, illustrations and the course PDFs. It takes a minute: just your email, no password.</p>
       <p class="mz-gate-what"></p>
       <div class="mz-gate-btns"><a class="mz-gate-go" href="#">Create a free account or sign in</a><button type="button" class="mz-gate-no">Not now</button></div>
     </div>`;

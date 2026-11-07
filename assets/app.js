@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: Overview and components (index.html) and Cockpit (cockpit/index.html)
+   Motopedia: Overview and components (index.html) and Cockpit (cockpit/index.html)
    One page, one app. See moto-spec/01-SPEC.md, 02-DESIGN.md, 03-FUNCTIONS.md.
    ========================================================================== */
 import {
@@ -1625,7 +1625,7 @@ Object.defineProperty(COMPONENT_VIEWS, 'charging', { get: () => (S.mode === 'ele
 Object.defineProperty(COMPONENT_VIEWS, 'starter', { get: () => (S.mode === 'elec' ? undefined : wiringLab('Starter motor and starting circuit', 'starting')), configurable: true });
 
 /* ==========================================================================
-   9. Ride: the Moto Zero cockpit simulator (assets/interactive/controls.html)
+   9. Ride: the Motopedia cockpit simulator (assets/interactive/controls.html)
    embedded same-origin. Its live state is the single source of truth for
    rpm, road speed, throttle, brakes, clutch and gear: it drives the 3D wheels,
    the close-ups and the dyno, in all three modes.

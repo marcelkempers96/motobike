@@ -1,4 +1,4 @@
-# Content for the Moto Zero "Motorcycle types" page. Single source for the page, JSON and MD.
+# Content for the Motopedia "Motorcycle types" page. Single source for the page, JSON and MD.
 
 FAMILIES = {
     "pioneer": "Pioneers",

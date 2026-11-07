@@ -1,4 +1,4 @@
--- Moto Zero: "Brand a bike" requests (/brand/). Run in the Supabase SQL editor
+-- Motopedia: "Brand a bike" requests (/brand/). Run in the Supabase SQL editor
 -- after docs/supabase.sql (it uses public.is_admin()). Safe to run twice.
 
 -- 1. Requests. Visitors may insert; only admins can read or update.

@@ -1,4 +1,4 @@
-# Moto Zero: website asset package
+# Motopedia: website asset package
 
 Every file for the Transitions Lab motorcycle anatomy pages, grouped by category. Text, illustrations, 3D models and renders are CC BY-SA 4.0 (Transitions Lab); photographs from the Transitions Lab collection are excluded from that licence.
 
@@ -238,11 +238,11 @@ Every file for the Transitions Lab motorcycle anatomy pages, grouped by category
 
 | Type | File | Description |
 |---|---|---|
-| PDF | `moto-zero-module-1-foundations.pdf` | Course module PDF |
-| PDF | `moto-zero-module-2-engine.pdf` | Course module PDF |
-| PDF | `moto-zero-module-3-fuel-ignition-electrical.pdf` | Course module PDF |
-| PDF | `moto-zero-module-4-drivetrain-chassis.pdf` | Course module PDF |
-| PDF | `moto-zero-module-5-electric.pdf` | Course module PDF |
+| PDF | `motopedia-module-1-foundations.pdf` | Course module PDF |
+| PDF | `motopedia-module-2-engine.pdf` | Course module PDF |
+| PDF | `motopedia-module-3-fuel-ignition-electrical.pdf` | Course module PDF |
+| PDF | `motopedia-module-4-drivetrain-chassis.pdf` | Course module PDF |
+| PDF | `motopedia-module-5-electric.pdf` | Course module PDF |
 | JPG | `renders/course/render-battery.jpg` | Course render |
 | JPG | `renders/course/render-brake.jpg` | Course render |
 | JPG | `renders/course/render-chain.jpg` | Course render |

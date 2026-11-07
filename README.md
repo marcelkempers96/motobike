@@ -1,6 +1,6 @@
-# Moto Zero — interactive motorcycle course
+# Motopedia — interactive motorcycle course
 
-An interactive companion to the **Moto Zero** open course by Transitions Lab (CC BY-SA 4.0).
+An interactive companion to the **Motopedia** open course by Transitions Lab (CC BY-SA 4.0).
 
 | Page | What it is |
 |---|---|
@@ -27,7 +27,7 @@ assets/
     modules/m1–m5.js  lessons per course module (edit text here)
     questions/m1–m5.js  148 multiple-choice questions
   pdf/                the five course modules (downloadable from Learn)
-  brand/              Moto Zero logo files
+  brand/              Motopedia logo files
   models/manifest.json  map part keys → render images
 inbox/                drop zone for raw uploads (not deployed)
 moto-spec/            product spec, design system, behaviour spec

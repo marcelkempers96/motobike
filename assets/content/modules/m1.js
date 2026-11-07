@@ -1,11 +1,11 @@
-/* Moto Zero: Module 1 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 1 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "foundations",
   "num": "1",
   "title": "Foundations: the machine, its anatomy and the workshop",
   "intro": "How the motorcycle evolved, how its systems divide and connect, the physics that governs it, and the safe working methods, tools and measurements every later module depends on.",
-  "pdf": "moto-zero-module-1-foundations.pdf",
+  "pdf": "motopedia-module-1-foundations.pdf",
   "chapters": [
     {
       "id": "m1-history-systems",

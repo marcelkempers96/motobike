@@ -1,4 +1,4 @@
-# Moto Zero: motorcycle types page
+# Motopedia: motorcycle types page
 
 | File | Use |
 |---|---|
@@ -10,4 +10,4 @@
 | `photos.json` | The Wikimedia Commons photograph chosen for each type, with alternates. **Not yet verified**: author and licence could not be checked from the build environment. Open each `file_page`, confirm the licence allows reuse, and fill in `author`, `licence` and `licence_url`, then rebuild with `src/build.py`. Until then the page credits "see file page". |
 | `src/` | `types_data.py` (all text), `template.html`, `build.py`. |
 
-Photographs load from Wikimedia Commons via `Special:FilePath` links; if one fails, the page shows a link to the file page instead. Text and plates: CC BY-SA 4.0, Transitions Lab, Moto Zero.
+Photographs load from Wikimedia Commons via `Special:FilePath` links; if one fails, the page shows a link to the file page instead. Text and plates: CC BY-SA 4.0, Transitions Lab, Motopedia.

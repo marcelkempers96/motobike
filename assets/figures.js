@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero — interactive teaching figures for the Learn page.
+   Motopedia — interactive teaching figures for the Learn page.
    mountFigure(key, el) builds a figure inside `el` (an .ute-figure).
    ========================================================================== */
 import { ns, txt, defsPackMetals, buildEngine, buildTimingStrip, displacementCC, approxTorqueNm, clamp, fmt } from './core.js';

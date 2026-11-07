@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Moto Zero spare parts section from motorcycle-spare-parts-research.xlsx.
+"""Build the Motopedia spare parts section from motorcycle-spare-parts-research.xlsx.
 
 Writes static pages under /parts/ (hub, part types, model hubs, model-part pages),
 assets/content/spare-parts.js (index for search and the Repair cross-links) and
@@ -305,7 +305,7 @@ def buy_html(row, m, p):
   rows_ = shop_rows(row, m)
   li = ''.join(f'<li><a href="{e(u)}" target="_blank" rel="nofollow noopener" data-shop="{e(n)}"><b>{e(n)}</b><span>{e(d)}</span><em>{e(h)} ↗</em></a></li>' for n, u, d, h in rows_)
   return f'''<ul class="sp-shops">{li}</ul>
-    <p class="sp-note">Check the part number for your model year before you buy. Genuine (OEM) parts first; good aftermarket parts are fine for wear items. Links open shop searches; Moto Zero earns nothing from them today and will say so here if that changes.</p>'''
+    <p class="sp-note">Check the part number for your model year before you buy. Genuine (OEM) parts first; good aftermarket parts are fine for wear items. Links open shop searches; Motopedia earns nothing from them today and will say so here if that changes.</p>'''
 
 def faq(m, p, row):
   name = f"{m['Brand']} {m['Model']}"
@@ -367,7 +367,7 @@ for r in PAGES:
       <p><a class="sp-btn" href="{{R}}{url_model(m).lstrip('/')}">All parts for the {e(name)} →</a> <a class="sp-btn" href="{{R}}{url_part(pid).lstrip('/')}">{e(p['Part'])} for other bikes →</a></p>
     </section>'''
   title = f"{name} {lc_part(p)}: price, interval, where to buy"
-  if len(title) > 70: title = f"{name} {lc_part(p)} | Moto Zero"
+  if len(title) > 70: title = f"{name} {lc_part(p)} | Motopedia"
   desc = f"{p['Part']} for the {name}: replace {p['Typical interval (indicative)']}, typical price US$ {str(p['Price range USD (indicative)']).replace('-', ' to ')}, shops and how to fit it yourself."[:300]
   page(path, title, desc, body, crumbs=[('Spare parts', '/parts/'), (m['Brand'], url_model(m)), (m['Model'], url_model(m)), (p['Part'], path)],
        noindex=score < INDEX_FROM, extra_ld=fq_ld)
@@ -397,7 +397,7 @@ for mid, m in MODELS.items():
       <p class="sp-note">Indicative intervals. The owner's manual for your model wins.</p>
     </section>'''
   path = url_model(m)
-  page(path, f"{name} spare parts and service schedule | Moto Zero", f"All wear parts for the {name}: replacement intervals, typical prices, where to buy and step-by-step repair guides.", body,
+  page(path, f"{name} spare parts and service schedule | Motopedia", f"All wear parts for the {name}: replacement intervals, typical prices, where to buy and step-by-step repair guides.", body,
        crumbs=[('Spare parts', '/parts/'), (m['Brand'], path), (m['Model'], path)])
   indexed.append(path)
 
@@ -430,7 +430,7 @@ for pid, p in PARTS.items():
       </div>
     </section>'''
   path = url_part(pid)
-  page(path, f"{p['Part']}: when to replace, price and how to fit | Moto Zero", f"{p['Part']} for {len(rs)} popular motorcycles and scooters: replacement interval, typical price, where to buy and how to fit it yourself.", body,
+  page(path, f"{p['Part']}: when to replace, price and how to fit | Motopedia", f"{p['Part']} for {len(rs)} popular motorcycles and scooters: replacement interval, typical price, where to buy and how to fit it yourself.", body,
        crumbs=[('Spare parts', '/parts/'), (p['Part'], path)])
   indexed.append(path)
 
@@ -459,7 +459,7 @@ body = f'''
     <section class="sp-sec">
       <p class="sp-note">Intervals and prices are indicative, compiled from service schedules and shop listings. Shop links open searches; check the part number for your model year before you buy. Coming later: a full shop with parts chosen and checked by Transitions Lab.</p>
     </section>'''
-page('/parts/', 'Motorcycle spare parts: intervals, prices, where to buy | Moto Zero', f'Wear parts for {len(MODELS)} best-selling motorcycles and scooters: replacement intervals, typical prices, where to buy and step-by-step repair guides.', body,
+page('/parts/', 'Motorcycle spare parts: intervals, prices, where to buy | Motopedia', f'Wear parts for {len(MODELS)} best-selling motorcycles and scooters: replacement intervals, typical prices, where to buy and step-by-step repair guides.', body,
      crumbs=[('Spare parts', '/parts/')])
 indexed.insert(0, '/parts/')
 

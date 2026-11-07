@@ -1,4 +1,4 @@
--- Moto Zero: account dashboard, profile pictures, messages, admin.
+-- Motopedia: account dashboard, profile pictures, messages, admin.
 -- Run AFTER docs/supabase.sql (and docs/supabase-brand.sql). Paste into SQL Editor > New query > Run.
 -- Safe to run again.
 

@@ -1,4 +1,4 @@
--- Moto Zero: accounts, comments with photos, course progress and members-only content.
+-- Motopedia: accounts, comments with photos, course progress and members-only content.
 -- Paste this whole file into Supabase: SQL Editor > New query > Run. Safe to run again.
 
 -- 1. Profiles: one row per account, created automatically at sign-up.
@@ -93,7 +93,7 @@ create policy "delete own uploads" on storage.objects for delete
 
 -- 6. A first members-only item, so the account page shows something.
 insert into public.member_content (slug, title, body_html, sort) values
-  ('welcome', 'Welcome to Moto Zero', '<p>Thank you for joining. Your course progress is now saved to your account, and you can comment and share photos on any page.</p>', 0)
+  ('welcome', 'Welcome to Motopedia', '<p>Thank you for joining. Your course progress is now saved to your account, and you can comment and share photos on any page.</p>', 0)
 on conflict (slug) do nothing;
 
 -- To make yourself an admin (can hide or delete any comment), after you have signed up once:

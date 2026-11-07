@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Moto Zero: motorcycle types. Timeline, family filters, card grid and a
+   Motopedia: motorcycle types. Timeline, family filters, card grid and a
    full view per type (deep links #boda-boda, #cafe-racer ...). Content comes
    from types/motorcycle-types.json; plates are inlined from types/plates/.
    ========================================================================== */
@@ -156,7 +156,7 @@ async function renderStage(t) {
   const st = $('#lb-stage'), cr = $('#lb-credit');
   if (view === 'plate') {
     st.innerHTML = `<div class="plate"><img src="${at(t.plate_png)}" alt="Plate ${esc(t.plate)}: ${esc(t.name)} with the defining parts labelled"></div>`;
-    cr.innerHTML = `Plate ${esc(t.plate)}, Moto Zero, CC BY-SA 4.0. <a href="${at(t.plate_svg)}" target="_blank" rel="noopener">Open full size (SVG)</a> · <a href="${at(t.plate_png)}" download>Download PNG</a>. On a phone, scroll the plate sideways.`;
+    cr.innerHTML = `Plate ${esc(t.plate)}, Motopedia, CC BY-SA 4.0. <a href="${at(t.plate_svg)}" target="_blank" rel="noopener">Open full size (SVG)</a> · <a href="${at(t.plate_png)}" download>Download PNG</a>. On a phone, scroll the plate sideways.`;
     const svg = await plateSVG(t);
     if (svg && current >= 0 && TYPES[current] === t && view === 'plate') st.querySelector('.plate').innerHTML = svg;
   } else if (view === 'photos') {

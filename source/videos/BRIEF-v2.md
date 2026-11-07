@@ -1,4 +1,4 @@
-# Brief: map the 200 new YouTube videos (V101 to V300) to Moto Zero pages
+# Brief: map the 200 new YouTube videos (V101 to V300) to Motopedia pages
 
 Repo: /home/user/motobike. Same task and rules as `source/videos/BRIEF.md` Task 1 (read it), for the
 records in `source/videos/videos.json` with `rank` 101 to 300. Background and the editors' own

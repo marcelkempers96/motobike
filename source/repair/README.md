@@ -1,6 +1,6 @@
-# Moto Zero repair section
+# Motopedia repair section
 
-Complete Markdown content for the repair pages of the Moto Zero site: 274 problem pages written as step-by-step diagnoses, 185 repair pages and 134 part pages, plus index pages for every way in (by problem, by system, by repair, by part). It supersedes the earlier 60-problem dataset (`problems.js`, `procedures.js`, `parts.js`); the verified values, conflict decisions and scope rules from that dataset's README were carried over as binding rules for every page.
+Complete Markdown content for the repair pages of the Motopedia site: 274 problem pages written as step-by-step diagnoses, 185 repair pages and 134 part pages, plus index pages for every way in (by problem, by system, by repair, by part). It supersedes the earlier 60-problem dataset (`problems.js`, `procedures.js`, `parts.js`); the verified values, conflict decisions and scope rules from that dataset's README were carried over as binding rules for every page.
 
 ## Folder layout
 
@@ -51,4 +51,4 @@ The reference bike is the K-Light 125 (QJ157FMI, 124 cc air-cooled pushrod singl
 
 `source/` holds the writer pages before linking (`out/`), the ID registry (`registry.json`, generated from `registry.py`) and `build.py`. Set `ROOT` at the top of `build.py` to the `source/` folder, then `python3 build.py` regenerates the linked pages, checks every frontmatter ID and inline link, and writes `build-report.md`. The current build reports no missing pages, no broken links and no dashes. To add a problem, repair or part, add its ID to `registry.py`, write its page in `out/`, and rebuild.
 
-Text released under CC BY-SA 4.0 by Transitions Lab, Moto Zero. Citing a manual does not relicense its text or figures.
+Text released under CC BY-SA 4.0 by Transitions Lab, Motopedia. Citing a manual does not relicense its text or figures.

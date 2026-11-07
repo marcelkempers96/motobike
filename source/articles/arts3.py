@@ -17,7 +17,7 @@ body=f'''
 <p>In practice, a 125-equivalent electric commuter uses about 2 to 4 kWh per 100 km at the battery terminals, depending on speed, load and hills. A 125 cc petrol commuter burning 2.5 litres per 100 km uses about 22 kWh of fuel energy for the same distance.</p>
 <figure>
   <img src="{A}illustrations/electrical/F25.png" alt="Block diagram of an electric motorcycle powertrain: battery pack with BMS, main fuse, pre-charge circuit and contactor, motor controller, motor with position sensor, vehicle control unit, DC-DC converter, charge port, CAN bus, throttle and brake inputs and regenerative path" width="2400" height="1500" loading="lazy">
-  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Moto Zero Module 5.</figcaption>
+  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Motopedia Module 5.</figcaption>
 </figure>
 
 <h2 id="battery">The battery pack</h2>
@@ -25,7 +25,7 @@ body=f'''
 <p>The cell chemistry matters. Nickel manganese cobalt (NMC) cells store the most energy for their weight. Lithium iron phosphate (LFP) cells are heavier for the same range but last many more charge cycles, contain no cobalt or nickel and are more stable if damaged, so they are spreading in commuter and battery-swap fleets.</p>
 <figure>
   <img src="{A}illustrations/electrical/F26.png" alt="Technical plate of battery pack construction: cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and connector, with an inset section through one cell" width="2400" height="1500" loading="lazy">
-  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Moto Zero Module 5.</figcaption>
+  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Motopedia Module 5.</figcaption>
 </figure>
 
 <h2 id="bms">The battery management system</h2>
@@ -85,7 +85,7 @@ body=f'''
 <p>A plain chain is lubricated only by what you spray on it. An <strong>O-ring chain</strong> traps factory grease in each joint behind rubber rings, and an <strong>X-ring</strong> chain uses a ring with four smaller sealing lips to reduce friction. Sealed chains typically last two to three times as long as plain chains on road machines.</p>
 <figure>
   <img src="{A}illustrations/transmission/F15.png" alt="Technical plate of a chain final drive: front and rear sprockets with the chain run, a section through an O-ring chain showing pin, bushing, roller, plates and O-rings, slack measured at the midpoint of the lower run, and a 20-link length measurement" width="2400" height="1632" loading="lazy">
-  <figcaption>Chain final drive: O-ring chain section, slack measurement and 20-link wear length. Plate F15, Moto Zero Module 4.</figcaption>
+  <figcaption>Chain final drive: O-ring chain section, slack measurement and 20-link wear length. Plate F15, Motopedia Module 4.</figcaption>
 </figure>
 
 <h2 id="chain-sizes">Chain sizes</h2>

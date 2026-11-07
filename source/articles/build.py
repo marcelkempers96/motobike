@@ -55,7 +55,7 @@ def article_page(a):
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "license": "https://creativecommons.org/licenses/by-sa/4.0/",
         "inLanguage": "en-GB", "wordCount": w,
-        "isPartOf": {"@type": "WebSite", "name": "Moto Zero", "url": BASE + "/"},
+        "isPartOf": {"@type": "WebSite", "name": "Motopedia", "url": BASE + "/"},
     }
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": x}} for q, x in a['faq']]}
@@ -82,7 +82,7 @@ def article_page(a):
   <link rel="canonical" href="{url}">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Moto Zero">
+  <meta property="og:site_name" content="Motopedia">
   <meta property="og:title" content="{esc(a['title'])}">
   <meta property="og:description" content="{esc(a['desc'])}">
   <meta property="og:url" content="{url}">
@@ -139,7 +139,7 @@ def article_page(a):
         </ul>
       </nav>
 
-      <p class="mz-art-licence">Written by Transitions Lab for the Moto Zero open motorcycle course. Text and illustrations are licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>. Figures and values come from the course modules; see <a href="../../sources/">sources and credits</a>.</p>
+      <p class="mz-art-licence">Written by Transitions Lab for the Motopedia open motorcycle course. Text and illustrations are licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>. Figures and values come from the course modules; see <a href="../../sources/">sources and credits</a>.</p>
     </article>
   </main>
 
@@ -166,7 +166,7 @@ def card(a):
 def listing_page():
     up = '../'
     url = BASE + '/articles/'
-    title = 'Motorcycle articles: how it works, maintenance and repair | Moto Zero'
+    title = 'Motorcycle articles: how it works, maintenance and repair | Motopedia'
     desc = 'Plain-English guides to how motorcycles work and how to maintain and repair them: engines, starting faults, batteries, oil, brakes, tyres, chains and electric drives.'
     grouped = [s for _, _, _, sl in GROUPS for s in sl]
     assert sorted(grouped) == sorted(BY), 'every article must be in exactly one group'
@@ -178,7 +178,7 @@ def listing_page():
     <ul class="mz-arts">
 ''' + '\n'.join(card(BY[s]) for s in sl) + '''
     </ul>''' for gid, gt, gp, sl in GROUPS)
-    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Moto Zero articles", "description": desc, "url": url,
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Motopedia articles", "description": desc, "url": url,
           "publisher": ORG, "license": "https://creativecommons.org/licenses/by-sa/4.0/",
           "mainEntity": {"@type": "ItemList", "itemListElement": [
               {"@type": "ListItem", "position": i + 1, "url": f'{BASE}/articles/{a["slug"]}/', "name": a['h1']} for i, a in enumerate(ordered)]}}
@@ -192,8 +192,8 @@ def listing_page():
   <meta name="description" content="{esc(desc)}">
   <link rel="canonical" href="{url}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Moto Zero">
-  <meta property="og:title" content="Motorcycle articles from Moto Zero">
+  <meta property="og:site_name" content="Motopedia">
+  <meta property="og:title" content="Motorcycle articles from Motopedia">
   <meta property="og:description" content="{esc(desc)}">
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{img}">
@@ -218,7 +218,7 @@ def listing_page():
     <header class="mz-arts-head">
       <span class="ute-label">Articles</span>
       <h1>Motorcycle articles</h1>
-      <p>Short, accurate guides to how motorcycles work and how to look after and repair them, written from the Moto Zero course. Each one links into the interactive tools, the Repair section and the full course chapters.</p>
+      <p>Short, accurate guides to how motorcycles work and how to look after and repair them, written from the Motopedia course. Each one links into the interactive tools, the Repair section and the full course chapters.</p>
     </header>
 {sections}
   </main>

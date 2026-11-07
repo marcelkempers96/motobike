@@ -42,7 +42,7 @@ for v in sorted(VIDS.values(), key=lambda x: x['rank']):
 def vcard(v):
   u = used_on(v['id'])
   c = vl.card(v, MP.get(v['id']))
-  extra = f'<p class="mz-yt-used"><b>On Moto Zero:</b> {" · ".join(u)}</p>' if u else ''
+  extra = f'<p class="mz-yt-used"><b>On Motopedia:</b> {" · ".join(u)}</p>' if u else ''
   return c.replace('</div></div>', f'{extra}</div></div>', 1) if extra else c
 body = ''.join(f'<section class="ute-chapter" id="{re.sub(r"[^a-z]+", "-", c.lower())}"><h2>{e(c)} <small>{len(vs)}</small></h2><div class="mz-yts">{"".join(vcard(v) for v in vs)}</div></section>' for c, vs in cats.items())
 n = sum(len(v) for v in cats.values())
@@ -53,10 +53,10 @@ page = f'''<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Motorcycle Repair & How-It-Works Videos | Moto Zero</title>
+  <title>Motorcycle Repair & How-It-Works Videos | Motopedia</title>
   <link rel="canonical" href="{SITE}/videos/">
-  <meta name="description" content="{n} of the most watched motorcycle videos on YouTube, sorted by topic: maintenance, how engines and gearboxes work, diagnosis and restoration, each with what it teaches and the Moto Zero guide to read next.">
-  <meta property="og:title" content="Motorcycle Repair & How-It-Works Videos | Moto Zero"><meta property="og:url" content="{SITE}/videos/">
+  <meta name="description" content="{n} of the most watched motorcycle videos on YouTube, sorted by topic: maintenance, how engines and gearboxes work, diagnosis and restoration, each with what it teaches and the Motopedia guide to read next.">
+  <meta property="og:title" content="Motorcycle Repair & How-It-Works Videos | Motopedia"><meta property="og:url" content="{SITE}/videos/">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -82,7 +82,7 @@ page = f'''<!doctype html>
   <section class="ute-hero">
     <span class="ute-label">Library · Videos</span>
     <h1>Motorcycle repair and how-it-works videos</h1>
-    <p>{n} of the most watched motorcycle videos on YouTube, sorted by topic. Each card says what the video teaches and links to the Moto Zero guide to read next. Videos play only when you press play. Popular is not the same as correct: for values, use your bike's manual.</p>
+    <p>{n} of the most watched motorcycle videos on YouTube, sorted by topic. Each card says what the video teaches and links to the Motopedia guide to read next. Videos play only when you press play. Popular is not the same as correct: for values, use your bike's manual.</p>
     <nav class="mz-vjump" aria-label="Topics">{"".join(f'<a href="#{re.sub(r"[^a-z]+", "-", c.lower())}">{e(c)}</a>' for c in cats)}</nav>
   </section>
   {body}

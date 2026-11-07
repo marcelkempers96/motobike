@@ -1,4 +1,4 @@
-/* Moto Zero: model library. A light gallery of renders first; the 3D viewer
+/* Motopedia: model library. A light gallery of renders first; the 3D viewer
    only starts when a model is opened, and is released when you go back. */
 import { MODELS } from './content/assets-map.js';
 import SIZES from './content/model-sizes.js';
@@ -19,7 +19,7 @@ let viewer = null;
 
 function gallery() {
   if (viewer) { viewer.dispose(); viewer = null; }
-  document.title = 'Moto Zero · Models';
+  document.title = 'Motopedia · Models';
   root.innerHTML = `
     <section class="ute-hero"><span class="ute-label">Model library · ${KEYS.length} models</span><h1>Every part, in 3D</h1>
       <p>${KEYS.filter((k) => MODELS[k][0] === 'bikes').length} complete motorcycles and scooters and ${KEYS.filter((k) => MODELS[k][0] !== 'bikes').length} components, modelled for the course. Open any model to rotate it, zoom in and highlight each sub-part, or download it as a GLB file for Blender, three.js or any glTF viewer (CC BY-SA 4.0).</p>
@@ -35,7 +35,7 @@ async function detail(key) {
   const [cat, title] = MODELS[key];
   const i = KEYS.indexOf(key), prev = KEYS[i - 1], next = KEYS[i + 1];
   const bike = cat === 'bikes';
-  document.title = `Moto Zero · ${title}`;
+  document.title = `Motopedia · ${title}`;
   root.innerHTML = `
     <div class="mz-lib-detail">
       <nav class="mz-crumbs"><a href="#">Models</a><span>/</span><a href="#">${CATS[cat]}</a><span>/</span><b>${title}</b></nav>

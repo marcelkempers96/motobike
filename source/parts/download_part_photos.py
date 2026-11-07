@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Moto Zero part photo harvester (Wikimedia Commons, reusable licences only).
+"""Motopedia part photo harvester (Wikimedia Commons, reusable licences only).
 
-Searches Wikimedia Commons for every part type in the Moto Zero parts catalogue,
+Searches Wikimedia Commons for every part type in the Motopedia parts catalogue,
 reads each file's licence, author and description from the Commons API, keeps
 only CC0 / public domain / CC BY / CC BY-SA images, downloads a 1200 px web copy
 (and optionally the original), and writes:
