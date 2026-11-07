@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/styles.css?v=20261102b">
-  <link rel="stylesheet" href="../../assets/articles.css?v=20261101c">
+  <link rel="stylesheet" href="../../assets/articles.css?v=20261107a">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,7 +58,7 @@
  },
  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
  "inLanguage": "en-GB",
- "wordCount": 1385,
+ "wordCount": 1527,
  "isPartOf": {
   "@type": "WebSite",
   "name": "Motopedia",
@@ -146,7 +146,7 @@
       <span class="ute-label">Diagnosis</span>
       <h1>Why your motorcycle will not start</h1>
       <p class="mz-art-lead">A motorcycle that will not start is missing one of a short list of things: enough battery to turn it over, a spark at the right moment, fuel in the right amount, or compression to squeeze it. Checking them in a fixed order, from the quickest to the most involved, finds the fault without guesswork or wasted parts.</p>
-      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="2026-11-02">2 November 2026</time></span><span>6 min read</span></div>
+      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="2026-11-02">2 November 2026</time></span><span>7 min read</span></div>
     </header>
     <article class="mz-art">
       <figure class="is-hero">
@@ -159,6 +159,15 @@
 
 <h2 id="does-it-crank">Step 1: does the engine turn over?</h2>
 <p>If the starter does not turn the engine, the fault is in the battery or the starting circuit, not in the fuel or ignition. If the engine turns over at a normal speed but does not fire, the battery and starter are fine and the search moves to spark, fuel and compression.</p>
+
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#starting" tabindex="-1" aria-hidden="true"><img src="../../assets/interactive/wiring/preview/starting-cranking.png" alt="Wiring Lab starting tab with the starter relay energised and the starter motor cranking" width="1440" height="1500" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Follow the starting current.</strong> The Starting tab of the Wiring Lab shows the interlocks, the relay coil and the heavy starter current, and the no-earth fault beside it.</p>
+    <a class="ute-linkbtn" href="../../wiring/#starting">Open the starting circuit</a>
+  </div>
+</aside>
 
 <h2 id="no-crank">Step 2: the starter does not turn the engine</h2>
 <h3 id="battery">Check the battery first</h3>
@@ -173,6 +182,15 @@
 </figure>
 <p>If the starter spins freely with a whirring noise but the engine does not turn, the one-way starter clutch is slipping. The Motorcycle Mechanic course names this as the commonest starter fault.</p>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#ignition" tabindex="-1" aria-hidden="true"><img src="../../assets/interactive/wiring/preview/ignition-spark.png" alt="Wiring Lab ignition tab with pickup, CDI unit, coil and spark plug" width="1440" height="1000" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Follow the spark.</strong> The Ignition tab traces the signal from the crank pickup through the CDI to the coil and plug.</p>
+    <a class="ute-linkbtn" href="../../wiring/#ignition">Open the ignition circuit</a>
+  </div>
+</aside>
+
 <h2 id="cranks-no-start">Step 3: it cranks but will not fire</h2>
 <p>The K-Light 125 fault trees follow a fixed order, and it works for most four-strokes.</p>
 <h3 id="spark">Check for spark</h3>
@@ -184,6 +202,15 @@
 <p>With spark and fuel confirmed, measure compression with the engine warm, the throttle fully open and a fully charged battery. A healthy K-Light 125 reads 1.0 to 1.2 MPa. Low compression comes from valve clearances that have closed up, leaking valve seats, worn or stuck rings, or an intake leak. Valve clearance is the cheaper fix, so check it before planning a top-end repair.</p>
 <h3 id="starts-then-stops">It starts, then stops</h3>
 <p>If the engine fires and then dies, the K-Light tree points first to a blocked air filter and a blocked by-pass passage in the throttle body. On a carburetted bike, a partly blocked pilot jet gives the same symptom; our <a href="../carburettor-cleaning-basics/">carburettor cleaning guide</a> explains how to tell.</p>
+
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../engine/#gen" tabindex="-1" aria-hidden="true"><img src="../../assets/engine/shots/05-generator-electric-start.webp" alt="3D engine view of the generator side with starter motor, reduction gears and one-way starter clutch" width="868" height="542" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>See the starter clutch.</strong> The generator view in Under the Engine shows the starter motor, its reduction gears and the one-way clutch behind the rotor.</p>
+    <a class="ute-linkbtn" href="../../engine/#gen">Open the generator view</a>
+  </div>
+</aside>
 
 <h2 id="summary-table">Quick reference</h2>
 <div class="mz-art-table"><table>
@@ -203,6 +230,18 @@
 <h2 id="electric">Electric motorcycles</h2>
 <p>An electric motorcycle has no spark, fuel or compression, but the same logic applies: confirm the battery's state of charge, then the interlocks (side stand, kill switch and often a brake lever), then look for a fault message from the battery management system or controller. Never open a traction battery or controller; packs above 60 V DC need trained technicians. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> describes the parts involved.</p>
 <p>For symptom-by-symptom help, the <a href="../../repair/problems/">Repair section's problem finder</a> lists common faults with their causes, and the parts pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/parts/#spark_plug">spark plug</a>, <a href="../../repair/parts/#carb">carburettor</a> and <a href="../../repair/parts/#wiring">wiring</a> collect the related checks. Chapter 3.6 of the course, <a href="../../learn/#m3-diagnosis">Electrical diagnosis</a>, gives the full ignition and starter job sheets.</p>
+
+<h2 id="go-deeper">Go deeper</h2>
+<ul class="mz-art-deeper">
+  <li><a href="../../learn/#m3-diagnosis">Chapter 3.6: Electrical diagnosis</a>: ignition and starter job sheets</li>
+  <li><a href="../../learn/#m2-diagnosis">Chapter 2.7: Engine diagnosis and service</a>: compression and leak-down tests</li>
+  <li><a href="../../quiz/?topic=fuel-ignition">Fuel, ignition and electrical quiz</a>: test yourself on Module 3</li>
+  <li><a href="../../repair/problems/cranks-no-start/">Cranks but will not start</a></li>
+  <li><a href="../../repair/problems/starter-clicks/">Starter clicks but does not turn</a></li>
+  <li><a href="../../repair/repairs/spark-test/">Spark test</a></li>
+  <li><a href="../../repair/repairs/starter-relay-test/">Starter relay test</a></li>
+</ul>
+
 
       <aside class="mz-art-cta" aria-labelledby="cta-h">
         <span class="ute-label">Fix it</span>

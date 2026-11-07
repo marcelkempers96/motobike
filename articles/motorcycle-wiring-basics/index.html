@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/styles.css?v=20261102b">
-  <link rel="stylesheet" href="../../assets/articles.css?v=20261101c">
+  <link rel="stylesheet" href="../../assets/articles.css?v=20261107a">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,7 +58,7 @@
  },
  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
  "inLanguage": "en-GB",
- "wordCount": 1211,
+ "wordCount": 1401,
  "isPartOf": {
   "@type": "WebSite",
   "name": "Motopedia",
@@ -161,8 +161,26 @@
   <figcaption>The main harness laid flat: trunk, branches, connectors, fuses, relays and earth points. Plate WR01, Motopedia Module 3.</figcaption>
 </figure>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#harness" tabindex="-1" aria-hidden="true"><img src="../../assets/interactive/wiring/preview/harness.png" alt="Wiring Lab harness tab showing the main loom with its branches to lights, switches, battery and ignition" width="1440" height="1303" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Trace the harness.</strong> The Harness tab of the Wiring Lab lays out every branch of a commuter loom; tap a wire to follow it from end to end.</p>
+    <a class="ute-linkbtn" href="../../wiring/#harness">Open the harness</a>
+  </div>
+</aside>
+
 <h2 id="earth-return">Single-wire earth return</h2>
 <p>Most motorcycles use a <strong>single-wire earth-return</strong> system. The battery negative terminal is connected to the frame and engine, and each load returns its current either through the metal structure or through a black earth wire to a common earth point. Modern machines run dedicated earth wires to electronic parts, because painted, plastic and rubber-mounted parts do not give a reliable path, and because a few tenths of a volt of difference between earth points corrupts sensor signals. A corroded earth is one of the most common causes of dim lights and strange intermittent faults.</p>
+
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#build=short" tabindex="-1" aria-hidden="true"><img src="../../assets/photos/home-wiring-3.webp" alt="Circuit Builder screenshot with battery, fuse, relay, horn and meters on a breadboard" width="1300" height="806" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Blow a fuse safely.</strong> The Circuit Builder preset Short circuit after the fuse shows the current rise and the fuse open, with a meter on every branch.</p>
+    <a class="ute-linkbtn" href="../../wiring/#build=short">Load the short circuit</a>
+  </div>
+</aside>
 
 <h2 id="fuses">Fuses protect the wiring</h2>
 <p>A fuse protects the wire, not the component. It must be rated below the current that the smallest wire in its circuit can carry. Blade fuses of 10 A and 20 A are typical: the K-Light 125 used as the course example has a 20 A main fuse and two 10 A branch fuses. A fuse that blows repeatedly means there is a short circuit downstream. Fitting a larger fuse never fixes that and can set the harness alight.</p>
@@ -182,6 +200,15 @@
   </tbody>
 </table></div>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#charging" tabindex="-1" aria-hidden="true"><img src="../../assets/interactive/wiring/preview/charging.png" alt="Wiring Lab charging tab with alternator, regulator rectifier and battery" width="1440" height="1249" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Follow the charge.</strong> The Charging tab animates the alternator output through the regulator rectifier to the battery.</p>
+    <a class="ute-linkbtn" href="../../wiring/#charging">Open the charging circuit</a>
+  </div>
+</aside>
+
 <h2 id="charging">The charging circuit</h2>
 <p>An <a href="../../overview/?part=charging">alternator</a> on the end of the crankshaft makes alternating current. On almost all small motorcycles it is a permanent-magnet type: a rotor carrying magnets spins around a stator of copper coils. Its output rises with engine speed, and a typical three-phase stator can produce 50 to 80 V AC at 5,000 rpm with no load, so it must be controlled.</p>
 <p>The <strong>regulator/rectifier</strong> turns that AC into DC through a diode bridge and holds battery voltage in a safe window, generally 13.5 to 15.0 V at 5,000 rpm on a lead-acid system. The K-Light 125 specifies 14.5 ± 0.5 V. Too low and the battery slowly goes flat; too high and the battery dries out and bulbs blow. Traditional shunt regulators short the surplus current to earth as heat, which is why they carry large fins and why stators on small bikes can fail from overheating. Series (MOSFET) regulators disconnect the stator instead and run much cooler.</p>
@@ -190,6 +217,15 @@
   <figcaption>The charging circuit: alternator, regulator/rectifier, fuse, battery and load. Plate F21, Motopedia Module 3.</figcaption>
 </figure>
 <p>A quick health check needs only a multimeter. A rested flooded lead-acid battery reading about 12.7 V is fully charged and one reading 12.2 V is half charged; sealed AGM batteries read a little higher, about 12.8 to 13.1 V when full. With the engine held at about 5,000 rpm, the voltage across the battery should rise into the specified charging window.</p>
+
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#starting" tabindex="-1" aria-hidden="true"><img src="../../assets/interactive/wiring/preview/starting-cranking.png" alt="Wiring Lab starting tab with the starter relay energised and the starter motor cranking" width="1440" height="1500" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Crank the starter.</strong> The Starting tab shows the small control current through the interlocks and the heavy current through the relay.</p>
+    <a class="ute-linkbtn" href="../../wiring/#starting">Open the starting circuit</a>
+  </div>
+</aside>
 
 <h2 id="starting">The starting circuit</h2>
 <p>An electric <a href="../../overview/?part=starter">starter motor</a> draws tens to over a hundred amps, far more than a handlebar switch can carry. So the start button only energises the coil of a <strong>starter relay</strong>, which uses a few hundred milliamps and switches the heavy cable from battery to motor. The relay coil circuit runs through a chain of safety interlocks: the neutral switch, the clutch switch, the side-stand switch, the engine stop switch and, on many scooters and on the K-Light 125, a brake lever switch. If any of them is open, the starter will not turn, which is the first thing to check when the starter is silent.</p>
@@ -207,6 +243,18 @@
   <li>Choose a test point near the middle of the circuit, so one voltage reading tells you which half the fault is in, and repeat.</li>
 </ol>
 <p>Most faults are mechanical rather than electrical: corroded or loose terminals, pins pushed back out of a connector by careless probing, and wires chafed where the harness passes the steering head. Repairs should use crimped terminals of the right type, or a soldered and heat-shrunk splice. Larger modern machines also link their control units over a two-wire CAN bus, which is tested differently; chapter 3.5 of the course, <a href="../../learn/#m3-lighting-wiring">Lighting, signalling and wiring</a>, covers it, and chapter 3.4, <a href="../../learn/#m3-battery-charging">Battery, charging and starting</a>, gives the full charging and starting tests. For a battery that keeps going flat, our guide to <a href="../motorcycle-battery-keeps-dying/">battery, charging and drain tests</a> takes you through them in order, and the Repair section's <a href="../../repair/parts/#wiring">wiring</a> and <a href="../../repair/parts/#battery">battery</a> pages list common electrical faults.</p>
+
+<h2 id="go-deeper">Go deeper</h2>
+<ul class="mz-art-deeper">
+  <li><a href="../../learn/#m3-lighting-wiring">Chapter 3.5: Lighting, signalling and wiring</a>: colour codes, loads and wire sizes</li>
+  <li><a href="../../learn/#equations">Equations summary</a>: Ohm's law, power and wire resistance</li>
+  <li><a href="../../wiring/#build=bad-earth">Circuit Builder: a corroded earth</a>: measure the drop that dims a headlight</li>
+  <li><a href="../../quiz/?topic=fuel-ignition">Fuel, ignition and electrical quiz</a>: test yourself on Module 3</li>
+  <li><a href="../../repair/repairs/wiring-diagram-read/">Reading a wiring diagram</a>: symbols and colour codes</li>
+  <li><a href="../../repair/repairs/wiring-fault-find/">Wiring fault finding</a>: open circuits, shorts and bad earths</li>
+  <li><a href="../../repair/problems/fuse-keeps-blowing/">Fuse keeps blowing</a>: finding the short</li>
+</ul>
+
 
       <aside class="mz-art-cta" aria-labelledby="cta-h">
         <span class="ute-label">Try it</span>

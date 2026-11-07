@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/styles.css?v=20261102b">
-  <link rel="stylesheet" href="../../assets/articles.css?v=20261101c">
+  <link rel="stylesheet" href="../../assets/articles.css?v=20261107a">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,7 +58,7 @@
  },
  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
  "inLanguage": "en-GB",
- "wordCount": 1322,
+ "wordCount": 1476,
  "isPartOf": {
   "@type": "WebSite",
   "name": "Motopedia",
@@ -146,7 +146,7 @@
       <span class="ute-label">Electric</span>
       <h1>How electric motorcycles work</h1>
       <p class="mz-art-lead">An electric motorcycle replaces the tank, engine, clutch and gearbox with a battery, a controller and a motor. Each part is simple to describe, and together they turn about four-fifths of the battery&#x27;s energy into motion at the wheel.</p>
-      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="2026-11-02">2 November 2026</time></span><span>6 min read</span></div>
+      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="2026-11-02">2 November 2026</time></span><span>7 min read</span></div>
     </header>
     <article class="mz-art">
       <figure class="is-hero">
@@ -161,6 +161,15 @@
   <img src="../../assets/illustrations/electrical/F25.png" alt="Block diagram of an electric motorcycle powertrain: battery pack with BMS, main fuse, pre-charge circuit and contactor, motor controller, motor with position sensor, vehicle control unit, DC-DC converter, charge port, CAN bus, throttle and brake inputs and regenerative path" width="2400" height="1500" loading="lazy">
   <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Motopedia Module 5.</figcaption>
 </figure>
+
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../models/#battery_hv" tabindex="-1" aria-hidden="true"><img src="../../assets/renders/battery_hv.webp" alt="Rendered high-voltage lithium traction battery pack with orange cable and service disconnect" width="1000" height="800" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Turn the pack round.</strong> The 3D model library has the traction battery, controller, motor and charge inlet as separate models.</p>
+    <a class="ute-linkbtn" href="../../models/#battery_hv">Open the battery model</a>
+  </div>
+</aside>
 
 <h2 id="battery">The battery pack</h2>
 <p>The <a href="../../overview/?part=battery">traction battery</a> is built from lithium-ion cells joined in series to raise the voltage and in parallel to raise the capacity. A pack described as 20S10P has 20 groups in series, each made of 10 cells in parallel. With common 21700 cells of 3.6 V and 5.0 Ah, that gives 72 V nominal, 50 Ah and 3.6 kWh from 200 cells weighing about 14 kg, or about 20 kg once holders, busbars, electronics and the case are added. At 3.6 kWh per 100 km that is roughly 100 km of range, which is the scale of a 125-equivalent commuter.</p>
@@ -177,6 +186,11 @@
 <p>The battery supplies direct current, but the motor needs three-phase alternating current whose frequency follows the wheel speed. The <a href="../../overview/?part=controller">motor controller</a>, also called the inverter, makes that current with six fast power switches: MOSFETs on low-voltage machines, IGBTs or silicon-carbide devices on high-voltage ones. It reads the throttle, the rotor position and the phase currents, and it regulates the motor's torque. Throttle maps and ride modes are simply different instructions to this unit.</p>
 <p>Before the main contactor connects the battery, a <strong>pre-charge circuit</strong> charges the controller's capacitors gently through a resistor. Without it, closing the contactor onto empty capacitors would cause an inrush of thousands of amps that could weld the contactor tips.</p>
 
+<figure>
+  <a href="../../overview/?mode=elec&amp;part=motor"><img src="../../assets/illustrations/electrical/F24.png" alt="Technical plate of a hub BLDC motor and an interior permanent-magnet motor in section" width="2400" height="1740" loading="lazy"></a>
+  <figcaption>A hub motor and an interior permanent-magnet motor in section. Plate F24, Motopedia Module 5. <a href="../../overview/?mode=elec&amp;part=motor">Select the motor on the electric bike in the Overview.</a></figcaption>
+</figure>
+
 <h2 id="motor">The motor</h2>
 <p>The traction <a href="../../overview/?part=motor">motor</a> is almost always a brushless permanent-magnet machine. The copper windings are on the stationary stator, where they can be cooled, and the magnets are on the rotor. Two layouts dominate.</p>
 <ul>
@@ -189,6 +203,15 @@
 </figure>
 <p>An electric motor produces full torque from zero speed and keeps a useful spread of torque across a wide speed range, so a single fixed ratio is enough. That is why an electric motorcycle has no clutch and no gearbox.</p>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../cockpit/?mode=elec" tabindex="-1" aria-hidden="true"><img src="../../assets/renders/controller.webp" alt="Rendered motor controller with the lid removed, showing power stages and connectors" width="1000" height="800" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Ride the electric bike.</strong> The Cockpit runs the electric scrambler as well as the petrol bikes: open the throttle and roll off to feel the drive.</p>
+    <a class="ute-linkbtn" href="../../cockpit/?mode=elec">Open the electric Cockpit</a>
+  </div>
+</aside>
+
 <h2 id="regen">Regenerative braking</h2>
 <p>When the rider closes the throttle or touches the brake, the controller can reverse the motor's torque so that it works as a generator, sending energy back into the battery. A 250 kg machine and rider at 50 km/h carry about 6.7 Wh of kinetic energy, and perhaps 4 Wh of it comes back after losses in the tyre, drivetrain, motor, controller and battery. In stop-start city riding that adds up to a useful saving and less brake pad wear, but the friction brakes still do the hard stops.</p>
 
@@ -199,6 +222,18 @@
 <h2 id="maintenance">What still needs maintenance</h2>
 <p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 5 of the course starts with <a href="../../learn/#m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="../../learn/#m5-batteries">batteries and the BMS</a>.</p>
 <p>How the pack is charged and stored decides how long it lasts; our guide to <a href="../electric-motorcycle-battery-care/">electric motorcycle battery care</a> sets out the habits that matter. For faults, the Repair section has pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/parts/#controller">controller</a>, <a href="../../repair/parts/#motor">motor</a> and <a href="../../repair/parts/#charge_port">charge port</a>.</p>
+
+<h2 id="go-deeper">Go deeper</h2>
+<ul class="mz-art-deeper">
+  <li><a href="../../learn/#m5-architecture">Chapter 5.1: Architecture of an electric two-wheeler</a>: the energy chain end to end</li>
+  <li><a href="../../learn/#m5-motors">Chapter 5.2: Electric motors</a>: hub and mid-drive motors, torque and back-EMF</li>
+  <li><a href="../../learn/#m5-controllers">Chapter 5.3: Motor controllers and regenerative braking</a></li>
+  <li><a href="../../learn/#equations">Equations summary</a>: pack energy, C-rate and motor torque constant</li>
+  <li><a href="../../quiz/?topic=electric">Electric motorcycles quiz</a>: test yourself on Module 5</li>
+  <li><a href="../../repair/repairs/ev-motor-diagnosis/">Electric motor diagnosis</a>: the repair job sheet</li>
+  <li><a href="../../repair/problems/ev-wont-charge/">Electric bike will not charge</a>: checks in order</li>
+</ul>
+
 
       <aside class="mz-art-cta" aria-labelledby="cta-h">
         <span class="ute-label">Try it</span>

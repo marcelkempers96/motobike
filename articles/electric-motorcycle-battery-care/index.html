@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/styles.css?v=20261102b">
-  <link rel="stylesheet" href="../../assets/articles.css?v=20261101c">
+  <link rel="stylesheet" href="../../assets/articles.css?v=20261107a">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,7 +58,7 @@
  },
  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
  "inLanguage": "en-GB",
- "wordCount": 1290,
+ "wordCount": 1402,
  "isPartOf": {
   "@type": "WebSite",
   "name": "Motopedia",
@@ -173,6 +173,15 @@
 <h2 id="storage">Storing an electric motorcycle</h2>
 <p>For storage of weeks or months, leave the pack at <strong>40 to 60 per cent</strong> charge in a cool, dry place out of direct sun. The difference is large: the course gives a capacity loss of 10 to 20 per cent in a year for a pack stored full at 40 °C, against a few per cent for one stored half charged at 15 to 25 °C. Check the charge every few weeks. Many packs put their management system into a deep sleep in storage, because an always-on system drawing 10 mA would drain 1 Ah in 100 hours and could empty a stored pack over months.</p>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../overview/?mode=elec&amp;part=battery" tabindex="-1" aria-hidden="true"><img src="../../assets/renders/battery_hv.webp" alt="Rendered high-voltage lithium traction battery pack with orange cable and service disconnect" width="1000" height="800" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Look inside the pack.</strong> Select the battery on the electric bike in the 3D Overview to see the pack, BMS and high-voltage wiring.</p>
+    <a class="ute-linkbtn" href="../../overview/?mode=elec&amp;part=battery">Select the traction battery</a>
+  </div>
+</aside>
+
 <h2 id="bms">What the BMS does for you</h2>
 <p>The <strong>battery management system</strong> measures the voltage of every series group of cells, the temperatures and the current. It estimates the state of charge shown on the dashboard, sets the maximum charge and discharge currents, and opens the circuit if a cell goes over or under voltage, overheats or sees a short circuit. It also <strong>balances</strong> the cells: near the top of a charge it bleeds a small current from any group that is higher than the rest, typically 30 to 200 mA, so a badly drifted pack can need several long charges to recover. Leaving the charger connected for the full balancing period after a full charge helps.</p>
 <figure>
@@ -181,6 +190,15 @@
 </figure>
 <p>Workshops read the group voltages from the BMS with diagnostic software. On an NMC pack at rest, a spread below 10 to 20 mV between the highest and lowest group is normal; a group that keeps falling within a few days of a balance charge points to a cell with high self-discharge, which balancing cannot cure.</p>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../models/#charge_port" tabindex="-1" aria-hidden="true"><img src="../../assets/renders/charge_port.webp" alt="Rendered Type 2 style charging inlet" width="1000" height="800" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>See the charge inlet.</strong> The 3D model library has the charging inlet as its own model, next to the traction battery and controller.</p>
+    <a class="ute-linkbtn" href="../../models/#charge_port">Open the charge inlet</a>
+  </div>
+</aside>
+
 <h2 id="swapping">Swapping instead of charging</h2>
 <p>With <strong>battery swapping</strong>, the rider exchanges an empty removable pack for a charged one in a minute or two, and the operator owns the batteries. Gogoro in Taiwan, the Gachaco service in Tokyo, and networks such as Spiro and Ampersand in East Africa work this way. The station reads each pack's identity and history and controls its charging rate and temperature, so the battery-care rules above become the operator's job. Riders of bikes with removable packs that they charge themselves, such as the Roam Air with its two 3.24 kWh packs, should follow them directly.</p>
 
@@ -188,6 +206,18 @@
 <div class="mz-art-note"><p>A pack that has been dropped, crashed or submerged, or that shows swelling, a sweet solvent smell, hissing, smoke, heat without use or leaking electrolyte must never be charged or refitted. If it can be done safely, move it outdoors to a non-combustible area away from buildings and vehicles, and treat it as hazardous waste for specialist handling.</p></div>
 <p>A damaged lithium-ion cell can go into <strong>thermal runaway</strong>, a self-sustaining reaction that reaches 600 to 900 °C within seconds and releases flammable and toxic gases, and it can spread to neighbouring cells. Never open a traction pack or controller yourself: a nominal 72 V pack reaches 84 V when full, which is above the 60 V DC threshold for high-voltage work, and requires trained technicians with insulated tools. Inspect the charge port and connectors for looseness, burning or corrosion, and stop using a charger whose plug or lead gets hot.</p>
 <p>The Repair section's pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/parts/#charge_port">charge port</a> and <a href="../../repair/parts/#controller">controller</a> collect electric drive faults and checks. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the full drivetrain, and chapters 5.4 and 5.5 of the course, <a href="../../learn/#m5-batteries">Batteries and the BMS</a> and <a href="../../learn/#m5-charging">Charging, swapping and standards</a>, go into cell chemistry, charging standards and swap networks.</p>
+
+<h2 id="go-deeper">Go deeper</h2>
+<ul class="mz-art-deeper">
+  <li><a href="../../learn/#m5-batteries">Chapter 5.4: Batteries and the BMS</a>: cells, ageing and state of health</li>
+  <li><a href="../../learn/#m5-charging">Chapter 5.5: Charging, swapping and standards</a></li>
+  <li><a href="../../learn/#m5-safety">Chapter 5.6: Safety, diagnosis and service</a>: high-voltage safety</li>
+  <li><a href="../../learn/#equations">Equations summary</a>: pack energy, C-rate and charge time</li>
+  <li><a href="../../quiz/?topic=electric">Electric motorcycles quiz</a>: test yourself on Module 5</li>
+  <li><a href="../../repair/repairs/ev-charge-diagnosis/">Charging fault diagnosis</a></li>
+  <li><a href="../../repair/problems/ev-charge-stops/">Charging stops early</a></li>
+</ul>
+
 
       <aside class="mz-art-cta" aria-labelledby="cta-h">
         <span class="ute-label">Learn more</span>

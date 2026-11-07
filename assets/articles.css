@@ -104,3 +104,19 @@
 .mz-art .mz-art-pair figcaption { font-size: 14px; }
 .mz-art figure.is-tall img { max-height: 640px; object-fit: cover; }
 @media (max-width: 560px) { .mz-art .mz-art-pair { grid-template-columns: 1fr; } }
+
+/* "Try it" boxes that link an article into a tool view, and the "Go deeper" list */
+.mz-art-try { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 18px; align-items: center; border: 1px solid var(--line); border-left: 3px solid var(--warm); background: #FFFFFF; padding: 14px 16px; margin: 1.8em 0; }
+.mz-art-try-img { display: block; }
+.mz-art-try-img img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: #FFFFFF; border: 1px solid var(--line-soft); }
+.mz-art-try .ute-label { color: var(--warm); font-size: 12px; }
+.mz-art-try p { font-size: 16.5px; line-height: 1.55; margin: 6px 0 12px; }
+.mz-art .mz-art-try a.ute-linkbtn { text-decoration: none; }
+.mz-art figure > a { display: block; }
+.mz-art-deeper { list-style: none; padding: 0 !important; border-top: 1px solid var(--line); }
+.mz-art-deeper li { margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line-soft); font-size: 16.5px; line-height: 1.5; }
+.mz-art-deeper a { font-weight: 700; }
+@media (max-width: 560px) {
+  .mz-art-try { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .mz-art-try-img img { aspect-ratio: 16 / 9; }
+}

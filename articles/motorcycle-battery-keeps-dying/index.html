@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/styles.css?v=20261102b">
-  <link rel="stylesheet" href="../../assets/articles.css?v=20261101c">
+  <link rel="stylesheet" href="../../assets/articles.css?v=20261107a">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,7 +58,7 @@
  },
  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
  "inLanguage": "en-GB",
- "wordCount": 1218,
+ "wordCount": 1356,
  "isPartOf": {
   "@type": "WebSite",
   "name": "Motopedia",
@@ -178,6 +178,15 @@
 <p>Then check whether it holds. A good battery loses less than about 0.1 V over 24 hours of rest, and during cranking it should stay above about 9.6 V. A battery that reads below about 11.8 V even after a full charge has a failed cell. A battery left partly discharged grows hard sulphate crystals on its plates, which permanently reduce capacity; the K-Light manual notes that capacity typically declines after 2 to 3 years.</p>
 <div class="mz-art-note"><p>Charging releases hydrogen, which is explosive. Charge in a ventilated area, switch the charger off before connecting or disconnecting the clips, and wear eye protection. When removing a battery, disconnect the negative first; when refitting, connect the positive first and the negative last.</p></div>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#charging" tabindex="-1" aria-hidden="true"><img src="../../assets/interactive/wiring/preview/charging-shunt.png" alt="Wiring Lab charging tab with a shunt regulator, alternator and battery" width="1440" height="1000" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Watch the regulator work.</strong> The Charging tab of the Wiring Lab shows the alternator, the shunt regulator and the battery, with the voltage at each point.</p>
+    <a class="ute-linkbtn" href="../../wiring/#charging">Open the charging circuit</a>
+  </div>
+</aside>
+
 <h2 id="test-charging">Test 2: the charging system</h2>
 <p>With a fully charged battery, warm the engine, connect the multimeter on DC volts across the battery terminals and raise the engine speed slowly to 5,000 rpm. The voltage should rise to <strong>14.0 to 15.0 V</strong> and then stop rising. Switch the headlight to main beam: the reading may fall slightly but should stay above 13.5 V. The K-Light 125 specification is 14.5 ± 0.5 V at 5,000 rpm.</p>
 <ul>
@@ -191,9 +200,27 @@
 <p>To go further, stop the engine and unplug the stator connector. On the K-Light, each pair of the three white stator wires should measure 0.8 ± 0.3 ohms, and there must be no continuity from any white wire to the engine. With the engine running and the connector still unplugged, the AC voltage between each pair should be equal within about 10 per cent, typically 50 to 80 V AC on a small three-phase stator. One low pair confirms a stator fault.</p>
 <p>Most small motorcycles use a <strong>shunt regulator</strong>, which dumps surplus current as heat. Shunt regulators and stators run hot, and a corroded regulator connector overheats and melts, so look for discoloured plugs. On a small single the alternator output is only just larger than the load with the lights on, which is why long periods of idling with the headlight on can drain a healthy battery.</p>
 
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../wiring/#build=drain" tabindex="-1" aria-hidden="true"><img src="../../assets/photos/home-wiring-3.webp" alt="Circuit Builder screenshot with battery, fuse, relay, horn and meters on a breadboard" width="1300" height="806" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Do the drain test.</strong> The Circuit Builder preset Parasitic drain test puts an ammeter in series with the battery so you can pull fuses one at a time.</p>
+    <a class="ute-linkbtn" href="../../wiring/#build=drain">Load the drain test</a>
+  </div>
+</aside>
+
 <h2 id="test-drain">Test 3: parasitic drain</h2>
 <p>With the key off, the ECU memory, a clock or an alarm may draw a small current permanently. The K-Light fault tree allows <strong>no more than 1 mA</strong>. To measure it, disconnect the battery negative and connect an ammeter in series between the negative terminal and the negative lead. Start on the 10 A range to survive any wake-up surge, then step down to the milliamp range once the reading settles; modern ECUs can take several minutes to go to sleep. Never connect an ammeter directly across the battery terminals.</p>
 <p>If the drain is too high, pull the fuses one at a time until it drops, which identifies the circuit. The K-Light tree checks the brake light switch first, because a switch stuck on is a frequent cause. The size of the drain matters: the course calculates that a 20 mA accessory alarm would take a 6 Ah battery to half charge in about six days.</p>
+
+<aside class="mz-art-try">
+  <a class="mz-art-try-img" href="../../overview/?mode=4t&amp;part=battery" tabindex="-1" aria-hidden="true"><img src="../../assets/renders/bike_classic_4t__battery.webp" alt="The battery highlighted on the rendered classic four-stroke roadster" width="640" height="479" loading="lazy"></a>
+  <div class="mz-art-try-body">
+    <span class="ute-label">Try it</span>
+    <p><strong>Find the battery.</strong> Select the battery in the 3D Overview to see where it sits and what it feeds.</p>
+    <a class="ute-linkbtn" href="../../overview/?mode=4t&amp;part=battery">Select the battery</a>
+  </div>
+</aside>
 
 <h2 id="lithium">Lithium batteries</h2>
 <p>Lithium iron phosphate (LiFePO4) starter batteries are light and hold their charge well in storage, but they need different care. They must never be charged on a desulphation or pulse mode, must not be held above about 14.6 V, and must not be charged below about 0 °C. Their voltage barely changes between 20 and 80 per cent charge, so the voltage table above does not apply. Fit one only when the charging system regulates within the battery maker's window.</p>
@@ -201,6 +228,18 @@
 <h2 id="storage">Storage and prevention</h2>
 <p>A stored battery discharges itself. The K-Light manual asks for a charge about every three months in storage; a smart charger with a float stage at about 13.5 to 13.8 V can stay connected. Keep the terminals tight and lightly coated with petroleum jelly, and avoid jump-starting from a running car, which exposes the motorcycle's electronics to voltage spikes.</p>
 <p>The <a href="../../repair/parts/#battery">battery page in the Repair section</a> collects these tests with the related faults, and the <a href="../../repair/parts/#wiring">wiring page</a> covers the connectors and earths that cause many charging problems. Our <a href="../motorcycle-wiring-basics/">wiring basics guide</a> explains how to read the circuit, and chapter 3.4 of the course, <a href="../../learn/#m3-battery-charging">Battery, charging and starting</a>, gives the full job sheets.</p>
+
+<h2 id="go-deeper">Go deeper</h2>
+<ul class="mz-art-deeper">
+  <li><a href="../../learn/#m3-battery-charging">Chapter 3.4: Battery, charging and starting</a>: job sheets for each test</li>
+  <li><a href="../../learn/#equations">Equations summary</a>: charge current, charge time and drain time</li>
+  <li><a href="../../quiz/?topic=fuel-ignition">Fuel, ignition and electrical quiz</a>: test yourself on Module 3</li>
+  <li><a href="../../repair/repairs/battery-test-charge/">Battery test and charge</a></li>
+  <li><a href="../../repair/repairs/charging-system-test/">Charging system test</a></li>
+  <li><a href="../../repair/problems/battery-flat/">Battery goes flat</a></li>
+  <li><a href="../../repair/problems/not-charging/">Battery not charging</a></li>
+</ul>
+
 
       <aside class="mz-art-cta" aria-labelledby="cta-h">
         <span class="ute-label">Fix it</span>

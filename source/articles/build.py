@@ -1,11 +1,11 @@
 import json, re, html, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from arts6 import ARTICLES
+from arts7 import ARTICLES
 
 ROOT = '/home/user/motobike'
 BASE = 'https://motobike-five.vercel.app'
-DATE = '2026-11-02'
-CSSV = '20261101c'      # assets/articles.css
+DATE = '2026-11-02'      # default publication date; an article may set its own 'date'
+CSSV = '20261107a'      # assets/articles.css
 STYLESV = '20261102b'   # assets/styles.css (bumped by the coordinator; keep in sync)
 BY = {a['slug']: a for a in ARTICLES}
 
@@ -41,7 +41,12 @@ def jsonld(obj):
 
 ORG = {"@type": "Organization", "name": "Transitions Lab", "url": "https://www.transitionslab.org"}
 
+def human_date(d):
+    y, m, dd = d.split('-')
+    return f"{int(dd)} {['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][int(m) - 1]} {y}"
+
 def article_page(a):
+    DATE = a.get('date', globals()['DATE'])
     url = f'{BASE}/articles/{a["slug"]}/'
     w = words(a)
     mins = max(1, round(w / 220))
@@ -110,7 +115,7 @@ def article_page(a):
       <span class="ute-label">{esc(a['label'])}</span>
       <h1>{esc(a['h1'])}</h1>
       <p class="mz-art-lead">{esc(a['lead'])}</p>
-      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="{DATE}">2 November 2026</time></span><span>{mins} min read</span></div>
+      <div class="mz-art-meta"><span>By <b>Transitions Lab</b></span><span>Published <time datetime="{DATE}">{human_date(DATE)}</time></span><span>{mins} min read</span></div>
     </header>
     <article class="mz-art">
       <figure class="is-hero">
@@ -151,8 +156,8 @@ def article_page(a):
 '''
 
 GROUPS = [
-    ('how-it-works', 'How it works', 'How engines, clutches, wiring and electric drives work, and the main types of motorcycle.',
-     ['how-a-motorcycle-engine-works', 'two-stroke-vs-four-stroke', 'how-a-motorcycle-clutch-works', 'motorcycle-wiring-basics', 'how-electric-motorcycles-work', 'types-of-motorcycles']),
+    ('how-it-works', 'How it works', 'How engines, clutches, gearboxes, brakes, suspension, fuel systems, cooling, wiring and electric drives work, and the main types of motorcycle.',
+     ['how-a-motorcycle-engine-works', 'two-stroke-vs-four-stroke', 'how-a-motorcycle-clutch-works', 'how-a-motorcycle-gearbox-works', 'how-motorcycle-brakes-work', 'how-motorcycle-suspension-works', 'carburettor-vs-fuel-injection', 'air-oil-and-liquid-cooling', 'motorcycle-wiring-basics', 'how-electric-motorcycles-work', 'types-of-motorcycles']),
     ('maintenance-and-repair', 'Maintenance and repair', 'Checks, diagnosis and routine jobs you can do yourself, with the values to test against. For fault finding by symptom or by part, use the <a href="../repair/">Repair section</a>.',
      ['motorcycle-will-not-start', 'motorcycle-battery-keeps-dying', 'how-to-change-motorcycle-oil', 'how-to-check-motorcycle-brake-pads', 'motorcycle-tyre-pressure-and-wear', 'spark-plug-reading', 'carburettor-cleaning-basics', 'motorcycle-chain-maintenance', 'electric-motorcycle-battery-care', 'boda-boda-maintenance-checklist']),
 ]
@@ -241,9 +246,11 @@ pages = ['', 'overview/', 'cockpit/', 'learn/', 'quiz/', 'history/', 'types/', '
          'downloads/', 'sources/', 'updates/', 'about/', 'contact/', 'progress/', 'privacy/', 'cookies/', 'terms/', 'articles/'] + [f'articles/{a["slug"]}/' for a in ARTICLES] + ['repair/', 'repair/problems/', 'repair/parts/', 'repair/fix/']
 for p in pages:
     assert os.path.exists(f'{ROOT}/{p}index.html'), p
+LASTMOD = {f'articles/{a["slug"]}/': a.get('date', DATE) for a in ARTICLES}
+LASTMOD['articles/'] = max(LASTMOD.values())
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for p in pages:
-    lm = f'\n    <lastmod>{DATE}</lastmod>' if p.startswith('articles/') else ''
+    lm = f'\n    <lastmod>{LASTMOD.get(p, DATE)}</lastmod>' if p.startswith('articles/') else ''
     sm += f'  <url>\n    <loc>{BASE}/{p}</loc>{lm}\n  </url>\n'
 # keep any URL other pages added to the sitemap (e.g. crash-course/) that this generator does not own
 ours = {f'{BASE}/{p}' for p in pages}
