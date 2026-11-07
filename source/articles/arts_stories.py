@@ -1,6 +1,6 @@
 """Stories: visits and collections, told through the engineering of the bikes.
 Appends to the shared ARTICLES list (import after the arts chain)."""
-from arts6 import ARTICLES
+from arts7 import ARTICLES
 
 P = '../../assets/photos/blog/invercargill/'
 L = '../../learn/#'

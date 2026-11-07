@@ -1,6 +1,7 @@
 import json, re, html, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from arts7 import ARTICLES
+import arts_stories  # appends the stories to the same ARTICLES list
 
 ROOT = '/home/user/motobike'
 BASE = 'https://motobike-five.vercel.app'
@@ -156,6 +157,8 @@ def article_page(a):
 '''
 
 GROUPS = [
+    ('stories', 'Stories', 'Visits, collections and people, told through the engineering of their motorcycles.',
+     ['invercargill-classic-motorcycle-mecca']),
     ('how-it-works', 'How it works', 'How engines, clutches, gearboxes, brakes, suspension, fuel systems, cooling, wiring and electric drives work, and the main types of motorcycle.',
      ['how-a-motorcycle-engine-works', 'two-stroke-vs-four-stroke', 'how-a-motorcycle-clutch-works', 'how-a-motorcycle-gearbox-works', 'how-motorcycle-brakes-work', 'how-motorcycle-suspension-works', 'carburettor-vs-fuel-injection', 'air-oil-and-liquid-cooling', 'motorcycle-wiring-basics', 'how-electric-motorcycles-work', 'types-of-motorcycles']),
     ('maintenance-and-repair', 'Maintenance and repair', 'Checks, diagnosis and routine jobs you can do yourself, with the values to test against. For fault finding by symptom or by part, use the <a href="../repair/">Repair section</a>.',

@@ -67,7 +67,7 @@ body=f'''
 
 <h2 id="injection">Fuel-injected bikes</h2>
 <p>Most new motorcycles, including the K-Light 125, use fuel injection instead. The throttle body still collects carbon round the butterfly, but it is cleaned differently: spray carburettor cleaner into the bore with the butterfly opened by the cable, never by forcing a tool into the bore, and keep the cleaner off the throttle position sensor. Many ECUs then need an idle relearn.</p>
-<p>The <a href="{RP}carb">carburettor page</a> and the <a href="{RP}air_filter">air filter page</a> in the Repair section collect the related faults and checks. Chapter 3.1 of the course, <a href="{L}m3-mixture">Air, fuel and mixture</a>, covers every circuit, the jetting method and carburettor synchronising.</p>
+<p>The <a href="{RP}carb">carburettor page</a> and the <a href="{REP}air-filter-service/">air filter page</a> in the Repair section collect the related faults and checks. Chapter 3.1 of the course, <a href="{L}m3-mixture">Air, fuel and mixture</a>, covers every circuit, the jetting method and carburettor synchronising.</p>
 
 {deeper([
   (L+"m3-mixture", "Chapter 3.1: Air, fuel and mixture", "every circuit and the jetting order"),
@@ -213,7 +213,7 @@ body=f'''
 <h2 id="wheels">Wheels, balance and bearings</h2>
 <p>While you are at the wheel, spin it and watch the rim. The K-Light manual gives a runout standard within 1.0 mm and a limit of 2.0 mm, measured with a dial gauge. A shake through the handlebar at around 80 to 110 km/h usually means the wheel needs balancing. Lift the wheel and rock it at top and bottom: any play or roughness points to worn wheel bearings, which on the K-Light must not be reused once removed.</p>
 <div class="mz-art-note"><p>Tyres and brakes keep a rider upright more than any other part. If a tyre has a bulge, a deep cut or exposed cords, replace it before riding again.</p></div>
-<p>The Repair section's pages for the <a href="{RP}front_wheel">front wheel</a> and <a href="{RP}rear_wheel">rear wheel</a> collect wheel and tyre faults with their checks. Our <a href="../how-to-check-motorcycle-brake-pads/">brake pad guide</a> covers the other half of the stopping system, and chapter 4.6 of the course, <a href="{L}m4-wheels-tyres">Wheels and tyres</a>, includes the full tyre-fitting and balancing job sheet.</p>
+<p>The Repair section's pages for the <a href="{PRT}front_tyre/">front wheel</a> and <a href="{PRT}rear_tyre/">rear wheel</a> collect wheel and tyre faults with their checks. Our <a href="../how-to-check-motorcycle-brake-pads/">brake pad guide</a> covers the other half of the stopping system, and chapter 4.6 of the course, <a href="{L}m4-wheels-tyres">Wheels and tyres</a>, includes the full tyre-fitting and balancing job sheet.</p>
 
 {deeper([
   (L+"m4-wheels-tyres", "Chapter 4.6: Wheels and tyres", "construction, markings and fitting"),
@@ -282,7 +282,7 @@ body=f'''
 <h2 id="safety">When a pack is unsafe</h2>
 <div class="mz-art-note"><p>A pack that has been dropped, crashed or submerged, or that shows swelling, a sweet solvent smell, hissing, smoke, heat without use or leaking electrolyte must never be charged or refitted. If it can be done safely, move it outdoors to a non-combustible area away from buildings and vehicles, and treat it as hazardous waste for specialist handling.</p></div>
 <p>A damaged lithium-ion cell can go into <strong>thermal runaway</strong>, a self-sustaining reaction that reaches 600 to 900 °C within seconds and releases flammable and toxic gases, and it can spread to neighbouring cells. Never open a traction pack or controller yourself: a nominal 72 V pack reaches 84 V when full, which is above the 60 V DC threshold for high-voltage work, and requires trained technicians with insulated tools. Inspect the charge port and connectors for looseness, burning or corrosion, and stop using a charger whose plug or lead gets hot.</p>
-<p>The Repair section's pages for the <a href="{RP}battery">battery</a>, <a href="{RP}charge_port">charge port</a> and <a href="{RP}controller">controller</a> collect electric drive faults and checks. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the full drivetrain, and chapters 5.4 and 5.5 of the course, <a href="{L}m5-batteries">Batteries and the BMS</a> and <a href="{L}m5-charging">Charging, swapping and standards</a>, go into cell chemistry, charging standards and swap networks.</p>
+<p>The Repair section's pages for the <a href="{RP}battery">battery</a>, <a href="{RP}charge_port">charge port</a> and <a href="../../repair/systems/ev-drive/">controller</a> collect electric drive faults and checks. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the full drivetrain, and chapters 5.4 and 5.5 of the course, <a href="{L}m5-batteries">Batteries and the BMS</a> and <a href="{L}m5-charging">Charging, swapping and standards</a>, go into cell chemistry, charging standards and swap networks.</p>
 
 {deeper([
   (L+"m5-batteries", "Chapter 5.4: Batteries and the BMS", "cells, ageing and state of health"),

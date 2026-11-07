@@ -63,7 +63,7 @@ body=f'''
 
 <h2 id="maintenance">What still needs maintenance</h2>
 <p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 5 of the course starts with <a href="{L}m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="{L}m5-batteries">batteries and the BMS</a>.</p>
-<p>How the pack is charged and stored decides how long it lasts; our guide to <a href="../electric-motorcycle-battery-care/">electric motorcycle battery care</a> sets out the habits that matter. For faults, the Repair section has pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/parts/#controller">controller</a>, <a href="../../repair/parts/#motor">motor</a> and <a href="../../repair/parts/#charge_port">charge port</a>.</p>
+<p>How the pack is charged and stored decides how long it lasts; our guide to <a href="../electric-motorcycle-battery-care/">electric motorcycle battery care</a> sets out the habits that matter. For faults, the Repair section has pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/systems/ev-drive/">controller</a>, <a href="../../repair/parts/#motor">motor</a> and <a href="../../repair/parts/#charge_port">charge port</a>.</p>
 
 {deeper([
   (L+"m5-architecture", "Chapter 5.1: Architecture of an electric two-wheeler", "the energy chain end to end"),
@@ -76,7 +76,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/parts/#controller', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 5', False)]),
+cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/systems/ev-drive/', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 5', False)]),
 faq=[
  ('Do electric motorcycles have gears?', 'Almost all use a single fixed ratio with no gearbox or clutch. The motor gives full torque from standstill and works across a wide speed range, so gears are not needed.'),
  ('What does a BMS do on an electric motorcycle?', 'It measures every cell group\'s voltage, the temperatures and the current, estimates state of charge, balances the cells and cuts the current if any limit is exceeded. It also tells the controller and charger how much current they may use.'),
