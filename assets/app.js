@@ -129,7 +129,6 @@ ${PAGE === 'overview' ? `
       </div>
       <div class="ute-chips" role="group" aria-label="System categories">
         ${CATEGORIES.map((c) => `<button type="button" class="ute-chip ${S.category === c.k ? 'is-on' : ''}" data-cat="${c.k}">${c.label}</button>`).join('')}
-        <button type="button" class="ute-chip is-action" data-open-cv="wiring">Wiring diagram →</button>
       </div>
       <div class="ute-moto-wrap is-3d">
         <div id="ute-moto-stage" class="ute-moto-stage" aria-label="${info.name}: 3D model, select a part"></div>
