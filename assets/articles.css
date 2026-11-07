@@ -97,3 +97,10 @@
 }
 
 .mz-art figure.is-portrait img { max-width: 420px; }
+
+/* two portrait photos side by side (stories), one column on phones */
+.mz-art .mz-art-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.8em 0; }
+.mz-art .mz-art-pair figure { margin: 0; }
+.mz-art .mz-art-pair figcaption { font-size: 14px; }
+.mz-art figure.is-tall img { max-height: 640px; object-fit: cover; }
+@media (max-width: 560px) { .mz-art .mz-art-pair { grid-template-columns: 1fr; } }
