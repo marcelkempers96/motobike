@@ -99,6 +99,19 @@
     .hm-feature-img.is-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .7s ease; }
     .hm-feature-img.is-slides img.is-on { opacity: 1; }
     .hm-feature-img.is-slides.is-plate img { object-fit: contain; background: #FFFFFF; }
+    .hm-blog { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .hm-blog-card { display: flex; flex-direction: column; background: #FFF; border: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: border-color .2s ease; }
+    .hm-blog-card:hover { border-color: var(--ink); }
+    .hm-blog-card:hover b { text-decoration: underline; text-decoration-color: var(--warm); text-underline-offset: 3px; }
+    .hm-blog-img { display: block; aspect-ratio: 4 / 3; background: #F4F4F2; overflow: hidden; }
+    .hm-blog-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hm-blog-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; flex: 1; }
+    .hm-blog-tag { font: 700 11.5px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--warm); }
+    .hm-blog-body b { font: 700 18px/1.3 var(--sans); }
+    .hm-blog-body > span:not(.hm-blog-tag) { font-size: 14.5px; line-height: 1.45; color: var(--mute); }
+    .hm-blog-body i { margin-top: auto; padding-top: 6px; font: 600 12.5px/1 var(--sans); font-style: normal; color: var(--mute); }
+    @media (max-width: 1000px) { .hm-blog { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px) { .hm-blog { grid-template-columns: 1fr; } }
     .hm-quote-sec { position: relative; background: #141414 url(assets/photos/home-quote-bg.webp) center / cover no-repeat; isolation: isolate; }
     .hm-quote-sec::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,12,.72), rgba(12,12,12,.80)); z-index: -1; }
     .hm-quote-sec .hm-quote { padding: 56px 0; }
@@ -343,6 +356,16 @@
           <a class="hm-look" href="work-with-us/#partners-and-funders"><img class="hm-ico" src="assets/icons/partners-and-funders.svg" alt="" width="40" height="40"><b>Partners and funders</b><p>To bring electric motorcycle training to more places.</p></a>
         </div>
         <p style="margin-top:24px"><a class="ute-btn is-primary" href="contact/">Get in touch →</a></p>
+      </div>
+    </section>
+
+    <section class="hm-section hm-blog-sec">
+      <div class="hm-wrap">
+        <span class="hm-label">Articles</span>
+        <h2>From the blog</h2>
+        <p class="hm-lead">Short guides on how motorcycles work and how to look after them.</p>
+        <div class="hm-blog"><a class="hm-blog-card" href="articles/how-a-motorcycle-engine-works/"><span class="hm-blog-img"><img src="assets/renders/engine_4t.webp" alt="" loading="lazy"></span><span class="hm-blog-body"><span class="hm-blog-tag">How it works</span><b>How a motorcycle engine works</b><span>Four strokes, one spark: how fuel becomes crankshaft torque.</span><i>7 min read</i></span></a><a class="hm-blog-card" href="articles/motorcycle-will-not-start/"><span class="hm-blog-img"><img src="assets/photos/workshop-garage.jpg" alt="" loading="lazy"></span><span class="hm-blog-body"><span class="hm-blog-tag">Maintenance and repair</span><b>Why your motorcycle will not start</b><span>Fuel, spark, compression: the checks in the right order.</span><i>6 min read</i></span></a><a class="hm-blog-card" href="articles/motorcycle-chain-maintenance/"><span class="hm-blog-img"><img src="assets/renders/chain_sprockets.webp" alt="" loading="lazy"></span><span class="hm-blog-body"><span class="hm-blog-tag">Maintenance and repair</span><b>Motorcycle chain maintenance</b><span>Clean, lubricate, adjust, and know when to replace.</span><i>5 min read</i></span></a><a class="hm-blog-card" href="articles/how-electric-motorcycles-work/"><span class="hm-blog-img"><img src="assets/renders/bike_electric_side.webp" alt="" loading="lazy"></span><span class="hm-blog-body"><span class="hm-blog-tag">How it works</span><b>How electric motorcycles work</b><span>Battery, controller and motor, and what replaces the engine.</span><i>6 min read</i></span></a></div>
+        <p style="margin-top:24px"><a class="ute-btn" href="articles/">All articles →</a></p>
       </div>
     </section>
 
