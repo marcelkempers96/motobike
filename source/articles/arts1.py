@@ -1,3 +1,4 @@
+from links import EN, WL, CB, MD, QZ, EQ, BUILD, COCKPIT, VID, REP, PRB, PRT, OM, try_box, lfig, deeper
 A = '../../assets/'
 OV = '../../overview/?part='
 L = '../../learn/#'
@@ -39,9 +40,13 @@ body=f'''
 <h3 id="exhaust">4. Exhaust</h3>
 <p>The exhaust valve opens before the piston reaches the bottom. The first rush of high-pressure gas, called blowdown, leaves at close to the speed of sound, and the rising piston pushes out most of the rest. A small amount of burnt gas, typically 5 to 15 per cent, always stays behind in the combustion chamber and mixes with the next charge.</p>
 
+{try_box(EN+"top", "engine/shots/07-valvetrain.webp", "Valvetrain view of the 3D engine: camshaft, rockers, valves and springs above the cylinder", "See the valvetrain turn.", "The top view in Under the Engine shows the cam chain, camshaft and rockers opening the two valves of a single-cylinder head.", "Open the valvetrain view")}
+
 <h2 id="valve-timing">Why the valves open early and close late</h2>
 <p>If each valve opened and closed exactly at the dead centres, the engine would breathe poorly, because gas has inertia and a valve needs time to lift. Camshafts are therefore ground so that the inlet valve opens a few degrees before top dead centre and closes well after bottom dead centre, and the exhaust valve opens before bottom dead centre and closes after top dead centre. The short period around top dead centre when both valves are open is called <strong>valve overlap</strong>.</p>
 <p>A commuter single typically has 10 to 30 degrees of overlap, which gives a steady idle and low emissions. A sports four-valve engine may have 50 to 80 degrees, which helps it breathe at high revs but makes idle rough. Chapter 2.2 of the course, <a href="{L}m2-four-stroke">The four-stroke cycle</a>, shows how to calculate valve duration and lobe centre from a timing diagram.</p>
+
+{try_box(OM("4t", "engine"), "renders/piston.webp", "Rendered piston with rings and gudgeon pin", "Change the bore and stroke.", "In the 3D Overview the four-stroke engine has bore, stroke, compression and RPM sliders. Set 57 by 50 mm and compare the displacement with your own calculation.", "Open the engine in the Overview")}
 
 <h2 id="displacement">Displacement and compression ratio</h2>
 <p><strong>Displacement</strong> is the volume the piston sweeps in one stroke, multiplied by the number of cylinders. It is calculated from the bore (cylinder diameter) and the stroke (piston travel): bore × bore × stroke × 0.785. The K-Light 125 has a bore of 56.5 mm and a stroke of 49.5 mm, the same as the Honda CG125, which works out at 124 cm³.</p>
@@ -61,10 +66,23 @@ body=f'''
   <li><strong>Crankcase and sump.</strong> On most motorcycles the crankcase also houses the gearbox and the wet clutch, so one oil lubricates all three. That is why a motorcycle needs oil rated JASO MA or MA2 rather than an energy-conserving car oil.</li>
 </ul>
 
+{try_box(COCKPIT, "renders/instruments_analogue.webp", "Rendered twin analogue instruments with speedometer and rev counter", "Ride the engine.", "The Cockpit runs the same engine model: open the throttle, change gear and watch the rev counter respond.", "Open the Cockpit")}
+
 <h2 id="cylinders">Singles, twins and fours</h2>
 <p>A single-cylinder engine fires once every 720 degrees, which gives strong pulses and a simple, cheap, economical engine; that is why it dominates commuter and taxi motorcycles. Adding cylinders shortens the gap between power strokes. A 270-degree parallel twin fires at intervals of 270 and 450 degrees, the same rhythm as a 90-degree V-twin, while a flat-plane inline four fires every 180 degrees and runs very smoothly at high revs. More cylinders mean smaller pistons that can rev higher, at the cost of more parts and more weight.</p>
 <p>The same four strokes happen in every one of these engines. The two-stroke engine, which completes its cycle in a single revolution, works differently, and our article on <a href="../two-stroke-vs-four-stroke/">two-stroke versus four-stroke engines</a> explains how.</p>
 <p>When an engine will not start or runs badly, the same three needs (compression, a timed spark and the right mixture) give the order of diagnosis. Our guide to <a href="../motorcycle-will-not-start/">a motorcycle that will not start</a> works through them, and the <a href="../../repair/problems/">Repair section's problem finder</a> lists common engine faults by symptom.</p>
+
+{deeper([
+  (L+"m2-four-stroke", "Chapter 2.2: The four-stroke cycle", "valve timing, overlap and lobe centre with worked examples"),
+  (L+"m2-fundamentals", "Chapter 2.1: Engine fundamentals and key numbers", "displacement, compression ratio, power and torque"),
+  (EQ, "Equations summary", "displacement, compression ratio and Otto efficiency in one place"),
+  (EN+"overview", "Under the Engine", "the whole 3D engine, with gearbox, clutch and generator views"),
+  (QZ+"engine", "Engine quiz", "test yourself on Module 2"),
+  (REP+"compression-test/", "Compression test", "the job sheet for the gauge reading quoted above"),
+  (REP+"valve-clearance/", "Valve clearance check", "the most common four-stroke top-end service"),
+ ])}
+
 ''',
 cta=dict(label='Try it', h='Watch the cycle run in the Cockpit', p='The Cockpit puts you on a running engine: open the throttle, change gear and watch the rev counter and temperatures respond. The Overview lets you select the engine and see each part move inside it.', links=[('../../cockpit/', 'Open the Cockpit', True), (OV+'engine', 'Explore the engine', False), (L+'m2-four-stroke', 'Read chapter 2.2', False), ('../../repair/problems/', 'Find a fault', False)]),
 faq=[
@@ -102,6 +120,8 @@ body=f'''
 <p>Combustion drives the piston down. Below it, the reed valve closes and the crankcase charge is compressed to about 1.3 to 1.5 bar absolute. Above it, the crown uncovers the <a href="{OV}port_ex">exhaust port</a> at roughly 80 to 100 degrees before bottom dead centre, and the burnt gas rushes out. A few degrees later the <a href="{OV}port_tr">transfer ports</a> open, and the pressurised charge from the crankcase flows up into the cylinder, pushing the remaining exhaust gas ahead of it. This exchange is called <strong>scavenging</strong>.</p>
 <p>Modern two-strokes use loop scavenging, in which the transfer ports aim the fresh charge away from the exhaust so that it sweeps up the far wall, turns at the head and pushes the burnt gas out. Even so, some fresh charge always escapes straight out of the exhaust. In a carburetted engine that charge already contains fuel, and losses of 20 to 40 per cent at full throttle are common.</p>
 
+{lfig(OM("2t", "port_ex"), "illustrations/powertrain/PT03.png", "Technical plate of a two-stroke cylinder showing exhaust port, transfer ports and inlet port in the cylinder wall", "The ports a two-stroke uses in place of valves. Plate PT03, Motopedia Module 2.", "Select the exhaust port in the Overview.")}
+
 <h2 id="comparison">Side-by-side comparison</h2>
 <div class="mz-art-table"><table>
   <thead><tr><th>Feature</th><th>Two-stroke</th><th>Four-stroke</th></tr></thead>
@@ -115,6 +135,8 @@ body=f'''
     <tr><td>Typical use today</td><td>Motocross, enduro, trials, older commuters and mopeds</td><td>Almost every road motorcycle and scooter</td></tr>
   </tbody>
 </table></div>
+
+{try_box(OM("2t", "engine"), "renders/port_tr.webp", "Cutaway render of two-stroke transfer ports in the cylinder wall", "Run both engines side by side.", "Switch the Overview between the two-stroke and the four-stroke at the same RPM and count the power strokes per second.", "Open the two-stroke engine")}
 
 <h2 id="power">Why two-strokes make more power for their size</h2>
 <p>Firing every revolution means twice as many power strokes as a four-stroke at the same engine speed, and the absence of a valve train removes a limit on revs. At equal displacement a two-stroke can therefore produce 1.5 to 2 times the power of a four-stroke, with fewer parts and less weight. That is why a 125 cc two-stroke motocross bike competes against 250 cc four-strokes.</p>
@@ -131,9 +153,22 @@ body=f'''
 <p>The same features that give the two-stroke its power cause its pollution: fresh charge escaping through the exhaust, oil burnt as blue smoke, unstable combustion at part throttle and hot pistons that never get a cooling exhaust stroke. Under the European emission rules, carburetted two-strokes largely left road use from the early 2000s. They survive in competition, enduro and in older commuter fleets in Asia and Africa.</p>
 <p>Direct and transfer-port injection have narrowed the gap. KTM's Transfer Port Injection, introduced on its 250 and 300 EXC enduro models for 2018, sprays fuel into the transfer flow late in scavenging, so that mostly air, rather than fuel, escapes through the exhaust.</p>
 
+{try_box(BUILD, "photos/home-builder.webp", "Screenshot of the Motopedia Bike builder with engine, frame and wheel options", "Build one of each.", "The Bike builder lets you choose a two-stroke or a four-stroke engine and see how the rest of the machine changes around it.", "Open the Bike builder")}
+
 <h2 id="maintenance">Maintenance differences</h2>
 <p>A two-stroke has no valves to adjust and no cam chain to wear, and its top end (piston, rings and small-end bearing) can be rebuilt quickly with basic tools. It needs that rebuild more often, however, especially on a competition machine, and its power valve must be cleaned of carbon regularly: a valve stuck closed stops the engine revving, and one stuck open costs low-speed pulling power. A four-stroke needs oil changes, valve clearance checks and cam chain adjustment, but its intervals are long; the K-Light 125 changes its oil every 3,000 km.</p>
 <p>Chapter 2.3 of the course, <a href="{L}m2-two-stroke">The two-stroke cycle</a>, covers port timing, expansion chamber length and power valves in detail, with worked calculations.</p>
+
+{deeper([
+  (L+"m2-two-stroke", "Chapter 2.3: The two-stroke cycle", "port timing, expansion chambers and premix"),
+  (EQ, "Equations summary", "port timing, expansion chamber length and premix ratio"),
+  (MD+"engine_2t", "3D model: 125 cc two-stroke engine", "turn it round in the model library"),
+  (QZ+"engine", "Engine quiz", "test yourself on Module 2"),
+  (REP+"power-valve-service/", "Power valve service", "cleaning carbon from the exhaust valve"),
+  (PRB+"powervalve-stuck/", "Power valve stuck", "symptoms and checks"),
+  (REP+"reed-valve-check/", "Reed valve check", "the inlet valve of a two-stroke"),
+ ])}
+
 ''',
 cta=dict(label='Try it', h='Compare the two engines in 3D', p='The Overview has a four-stroke road bike and a two-stroke motocross bike. Select the exhaust or transfer port and watch the gas flow, then build your own machine and switch engine types in the Bike builder.', links=[(OV+'port_tr', 'See the transfer ports', True), ('../../build/', 'Open the Bike builder', False), (L+'m2-two-stroke', 'Read chapter 2.3', False)]),
 faq=[

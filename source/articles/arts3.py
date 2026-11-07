@@ -1,3 +1,4 @@
+from links import EN, WL, CB, MD, QZ, EQ, BUILD, COCKPIT, VID, REP, PRB, PRT, OM, try_box, lfig, deeper
 from arts2 import A, OV, L, ARTICLES
 
 # ---------------------------------------------------------------- 5
@@ -20,6 +21,8 @@ body=f'''
   <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Motopedia Module 5.</figcaption>
 </figure>
 
+{try_box(MD+"battery_hv", "renders/battery_hv.webp", "Rendered high-voltage lithium traction battery pack with orange cable and service disconnect", "Turn the pack round.", "The 3D model library has the traction battery, controller, motor and charge inlet as separate models.", "Open the battery model")}
+
 <h2 id="battery">The battery pack</h2>
 <p>The <a href="{OV}battery">traction battery</a> is built from lithium-ion cells joined in series to raise the voltage and in parallel to raise the capacity. A pack described as 20S10P has 20 groups in series, each made of 10 cells in parallel. With common 21700 cells of 3.6 V and 5.0 Ah, that gives 72 V nominal, 50 Ah and 3.6 kWh from 200 cells weighing about 14 kg, or about 20 kg once holders, busbars, electronics and the case are added. At 3.6 kWh per 100 km that is roughly 100 km of range, which is the scale of a 125-equivalent commuter.</p>
 <p>The cell chemistry matters. Nickel manganese cobalt (NMC) cells store the most energy for their weight. Lithium iron phosphate (LFP) cells are heavier for the same range but last many more charge cycles, contain no cobalt or nickel and are more stable if damaged, so they are spreading in commuter and battery-swap fleets.</p>
@@ -35,6 +38,8 @@ body=f'''
 <p>The battery supplies direct current, but the motor needs three-phase alternating current whose frequency follows the wheel speed. The <a href="{OV}controller">motor controller</a>, also called the inverter, makes that current with six fast power switches: MOSFETs on low-voltage machines, IGBTs or silicon-carbide devices on high-voltage ones. It reads the throttle, the rotor position and the phase currents, and it regulates the motor's torque. Throttle maps and ride modes are simply different instructions to this unit.</p>
 <p>Before the main contactor connects the battery, a <strong>pre-charge circuit</strong> charges the controller's capacitors gently through a resistor. Without it, closing the contactor onto empty capacitors would cause an inrush of thousands of amps that could weld the contactor tips.</p>
 
+{lfig(OM("elec", "motor"), "illustrations/electrical/F24.png", "Technical plate of a hub BLDC motor and an interior permanent-magnet motor in section", "A hub motor and an interior permanent-magnet motor in section. Plate F24, Motopedia Module 5.", "Select the motor on the electric bike in the Overview.")}
+
 <h2 id="motor">The motor</h2>
 <p>The traction <a href="{OV}motor">motor</a> is almost always a brushless permanent-magnet machine. The copper windings are on the stationary stator, where they can be cooled, and the magnets are on the rotor. Two layouts dominate.</p>
 <ul>
@@ -47,6 +52,8 @@ body=f'''
 </figure>
 <p>An electric motor produces full torque from zero speed and keeps a useful spread of torque across a wide speed range, so a single fixed ratio is enough. That is why an electric motorcycle has no clutch and no gearbox.</p>
 
+{try_box(COCKPIT + "?mode=elec", "renders/controller.webp", "Rendered motor controller with the lid removed, showing power stages and connectors", "Ride the electric bike.", "The Cockpit runs the electric scrambler as well as the petrol bikes: open the throttle and roll off to feel the drive.", "Open the electric Cockpit")}
+
 <h2 id="regen">Regenerative braking</h2>
 <p>When the rider closes the throttle or touches the brake, the controller can reverse the motor's torque so that it works as a generator, sending energy back into the battery. A 250 kg machine and rider at 50 km/h carry about 6.7 Wh of kinetic energy, and perhaps 4 Wh of it comes back after losses in the tyre, drivetrain, motor, controller and battery. In stop-start city riding that adds up to a useful saving and less brake pad wear, but the friction brakes still do the hard stops.</p>
 
@@ -57,6 +64,17 @@ body=f'''
 <h2 id="maintenance">What still needs maintenance</h2>
 <p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 5 of the course starts with <a href="{L}m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="{L}m5-batteries">batteries and the BMS</a>.</p>
 <p>How the pack is charged and stored decides how long it lasts; our guide to <a href="../electric-motorcycle-battery-care/">electric motorcycle battery care</a> sets out the habits that matter. For faults, the Repair section has pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/parts/#controller">controller</a>, <a href="../../repair/parts/#motor">motor</a> and <a href="../../repair/parts/#charge_port">charge port</a>.</p>
+
+{deeper([
+  (L+"m5-architecture", "Chapter 5.1: Architecture of an electric two-wheeler", "the energy chain end to end"),
+  (L+"m5-motors", "Chapter 5.2: Electric motors", "hub and mid-drive motors, torque and back-EMF"),
+  (L+"m5-controllers", "Chapter 5.3: Motor controllers and regenerative braking", ""),
+  (EQ, "Equations summary", "pack energy, C-rate and motor torque constant"),
+  (QZ+"electric", "Electric motorcycles quiz", "test yourself on Module 5"),
+  (REP+"ev-motor-diagnosis/", "Electric motor diagnosis", "the repair job sheet"),
+  (PRB+"ev-wont-charge/", "Electric bike will not charge", "checks in order"),
+ ])}
+
 ''',
 cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/parts/#controller', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 5', False)]),
 faq=[
@@ -105,12 +123,16 @@ body=f'''
 <p>Slack tells you when to adjust; length tells you when to replace. Pull the chain taut and measure across 10 pitches, from the far side of one roller to the near side of the eleventh, or across 20 pitches. For a 12.70 mm pitch chain, the new 10-pitch length is 127.0 mm and the 20-pitch length is 254.0 mm. Most chain makers set the limit at about 1.5 to 2 per cent elongation, which is about 129 mm over 10 pitches or 258 to 259 mm over 20. Measure in two or three places and use the chain maker's own limit where you have it.</p>
 <p>While you are there, look for stiff links that do not straighten as they leave the sprocket, cracked plates, missing rollers, rust and damaged O-rings. A chain with seized joints that cleaning and lubrication do not free needs replacing.</p>
 
+{try_box(OM("4t", "chain"), "renders/bike_classic_4t__chain.webp", "The chain and sprockets highlighted on the rendered classic four-stroke roadster", "Find the chain on the bike.", "Select the chain in the 3D Overview to see the gearbox sprocket, rear sprocket and swingarm adjusters together.", "Select the chain")}
+
 <h2 id="sprockets">Read the sprockets</h2>
 <p>A worn <a href="{OV}rear_sprocket">rear sprocket</a> shows hooked or pointed teeth leaning against the direction of rotation. The K-Light 125 manual calls for replacement when about a quarter of the tooth form has worn away. The small front sprocket wears fastest, because each of its teeth engages far more often. Check the rear sprocket nuts for tightness and the cush drive rubbers in the hub for cracks and free play.</p>
 <figure>
   <img src="{A}renders/rear_sprocket.webp" alt="Rendered rear sprocket with evenly shaped teeth and six mounting holes around the centre" width="1000" height="800" loading="lazy">
   <figcaption>A rear sprocket with healthy, symmetrical teeth. Worn teeth become hooked on the driving side. Render: Transitions Lab, CC BY-SA 4.0.</figcaption>
 </figure>
+
+{lfig(EN+"final", "illustrations/transmission/TR02.png", "Technical plate comparing chain, belt and shaft final drives", "Chain, belt and shaft final drives compared. Plate TR02, Motopedia Module 4.", "See the final drive in Under the Engine.")}
 
 <h2 id="adjust">Adjust the chain</h2>
 <ol>
@@ -124,6 +146,17 @@ body=f'''
 <h2 id="lubricate">Clean and lubricate</h2>
 <p>Clean the chain with a neutral chain cleaner and a soft brush. Do not use steam, petrol or strong solvents on an O-ring chain, because they swell or dissolve the rings. Dry it, then apply chain lubricant to the inside of the lower run where the plates overlap, so that the chain's own movement carries it into the joints, and wipe off the excess. Lubricate when the chain is warm after a ride, every 500 to 800 km, and after riding in rain.</p>
 <p>Chain drive is not the only option. Toothed belts, common on electric motorcycles and some cruisers, need no lubrication, and shaft drives are sealed but heavier. Chapter 4.3 of the course, <a href="{L}m4-final-drive">Final drive and CVT</a>, compares them and includes the full job sheet. The <a href="../../repair/parts/#chain">chain page in the Repair section</a> collects chain and sprocket faults such as noise, jumping and tight spots.</p>
+
+{deeper([
+  (L+"m4-final-drive", "Chapter 4.3: Final drive and CVT", "chain sizes, sprocket ratios and the job sheet"),
+  (EQ, "Equations summary", "final drive ratio, chain length and elongation"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (REP+"chain-wear-check/", "Chain wear check", "measuring elongation"),
+  (REP+"chain-adjust/", "Chain adjustment", "setting slack and wheel alignment"),
+  (REP+"chain-sprocket-replace/", "Chain and sprocket replacement", ""),
+  (PRB+"chain-jumps/", "Chain jumps the sprocket", "causes and checks"),
+ ])}
+
 ''',
 cta=dict(label='Try it', h='See the final drive in 3D', p='Select the chain or the rear sprocket in the Overview to see the final drive turning, then check your knowledge with the Module 4 questions in the Quiz.', links=[(OV+'chain', 'Explore the chain', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-final-drive', 'Read chapter 4.3', False), ('../../repair/parts/#chain', 'Chain repairs', False)]),
 faq=[

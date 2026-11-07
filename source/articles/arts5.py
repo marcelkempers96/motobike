@@ -1,3 +1,4 @@
+from links import EN, WL, CB, MD, QZ, EQ, BUILD, COCKPIT, VID, REP, PRB, PRT, OM, try_box, lfig, deeper
 from arts4 import A, OV, L, ARTICLES
 R = '../../repair/'
 RP = '../../repair/parts/#'
@@ -26,6 +27,8 @@ body=f'''
 <h2 id="does-it-crank">Step 1: does the engine turn over?</h2>
 <p>If the starter does not turn the engine, the fault is in the battery or the starting circuit, not in the fuel or ignition. If the engine turns over at a normal speed but does not fire, the battery and starter are fine and the search moves to spark, fuel and compression.</p>
 
+{try_box(WL+"starting", "interactive/wiring/preview/starting-cranking.png", "Wiring Lab starting tab with the starter relay energised and the starter motor cranking", "Follow the starting current.", "The Starting tab of the Wiring Lab shows the interlocks, the relay coil and the heavy starter current, and the no-earth fault beside it.", "Open the starting circuit")}
+
 <h2 id="no-crank">Step 2: the starter does not turn the engine</h2>
 <h3 id="battery">Check the battery first</h3>
 <p>Measure the battery voltage with a multimeter after the machine has stood for at least an hour. The K-Light 125 manual, the commuter used as the worked example in the Motopedia course, gives 13.1 V for a fully charged battery and 12.3 V as the point where it needs charging. While cranking, a healthy battery should not drop below about 9.6 V. If the horn is weak and the starter does nothing, a flat battery or a loose terminal is the usual cause. Our guide to <a href="../motorcycle-battery-keeps-dying/">a battery that keeps going flat</a> covers the full battery and charging tests.</p>
@@ -35,6 +38,8 @@ body=f'''
 <p>The start button carries only a small current to the relay coil; the relay then switches the heavy current to the starter motor. If there is no click, the fault is on the control side: a switch, the start button, the fuse or the relay coil. If the relay clicks but the starter does not turn, the relay contacts are burned or the starter itself has failed. A voltage-drop test while cranking separates them. On the positive side, from the battery post to the starter terminal, the drop should be 0.5 V or less; across the relay contacts, 0.2 V or less; and on the earth side, 0.3 V or less.</p>
 {fig('illustrations/wiring/F23.png', 2400, 1350, 'Wiring plate of an electric starting circuit showing battery, main fuse, ignition switch, start button, clutch, neutral and side-stand interlocks, starter relay, starter motor and starter clutch', 'The starting circuit. The start button only switches the relay; the relay switches the heavy starter current. Plate F23, Motopedia Module 3.')}
 <p>If the starter spins freely with a whirring noise but the engine does not turn, the one-way starter clutch is slipping. The Motorcycle Mechanic course names this as the commonest starter fault.</p>
+
+{try_box(WL+"ignition", "interactive/wiring/preview/ignition-spark.png", "Wiring Lab ignition tab with pickup, CDI unit, coil and spark plug", "Follow the spark.", "The Ignition tab traces the signal from the crank pickup through the CDI to the coil and plug.", "Open the ignition circuit")}
 
 <h2 id="cranks-no-start">Step 3: it cranks but will not fire</h2>
 <p>The K-Light 125 fault trees follow a fixed order, and it works for most four-strokes.</p>
@@ -47,6 +52,8 @@ body=f'''
 <p>With spark and fuel confirmed, measure compression with the engine warm, the throttle fully open and a fully charged battery. A healthy K-Light 125 reads 1.0 to 1.2 MPa. Low compression comes from valve clearances that have closed up, leaking valve seats, worn or stuck rings, or an intake leak. Valve clearance is the cheaper fix, so check it before planning a top-end repair.</p>
 <h3 id="starts-then-stops">It starts, then stops</h3>
 <p>If the engine fires and then dies, the K-Light tree points first to a blocked air filter and a blocked by-pass passage in the throttle body. On a carburetted bike, a partly blocked pilot jet gives the same symptom; our <a href="../carburettor-cleaning-basics/">carburettor cleaning guide</a> explains how to tell.</p>
+
+{try_box(EN+"gen", "engine/shots/05-generator-electric-start.webp", "3D engine view of the generator side with starter motor, reduction gears and one-way starter clutch", "See the starter clutch.", "The generator view in Under the Engine shows the starter motor, its reduction gears and the one-way clutch behind the rotor.", "Open the generator view")}
 
 <h2 id="summary-table">Quick reference</h2>
 <div class="mz-art-table"><table>
@@ -66,6 +73,17 @@ body=f'''
 <h2 id="electric">Electric motorcycles</h2>
 <p>An electric motorcycle has no spark, fuel or compression, but the same logic applies: confirm the battery's state of charge, then the interlocks (side stand, kill switch and often a brake lever), then look for a fault message from the battery management system or controller. Never open a traction battery or controller; packs above 60 V DC need trained technicians. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> describes the parts involved.</p>
 <p>For symptom-by-symptom help, the <a href="{R}problems/">Repair section's problem finder</a> lists common faults with their causes, and the parts pages for the <a href="{RP}battery">battery</a>, <a href="{RP}spark_plug">spark plug</a>, <a href="{RP}carb">carburettor</a> and <a href="{RP}wiring">wiring</a> collect the related checks. Chapter 3.6 of the course, <a href="{L}m3-diagnosis">Electrical diagnosis</a>, gives the full ignition and starter job sheets.</p>
+
+{deeper([
+  (L+"m3-diagnosis", "Chapter 3.6: Electrical diagnosis", "ignition and starter job sheets"),
+  (L+"m2-diagnosis", "Chapter 2.7: Engine diagnosis and service", "compression and leak-down tests"),
+  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (PRB+"cranks-no-start/", "Cranks but will not start", ""),
+  (PRB+"starter-clicks/", "Starter clicks but does not turn", ""),
+  (REP+"spark-test/", "Spark test", ""),
+  (REP+"starter-relay-test/", "Starter relay test", ""),
+ ])}
+
 ''',
 cta=dict(label='Fix it', h='Find the fault in the Repair section', p='The Repair section groups common motorcycle faults by symptom and by part, with the checks to carry out in order. Use it alongside the Wiring Lab, where you can follow the starting and ignition circuits on an interactive diagram.', links=[(R+'problems/', 'Browse problems', True), ('../../wiring/', 'Open the Wiring Lab', False), (L+'m3-diagnosis', 'Read chapter 3.6', False)]),
 faq=[
@@ -91,6 +109,8 @@ thumb=A+'renders/photo/render-engine-exterior.jpg',
 body=f'''
 <h2 id="why">Why motorcycle oil matters more than car oil</h2>
 <p>In a <strong>wet sump</strong> engine the oil is stored in the bottom of the crankcase, which on most motorcycles also houses the gearbox and the clutch, so one oil serves all three. It lubricates the crankshaft bearings and the valve gear, carries away heat (on an air-cooled engine the oil can carry 20 to 30 per cent of the heat the engine rejects), and must also let the clutch plates grip. That last job is why the grade matters as much as the change interval.</p>
+
+{try_box(EN+"gearbox", "engine/shots/02-gearbox-function-colours.webp", "3D engine view of the gearbox shafts and gears in function colours inside the crankcase", "See what the oil reaches.", "The gearbox view in Under the Engine shows the gears and clutch that share the crankcase oil with the engine.", "Open the gearbox view")}
 
 <h2 id="which-oil">Which oil to buy</h2>
 <p>Two labels on the bottle matter. The <strong>SAE viscosity grade</strong>, such as 10W-40, describes how the oil behaves cold (the number before the W) and hot (the number after it, measured at 100 °C). Typical motorcycle grades are 10W-30, 10W-40 and 15W-50; use the one in your handbook.</p>
@@ -122,6 +142,8 @@ body=f'''
 </ol>
 {fig('illustrations/powertrain/F11.png', 2400, 1696, 'Technical plate of a wet-sump lubrication circuit with oil strainer, trochoid pump, filter, crankshaft and big end, cylinder head and camshaft, gearbox and return to the sump, oil flow in orange', 'Oil leaves the sump through a strainer, is pumped through the filter to the crankshaft and the head, and splashes the gearbox on its way back. Plate F11, Motopedia Module 2.')}
 
+{try_box(OM("4t", "engine"), "renders/bike_classic_4t__engine.webp", "The engine highlighted on the rendered classic four-stroke roadster", "Find the drain plug and dipstick.", "Select the engine in the 3D Overview to see the crankcase, sump and covers on a classic air-cooled single.", "Select the engine")}
+
 <h2 id="level">Checking the level correctly</h2>
 <p>Check the level with the bike upright on level ground, not on the side stand. On a dipstick that screws into the filler, the K-Light manual has the dipstick rested in the hole, not screwed in, and the level read between the upper and lower marks. Top up to the upper mark if it is near the lower one.</p>
 <p>Both too little and too much oil cause problems. Too little leads to overheating and serious wear. Too much can upset the running of the engine and the clutch, and an overfilled sump is listed among the causes of blue smoke.</p>
@@ -130,6 +152,17 @@ body=f'''
 <h2 id="two-strokes-and-scooters">Two-strokes, scooters and electric bikes</h2>
 <p>A two-stroke burns its lubricating oil with the fuel, mixed in the tank or injected by a pump, and keeps a separate gearbox oil that is changed on its own schedule. Scooters with a CVT and a dry centrifugal clutch can use JASO MB oil, because there is no oil-bathed clutch to slip. Electric motorcycles need no engine oil at all.</p>
 <p>For other routine jobs, our <a href="../boda-boda-maintenance-checklist/">daily, weekly and monthly maintenance checklist</a> puts the oil change in context, and the <a href="{RP}clutch">clutch page in the Repair section</a> covers slip after an oil change. Chapter 2.6 of the course, <a href="{L}m2-lubrication-cooling">Lubrication and cooling</a>, explains the oil pump, filters and the full JASO and SAE classifications.</p>
+
+{deeper([
+  (L+"m2-lubrication-cooling", "Chapter 2.6: Lubrication and cooling", "oil pump, filters, SAE and JASO grades"),
+  (QZ+"engine", "Engine quiz", "test yourself on Module 2"),
+  (REP+"engine-oil-service/", "Engine oil service", "the full job sheet"),
+  (REP+"oil-choose-four-stroke/", "Choosing four-stroke oil", ""),
+  (REP+"oil-screen-clean/", "Oil strainer cleaning", ""),
+  (PRB+"clutch-slip-after-oil-change/", "Clutch slips after an oil change", ""),
+  ("../air-oil-and-liquid-cooling/", "Air, oil and liquid cooling", "how oil also carries heat"),
+ ])}
+
 ''',
 cta=dict(label='Learn more', h='Follow the oil through the engine', p='Select the engine in the Overview to see the parts the oil reaches, then search the Repair section for leaks, smoke and clutch slip. Chapter 2.6 has the full lubrication data for the K-Light 125.', links=[(OV+'engine', 'Explore the engine', True), (R, 'Search the Repair section', False), (L+'m2-lubrication-cooling', 'Read chapter 2.6', False)]),
 faq=[
@@ -177,6 +210,8 @@ body=f'''
 <p>Then check whether it holds. A good battery loses less than about 0.1 V over 24 hours of rest, and during cranking it should stay above about 9.6 V. A battery that reads below about 11.8 V even after a full charge has a failed cell. A battery left partly discharged grows hard sulphate crystals on its plates, which permanently reduce capacity; the K-Light manual notes that capacity typically declines after 2 to 3 years.</p>
 <div class="mz-art-note"><p>Charging releases hydrogen, which is explosive. Charge in a ventilated area, switch the charger off before connecting or disconnecting the clips, and wear eye protection. When removing a battery, disconnect the negative first; when refitting, connect the positive first and the negative last.</p></div>
 
+{try_box(WL+"charging", "interactive/wiring/preview/charging-shunt.png", "Wiring Lab charging tab with a shunt regulator, alternator and battery", "Watch the regulator work.", "The Charging tab of the Wiring Lab shows the alternator, the shunt regulator and the battery, with the voltage at each point.", "Open the charging circuit")}
+
 <h2 id="test-charging">Test 2: the charging system</h2>
 <p>With a fully charged battery, warm the engine, connect the multimeter on DC volts across the battery terminals and raise the engine speed slowly to 5,000 rpm. The voltage should rise to <strong>14.0 to 15.0 V</strong> and then stop rising. Switch the headlight to main beam: the reading may fall slightly but should stay above 13.5 V. The K-Light 125 specification is 14.5 ± 0.5 V at 5,000 rpm.</p>
 <ul>
@@ -187,9 +222,13 @@ body=f'''
 <p>To go further, stop the engine and unplug the stator connector. On the K-Light, each pair of the three white stator wires should measure 0.8 ± 0.3 ohms, and there must be no continuity from any white wire to the engine. With the engine running and the connector still unplugged, the AC voltage between each pair should be equal within about 10 per cent, typically 50 to 80 V AC on a small three-phase stator. One low pair confirms a stator fault.</p>
 <p>Most small motorcycles use a <strong>shunt regulator</strong>, which dumps surplus current as heat. Shunt regulators and stators run hot, and a corroded regulator connector overheats and melts, so look for discoloured plugs. On a small single the alternator output is only just larger than the load with the lights on, which is why long periods of idling with the headlight on can drain a healthy battery.</p>
 
+{try_box(CB+"drain", "photos/home-wiring-3.webp", "Circuit Builder screenshot with battery, fuse, relay, horn and meters on a breadboard", "Do the drain test.", "The Circuit Builder preset Parasitic drain test puts an ammeter in series with the battery so you can pull fuses one at a time.", "Load the drain test")}
+
 <h2 id="test-drain">Test 3: parasitic drain</h2>
 <p>With the key off, the ECU memory, a clock or an alarm may draw a small current permanently. The K-Light fault tree allows <strong>no more than 1 mA</strong>. To measure it, disconnect the battery negative and connect an ammeter in series between the negative terminal and the negative lead. Start on the 10 A range to survive any wake-up surge, then step down to the milliamp range once the reading settles; modern ECUs can take several minutes to go to sleep. Never connect an ammeter directly across the battery terminals.</p>
 <p>If the drain is too high, pull the fuses one at a time until it drops, which identifies the circuit. The K-Light tree checks the brake light switch first, because a switch stuck on is a frequent cause. The size of the drain matters: the course calculates that a 20 mA accessory alarm would take a 6 Ah battery to half charge in about six days.</p>
+
+{try_box(OM("4t", "battery"), "renders/bike_classic_4t__battery.webp", "The battery highlighted on the rendered classic four-stroke roadster", "Find the battery.", "Select the battery in the 3D Overview to see where it sits and what it feeds.", "Select the battery")}
 
 <h2 id="lithium">Lithium batteries</h2>
 <p>Lithium iron phosphate (LiFePO4) starter batteries are light and hold their charge well in storage, but they need different care. They must never be charged on a desulphation or pulse mode, must not be held above about 14.6 V, and must not be charged below about 0 °C. Their voltage barely changes between 20 and 80 per cent charge, so the voltage table above does not apply. Fit one only when the charging system regulates within the battery maker's window.</p>
@@ -197,6 +236,17 @@ body=f'''
 <h2 id="storage">Storage and prevention</h2>
 <p>A stored battery discharges itself. The K-Light manual asks for a charge about every three months in storage; a smart charger with a float stage at about 13.5 to 13.8 V can stay connected. Keep the terminals tight and lightly coated with petroleum jelly, and avoid jump-starting from a running car, which exposes the motorcycle's electronics to voltage spikes.</p>
 <p>The <a href="{RP}battery">battery page in the Repair section</a> collects these tests with the related faults, and the <a href="{RP}wiring">wiring page</a> covers the connectors and earths that cause many charging problems. Our <a href="../motorcycle-wiring-basics/">wiring basics guide</a> explains how to read the circuit, and chapter 3.4 of the course, <a href="{L}m3-battery-charging">Battery, charging and starting</a>, gives the full job sheets.</p>
+
+{deeper([
+  (L+"m3-battery-charging", "Chapter 3.4: Battery, charging and starting", "job sheets for each test"),
+  (EQ, "Equations summary", "charge current, charge time and drain time"),
+  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (REP+"battery-test-charge/", "Battery test and charge", ""),
+  (REP+"charging-system-test/", "Charging system test", ""),
+  (PRB+"battery-flat/", "Battery goes flat", ""),
+  (PRB+"not-charging/", "Battery not charging", ""),
+ ])}
+
 ''',
 cta=dict(label='Fix it', h='Trace the charging circuit', p='Follow current from the alternator through the regulator to the battery in the Wiring Lab, then use the Repair section to work through battery and charging faults part by part.', links=[('../../wiring/', 'Open the Wiring Lab', True), (RP+'battery', 'Battery repairs', False), (L+'m3-battery-charging', 'Read chapter 3.4', False)]),
 faq=[
@@ -224,6 +274,8 @@ body=f'''
 <p>When you pull the lever, the master cylinder pushes fluid to the caliper, whose pistons clamp the pads against the disc. Friction turns the bike's movement into heat, and both pads and disc slowly wear away. The caliper adjusts itself: as the pads wear, the pistons slide further out through their seals, so the lever feel does not change much. That is why worn pads are easy to miss.</p>
 <p>Most small machines, including the K-Light 125 used as the worked example in the Motopedia course, use a <strong>floating caliper</strong>: pistons on one side only, with the caliper body sliding on greased pins so that the outer pad is pulled onto the disc. Larger bikes often use fixed calipers with pistons on both sides.</p>
 {fig('illustrations/chassis/F19.png', 2400, 1620, 'Technical plate of a hydraulic disc brake with master cylinder, reservoir, brake hose and caliper section with pistons, seals and pads, beside a drum brake with shoes, cam, anchor pin and return springs', 'A hydraulic disc brake and a drum brake side by side. Plate F19, Motopedia Module 4.')}
+
+{try_box(OM("4t", "brake"), "renders/brake.webp", "Rendered floating disc gripped by a four-piston radial caliper", "Look into the caliper.", "Select the front brake in the 3D Overview to see the disc, caliper, pads and hose, with notes on each wear point.", "Select the front brake")}
 
 <h2 id="pad-limits">Pad wear limits</h2>
 <p>Pad wear is measured on the friction material only, not the steel backing plate. On the K-Light 125, new pads have <strong>6.0 mm</strong> of friction material front and rear, and the service limit is <strong>3 mm</strong>. If either pad in a caliper is at or below the limit, the manual requires <strong>both pads in that caliper to be replaced together</strong>, so that they clamp the disc evenly. Other models have their own figures in the handbook.</p>
@@ -255,10 +307,23 @@ body=f'''
 <p>Most motorcycles use DOT 4 fluid, which absorbs water from the air and loses boiling point as it does. Replace it every two years, a typical manufacturer interval, and never mix silicone DOT 5 fluid with glycol-based fluids. Check the level in the reservoir window: it falls slowly as the pads wear, so a low level with worn pads is normal, but a falling level with new pads means a leak.</p>
 <p>A <strong>spongy lever</strong> almost always means air in the system, which is cured by bleeding. A lever that goes soft after a long descent and recovers when cool means old fluid has boiled. On the K-Light 125, lever free play should be 10 to 20 mm and pedal free play 20 to 30 mm.</p>
 
+{try_box(OM("4t", "rear_brake"), "renders/bike_classic_4t__rear_brake.webp", "The rear drum brake highlighted on the rendered classic four-stroke roadster", "Find the drum brake.", "The classic roadster has a rear drum brake: select it in the Overview to see the cam lever and wear indicator.", "Select the rear brake")}
+
 <h2 id="drums">Drum brakes</h2>
 <p>Many commuters still have a rear drum brake, and the check is simpler. Apply the brake and look at the <strong>wear indicator</strong> on the brake cam lever: if the pointer is beyond the mark, the shoes or the drum are worn out. With the wheel out, a typical lining limit is 1.5 to 2.0 mm. Wet-clean the brake dust rather than blowing it out, and replace both shoes if they are contaminated with oil or grease.</p>
 <div class="mz-art-note"><p>If a brake feels soft, pulls to one side, or the pads are at the limit, fix it before riding. The front brake does about 70 per cent of the work in a hard stop.</p></div>
 <p>The <a href="{RP}brake">brake page in the Repair section</a> lists common brake faults with their checks, and our <a href="../boda-boda-maintenance-checklist/">maintenance checklist</a> puts the brake check into a daily and weekly routine. Chapter 4.7 of the course, <a href="{L}m4-brakes">Brakes</a>, includes the full pad, bleeding and drum brake job sheets.</p>
+
+{deeper([
+  (L+"m4-brakes", "Chapter 4.7: Brakes", "pads, bleeding and drum brake job sheets"),
+  (EQ, "Equations summary", "kinetic energy, line pressure and clamp force"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (REP+"brake-pad-replace/", "Brake pad replacement", ""),
+  (REP+"brake-bleed/", "Bleeding a hydraulic brake", ""),
+  (PRB+"spongy-brake/", "Spongy brake lever", ""),
+  ("../how-motorcycle-brakes-work/", "How motorcycle brakes work", "hydraulics, CBS, ABS and fade"),
+ ])}
+
 ''',
 cta=dict(label='Fix it', h='See the brake parts and their faults', p='Select the front brake in the Overview to see the disc, caliper and pads in 3D, then open the brake page in the Repair section for faults such as a spongy lever, drag and squeal.', links=[(RP+'brake', 'Brake repairs', True), (OV+'brake', 'Explore the brakes', False), (L+'m4-brakes', 'Read chapter 4.7', False)]),
 faq=[

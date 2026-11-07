@@ -1,3 +1,4 @@
+from links import EN, WL, CB, MD, QZ, EQ, BUILD, COCKPIT, VID, REP, PRB, PRT, OM, try_box, lfig, deeper
 from arts3 import A, OV, L, ARTICLES
 T = '../../types/#'
 TH = '../../types/thumbs/'
@@ -26,6 +27,8 @@ body=f'''
 <p>The <a href="{T}pioneer">pioneer motor-bicycle</a> was a bicycle with an engine bolted in. Gottlieb Daimler and Wilhelm Maybach's wooden Reitwagen of 1885 was the first petrol-engined two-wheeler, and the Hildebrand &amp; Wolfmüller of 1894 was the first offered for sale. These machines used a diamond bicycle frame, a single-cylinder engine of 200 to 500 cc, a belt drive with no clutch or gearbox, and pedals for starting and climbing.</p>
 <p>Within two decades the <a href="{T}vintage-vtwin">vintage V-twin</a> had arrived: a loop frame, a 45-degree V-twin of 1,000 to 1,200 cc, a hand gear-change on the tank and chain drive. Machines such as the Indian Powerplus and the Brough Superior SS100 were the first true motorcycles rather than motorised bicycles. Our <a href="../../history/">history of the motorcycle</a> follows the story in more detail.</p>
 
+{try_box(MD+"bike_superbike", "renders/bike_superbike_side.webp", "Side render of a 1000 cc superbike with full fairing", "Compare the bikes in 3D.", "The model library has eleven complete motorcycles, from a 1901 pioneer to a superbike and an electric scrambler.", "Open the model library")}
+
 <h2 id="road">Road motorcycles</h2>
 <h3 id="standard">Standard roadster</h3>
 <p>The <a href="{T}standard">standard roadster</a> has an upright seat, no fairing and the engine in plain view. It uses a steel cradle or backbone frame, a telescopic fork and chain final drive, with engines from 125 to 1,000 cc. The Triumph Bonneville T120 and the Honda CB750 Four are classic examples, and most riders learn on a machine of this kind.</p>
@@ -50,6 +53,8 @@ body=f'''
 <h3 id="adventure">Adventure</h3>
 <p>The <a href="{T}adventure">adventure</a> motorcycle is a road tourer that keeps going when the tarmac ends: tall, upright, with long-travel suspension, a 19 or 21 in front wheel, a large fuel tank, crash bars and panniers. The BMW R80G/S of 1980 created the type.</p>
 
+{try_box(OM("bb"), "renders/bike_boda_boda_threeq.webp", "Three-quarter render of a boda boda commuter motorcycle with long seat and luggage rack", "Explore a boda boda.", "Open the boda boda in the 3D Overview and select any of its parts to see what it does and how it is serviced.", "Open the boda boda")}
+
 <h2 id="urban-work">Urban and work motorcycles</h2>
 <h3 id="scooter">Scooter</h3>
 <p>The <a href="{T}scooter">scooter</a> has a step-through floor, small 10 to 14 in wheels and a unit-swing engine in which engine, CVT and final drive form one assembly that also acts as the rear swingarm. There is no clutch lever or gear pedal: a variator with roller weights, a V-belt and a centrifugal clutch do the work.</p>
@@ -62,8 +67,19 @@ body=f'''
 <h2 id="electric">Electric motorcycles</h2>
 <p>The <a href="{T}electric-motorcycle">electric motorcycle</a> puts a lithium-ion battery where the engine was, with a controller and a permanent-magnet motor driving the rear wheel through a single-speed belt or chain. There is no clutch or gearbox, and regenerative braking returns energy to the battery. The <a href="{T}electric-scooter">electric moped and e-boda</a> goes further, with a hub motor in the rear wheel and a removable battery that can be carried or swapped. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains each part.</p>
 
+{try_box(BUILD, "photos/home-builder.webp", "Screenshot of the Motopedia Bike builder with engine, frame and wheel options", "Build your own.", "The Bike builder lets you choose engine, frame, wheels and seat and see the type of machine they add up to.", "Open the Bike builder")}
+
 <h2 id="choosing">What the types have in common</h2>
 <p>Every type shares the same systems: an engine or motor, a drivetrain, a frame with suspension and steering, wheels and brakes, and an electrical system. What changes is the balance between them. A trials bike gives up seat and fuel range for low weight; a touring bike gives up agility for comfort and luggage; a boda boda gives up speed for strength and low running cost. Chapter 1.2 of the course, <a href="{L}m1-types">Types and configurations</a>, adds the legal categories and licence classes that apply to each.</p>
+
+{deeper([
+  (L+"m1-types", "Chapter 1.2: Types and configurations", "legal categories and licence classes"),
+  (L+"m1-anatomy", "Chapter 1.3: Anatomy and controls", "the parts every type shares"),
+  ("../../history/", "History of the motorcycle", "how each type appeared"),
+  (QZ+"foundations", "Foundations quiz", "test yourself on Module 1"),
+  (VID+"how-it-works", "Videos: how it works", ""),
+ ])}
+
 ''',
 cta=dict(label='Explore', h='Browse all sixteen types', p='The types page has a timeline from 1885 to today, family filters, and a labelled plate, history and typical specifications for every type. Then build your own machine in the Bike builder.', links=[('../../types/', 'Open motorcycle types', True), ('../../build/', 'Open the Bike builder', False), (L+'m1-types', 'Read chapter 1.2', False)]),
 faq=[
@@ -125,6 +141,8 @@ body=f'''
   <li>Check that the centre stand and side stand spring back fully, and that the rear carrier and crash guards are tight.</li>
 </ul>
 
+{try_box(OM("bb", "chain"), "renders/bike_boda_boda__chain.webp", "The chain highlighted on the rendered boda boda commuter", "See each check on the bike.", "Select the chain, brakes or tyres of the boda boda in the 3D Overview to see where each daily and weekly check is made.", "Open the boda boda chain")}
+
 <h2 id="weekly">Weekly checks</h2>
 <figure>
   <img src="{A}illustrations/chassis/F19.png" alt="Technical plate of motorcycle brakes: a hydraulic disc system with master cylinder, reservoir, line, caliper and disc beside a drum brake with shoes, cam and return springs" width="2400" height="1620" loading="lazy">
@@ -140,6 +158,8 @@ body=f'''
   <li><strong>Nuts and bolts.</strong> Check the axle nuts, the rear sprocket nuts, the engine mounts, the footpegs, the carrier and the mirrors. Vibration on rough roads loosens them.</li>
 </ul>
 
+{try_box(OM("bb", "brake"), "renders/bike_boda_boda__brake.webp", "The front brake highlighted on the rendered boda boda commuter", "Check the brakes.", "The brake part view shows the caliper or drum, cable or hose and the wear points to look at.", "Select the boda boda brakes")}
+
 <h2 id="monthly">Monthly or by distance</h2>
 <ul>
   <li><strong>Engine oil.</strong> The K-Light 125 changes its 1.1 litres of oil every 3,000 km, which at 120 km a day is less than a month. Use oil rated JASO MA or MA2, because the same oil lubricates the wet clutch; car oils with friction modifiers make it slip. Our guide to <a href="../how-to-change-motorcycle-oil/">changing motorcycle oil</a> gives the steps.</li>
@@ -154,6 +174,17 @@ body=f'''
 <p>Electric boda bodas need no oil changes, spark plugs, valve adjustment or air filter. Tyres, brakes, wheel bearings and the chain or belt still need the same daily and weekly checks, and chains wear faster than on a petrol machine because of the motor's instant torque. Check the battery and charge connectors for looseness, burning or corrosion, and never open a traction battery or controller: packs above 60 V DC need trained technicians with insulated tools. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the parts, and our <a href="../electric-motorcycle-battery-care/">battery care guide</a> covers charging and storage.</p>
 <div class="mz-art-note"><p>The rider and passenger depend on the tyres and brakes more than on anything else. If a brake feels soft, a tyre is damaged or the chain is badly worn, fix it before carrying a passenger.</p></div>
 <p>Chapter 4.8 of the course, <a href="{L}m4-maintenance">Periodic maintenance and pre-delivery inspection</a>, gives the full schedule, the T-CLOCS checklist and the chassis tune-up. When a check turns up a fault, the <a href="../../repair/problems/">Repair section</a> lists common problems with their causes, and has pages for the <a href="../../repair/parts/#brake">brakes</a>, <a href="../../repair/parts/#chain">chain</a> and <a href="../../repair/parts/#rear_wheel">rear wheel</a>.</p>
+
+{deeper([
+  (L+"m4-maintenance", "Chapter 4.8: Periodic maintenance and pre-delivery inspection", "the full service schedule"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (REP+"oil-level-check/", "Oil level check", ""),
+  (REP+"chain-adjust/", "Chain adjustment", ""),
+  (REP+"brake-pad-check/", "Brake pad check", ""),
+  (REP+"tyre-pressure-check/", "Tyre pressure check", ""),
+  (VID+"maintenance", "Videos: maintenance", ""),
+ ])}
+
 ''',
 cta=dict(label='Learn more', h='Train your eye on the real parts', p='Select the brake, chain or tyres in the Overview to see each part in 3D, then test what you know with the Quiz. Workshops and fleet operators can use the course modules for free under CC BY-SA 4.0.', links=[(OV+'brake', 'Explore the brakes', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-maintenance', 'Read chapter 4.8', False), ('../../repair/problems/', 'Find a fault', False)]),
 faq=[

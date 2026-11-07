@@ -1,3 +1,4 @@
+from links import EN, WL, CB, MD, QZ, EQ, BUILD, COCKPIT, VID, REP, PRB, PRT, OM, try_box, lfig, deeper
 from arts5 import A, OV, L, R, RP, fig, ARTICLES
 
 # ---------------------------------------------------------------- 13
@@ -44,6 +45,8 @@ body=f'''
 <h2 id="when-to-clean">When to clean</h2>
 <p>Clean the carburettor when the symptom matches a circuit and the simpler causes above have been ruled out, when fuel has been left to stand in the bowl and the bike now runs only on the choke, or when you find dirt or water in the float bowl. Cleaning is not a cure for wrong jetting: a change of altitude, exhaust or air filter alters the airflow, and the course's jetting chapter explains how to correct the mixture in the right order, main jet first.</p>
 
+{try_box(OM("4t", "carb"), "renders/carb.webp", "Rendered slide carburettor in half section with float bowl, jets and slide", "Open the carburettor.", "Select the carburettor in the 3D Overview to see the slide, needle, jets and float bowl in half section.", "Select the carburettor")}
+
 <h2 id="how-to-clean">How to clean and inspect</h2>
 <p>The MAVCC Motorcycle Mechanic course, one of the sources for the Motopedia modules, sets out a workshop procedure for a full clean in a dip tank. The main points apply to any method.</p>
 <ol>
@@ -60,9 +63,22 @@ body=f'''
 <h2 id="adjusting">Screws, jets and numbers</h2>
 <p>On a carburettor whose adjusting screw sits on the engine side of the slide, it is a <strong>fuel screw</strong> and turning it out richens the idle mixture; on the intake side it is an <strong>air screw</strong> and turning it out leans it. Many constant-velocity carburettors built since the 1980s have the fuel screw sealed for emissions reasons. Main jet numbers are not the same between brands: on Mikuni hex mains the number is proportional to flow, while on Keihin mains it approximates the hole diameter in hundredths of a millimetre.</p>
 
+{try_box(MD+"throttle_body", "renders/throttle_body.webp", "Rendered EFI throttle body with butterfly valve, injector and throttle position sensor", "Compare a throttle body.", "The 3D model library has the EFI throttle body beside the carburettor, so you can see what replaced the jets.", "Open the throttle body")}
+
 <h2 id="injection">Fuel-injected bikes</h2>
 <p>Most new motorcycles, including the K-Light 125, use fuel injection instead. The throttle body still collects carbon round the butterfly, but it is cleaned differently: spray carburettor cleaner into the bore with the butterfly opened by the cable, never by forcing a tool into the bore, and keep the cleaner off the throttle position sensor. Many ECUs then need an idle relearn.</p>
 <p>The <a href="{RP}carb">carburettor page</a> and the <a href="{RP}air_filter">air filter page</a> in the Repair section collect the related faults and checks. Chapter 3.1 of the course, <a href="{L}m3-mixture">Air, fuel and mixture</a>, covers every circuit, the jetting method and carburettor synchronising.</p>
+
+{deeper([
+  (L+"m3-mixture", "Chapter 3.1: Air, fuel and mixture", "every circuit and the jetting order"),
+  (EQ, "Equations summary", "air-fuel ratio and lambda"),
+  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (REP+"carburettor-clean/", "Carburettor cleaning", "the full job sheet"),
+  (REP+"carb-float-check/", "Float height check", ""),
+  (PRB+"carb-overflowing/", "Carburettor overflowing", ""),
+  ("../carburettor-vs-fuel-injection/", "Carburettor or fuel injection", "how the two fuel systems compare"),
+ ])}
+
 ''',
 cta=dict(label='Fix it', h='Explore the carburettor and its faults', p='Select the carburettor in the Overview to see where it sits between the air filter and the engine, then open the Repair section for running faults by symptom and by part.', links=[(RP+'carb', 'Carburettor repairs', True), (OV+'carb', 'Explore the carburettor', False), (L+'m3-mixture', 'Read chapter 3.1', False)]),
 faq=[
@@ -88,6 +104,8 @@ thumb=A+'renders/spark_plug.webp',
 body=f'''
 <h2 id="anatomy">What a spark plug is made of</h2>
 <p>A spark plug has a steel <strong>shell</strong> with a thread and a sealing seat, an aluminium-oxide ceramic <strong>insulator</strong>, a <strong>centre electrode</strong> (nickel alloy, often with a copper core, or fine platinum or iridium wire), and an <strong>earth electrode</strong> welded to the shell. The gap between the two electrodes is where the spark jumps. Resistor plugs also contain a resistor of about 5 kΩ that limits radio interference.</p>
+
+{try_box(OM("4t", "spark_plug"), "renders/bike_classic_4t__spark_plug.webp", "The spark plug highlighted on the rendered classic four-stroke roadster", "Find the plug.", "Select the spark plug in the 3D Overview to see where it sits in the head and which lead and cap feed it.", "Select the spark plug")}
 
 <h2 id="heat-range">Heat range: why plugs run at a set temperature</h2>
 <p>The insulator nose must run between about <strong>450 °C</strong>, below which carbon and oil deposits build up and the plug fouls, and about <strong>850 °C</strong>, above which the tip glows and can ignite the mixture before the spark. The <strong>heat range</strong> describes how quickly the insulator passes heat to the shell and the cylinder head. A hot plug has a long insulator nose and suits low-load commuting; a cold plug has a short nose and suits sustained high load.</p>
@@ -121,10 +139,23 @@ body=f'''
 {fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Motopedia Module 3.')}
 <p>Two-strokes usually use capacitor discharge ignition (CDI), whose voltage rises so fast that the spark fires before it can leak away across an oily insulator. That suits engines whose plugs foul with oil, but the spark is short, so a two-stroke's plug colour also depends heavily on its oil ratio.</p>
 
+{try_box(WL+"ignition", "interactive/wiring/preview/ignition-spark.png", "Wiring Lab ignition tab with pickup, CDI unit, coil and spark plug", "Follow the spark.", "The Ignition tab of the Wiring Lab traces the trigger signal, the CDI discharge and the coil output to the plug.", "Open the ignition circuit")}
+
 <h2 id="spark-test">Testing for a spark</h2>
 <p>If the engine will not start, fit the plug into an insulated spark tester set to about 6 to 8 mm, earth it and crank. A strong blue-violet spark is good; a weak orange spark or none points to the plug, the cap, the coil or the trigger. Our guide to <a href="../motorcycle-will-not-start/">diagnosing a motorcycle that will not start</a> continues from there.</p>
 <div class="mz-art-note"><p>Ignition systems produce up to 35 kV. Never hold a plug or lead with bare hands during a spark test, and use an insulated tester rather than holding a plug against the cylinder head.</p></div>
 <p>The <a href="{RP}spark_plug">spark plug page in the Repair section</a> collects the related faults. Chapter 3.3 of the course, <a href="{L}m3-ignition">Ignition systems</a>, explains coils, CDI and ignition timing, and our <a href="../carburettor-cleaning-basics/">carburettor cleaning guide</a> covers the mixture faults that plugs reveal.</p>
+
+{deeper([
+  (L+"m3-ignition", "Chapter 3.3: Ignition systems", "CDI, TCI and timing"),
+  (L+"m2-diagnosis", "Chapter 2.7: Engine diagnosis and service", "the spark plug reading job sheet"),
+  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (REP+"spark-plug-service/", "Spark plug service", ""),
+  (REP+"spark-plug-heat-range/", "Choosing the heat range", ""),
+  (PRB+"no-spark/", "No spark", ""),
+  (PRB+"plug-oily/", "Oily spark plug", ""),
+ ])}
+
 ''',
 cta=dict(label='Try it', h='See the spark plug in its engine', p='Select the spark plug in the Overview to see where it sits in the cylinder head, then use the Repair section to follow a misfire or a no-start back to its cause.', links=[(RP+'spark_plug', 'Spark plug repairs', True), (OV+'spark_plug', 'Explore the spark plug', False), (L+'m3-ignition', 'Read chapter 3.3', False)]),
 faq=[
@@ -159,6 +190,8 @@ body=f'''
 </ul>
 <p>Check pressures at least monthly and before long trips; a weekly check is better for a working motorcycle. A tyre that needs air every week has a slow puncture, a leaking valve or a damaged bead seat.</p>
 
+{try_box(OM("4t", "front_wheel"), "renders/front_wheel_spoked.webp", "Rendered wire-spoked front wheel with tyre and brake disc", "Look at the wheel.", "Select the front wheel in the 3D Overview for the tyre, rim and bearing notes, and switch bikes to compare spoked, cast and motocross wheels.", "Select the front wheel")}
+
 <h2 id="tread">Tread depth and wear indicators</h2>
 <p>Look for small raised blocks in the main grooves, marked by a triangle or the letters TWI on the shoulder. These <strong>tread wear indicators</strong> leave about 0.8 to 1 mm of tread when the surface is level with them. The K-Light 125 wear limit is <strong>1 mm</strong>, which is also the legal minimum in the UK for machines over 50 cc; check the rules in your country.</p>
 <p>Wear pattern matters as well as depth. A rear tyre used mostly in a straight line wears flat in the centre, and a <strong>square-worn</strong> tyre makes the bike drop suddenly into corners; replace it before it reaches the legal limit. Also look for cracks, nails, cuts and bulges on the tread and the sidewalls, and note any directional arrow, which must point in the direction of rotation.</p>
@@ -175,10 +208,23 @@ body=f'''
 <h2 id="punctures">Punctures and repairs</h2>
 <p>A tubeless tyre usually deflates slowly, because the rubber grips the object; a tube can split and deflate suddenly. A proper tubeless repair is a <strong>combined plug-patch</strong> fitted from inside after removing the tyre from the rim. Most tyre makers allow repairs only in the central part of the tread, for injuries no larger than about 6 mm, with no previous repair nearby and no sidewall or shoulder damage, and some do not allow motorcycle tyre repairs at all. An external string plug is a temporary get-you-home measure only, and a tube must never be fitted to cure a leak in a damaged tubeless tyre.</p>
 
+{lfig(MD+"front_wheel_cast", "illustrations/wheels/W01.png", "Technical plate comparing wire-spoked, cast alloy and other motorcycle wheel types", "Motorcycle wheel types compared. Plate W01, Motopedia Module 4.", "Compare the wheels in the model library.")}
+
 <h2 id="wheels">Wheels, balance and bearings</h2>
 <p>While you are at the wheel, spin it and watch the rim. The K-Light manual gives a runout standard within 1.0 mm and a limit of 2.0 mm, measured with a dial gauge. A shake through the handlebar at around 80 to 110 km/h usually means the wheel needs balancing. Lift the wheel and rock it at top and bottom: any play or roughness points to worn wheel bearings, which on the K-Light must not be reused once removed.</p>
 <div class="mz-art-note"><p>Tyres and brakes keep a rider upright more than any other part. If a tyre has a bulge, a deep cut or exposed cords, replace it before riding again.</p></div>
 <p>The Repair section's pages for the <a href="{RP}front_wheel">front wheel</a> and <a href="{RP}rear_wheel">rear wheel</a> collect wheel and tyre faults with their checks. Our <a href="../how-to-check-motorcycle-brake-pads/">brake pad guide</a> covers the other half of the stopping system, and chapter 4.6 of the course, <a href="{L}m4-wheels-tyres">Wheels and tyres</a>, includes the full tyre-fitting and balancing job sheet.</p>
+
+{deeper([
+  (L+"m4-wheels-tyres", "Chapter 4.6: Wheels and tyres", "construction, markings and fitting"),
+  (EQ, "Equations summary", "pressure units and rolling circumference"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (REP+"tyre-pressure-check/", "Tyre pressure check", ""),
+  (REP+"tyre-inspect/", "Tyre inspection", ""),
+  (REP+"tyre-replace/", "Tyre replacement", ""),
+  (PRB+"tyre-cupping/", "Cupped tyre", ""),
+ ])}
+
 ''',
 cta=dict(label='Fix it', h='Check the wheels and tyres', p='Select a wheel in the Overview to see the rim, tyre and hub in 3D, then use the Repair section for wheel, tyre and bearing faults part by part.', links=[(RP+'front_wheel', 'Wheel and tyre repairs', True), (OV+'front_wheel', 'Explore the front wheel', False), (L+'m4-wheels-tyres', 'Read chapter 4.6', False)]),
 faq=[
@@ -221,10 +267,14 @@ body=f'''
 <h2 id="storage">Storing an electric motorcycle</h2>
 <p>For storage of weeks or months, leave the pack at <strong>40 to 60 per cent</strong> charge in a cool, dry place out of direct sun. The difference is large: the course gives a capacity loss of 10 to 20 per cent in a year for a pack stored full at 40 °C, against a few per cent for one stored half charged at 15 to 25 °C. Check the charge every few weeks. Many packs put their management system into a deep sleep in storage, because an always-on system drawing 10 mA would drain 1 Ah in 100 hours and could empty a stored pack over months.</p>
 
+{try_box(OM("elec", "battery"), "renders/battery_hv.webp", "Rendered high-voltage lithium traction battery pack with orange cable and service disconnect", "Look inside the pack.", "Select the battery on the electric bike in the 3D Overview to see the pack, BMS and high-voltage wiring.", "Select the traction battery")}
+
 <h2 id="bms">What the BMS does for you</h2>
 <p>The <strong>battery management system</strong> measures the voltage of every series group of cells, the temperatures and the current. It estimates the state of charge shown on the dashboard, sets the maximum charge and discharge currents, and opens the circuit if a cell goes over or under voltage, overheats or sees a short circuit. It also <strong>balances</strong> the cells: near the top of a charge it bleeds a small current from any group that is higher than the rest, typically 30 to 200 mA, so a badly drifted pack can need several long charges to recover. Leaving the charger connected for the full balancing period after a full charge helps.</p>
 {fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Motopedia Module 5.')}
 <p>Workshops read the group voltages from the BMS with diagnostic software. On an NMC pack at rest, a spread below 10 to 20 mV between the highest and lowest group is normal; a group that keeps falling within a few days of a balance charge points to a cell with high self-discharge, which balancing cannot cure.</p>
+
+{try_box(MD+"charge_port", "renders/charge_port.webp", "Rendered Type 2 style charging inlet", "See the charge inlet.", "The 3D model library has the charging inlet as its own model, next to the traction battery and controller.", "Open the charge inlet")}
 
 <h2 id="swapping">Swapping instead of charging</h2>
 <p>With <strong>battery swapping</strong>, the rider exchanges an empty removable pack for a charged one in a minute or two, and the operator owns the batteries. Gogoro in Taiwan, the Gachaco service in Tokyo, and networks such as Spiro and Ampersand in East Africa work this way. The station reads each pack's identity and history and controls its charging rate and temperature, so the battery-care rules above become the operator's job. Riders of bikes with removable packs that they charge themselves, such as the Roam Air with its two 3.24 kWh packs, should follow them directly.</p>
@@ -233,6 +283,17 @@ body=f'''
 <div class="mz-art-note"><p>A pack that has been dropped, crashed or submerged, or that shows swelling, a sweet solvent smell, hissing, smoke, heat without use or leaking electrolyte must never be charged or refitted. If it can be done safely, move it outdoors to a non-combustible area away from buildings and vehicles, and treat it as hazardous waste for specialist handling.</p></div>
 <p>A damaged lithium-ion cell can go into <strong>thermal runaway</strong>, a self-sustaining reaction that reaches 600 to 900 °C within seconds and releases flammable and toxic gases, and it can spread to neighbouring cells. Never open a traction pack or controller yourself: a nominal 72 V pack reaches 84 V when full, which is above the 60 V DC threshold for high-voltage work, and requires trained technicians with insulated tools. Inspect the charge port and connectors for looseness, burning or corrosion, and stop using a charger whose plug or lead gets hot.</p>
 <p>The Repair section's pages for the <a href="{RP}battery">battery</a>, <a href="{RP}charge_port">charge port</a> and <a href="{RP}controller">controller</a> collect electric drive faults and checks. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the full drivetrain, and chapters 5.4 and 5.5 of the course, <a href="{L}m5-batteries">Batteries and the BMS</a> and <a href="{L}m5-charging">Charging, swapping and standards</a>, go into cell chemistry, charging standards and swap networks.</p>
+
+{deeper([
+  (L+"m5-batteries", "Chapter 5.4: Batteries and the BMS", "cells, ageing and state of health"),
+  (L+"m5-charging", "Chapter 5.5: Charging, swapping and standards", ""),
+  (L+"m5-safety", "Chapter 5.6: Safety, diagnosis and service", "high-voltage safety"),
+  (EQ, "Equations summary", "pack energy, C-rate and charge time"),
+  (QZ+"electric", "Electric motorcycles quiz", "test yourself on Module 5"),
+  (REP+"ev-charge-diagnosis/", "Charging fault diagnosis", ""),
+  (PRB+"ev-charge-stops/", "Charging stops early", ""),
+ ])}
+
 ''',
 cta=dict(label='Learn more', h='Take the battery apart in 3D', p='Select the battery, charge port and controller of the electric scrambler in the Overview, then use the Repair section for electric drive faults such as reduced range, a charger that will not start or a pack warning.', links=[(OV+'battery', 'Explore the battery', True), (RP+'battery', 'Battery repairs', False), (L+'m5-batteries', 'Read chapter 5.4', False)]),
 faq=[
