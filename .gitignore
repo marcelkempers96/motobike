@@ -4,3 +4,4 @@ node_modules/
 *.log
 source/parts/images/
 source/types/photos/
+__pycache__/
