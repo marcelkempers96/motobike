@@ -10,7 +10,7 @@ CSSV = '20261107a'      # assets/articles.css
 STYLESV = '20261102b'   # assets/styles.css (bumped by the coordinator; keep in sync)
 BY = {a['slug']: a for a in ARTICLES}
 
-FONTS = '''  <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml">
+FONTS = '''  <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#141414"><meta name="apple-mobile-web-app-title" content="Motopedia">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@ FONTS = '''  <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml"
   <link rel="stylesheet" href="{up}assets/articles.css?v={v}">'''
 
 HEADER = '''  <header class="ute-top">
-    <a class="ute-brand" href="{up}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{up}assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114"></a>
+    <a class="ute-brand" href="{up}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{up}assets/brand/motopedia-logo-tagline-600.webp" alt="Motopedia, the open motorcycle encyclopedia" width="600" height="178"></a>
     <nav data-mz-nav></nav>
   </header>'''
 

@@ -101,7 +101,7 @@ function render() {
   root.innerHTML = `
     <header class="ute-top">
       <a class="ute-brand" href="./" aria-label="Motopedia home">
-        <img class="ute-brand-logo" src="assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114">
+        <img class="ute-brand-logo" src="assets/brand/motopedia-logo-tagline-600.webp" alt="Motopedia, the open motorcycle encyclopedia" width="600" height="178">
       </a>
       <nav data-mz-nav></nav>
       <span class="ute-top-spacer"></span>

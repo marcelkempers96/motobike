@@ -19,7 +19,7 @@ let viewer = null;
 
 function gallery() {
   if (viewer) { viewer.dispose(); viewer = null; }
-  document.title = 'Motopedia · Models';
+  document.title = '3D motorcycle models library: free to explore | Motopedia';
   root.innerHTML = `
     <section class="ute-hero"><span class="ute-label">Model library · ${KEYS.length} models</span><h1>Every part, in 3D</h1>
       <p>${KEYS.filter((k) => MODELS[k][0] === 'bikes').length} complete motorcycles and scooters and ${KEYS.filter((k) => MODELS[k][0] !== 'bikes').length} components, modelled for the course. Open any model to rotate it, zoom in and highlight each sub-part, or download it as a GLB file for Blender, three.js or any glTF viewer (CC BY-SA 4.0).</p>

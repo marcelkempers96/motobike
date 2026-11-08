@@ -164,7 +164,12 @@ def pname(p): return p['Part']
 def lc_part(p): n = p['Part']; return n[0].lower() + n[1:] if not n.startswith(('CVT', 'Variator')) and not n[:2].isupper() else n
 def verify(m): return 'verify' in str(m.get('Model', '')).lower() or m['Model ID'] in ('roam-air', 'spiro-ekon')
 
+def _ogi(body):
+  m = re.search(r'<img[^>]+src="(?:\.\./)*(assets/[^"]+\.(?:webp|jpg|jpeg|png))"', body)
+  return f'{SITE}/{m.group(1)}' if m else f'{SITE}/assets/renders/bike_classic_4t_side.webp'
 def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
+  if len(title) > 70 and title.endswith(' | Motopedia'): title = title[:-12]
+  if len(desc) > 165: desc = desc[:162].rsplit(' ', 1)[0].rstrip(',;:') + '...'
   depth = path.strip('/').count('/') + 1
   rel = '../' * depth
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -180,8 +185,8 @@ def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
   <meta name="description" content="{e(desc)}">
   <link rel="canonical" href="{SITE}{path}">
   {'<meta name="robots" content="noindex, follow">' if noindex else ''}
-  <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE}{path}">
-  <link rel="icon" href="{rel}assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE}{path}"><meta property="og:site_name" content="Motopedia"><meta property="og:image" content="{_ogi(body)}"><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{rel}assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#141414"><meta name="apple-mobile-web-app-title" content="Motopedia">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
@@ -191,7 +196,7 @@ def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
 <body>
 <div class="ute-page sp">
   <header class="ute-top">
-    <a class="ute-brand" href="{rel}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{rel}assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114"></a>
+    <a class="ute-brand" href="{rel}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{rel}assets/brand/motopedia-logo-tagline-600.webp" alt="Motopedia, the open motorcycle encyclopedia" width="600" height="178"></a>
     <nav data-mz-nav></nav>
   </header>
   <main class="sp-main">

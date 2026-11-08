@@ -1221,9 +1221,9 @@ a.mz-anim-btn { text-decoration: none; display: inline-flex; align-items: center
 .mz-gate-no { padding: 12px 16px; background: #FFF; border: 1px solid var(--line); font: 600 15px/1 var(--sans); cursor: pointer; }
 
 /* Motopedia logo (assets/brand/) */
-.ute-brand-logo { display: block; height: 30px; width: auto; flex: none; }
+.ute-brand-logo { display: block; height: 48px; width: auto; flex: none; }
 .mz-foot-brand img { display: block; width: 220px; max-width: 100%; height: auto; }
-@media (max-width: 720px) { .ute-brand-logo { height: 24px; } }
+@media (max-width: 720px) { .ute-brand-logo { height: 38px; } }
 
 /* Language picker (assets/translate.js) */
 .mz-lang { display: inline-flex; align-items: center; gap: 4px; margin-left: 8px; font-size: 14px; }
@@ -1309,3 +1309,4 @@ font[style] { background: none !important; box-shadow: none !important; }
 #learn-main p.mz-pdf-note-small, p.mz-pdf-note-small { margin: 10px 0 0; font-size: 14px; line-height: 1.45; color: var(--mute); max-width: 640px; }
 /* a paragraph that holds a row of buttons: space them, also when they wrap onto two lines */
 p:has(> .ute-btn + .ute-btn) { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.mz-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

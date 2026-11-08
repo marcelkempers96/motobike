@@ -55,9 +55,9 @@ page = f'''<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Motorcycle Repair & How-It-Works Videos | Motopedia</title>
   <link rel="canonical" href="{SITE}/videos/">
-  <meta name="description" content="{n} of the most watched motorcycle videos on YouTube, sorted by topic: maintenance, how engines and gearboxes work, diagnosis and restoration, each with what it teaches and the Motopedia guide to read next.">
+  <meta name="description" content="{n} of the most watched motorcycle videos, sorted by topic: maintenance, how engines work, diagnosis and restoration, each linked to a Motopedia guide.">
   <meta property="og:title" content="Motorcycle Repair & How-It-Works Videos | Motopedia"><meta property="og:url" content="{SITE}/videos/">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#141414"><meta name="apple-mobile-web-app-title" content="Motopedia">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261106b">
@@ -76,7 +76,7 @@ page = f'''<!doctype html>
 <body>
 <div class="ute-page">
   <header class="ute-top">
-    <a class="ute-brand" href="../" aria-label="Motopedia home"><img class="ute-brand-logo" src="../assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114"></a>
+    <a class="ute-brand" href="../" aria-label="Motopedia home"><img class="ute-brand-logo" src="../assets/brand/motopedia-logo-tagline-600.webp" alt="Motopedia, the open motorcycle encyclopedia" width="600" height="178"></a>
     <nav data-mz-nav></nav>
   </header>
   <section class="ute-hero">

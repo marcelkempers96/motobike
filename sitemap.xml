@@ -180,8 +180,11 @@
   <url><loc>https://motobike-five.vercel.app/brand/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/videos/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/work-with-us/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/diagnose/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/parts/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/abs-light/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/accessory-wiring-fault/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/all-lights-out/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1390,4 +1393,8 @@
   <url><loc>https://motobike-five.vercel.app/parts/part/final-drive-oil/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/parts/part/ev-controller/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/parts/part/ev-charger/</loc><lastmod>2026-11-02</lastmod></url>
+  <url>
+    <loc>https://motobike-five.vercel.app/engine/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
 </urlset>

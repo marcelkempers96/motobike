@@ -346,8 +346,21 @@ SEO = {
   'repair/repairs/engine-oil-service/': ('How to Change Motorcycle Engine Oil | Motopedia', 'How to change motorcycle engine oil', 'Follow a motorcycle oil-change guide covering preparation, draining, strainers and filters, with clear notes on model-specific requirements.'),
   'repair/parts/brake_pads/': ('Motorcycle Brake Pads Explained | Motopedia', 'Motorcycle brake pads: function, wear and replacement', None),
 }
+def _seo_title(t):
+  # keep titles inside what search results show (about 60 to 70 characters)
+  if len(t) > 70 and t.endswith(' | Motopedia'): t = t[:-12]
+  if len(t) > 70: t = t.replace(': step by step', '').replace(': causes and step-by-step check', ': causes and checks')
+  return t
+def _seo_desc(d):
+  if len(d) <= 165: return d
+  d = d[:162].rsplit(' ', 1)[0].rstrip(',;:')
+  return d + '...'
+def _og_image(body):
+  m = re.search(r'<img[^>]+src="(?:\.\./)*(assets/(?:repair-photos|renders|photos|parts|illustrations)/[^"]+)"', body)
+  return f'{SITE}/{m.group(1)}' if m else f'{SITE}/assets/renders/bike_classic_4t_side.webp'
 def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   body = add_legend(body)
+  title = _seo_title(title); desc = _seo_desc(desc); ogi = _og_image(body)
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": c, "item": SITE + '/' + u} for n, (c, u) in enumerate(crumbs)]}]
   if extra_ld: ld.extend(extra_ld if isinstance(extra_ld, list) else [extra_ld])
   cr = ' / '.join(f'<a href="{rel}{u}">{e(c)}</a>' if n < len(crumbs) - 1 else e(c) for n, (c, u) in enumerate(crumbs))
@@ -359,8 +372,8 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
   <title>{e(title)}</title>
   <meta name="description" content="{e(desc)}">
   <link rel="canonical" href="{SITE}/{path}">{'<meta name="robots" content="noindex, follow">' if noindex else ''}
-  <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{SITE}/{path}">
-  <link rel="icon" href="{rel}assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{SITE}/{path}"><meta property="og:type" content="website"><meta property="og:site_name" content="Motopedia"><meta property="og:image" content="{ogi}"><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{rel}assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#141414"><meta name="apple-mobile-web-app-title" content="Motopedia">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel}assets/styles.css?v={CSSV}">
@@ -370,7 +383,7 @@ def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
 <body>
 <div class="ute-page rp2">
   <header class="ute-top">
-    <a class="ute-brand" href="{rel}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{rel}assets/brand/motopedia-logo-600.webp" alt="Motopedia" width="600" height="114"></a>
+    <a class="ute-brand" href="{rel}" aria-label="Motopedia home"><img class="ute-brand-logo" src="{rel}assets/brand/motopedia-logo-tagline-600.webp" alt="Motopedia, the open motorcycle encyclopedia" width="600" height="178"></a>
     <nav data-mz-nav></nav>
   </header>
   <main class="r-main">
