@@ -577,7 +577,7 @@ const MOVING = {
   motor: { kind: 'motor', groups: [{ prefixes: ['motor__rotor', 'motor__magnets', 'motor__shaft', 'motor__sprocket', 'motor__lock_washer'], centerFrom: 'motor__shaft', axis: 'long' }] },
   crankshaft_single: { kind: 'engine', groups: [{ prefixes: ['crankshaft_single__'], centerFrom: 'crankshaft_single__shafts', axis: 'long' }] },
   crankshaft: { kind: 'engine', groups: [{ prefixes: ['crankshaft__'], centerFrom: 'crankshaft__main_journal', axis: 'long' }] },
-  chain_sprockets: { kind: 'engine', groups: [{ prefixes: ['chain_sprockets__front_sprocket', 'chain_sprockets__countershaft', 'chain_sprockets__retainer'], centerFrom: 'chain_sprockets__front_sprocket', rate: 1 }, { prefixes: ['chain_sprockets__rear_sprocket'], rate: 15 / 42 }] },
+  chain_sprockets: { kind: 'engine', groups: [{ prefixes: ['chain_sprockets__front_sprocket', 'chain_sprockets__countershaft', 'chain_sprockets__retainer'], centerFrom: 'chain_sprockets__front_sprocket', rate: 1 }, { prefixes: ['chain_sprockets__rear_sprocket'], rate: 15 / 42 }, { chain: ['chain_sprockets__chain_'], front: 'chain_sprockets__front_sprocket', rear: 'chain_sprockets__rear_sprocket', rate: 1 }] },
   rear_sprocket: { kind: 'wheel', groups: [{ prefixes: ['rear_sprocket__'] }] },
   clutch: { kind: 'engine', groups: [{ prefixes: ['clutch__basket', 'clutch__hub', 'clutch__friction_plates', 'clutch__steel_plates', 'clutch__pressure_plate', 'clutch__springs', 'clutch__spring_bolts', 'clutch__mainshaft'], centerFrom: 'clutch__mainshaft', axis: 'long', rate: 0.3 }] },
 };
@@ -592,7 +592,7 @@ function updateComponentModelTick(dt) {
   let degPerSec = 0;
   if (k === 'wheel') degPerSec = Math.max(wheelRPM, 25) * 6 / 10;
   else if (k === 'brake') degPerSec = S._brakeSpin != null ? S._brakeSpin : Math.max(wheelRPM, 25) * 6 / 10;
-  else if (k === 'engine') degPerSec = S.running ? S.rpm * 6 / 60 : 0;
+  else if (k === 'engine') degPerSec = S.running ? S.rpm * 6 / 60 : 120;  // slow demo turn when the engine is off
   else if (k === 'motor') degPerSec = Math.max(S.elec.rpm, S.rider.throttle * 10000) * 6 / 60;
   if (degPerSec) CV3.spin(degPerSec * dt);
 }

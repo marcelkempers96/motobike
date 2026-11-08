@@ -157,10 +157,101 @@ export function createViewer(el, opts = {}) {
   /* Spinning groups. Each spec: { prefixes, axis: 'thin'|'long', centerFrom?: prefix, rate?: number }.
      The pivot sits at the centre of the group (or of the centerFrom meshes) and turns
      about the group's thinnest or longest dimension. */
+  /* A chain that runs round two sprockets. Every vertex of the chain meshes is mapped once to
+     (position along the loop, distance from the loop, distance across it); each spin moves the
+     whole chain along the loop, so links travel round the sprockets like a real chain. */
+  function setupChain(g) {
+    const ms = meshes.filter((m) => g.chain.some((p) => m.name.startsWith(p)));
+    const fr = meshes.filter((m) => m.name.startsWith(g.front)), rr = meshes.filter((m) => m.name.startsWith(g.rear));
+    if (!ms.length || !fr.length || !rr.length) return null;
+    root.updateMatrixWorld(true);
+    const bc = (list) => { const b = new THREE.Box3(); list.forEach((m) => b.expandByObject(m)); return b; };
+    const b1 = bc(fr), b2 = bc(rr);
+    const C1 = b1.getCenter(new THREE.Vector3()), C2 = b2.getCenter(new THREE.Vector3());
+    const sz = b2.getSize(new THREE.Vector3());
+    const ax = sz.x <= sz.y && sz.x <= sz.z ? 'x' : sz.y <= sz.z ? 'y' : 'z';
+    const W = new THREE.Vector3(); W[ax] = 1;                       // sprocket axis = across the chain
+    const U = C2.clone().sub(C1); U.sub(W.clone().multiplyScalar(U.dot(W))); const D = U.length(); U.normalize();
+    const V = new THREE.Vector3().crossVectors(W, U);
+    const tmp = new THREE.Vector3();
+    const verts = [];
+    let s1 = 0, n1 = 0, s2 = 0, n2 = 0;
+    for (const m of ms) {
+      m.geometry = m.geometry.clone();
+      // models are quantised (16-bit positions); moving vertices needs full-precision floats
+      const q = m.geometry.attributes.position, f = new Float32Array(q.count * 3);
+      for (let i = 0; i < q.count; i++) { f[i * 3] = q.getX(i); f[i * 3 + 1] = q.getY(i); f[i * 3 + 2] = q.getZ(i); }
+      m.geometry.setAttribute('position', new THREE.BufferAttribute(f, 3));
+      const pos = m.geometry.attributes.position, wp = new Float32Array(pos.count * 3);
+      for (let i = 0; i < pos.count; i++) {
+        tmp.fromBufferAttribute(pos, i).applyMatrix4(m.matrixWorld);
+        const d = tmp.clone().sub(C1), u = d.dot(U), v = d.dot(V);
+        wp[i * 3] = u; wp[i * 3 + 1] = v; wp[i * 3 + 2] = d.dot(W);
+        if (u < 0) { s1 += Math.hypot(u, v); n1++; } else if (u > D) { s2 += Math.hypot(u - D, v); n2++; }
+      }
+      verts.push({ m, wp, inv: m.matrixWorld.clone().invert() });
+    }
+    const r1 = n1 ? s1 / n1 : D * 0.1, r2 = n2 ? s2 / n2 : D * 0.2;
+    const phi = Math.acos(Math.max(-1, Math.min(1, (r1 - r2) / D)));
+    const T1u = [r1 * Math.cos(phi), r1 * Math.sin(phi)], T2u = [D + r2 * Math.cos(phi), r2 * Math.sin(phi)];
+    const T1l = [T1u[0], -T1u[1]], T2l = [T2u[0], -T2u[1]];
+    const Ls = Math.hypot(T2u[0] - T1u[0], T2u[1] - T1u[1]), La2 = r2 * 2 * phi, La1 = r1 * (2 * Math.PI - 2 * phi);
+    const L = 2 * Ls + La1 + La2;
+    const nTop = [Math.cos(phi), Math.sin(phi)], nBot = [Math.cos(phi), -Math.sin(phi)];
+    const tTop = [(T2u[0] - T1u[0]) / Ls, (T2u[1] - T1u[1]) / Ls];
+    // point and outward normal at loop position s (top run, rear arc, bottom run, front arc)
+    const at = (s) => {
+      s = ((s % L) + L) % L;
+      if (s < Ls) return [T1u[0] + tTop[0] * s, T1u[1] + tTop[1] * s, nTop[0], nTop[1]];
+      s -= Ls;
+      if (s < La2) { const a = phi - s / r2; return [D + r2 * Math.cos(a), r2 * Math.sin(a), Math.cos(a), Math.sin(a)]; }
+      s -= La2;
+      if (s < Ls) return [T2l[0] - tTop[0] * s, T2l[1] + tTop[1] * s, nBot[0], nBot[1]];
+      s -= Ls; const a = -phi - s / r1; return [r1 * Math.cos(a), r1 * Math.sin(a), Math.cos(a), Math.sin(a)];
+    };
+    const norm = (a) => { while (a > Math.PI) a -= 2 * Math.PI; while (a <= -Math.PI) a += 2 * Math.PI; return a; };
+    const project = (u, v) => {
+      let best = null;
+      const cand = (s, x, y) => { const [px, py, nx, ny] = at(s); const dd = Math.hypot(u - px, v - py); if (!best || dd < best[0]) best = [dd, s, (u - px) * nx + (v - py) * ny]; };
+      let t = Math.max(0, Math.min(Ls, (u - T1u[0]) * tTop[0] + (v - T1u[1]) * tTop[1])); cand(t);
+      t = Math.max(0, Math.min(Ls, (u - T2l[0]) * -tTop[0] + (v - T2l[1]) * tTop[1])); cand(Ls + La2 + t);
+      let a = Math.atan2(v, u - D); let k = norm(phi - a); if (k < 0) k += 2 * Math.PI; if (k <= 2 * phi) cand(Ls + k * r2);
+      a = Math.atan2(v, u); k = norm(-phi - a); if (k < 0) k += 2 * Math.PI; if (k <= 2 * Math.PI - 2 * phi) cand(2 * Ls + La2 + k * r1);
+      return best;
+    };
+    for (const c of verts) {
+      const n = c.wp.length / 3, map = new Float32Array(n * 3);
+      for (let i = 0; i < n; i++) { const b = project(c.wp[i * 3], c.wp[i * 3 + 1]); map[i * 3] = b[1]; map[i * 3 + 1] = b[2]; map[i * 3 + 2] = c.wp[i * 3 + 2]; }
+      c.map = map;
+    }
+    // which way the chain runs when the front sprocket turns: test a point on the front sprocket
+    const q = new THREE.Vector3(-r1, 0, 0), qa = C1.clone().add(U.clone().multiplyScalar(q.x));
+    const axisW = new THREE.Vector3(); axisW[g.axis || ax] = 1; axisW.transformDirection(root.matrixWorld);
+    const qb = qa.clone().sub(C1).applyAxisAngle(axisW, -0.01).add(C1);
+    const mv = qb.sub(qa); const tan = at(2 * Ls + La2 + Math.PI * r1 - phi * r1 + 1e-6);
+    const tv = U.clone().multiplyScalar(-tan[3]).add(V.clone().multiplyScalar(tan[2]));  // tangent of decreasing angle
+    const dir = Math.sign(mv.dot(tv)) || 1;
+    let off = 0;
+    const apply = () => {
+      for (const c of verts) {
+        const pos = c.m.geometry.attributes.position, n = c.map.length / 3;
+        for (let i = 0; i < n; i++) {
+          const [px, py, nx, ny] = at(c.map[i * 3] + off), o = c.map[i * 3 + 1];
+          tmp.copy(C1).addScaledVector(U, px + nx * o).addScaledVector(V, py + ny * o).addScaledVector(W, c.map[i * 3 + 2]).applyMatrix4(c.inv);
+          pos.setXYZ(i, tmp.x, tmp.y, tmp.z);
+        }
+        pos.needsUpdate = true; c.m.geometry.computeBoundingSphere();
+      }
+    };
+    return { advance: (deg) => { off += dir * deg * (g.rate || 1) * Math.PI / 180 * r1; off %= L; apply(); } };
+  }
+  let chainMover = null;
   function setupWheels(groups) {
     wheels = [];
+    chainMover = null;
     if (!groups) return;
     for (const g of groups) {
+      if (g.chain) { chainMover = setupChain(g); continue; }
       const ms = meshes.filter((m) => g.prefixes.some((p) => m.name.startsWith(p)));
       if (!ms.length) continue;
       const ref = g.centerFrom ? meshes.filter((m) => m.name.startsWith(g.centerFrom)) : ms;
@@ -262,8 +353,9 @@ export function createViewer(el, opts = {}) {
   };
   api.reframe = (view) => { if (root) frame(null, view || opts.view); };
   api.spin = (deg) => {
-    if (!wheels.length || !deg) return;
+    if ((!wheels.length && !chainMover) || !deg) return;
     for (const w of wheels) w.pivot.rotation[w.axis] -= deg * w.rate * Math.PI / 180;
+    if (chainMover) chainMover.advance(deg);
     dirty = true; loop();
   };
   api.render = () => { dirty = true; loop(); };
