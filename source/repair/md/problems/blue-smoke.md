@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 213}
   - {doc: "MAVCC Motorcycle Mechanic", page: 654}
   - {doc: "MAVCC Motorcycle Mechanic", page: 664}
+  - {doc: "Dan's Motorcycle Repair Course (Tecumseh 4 cycle engine failure analysis)", url: "https://www.dansmc.com/miscellaneous/Tecumseh/Tecumseh_Engine_Failure_Analysis/Tecumseh_Engine_Failure_Analysis.htm"}
 ---
 
 # Blue or grey smoke from the exhaust
@@ -65,3 +66,4 @@ Yes with care. Check the oil level often and carry oil. Stop if the oil level is
 | Worn valve stem seals or guides | Smoke after idling, normal compression | [Assess the top end (cylinder, piston, valves)](/moto-zero/repair/repairs/top-end-assessment) |
 | Two-stroke oil setting too rich | Heavy smoke, oily exhaust | [Check the two-stroke oil pump and lines](/moto-zero/repair/repairs/two-stroke-oil-pump) |
 | Blocked breather | Oil in air box | [Check the crankcase breather](/moto-zero/repair/repairs/breather-check) |
+| Rings and bore worn early by dirt | Dust inside the intake, scratched bore | [Engine wears out early after dirt gets past the air filter](/moto-zero/repair/problems/engine-dust-wear) |

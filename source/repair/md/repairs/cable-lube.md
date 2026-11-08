@@ -57,6 +57,8 @@ Cables carry your hand and foot movement to the clutch, throttle, choke and drum
 3. Look at the inner cable where it leaves the outer, especially next to the nipple. Broken strands or a kink: stop and replace the cable (for example [Replace the clutch cable](/moto-zero/repair/repairs/clutch-cable-replace)).
 4. Fit the luber or bag on the top end of the outer cable.
 5. Feed oil in until it comes out at the bottom. Hold a rag there. Pull the inner in and out to spread the oil.
+   - No luber: cut a small hole in a corner of a plastic bag, slip it over the cable end and tie it tight. Pour in oil and leave the cable hanging overnight; the oil works its way down.
+   - Cracked outer: oil runs out of the cracks. Use a dry graphite lube (graphite in a thin solvent) instead. The solvent evaporates and leaves the graphite inside. Plan to replace a cracked cable.
 6. Grease the nipple and the hole it sits in at the lever, and the lever pivot bolt ([Service brake and clutch lever pivots](/moto-zero/repair/repairs/lever-service)).
 7. Grease the lower end where it joins the clutch arm, brake arm, carburettor or choke plunger.
 8. Refit the cable and set free play: [throttle](/moto-zero/repair/repairs/throttle-cable-adjust), [clutch](/moto-zero/repair/repairs/clutch-cable-adjust), [drum brake](/moto-zero/repair/repairs/drum-brake-adjust), [choke](/moto-zero/repair/repairs/choke-cable-adjust).
@@ -104,3 +106,4 @@ Cables carry your hand and foot movement to the clutch, throttle, choke and drum
 - MAVCC Motorcycle Mechanic, PDF p. 734
 - K-Light 125 manual, PDF p. 51
 - Unit 2 The Motorcycle, PDF p. 18
+- Dan's Motorcycle Repair Course, https://www.dansmc.com/cables.htm

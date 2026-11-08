@@ -7,6 +7,7 @@ applies_to: [scooter-cvt]
 sources:
   - {doc: "Louis: scooter variator and clutch", url: "https://www.louis-moto.co.uk/rund-ums-motorrad/schraubertipps/variomatik-und-kupplung"}
   - {doc: "webBikeWorld: fake or genuine parts", url: "https://www.webbikeworld.com/how-to-find-whether-a-spare-part-is-fake-or-genuine"}
+  - {doc: "Dan's Motorcycle Repair Course (V-belt service)", url: "https://www.dansmc.com/miscellaneous/BS/v-belt/v-belt.htm"}
 ---
 
 # Scooter drive belt
@@ -24,6 +25,10 @@ Each pulley is two cone-shaped halves. When the front halves close together, the
 
 ## When to replace it
 Replace at the interval in your scooter's manual, or sooner if the belt has cracks, missing teeth, frayed edges, oil on it, or is narrower than the minimum width in the manual.
+
+- The wear on the old belt shows why it failed: frayed sides mean slipping, soft sticky sides mean oil, cracks across the bottom mean heat or age. See [Read a worn or broken scooter belt](/moto-zero/repair/repairs/cvt-belt-wear-read).
+- Never spray belt dressing on a scooter belt. It softens the rubber and makes it slip.
+- Store spare belts flat or loosely coiled, away from sun and heat. Do not hang them on a nail.
 
 ## What to match when buying
 - The belt code printed on the old belt: it gives length and width. Match it exactly.

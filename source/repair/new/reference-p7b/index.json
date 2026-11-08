@@ -1,0 +1,300 @@
+{
+ "repairs": [
+  {
+   "id": "cvt-belt-wear-read",
+   "title": "Read a worn or broken scooter belt to find the cause",
+   "level": "home",
+   "time": "20 to 40 min (with the belt already out)",
+   "applies_to": [
+    "scooter-cvt"
+   ],
+   "tools": [
+    "torch",
+    "magnifier",
+    "vernier caliper",
+    "clean rag"
+   ],
+   "parts": [
+    "cvt_belt",
+    "cvt_rollers",
+    "cvt_clutch",
+    "gear_oil",
+    "oil_seals"
+   ],
+   "consumables": [
+    "brake cleaner or non-flammable degreaser"
+   ],
+   "fixes": [
+    "cvt-belt-broken",
+    "cvt-slip",
+    "cvt-judder",
+    "cvt-noise",
+    "cvt-low-top-speed"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course (V-belt service)",
+     "url": "https://www.dansmc.com/miscellaneous/BS/v-belt/v-belt.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+     "caption": "Frayed, worn sides from constant slipping"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_54.jpg",
+     "caption": "Severe corner and surface wear on a belt"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_56.jpg",
+     "caption": "Burnt bottom and sides from heat and slipping"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_59.jpg",
+     "caption": "Cracks across the underside from heat or age"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_53.jpg",
+     "caption": "Belt pulled apart with its cords broken"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_58.jpg",
+     "caption": "Belt cut on the bottom by an object or edge"
+    }
+   ]
+  },
+  {
+   "id": "engine-failure-read",
+   "title": "Read a failed engine to find the cause before you rebuild it",
+   "level": "workshop",
+   "time": "1 to 3 h (during strip-down)",
+   "applies_to": [
+    "four-stroke",
+    "air-cooled",
+    "liquid-cooled"
+   ],
+   "tools": [
+    "clean drain pan",
+    "clear jar",
+    "torch",
+    "magnifier",
+    "feeler gauges",
+    "notebook",
+    "phone camera"
+   ],
+   "parts": [
+    "air_filter",
+    "piston",
+    "piston_rings",
+    "cylinder",
+    "valves",
+    "valve_guides",
+    "crankshaft",
+    "engine_oil",
+    "gaskets"
+   ],
+   "consumables": [
+    "clean rags",
+    "parts cleaner"
+   ],
+   "fixes": [
+    "engine-seized",
+    "low-compression",
+    "blue-smoke",
+    "low-power",
+    "smoke-after-rebuild",
+    "overheating-air",
+    "engine-dust-wear"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course (Tecumseh 4 cycle engine failure analysis)",
+     "url": "https://www.dansmc.com/miscellaneous/Tecumseh/Tecumseh_Engine_Failure_Analysis/Tecumseh_Engine_Failure_Analysis.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course (Briggs and Stratton troubleshooting flow chart)",
+     "url": "https://www.dansmc.com/miscellaneous/BS/bs_fail_flowchart/bs_flow.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_70.jpg",
+     "caption": "Cooling fins packed with debris, a cause of overheating"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_68.jpg",
+     "caption": "Dirt damage: scored bore, worn piston and crank journal"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_69.jpg",
+     "caption": "Burnt exhaust valve face from a lean or hot engine"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_71.jpg",
+     "caption": "Worn valve face and notes on reading the old oil"
+    }
+   ]
+  },
+  {
+   "id": "frame-engine-number-find",
+   "title": "Find and read the frame and engine numbers",
+   "level": "rider",
+   "time": "10 to 30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "torch",
+    "clean rag",
+    "small wire brush",
+    "phone camera",
+    "paper and pencil"
+   ],
+   "parts": [
+    "frame",
+    "engine",
+    "crankcase"
+   ],
+   "consumables": [
+    "degreaser"
+   ],
+   "fixes": [
+    "parts-not-available"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://dansmc.com/mc_id/mc_1.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/mc_specs.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/08_Specifications_Reference/152/152_beginning_1_21_22_37_38_5.jpg",
+     "caption": "Common places for frame and engine numbers on a motorcycle"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/152/152_beginning_1_21_22_37_38_8.jpg",
+     "caption": "Where frame and engine numbers sit on a moped"
+    }
+   ]
+  },
+  {
+   "id": "spec-sheet-read",
+   "title": "Read a specification table for your bike",
+   "level": "rider",
+   "time": "15 to 30 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "shop manual or spec table for your bike",
+    "ruler or straight edge",
+    "calculator",
+    "paper and pencil"
+   ],
+   "parts": [
+    "spark_plug",
+    "chain",
+    "battery",
+    "engine_oil",
+    "fork_oil",
+    "carb"
+   ],
+   "consumables": [],
+   "fixes": [
+    "parts-not-available"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/mc_specs.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "http://dansmc.com/mc_id/mc_1.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/08_Specifications_Reference/152/152_tune_up_specs_3.jpg",
+     "caption": "Tune-up table: one row per model, one column per setting"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/152/152_capacities.jpg",
+     "caption": "Maintenance data table with capacities and tyre pressures"
+    },
+    {
+     "file": "source/dansmc/08_Specifications_Reference/152/152_carb_specs.jpg",
+     "caption": "Carburettor table with numbered footnotes under it"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "engine-dust-wear",
+   "title": "Engine wears out early after dirt gets past the air filter",
+   "system": "engine",
+   "also_called": [
+    "dusted engine",
+    "dirt in the engine",
+    "engine worn by dust",
+    "sucked dirt",
+    "rings worn quickly"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "air_filter",
+    "piston_rings",
+    "cylinder",
+    "piston",
+    "valve_guides",
+    "engine_oil",
+    "crankshaft"
+   ],
+   "repairs": [
+    "air-filter-service",
+    "airbox-blockage-check",
+    "compression-test",
+    "engine-failure-read",
+    "piston-clearance-measure",
+    "top-end-assessment"
+   ],
+   "related": [
+    "blue-smoke",
+    "low-compression",
+    "low-power",
+    "smoke-after-rebuild"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course (Tecumseh 4 cycle engine failure analysis)",
+     "url": "https://www.dansmc.com/miscellaneous/Tecumseh/Tecumseh_Engine_Failure_Analysis/Tecumseh_Engine_Failure_Analysis.htm"
+    }
+   ],
+   "photos": [
+    {
+     "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_68.jpg",
+     "caption": "Dirt wear: scored bore, scratched piston and worn crank journal"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_care_they_last_quite_while.jpg",
+     "caption": "Paper air filter element in its frame"
+    },
+    {
+     "file": "source/dansmc/04_Fuel_Carburetors/085/085_oiled_foam.jpg",
+     "caption": "Oiled foam air filter element"
+    }
+   ]
+  }
+ ],
+ "parts": []
+}

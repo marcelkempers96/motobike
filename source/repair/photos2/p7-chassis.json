@@ -1,0 +1,314 @@
+{
+ "problems": {
+  "notchy-steering": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_old_ball_bearings.jpg",
+    "caption": "Worn loose balls in the top steering head race"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_caged_ball_bearings_tapered_roller_bearings_2.jpg",
+    "caption": "Steering ball race: dents in it cause notchy steering"
+   }
+  ],
+  "heavy-steering": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_nut_pinch_bolt.jpg",
+    "caption": "Steering stem nut: too much preload makes steering heavy"
+   }
+  ],
+  "throttle-sticks": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_throttle.jpg",
+    "caption": "Twist grip and housing on the right handlebar"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_i_have_seen_type_throttle_cheap_2.jpg",
+    "caption": "Dirty spiral groove grip: clean and grease the slider"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_honda_ct_90_exploded_view_2.jpg",
+    "caption": "Grip tube pulled out of its housing for checking"
+   }
+  ],
+  "throttle-free-play": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_because_motorcycle_manufacturers_use_lots_different_2.jpg",
+    "caption": "Cable adjuster where the cable leaves the grip housing"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_i_prefer_cables_just_pop_off.jpg",
+    "caption": "Throttle cable running from the grip along the bar"
+   }
+  ],
+  "cable-frayed": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cracks.jpg",
+    "caption": "Cracked outer casing lets oil out and water in"
+   }
+  ],
+  "brake-fluid-dark": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_dirty_master_cylinder_plunger.jpg",
+    "caption": "Dark sludge in a master cylinder from old fluid"
+   }
+  ],
+  "spongy-brake": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_caliper_bleed_nipple.jpg",
+    "caption": "Bleed nipple on the caliper, where trapped air is let out"
+   }
+  ],
+  "clutch-no-resistance": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_hydraulic_slave_clutch_2.jpg",
+    "caption": "Hydraulic clutch master cylinder on the left bar"
+   }
+  ]
+ },
+ "repairs": {
+  "steering-bearing-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_if_there_any_play_if_if.jpg",
+    "caption": "Top steering bearing balls visible under the adjusting nut"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_nut_pinch_bolt.jpg",
+    "caption": "Stem nut and fork pinch bolts on the top yoke"
+   }
+  ],
+  "steering-bearing-adjust": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_steering_triple_tree.jpg",
+    "caption": "Steering stem and bottom yoke out of the frame"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_two_screw_drivers.jpg",
+    "caption": "Levering the lower bearing off the stem with two screwdrivers"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_remove_lower_baring_races.jpg",
+    "caption": "Driving a bearing race out of the steering head"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_install_lower_race.jpg",
+    "caption": "Driving the lower race onto the stem with a tube"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_steering_bearing_press.gif",
+    "caption": "Threaded press pulling new races into the steering head"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_lock_washer.jpg",
+    "caption": "Bend the lock washer tab against the lock nut"
+   }
+  ],
+  "throttle-cable-service": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_another_honda_single_cable_exploded_view.jpg",
+    "caption": "Throttle housing beside the lever, cable entering below"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_another_honda_single_cable_throttle_notice_2.gif",
+    "caption": "Single cable grip: housing halves, tube and cable end"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_pop_off.jpg",
+    "caption": "Cable ends at the carburettor tops"
+   }
+  ],
+  "cable-lube": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cable_luber.jpg",
+    "caption": "Cable luber clamped on the cable end"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_bowden_cable_inner_cable_must_push.jpg",
+    "caption": "Spray oil fed into the cable through the luber"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cheap_luber.jpg",
+    "caption": "Plastic bag tied on the cable end as an oil funnel"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_bowden_cable_inner_cable_must_push_2.jpg",
+    "caption": "Oil in the bag runs slowly down the cable"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cracks.jpg",
+    "caption": "Cracked outer: use dry graphite lube, then replace"
+   }
+  ],
+  "brake-pad-replace": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_disk_brake_pads.jpg",
+    "caption": "Pushing the caliper piston back with a clamp"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_flat_looking_anti_rattle_spring.jpg",
+    "caption": "Anti-rattle spring fitted with the pads"
+   }
+  ],
+  "brake-bleed": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_caliper_bleed_nipple.jpg",
+    "caption": "Bleed nipple on a front caliper"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_air_pump.jpg",
+    "caption": "Hand vacuum pump for bleeding brakes"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_bleeder_jar.jpg",
+    "caption": "Simple bleed jar with tubes for the old fluid"
+   }
+  ],
+  "master-cylinder-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_dirty_master_cylinder_plunger_2.jpg",
+    "caption": "Sludge in the master cylinder bore: clean or rebuild"
+   }
+  ],
+  "clutch-bleed": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_can_read_here_hydraulic_clutch_handled_2.jpg",
+    "caption": "Hydraulic clutch slave cylinder on the engine"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_hydraulic_slave_clutch.jpg",
+    "caption": "Hydraulic clutch master cylinder on the left handlebar"
+   }
+  ],
+  "engine-mount-check": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_younger_people_stronger_backs_may_able_6.jpg",
+    "caption": "Engine bolted into the frame at front and lower mounts"
+   }
+  ]
+ },
+ "parts": {
+  "steering_bearings": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_caged_ball_bearings_tapered_roller_bearings.jpg",
+    "caption": "Steering head ball race with its balls"
+   },
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_when_they_fitted_triple_tree_tapered.jpg",
+    "caption": "Tapered roller bearing fitted on the steering stem"
+   }
+  ],
+  "steering_stem": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_lower_roller_bearing.jpg",
+    "caption": "Steering stem with bottom yoke and lower bearing"
+   }
+  ],
+  "throttle_cable": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_twin_cable_twist_grip_2.jpg",
+    "caption": "Pull and return throttle cables at the carburettors"
+   }
+  ],
+  "handlebar": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_honda_ct_90_twist_grip_switches.gif",
+    "caption": "Handlebar with grips, levers and control cables"
+   }
+  ],
+  "brake_pads": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_entire_pad.jpg",
+    "caption": "Disc brake pad with scored friction material"
+   }
+  ],
+  "master_cylinder": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_circlip.jpg",
+    "caption": "Circlip holding the master cylinder piston"
+   }
+  ],
+  "brake_caliper": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_hydraulic_brakes_clutch.jpg",
+    "caption": "Front disc and single caliper on the fork leg"
+   }
+  ],
+  "engine_mounts": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_younger_people_stronger_backs_may_able_3.jpg",
+    "caption": "Engine mounts on a single-cylinder frame"
+   }
+  ],
+  "clutch_cable": [
+   {
+    "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_bowden_control_cables.jpg",
+    "caption": "Control cables with their end fittings"
+   }
+  ]
+ },
+ "systems": {},
+ "course": [
+  {
+   "chapter": "m4-frame-steering",
+   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_steering_bearings.jpg",
+   "caption": "Steering stem and yokes with the bearings fitted"
+  },
+  {
+   "chapter": "m4-frame-steering",
+   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_leading_link_front_end.jpg",
+   "caption": "Leading link front end on an older bike"
+  },
+  {
+   "chapter": "m4-clutch",
+   "file": "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_can_read_here_hydraulic_clutch_handled.jpg",
+   "caption": "Hydraulic clutch slave cylinder on the engine case"
+  }
+ ],
+ "order": {
+  "repairs": {
+   "steering-bearing-adjust": [
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_bolt_steering_stem.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_adjusting_nut_second_jam_nut.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_steering_triple_tree.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_two_screw_drivers.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_remove_lower_baring_races.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_steering_bearing_press.gif",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_install_lower_race.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/150/150_lock_washer.jpg"
+   ],
+   "cable-lube": [
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cable_luber.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_bowden_cable_inner_cable_must_push.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cheap_luber.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_bowden_cable_inner_cable_must_push_2.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/137/137_cracks.jpg"
+   ],
+   "throttle-cable-service": [
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_another_honda_single_cable_exploded_view.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_another_honda_single_cable_throttle_notice_2.gif",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_pop_off.jpg"
+   ],
+   "brake-bleed": [
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_mix_dot_3_dot_4.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_air_pump.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_bleeder_jar.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/138/138_caliper_bleed_nipple.jpg"
+   ],
+   "engine-remove-refit": [
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_younger_people_stronger_backs_may_able_5.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_mounting_bolt_spacer.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_if_engine_stressed_member_frame_may.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_pointy.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_then_i_tap_axle_pushes_screwdriver.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/136/136_younger_people_stronger_backs_may_able.jpg"
+   ],
+   "throttle-grip-strip": [
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_cheap_mini_bike_twist_grip_no.gif",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_i_have_seen_type_throttle_cheap.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_bmw_uses_gear_arrangement_like_bevel.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_bmw_twist_grip.gif",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_service_them_just_like_all_others.jpg",
+    "source/dansmc/07_Frame_Brakes_Wheels_Suspension/151/151_atv_throttle.gif"
+   ]
+  }
+ }
+}

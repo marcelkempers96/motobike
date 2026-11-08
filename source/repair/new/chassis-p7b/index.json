@@ -1,0 +1,407 @@
+{
+ "repairs": [
+  {
+   "id": "cable-end-solder",
+   "title": "Solder a new end (nipple) onto a control cable",
+   "level": "home",
+   "time": "30 to 60 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "solder pot or a large soldering iron",
+    "side cutters or a sharp cable cutter",
+    "small hammer",
+    "small vice",
+    "ruler"
+   ],
+   "parts": [
+    "cable_ends",
+    "clutch_cable",
+    "throttle_cable",
+    "brake_cable",
+    "choke_cable"
+   ],
+   "consumables": [
+    "brass cable end of the right type and size",
+    "soldering flux",
+    "solder"
+   ],
+   "fixes": [
+    "cable-frayed",
+    "clutch-no-resistance"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cables.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course (Flanders cable hints sheet)",
+     "url": "https://www.dansmc.com/solder_cable.htm"
+    }
+   ]
+  },
+  {
+   "id": "cable-make-to-length",
+   "title": "Make a control cable to a custom length",
+   "level": "home",
+   "time": "1 to 2 hours",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "cable cutter",
+    "side cutters",
+    "small file",
+    "solder pot or large soldering iron",
+    "small hammer",
+    "ruler or tape measure",
+    "felt tip pen"
+   ],
+   "parts": [
+    "cable_ends",
+    "cable_adjuster",
+    "clutch_cable",
+    "throttle_cable",
+    "choke_cable"
+   ],
+   "consumables": [
+    "bulk inner wire and outer casing of the right sizes",
+    "brass cable ends",
+    "flux",
+    "solder",
+    "cable oil"
+   ],
+   "fixes": [
+    "cable-frayed"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cables.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course (Flanders cable hints sheet)",
+     "url": "https://www.dansmc.com/solder_cable.htm"
+    }
+   ]
+  },
+  {
+   "id": "engine-remove-refit",
+   "title": "Remove and refit an engine from the frame",
+   "level": "workshop",
+   "time": "half a day to a day (estimate)",
+   "applies_to": [
+    "four-stroke",
+    "two-stroke",
+    "chain"
+   ],
+   "tools": [
+    "full socket and spanner set",
+    "torque wrench",
+    "two or three jacks",
+    "wood blocks and a plywood board",
+    "long screwdrivers and a pry bar",
+    "felt tip pen",
+    "phone or camera",
+    "drain tray",
+    "straps or ropes"
+   ],
+   "parts": [
+    "engine_mounts",
+    "swingarm",
+    "battery",
+    "engine_oil",
+    "oil_filter",
+    "exhaust_gasket"
+   ],
+   "consumables": [
+    "engine oil",
+    "new oil filter",
+    "new exhaust gaskets",
+    "coolant (liquid-cooled bikes)"
+   ],
+   "fixes": [
+    "engine-seized"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/remove_engine.htm"
+    }
+   ]
+  },
+  {
+   "id": "grip-replace",
+   "title": "Remove and fit handlebar grips",
+   "level": "rider",
+   "time": "20 to 40 min",
+   "applies_to": [
+    "all"
+   ],
+   "tools": [
+    "thin flat screwdriver",
+    "sharp knife",
+    "rag"
+   ],
+   "parts": [
+    "handlebar",
+    "throttle_grip"
+   ],
+   "consumables": [
+    "penetrating oil or soapy water",
+    "masking tape",
+    "grip glue (optional)",
+    "new grips"
+   ],
+   "fixes": [
+    "grip-loose",
+    "throttle-sticks"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/throttles.htm"
+    }
+   ]
+  },
+  {
+   "id": "throttle-grip-strip",
+   "title": "Strip, clean and lubricate a twist grip or thumb throttle",
+   "level": "home",
+   "time": "30 to 45 min",
+   "applies_to": [
+    "carburettor",
+    "fuel-injected",
+    "scooter-cvt",
+    "semi-auto"
+   ],
+   "tools": [
+    "screwdrivers",
+    "small spanners",
+    "rag",
+    "small brush"
+   ],
+   "parts": [
+    "throttle_grip",
+    "throttle_cable",
+    "handlebar",
+    "handlebar_switches"
+   ],
+   "consumables": [
+    "light oil or dry graphite lube",
+    "light grease",
+    "cleaning solvent"
+   ],
+   "fixes": [
+    "throttle-sticks",
+    "hanging-revs",
+    "throttle-cable-breaks",
+    "cable-frayed"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/throttles.htm"
+    }
+   ]
+  },
+  {
+   "id": "throttle-twin-cable-replace",
+   "title": "Replace a twin (pull and return) throttle cable",
+   "level": "home",
+   "time": "45 to 90 min",
+   "applies_to": [
+    "carburettor",
+    "fuel-injected"
+   ],
+   "tools": [
+    "screwdrivers",
+    "small spanners",
+    "pliers",
+    "camera or phone",
+    "cable ties"
+   ],
+   "parts": [
+    "throttle_cable",
+    "throttle_grip",
+    "carb",
+    "throttle_body",
+    "fuel_tank"
+   ],
+   "consumables": [
+    "cable oil or dry graphite lube"
+   ],
+   "fixes": [
+    "throttle-sticks",
+    "cable-frayed",
+    "throttle-cable-breaks",
+    "throttle-free-play"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/throttles.htm"
+    }
+   ]
+  }
+ ],
+ "problems": [
+  {
+   "id": "grip-loose",
+   "title": "Handlebar grip is loose or twists on the bar",
+   "system": "controls",
+   "also_called": [
+    "grip slipping",
+    "grip turns on handlebar",
+    "loose rubber grip",
+    "grip coming off"
+   ],
+   "urgency": "ride-with-care",
+   "applies_to": [
+    "all"
+   ],
+   "parts": [
+    "handlebar",
+    "throttle_grip"
+   ],
+   "repairs": [
+    "grip-replace",
+    "throttle-grip-strip",
+    "throttle-cable-adjust"
+   ],
+   "related": [
+    "throttle-sticks",
+    "throttle-free-play"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/throttles.htm"
+    }
+   ]
+  },
+  {
+   "id": "throttle-cable-breaks",
+   "title": "Throttle cable keeps fraying or breaking at the grip end",
+   "system": "controls",
+   "also_called": [
+    "throttle cable snapped",
+    "broken throttle cable",
+    "throttle cable frays at the grip",
+    "cable end pulled off"
+   ],
+   "urgency": "do-not-ride",
+   "applies_to": [
+    "carburettor",
+    "fuel-injected",
+    "scooter-cvt",
+    "semi-auto"
+   ],
+   "parts": [
+    "throttle_cable",
+    "throttle_grip",
+    "handlebar",
+    "cable_ends"
+   ],
+   "repairs": [
+    "throttle-grip-strip",
+    "throttle-cable-service",
+    "throttle-twin-cable-replace",
+    "throttle-cable-adjust",
+    "cable-lube"
+   ],
+   "related": [
+    "cable-frayed",
+    "throttle-sticks",
+    "throttle-free-play",
+    "hanging-revs"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/throttles.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cables.htm"
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "id": "cable_ends",
+   "name": "Cable ends, bulk inner wire and outer casing (cable repair kit)",
+   "category": "chassis",
+   "aliases": [
+    "cable nipples",
+    "solder-on nipples",
+    "cable end kit",
+    "universal cable",
+    "bulk cable",
+    "cable repair kit"
+   ],
+   "applies_to": [
+    "all"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/cables.htm"
+    },
+    {
+     "doc": "Dan's Motorcycle Repair Course (Flanders cable hints sheet)",
+     "url": "https://www.dansmc.com/solder_cable.htm"
+    }
+   ],
+   "repairs": [
+    "cable-end-solder",
+    "cable-make-to-length",
+    "cable-lube"
+   ],
+   "problems": [
+    "cable-frayed",
+    "clutch-no-resistance",
+    "throttle-cable-breaks"
+   ]
+  },
+  {
+   "id": "throttle_grip",
+   "name": "Throttle twist grip (throttle tube and housing)",
+   "category": "chassis",
+   "aliases": [
+    "twist grip",
+    "throttle tube",
+    "throttle sleeve",
+    "throttle housing",
+    "throttle drum",
+    "thumb throttle"
+   ],
+   "applies_to": [
+    "carburettor",
+    "fuel-injected",
+    "scooter-cvt",
+    "semi-auto"
+   ],
+   "sources": [
+    {
+     "doc": "Dan's Motorcycle Repair Course",
+     "url": "https://www.dansmc.com/throttles.htm"
+    }
+   ],
+   "repairs": [
+    "throttle-grip-strip",
+    "grip-replace",
+    "throttle-twin-cable-replace",
+    "throttle-cable-service"
+   ],
+   "problems": [
+    "throttle-sticks",
+    "grip-loose",
+    "throttle-cable-breaks"
+   ]
+  }
+ ]
+}

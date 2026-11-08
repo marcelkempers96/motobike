@@ -13,6 +13,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 26}
   - {doc: "MAVCC Motorcycle Mechanic", page: 734}
   - {doc: "MAVCC Motorcycle Mechanic", page: 357}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/throttles.htm"}
 ---
 
 # Throttle sticks or does not snap shut
@@ -59,6 +60,8 @@ No. Stop now. If it happens while riding: pull the clutch in (or, on a scooter, 
 | Cable too tight or misrouted | Sticks or idle rises at full lock | [Adjust free play](/moto-zero/repair/repairs/throttle-cable-adjust), reroute |
 | Grip binding on bar | Grip stiff with cable off | [Clean grip and bar](/moto-zero/repair/repairs/throttle-cable-service) |
 | Dry or frayed cable | Inner cable stiff by hand | [Lube or replace cable](/moto-zero/repair/repairs/throttle-cable-service) |
+| Return cable removed (twin cable throttle) | One cable at a grip made for two | [Refit the pair](/moto-zero/repair/repairs/throttle-twin-cable-replace) |
+| Dry or dirty grip mechanism (spiral, gear or thumb type) | Grip stiff with cable unhooked | [Strip and lubricate the grip](/moto-zero/repair/repairs/throttle-grip-strip) |
 | Sticky slide or throttle plate | Does not close with cable off | [Carburettor](/moto-zero/repair/repairs/carburettor-clean), [throttle body](/moto-zero/repair/repairs/throttle-body-clean) |
 
 ## Reference values (K-Light 125)

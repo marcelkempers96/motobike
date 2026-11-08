@@ -5,3 +5,8 @@
 - [ ] pages
 - [ ] p7-reference.json
 - [ ] notes, checks
+- [x] viewed all sheets (rows 1 to 284) plus zooms of 152_5, Tecumseh 68 to 71, V-belt 49 to 60, flow charts 28, 30
+- [x] pages: repairs frame-engine-number-find, spec-sheet-read, engine-failure-read, cvt-belt-wear-read; problem engine-dust-wear
+- [x] p7-reference.json written
+- [x] index.json, md bullets, notes, checks (all ids, links, photo files, captions, dashes OK)
+- DONE

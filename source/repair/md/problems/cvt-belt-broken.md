@@ -12,6 +12,7 @@ sources:
   - {doc: "Louis: Scooter variator and clutch", url: "https://www.louis-moto.co.uk/rund-ums-motorrad/schraubertipps/variomatik-und-kupplung"}
   - {doc: "Motorcycle & Powersports News: Tech Tips, Scooter Repair & Maintenance", url: "https://www.motorcyclepowersportsnews.com/tech-tips-scooter-repair-maintenance/"}
   - {doc: "K-Light 125 manual", page: 25}
+  - {doc: "Dan's Motorcycle Repair Course (V-belt service)", url: "https://www.dansmc.com/miscellaneous/BS/v-belt/v-belt.htm"}
 ---
 
 # Scooter drive belt has broken
@@ -57,3 +58,4 @@ No. Stop safely at the roadside. Do not keep revving the engine. Pieces of belt 
 | Damaged rollers or pulley faces | Flat rollers, grooves, blue marks | [Check variator rollers and sliders](/moto-zero/repair/repairs/cvt-roller-check) |
 | Wrong or wrongly fitted belt | Recent belt change | Refit correct part |
 | Overheating | Blocked duct, heavy loads | Clear the duct; check the clutch |
+| Object jammed in the drive, or belt levered on | Cords pulled out, cut on the bottom | Remove debris; fit the belt by hand; [Read a worn or broken scooter belt](/moto-zero/repair/repairs/cvt-belt-wear-read) |

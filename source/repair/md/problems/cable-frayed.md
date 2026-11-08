@@ -14,6 +14,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 51}
   - {doc: "K-Light 125 manual", page: 222}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/chemicals.htm"}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/cables.htm"}
 ---
 
 # A control cable is frayed or stiff
@@ -65,3 +66,5 @@ Do not ride with a frayed or sticking **throttle** or **brake** cable. A frayed 
 | Dry lever pivot | Lever stiff without cable | [Lever pivots](/moto-zero/repair/repairs/lever-service) |
 | Kinked or crushed outer | Visible damage, stays stiff | Replace and reroute |
 | Tight bend or wrong route | Feel changes at full lock | Reroute in guides |
+| Cracked outer casing | Cracks in the outer, oil leaks out | Graphite lube for now, then replace the cable |
+| Soldered end pulling off | Repair nipple moves on the wire | [Resolder the end](/moto-zero/repair/repairs/cable-end-solder) or fit a new cable |

@@ -15,6 +15,7 @@ sources:
   - {doc: "MAVCC Motorcycle Mechanic", page: 257}
   - {doc: "MAVCC Motorcycle Mechanic", page: 664}
   - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/engine_breakin.htm"}
+  - {doc: "Dan's Motorcycle Repair Course (Briggs and Stratton troubleshooting flow chart)", url: "https://www.dansmc.com/miscellaneous/BS/bs_fail_flowchart/bs_flow.htm"}
 ---
 
 # Engine feels weak and down on power
@@ -84,6 +85,8 @@ Confirm the fix with a [road test](/moto-zero/repair/repairs/road-test).
 | Fuel restriction | Weak flow, bogs at full throttle | [Tap and lines](/moto-zero/repair/repairs/fuel-tap-line-check) |
 | Blocked exhaust or catalyst | Carbon, rattle, back-pressure | [Two-stroke decoke](/moto-zero/repair/repairs/two-stroke-decoke) |
 | Wrong valve clearance or worn engine | Compression test | [Compression test](/moto-zero/repair/repairs/compression-test) |
+| Throttle cable does not open fully | Twist grip fully open, carburettor slide or butterfly not fully open | [Throttle cable adjust](/moto-zero/repair/repairs/throttle-cable-adjust) |
+| Mixture lean | Runs better with the choke partly on | [Engine runs hot and lean](/moto-zero/repair/problems/runs-lean) |
 
 ## Reference values (K-Light 125)
 

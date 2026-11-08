@@ -7,6 +7,7 @@ applies_to: [carburettor, fuel-injected]
 sources:
   - {doc: "K-Light 125 manual", page: 55}
   - {doc: "MAVCC Motorcycle Mechanic", page: 731}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/throttles.htm"}
 ---
 
 # Throttle cable
@@ -24,6 +25,8 @@ Turning the grip pulls the cable and opens the throttle. A spring at the carbure
 
 ## When to replace it
 Replace a cable with any broken strands, a kinked outer or one that stays stiff after cleaning and oiling.
+- Most throttle cables fail at the grip end, where the wire bends each time the grip turns. Look there first.
+- On a twin cable throttle, replace the return cable too; do not run the bike on the opening cable alone ([Replace a twin throttle cable](/moto-zero/repair/repairs/throttle-twin-cable-replace)).
 
 ## What to match when buying
 - Make, model and year. Length, end fittings, adjuster position and whether it is a single or a pull and return pair.

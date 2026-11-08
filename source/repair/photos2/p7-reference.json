@@ -1,0 +1,208 @@
+{
+ "problems": {
+  "cvt-belt-broken": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_53.jpg",
+    "caption": "Belt pulled apart with its cords broken"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_58.jpg",
+    "caption": "Belt cut on the bottom by an object or edge"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_59.jpg",
+    "caption": "Cracks across a belt underside from heat or age"
+   }
+  ],
+  "cvt-slip": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+    "caption": "Belt sides frayed and worn from constant slipping"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_56.jpg",
+    "caption": "Belt bottom and sides burnt by slipping and heat"
+   }
+  ],
+  "cvt-judder": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_54.jpg",
+    "caption": "Severe corner and surface wear on a drive belt"
+   }
+  ],
+  "cvt-noise": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_57.jpg",
+    "caption": "Frayed belt sidewall from rubbing"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_52.jpg",
+    "caption": "Belt turned over in a worn or misaligned pulley"
+   }
+  ],
+  "cvt-low-top-speed": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+    "caption": "Worn, narrowed belt sides let the belt ride low"
+   }
+  ],
+  "revs-without-speed": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+    "caption": "Belt sides frayed and worn from constant slipping"
+   }
+  ],
+  "blue-smoke": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_68.jpg",
+    "caption": "Dirt wear: scored bore, worn piston and crank journal"
+   }
+  ],
+  "low-power": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_68.jpg",
+    "caption": "Dirt wear: scored bore, worn piston and crank journal"
+   }
+  ],
+  "smoke-after-rebuild": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_68.jpg",
+    "caption": "Dirt wear on bore and piston: fix the air leak first"
+   }
+  ],
+  "power-fades-hot": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_70.jpg",
+    "caption": "Cooling fins packed with debris cause overheating"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_69.jpg",
+    "caption": "Burnt exhaust valve face from a hot, lean engine"
+   }
+  ]
+ },
+ "repairs": {
+  "cvt-belt-replace": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+    "caption": "Old belt with frayed, worn sides: replace it"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_54.jpg",
+    "caption": "Corner and surface wear: look for a rub"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_59.jpg",
+    "caption": "Cracked belt underside: replace the belt"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_53.jpg",
+    "caption": "Broken belt: check the drive for debris first"
+   }
+  ],
+  "air-cooling-check": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_70.jpg",
+    "caption": "Cooling fins packed with debris cause overheating"
+   }
+  ],
+  "oil-inspect": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_71.jpg",
+    "caption": "Guide page on judging oil level and condition after a failure"
+   }
+  ],
+  "top-end-assessment": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_68.jpg",
+    "caption": "Dirt wear: scored bore, worn piston and crank journal"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_69.jpg",
+    "caption": "Burnt exhaust valve face from a hot, lean engine"
+   }
+  ],
+  "valve-seat-lap": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_69.jpg",
+    "caption": "Burnt, pitted valve face: reface or replace the valve"
+   }
+  ],
+  "diagnosis-method": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_28.jpg",
+    "caption": "Example flow chart for low power and compression"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_30.jpg",
+    "caption": "Example flow chart for an engine that will not start"
+   }
+  ]
+ },
+ "parts": {
+  "cvt_belt": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+    "caption": "Worn belt with frayed sides"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_59.jpg",
+    "caption": "Belt with cracks across the underside"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_53.jpg",
+    "caption": "Belt pulled apart with broken cords"
+   }
+  ],
+  "valves": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_69.jpg",
+    "caption": "Burnt exhaust valve face from overheating"
+   }
+  ],
+  "valve_seats": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_69.jpg",
+    "caption": "Burnt valve face that no longer seals on its seat"
+   },
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_71.jpg",
+    "caption": "Valve face wear and valve clearance drawings"
+   }
+  ],
+  "cylinder_head": [
+   {
+    "file": "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_70.jpg",
+    "caption": "Head and cylinder fins blocked with debris"
+   }
+  ]
+ },
+ "systems": {},
+ "course": [
+  {
+   "chapter": "m1-history-systems",
+   "file": "source/dansmc/08_Specifications_Reference/155/155_translation_english_yes_right.gif",
+   "caption": "Replica of the 1885 Daimler riding car, an early motorcycle"
+  },
+  {
+   "chapter": "m1-history-systems",
+   "file": "source/dansmc/08_Specifications_Reference/155/155_translation_english_yes_right_2.jpg",
+   "caption": "Single-cylinder engine of the 1885 Daimler riding car"
+  },
+  {
+   "chapter": "m1-history-systems",
+   "file": "source/dansmc/08_Specifications_Reference/155/155_translation_english_yes_right_4.jpg",
+   "caption": "Drawing from Daimler's 1885 engine patent"
+  }
+ ],
+ "order": {
+  "repairs": {
+   "cvt-belt-replace": [
+    "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_55.jpg",
+    "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_54.jpg",
+    "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_59.jpg",
+    "source/dansmc/08_Specifications_Reference/156/156_back_m_c_repair_course_back_53.jpg"
+   ]
+  }
+ }
+}

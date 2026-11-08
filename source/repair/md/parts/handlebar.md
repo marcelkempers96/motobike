@@ -9,6 +9,7 @@ sources:
   - {doc: "K-Light 125 manual", page: 131}
   - {doc: "K-Light 125 manual", page: 141}
   - {doc: "K-Light 125 manual", page: 145}
+  - {doc: "Dan's Motorcycle Repair Course", url: "https://www.dansmc.com/throttles.htm"}
 ---
 
 # Handlebar and grips
@@ -38,6 +39,7 @@ Replace a bent or cracked bar; do not straighten steel bars that have been bent 
 - After fitting, turn bars lock to lock and check the throttle snaps shut in every position.
 - Align: [Align the front wheel, forks and handlebar](/moto-zero/repair/repairs/front-end-align).
 - See [Check chassis fasteners](/moto-zero/repair/repairs/fastener-check).
+- Grips can be fitted over a layer or two of masking tape instead of glue, so they come off again without damage: [Remove and fit handlebar grips](/moto-zero/repair/repairs/grip-replace).
 
 ## Reference (K-Light 125)
 | Item | Value | PDF page |
