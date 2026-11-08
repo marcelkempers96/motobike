@@ -131,6 +131,21 @@ export default {
           "html": "Euro 4 (2016), Euro 5 (2020) and BS-VI (April 2020) then require the mixture to sit at <strong>stoichiometric, 14.7:1</strong>, so a three-way catalyst can work. That means electronic fuel injection with an oxygen sensor, now even on 100&ndash;125 cc commuters like the K-Light 125."
         },
         {
+          "type": "photo",
+          "src": "repair-photos/155_translation_english_yes_right.jpg",
+          "caption": "Replica of the 1885 Daimler riding car, an early motorcycle. Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/155_translation_english_yes_right_2.jpg",
+          "caption": "Single-cylinder engine of the 1885 Daimler riding car. Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/155_translation_english_yes_right_4.jpg",
+          "caption": "Drawing from Daimler's 1885 engine patent. Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "p",
           "html": "A three-way catalyst converts HC, CO and NOx together only in a narrow window around \\(\\lambda = 1\\), the stoichiometric mixture. Holding that window at every load and temperature means measuring exhaust oxygen and correcting the fuel quantity every few engine cycles. An ECU-controlled injector can do this in closed loop; a fixed-jet carburettor, which meters fuel from air flow alone, cannot. Road two-strokes survive only in off-road competition, some direct-injection designs and older fleets."
         },

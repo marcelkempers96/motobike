@@ -264,6 +264,11 @@ export default {
           "caption": "Cable-operated clutch release, shown in section"
         },
         {
+          "type": "photo",
+          "src": "repair-photos/138_can_read_here_hydraulic_clutch_handled.jpg",
+          "caption": "Hydraulic clutch slave cylinder on the engine case. Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
           "type": "h3",
           "text": "How much torque can it carry?"
         },
@@ -2008,6 +2013,16 @@ export default {
           "type": "figure",
           "fig": "steering-geometry",
           "caption": "Slide rake and offset and watch trail change. More offset cuts trail; more rake adds it."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/150_steering_bearings.jpg",
+          "caption": "Steering stem and yokes with the bearings fitted. Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/150_leading_link_front_end.jpg",
+          "caption": "Leading link front end on an older bike. Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
         },
         {
           "type": "h3",

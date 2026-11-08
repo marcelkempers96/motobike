@@ -180,6 +180,10 @@
   <url><loc>https://motobike-five.vercel.app/brand/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/videos/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/work-with-us/</loc><lastmod>2026-11-06</lastmod></url>
+  <url>
+    <loc>https://motobike-five.vercel.app/engine/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
   <url><loc>https://motobike-five.vercel.app/repair/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/diagnose/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/</loc><lastmod>2026-11-02</lastmod></url>
@@ -471,6 +475,8 @@
   <url><loc>https://motobike-five.vercel.app/repair/problems/chain-adjuster-at-end/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/new-fork-seal-leaks/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/new-tube-flat-after-fit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/grip-loose/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/throttle-cable-breaks/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/piston-crown-damage/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/alcohol-fuel-trouble/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/vacuum-tap-no-flow/</loc><lastmod>2026-11-02</lastmod></url>
@@ -495,6 +501,7 @@
   <url><loc>https://motobike-five.vercel.app/repair/problems/clutch-slip-after-oil-change/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/oil-drain-thread-stripped/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/two-stroke-old-smokes-seals/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/problems/engine-dust-wear/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/abs-check/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/accessory-wiring/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/air-cooling-check/</loc><lastmod>2026-11-02</lastmod></url>
@@ -743,6 +750,12 @@
   <url><loc>https://motobike-five.vercel.app/repair/repairs/torque-feel-practice/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/cylinder-fin-safe-hit/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/measuring-tools-use/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/cable-end-solder/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/cable-make-to-length/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/engine-remove-refit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/grip-replace/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/throttle-grip-strip/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/throttle-twin-cable-replace/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/test-light-multimeter-use/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/rectifier-test/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/alternator-rotor-check/</loc><lastmod>2026-11-02</lastmod></url>
@@ -857,6 +870,10 @@
   <url><loc>https://motobike-five.vercel.app/repair/repairs/oil-filter-type-identify/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/small-engine-oil-level/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/repairs/two-stroke-gearbox-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/cvt-belt-wear-read/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/engine-failure-read/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/frame-engine-number-find/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/repairs/spec-sheet-read/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/abs/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/air_filter/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/aux_battery/</loc><lastmod>2026-11-02</lastmod></url>
@@ -991,6 +1008,8 @@
   <url><loc>https://motobike-five.vercel.app/repair/parts/water_pump/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/wheel_bearing/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/wiring/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/parts/cable_ends/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/parts/throttle_grip/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/carb_jets/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/jet_needle/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/parts/carb_slide/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1393,8 +1412,4 @@
   <url><loc>https://motobike-five.vercel.app/parts/part/final-drive-oil/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/parts/part/ev-controller/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/parts/part/ev-charger/</loc><lastmod>2026-11-02</lastmod></url>
-  <url>
-    <loc>https://motobike-five.vercel.app/engine/</loc>
-    <lastmod>2026-11-08</lastmod>
-  </url>
 </urlset>
