@@ -1,0 +1,65 @@
+<html><head><title>Gearing Calculator</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, user-scalable=yes, initial-scale=0.9" name="viewport"/>
+<link href="screen.css" media="Screen" rel="stylesheet" type="text/css"/>
+<script language="JAVASCRIPT">
+
+<!--
+/*************************************************************
+ * Gear calc script ver 1.0 by Kevin Earls, Sherman, Texas
+ * 1999/01/06
+ * Copyright (c) 1999. Kevin Earls. All Rights Reserved.
+ * HTML cleaned up by John Rushworth <http://www.motorcycle.co.uk/>
+ * You can freely copy, use, modify this script,
+ * if the credit is given in the source.
+ * If you would like to get information for this script,
+ * please mail keystroke@bigfoot.com
+ */
+
+function doit()
+{
+    var rpms = document.FORM.RPMS.value;
+    var ratio = document.FORM.PrimaryGear.value *
+    (document.FORM.RearSprocket.value / document.FORM.FrontSprocket.value);
+    var wheel = document.FORM.RearWheelDia.value * 3.1416 / 63360 * 60;
+    document.FORM.MPH1.value = rpms / ratio * wheel / document.FORM.GEAR1.value;
+    document.FORM.MPH2.value = rpms / ratio * wheel / document.FORM.GEAR2.value;
+    document.FORM.MPH3.value = rpms / ratio * wheel / document.FORM.GEAR3.value;
+    document.FORM.MPH4.value = rpms / ratio * wheel / document.FORM.GEAR4.value;
+    document.FORM.MPH5.value = rpms / ratio * wheel / document.FORM.GEAR5.value;
+    document.FORM.MPH6.value = rpms / ratio * wheel / document.FORM.GEAR6.value;
+    return true;
+}
+//-->
+</script>
+<meta content="Gearing Calculator" name="Description"/>
+<meta content="Motorcycle Softwear" name="Keywords"/>
+</head>
+<body alink="#00ff00" background="background1.jpg" link="#daa520" text="black" vlink="#ff0000">
+<div align="left" style="margin-left: 5%;">
+<div align="left" style="margin-right: 5%;">
+<center><font color="#ff0000" size="5"><b><i>Javascript Gearing 
+Calculator</i></b></font></center><font face="Arial" size="2"><b>
+<center>
+<form name="FORM">Primary Gear <input name="PrimaryGear" size="3" value="2.83"/> Front 
+Sprocket   <input name="FrontSprocket" size="3" value="15"/><br/>Rear Sprocket 
+<input name="RearSprocket" size="3" value="45"/> Rear Wheel Dia <input name="RearWheelDia" size="3" value="27"/><br/><br/>1 Gear <input name="GEAR1" size="6" value="2.62"/> <input name="MPH1" size="6"/> MPH<br/>2 Gear <input name="GEAR2" size="6" value="1.84"/> <input name="MPH2" size="6"/> MPH<br/>3 Gear <input name="GEAR3" size="6" value="1.4"/> <input name="MPH3" size="6"/> MPH<br/>4 Gear <input name="GEAR4" size="6" value="1.12"/> <input name="MPH4" size="6"/> MPH<br/>5 Gear <input name="GEAR5" size="6" value="0.93"/> <input name="MPH5" size="6"/> MPH<br/>6 Gear <input name="GEAR6" size="6"/> <input name="MPH6" size="6"/> MPH<br/><br/>RPM <input name="RPMS" size="6" value="8000"/><br/><br/><input name="CALCULATE" onclick="doit();" type="button" value="CALCULATE"/>
+</form></center>
+<hr color="blue"/>
+Default values are for a 1996/7/8 or 1999 XR400R. <br/><br/>The XR400R RPM range 
+is up to 9,200 RPM before the rev limiter cuts in - need to double check that? 
+<br/><br/>Realistic dyno runs show 8 to 8,300 as being the max working RPM, unless 
+engine work is carried out to obtain more revs.<br/><br/>Wheel diameter can vary 
+subject to tyre choice. Measure roll circ and use C=Pi times D to calculate, 
+where Pi is 22/7<br/><br/>HRC kit Primary Gears are 24/64 or 2.666 to 1 
+ratio.<br/><br/>To return the script default values use refresh in your browser 
+plus the control key.<br/><br/><hr color="blue"/><br/><br/>
+<center><a href="http://www.dansmc.com/MC_repaircourse.htm"><font size="3">Back to M/C Repair Course</font></a>
+<br/><br/>
+<font color="black" size="3">Did this page help you ? Would you like to help us ? If so </font><a href="donation.htm"><font color="black" size="3">Click HERE</font></a></center></b></font><br/>
+<div align="center">
+<a href="http://www.dansmc.com/indexindex.htm"><h4>BACK TO INDEX</h4></a>
+<a href="http://www.dansmc.com/index.htm"><h4>MOTORCYCLE HOME PAGE</h4></a></div>
+</div>
+</div></body>
+</html>
