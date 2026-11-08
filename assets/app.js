@@ -593,7 +593,7 @@ function updateComponentModelTick(dt) {
   if (k === 'wheel') degPerSec = Math.max(wheelRPM, 25) * 6 / 10;
   else if (k === 'brake') degPerSec = S._brakeSpin != null ? S._brakeSpin : Math.max(wheelRPM, 25) * 6 / 10;
   else if (k === 'engine') degPerSec = S.running ? S.rpm * 6 / 60 : 120;  // slow demo turn when the engine is off
-  else if (k === 'motor') degPerSec = Math.max(S.elec.rpm, S.rider.throttle * 10000) * 6 / 60;
+  else if (k === 'motor') degPerSec = Math.max(S.elec.rpm, S.rider.throttle * 10000) * 6 / 60 || 120;  // slow demo turn when stopped
   if (degPerSec) CV3.spin(degPerSec * dt);
 }
 
