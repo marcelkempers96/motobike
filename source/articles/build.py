@@ -175,7 +175,7 @@ def listing_page():
     up = '../'
     url = BASE + '/articles/'
     title = 'Motorcycle articles: how it works, maintenance and repair | Motopedia'
-    desc = 'Plain-English guides to how motorcycles work and how to maintain and repair them: engines, starting faults, batteries, oil, brakes, tyres, chains and electric drives.'
+    desc = 'Plain-English guides to how motorcycles work and how to maintain and repair them: engines, starting faults, batteries, oil, brakes, tyres and electric drives.'
     grouped = [s for _, _, _, sl in GROUPS for s in sl]
     assert sorted(grouped) == sorted(BY), 'every article must be in exactly one group'
     ordered = [BY[s] for s in grouped]
@@ -209,6 +209,7 @@ def listing_page():
   <meta name="twitter:card" content="summary_large_image">
 {FONTS.format(up=up, v=CSSV, sv=STYLESV)}
   {jsonld(ld)}
+  {jsonld({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'}, {'@type': 'ListItem', 'position': 2, 'name': 'Articles', 'item': url}]})}
   <style>
     .mz-arts-group {{ max-width: 1160px; margin: 0 auto; padding: 30px 0 0; border-top: 2px solid var(--ink); }}
     .mz-arts-head + .mz-arts-group {{ margin-top: 18px; }}
@@ -246,7 +247,9 @@ for a in ARTICLES:
 open(f'{ROOT}/articles/index.html', 'w').write(listing_page())
 
 pages = ['', 'overview/', 'cockpit/', 'learn/', 'quiz/', 'history/', 'types/', 'wiring/', 'models/', 'build/', 'kids/',
-         'downloads/', 'sources/', 'updates/', 'about/', 'contact/', 'progress/', 'privacy/', 'cookies/', 'terms/', 'articles/'] + [f'articles/{a["slug"]}/' for a in ARTICLES] + ['repair/', 'repair/problems/', 'repair/parts/', 'repair/fix/']
+         'downloads/', 'sources/', 'updates/', 'about/', 'contact/', 'privacy/', 'cookies/', 'terms/', 'articles/'] + [f'articles/{a["slug"]}/' for a in ARTICLES]
+# repair/ and parts/ URLs are written by their own builders; progress/ and account/ are private (noindex) and stay out
+NOT_IN_SITEMAP = {f'{BASE}/{p}' for p in ('progress/', 'account/', 'repair/fix/')}
 for p in pages:
     assert os.path.exists(f'{ROOT}/{p}index.html'), p
 LASTMOD = {f'articles/{a["slug"]}/': a.get('date', DATE) for a in ARTICLES}
@@ -263,7 +266,7 @@ except FileNotFoundError:
     old = ''
 for blk in re.findall(r'[ \t]*<url>.*?</url>\n?', old, re.S):
     loc = re.search(r'<loc>(.*?)</loc>', blk).group(1)
-    if loc not in ours:
+    if loc not in ours and loc not in NOT_IN_SITEMAP:
         sm += blk if blk.endswith('\n') else blk + '\n'
 sm += '</urlset>\n'
 open(f'{ROOT}/sitemap.xml', 'w').write(sm)

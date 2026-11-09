@@ -26,6 +26,7 @@ CATEGORY = {  # editorial category -> (label, plural, generic render)
   'scooter': ('Scooter', 'Scooters', 'bike_scooter'), 'underbone': ('Underbone', 'Underbones and step-throughs', 'bike_step_through'),
   'supermoto': ('Supermoto', 'Supermotos', 'bike_mx_2t'), 'electric': ('Electric', 'Electric motorcycles and scooters', 'bike_electric'),
   'offroad4': ('Off-road four-stroke', 'Off-road four-strokes', 'bike_mx_2t'), 'offroad2': ('Off-road two-stroke', 'Off-road two-strokes', 'bike_mx_2t'),
+  'classic': ('Classic', 'Classic and retro bikes', 'bike_classic_4t'),
 }
 COUNTRY = {'AR': 'Argentina', 'AT': 'Austria', 'AU': 'Australia', 'BE': 'Belgium', 'BR': 'Brazil', 'CA': 'Canada', 'CH': 'Switzerland', 'CO': 'Colombia',
   'DE': 'Germany', 'DK': 'Denmark', 'ES': 'Spain', 'FI': 'Finland', 'FR': 'France', 'GB': 'United Kingdom', 'ID': 'Indonesia', 'IE': 'Ireland', 'IL': 'Israel',

@@ -68,6 +68,8 @@ for _k, _x in list(NEW_MD):
 import sys as _sys
 _sys.path.insert(0, os.path.join(ROOT, 'source', 'bikes'))
 import bikedata as _bd
+_sys.path.insert(0, os.path.join(ROOT, 'source/seo'))
+from seohelp import img_attrs
 _sys.path.insert(0, os.path.join(ROOT, 'source', 'videos'))
 import videolib as _vl
 VIDS, VMAP, VBY = _vl.load()
@@ -157,6 +159,7 @@ def _ahash(src):
   return _AH[src]
 def _near(a, b): return a is not None and b is not None and bin(a ^ b).count('1') <= 6
 def photos_html(kind, i, rel, limit=4, skip=None):
+  alt = {'repairs': REP, 'problems': PROB, 'parts': PART}.get(kind, {}).get(i, {}); alt = alt.get('title') or alt.get('name') or ''
   items = []; hashes = [_ahash(skip)] if skip else []
   for ph in PHOTOS[kind].get(i, [])[:limit + (1 if skip else 0)]:
     src = photo_src(ph['file'])
@@ -165,7 +168,7 @@ def photos_html(kind, i, rel, limit=4, skip=None):
       h = _ahash(src)
       if any(_near(h, x) for x in hashes): continue
       hashes.append(h)
-    if src and len(items) < limit: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption", ""))}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
+    if src and len(items) < limit: items.append(f'<figure><a href="{rel}{src}" target="_blank" rel="noopener"><img src="{rel}{src}" alt="{e(ph.get("caption") or alt or "Repair photo")}" loading="lazy"></a><figcaption>{e(ph.get("caption", ""))}</figcaption></figure>')
   if not items: return ''
   return f'<section class="r-photos" aria-label="Photos"><div class="r-photos-grid">{"".join(items)}</div></section>'
 
@@ -332,7 +335,7 @@ def part_thumb(pid):
   return part_img(pid)[0]
 def partcard(i, rel):
   p = PART[i]; src = part_thumb(i)
-  return f'<div class="rpc"><a class="rpc-main" href="{rel}repair/parts/{i}/"><span class="rpc-img{' is-photo' if src.endswith(('.jpg', '.jpeg', '.webp')) and '/renders/' not in src else ''}"><img src="{rel}{src}" alt="" loading="lazy"></span><b>{e(p["name"])}</b></a><a class="rpc-shop" href="{rel}{shop_url(i)}">Find this part</a></div>'
+  return f'<div class="rpc"><a class="rpc-main" href="{rel}repair/parts/{i}/"><span class="rpc-img{' is-photo' if src.endswith(('.jpg', '.jpeg', '.webp')) and '/renders/' not in src else ''}"><img src="{rel}{src}" alt="{e(p["name"])}" loading="lazy"></span><b>{e(p["name"])}</b></a><a class="rpc-shop" href="{rel}{shop_url(i)}">Find this part</a></div>'
 
 SIGNUP = {p: '<section data-mz-signup data-title="Get new repair guides by email"></section>' for p in ('repair/', 'repair/problems/', 'repair/repairs/', 'repair/parts/', 'repair/bikes/', 'repair/diagnose/')}
 SEO = {
@@ -349,7 +352,12 @@ SEO = {
 def _seo_title(t):
   # keep titles inside what search results show (about 60 to 70 characters)
   if len(t) > 70 and t.endswith(' | Motopedia'): t = t[:-12]
-  if len(t) > 70: t = t.replace(': step by step', '').replace(': causes and step-by-step check', ': causes and checks')
+  if len(t) > 70: t = t.replace(': step by step', '').replace(': causes and step-by-step checks', ': causes and checks')
+  if len(t) > 70: t = re.sub(r'\s*\([^)]*\)', '', t)
+  for suf in (': causes and checks', ': what it does, how it fails, what to buy'):
+    if len(t) > 70 and t.endswith(suf): t = t[:-len(suf)] + (': function, faults, buying' if 'buy' in suf else '')
+  if len(t) > 70 and ': ' in t and len(t.split(': ')[0]) >= 30: t = t.split(': ')[0]
+  if len(t) > 70: t = t[:70].rsplit(' ', 1)[0].rstrip(',;:')
   return t
 def _seo_desc(d):
   if len(d) <= 165: return d
@@ -358,10 +366,17 @@ def _seo_desc(d):
 def _og_image(body):
   m = re.search(r'<img[^>]+src="(?:\.\./)*(assets/(?:repair-photos|renders|photos|parts|illustrations)/[^"]+)"', body)
   return f'{SITE}/{m.group(1)}' if m else f'{SITE}/assets/renders/bike_classic_4t_side.webp'
-def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False):
-  body = add_legend(body)
+def page(path, title, desc, body, crumbs, rel, extra_ld=None, noindex=False, article=None):
+  body = img_attrs(add_legend(body), path)
   title = _seo_title(title); desc = _seo_desc(desc); ogi = _og_image(body)
   ld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": c, "item": SITE + '/' + u} for n, (c, u) in enumerate(crumbs)]}]
+  if article:
+    h1 = re.search(r'<h1>(.*?)</h1>', body)
+    ld.append({"@context": "https://schema.org", "@type": "TechArticle", "headline": html.unescape(re.sub(r'<[^>]+>', '', h1.group(1)))[:110] if h1 else title,
+               "description": desc, "url": f'{SITE}/{path}', "image": ogi, "articleSection": article, "inLanguage": "en",
+               "author": {"@type": "Organization", "name": "Transitions Lab", "url": "https://www.transitionslab.org"},
+               "publisher": {"@type": "Organization", "name": "Motopedia", "logo": {"@type": "ImageObject", "url": f'{SITE}/assets/brand-mark.svg'}},
+               "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isPartOf": {"@type": "WebSite", "name": "Motopedia", "url": SITE + '/'}})
   if extra_ld: ld.extend(extra_ld if isinstance(extra_ld, list) else [extra_ld])
   cr = ' / '.join(f'<a href="{rel}{u}">{e(c)}</a>' if n < len(crumbs) - 1 else e(c) for n, (c, u) in enumerate(crumbs))
   doc = f'''<!doctype html>
@@ -454,7 +469,7 @@ for i, p in PROB.items():
     <section class="r-sec">{sources_html(p.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/problems/{i}/'
   page(path, f'{p["title"]}: causes and step-by-step checks | Motopedia', f'{p["title"]} on a motorcycle or scooter: is it safe to ride, quick checks, step-by-step diagnosis, likely causes and the repair for each.',
-       html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/'), (SYS.get(p['system'], ''), f'repair/systems/{p["system"]}/'), (p['title'], path)], rel, extra_ld=videos_ld('problems', i) or None)
+       html_, [('Repair', 'repair/'), ('Problems', 'repair/problems/'), (SYS.get(p['system'], ''), f'repair/systems/{p["system"]}/'), (p['title'], path)], rel, extra_ld=videos_ld('problems', i) or None, article='Motorcycle diagnosis')
   urls.append(path)
 
 # repairs
@@ -487,7 +502,7 @@ for i, r in REP.items():
     <section class="r-sec">{sources_html(r.get("sources"))}<p class="r-note">Values marked K-Light 125 are for that reference bike. Use your own bike's manual for its values. Text CC BY-SA 4.0, Transitions Lab.</p></section>'''
   path = f'repair/repairs/{i}/'
   page(path, f'{r["title"]}: step by step | Motopedia', f'{r["title"]}: safety, tools, step-by-step instructions, how to check your work and what to do if it did not fix the problem.',
-       html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/'), (r['title'], path)], rel, extra_ld=videos_ld('repairs', i) or None)
+       html_, [('Repair', 'repair/'), ('Repairs', 'repair/repairs/'), (r['title'], path)], rel, extra_ld=videos_ld('repairs', i) or None, article='Motorcycle repair')
   urls.append(path)
 
 # parts
@@ -665,7 +680,7 @@ def bike_card(b, rel):
   cc = b['specs'].get('displacement_cc'); kwh = b['specs'].get('battery_kwh')
   meta = f'{fmt(cc["value"])} cc' if cc else (f'{fmt(kwh["value"])} kWh' if kwh else '')
   return (f'<a class="bk-card" href="{rel}repair/bikes/{b["make_slug"]}/{b["id"]}/" data-cat="{b["category"]}" data-q="{e((b["title"] + " " + " ".join(b["aliases"])).lower())}">'
-          f'<span class="bk-img{" is-photo" if real else ""}"><img src="{src}" alt="" loading="lazy"></span><b>{e(b["title"])}</b><span>{e(b["cat_label"])}{" · " + meta if meta else ""}</span></a>')
+          f'<span class="bk-img{" is-photo" if real else ""}"><img src="{src}" alt="{e(b["title"]) if real else "Illustration of a " + e(b["cat_label"].lower()) + " motorcycle"}" loading="lazy"></span><b>{e(b["title"])}</b><span>{e(b["cat_label"])}{" · " + meta if meta else ""}</span></a>')
 
 MAKES = {}
 for b in BIKES: MAKES.setdefault(b['make'], []).append(b)
@@ -734,8 +749,8 @@ for b in BIKES:
   desc = f'{b["title"]} repairs, common problems and key specs: {", ".join(REP[x]["title"].lower() for x in b["repairs"][:3])} and more, with step-by-step guides and parts.'
   ld = {"@context": "https://schema.org", "@type": "Thing", "name": b['title'], "description": b['summary'] or desc}
   page(path, f'{b["title"]}: repairs, problems and specs | Motopedia', desc[:300], html_,
-       [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (b['make'], f'repair/bikes/{b["make_slug"]}/'), (b['title'], path)], rel, extra_ld=ld, noindex=not b['rich'])
-  if b['rich']: bike_urls.append(path)
+       [('Repair', 'repair/'), ('By bike', 'repair/bikes/'), (b['make'], f'repair/bikes/{b["make_slug"]}/'), (b['title'], path)], rel, extra_ld=ld)
+  bike_urls.append(path)
 
 for mk, bs in MAKES.items():
   rel = '../../../'
@@ -778,7 +793,7 @@ open(os.path.join(ROOT, 'assets/content/repair-index.js'), 'w', encoding='utf-8'
 
 # sitemap
 sm = os.path.join(ROOT, 'sitemap.xml'); s = open(sm, encoding='utf-8').read()
-s = re.sub(r'\s*<url><loc>https://motobike-five\.vercel\.app/repair/[^<]*</loc>[^\n]*</url>', '', s)
+s = re.sub(r'\s*<url>\s*<loc>' + re.escape(SITE) + r'/repair/[^<]*</loc>.*?</url>', '', s, flags=re.S)
 s = s.replace('</urlset>', ''.join(f'\n  <url><loc>{SITE}/{u}</loc><lastmod>2026-11-02</lastmod></url>' for u in urls).lstrip('\n') + '\n</urlset>')
 open(sm, 'w', encoding='utf-8').write(s)
 print(f'problems {len(PROB)}, repairs {len(REP)}, parts {len(PART)}, systems {len(SYS)}; holding pages: ' + ', '.join(f'{k} {len(v)}' for k, v in missing.items() if v))

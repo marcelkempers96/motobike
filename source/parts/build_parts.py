@@ -8,16 +8,17 @@ adds the indexed pages to sitemap.xml. Run from the repo root:
     python3 source/parts/build_parts.py
 
 The workbook is the single source of truth: edit it, run this, commit.
-Priority >= 12 pages are indexed; the rest are noindex until reviewed.
+All pages are indexed (the priority score now only orders the pages).
 """
 import html, json, os, re, shutil
-import openpyxl
+import openpyxl, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'seo'))
+from seohelp import img_attrs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 XLSX = os.path.join(ROOT, 'source/parts/motorcycle-spare-parts-research.xlsx')
 OUT = os.path.join(ROOT, 'parts')
 SITE = 'https://motobike-five.vercel.app'
-INDEX_FROM = 12          # priority score from which model-part pages are indexed
 CSSV = '20261106b'
 
 e = lambda s: html.escape(str(s if s is not None else ''), quote=True)
@@ -169,6 +170,8 @@ def _ogi(body):
   return f'{SITE}/{m.group(1)}' if m else f'{SITE}/assets/renders/bike_classic_4t_side.webp'
 def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
   if len(title) > 70 and title.endswith(' | Motopedia'): title = title[:-12]
+  if len(title) > 70: title = re.sub(r'\s*\([^)]*\)', '', title)
+  if len(title) > 70: title = title[:70].rsplit(' ', 1)[0].rstrip(',;:')
   if len(desc) > 165: desc = desc[:162].rsplit(' ', 1)[0].rstrip(',;:') + '...'
   depth = path.strip('/').count('/') + 1
   rel = '../' * depth
@@ -201,7 +204,7 @@ def page(path, title, desc, body, *, crumbs, noindex=False, extra_ld=None):
   </header>
   <main class="sp-main">
     <p class="sp-crumb">{crumb_html}</p>
-{body.replace('{R}', rel)}
+{img_attrs(body.replace('{R}', rel), path.strip('/') + '/')}
   </main>
   {'<section data-mz-signup data-title="Get new spare-parts guides by email"></section>' if path in ('/parts/', 'parts/') or path.count('/') <= 3 else ''}
   <footer data-mz-footer></footer>
@@ -368,15 +371,15 @@ for r in PAGES:
     </section>
     <section class="sp-sec">
       <h2>More parts for the {e(name)}</h2>
-      <div class="sp-grid">{''.join(f'<a href="{{R}}{url_mp(m, x["Part ID"]).lstrip("/")}">{img(x["Part ID"], "", "sp-thumb")}<b>{e(PARTS[x["Part ID"]]["Part"])}</b></a>' for x in related)}</div>
+      <div class="sp-grid">{''.join(f'<a href="{{R}}{url_mp(m, x["Part ID"]).lstrip("/")}">{img(x["Part ID"], PARTS[x["Part ID"]]["Part"], "sp-thumb")}<b>{e(PARTS[x["Part ID"]]["Part"])}</b></a>' for x in related)}</div>
       <p><a class="sp-btn" href="{{R}}{url_model(m).lstrip('/')}">All parts for the {e(name)} →</a> <a class="sp-btn" href="{{R}}{url_part(pid).lstrip('/')}">{e(p['Part'])} for other bikes →</a></p>
     </section>'''
   title = f"{name} {lc_part(p)}: price, interval, where to buy"
   if len(title) > 70: title = f"{name} {lc_part(p)} | Motopedia"
   desc = f"{p['Part']} for the {name}: replace {p['Typical interval (indicative)']}, typical price US$ {str(p['Price range USD (indicative)']).replace('-', ' to ')}, shops and how to fit it yourself."[:300]
   page(path, title, desc, body, crumbs=[('Spare parts', '/parts/'), (m['Brand'], url_model(m)), (m['Model'], url_model(m)), (p['Part'], path)],
-       noindex=score < INDEX_FROM, extra_ld=fq_ld)
-  if score >= INDEX_FROM: indexed.append(path)
+       extra_ld=fq_ld)
+  indexed.append(path)   # SEO pass 2026-11-09: every model-part page is indexed (noindex is kept for redirect stubs and private pages only)
 
 # model hubs
 for mid, m in MODELS.items():
@@ -395,7 +398,7 @@ for mid, m in MODELS.items():
       </div>
     </section>
     {'<p class="sp-warn"><b>Check the specification.</b> Details for this model vary by market; confirm yours before you buy.</p>' if verify(m) else ''}
-    <section class="sp-sec">{''.join(f'<h2 class="sp-cat">{e(c)}</h2><div class="sp-grid">' + ''.join(f'<a href="{{R}}{url_mp(m, r["Part ID"]).lstrip("/")}">{img(r["Part ID"], "", "sp-thumb")}<b>{e(PARTS[r["Part ID"]]["Part"])}</b><span>{e(PARTS[r["Part ID"]]["Typical interval (indicative)"])}</span></a>' for r in sorted(lst, key=lambda x: -int(x['Priority score'] or 0))) + '</div>' for c, lst in cats.items())}</section>
+    <section class="sp-sec">{''.join(f'<h2 class="sp-cat">{e(c)}</h2><div class="sp-grid">' + ''.join(f'<a href="{{R}}{url_mp(m, r["Part ID"]).lstrip("/")}">{img(r["Part ID"], PARTS[r["Part ID"]]["Part"], "sp-thumb")}<b>{e(PARTS[r["Part ID"]]["Part"])}</b><span>{e(PARTS[r["Part ID"]]["Typical interval (indicative)"])}</span></a>' for r in sorted(lst, key=lambda x: -int(x['Priority score'] or 0))) + '</div>' for c, lst in cats.items())}</section>
     <section class="sp-sec">
       <h2>Service schedule for the {e(name)}</h2>
       <div class="sp-tablewrap"><table class="sp-sched"><thead><tr><th>Part</th><th>Replace</th><th>Guide</th></tr></thead><tbody>{sched}</tbody></table></div>
@@ -455,7 +458,7 @@ body = f'''
     </section>
     <section class="sp-sec">
       <h2>By part</h2>
-      {''.join(f'<h3 class="sp-cat">{e(c)}</h3><div class="sp-grid">' + ''.join(f'<a href="{{R}}{url_part(pid).lstrip("/")}">{img(pid, "", "sp-thumb")}<b>{e(PARTS[pid]["Part"])}</b><span>{e(PARTS[pid]["Typical interval (indicative)"])}</span></a>' for pid in lst) + '</div>' for c, lst in cats.items())}
+      {''.join(f'<h3 class="sp-cat">{e(c)}</h3><div class="sp-grid">' + ''.join(f'<a href="{{R}}{url_part(pid).lstrip("/")}">{img(pid, PARTS[pid]["Part"], "sp-thumb")}<b>{e(PARTS[pid]["Part"])}</b><span>{e(PARTS[pid]["Typical interval (indicative)"])}</span></a>' for pid in lst) + '</div>' for c, lst in cats.items())}
     </section>
     <section class="sp-sec">
       <h2>By bike</h2>
@@ -478,7 +481,7 @@ open(os.path.join(ROOT, 'assets/content/spare-parts.js'), 'w').write('/* Generat
 
 # sitemap
 sm = os.path.join(ROOT, 'sitemap.xml'); s = open(sm).read()
-s = re.sub(r'\s*<url><loc>https://motobike-five\.vercel\.app/parts/[^<]*</loc>[^\n]*</url>', '', s)
+s = re.sub(r'\s*<url>\s*<loc>' + re.escape(SITE) + r'/parts/[^<]*</loc>.*?</url>', '', s, flags=re.S)
 add = ''.join(f'\n  <url><loc>{SITE}{u}</loc><lastmod>2026-11-02</lastmod></url>' for u in indexed)
 s = s.replace('</urlset>', add.lstrip('\n') + '\n</urlset>') if '</urlset>' in s else s
 open(sm, 'w').write(s)

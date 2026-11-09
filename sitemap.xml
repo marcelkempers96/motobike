@@ -153,18 +153,6 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://motobike-five.vercel.app/repair/</loc>
-  </url>
-  <url>
-    <loc>https://motobike-five.vercel.app/repair/problems/</loc>
-  </url>
-  <url>
-    <loc>https://motobike-five.vercel.app/repair/parts/</loc>
-  </url>
-  <url>
-    <loc>https://motobike-five.vercel.app/repair/fix/</loc>
-  </url>
-  <url>
     <loc>https://motobike-five.vercel.app/community/</loc>
   </url>
   <url>
@@ -184,6 +172,160 @@
     <loc>https://motobike-five.vercel.app/engine/</loc>
     <lastmod>2026-11-08</lastmod>
   </url>
+  <url><loc>https://motobike-five.vercel.app/parts/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/suzuki/suzuki-access-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-hf-deluxe/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-xl100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-apache-rtr-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/royal-enfield/royal-enfield-classic-350/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-platina-100-110/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-raider-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-scoopy/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-pcx-125-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-aerox-155/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-mio-fazzio/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/suzuki/suzuki-satria-f150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-ace-cb125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/haojue/haojue-hj125-series-verify-local-model/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-cg125-cg160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/roam/roam-air/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/spiro/spiro-ekon/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-grom/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-navi/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/kawasaki/kawasaki-ninja-500-650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-mt-07/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-cb650r-cbr650r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/bmw/bmw-r-1300-gs-gs-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/harley-davidson/harley-davidson-street-glide/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/harley-davidson/harley-davidson-sportster-s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/indian/indian-scout/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-gold-wing/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-gb350s-h-ness-cb350/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/triumph/triumph-speed-400/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-cb125f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/roller-weights/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/cvt-clutch-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/gear-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/clutch-plates/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/brake-disc/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/oil-filter/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/battery/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/tyres/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/clutch-cable/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/throttle-cable/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/levers/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/mirrors/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/headlight/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/fork-seals/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/rear-shock/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/wheel-bearings/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/regulator-rectifier/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/final-drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/final-drive-oil/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/ev-controller/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/parts/part/ev-charger/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/diagnose/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/problems/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1108,12 +1250,80 @@
   <url><loc>https://motobike-five.vercel.app/repair/systems/ev-battery/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cg125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbf125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb125f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb400/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb600f-hornet/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb900/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb1300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-shine-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-shine-100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-sp125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-sp160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-unicorn/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-livo/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cg160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb650r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb1000r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-hornet-750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb500f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb500-hornet/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb125r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cb1100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr150r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr250r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr250rr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr300r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr500r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr600f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr600rr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cbr650r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-crf250l/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-crf300l/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-crf250-rally/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-crf300-rally/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-crf1000l-africa-twin/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-crf1100l-africa-twin/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-xl650v-transalp/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-xl750-transalp/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-nx500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-nx650/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-xr150l/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-xr190l/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-xr250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-gl1500-gold-wing/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-gl1800-gold-wing/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-st1100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-st1300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-nt700v/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-nt1100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cmx250-rebel/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cmx500-rebel/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-cmx1100-rebel/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-vt125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-activa-110/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-activa-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-dio/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-beat/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-scoopy/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-vario-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-vario-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-click-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-click-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-pcx125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-pcx160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-adv160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-adv350/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-wave-110i/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-wave-125i/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-super-cub-c125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-ct125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/honda-biz-125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-mt-03/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-mt-07/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-mt-09/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1128,6 +1338,7 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-fz8/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-ybr125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-ys125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-yb125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-fz-s-fi/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-fz-x/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-saluto/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1168,11 +1379,152 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-finn/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-jupiter-z1/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/yamaha-jupiter-mx/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gn125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gn250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-en125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gs125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gs150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx150-bandit/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gixxer-150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gixxer-250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-sv650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-sv1000/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-sfv650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsr600/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsr750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-s125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-s750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-s1000/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-8s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsf600/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-r125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-r150/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-r250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-r600/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-r750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx-r1000/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-gsx1300r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-dl250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-dl650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-dl1000/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-dl1050/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-v-strom-800de/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-dr125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-dr200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-vl800/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-vl1500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-vzr1800/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-access-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-burgman-street-ex/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-an400/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-an650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/suzuki-raider-r150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z400/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z800/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z900/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z1000/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-z900rs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-er-5/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-300/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-400/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-zx-4r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-zx-6r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-zx-9r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-zx-10r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-ninja-h2/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-versys-650/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-versys-1000/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-versys-x-300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-kle500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-klr650/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-klx150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-klx230/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-klx250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-vulcan-s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-vn800/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-vn900/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-vn1500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kawasaki/kawasaki-1400gtr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-monster-696/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-monster-796/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-monster-797/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-monster-821/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-monster-1200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-streetfighter-v2/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-748/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-916/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-996/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-999/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-848/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-1098/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-1198/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-899-panigale/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-959-panigale/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-1199-panigale/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-multistrada-950/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-multistrada-1200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-multistrada-1260/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-multistrada-v2/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-diavel/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ducati/ducati-hypermotard-950/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-g310gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f650gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f700gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f750gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f800gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f850gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f900gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1100gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1150gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1200gs/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-g310r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f800r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-f900r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1200r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1250r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r-ninet/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-s1000rr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1200rt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r1250rt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-k1600gt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-k1600gtl/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-s1000xr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-r18/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-c400gt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bmw/bmw-ce04/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-125-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-200-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-250-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-390-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-690-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-790-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-890-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-990-duke/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-rc125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-rc200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-rc390/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-390-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-690-enduro-r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-790-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-890-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-990-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-1090-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-1190-adventure/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-250exc-f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-350exc-f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-450exc-f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-250exc/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-300exc/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ktm/ktm-690smc-r/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-boxer-100-ks/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-boxer-100-hd/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-boxer-125-x/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1180,16 +1532,101 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-boxer-150-x/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-boxer-150-hd/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-ct100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-ct110/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-ct125x/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-platina-100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-platina-110/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-n160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-ns160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-ns200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-n250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-ns400z/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-dominar-250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-rs200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-pulsar-220f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-avenger-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-avenger-220/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/bajaj/bajaj-chetak/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-bonneville-t100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-bonneville-t120/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-street-twin/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-speed-twin-900/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-speed-twin-1200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-thruxton-1200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-scrambler-900/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-scrambler-1200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-street-triple/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-speed-triple/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-trident-660/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-daytona-675/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-daytona-660/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-tiger-800/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-tiger-900/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-tiger-1200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-tiger-sport-660/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-bonneville-bobber/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-bonneville-speedmaster/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/triumph/triumph-rocket-iii/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-hlx-100/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-star-hlx-125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-hlx-125-5g/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-hlx-150-5-gear/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-hlx-150x-5-gear/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-zt-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-sport/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-raider-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-radeon/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-apache-rtr-160/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-apache-rtr-160-4v/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-apache-rtr-180/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-apache-rtr-200-4v/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-apache-rtr-310/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-apache-rr310/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-jupiter-110/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-jupiter-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-ntorq-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-scooty-pep-plus/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/tvs/tvs-iqube/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-splendor-plus/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-super-splendor/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-hf-deluxe/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-hf100/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-passion-plus/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-passion-pro/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-glamour/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xtreme-125r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xtreme-160r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xtreme-200r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xtreme-250r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-mavrick-440/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-karizma-xmr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xpulse-200-4v/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xpulse-210/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-pleasure-plus/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-destini-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xoom-110/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xoom-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/hero/hero-xoom-160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-iron-883/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-forty-eight/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-sportster-s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-nightster/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-street-750/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-street-bob/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-fat-bob/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-fat-boy/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-low-rider-s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-low-rider-st/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-breakout/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-softail-standard/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-softail-slim/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-road-king/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-road-glide/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-street-glide/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-electra-glide/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/harley-davidson/harley-davidson-pan-america-1250/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/royal-enfield/royal-enfield-classic-350/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/royal-enfield/royal-enfield-bullet-350/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/royal-enfield/royal-enfield-bullet-500/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1206,6 +1643,58 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/royal-enfield/royal-enfield-himalayan-411/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/royal-enfield/royal-enfield-himalayan-450/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/royal-enfield/royal-enfield-scram-411/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-125nk/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-250nk/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-300nk/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-450nk/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-650nk/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-800nk/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-700cl-x/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-300sr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-450sr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-675sr-r/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-450mt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-650mt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-700mt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-800mt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/cfmoto/cfmoto-450cl-c/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-svartpilen-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-svartpilen-401/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-vitpilen-401/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-701-enduro/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-norden-901/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-701-supermoto/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-fe350/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-fe450/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-te250/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/husqvarna/husqvarna-te300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-bn125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-bn302/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-tnt125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-leoncino-500/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-leoncino-800/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-752s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-trk251/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-trk502/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-trk702/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/benelli/benelli-imperiale-400/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-sr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-sr-f/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-sr-s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-ds/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-dsr/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-dsr-x/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-fx/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/zero/zero-fxe/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-primavera-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-primavera-150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-sprint-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-sprint-150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-gts125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-gts300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-lx125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vespa/vespa-lx150/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/piaggio/piaggio-liberty-125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/piaggio/piaggio-liberty-150/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/piaggio/piaggio-medley-125/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1213,6 +1702,17 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/piaggio/piaggio-beverly-300/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/piaggio/piaggio-beverly-400/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/piaggio/piaggio-fly-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kymco/kymco-agility-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kymco/kymco-like-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kymco/kymco-super-8-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kymco/kymco-downtown-300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kymco/kymco-x-town-300/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/kymco/kymco-ak550/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/sym/sym-symphony-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/sym/sym-jet-x125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/sym/sym-jet14/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/sym/sym-joyride-125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/sym/sym-joyride-300/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/sym/sym-maxsym-400/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/roam/roam-air/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/haojue/haojue-dk150s/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1221,13 +1721,34 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/haojue/haojue-dh125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/haojue/haojue-tz125-pro/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/haojue/haojue-nk150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/haojue/haojue-dr160s/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/haojue/haojue-dl160/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/italika/italika-ft125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/italika/italika-ft150/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/italika/italika-ft200/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/italika/italika-ft250-gts/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/italika/italika-d125/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/italika/italika-ds150/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/aprilia/aprilia-tuono-125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/aprilia/aprilia-tuono-660/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/aprilia/aprilia-tuono-v4/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/aprilia/aprilia-rs125/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/aprilia/aprilia-rs660/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/aprilia/aprilia-tuareg-660/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/moto-guzzi/moto-guzzi-v7/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/moto-guzzi/moto-guzzi-v9/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/moto-guzzi/moto-guzzi-v85tt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/moto-guzzi/moto-guzzi-v100-mandello/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/niu/niu-nqi-gts/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/niu/niu-mqi-gt/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/niu/niu-rqi/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ather/ather-450x/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/ather/ather-rizta/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vmoto/vmoto-tc/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/vmoto/vmoto-tc-max/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/vmoto/vmoto-cpx/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/livewire/livewire-one/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://motobike-five.vercel.app/repair/bikes/livewire/livewire-s2-del-mar/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/honda/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/yamaha/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/suzuki/</loc><lastmod>2026-11-02</lastmod></url>
@@ -1258,158 +1779,4 @@
   <url><loc>https://motobike-five.vercel.app/repair/bikes/ather/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/vmoto/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://motobike-five.vercel.app/repair/bikes/livewire/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-splendor-plus/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-shine-100-125/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-activa-110-125/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-jupiter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-pulsar-125-150-ns/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/suzuki/suzuki-access-125/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/hero/hero-hf-deluxe/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-xl100/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-apache-rtr-160/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/royal-enfield/royal-enfield-classic-350/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-platina-100-110/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-raider-125/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-super-cub-wave-110/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-beat/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-vario-125-160/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-scoopy/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-pcx-125-160/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-nmax-155/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-aerox-155/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-mio-fazzio/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/suzuki/suzuki-satria-f150/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bajaj/bajaj-boxer-bm150-x125/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/tvs/tvs-hlx-125-150/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-ace-cb125/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/haojue/haojue-hj125-series-verify-local-model/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-cg125-cg160/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/roam/roam-air/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/spiro/spiro-ekon/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-grom/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-navi/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/kawasaki/kawasaki-ninja-500-650/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/yamaha/yamaha-mt-07/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-cb650r-cbr650r/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/bmw/bmw-r-1300-gs-gs-adventure/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/harley-davidson/harley-davidson-street-glide/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/harley-davidson/harley-davidson-sportster-s/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/indian/indian-scout/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-gold-wing/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-gb350s-h-ness-cb350/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/triumph/triumph-speed-400/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/honda/honda-cb125f/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/chain-sprocket-kit/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/roller-weights/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/cvt-clutch-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/gear-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/clutch-plates/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/brake-pads/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/brake-shoes/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/brake-disc/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/spark-plug/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/air-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/oil-filter/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/engine-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/battery/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/tyres/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/clutch-cable/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/throttle-cable/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/levers/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/mirrors/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/headlight/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/fork-seals/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/rear-shock/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/wheel-bearings/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/regulator-rectifier/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/final-drive-belt/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/final-drive-oil/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/ev-controller/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://motobike-five.vercel.app/parts/part/ev-charger/</loc><lastmod>2026-11-02</lastmod></url>
 </urlset>

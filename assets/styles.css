@@ -1310,3 +1310,7 @@ font[style] { background: none !important; box-shadow: none !important; }
 /* a paragraph that holds a row of buttons: space them, also when they wrap onto two lines */
 p:has(> .ute-btn + .ute-btn) { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .mz-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* SEO pass 2026-11-09: images now carry width/height (to reserve space and avoid layout shift).
+   Zero-specificity, so any class rule that sizes an image still wins. */
+:where(img[width][height]) { height: auto; max-width: 100%; }
