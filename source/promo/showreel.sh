@@ -6,9 +6,10 @@ C="$1"; END="$2"; OUT="$3"
 # file:start:duration   (order = story of the site)
 LIST=(
   "01-home:0:4"
-  "02-3d-overview:0:4.5"
-  "11-superbike:0:4"
-  "12-vintage-v-twin:0:4"
+  "02-3d-overview:0:5.5"
+  "11-superbike:0:2.2"
+  "12-vintage-v-twin:0:2.2"
+  "17-v-twin-cruiser:0:2.2"
   "06-cockpit-dyno:0:5.2"
   "04-bike-builder:0:4.5"
   "07-wiring-lab:1:4"

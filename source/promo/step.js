@@ -80,6 +80,27 @@ const SCENES = {
       for (let i = 0; i < 12; i++) await frame();
     });
   },
+  // classic bike: tap a part in the list, the part opens on the right and turns
+  async overview_click(p) {
+    await p.goto(BASE + 'overview/?mode=4t', { waitUntil: 'load' }); await hide(p);
+    const { settle } = await stepper(p); await new Promise((r) => setTimeout(r, 5000)); await settle(3);
+    await center(p, '#ute-moto-stage', 120); await settle(0.5);
+    await recordFrames(p, 'overview_click', 5.5, async (frame) => {
+      await orbit(p, frame, '#ute-moto-stage', 40, 160, 0, [0.35, 0.5]);
+      await p.click('.mz-part[data-part="clutch"]');
+      for (let i = 0; i < 12; i++) { await frame(); await new Promise((r) => setTimeout(r, 250)); }   // let the part model load
+    });
+  },
+  // three bikes in quick succession, each spinning fast
+  async fast(p, mode, name) {
+    await p.goto(BASE + 'overview/?mode=' + mode, { waitUntil: 'load' }); await hide(p);
+    const { settle } = await stepper(p); await new Promise((r) => setTimeout(r, 5000)); await settle(3);
+    await center(p, '#ute-moto-stage', 120); await settle(0.5);
+    await recordFrames(p, name, 2.2, async (frame) => { await orbit(p, frame, '#ute-moto-stage', 62, 420, -10, [0.25, 0.5]); });
+  },
+  async fast_sb(p) { await SCENES.fast(p, 'sb', 'fast_sb'); },
+  async fast_vt(p) { await SCENES.fast(p, 'vt', 'fast_vt'); },
+  async fast_cu(p) { await SCENES.fast(p, 'cu', 'fast_cu'); },
   async overview(p) { await SCENES.bike(p, '4t', 'overview'); },
   async bikes_sb(p) { await SCENES.bike(p, 'sb', 'bikes_sb'); },
   async bikes_vt(p) { await SCENES.bike(p, 'vt', 'bikes_vt'); },
