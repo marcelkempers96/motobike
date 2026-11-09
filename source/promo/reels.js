@@ -56,7 +56,7 @@ const E = {
   e08_kick: (p) => eng(p, 'e08_kick', 'start', async (f) => { await hold(f, 15); await jsClick(p, '#bKick'); await hold(f, 180); }, { start: false, ts: '1' }),
   e09_explode: (p) => eng(p, 'e09_explode', null, async (f) => {
     const s = await p.$('#explode');
-    for (let v = 0; v <= 100; v += 1) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await p.mouse.wheel(0, 8); await f(); }
+    for (let v = 0; v <= 100; v += 1) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await f(); }
     await orbit(p, f, '#view', 110, 200, -10, [0.3, 0.5]);
   }),
   e10_whole: (p) => eng(p, 'e10_whole', null, async (f) => { await orbit(p, f, '#view', 210, 420, -20, [0.2, 0.5]); }),
@@ -87,14 +87,10 @@ const S = {
       await center(p, '#mz-cv3d', 120); await hold(f, 60);
     });
   },
-  async r09_engine(p) {
-    await open(p, 'engine/', 6000, 2); await center(p, '#view', 70);
-    await p.click('[data-ts="0.2"]').catch(() => {}); await p.click('#bKick').catch(() => {}); const { settle } = await stepper(p); await settle(3);
-    await recordFrames(p, 'r09_engine', 7, async (f) => {
-      await orbit(p, f, '#view', 80, 200, -10, [0.3, 0.5]);
-      const s = await p.$('#explode'); for (let v = 0; v <= 90; v += 1.5) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await p.mouse.wheel(0, 10); await f(); }
-    });
-  },
+  r09_engine: (p) => eng(p, 'r09_engine', null, async (f) => {
+    await orbit(p, f, '#view', 90, 200, -10, [0.3, 0.5]);
+    const s = await p.$('#explode'); for (let v = 0; v <= 90; v += 1.5) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await f(); }
+  }),
   async r10_carb(p) {
     await open(p, 'learn/#m3-mixture', 2500, 1); await center(p, '.mz-learn-model', 150); await real(4000); const { settle } = await stepper(p); await settle(2);
     await recordFrames(p, 'r10_carb', 5, async (f) => { await orbit(p, f, '.mz-learn-model canvas', 140, 260, -30, [0.25, 0.55]); });
