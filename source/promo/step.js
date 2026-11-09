@@ -41,6 +41,7 @@ async function stepper(p) {
 }
 
 async function recordFrames(p, name, seconds, act) {
+  const OUT = process.env.PROMO_OUT || '/tmp/promo';
   const dir = path.join(OUT, name);
   fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
   const n = Math.round(seconds * FPS); let k = 0;
@@ -133,7 +134,8 @@ const SCENES = {
   },
 };
 
-(async () => {
+module.exports = { VCLOCK, stepper, recordFrames, orbit, hide, center };
+if (require.main === module) (async () => {
   const which = process.argv.slice(2);
   const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--hide-scrollbars'] });
   for (const s of which) {
