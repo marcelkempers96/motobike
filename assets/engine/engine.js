@@ -940,7 +940,15 @@ function setIsolate(list){isolate=list?new Set(list):null;document.querySelector
   const f=$('focusPill');if(isolate){f.hidden=false;f.querySelector('span').textContent='Showing '+[...isolate].map(k=>SYSINFO.find(q=>q[0]===k)[1].toLowerCase()).join(', ');}else f.hidden=true;}
 let camAnim=null;
 function goCam(k){const c=CAMS[k];setIsolate(c.iso);camAnim={t:0,p0:camera.position.clone(),t0:controls.target.clone(),p1:new THREE.Vector3(...c.p),t1:new THREE.Vector3(...c.t)};document.querySelectorAll('[data-cam]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cam===k));}
-document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>goCam(b.dataset.cam));
+document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>{goCam(b.dataset.cam);if(b.dataset.cam==='final')showChainMoving();});
+// The drive chain is turned by the countershaft, which stands still in neutral, and moves very slowly at 1/20 speed.
+// In the final drive view: start the engine if needed, select first gear and use 1/5 speed so the chain is seen moving.
+function showChainMoving(){
+  if(S.engine!=='running'&&!S.estart){S.estart={t:0};}
+  if(S.pos===1&&!S.queue.length)S.queue.push('down');
+  if(S.ts<0.2){S.ts=0.2;document.querySelectorAll('#speedBtns button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.ts==='0.2'));}
+  flash('First gear selected so the chain turns. In neutral the countershaft, sprocket and chain stand still.');
+}
 $('showAll').onclick=()=>{setIsolate(null);document.querySelectorAll('[data-cam]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cam==='overview'));};
 
 // parts list
