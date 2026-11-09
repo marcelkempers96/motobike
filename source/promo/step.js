@@ -87,9 +87,13 @@ const SCENES = {
     const { settle } = await stepper(p); await new Promise((r) => setTimeout(r, 5000)); await settle(3);
     await center(p, '#ute-moto-stage', 120); await settle(0.5);
     await recordFrames(p, 'overview_click', 5.5, async (frame) => {
-      await orbit(p, frame, '#ute-moto-stage', 40, 160, 0, [0.35, 0.5]);
+      await orbit(p, frame, '#ute-moto-stage', 30, 120, 0, [0.35, 0.5]);
       await p.click('.mz-part[data-part="clutch"]');
-      for (let i = 0; i < 12; i++) { await frame(); await new Promise((r) => setTimeout(r, 250)); }   // let the part model load
+      for (let i = 0; i < 8; i++) { await frame(); await new Promise((r) => setTimeout(r, 300)); }   // let the clutch model load
+      await orbit(p, frame, '#mz-cv3d', 55, 160, -20, [0.3, 0.5]);                                     // turn the clutch
+      const sub = await p.$('#mz-subparts .mz-sub:nth-child(3)') || await p.$('#mz-subparts .mz-sub');
+      if (sub) await sub.click();                                                                       // select one part: it highlights and the view zooms in
+      for (let i = 0; i < 40; i++) await frame();
     });
   },
   // three bikes in quick succession, each spinning fast
