@@ -77,7 +77,7 @@
 .panel .eyebrow{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
 .panel h2{font:600 19px/1.25 var(--sans);color:var(--ink);margin:0 0 8px;text-wrap:balance}
 .panel p{margin:0 0 10px;font-size:14px}
-.panel h4{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.panel h4,.panel h3.ue-sub{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
 table.kv{width:100%;border-collapse:collapse;font-size:13.5px}
 table.kv td{padding:5px 4px;border-top:1px solid var(--line);vertical-align:top}
 table.kv td:first-child{color:var(--muted);width:46%}

@@ -37,7 +37,7 @@ function renderTOC(active, page) {
 }
 
 function home() {
-  document.title = 'Motopedia · Learn';
+  document.title = 'Free Motorcycle Maintenance Course | Motopedia';
   renderTOC(null);
   main.innerHTML = `
     <section class="ute-hero">

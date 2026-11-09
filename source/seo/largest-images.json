@@ -1,0 +1,212 @@
+[
+{
+"path": "assets/illustrations/wheels/W01.png",
+"kb": 1267,
+"w": 2400,
+"h": 1710,
+"refs": 2
+},
+{
+"path": "assets/illustrations/overview/F01.png",
+"kb": 1157,
+"w": 2400,
+"h": 1620,
+"refs": 13
+},
+{
+"path": "assets/illustrations/overview/F06.png",
+"kb": 1107,
+"w": 2400,
+"h": 2055,
+"refs": 1
+},
+{
+"path": "assets/illustrations/electrical/F24.png",
+"kb": 1024,
+"w": 2400,
+"h": 1740,
+"refs": 2
+},
+{
+"path": "assets/illustrations/powertrain/F09.png",
+"kb": 985,
+"w": 2400,
+"h": 2368,
+"refs": 2
+},
+{
+"path": "assets/illustrations/overview/F02.png",
+"kb": 952,
+"w": 2400,
+"h": 1185,
+"refs": 4
+},
+{
+"path": "assets/illustrations/overview/F03.png",
+"kb": 881,
+"w": 2400,
+"h": 1185,
+"refs": 5
+},
+{
+"path": "assets/illustrations/frame_body/FB01.png",
+"kb": 865,
+"w": 2400,
+"h": 2205,
+"refs": 1
+},
+{
+"path": "assets/illustrations/chassis/F17.png",
+"kb": 852,
+"w": 2400,
+"h": 1545,
+"refs": 1
+},
+{
+"path": "assets/illustrations/transmission/TR02.png",
+"kb": 837,
+"w": 2400,
+"h": 1950,
+"refs": 2
+},
+{
+"path": "assets/illustrations/chassis/F19.png",
+"kb": 814,
+"w": 2400,
+"h": 1620,
+"refs": 6
+},
+{
+"path": "assets/illustrations/powertrain/F07.png",
+"kb": 784,
+"w": 2400,
+"h": 1515,
+"refs": 3
+},
+{
+"path": "assets/illustrations/transmission/F15.png",
+"kb": 778,
+"w": 2400,
+"h": 1632,
+"refs": 3
+},
+{
+"path": "assets/illustrations/chassis/F18.png",
+"kb": 766,
+"w": 2400,
+"h": 1724,
+"refs": 2
+},
+{
+"path": "assets/illustrations/frame_body/FB02.png",
+"kb": 752,
+"w": 2400,
+"h": 1823,
+"refs": 1
+},
+{
+"path": "assets/illustrations/electrical/EL01.png",
+"kb": 739,
+"w": 2400,
+"h": 2250,
+"refs": 1
+},
+{
+"path": "assets/illustrations/controls/F05.png",
+"kb": 702,
+"w": 2400,
+"h": 1785,
+"refs": 1
+},
+{
+"path": "assets/illustrations/overview/F04.png",
+"kb": 697,
+"w": 2400,
+"h": 1185,
+"refs": 4
+},
+{
+"path": "assets/illustrations/wheels/F20.png",
+"kb": 664,
+"w": 2400,
+"h": 1530,
+"refs": 2
+},
+{
+"path": "assets/illustrations/wheels/W02.png",
+"kb": 646,
+"w": 2400,
+"h": 1935,
+"refs": 1
+},
+{
+"path": "assets/illustrations/transmission/F16.png",
+"kb": 645,
+"w": 2400,
+"h": 1605,
+"refs": 2
+},
+{
+"path": "assets/illustrations/electrical/EL02.png",
+"kb": 635,
+"w": 2400,
+"h": 1500,
+"refs": 1
+},
+{
+"path": "assets/illustrations/powertrain/F11.png",
+"kb": 616,
+"w": 2400,
+"h": 1696,
+"refs": 4
+},
+{
+"path": "assets/illustrations/transmission/F13.png",
+"kb": 606,
+"w": 2400,
+"h": 1500,
+"refs": 2
+},
+{
+"path": "assets/illustrations/powertrain/F10.png",
+"kb": 588,
+"w": 2400,
+"h": 1724,
+"refs": 1
+},
+{
+"path": "assets/illustrations/powertrain/F08.png",
+"kb": 585,
+"w": 2400,
+"h": 1410,
+"refs": 2
+},
+{
+"path": "assets/illustrations/powertrain/PT03.png",
+"kb": 509,
+"w": 2400,
+"h": 2130,
+"refs": 2
+},
+{
+"path": "assets/illustrations/powertrain/PT02.png",
+"kb": 502,
+"w": 2400,
+"h": 1455,
+"refs": 1
+},
+{
+"path": "assets/illustrations/electrical/F26.png",
+"kb": 495,
+"w": 2400,
+"h": 1500,
+"refs": 3
+},
+{
+"path": "assets/illustrations/powertrain/PT01.png",
+"kb": 475,
+"w": 2400,
+"h": 1395,
+"refs": 3
+}
+]

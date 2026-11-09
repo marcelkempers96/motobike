@@ -1,0 +1,152 @@
+{
+ "date": "2026-11-09",
+ "checks": [
+  {
+   "n": 1,
+   "name": "Sitemap complete, only real indexable pages",
+   "status": "fixed",
+   "detail": "2,341 URLs, 0 duplicates, 0 non-indexable (was 1,284 URLs, 3 duplicates, progress/ and the repair/fix/ redirect listed, 1,062 pages missing).",
+   "owner_action": ""
+  },
+  {
+   "n": 2,
+   "name": "robots.txt",
+   "status": "ok",
+   "detail": "Allows everything and points to the sitemap; nothing needs blocking.",
+   "owner_action": ""
+  },
+  {
+   "n": 3,
+   "name": "No stray noindex",
+   "status": "fixed",
+   "detail": "noindex now only on account/, progress/ and the repair/fix/ redirect (was on 1,065 pages: 683 spare-part pages and 379 bike pages).",
+   "owner_action": "Watch Search Console > Pages for \"Crawled, currently not indexed\" on spare-part pages over the next weeks; they are similar to each other."
+  },
+  {
+   "n": 4,
+   "name": "Canonical on every indexable page",
+   "status": "ok",
+   "detail": "All 2,341 indexable pages have a canonical equal to their own URL. The offline copy types/standalone.html is now sent with a noindex header.",
+   "owner_action": ""
+  },
+  {
+   "n": 5,
+   "name": "Unique title, 30 to 70 characters",
+   "status": "fixed",
+   "detail": "0 out of range, 0 duplicates (was 79 out of range, incl. a \"checkss\" typo on 60 problem pages).",
+   "owner_action": ""
+  },
+  {
+   "n": 6,
+   "name": "Unique description, 70 to 165 characters",
+   "status": "fixed",
+   "detail": "0 out of range, 0 duplicates (was 6 too long).",
+   "owner_action": ""
+  },
+  {
+   "n": 7,
+   "name": "Exactly one H1",
+   "status": "fixed",
+   "detail": "Every page has one H1; the course page now has a crawlable H1 and module list before the script loads (was 0).",
+   "owner_action": ""
+  },
+  {
+   "n": 8,
+   "name": "Heading order",
+   "status": "fixed",
+   "detail": "0 pages with skipped levels or H3 before H2 (Under the Engine was the only one).",
+   "owner_action": ""
+  },
+  {
+   "n": 9,
+   "name": "Alt text on content images",
+   "status": "fixed",
+   "detail": "0 photos or renders with empty alt (was 8,926, mostly part and bike thumbnails); decorative icons keep alt=\"\".",
+   "owner_action": ""
+  },
+  {
+   "n": 10,
+   "name": "Schema markup",
+   "status": "fixed",
+   "detail": "Valid JSON-LD everywhere. Added Course (learn/), TechArticle (685 repair and problem pages), FAQPage (brand/), BreadcrumbList on 28 more pages; home has Organization + WebSite + SearchAction; videos/ has VideoObject.",
+   "owner_action": "Test a few pages in Google Rich Results Test after deploy."
+  },
+  {
+   "n": 11,
+   "name": "Internal links, no orphans",
+   "status": "fixed",
+   "detail": "0 orphan pages (was 4: 24 \"classic\" bikes were missing from bike lists). Types and History added to the menu.",
+   "owner_action": ""
+  },
+  {
+   "n": 12,
+   "name": "Broken internal links and images",
+   "status": "ok",
+   "detail": "0 broken relative links or images found in 2,344 pages.",
+   "owner_action": ""
+  },
+  {
+   "n": 13,
+   "name": "Image weight, lazy loading, width/height",
+   "status": "fixed",
+   "detail": "2 photos recompressed (560 to 386 KB, 426 to 368 KB), 4 screenshots to WebP (about 560 to 100 KB each). 0 images without width/height (was 21,190); lazy loading on all but the first image and the 6 home hero icons. Still over 400 KB: 35 technical plate PNGs (2400 px) - left as they are because the labels must stay sharp; list in source/seo/largest-images.json.",
+   "owner_action": "Decide whether the technical plates may be shown as WebP on pages (PNG stays as download); that would probably save 10 MB or more."
+  },
+  {
+   "n": 14,
+   "name": "Core Web Vitals basics",
+   "status": "ok",
+   "detail": "All pages preconnect to Google Fonts with display=swap; every script is type=module (deferred); no render-blocking scripts. Real LCP/CLS/INP cannot be measured locally.",
+   "owner_action": "After deploy, check PageSpeed Insights for the home, a repair page and the course; consider self-hosting the Lato font."
+  },
+  {
+   "n": 15,
+   "name": "Mobile layout at 390 px",
+   "status": "ok",
+   "detail": "12 key pages checked with Playwright: no horizontal overflow, no stretched images (source/seo/mobile_check.py).",
+   "owner_action": ""
+  },
+  {
+   "n": 16,
+   "name": "HTTPS",
+   "status": "fixed",
+   "detail": "No http:// links to our own site. Added Strict-Transport-Security (2 years) for all paths in vercel.json.",
+   "owner_action": ""
+  },
+  {
+   "n": 17,
+   "name": "URL slugs",
+   "status": "todo",
+   "detail": "150 repair part URLs use underscores (e.g. repair/parts/air_filter/). Not renamed, as instructed. No uppercase slugs.",
+   "owner_action": "Optional: if you rename part ids to hyphens later, add 301 redirects in vercel.json in the same change."
+  },
+  {
+   "n": 18,
+   "name": "og:image and Twitter card",
+   "status": "ok",
+   "detail": "All indexable pages have og:image and twitter:card (videos/ builder fixed so a rebuild keeps them).",
+   "owner_action": ""
+  },
+  {
+   "n": 19,
+   "name": "Search Console verification",
+   "status": "todo",
+   "detail": "No verification value was given, so nothing was added.",
+   "owner_action": "In Google Search Console add the property, choose \"HTML tag\", and send us the content value to put in index.html as <meta name=\"google-site-verification\" content=\"...\">. Or upload the googleXXXX.html file Google gives you to the site root. Then submit sitemap.xml."
+  },
+  {
+   "n": 20,
+   "name": "llms.txt",
+   "status": "fixed",
+   "detail": "Added /llms.txt: what Motopedia is, course modules, repair, parts, tools, articles, videos, downloads, licence CC BY-SA 4.0 and contact.",
+   "owner_action": ""
+  }
+ ],
+ "todo": [
+  "Verify the site in Google Search Console (HTML tag or file) and submit sitemap.xml.",
+  "When www.motopedia.org goes live: change SITE/BASE in the four builders, robots.txt, llms.txt and the hand-made pages, rebuild, and redirect the vercel.app address to it.",
+  "Watch Search Console for spare-part pages reported as not indexed; they are now all open to Google.",
+  "Decide whether technical plates may be shown as WebP on pages to save probably 10 MB or more.",
+  "Run PageSpeed Insights after deploy and send us the results."
+ ]
+}

@@ -1,0 +1,77 @@
+# Motopedia
+
+> Motopedia is a free, open motorcycle encyclopedia and course by Transitions Lab: how motorcycles work (petrol and electric), how to diagnose faults, repair them and find spare parts, with interactive 3D tools. Text and figures are CC BY-SA 4.0.
+
+Written in plain English for riders, mechanics, trainers and fleet operators. Reference values come from a fuel-injected 125 cc single (the K-Light 125); always check your own bike's manual.
+
+## Course
+
+- [Course overview](https://motobike-five.vercel.app/learn/): six modules with live figures and a check at the end of every chapter
+- [Crash course](https://motobike-five.vercel.app/crash-course/): the whole motorcycle in 15 minutes
+- [Module 1: Foundations: the machine, its anatomy and the workshop](https://motobike-five.vercel.app/learn/#foundations)
+- [Module 2: The engine: four-stroke and two-stroke](https://motobike-five.vercel.app/learn/#engine)
+- [Module 3: Fuel, air and exhaust](https://motobike-five.vercel.app/learn/#fuel)
+- [Module 4: Electrical systems: ignition, battery, charging and lighting](https://motobike-five.vercel.app/learn/#electrics)
+- [Module 5: Drivetrain and chassis](https://motobike-five.vercel.app/learn/#drivetrain-chassis)
+- [Module 6: Electric motorcycles](https://motobike-five.vercel.app/learn/#electric)
+- [Quiz](https://motobike-five.vercel.app/quiz/): questions for every module
+
+## Repair
+
+- [Repair home](https://motobike-five.vercel.app/repair/): search any problem, part or job
+- [Diagnose a problem](https://motobike-five.vercel.app/repair/diagnose/): three questions to the likely fault
+- [Problems by symptom](https://motobike-five.vercel.app/repair/problems/): step-by-step checks
+- [Repairs](https://motobike-five.vercel.app/repair/repairs/): jobs from rider level to workshop
+- [Parts](https://motobike-five.vercel.app/repair/parts/): what each part does and how it fails
+- [Repairs by bike](https://motobike-five.vercel.app/repair/bikes/): 500 motorcycles and scooters with specs, top repairs and problems
+
+## Spare parts
+
+- [Spare parts](https://motobike-five.vercel.app/parts/): what wears, replacement intervals, typical prices and where to buy, per model
+
+## Tools
+
+- [3D Overview](https://motobike-five.vercel.app/overview/): interactive motorcycle parts diagram
+- [Cockpit](https://motobike-five.vercel.app/cockpit/): ride the bike, start it, run the dyno
+- [Under the Engine](https://motobike-five.vercel.app/engine/): 3D 125 cc engine, gearbox and clutch
+- [Wiring Lab](https://motobike-five.vercel.app/wiring/): harness, starting, charging and ignition circuits
+- [Bike builder](https://motobike-five.vercel.app/build/): assemble a bike and change its specification
+- [Motorcycle types](https://motobike-five.vercel.app/types/) and [History](https://motobike-five.vercel.app/history/)
+
+## Articles
+
+- [All articles](https://motobike-five.vercel.app/articles/)
+- [Air, oil and liquid cooling on motorcycles explained](https://motobike-five.vercel.app/articles/air-oil-and-liquid-cooling/)
+- [Boda boda maintenance checklist: daily and weekly](https://motobike-five.vercel.app/articles/boda-boda-maintenance-checklist/)
+- [Carburettor cleaning basics: symptoms and when to clean](https://motobike-five.vercel.app/articles/carburettor-cleaning-basics/)
+- [Carburettor or fuel injection: motorcycle fuel systems](https://motobike-five.vercel.app/articles/carburettor-vs-fuel-injection/)
+- [Electric motorcycle battery care: charging and storage](https://motobike-five.vercel.app/articles/electric-motorcycle-battery-care/)
+- [How a motorcycle clutch works: plates, springs, faults](https://motobike-five.vercel.app/articles/how-a-motorcycle-clutch-works/)
+- [How a motorcycle engine works: the four-stroke cycle](https://motobike-five.vercel.app/articles/how-a-motorcycle-engine-works/)
+- [How a motorcycle gearbox works: dogs, shift drum and ratios](https://motobike-five.vercel.app/articles/how-a-motorcycle-gearbox-works/)
+- [How electric motorcycles work: motor, battery, BMS](https://motobike-five.vercel.app/articles/how-electric-motorcycles-work/)
+- [How motorcycle brakes work: discs, drums, CBS and ABS](https://motobike-five.vercel.app/articles/how-motorcycle-brakes-work/)
+- [How motorcycle suspension works: forks, shocks and sag](https://motobike-five.vercel.app/articles/how-motorcycle-suspension-works/)
+- [How to change motorcycle oil: steps, grade and intervals](https://motobike-five.vercel.app/articles/how-to-change-motorcycle-oil/)
+- [How to check motorcycle brake pads and discs](https://motobike-five.vercel.app/articles/how-to-check-motorcycle-brake-pads/)
+- [A century of motorcycles in Invercargill: Classic Motorcycle Mecca](https://motobike-five.vercel.app/articles/invercargill-classic-motorcycle-mecca/)
+- [Motorcycle battery keeps dying? How to find the cause](https://motobike-five.vercel.app/articles/motorcycle-battery-keeps-dying/)
+- [Motorcycle chain maintenance: slack, wear, sprockets](https://motobike-five.vercel.app/articles/motorcycle-chain-maintenance/)
+- [Motorcycle tyre pressure and wear: how to check them](https://motobike-five.vercel.app/articles/motorcycle-tyre-pressure-and-wear/)
+- [Motorcycle will not start: a diagnosis order that works](https://motobike-five.vercel.app/articles/motorcycle-will-not-start/)
+- [Motorcycle wiring basics: harness, colours, charging](https://motobike-five.vercel.app/articles/motorcycle-wiring-basics/)
+- [Spark plug reading: colours, gap and heat range explained](https://motobike-five.vercel.app/articles/spark-plug-reading/)
+- [Two-stroke vs four-stroke engines: the differences](https://motobike-five.vercel.app/articles/two-stroke-vs-four-stroke/)
+- [Types of motorcycles: 16 kinds explained](https://motobike-five.vercel.app/articles/types-of-motorcycles/)
+
+## Videos and downloads
+
+- [Videos](https://motobike-five.vercel.app/videos/): the most watched motorcycle repair and how-it-works videos, sorted by topic and linked to guides
+- [Downloads](https://motobike-five.vercel.app/downloads/): PDF modules, technical plates, 3D models and data
+- [3D models](https://motobike-five.vercel.app/models/)
+
+## About
+
+- Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Reuse and adapt with credit to "Motopedia, Transitions Lab" and share alike.
+- [About](https://motobike-five.vercel.app/about/) · [Sources and credits](https://motobike-five.vercel.app/sources/) · [Contact](https://motobike-five.vercel.app/contact/) · [Safety disclaimer](https://motobike-five.vercel.app/disclaimer/)
+- [Sitemap](https://motobike-five.vercel.app/sitemap.xml)

@@ -142,13 +142,17 @@ def audit():
                 h_issue.append(f'skip h{prev}->h{lv}'); break
             prev = lv
         imgs_noalt, photos_emptyalt, imgs_nolazy, imgs_nodim = [], [], 0, 0
+        first = True   # the first content image (likely the LCP image) may load eagerly
         for i, im in enumerate(s.find_all('img')):
+            if 'ute-brand-logo' in (im.get('class') or []):
+                continue
+            eager_ok, first = first, False
             src = im.get('src') or ''
             if not im.has_attr('alt'):
                 imgs_noalt.append(src)
             elif not im['alt'].strip() and any(x in src for x in PHOTO_DIRS) and not im.has_attr('aria-hidden') and re.search(r'\.(jpe?g|webp|png)', src):
                 photos_emptyalt.append(src)
-            if i > 0 and im.get('loading') != 'lazy' and im.get('fetchpriority') != 'high':
+            if not eager_ok and im.get('loading') != 'lazy' and im.get('fetchpriority') != 'high':
                 imgs_nolazy += 1
             if not (im.has_attr('width') and im.has_attr('height')):
                 imgs_nodim += 1
@@ -225,7 +229,7 @@ def audit():
     rep = [p for p in idx if p.startswith('repair/') and p.count('/') >= 3]
     R[10] = dict(json_errors=sum(info[p]['ld_err'] for p in P), home=home,
                  articles_without_Article=[p for p in idx if re.match(r'articles/[^/]+/index.html', p) and 'Article' not in info[p]['ld']],
-                 repair_detail_without_HowTo_or_TechArticle=sum(1 for p in idx if not {'HowTo', 'TechArticle'} & set(info[p]['ld']) and p.startswith('repair/repairs/')),
+                 repair_detail_without_HowTo_or_TechArticle=sum(1 for p in idx if not {'HowTo', 'TechArticle'} & set(info[p]['ld']) and re.match(r'repair/(repairs|problems)/[^/]+/index.html', p)),
                  no_breadcrumb=sum(1 for p in idx if p != 'index.html' and 'BreadcrumbList' not in info[p]['ld']),
                  no_breadcrumb_ex=[p for p in idx if p != 'index.html' and 'BreadcrumbList' not in info[p]['ld']][:12],
                  faq_without_FAQPage=[p for p in idx if info[p]['faq'] and 'FAQPage' not in info[p]['ld']][:10],
