@@ -485,4 +485,29 @@ export default [
     answer: 2,
     explain: "Extractors are hard and brittle and cannot be drilled with ordinary bits. Spark erosion at a machine shop, shattering with a punch or carbide burrs remove it, and a thread insert restores the thread; failing these, the crankcase half is replaced.",
   },
+  // Chapter 1.6
+  {
+    id: "m1-41", module: "foundations", chapter: "m1-fasteners", kind: "apply",
+    q: "An M8 class 8.8 bolt (stress area 36.6 mm²) is tightened to a clamp load of 15.6 kN. What is the tensile stress in the bolt, and is it safe?",
+    options: [
+      "About 213 MPa: far too low to hold the joint",
+      "About 426 MPa: about two thirds of the 640 MPa yield strength, so the bolt is stretched elastically",
+      "About 640 MPa: exactly at yield, so the bolt must be replaced",
+      "About 800 MPa: past the tensile strength, so the bolt will break",
+    ],
+    answer: 1,
+    explain: "Stress is clamp load divided by stress area: 15,600 / 36.6 = 426 MPa. Class 8.8 yields at 640 MPa (0.8 x 800), so the bolt is working well inside its elastic range and will return to its length when loosened.",
+  },
+  {
+    id: "m1-42", module: "foundations", chapter: "m1-fasteners", kind: "apply",
+    q: "A castle nut on the rear axle has reached its specified torque, but no slot lines up with the split-pin hole. What is the correct action?",
+    options: [
+      "Loosen the nut until the nearest slot lines up",
+      "Tighten the nut slightly further until the next slot lines up, then fit a new split pin",
+      "Leave the pin out, since the nut is at full torque",
+      "Refit the old pin through the nearest slot at an angle",
+    ],
+    answer: 1,
+    explain: "Loosening would drop the nut below its torque. The nut is turned on to the next slot, a new split pin is fitted with its closed end forward, and its legs are bent as the manual shows. A missing pin can let the wheel come off.",
+  },
 ];

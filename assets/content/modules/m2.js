@@ -1101,6 +1101,174 @@ export default {
           "html": "Run the <a href=\"../overview/?mode=4t&part=engine\">four-stroke engine</a> at a low RPM setting and pause it with the Space key where the inlet valve begins to lift and where the exhaust valve closes. Read the crank angle (θ) from the status line and calculate the overlap; the Overview's valve events are simplified, so compare your figure with the real timing given in this chapter. Then step through a full 720° cycle and explain why the camshaft, driven at half crankshaft speed, has turned through only 360°."
         },
         {
+          "type": "h3",
+          "text": "Finding TDC on the compression stroke"
+        },
+        {
+          "type": "p",
+          "html": "Valve clearance checks, cam timing and ignition timing all start from the same position: the piston at top dead centre at the end of the compression stroke. The piston passes TDC twice per cycle, so the position alone is not enough; the valves tell the two apart."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Remove the inspection plugs",
+              "html": "Take out the spark plug, the timing-hole plug on the generator cover and the cap over the crankshaft nut, so the crank can be turned by hand and the flywheel marks seen."
+            },
+            {
+              "title": "Turn forwards and watch the inlet",
+              "html": "Turn the crank in its normal direction and watch the inlet valve (or its rocker) open and close. Compression follows."
+            },
+            {
+              "title": "Align the T mark",
+              "html": "Keep turning until the T mark on the flywheel lines up with the index mark on the crankcase."
+            },
+            {
+              "title": "Confirm with the rockers",
+              "html": "At compression TDC both rockers have a little free play and both valves are closed. If both rockers are tight and the valves are moving (the overlap rock), the piston is at exhaust TDC: turn one more full revolution."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "If the crankshaft nut cannot be reached, raise the rear wheel, select top gear and turn the wheel to turn the engine. If the flywheel has no visible marks, a long, thin screwdriver or plastic rod resting lightly on the piston through the plug hole shows the moment the piston stops rising; it must never be allowed to jam between piston and head. Full procedure: <a href=\"../repair/repairs/tdc-find/\">Find top dead centre</a>."
+        },
+        {
+          "type": "callout",
+          "tone": "warm",
+          "title": "Which TDC? The rock test",
+          "html": "At exhaust TDC the exhaust valve is just closing while the inlet is just opening, so rocking the crank a few degrees either way moves both valves: the overlap described above. At compression TDC the same rock moves neither valve. One look at the rockers saves setting a whole engine 360&deg; out."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 2.2.1: Setting cam timing on a single"
+        },
+        {
+          "type": "p",
+          "html": "Every time a four-stroke top end is reassembled the valve timing has to be set again. Reproducing the factory timing is simple if the rules are followed in order; most mistakes come from a crank that moved, a tensioner fitted too early or a mark misread."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Record before dismantling",
+              "html": "Before the cam is removed, set compression TDC and check that the cam sprocket marks line up as the manual says. If they do not, or if non-original sprockets are fitted, mark sprocket and head with white paint and photograph them: the manual can be wrong, the engine in front of you cannot."
+            },
+            {
+              "title": "Set the crank",
+              "html": "With the T mark aligned at TDC, fit the camshaft with the lobes pointing away from the followers, so no valve is open."
+            },
+            {
+              "title": "Fit the chain",
+              "html": "Loop the cam chain over the sprocket and move it tooth by tooth until the sprocket mark aligns: a circle or line level with the top of the head, or a dot or arrow against a mark on the cam cap, depending on make. Keep the chain tight on the front (non-tensioner) run."
+            },
+            {
+              "title": "Torque the caps",
+              "html": "Tighten the cam bearing caps a little at a time in the manual's pattern, so the cam is pulled down evenly. Check that each rocker sits on the centre of its valve stem."
+            },
+            {
+              "title": "Fit the tensioner last",
+              "html": "Fit the tensioner in its fully retracted position, then release it. Recheck the T mark and the cam marks; the crank can move a little during assembly."
+            },
+            {
+              "title": "Turn by hand",
+              "html": "Turn the engine slowly forwards two full revolutions by hand and check the marks again at TDC. If anything binds, stop at once: a valve touching the piston is felt as a hard stop."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A chain that is not new may not let the marks align exactly, because a worn chain is longer; choose the sprocket tooth that brings the marks closest. Twin-camshaft engines also have the number of chain pins (or rollers) between the exhaust and inlet marks specified in the manual, usually somewhere between 18 and 31 depending on the engine; count them, since one pin out is one tooth out. See <a href=\"../repair/repairs/cam-timing-set/\">Record and set cam timing marks</a> and <a href=\"../repair/repairs/manual-cross-check/\">Check a shop manual's steps against the engine</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/130_timing_mark.jpg",
+          "caption": "Cam sprocket timing mark aligned with the cylinder head",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/130_most_hondas_yamahas_marks_dots_lines.jpg",
+          "caption": "Timing marks on camshafts aligned with marks on the bearing caps",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "On an OHV push-rod engine such as the K-Light 125, the camshaft sits in the crankcase and is driven by a gear from the crankshaft, not by a chain. Its timing is set once, when the engine is assembled, by aligning punch marks on the crankshaft gear and the cam gear; it cannot slip in service, but a cam gear fitted one tooth out during a rebuild produces exactly the errors described below. Old British push-rod twins and singles are timed the same way, by marks on their cam and crank gears."
+        },
+        {
+          "type": "h3",
+          "text": "What one tooth out does"
+        },
+        {
+          "type": "p",
+          "html": "The cam sprocket has twice as many teeth as the crankshaft sprocket, because it turns at half speed. A chain that is fitted one tooth out, or that jumps a tooth when it is badly worn, moves every valve event by the same crank angle."
+        },
+        {
+          "type": "eq",
+          "id": "m2-cam-tooth-error",
+          "name": "Timing error per cam sprocket tooth",
+          "tex": "\\Delta\\theta = \\frac{720^{\\circ}}{z_c}",
+          "where": [
+            [
+              "\\Delta\\theta",
+              "shift of every valve event, in crankshaft degrees",
+              "degrees"
+            ],
+            [
+              "z_c",
+              "number of teeth on the camshaft sprocket",
+              ""
+            ]
+          ],
+          "why": "Shows how large an error one tooth makes: far more than any normal tolerance, which is why marks are checked twice before the engine is turned.",
+          "example": "For an example cam sprocket of 36 teeth, one tooth moves every event by \\(720 / 36 = 20^{\\circ}\\) of crank rotation, close to the whole overlap of a commuter cam."
+        },
+        {
+          "type": "p",
+          "html": "Timing that is one tooth retarded opens and closes every valve late: low-speed torque and compression fall, starting becomes hard, and the engine may still run well enough to hide the fault. One tooth advanced does the reverse and brings the valves closer to the piston near TDC. In an interference engine, two or more teeth, or a chain that jumps under load, lets the piston hit an open valve and bend it."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/130_bent.jpg",
+          "caption": "A valve bent by contact with the piston",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Symptom after a top-end job",
+            "Likely cause",
+            "First check"
+          ],
+          "rows": [
+            [
+              "Low compression, engine weak and hard to start",
+              "Cam timing one tooth out, or valve clearance set too tight",
+              "Marks at compression TDC; clearances cold"
+            ],
+            [
+              "Low compression on one cylinder, air at the inlet or exhaust on a leak-down test",
+              "A valve bent by contact with the piston",
+              "Leak-down test (Chapter 2.7): <a href=\"../repair/repairs/leak-down-test/\">Do a leak-down test</a>"
+            ],
+            [
+              "No compression after assembly on an engine with hydraulic tappets",
+              "Tappets pumped up and holding valves open",
+              "Wait for them to bleed down and recheck before dismantling"
+            ],
+            [
+              "Rattle from the cam chain area, worst when starting",
+              "Worn chain or a tensioner that is not taking up slack",
+              "<a href=\"../repair/repairs/cam-chain-check/\">Check the cam chain and tensioner</a>"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Performance camshafts are set more precisely with a <strong>degree wheel</strong> bolted to the crankshaft and a dial gauge on the valve, so that the actual opening and closing angles can be compared with the cam maker's card. Reproducing the factory timing on a standard engine needs only the marks."
+        },
+        {
           "type": "check",
           "q": "m2-10"
         },
@@ -1526,6 +1694,131 @@ export default {
           "html": "Switch to the <a href=\"../overview/?mode=2t&part=engine\">two-stroke engine</a> and run the animation slowly. Pause when the exhaust port starts to open and when the transfer ports start to open, read both crank angles from the status line and calculate the blowdown period. Then raise the RPM slider and compare the number of power strokes per second with the <a href=\"../overview/?mode=4t&part=engine\">four-stroke</a> at the same speed."
         },
         {
+          "type": "h3",
+          "text": "Setting and bleeding an oil-injection pump"
+        },
+        {
+          "type": "p",
+          "html": "An oil-injection pump is driven by the engine and linked by a cable to the throttle, so its delivery rises with both engine speed and throttle opening. A typical pump meters oil from about 120:1 at idle to about 20:1 at high speed and full throttle, which is why injected two-strokes foul fewer plugs and carbon their exhausts less than premix engines."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Synchronise with the throttle",
+              "html": "Open the throttle to the position the manual specifies (on many engines fully open) and check that the pump's reference marks line up: two lines on a Mikuni pump, a pin and a dot on a Yamaha pump. Adjust the pump cable, not the throttle cable."
+            },
+            {
+              "title": "Check the stop",
+              "html": "With the throttle closed, check the cable has a little free play so the pump returns to its minimum stroke."
+            },
+            {
+              "title": "Bleed after air has entered",
+              "html": "If the tank has run dry or a line was disconnected, loosen the bleed screw on the pump until oil flows without bubbles, then tighten it. Some pumps have no bleed screw: loosen the delivery line at the pump instead."
+            },
+            {
+              "title": "Prove the delivery",
+              "html": "Run the engine on premix at the manual's ratio while checking that oil moves down the delivery line, or measure output against the manual's figure: <a href=\"../repair/repairs/two-stroke-pump-output-test/\">Test two-stroke oil pump output</a>."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/053_mikuni_align_two_lines.jpg",
+          "caption": "Mikuni oil pump with its two alignment marks",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "A pump set too lean, a split delivery line or an air-locked pump seizes the engine without warning; set too rich, it only fouls plugs and smokes. When there is any doubt about a pump, premix at the manual's ratio protects the engine until the pump is checked: <a href=\"../repair/repairs/two-stroke-pump-cable-set/\">Set the two-stroke oil pump cable</a>, <a href=\"../repair/repairs/two-stroke-pump-bleed/\">Bleed a two-stroke oil pump</a> and <a href=\"../repair/repairs/two-stroke-premix/\">Mix two-stroke premix correctly</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Crankcase pressure and vacuum test"
+        },
+        {
+          "type": "p",
+          "html": "The two-stroke crankcase must hold pressure on the downstroke and vacuum on the upstroke. A leak at a crank seal or a joint lets mixture escape when the case is compressed and lets air in when it is under vacuum, which leans out the mixture and weakens transfer flow. The test proves the bottom end without dismantling it."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Seal the engine",
+              "html": "Remove carburettor and exhaust and fit blanking plates to the inlet and exhaust ports. Fit an adapter with a gauge in the spark plug hole, and put the piston at BDC so the case is connected to the cylinder."
+            },
+            {
+              "title": "Pressure test",
+              "html": "Pressurise to the manufacturer's value, usually about 40&ndash;100 kPa (6&ndash;15 psi), and watch the gauge for five or six minutes; it should hold."
+            },
+            {
+              "title": "Vacuum test",
+              "html": "Apply a vacuum of about 5&ndash;7 inHg (17&ndash;24 kPa) and watch for the same period. A seal that holds pressure can still leak under vacuum, because pressure pushes its lip against the shaft while vacuum pulls it away."
+            },
+            {
+              "title": "Find the leak",
+              "html": "Brush soapy water over seals, joints and the cylinder base under pressure; bubbles show the leak."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/107_vacuum_tester.jpg",
+          "caption": "Hand vacuum and pressure tester used for crankcase testing",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Old crank seals harden: the engine is hard to start cold, then runs normally once the seal warms and softens. A leak on the generator side draws air and leans the mixture, which can raise the idle, make the revs hang and overheat the piston. The cure is new crank seals; where the manual specifies a liquid sealant on the case joint, do not add a gasket, and where it specifies a gasket, do not replace it with sealant, because either change alters the side clearances of the crank and gearbox shafts: <a href=\"../repair/repairs/two-stroke-crankcase-test/\">Test a two-stroke crankcase for leaks</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Carbon, steady throttle and other two-stroke faults"
+        },
+        {
+          "type": "p",
+          "html": "Burnt oil leaves carbon in the exhaust port, the power valve and the silencer. A two-stroke with a blocked exhaust starts easily but will not rev, because the expansion chamber can no longer return the charge. Silencers with removable baffles or fibreglass packing can be cleaned and repacked; caustic cleaning solutions are dangerous to use and best avoided: <a href=\"../repair/repairs/two-stroke-decoke/\">Decoke a two-stroke</a> and <a href=\"../repair/repairs/spark-arrester-clean/\">Clean a spark arrester</a>."
+        },
+        {
+          "type": "p",
+          "html": "A loop-scavenged engine built for on-off use, such as a motocross engine, can seize when held at a steady, moderate throttle for a long time, even without being pushed hard. Opening and closing the throttle mixes cool fresh charge across the hot area above the exhaust port; at a steady setting that area keeps heating until the piston crown or skirt on the exhaust side melts. Vary the throttle when such a machine has to be ridden on the road."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Symptom",
+            "Likely cause",
+            "First check"
+          ],
+          "rows": [
+            [
+              "Starts easily, will not rev",
+              "Carbon in exhaust or silencer, or power valve stuck closed",
+              "Exhaust and power valve: <a href=\"../repair/repairs/power-valve-service/\">Service a power valve</a>"
+            ],
+            [
+              "High idle, revs hang, hard cold start",
+              "Air leak at a crank seal or the base gasket",
+              "Pressure and vacuum test"
+            ],
+            [
+              "Piston crown pitted as if chewed",
+              "Bottom-end bearing breaking up and passing debris",
+              "Big-end and main bearings before fitting a new piston"
+            ],
+            [
+              "Seizure at steady throttle on the road",
+              "Local overheating on the exhaust side",
+              "Piston and port; jetting and oil supply"
+            ],
+            [
+              "Heavy smoke from an old engine",
+              "Worn engine, or gearbox oil passing a hard crank seal",
+              "Crank seals before reducing the oil ratio"
+            ]
+          ]
+        },
+        {
           "type": "check",
           "q": "m2-35"
         },
@@ -1898,6 +2191,163 @@ export default {
         {
           "type": "p",
           "html": "Shims are normally supplied in 0.025 mm steps, so the result usually lands on an available size; if it falls between two, the one that gives a clearance nearer the middle of the range is chosen. The procedure is in <a href=\"../repair/repairs/valve-shim-adjust/\">adjusting valve shims</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Cam drives compared"
+        },
+        {
+          "type": "p",
+          "html": "Something has to turn the camshafts at exactly half crank speed. The method decides the service work: chains stretch, belts age, gears and shafts last but cost more to make."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Drive",
+            "Where it is used",
+            "Service"
+          ],
+          "rows": [
+            [
+              "Single-row roller chain",
+              "Most singles and many multis",
+              "Wears longer; renew with its sprockets, guides and tensioner"
+            ],
+            [
+              "Inverted-tooth (Hy-Vo) chain",
+              "Many multis",
+              "Same as roller chain; no master link, so it is fitted endless"
+            ],
+            [
+              "Toothed belt",
+              "Honda Gold Wing (GL), many Ducati twins",
+              "Renew by the maker's age and distance, even if it looks good"
+            ],
+            [
+              "Bevel shaft",
+              "Older British machines and older Ducatis",
+              "Little wear while oil changes and levels are kept up"
+            ],
+            [
+              "Gear train",
+              "Racing engines and a few road machines such as the Honda VFR750R",
+              "Very durable; marks must align on assembly"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A chain lengthens as its pins and bushes wear, and every millimetre of extra length retards the camshaft. The change in length between a new chain and a badly worn one is so small that it is hard to measure, yet a worn chain can slap hard enough to wear through a guide and even into the crankcase. For that reason many mechanics renew the cam chain and its sprockets at every top-end rebuild instead of trusting a length check. A cam chain or belt that breaks while the engine is running lets the valves stop open, and the piston hits them."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/131_hi_vo_chain.jpg",
+          "caption": "Inverted-tooth (Hy-Vo) cam chain",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/131_over_head_cam_chain_drive.jpg",
+          "caption": "Overhead camshaft driven by a roller chain",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "h3",
+          "text": "Cam chain tensioners: automatic and manual"
+        },
+        {
+          "type": "p",
+          "html": "The tensioner pushes a sprocket, roller or rubber-faced blade against the slack run of the chain. Its spring lets the chain wear and stay at the right tension, and lets it be slack enough to fit over the sprockets during assembly."
+        },
+        {
+          "type": "p",
+          "html": "Most engines from the early 1980s on use an <strong>automatic</strong> tensioner with a one-way lock: it takes up slack as the chain wears and cannot be adjusted. When the chain becomes noisy, the chain is worn out. Older engines use a <strong>manual</strong> tensioner held by a pinch bolt or locknut, adjusted at a position given in the manual so that all the slack is on the tensioner side."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Set the position",
+              "html": "Turn the engine to the flywheel mark the manual gives for adjustment; some engines are adjusted at idle instead."
+            },
+            {
+              "title": "Release the lock",
+              "html": "Loosen the pinch bolt or locknut. The spring pushes the tensioner in; on a worn chain a muffled pop is often heard as the slack is taken up."
+            },
+            {
+              "title": "Lock it",
+              "html": "Tighten the pinch bolt or locknut without moving the tensioner."
+            },
+            {
+              "title": "Listen",
+              "html": "If the chain is still noisy after correct adjustment, it is worn out: renew chain, sprockets and guides."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/132_pinch_bolt.jpg",
+          "caption": "Manual cam chain tensioner with its pinch bolt",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Any tensioner must be fitted in its <strong>fully retracted</strong> (loosest) position and then released. Fitted extended, it over-tightens the chain, wears it and the guides quickly and can break the tensioner itself. Some crankshaft cam sprockets are machined as part of the crank, and others are pressed on, so a worn crank sprocket may mean a new crankshaft or a press job. See <a href=\"../repair/repairs/cam-chain-adjust/\">Adjust a manual cam chain tensioner</a> and <a href=\"../repair/repairs/cam-chain-replace/\">Replace a cam chain</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Worked example: changing a valve shim"
+        },
+        {
+          "type": "p",
+          "html": "On a shim-under-bucket engine the clearance is changed by changing a hardened shim, using the shim selection equation above. Shims are stamped with their thickness in hundredths of a millimetre: a shim marked 270 is 2.70 mm."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Measure",
+              "html": "At compression TDC, cold, the inlet clearance reads 0.05 mm with feeler gauges. The specification for this example engine is 0.10 mm."
+            },
+            {
+              "title": "Read the old shim",
+              "html": "Remove the shim with the holding tool and read its marking: 270. If the marking is worn, measure the shim with a micrometer."
+            },
+            {
+              "title": "Calculate",
+              "html": "The clearance must grow by \\(0.10 - 0.05 = 0.05\\ \\mathrm{mm}\\), so the new shim is thinner by the same amount: \\(2.70 - 0.05 = 2.65\\ \\mathrm{mm}\\), a shim marked 265."
+            },
+            {
+              "title": "Fit and check",
+              "html": "Fit the shim with its marking facing down, away from the cam, so the cam does not wear the number off. Turn the engine several times by hand and measure again; a tilted shim or oil under it changes the reading."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Shims rarely wear, so one that is too thick for one valve can often be used on another valve that needs a thicker one. On a few engines the shim sits under the bucket and the camshafts must be removed to change it. Always use the special holding tool correctly and never force it: a slipped tool can break a cam cap, and on many engines the caps are machined with the head and not sold separately. See <a href=\"../repair/repairs/valve-shim-adjust/\">Adjust valve clearance with shims</a> and <a href=\"../repair/repairs/valve-clearance/\">Check and adjust valve clearance</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/110_shim_type_adjusters_valve_shims.jpg",
+          "caption": "Valve shims and buckets from a shim-type valve train",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "On a push-rod engine the clearance is set at the rocker with a screw and locknut, as on a SOHC head. With the correct feeler gauge in place, the push rod should still spin freely between the fingers but have no up-and-down play. After tightening the locknut, check again: tightening it often moves the adjuster. If a clearance has to err, it should err slightly loose. A loose valve ticks and wears the valve train a little; a tight valve does not close fully and burns."
+        },
+        {
+          "type": "h3",
+          "text": "Camshafts in plain bearings"
+        },
+        {
+          "type": "p",
+          "html": "Most overhead camshafts run directly in machined bores in the aluminium head, with no bearing shells, under caps machined together with the head. While pressurised oil reaches them they hardly wear. Run once with too little oil, the bores score; the repair is to line-bore the head and fit bushes, or to replace the head, which is why oil level and oil delivery to the head matter so much on these engines. Camshafts in ball bearings survive an oil failure better, because a ruined bearing can be replaced."
+        },
+        {
+          "type": "p",
+          "html": "On strip-down, rock the camshaft in its bearings: a dry, clean camshaft should show only a slight clearance, and visible wear on the journals means the bores are worn too. Bearing clearance is measured with Plastigauge under the torqued caps (Chapter 2.5): <a href=\"../repair/repairs/plain-bearing-clearance-check/\">Check plain bearing clearance</a>."
         },
         {
           "type": "check",
@@ -2320,6 +2770,225 @@ export default {
           "html": "A two-stroke with a <strong>high idle and hanging revs</strong> is often drawing air past a leaking crank seal or base gasket. And the K-Light manual warns that its thin-walled crankcase must never be struck heavily."
         },
         {
+          "type": "h3",
+          "text": "Oversizes, boring and honing"
+        },
+        {
+          "type": "p",
+          "html": "A cylinder wears most at the top, where the rings reverse under full combustion pressure, and most on the front and back walls, where the piston thrust acts. It wears least at the bottom, where the original hone marks can often still be seen. The result is a bore that is tapered and out of round, often with a ridge at the top of the ring travel."
+        },
+        {
+          "type": "p",
+          "html": "If the measured piston clearance is within the manual's limits, the cylinder only needs a light hone to break the glaze before new rings are fitted. If it is beyond the limit, the cylinder is bored to the next <strong>oversize</strong>; factory oversizes usually come in 0.25 mm steps (0.25, 0.50, 0.75, 1.00 mm). Rust pits where the rings stood during storage also call for a bore to the size that removes them."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Buy the piston first",
+              "html": "Never bore a cylinder without the new piston in hand: the machinist measures that piston and bores to fit it with the specified clearance."
+            },
+            {
+              "title": "Bore on a machine",
+              "html": "A boring machine holds taper and roundness far better than a hone; honing a cylinder more than slightly oversize takes hours and rarely stays round."
+            },
+            {
+              "title": "Finish with a hone",
+              "html": "Hone with plenty of honing oil, moving the hone up and down at a steady rate to leave an even crosshatch of about 45&deg;, which holds oil while the new rings bed in."
+            },
+            {
+              "title": "Treat ports and plating",
+              "html": "On a two-stroke, chamfer the port edges so rings cannot catch, and check that a power valve does not now protrude into the bore. A plated cylinder is only lightly honed, with stones made for its plating, or not at all if the maker says so."
+            },
+            {
+              "title": "Clean it properly",
+              "html": "Wash the bore in hot soapy water, dry it and wipe it with an oiled rag; repeat until the rag stays clean. Honing grit left in the bore wears the new rings in minutes."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/113_hone_cylinder.jpg",
+          "caption": "Honing a cylinder to break the glaze",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "A cylinder that has overheated badly, for example after a seizure, can lose the temper of its surface; new rings in it may never seal and the engine keeps smoking. Check the head for flatness after any severe overheat. Seized aluminium smeared on a cast-iron liner must be removed before the bore is measured: <a href=\"../repair/repairs/cylinder-hone/\">Hone a cylinder</a> and <a href=\"../repair/repairs/piston-clearance-measure/\">Measure piston-to-cylinder clearance</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 2.5.1: Fitting rings and piston"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Check the end gap",
+              "html": "Push each ring into its working area of the bore with the piston crown, so it sits square, and measure the gap with feeler gauges against the manual. Too small a gap closes up when hot and can break the ring; file the ends only with a ring file and only if the manual allows."
+            },
+            {
+              "title": "Check the side clearance",
+              "html": "With an old piston being reused, measure the clearance between ring and groove with a feeler gauge; typical values are about 0.025&ndash;0.076 mm, but use the manual's figure. A groove too wide even with a new ring means a new piston."
+            },
+            {
+              "title": "Fit the rings",
+              "html": "Fit oil ring first, then second, then top, with markings facing up, using a ring expander or careful fingers: rings are hard and break if spread too far. Never fit an oversize ring in a smaller bore; it will not contact the wall correctly."
+            },
+            {
+              "title": "Stagger the gaps",
+              "html": "Turn the ring gaps about a third to a half of the way round from each other, so they do not line up; stagger the rails of a three-piece oil ring the same way."
+            },
+            {
+              "title": "Orient the piston",
+              "html": "An arrow or mark on the crown faces the front or exhaust side; an IN mark in a valve pocket faces the inlet. Fit new circlips with their gaps away from the cut-out in the piston."
+            },
+            {
+              "title": "Oil and assemble",
+              "html": "Oil piston, rings, pin and bore generously, compress the rings with a ring compressor or by hand, and slide the cylinder down without forcing it."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/112_stagger.jpg",
+          "caption": "Ring end gaps staggered around the piston",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Ring tension alone does not seal combustion pressure: the gas gets behind the top ring and presses it against the bore and the bottom of its groove. That is why a correctly sized, correctly gapped ring in a round bore matters more than a stiffer ring: <a href=\"../repair/repairs/piston-ring-fit/\">Fit piston rings</a> and <a href=\"../repair/repairs/piston-inspect/\">Inspect a piston and read its size marks</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Plain and rolling bearings"
+        },
+        {
+          "type": "p",
+          "html": "A plain bearing works by hydrodynamic lubrication: the turning shaft drags oil into a wedge-shaped gap and rides on that film without touching the shell, much as a tyre aquaplanes on a wet road. As long as oil pressure and clean oil are maintained, a plain bearing hardly wears; most of its wear happens at start-up, before the film has formed. Low-stress shafts such as camshafts run directly in the aluminium; highly loaded crank mains and big ends run in replaceable shells."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Clean and dry",
+              "html": "Clean the journal and the shell of all oil; Plastigauge reads wrongly on an oily surface."
+            },
+            {
+              "title": "Lay the thread",
+              "html": "Lay a length of Plastigauge across the journal, along its axis, clear of the oil hole."
+            },
+            {
+              "title": "Torque the cap",
+              "html": "Fit the cap and tighten its bolts to the manual's torque. Do not turn the shaft."
+            },
+            {
+              "title": "Read the width",
+              "html": "Remove the cap and compare the width of the flattened thread with the scale on the packet; the widest point gives the clearance."
+            },
+            {
+              "title": "Decide",
+              "html": "Within limit, reuse the shells. Over limit, fit thicker shells or have the crank ground undersize where undersize shells are available; otherwise the crank is replaced."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/128_plastigauge_crankpin.jpg",
+          "caption": "Plastigauge flattened on a crankpin to read the bearing clearance",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Rolling bearings (ball, roller and needle) need little oil and suit singles and two-strokes. Unshielded ball bearings run in oil mist in two-stroke crankcases and gearboxes; shielded ones, prefilled with grease, are used in wheels; caged needle rollers are used at both ends of most two-stroke rods. When a bearing is an interference fit, press only on the race that is tight: on the inner race when pressing onto a shaft, on the outer race when pressing into a housing. A bearing pulled off by its loose race is damaged and must be replaced. Interference-fit bearings are fitted by heating the outer part, a case or a bearing, to about 120 &deg;C and cooling the inner part in a freezer: <a href=\"../repair/repairs/heat-cool-fit/\">Fit parts using heat and cold</a> and <a href=\"../repair/repairs/engine-bearing-check/\">Check engine bearings</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/129_roller_bearings.jpg",
+          "caption": "Ball and roller bearings of different types",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "A failing ball bearing can lock the shaft and then seem to free itself when the shaft is rocked back and forth. Do not be fooled: balls are breaking up, and running the engine again will destroy the shaft as well."
+        },
+        {
+          "type": "h3",
+          "text": "Splitting and closing the crankcase"
+        },
+        {
+          "type": "p",
+          "html": "On a vertically split single, the crankshaft is usually an interference fit in its main bearings, while the gearbox shafts, selector drum and kickstart shaft are a sliding fit. A crankcase splitting tool bolted to the case pushes the crank out of one bearing while the case halves are tapped apart evenly with a soft-faced dead-blow hammer on a strong area."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Remove everything outside",
+              "html": "Engine out of the frame; clutch, selector linkage, generator rotor and every case bolt removed. Check the manual for hidden screws under covers and labels."
+            },
+            {
+              "title": "Split gently",
+              "html": "Use the splitting tool or tap evenly with a dead-blow hammer. Do not lever between the joint faces with a screwdriver: steel tools ruin aluminium faces and an air leak on a two-stroke follows."
+            },
+            {
+              "title": "Reassemble from one half",
+              "html": "Build the gearbox and crank into the half that holds them; heat the other half to about 120 &deg;C so its bearing slides over the shaft, or pull the crank through with an assembly tool that acts on the inner race."
+            },
+            {
+              "title": "Seal as specified",
+              "html": "Apply a thin, even film of the sealant the manual names, or fit the gasket it specifies. Never change one for the other: the gasket thickness sets the end float of the crank and gearbox shafts."
+            },
+            {
+              "title": "Check before going on",
+              "html": "Turn the crank and shift through every gear before fitting seals, clutch and top end."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/134_dead_blow_hammer.jpg",
+          "caption": "Dead-blow hammer used to tap crankcase halves apart",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Full procedure: <a href=\"../repair/repairs/crankcase-split/\">Split and close the crankcase</a>. Balancer shafts are timed to the crankshaft by marks on their gears or sprockets, and must be set to them on reassembly; a balancer a few teeth out makes the engine vibrate far worse than with none: <a href=\"../repair/repairs/balancer-marks-set/\">Check and set counterbalancer timing marks</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Fitting oil seals"
+        },
+        {
+          "type": "p",
+          "html": "An oil seal keeps oil in, or on a two-stroke keeps crankcase pressure in, around a turning shaft. Its rubber lip is held against the shaft by a garter spring; as the lip wears flat, it stops sealing even though the outside of the seal looks good. The size is moulded on the seal as inside diameter, outside diameter and width, so a generic seal of the same size can replace an unavailable original."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Remove",
+              "html": "Lever the old seal out, protecting the case edge with wood or soft metal, without scratching the shaft or the bore."
+            },
+            {
+              "title": "Inspect the shaft",
+              "html": "Look for a groove where the old lip ran. Polish light marks with very fine abrasive paper; if the manual allows, set the new lip slightly in front of or behind the groove."
+            },
+            {
+              "title": "Protect the lip",
+              "html": "Grease the lip and cover any keyway or thread with thin plastic film so the lip is not cut as it slides on."
+            },
+            {
+              "title": "Drive it square",
+              "html": "Fit the seal printed side out, unless the manual says otherwise, with a driver or socket that bears on its outer steel edge. Tap it in evenly until it is flush or at the depth the manual gives."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "See <a href=\"../repair/repairs/oil-seal-fit/\">Fit an oil seal</a> and <a href=\"../repair/repairs/bearing-seal-install-care/\">Install bearings and seals with care</a>."
+        },
+        {
           "type": "check",
           "q": "m2-39"
         },
@@ -2672,6 +3341,256 @@ export default {
           "tone": "safety",
           "title": "Hot cooling systems",
           "html": "Never open a radiator cap on a hot engine. The coolant is above its atmospheric boiling point and <strong>flashes to steam</strong> when the pressure is released, causing severe scalds. Wait until the engine is cold and release the cap slowly to its first stop."
+        },
+        {
+          "type": "h3",
+          "text": "Checking the oil level correctly"
+        },
+        {
+          "type": "p",
+          "html": "Too little oil starves the bearings and the camshafts in the head. Too much fills the air space the crankcase needs, raises the pressure inside it and pushes oil out through the breather and seals, or into the airbox where it is burnt and smokes. Every check is made with the machine upright on level ground, normally on the centre stand, after the oil has had a few minutes to drain back."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Method",
+            "How to read it",
+            "Watch for"
+          ],
+          "rows": [
+            [
+              "Dipstick",
+              "Wipe it, rest it in the hole without screwing it in unless the manual says otherwise, withdraw and read between the marks",
+              "A screw-in and a rest-in reading differ"
+            ],
+            [
+              "Level plug",
+              "Remove the plug and add oil until it just runs out of the hole",
+              "Common on small engines and racing machines"
+            ],
+            [
+              "Sight window",
+              "Read the level between the marks on the window",
+              "A discoloured window, or very clean oil that is hard to see"
+            ],
+            [
+              "Dry-sump tank",
+              "Run the engine for a few minutes first, stop, then read the tank dipstick",
+              "Oil drains from the tank into the sump while standing, so a cold reading is false"
+            ]
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/052_oil_level_sight_window.jpg",
+          "caption": "Oil level sight window with high and low marks",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "A dry-sump engine that has stood for some time may show a low tank and a full crankcase: the oil has drained through the pump. Topping up the tank before running the engine overfills the system. See <a href=\"../repair/repairs/oil-level-check/\">Check the engine oil level</a>, <a href=\"../repair/repairs/oil-level-dry-sump/\">Check the oil level on a dry-sump engine</a> and <a href=\"../repair/repairs/oil-level-window-plug/\">Read an oil level window or level plug</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 2.6.1: Oil and filter change"
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Warm, not hot",
+              "html": "Run the engine briefly so the oil is warm and mixed and drains well; hot oil and exhaust burn. Place a container large enough for the whole capacity under the drain plug."
+            },
+            {
+              "title": "Find the right plug",
+              "html": "Some engines have two drain plugs, and some have a gearshift return-spring bolt next to the drain plug; removing that bolt by mistake means a major strip-down. Check the manual."
+            },
+            {
+              "title": "Read the drain plug",
+              "html": "Many drain plugs carry a magnet. A fine grey paste is normal; flakes or chips of metal call for an engine inspection."
+            },
+            {
+              "title": "Filter and screen",
+              "html": "Renew a paper element or spin-on filter; fit cartridge springs and washers exactly as they came out. Clean the strainer screen or centrifugal rotor where fitted."
+            },
+            {
+              "title": "Refit the drain plug",
+              "html": "New sealing washer, clean threads, the manual's torque with a torque wrench. Drain threads strip easily, and many cases have too little metal around the hole for a thread insert."
+            },
+            {
+              "title": "Fill and check",
+              "html": "Fill with the change quantity of the specified oil, run for about a minute, stop, wait a few minutes and check again; the filter will have taken some oil."
+            },
+            {
+              "title": "Confirm oil reaches the head",
+              "html": "On an engine with no oil pressure lamp, an oil check bolt on the head should weep oil when loosened briefly at idle."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/051_oil_drain_bolt.jpg",
+          "caption": "Engine oil drain bolt",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "<strong>Pass criteria:</strong> correct oil and quantity, new sealing washer, drain plug at torque, level correct after running, no leak, and oil delivery to the head confirmed. See <a href=\"../repair/repairs/engine-oil-service/\">Change the engine oil</a>, <a href=\"../repair/repairs/oil-filter-change/\">Change the oil filter</a>, <a href=\"../repair/repairs/drain-bolt-tighten/\">Tighten an oil drain bolt correctly</a> and <a href=\"../repair/repairs/oil-flow-to-head-check/\">Check that oil reaches the cylinder head</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Coolant, pressure cap and recovery tank"
+        },
+        {
+          "type": "p",
+          "html": "Use coolant made for motorcycles, or an automotive coolant without silicates, which can accelerate water pump wear. Plain water without antifreeze can freeze and crack a cylinder or head, and has none of the inhibitors that protect aluminium."
+        },
+        {
+          "type": "p",
+          "html": "As the coolant heats it expands, and the pressure cap lets the excess pass into the <strong>recovery tank</strong>; as it cools, the vacuum draws it back. The tank level is therefore checked cold, at its mark: enough to supply the radiator when cold, with room for the expansion when hot. After refilling, run the engine to working temperature, let it cool completely, and check both radiator and recovery tank again, since air trapped in the jackets works its way out on the first heat cycle: <a href=\"../repair/repairs/coolant-check/\">Check the coolant</a> and <a href=\"../repair/repairs/coolant-replace/\">Replace the coolant</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/125_coolant_reservoir.jpg",
+          "caption": "Coolant recovery tank with its level mark",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "h3",
+          "text": "Cooling system fault finding"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Symptom",
+            "Likely cause",
+            "Test"
+          ],
+          "rows": [
+            [
+              "Overheats while riding, level correct",
+              "Thermostat stuck closed, or pump not circulating",
+              "Thermostat in a pan of water with a thermometer: it must open at its marked temperature. Then remove the radiator cap only with the engine cold, start it and watch for coolant moving at the filler as it warms"
+            ],
+            [
+              "Overheats only at idle or in traffic",
+              "Fan not running",
+              "Bridge the fan switch or feed the fan directly from the battery; if it runs, replace the switch: <a href=\"../repair/repairs/fan-test/\">Test the cooling fan</a>"
+            ],
+            [
+              "Coolant pushed out of the filler, bubbles, white exhaust",
+              "Combustion gas entering the coolant: head gasket or cracked head",
+              "<a href=\"../repair/repairs/cooling-leak-test/\">Pressure-test the cooling system</a>"
+            ],
+            [
+              "Coolant drip from a small hole on the pump body",
+              "Weep hole showing a failing pump seal or bearing",
+              "<a href=\"../repair/repairs/water-pump-inspect/\">Inspect the water pump</a>"
+            ],
+            [
+              "Takes a long time to warm up",
+              "Thermostat stuck open",
+              "Thermostat test: <a href=\"../repair/repairs/thermostat-test/\">Test a thermostat</a>"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A cold engine pushed hard can seize even when the cooling system is perfect: the piston heats and expands faster than the cylinder, and cold oil flows poorly. Ride gently until the engine is warm, whether it is liquid- or air-cooled. A thermostat should not be removed to cure overheating; it controls the flow, and without it the engine may never reach its working temperature."
+        },
+        {
+          "type": "h3",
+          "text": "Reading the drained oil"
+        },
+        {
+          "type": "p",
+          "html": "Old oil carries evidence from inside the engine. A few minutes of looking during every oil change can give early warning of a failing bearing, a fuel or coolant leak or a worn clutch. What the oil shows is a clue, not proof: confirm it with other tests before opening the engine."
+        },
+        {
+          "type": "table",
+          "head": [
+            "What you find",
+            "Possible meaning",
+            "Next step"
+          ],
+          "rows": [
+            [
+              "Milky or creamy oil, water droplets",
+              "Condensation from short trips, or coolant leaking in",
+              "Cooling system pressure test; head gasket"
+            ],
+            [
+              "Strong petrol smell, thin oil, level was high",
+              "Fuel passing the rings, or a flooding carburettor",
+              "Carburettor float and fuel tap (Chapter 3.3)"
+            ],
+            [
+              "Steel flakes or chips on the magnet",
+              "Bearing, gear or cam chain wear",
+              "Do not run the engine: <a href=\"../repair/repairs/engine-internal-assessment/\">Assess internal engine damage</a>"
+            ],
+            [
+              "Shiny flakes that a magnet does not pick up",
+              "Aluminium or bronze wear: piston, bushes, thrust washers",
+              "Top-end and bearing inspection"
+            ],
+            [
+              "Brown fibre or grit",
+              "Clutch friction material",
+              "Clutch inspection"
+            ],
+            [
+              "Black very soon after a change",
+              "Blow-by past worn rings, or overdue changes",
+              "Compression and leak-down tests (Chapter 2.7)"
+            ],
+            [
+              "Pieces of plastic or rubber",
+              "Cam chain guide or tensioner wear",
+              "Cam chain and guides"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Catch some of the first oil in a clean glass jar, hold it to the light and let it stand for an hour: water sinks to the bottom as droplets or a layer. Very fine grey paste on the drain magnet is normal wear; visible flakes, slivers or chips are not. Note what was found and the odometer reading on the job card, so the next change can be compared: <a href=\"../repair/repairs/oil-inspect/\">Inspect drained oil for clues</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Keeping an air-cooled engine cool"
+        },
+        {
+          "type": "p",
+          "html": "An air-cooled engine depends on clean fins, moving air, a correct mixture and enough oil. It overheats in slow traffic more than at road speed, and any of the following can tip it over the edge."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Oil level",
+              "html": "Oil carries a large share of the heat on an air-cooled engine; low or old oil makes it run hotter."
+            },
+            {
+              "title": "Fins",
+              "html": "Look between the fins with a torch for packed mud, sand, oil-soaked dust or debris; the K-Light 125 fault chart lists fins clogged with sand and oil as a cause of overheating. Clean a cold engine with a soft brush, plastic scraper and detergent; never spray cold water on a hot cylinder."
+            },
+            {
+              "title": "Airflow",
+              "html": "Remove anything that blocks air in front of the engine. On a fan-cooled scooter, check that the fan and its cowling are complete and the inlet grille is clear."
+            },
+            {
+              "title": "Mixture",
+              "html": "Read the spark plug: white or blistered means lean and hot (look for an intake air leak); the K-Light 125 should show light grey."
+            },
+            {
+              "title": "Extra load",
+              "html": "A choked exhaust, dragging brakes or a slipping clutch all make the engine work harder and run hotter."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Full check: <a href=\"../repair/repairs/air-cooling-check/\">Check air cooling (fins, airflow, mixture)</a>. If the engine still runs hot with clean fins and a normal plug, check ignition timing, oil delivery to the head and compression."
         },
         {
           "type": "check",
@@ -3322,6 +4241,47 @@ export default {
           "type": "figure",
           "fig": "afr",
           "caption": "Slide from rich to lean and connect each zone with a plug colour: rich = dry black soot, lean = chalk-white and blistered."
+        },
+        {
+          "type": "h3",
+          "text": "Running in a rebuilt engine"
+        },
+        {
+          "type": "p",
+          "html": "New rings and a freshly honed bore must wear into each other before they seal fully. Too gentle a running-in can leave the bore glazed so the rings never seat; too hard a running-in overheats the new parts and can seize the piston. Follow the manual's running-in instructions first; within them, the practice below balances the two risks."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Warm up fully",
+              "html": "Never load a cold, newly built engine. Watch for leaks and listen for noises during the first warm-up."
+            },
+            {
+              "title": "Vary the load",
+              "html": "Accelerate briskly through the lower gears to well below the red line, then close the throttle and let the engine slow in gear, which draws oil onto the cylinder walls and cools the piston. Repeat at intervals."
+            },
+            {
+              "title": "Avoid steady speeds",
+              "html": "Do not hold one throttle opening for long periods in the early distance; close and reopen the throttle every few kilometres on a long road."
+            },
+            {
+              "title": "Increase gradually",
+              "html": "Ride gently for the first few hundred kilometres, then use progressively more of the rev range."
+            },
+            {
+              "title": "Change the oil early",
+              "html": "Change oil and filter after the first short distance to remove the metal released as the parts bed in, then follow the schedule."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "See <a href=\"../repair/repairs/engine-break-in/\">Run in a new or rebuilt engine</a>. If a rebuilt engine still smokes or lacks compression after running-in, return to the compression and leak-down tests above before blaming the rings: valve timing, clearances and the head gasket are all common causes."
+        },
+        {
+          "type": "p",
+          "html": "When an engine has seized or failed, read the parts before ordering new ones. Scuffing concentrated on the exhaust side of a two-stroke piston points to overheating or lean running; a pin welded to the rod points to lubrication failure; a piston crown pitted by debris points to a breaking bearing. A new piston fitted without curing the cause fails the same way: <a href=\"../repair/repairs/engine-failure-read/\">Read why an engine failed</a>."
         },
         {
           "type": "check",

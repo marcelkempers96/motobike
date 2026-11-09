@@ -443,6 +443,142 @@ export default {
           "html": "In the end every force acts through the rear tyre contact patch, only about <strong>20&ndash;40 cm&sup2;</strong> on a commuter tyre. Its friction limits all acceleration, cornering and braking (Chapter 1.4)."
         },
         {
+          "type": "h3",
+          "text": "Reading a machine's age in the workshop"
+        },
+        {
+          "type": "p",
+          "html": "The history above is also a workshop tool. Every machine that comes in carries the technology of the years it was built, and recognising that technology tells you which manual, tools and tests the job needs before a single fastener is turned."
+        },
+        {
+          "type": "table",
+          "head": [
+            "What you see",
+            "What it tells you",
+            "Workshop consequence"
+          ],
+          "rows": [
+            [
+              "Contact points and a condenser under a cover on the crankshaft end",
+              "Battery-coil or magneto ignition, from before electronic ignition became general",
+              "Points gap and ignition timing need periodic setting (Chapter 4.4)"
+            ],
+            [
+              "Carburettor with a float bowl, no oxygen sensor in the exhaust",
+              "Built before Euro 4, Euro 5 and BS-VI pushed injection onto small engines",
+              "Jetting, float height and idle settings are adjustments, not faults (Chapter 3.3)"
+            ],
+            [
+              "Throttle body, injector and an oxygen sensor in the header",
+              "Closed-loop fuel control for a three-way catalyst",
+              "Read fault codes and test sensors before adjusting anything (Chapter 3.4)"
+            ],
+            [
+              "Two-stroke with an oil tank and a cable to an oil pump, or a premix label",
+              "Two-stroke lubricated by oil injection or by oil in the fuel",
+              "Pump setting and bleeding, or the correct premix ratio (Chapter 2.3)"
+            ],
+            [
+              "Toothed ABS ring on a hub, or a lever that applies both brakes",
+              "ABS or CBS, required on new machines from 2016&ndash;2019 depending on market",
+              "ABS and CBS checks and warning-lamp diagnosis (Chapter 5.7)"
+            ],
+            [
+              "Orange cables and a service disconnect",
+              "Electric drive with a high-voltage pack",
+              "Isolate and prove absence of voltage before any work (Chapter 1.5, Module 6)"
+            ],
+            [
+              "Inch or Whitworth bolt heads",
+              "Older British or American machine",
+              "Different spanners and thread standards (Chapter 1.6)"
+            ],
+            [
+              "Cross-head screws, some with a small dot on the head",
+              "Japanese JIS screws",
+              "Use a JIS bit, not a Phillips bit (Chapter 1.6)"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Confirm what you see from the numbers on the machine. The frame number is stamped on the steering head (on newer machines it is the 17-character VIN) and the engine number on a pad on the crankcase. Parts catalogues and specification tables are organised by model code and year, and models often change partway through a year, so the number decides which row of the table applies: <a href=\"../repair/repairs/frame-engine-number-find/\">Find and read the frame and engine numbers</a>, then <a href=\"../repair/repairs/spec-sheet-read/\">Read a specification table for your bike</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Worked example: one tank, two machines"
+        },
+        {
+          "type": "p",
+          "html": "The energy figures above become concrete when followed through one full tank of the K-Light 125 and compared with an electric machine that delivers the same work to the road. Every number comes from this chapter; only the arithmetic is new."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Energy in the tank",
+              "html": "\\(11.8\\ \\mathrm{L} \\times 32\\ \\mathrm{MJ/L} = 378\\ \\mathrm{MJ}\\), about 105 kWh. Since petrol holds 43 MJ/kg and 32 MJ/L, a litre weighs about \\(32 / 43 \\approx 0.74\\ \\mathrm{kg}\\), so the full tank of fuel weighs only about 8.8 kg."
+            },
+            {
+              "title": "Work at the crankshaft",
+              "html": "At an average engine efficiency of 0.25, about \\(105 \\times 0.25 \\approx 26\\ \\mathrm{kWh}\\) becomes crankshaft work. The other 79 kWh or so leave as heat through the exhaust, the fins and the oil."
+            },
+            {
+              "title": "Work at the road",
+              "html": "Primary drive, gearbox, chain and tyre together pass \\(0.98 \\times 0.96 \\times 0.96 \\times 0.97 \\approx 0.88\\) of it, so about 23 kWh drives the machine. Roughly 3 kWh is lost as heat in gears, chain and tyre."
+            },
+            {
+              "title": "The electric equivalent",
+              "html": "To put the same 23 kWh on the road at 80&ndash;88 % battery to wheel, a pack must store about 26&ndash;29 kWh. At 0.12&ndash;0.20 kWh/kg that pack weighs roughly 130&ndash;240 kg, against 8.8 kg of petrol."
+            },
+            {
+              "title": "What it means",
+              "html": "No commuter can carry a pack of that mass, so electric two-wheelers carry a fraction of the energy, accept a shorter range and recharge or swap often. Their efficiency advantage is real, but it cannot close a gap in storage density of this size."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The example also shows what maintenance is worth. Every percentage point lost in a dry chain, a dragging brake or an under-inflated tyre comes straight off the 23 kWh at the road, and appears as heat and wear in the part that wastes it."
+        },
+        {
+          "type": "h3",
+          "text": "A worked fault through the system view"
+        },
+        {
+          "type": "p",
+          "html": "A fuel-injected commuter is brought in because it hesitates and sometimes stalls at idle, mostly at night. The system view turns that complaint into an ordered set of tests instead of a guess at the most expensive part."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Collect the facts",
+              "html": "The fault is worse with the headlight on and at low engine speed, and it began gradually. Confirm it on a short, safe test: with the lights on, the idle is uneven."
+            },
+            {
+              "title": "Name the systems involved",
+              "html": "Fuel (pump and injector) and electrical (battery, charging). Both injector and fuel pump depend on supply voltage, so the fault may sit at the boundary between the two systems."
+            },
+            {
+              "title": "Test the cheapest likely link first",
+              "html": "Measure the charging voltage at the battery at 5,000 rpm with the lights on. The K-Light 125 expects 14.5 &plusmn; 0.5 V: <a href=\"../repair/repairs/charging-system-test/\">Test the charging system</a>."
+            },
+            {
+              "title": "Follow the result",
+              "html": "Below the range, test the regulator/rectifier, stator and connectors (Chapter 4.2): <a href=\"../repair/repairs/regulator-test/\">Test the regulator/rectifier</a>. Within the range, move to fuel pressure and the injector (Chapter 3.4)."
+            },
+            {
+              "title": "Prove the repair",
+              "html": "Repeat the test under the conditions that produced the fault: lights on, idle, after dark. A fault that cannot be reproduced after the repair is a fault that has been found."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The order matters as much as the tests. A new injector fitted on a hunch would not have cured a low charging voltage, the fault would have returned, and the battery would have gone on discharging. The general method is in <a href=\"../repair/repairs/diagnosis-method/\">Diagnose methodically</a>."
+        },
+        {
           "type": "check",
           "q": "m1-05"
         },
@@ -1923,6 +2059,18 @@ export default {
               "html": "Side stand springs back and the interlock works; no oil or fuel under the bike (<a href=\"../repair/repairs/pre-ride-check/\">Pre-ride check</a>)."
             }
           ]
+        },
+        {
+          "type": "h3",
+          "text": "From assemblies to a service schedule"
+        },
+        {
+          "type": "p",
+          "html": "The 30 assemblies are also the structure of every service schedule. A manufacturer's schedule lists each assembly with an interval in distance or time and an action: inspect, clean, adjust, lubricate or replace. Reading it assembly by assembly makes sure nothing is forgotten, and a job card laid out in the same order becomes a record of what was done: <a href=\"../repair/repairs/service-schedule/\">Follow the service schedule</a>."
+        },
+        {
+          "type": "p",
+          "html": "Use the correct part name and the frame number when ordering parts. Two machines with the same name and engine size can use different parts, and a parts seller who has the frame number can find the right version even when the model changed partway through a year: <a href=\"../repair/repairs/parts-source-choose/\">Choose where to buy motorcycle parts</a>."
         },
         {
           "type": "check",
@@ -3455,6 +3603,142 @@ export default {
           "html": "<strong>Broken bolt (1.5.4):</strong> soak at least 15 minutes in penetrating oil, punch the exact centre, drill along the axis (typically 4&ndash;5 mm for M8), turn the extractor anticlockwise with steady force. If stuck, heat the <em>casting</em> (not the bolt) to 100&ndash;150 &deg;C. Extractors are brittle: a broken one needs spark erosion (EDM), shattering or carbide burrs, then an insert."
         },
         {
+          "type": "h3",
+          "text": "Reading a service manual and its specification tables"
+        },
+        {
+          "type": "p",
+          "html": "A specification table often covers several models on one page, so the commonest mistake is not a wrong measurement but a value read from the wrong row or in the wrong unit. A few habits prevent it."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Match the full model code",
+              "html": "Find the model code and year from the frame number, and match the whole code, not only the engine size."
+            },
+            {
+              "title": "Read the heading and units",
+              "html": "Check whether a column is in mm or inches, N&middot;m, kgf&middot;m or lbf&middot;ft, litres or quarts, kPa or psi. Converting torque is covered in Chapter 1.6."
+            },
+            {
+              "title": "Follow the row with a ruler",
+              "html": "Lay a ruler or a strip of paper under the row so the eye cannot slip to the next model."
+            },
+            {
+              "title": "Read the footnotes",
+              "html": "A small mark next to a value points to a note: how a float height is measured, which way a needle clip position is counted, or a value that applies to one version only. A dash usually means not applicable."
+            },
+            {
+              "title": "Know which quantity applies",
+              "html": "Oil and fork oil tables often give one quantity for an oil change and a larger one for a dry, rebuilt unit. Use the right one and then check the level."
+            },
+            {
+              "title": "Cross-check a value you can see",
+              "html": "The spark plug listed should match the plug in the engine, and the chain size should match the number on the side plates. If not, the row may be wrong or the machine modified."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Manuals can also be wrong. Before stripping an engine, set cylinder one at top dead centre on the compression stroke and check that the timing marks line up as the manual describes; if they do not, record the marks that are actually used before anything is removed: <a href=\"../repair/repairs/manual-cross-check/\">Check a shop manual's steps against the engine</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Organising a strip-down"
+        },
+        {
+          "type": "p",
+          "html": "Most rebuild errors come from parts that go back in the wrong place or the wrong way round. Parts that wear together, such as valves and their seats or push rods and their rockers, should go back where they came from, even when they would fit elsewhere."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Photograph first",
+              "html": "Take photographs as the machine comes apart: clutch plate order, cable and wiring routes, the position of marks. They help most when the job waits for weeks."
+            },
+            {
+              "title": "One tray per assembly",
+              "html": "Keep the bolts, nuts and washers of each assembly in their own tray or tin, never in one pile."
+            },
+            {
+              "title": "Mark the parts",
+              "html": "Write on parts with a felt-tip marker: left inlet, right exhaust, rear top. Mark push rods and valves with their position."
+            },
+            {
+              "title": "Keep screw lengths in order",
+              "html": "For a cover with screws of mixed length, draw the hole pattern on card, punch a hole for each screw and push it in. If they are mixed up, set each screw in a hole: one that stands out much more or less than the rest is in the wrong place."
+            },
+            {
+              "title": "Bag and label",
+              "html": "If the job will wait, put each tray in a labelled bag to keep out oil and dust and to keep shims and small parts with their assembly."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/048_parts_tray.jpg",
+          "caption": "A parts tray keeping the fasteners of one assembly together",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "The full method is in <a href=\"../repair/repairs/teardown-organise/\">Keep parts in order during a strip-down</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Cleaning parts and workshop chemicals"
+        },
+        {
+          "type": "p",
+          "html": "Dirty parts hide cracks, scores and wear, so parts are cleaned before they are inspected or measured. <strong>Never clean parts with petrol</strong>: its vapour ignites from any spark. Use a petroleum parts-cleaning solvent with gloves and eye protection, scrub with a stiff brush, let the part drain, and oil bare steel at once so that it does not rust. Do not spin a dry bearing with compressed air: it overspeeds and is damaged."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Product",
+            "Used for",
+            "Watch out for"
+          ],
+          "rows": [
+            [
+              "Penetrating oil",
+              "Rusted fasteners and seized parts; spray, wait, then work the part back and forth",
+              "Evaporates in a day or two: oil the part afterwards"
+            ],
+            [
+              "Contact cleaner",
+              "Corroded or damp electrical contacts and switches",
+              "Flammable; work the switch between sprays"
+            ],
+            [
+              "Brake cleaner",
+              "Removing oil from brake parts",
+              "Flammable; use it with good airflow, away from flames"
+            ],
+            [
+              "Carburettor cleaner",
+              "Soaking small carburettor parts and clearing jets and passages",
+              "Eye protection: spray can rebound from a blocked passage"
+            ],
+            [
+              "Anti-seize compound",
+              "Exposed threads, spark plug threads, axle and wheel fittings",
+              "Only where the manual allows: it changes the torque-to-clamp relation"
+            ],
+            [
+              "Gasket remover",
+              "Softening old gaskets before scraping",
+              "Leave it to work; scrape aluminium faces with care"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Keep each product labelled, closed and away from heat, and put oily rags in a metal bin with a lid: oily rags can heat up and catch fire by themselves. See <a href=\"../repair/repairs/parts-solvent-clean/\">Clean engine parts safely with solvent</a> and <a href=\"../repair/repairs/workshop-chemicals-choose/\">Choose the right workshop chemicals</a>."
+        },
+        {
           "type": "check",
           "q": "m1-39"
         },
@@ -3491,6 +3775,621 @@ export default {
               "note": "Tools that save time in the workshop; weigh cost against how often you use them."
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "m1-fasteners",
+      "title": "Fasteners, threads and torque",
+      "lead": "A motorcycle is held together by a few hundred threaded fasteners, and most of them are loaded every time the engine fires or the wheel hits a bump. Knowing how a bolt clamps a joint, how to identify its thread and strength, how to lock it and how to tighten it correctly is the skill behind almost every job in the rest of the course.",
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "What a tightened bolt really does"
+        },
+        {
+          "type": "p",
+          "html": "A bolt is a stiff spring. As the nut is turned, the bolt stretches by a small amount and pulls the parts together with a force called the <strong>clamp load</strong> (or preload). The joint then holds by friction between the clamped faces and by that steady tension, not by the bolt shank bearing on the sides of its hole."
+        },
+        {
+          "type": "p",
+          "html": "A joint stays tight as long as the clamp load is greater than the forces trying to separate or slide the parts. If the clamp load is too low, the parts move against each other with every load cycle, the bolt is bent back and forth, and it works loose or breaks in fatigue. If it is too high, the bolt yields or the thread strips. Torque is only the way the clamp load is set, and since 80&ndash;90 % of the applied torque is lost to friction under the head and in the thread (Chapter 1.5), the condition of the thread matters as much as the number on the wrench."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/039_if_torqueing_bolt_engine_feel_yield.jpg",
+          "caption": "Bolt heads with different strength markings",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "eq",
+          "id": "m1-bolt-stress",
+          "name": "Tensile stress in a bolt",
+          "tex": "\\sigma = \\frac{F}{A_s}",
+          "where": [
+            [
+              "\\sigma",
+              "tensile stress in the threaded part of the bolt",
+              "MPa (N/mm²)"
+            ],
+            [
+              "F",
+              "clamp load (bolt tension)",
+              "N"
+            ],
+            [
+              "A_s",
+              "tensile stress area of the thread, from thread tables",
+              "mm²"
+            ]
+          ],
+          "why": "Compares the load a bolt carries with the yield strength of its property class, which shows how close a tightened bolt is to taking a permanent set.",
+          "example": "The M8 bolt of Chapter 1.5 clamps with 15.6 kN; its stress area is 36.6 mm², so \\(\\sigma = 15\\,600 / 36.6 \\approx 426\\ \\mathrm{MPa}\\), two thirds of the 640 MPa yield strength of class 8.8."
+        },
+        {
+          "type": "eq",
+          "id": "m1-bolt-stretch",
+          "name": "Bolt stretch under load",
+          "tex": "\\Delta L = \\frac{F\\,L_g}{E\\,A_s}",
+          "where": [
+            [
+              "\\Delta L",
+              "elastic stretch of the bolt",
+              "mm"
+            ],
+            [
+              "F",
+              "clamp load",
+              "N"
+            ],
+            [
+              "L_g",
+              "grip length: the length of bolt between the head and the nut or thread engagement",
+              "mm"
+            ],
+            [
+              "E",
+              "modulus of elasticity, about 200,000 N/mm² for steel",
+              "N/mm²"
+            ],
+            [
+              "A_s",
+              "tensile stress area",
+              "mm²"
+            ]
+          ],
+          "why": "Shows how little a correctly tightened bolt stretches, why stretch can be measured with a micrometer on bolts the manual specifies by length, and why a bolt that stays longer after loosening has yielded.",
+          "example": "The same M8 bolt with a 40 mm grip: \\(\\Delta L = \\frac{15\\,600 \\times 40}{200\\,000 \\times 36.6} \\approx 0.085\\ \\mathrm{mm}\\), less than a tenth of a millimetre."
+        },
+        {
+          "type": "keys",
+          "items": [
+            {
+              "l": "Clamp load, M8 at 25 N&middot;m dry",
+              "v": "15.6 kN",
+              "p": "from \\(T = K\\,d\\,F\\), Chapter 1.5"
+            },
+            {
+              "l": "Stress area, M8 coarse",
+              "v": "36.6 mm²",
+              "p": "from thread tables"
+            },
+            {
+              "l": "Stress in the bolt",
+              "v": "&asymp; 426 MPa",
+              "p": "class 8.8 yields at 640 MPa"
+            },
+            {
+              "l": "Stretch over a 40 mm grip",
+              "v": "&asymp; 0.085 mm",
+              "p": "returns to zero when loosened"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Because the stretch is so small, anything that lets the clamped parts settle steals a large share of it. Paint, dirt or a burr under a head, or a gasket that compresses as it heats, can shorten the clamped stack by a few hundredths of a millimetre and lose much of the clamp load. That is why seats are cleaned before assembly, and why some manuals call for a re-check after the first heat cycle."
+        },
+        {
+          "type": "p",
+          "html": "A bolt that has been taken past its yield point does not spring back: it stays longer, is thinner in the waist and will not hold its clamp load again. If a bolt keeps turning while the force on the wrench stops rising, it has yielded and must be replaced. Rod bolts, cylinder head bolts and studs are the most highly stressed fasteners in the engine; some rod bolts are set by measured stretch instead of torque, and the manual says so where it applies: <a href=\"../repair/repairs/bolt-stretch-measure/\">Measure bolt stretch and learn what a failed bolt looks like</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Threads: size, pitch and standard"
+        },
+        {
+          "type": "p",
+          "html": "A metric thread is named by its nominal diameter and its <strong>pitch</strong>, the distance from one thread crest to the next: M8 &times; 1.25 is 8 mm across with 1.25 mm pitch. Each diameter has a standard coarse pitch, which is usually left out of the name (a plain M8 is 1.25), and one or more fine pitches, which are always stated."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Thread",
+            "ISO coarse pitch",
+            "Fine pitches you will meet",
+            "Examples on the K-Light 125"
+          ],
+          "rows": [
+            [
+              "M5",
+              "0.8 mm",
+              "&ndash;",
+              "Small covers and clamps"
+            ],
+            [
+              "M6",
+              "1.0 mm",
+              "&ndash;",
+              "Covers and brackets"
+            ],
+            [
+              "M8",
+              "1.25 mm",
+              "1.0 mm",
+              "Mirror bolt (Allen M8), 22&ndash;29 N&middot;m"
+            ],
+            [
+              "M10",
+              "1.5 mm",
+              "1.25 mm",
+              "Rear sprocket nuts, side stand and footrest bolts, M10 &times; 1.25, 45&ndash;50 N&middot;m"
+            ],
+            [
+              "M12",
+              "1.75 mm",
+              "1.25 or 1.5 mm",
+              "Larger chassis and axle fittings on many machines"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The rule for choosing between them is about the weaker of the two threads. A bolt that screws into a casting normally has a <strong>coarse</strong> thread, because deep, widely spaced threads hold better in soft aluminium. A bolt or stud that takes a steel nut is normally <strong>fine</strong>, which gives finer adjustment and resists loosening. Many machines break the rule, so measure rather than assume. Male threads on good bolts are <strong>rolled</strong>, which leaves the grain of the steel unbroken and is stronger than a cut thread; avoid cutting extra thread on a bolt unless there is no alternative."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Standard",
+            "Where it is found",
+            "How to recognise it"
+          ],
+          "rows": [
+            [
+              "ISO metric (JIS on Japanese machines)",
+              "Almost every modern motorcycle",
+              "60&deg; thread, pitch in millimetres"
+            ],
+            [
+              "Unified (UNC coarse, UNF fine)",
+              "American machines and parts made for them",
+              "60&deg; thread, pitch given as threads per inch"
+            ],
+            [
+              "British Standard Whitworth and Fine (BSW, BSF)",
+              "Older British machines",
+              "55&deg; thread with rounded crests and roots; spanners sized by bolt, not across flats"
+            ],
+            [
+              "British Association (BA)",
+              "Small screws on older British machines and instruments",
+              "Small screws with a rounded thread"
+            ],
+            [
+              "Cycle thread (CEI, BSC)",
+              "Older British machines and bicycles",
+              "Very fine pitch, to resist shaking loose"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Threads of different standards do not mix even when the sizes look the same. A metric bolt can start into an inch hole, or the reverse, for a turn or two and then jam; if a bolt goes stiff after a few turns, stop and identify both threads before the hole is ruined. Some shafts carry a <strong>left-hand thread</strong> so that rotation tends to tighten the nut. The manual normally lists them, but not always: if a nut will not turn the usual way and is not corroded, try the other way before applying more force."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Clean the thread",
+              "html": "Brush the thread clean so the gauge can sit fully in it."
+            },
+            {
+              "title": "Measure the diameter",
+              "html": "Measure the outside diameter of the thread with a caliper."
+            },
+            {
+              "title": "Find the pitch",
+              "html": "Try metric and inch pitch gauges. The right leaf sits in the thread along its whole length with no light showing."
+            },
+            {
+              "title": "Note the marks",
+              "html": "Look for a strength mark on the head and a left-hand mark (a notch or an L)."
+            },
+            {
+              "title": "Write it down",
+              "html": "Record diameter, pitch and standard, for example metric 6 mm, 1.0 pitch, and take the old bolt when buying a new one."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Full procedure: <a href=\"../repair/repairs/thread-standard-identify/\">Identify a thread standard and pitch</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Strength grades and head markings"
+        },
+        {
+          "type": "p",
+          "html": "The strength of a metric bolt is given by its <strong>property class</strong>, stamped on the head. The first number times 100 is the minimum tensile strength in MPa, and the second number divided by 10 is the fraction of that strength at which the bolt yields. Class 8.8 is therefore \\(8 \\times 100 = 800\\ \\mathrm{MPa}\\) tensile and \\(0.8 \\times 800 = 640\\ \\mathrm{MPa}\\) yield; class 10.9 is 1,000 MPa and 900 MPa. The higher the class, the more clamp load the bolt can carry before it yields."
+        },
+        {
+          "type": "p",
+          "html": "Many bolts on a motorcycle carry no class mark at all, or only a maker's mark or a single number, so the safe habit is to keep fasteners from different places apart and refit each where it came from. A replacement must be of at least the original class; a weaker bolt in a cylinder head, cam sprocket or engine mount can destroy an engine or cause a crash. High-stress bolts and studs are often <strong>waisted</strong>, with a shank thinner than the thread so that the stretch is spread along the length; replace like with like."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/039_hurts_seeing_how_these_bolts_don.jpg",
+          "caption": "Waisted studs used on a high-stress joint",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Fasteners do not wear out in normal use, and a full set of special bolts for a top end can cost more than the job. Save every bolt, nut and washer during a strip-down: <a href=\"../repair/repairs/fastener-types-identify/\">Identify bolt strength, thread and locking types before you reuse them</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Locking methods"
+        },
+        {
+          "type": "p",
+          "html": "Vibration can loosen a fastener whose clamp load has fallen, so many joints add a locking method. Each has its own rule for reuse."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Method",
+            "How it works",
+            "Reuse"
+          ],
+          "rows": [
+            [
+              "Spring, wave or toothed lock washer (over a plain washer)",
+              "Bites into or springs against the nut and the part",
+              "Replace if flattened or the teeth are worn"
+            ],
+            [
+              "Nylon-collar or metal-collar locknut",
+              "The collar grips the thread and resists turning",
+              "Can usually be reused a number of times while it still grips"
+            ],
+            [
+              "Tab washer or key nut",
+              "Part of the washer or nut is bent against a flat or into a groove",
+              "Renew once it has been bent and straightened"
+            ],
+            [
+              "Castle nut with a split (cotter) pin",
+              "The pin passes through the nut slots and a hole in the shaft",
+              "Always fit a new pin"
+            ],
+            [
+              "Threadlocker",
+              "An adhesive that cures in the thread",
+              "Clean the old compound out; blue comes apart with hand tools, red needs about 250 &deg;C"
+            ],
+            [
+              "Safety wire",
+              "Wire twisted between fasteners so each pulls the other tight",
+              "Fit new wire every time"
+            ]
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/039_obviously_lock_washer_fighting_keep_nut.jpg",
+          "caption": "A nut scraped by the lock washer that held it: the washer was doing its job",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "A <strong>castle nut</strong> on an axle is tightened to its torque first. If the slots do not line up with the hole, tighten it slightly further until they do; never loosen it to line them up. Fit a new split pin with its closed end facing forward, bend the legs as the manual shows, and check it after the first ride. A missing pin on an axle nut can let a wheel come off: <a href=\"../repair/repairs/cotter-pin-fit/\">Fit and remove cotter pins, slip pins and castle nuts</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/048_say_bend_cotter_pin_all_around.jpg",
+          "caption": "Right and wrong ways to fit a split pin",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "A <strong>circlip</strong> is stamped, so one edge is rounded and the other sharp. Fit it with the sharp edge away from the thrust load, so the load pushes on the rounded side and cannot lever the clip out of its groove. Use pliers made for the type (internal or external), wear eye protection, and fit a new clip on a piston pin: <a href=\"../repair/repairs/circlip-fit/\">Fit a circlip the right way round</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Torque units and the torque wrench"
+        },
+        {
+          "type": "p",
+          "html": "Manuals give torque in newton metres, kilogram-force metres or pound-force feet, sometimes all three. Set the wrench in the unit it is marked in, convert once with a calculator, write the converted value down, and never round a torque upwards."
+        },
+        {
+          "type": "eq",
+          "id": "m1-torque-units",
+          "name": "Converting torque units",
+          "tex": "T_{\\mathrm{N\\,m}} = 9.81\\,T_{\\mathrm{kgf\\,m}} = 1.356\\,T_{\\mathrm{lbf\\,ft}}",
+          "where": [
+            [
+              "T_{\\mathrm{N\\,m}}",
+              "torque in newton metres",
+              "N·m"
+            ],
+            [
+              "T_{\\mathrm{kgf\\,m}}",
+              "the same torque in kilogram-force metres",
+              "kgf·m"
+            ],
+            [
+              "T_{\\mathrm{lbf\\,ft}}",
+              "the same torque in pound-force feet",
+              "lbf·ft"
+            ]
+          ],
+          "why": "Lets a torque from any manual be set on any wrench; older Japanese manuals use kgf·m and American tools are marked in lbf·ft.",
+          "example": "The K-Light 125 front axle nut takes 75 to 88 N·m: \\(75 / 1.356 \\approx 55\\) to \\(88 / 1.356 \\approx 65\\ \\mathrm{lbf\\,ft}\\), or \\(75 / 9.81 \\approx 7.6\\) to \\(88 / 9.81 \\approx 9.0\\ \\mathrm{kgf\\,m}\\)."
+        },
+        {
+          "type": "p",
+          "html": "A click wrench measures the torque at its own drive square. When an extension adapter such as a crowfoot spanner is fitted in line with the handle, the lever is longer and the fastener receives more torque than the wrench shows, so the setting must be reduced. An adapter fitted at right angles to the handle adds no length and needs no correction."
+        },
+        {
+          "type": "eq",
+          "id": "m1-torque-adapter",
+          "name": "Torque wrench setting with an in-line adapter",
+          "tex": "T_{set} = T\\,\\frac{L}{L + E}",
+          "where": [
+            [
+              "T_{set}",
+              "value to set on the wrench",
+              "N·m"
+            ],
+            [
+              "T",
+              "torque required at the fastener",
+              "N·m"
+            ],
+            [
+              "L",
+              "wrench length from the hand grip centre to the drive square",
+              "m"
+            ],
+            [
+              "E",
+              "adapter length from the drive square to the fastener centre, measured in line with the handle",
+              "m"
+            ]
+          ],
+          "why": "Corrects the wrench setting when a crowfoot or extension adapter reaches a fastener that a socket cannot, such as a fuel line or a nut behind a frame tube.",
+          "example": "Target 48 N·m on a sprocket nut, wrench length 0.40 m, adapter 0.05 m in line: \\(T_{set} = 48 \\times \\frac{0.40}{0.45} \\approx 42.7\\ \\mathrm{N\\,m}\\)."
+        },
+        {
+          "type": "p",
+          "html": "A typical click wrench is accurate to about &plusmn;4 % within its range, and is least reliable at the very bottom of its scale; use a smaller wrench for small fasteners rather than a large one at its lowest setting. Pull smoothly at the centre of the grip, stop at the first click, never use the wrench to loosen, store a click wrench at its lowest setting and have it calibrated: <a href=\"../repair/repairs/torque-wrench-use/\">Use a torque wrench correctly</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 1.6.1: Tightening a multi-fastener joint"
+        },
+        {
+          "type": "p",
+          "html": "A cylinder head, a cover, a sprocket or a brake disc is held by several fasteners that must pull the parts down evenly. Tightening one fully before the others tilts the part, leaves gaps for leaks and can distort or crack a casting."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Prepare",
+              "html": "Find the torque, the tightening order and any instruction on oil or threadlocker in the manual. Clean every thread and seat; a dirty thread uses up torque in friction and gives a low clamp load."
+            },
+            {
+              "title": "Run in by hand",
+              "html": "Start every fastener by hand for several turns, so a crossed thread is felt before it is forced."
+            },
+            {
+              "title": "Snug in sequence",
+              "html": "Bring each fastener just into contact in the manual's order, usually a crisscross pattern from the centre outwards, so the part seats evenly."
+            },
+            {
+              "title": "Tighten in stages",
+              "html": "Tighten to a first stage well below the final value in the same order, then to the full value in two or three passes. K-Light 125 head nuts go to 25&ndash;28 N&middot;m crisscross in stages; rear sprocket nuts to 45&ndash;50 N&middot;m crisscross in two to three passes."
+            },
+            {
+              "title": "Mark and record",
+              "html": "Draw a paint line across each safety-critical fastener and its part, so later movement can be seen at a glance. Note on the job card any fastener the manual says to re-check."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Pass criteria:</strong> correct order and stages, every fastener clicked at its value, no crossed or stretched thread, and paint marks on axle, caliper, disc and engine mount fasteners."
+        },
+        {
+          "type": "callout",
+          "tone": "safety",
+          "title": "Safety-critical fasteners",
+          "html": "Axle nuts, brake caliper and disc bolts, steering and fork clamp bolts and engine mounting bolts are always tightened with a torque wrench to the manual's value, never by feel. Fit new split pins and new self-locking nuts where the manual calls for them, and check these fasteners again after the first ride: <a href=\"../repair/repairs/fastener-check/\">Check chassis fasteners</a> and <a href=\"../repair/repairs/engine-mount-check/\">Check engine mounting bolts</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Learning the feel of torque"
+        },
+        {
+          "type": "p",
+          "html": "A torque wrench measures torque but does not teach how a correct joint feels. Most small fasteners on a motorcycle, such as cover screws, are tightened without one, so a mechanic needs a trained hand. The safe place to train it is a scrap casting held in a vice."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Set up on scrap",
+              "html": "Wear eye protection. Screw a small bolt with a flat washer into a threaded hole in a scrap crankcase or casting."
+            },
+            {
+              "title": "Feel the correct value",
+              "html": "Tighten it with the torque wrench at a low setting for that size, and notice how little force it takes."
+            },
+            {
+              "title": "Repeat by hand",
+              "html": "Loosen it, tighten it again with a plain spanner by feel, then check with the torque wrench. Repeat until the feel is close."
+            },
+            {
+              "title": "Find the limit",
+              "html": "With a nut on a test bolt in the vice, raise the setting in small steps until the thread strips or the bolt yields. The feel just before it gives, when the wrench turns on without the force rising, is the warning to remember on a real engine."
+            },
+            {
+              "title": "Measure the stretch",
+              "html": "Measure a bolt's length before tightening, at torque and after loosening. A good bolt returns to its first length; one that stays longer has yielded."
+            }
+          ]
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/024_we_do_junk_crankcase_so_don.jpg",
+          "caption": "Practising torque on a test bolt in a scrap crankcase",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "The exercise is in <a href=\"../repair/repairs/torque-feel-practice/\">Learn the feel of correct bolt torque on a junk part</a>. Small steel screws in aluminium strip easily: stop at the first sign of the screw turning on without a firm stop."
+        },
+        {
+          "type": "h3",
+          "text": "Screwdrivers, JIS screws and the impact driver"
+        },
+        {
+          "type": "p",
+          "html": "Most cross-head screws on Japanese engines are <strong>JIS</strong> type, not Phillips. The recess is shaped differently, so a Phillips bit sits loosely, cams out under load and rounds both the screw and the bit. Some JIS screws carry a small dot on the head, but many do not, so test the bit on a good screw: it must sit snugly with no rock. Ask for a JIS bit by size; a No. 2 often suits small screws and a No. 3 larger ones, and press hard into the screw as it turns: <a href=\"../repair/repairs/jis-screwdriver-fit/\">Choose the right bit for JIS screws</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/044_good_fit_bad_fit.jpg",
+          "caption": "A bit that fills the screw recess, and one that does not",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "p",
+          "html": "Steel screws in aluminium cases often seize over the years. A hand <strong>impact driver</strong> converts a hammer blow into a sharp turn while pressing the bit into the head, which frees a seized screw without chewing it. Set the driver's direction, hold it square, press firmly and strike once, hard; support the casting behind the screw, and on a thin or fragile cover drill the head off instead of hammering: <a href=\"../repair/repairs/impact-driver-use/\">Loosen a tight screw with an impact driver</a>."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/022_impact_driver.jpg",
+          "caption": "Hand impact driver with interchangeable bits",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "h3",
+          "text": "Seized, rounded and broken fasteners"
+        },
+        {
+          "type": "p",
+          "html": "Work from the gentlest method to the hardest, and stop as soon as the part itself is at risk. Never use these methods on a brake line fitting, or on a fastener that holds a wheel or the steering on a road machine, without the skill and tools to finish the repair properly."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Problem",
+            "Method",
+            "Stop if"
+          ],
+          "rows": [
+            [
+              "Seized thread",
+              "Brush clean, soak with penetrating oil for at least 15 minutes, tap the head lightly to help the oil in, try again; repeat",
+              "The fastener starts to twist instead of turn"
+            ],
+            [
+              "Rounded screw recess",
+              "Grinding paste or fine sand in the recess, a bit that fills it, then the impact driver",
+              "The bit still slips: drill the head off"
+            ],
+            [
+              "Rounded hex head",
+              "A slightly smaller six-point socket tapped on, or locking pliers clamped tight",
+              "The head shears"
+            ],
+            [
+              "Bolt sheared off in the hole",
+              "File flat, centre punch, drill a pilot hole along the axis, then the extractor drill size; turn the extractor anticlockwise with steady force",
+              "The extractor will not turn: a hardened extractor that breaks cannot be drilled with ordinary bits"
+            ],
+            [
+              "Still seized",
+              "Heat the casting, not the bolt, to about 100&ndash;150 &deg;C so it expands away from the bolt, and try again",
+              "Fuel, brake fluid or wiring are near"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "When the fastener is out, clean the thread with a tap of the original size, or fit a thread insert if the thread is damaged (job sheet in Chapter 1.5): <a href=\"../repair/repairs/stuck-fastener-removal/\">Remove a rounded, seized or broken fastener</a> and <a href=\"../repair/repairs/stripped-thread-repair/\">Repair a stripped thread in a bolt hole</a>."
+        },
+        {
+          "type": "h3",
+          "text": "Fault finding: fasteners"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Symptom",
+            "Likely cause",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Bolts keep working loose",
+              "Low clamp load from a dirty or damaged thread, a missing washer or lock, or a settled joint",
+              "Clean, check the lock method, tighten to the manual's value, paint-mark and re-check after a ride"
+            ],
+            [
+              "Thread strips as it is tightened",
+              "Bolt too long and bottoming, wrong pitch, or over-torque into aluminium",
+              "Check length and pitch; repair with a tap or a thread insert"
+            ],
+            [
+              "Oil weeps from a cover after tightening",
+              "Uneven tightening distorted the cover, or a screw was over-tightened",
+              "New gasket, tighten in sequence in stages to the manual's value"
+            ],
+            [
+              "Drain plug will not seal or turns without tightening",
+              "Stripped thread from over-torque, or a crushed washer reused",
+              "New sealing washer, correct torque; a stripped hole needs a repair: <a href=\"../repair/repairs/drain-bolt-tighten/\">Tighten an oil drain bolt correctly</a>"
+            ],
+            [
+              "Bolt snapped while tightening",
+              "Bolt had yielded earlier, wrong class, or the thread was oiled where the manual says dry",
+              "Remove the stub, fit a new bolt of the correct class, follow the oil instruction"
+            ],
+            [
+              "Axle nut found loose after a ride",
+              "Not tightened to torque, or split pin missing",
+              "Do not ride; set chain adjustment and torque, fit a new pin: <a href=\"../repair/repairs/fastener-check/\">Check chassis fasteners</a>"
+            ]
+          ]
+        },
+        {
+          "type": "check",
+          "q": "m1-41"
+        },
+        {
+          "type": "check",
+          "q": "m1-42"
+        },
+        {
+          "type": "callout",
+          "tone": "warm",
+          "title": "Key points",
+          "html": "A tightened bolt is a stretched spring; its clamp load holds the joint, and torque is only the way that load is set.<br>Most of the applied torque is lost to friction, so clean threads and the manual's instruction on oil decide the clamp load as much as the wrench setting.<br>Identify thread diameter, pitch and standard before fitting a bolt, tap or insert; coarse threads go into castings, fine threads take nuts.<br>Replace fasteners with at least the original property class, and replace any bolt that has yielded.<br>Tighten multi-fastener joints by hand first, then crisscross in stages; tighten a castle nut further to align its slot, never back.<br>Work from the gentlest to the hardest method on a seized fastener, and stop before the part itself is damaged."
         }
       ]
     }

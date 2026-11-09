@@ -1,0 +1,8 @@
+[
+  ["Gear position switch", "Switch on the crankcase, earthed by the shift drum in neutral (and on some machines in each gear), that lights the neutral lamp and feeds the starting interlock."],
+  ["Cable luber", "Tool clamped on the end of a control cable outer so that light oil can be forced through the cable from one end."],
+  ["Dye penetrant test", "Crack test in which a coloured dye is drawn into surface cracks and shown up by a developer; used on suspect frame welds."],
+  ["Recommissioning", "Ordered sequence of checks (battery, fuel, oil, tyres, brakes, chain, cables) that returns a stored machine to safe service."],
+  ["Phase order", "The sequence in which the three motor phase wires connect to the controller; the wrong order makes the motor judder, run backwards or overheat."],
+  ["Charge limit", "Setting in a bike's app or menu, or a storage mode, that stops charging below 100 % on purpose to slow battery ageing."]
+]

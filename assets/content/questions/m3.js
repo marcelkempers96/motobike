@@ -158,4 +158,84 @@ export default [
     answer: 1,
     explain: "Hot, the sensor should fall towards 0.18 kohm at 100 degrees. A fixed 2.0 kohm tells the ECU the engine is at 25 degrees for ever, so it keeps cold enrichment and raised idle: rich, high idle, high consumption. Check the sensor seating as well as the sensor.",
   },
+  // 3.2 Fuel supply
+  {
+    id: "m3-51", module: M, chapter: "m3-fuel-supply", kind: "calc",
+    q: "In a gravity-fed system the fuel surface stands 0.4 m above the float bowl. Petrol density is about 740 kg/m3. Roughly what pressure pushes fuel to the carburettor?",
+    options: ["About 0.29 kPa", "About 2.9 kPa", "About 29 kPa", "About 300 kPa"],
+    answer: 1,
+    explain: "p = rho g h = 740 x 9.81 x 0.4 = about 2900 Pa, or 2.9 kPa: about one hundredth of the 300 kPa an injection pump delivers. That is why a small vacuum in a tank with a blocked vent stops a gravity feed.",
+  },
+  {
+    id: "m3-52", module: M, chapter: "m3-fuel-supply", kind: "diagnosis",
+    q: "A carburetted bike with a manual tap starves and stops on ON with the tank half full, but runs normally as soon as the tap is turned to RES. What is the most likely cause?",
+    options: [
+      "A blocked ON pick-up tube or its strainer in the tap",
+      "A blocked tank vent",
+      "A main jet that is too small",
+      "A split vacuum-tap diaphragm",
+    ],
+    answer: 0,
+    explain: "RES draws through a separate, lower pick-up. If RES flows and ON does not with fuel above the ON tube, the ON pick-up or its screen is blocked. A blocked vent or a small main jet would affect both positions; a manual tap has no diaphragm.",
+  },
+  // 3.3 Carburettors
+  {
+    id: "m3-53", module: M, chapter: "m3-carburettor", kind: "calc",
+    q: "Air speed through a venturi throat doubles while the speed at the bell stays negligible. By roughly what factors do the venturi depression and the ideal jet flow rise?",
+    options: ["Depression x2, jet flow x2", "Depression x4, jet flow x4", "Depression x2, jet flow x1.41", "Depression x4, jet flow x2"],
+    answer: 3,
+    explain: "Depression = 0.5 rho v^2, so doubling v multiplies it by 4. Jet flow rises with the square root of the depression: sqrt(4) = 2. Ideally fuel flow follows air speed, which is the basis of carburettor metering.",
+  },
+  {
+    id: "m3-54", module: M, chapter: "m3-carburettor", kind: "diagnosis",
+    q: "After six months in storage a carburetted engine starts and runs only with the choke on, and stalls as soon as the choke is pushed off. Spark and compression are good. What is the most likely cause?",
+    options: [
+      "A main jet blocked with varnish",
+      "A float level set too high",
+      "A pilot jet or idle passage blocked with varnish",
+      "A torn CV diaphragm",
+    ],
+    answer: 2,
+    explain: "The choke (enricher) circuit supplies its own fuel, so the engine runs on it. Without it, idle depends on the pilot jet and idle ports, the smallest passages and the first to block when fuel turns to varnish. A main jet fault shows at full throttle; a torn diaphragm stops the engine revving, not idling.",
+  },
+  // 3.5 Intake, exhaust and emissions
+  {
+    id: "m3-55", module: M, chapter: "m3-intake-exhaust", kind: "calc",
+    q: "1500 mg/km of CO enters a catalyst and 225 mg/km leaves it. What is the catalyst's conversion efficiency for CO?",
+    options: ["15 %", "85 %", "87 %", "6.7 %"],
+    answer: 1,
+    explain: "Efficiency = (in - out) / in x 100 % = (1500 - 225) / 1500 x 100 % = 85 %. The 15 % distractor is the fraction that passes through; 6.7 is in / out.",
+  },
+  {
+    id: "m3-56", module: M, chapter: "m3-intake-exhaust", kind: "diagnosis",
+    q: "An injected single pops on the overrun, uses more fuel than before and has black soot streaks round the header flange at the head. What is the most likely cause and its effect?",
+    options: [
+      "A blocked catalyst raising back pressure",
+      "A blocked air filter making the mixture rich",
+      "A split intake rubber letting unmetered air in",
+      "A leaking port gasket letting air reach the oxygen sensor, which reads lean so the ECU adds fuel",
+    ],
+    answer: 3,
+    explain: "Soot at the flange shows gas escaping there. On the overrun the leak draws air into the pipe, where it burns with unburned fuel and pops; the oxygen sensor sees the extra oxygen as a lean mixture and the ECU richens, so consumption rises. Fit a new gasket: a crushed one never seals twice.",
+  },
+  // 3.6 Fuel system diagnosis
+  {
+    id: "m3-57", module: M, chapter: "m3-fuel-diagnosis", kind: "calc",
+    q: "An engine produces 10 kW at a brake thermal efficiency of 0.30. Petrol has a lower heating value of 43 MJ/kg and a density of 0.74 kg/L. About how much fuel does it burn per minute?",
+    options: ["About 6 mL", "About 630 mL", "About 63 mL", "About 3.8 L"],
+    answer: 2,
+    explain: "V = P / (eta x Q x rho) = 10 / (0.30 x 43 000 x 0.74) = about 0.00105 L/s, or 3.8 L/h, which is about 63 mL per minute. A healthy gravity supply flows far more, so a supply fault that shows only at full power is a restriction close to this demand.",
+  },
+  {
+    id: "m3-58", module: M, chapter: "m3-fuel-diagnosis", kind: "diagnosis",
+    q: "A carburetted engine cranks but will not start. Spark and compression are good. A few drops of fresh fuel in the intake make it fire, run for a moment and die. What does this show?",
+    options: [
+      "The fault is in the fuel path: supply or carburettor",
+      "The ignition timing is wrong",
+      "The engine is flooded",
+      "The fuel in the tank has too high an octane rating",
+    ],
+    answer: 0,
+    explain: "With spark and compression proven, an engine that runs on a fuel shot is simply not receiving fuel from its own system. Check the vent, tap, filter and hose with a flow test, then the bowl and jets. A flooded engine would not fire better with more fuel.",
+  },
 ];

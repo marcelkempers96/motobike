@@ -371,6 +371,14 @@ export default {
           "html": "On simple machines the controller doubles as the vehicle brain. A separate VCU also blocks regeneration when the BMS reports a full or cold battery. Connected machines (Ather, Gogoro, Zero) add a telematics unit with a cellular modem that reports location, battery data and faults and receives over-the-air software updates, so the installed software version is part of the service record."
         },
         {
+          "type": "p",
+          "html": "Before the controller will drive, the vehicle checks its <strong>interlocks</strong>. An electric machine has no clutch and no engine noise to warn anyone nearby, so drive is blocked until the conditions are right: side stand up, kill or run switch on, throttle fully closed at start-up and, on many models, a brake held while the start button is pressed. Some scooters add a seat switch, and on many machines pulling a brake cuts drive."
+        },
+        {
+          "type": "p",
+          "html": "A bike that will not go to ready is therefore checked switch by switch, on a stand with the drive wheel off the ground, watching the dashboard symbol for each one before any high-voltage fault is suspected. A brake switch stuck on, a dirty run switch or a throttle wire stretched at full lock can each block or cut drive. Interlocks are never bridged: they stop the bike moving while someone stands next to it (<a href=\"../repair/repairs/ev-interlock-check/\">interlock check</a>)."
+        },
+        {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
@@ -1749,6 +1757,63 @@ export default {
         },
         {
           "type": "h3",
+          "text": "Diagnosing a controller complaint"
+        },
+        {
+          "type": "p",
+          "html": "Many controller faults are really a sensor, a switch, a connector or heat. The controller reads the throttle, brakes, stand switch and Hall sensors and cuts or reduces power when something is wrong, so the diagnosis starts with what the controller saw, not with the controller itself. The rider's part is to observe and report; opening the controller or unplugging its power cables is workshop work after isolation, because it holds charged capacitors."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Record the code",
+              "html": "Note the code and when it appears: pull-away, a long climb, a hot day, after rain (<a href=\"../repair/repairs/ev-error-read/\">reading error codes</a>)."
+            },
+            {
+              "title": "Interlocks and inputs",
+              "html": "Check the stand, brake and kill switches and the throttle return before anything else."
+            },
+            {
+              "title": "Heat pattern",
+              "html": "A fault that appears after long climbs, heavy loads or hot days and clears after a rest points to thermal protection, not a broken controller. The controller must not be covered by mud, a bag or a new panel that blocks its air flow."
+            },
+            {
+              "title": "Look, do not touch",
+              "html": "Look for melted connectors, burn marks or water near the controller. A burning smell means switch off and stop riding."
+            },
+            {
+              "title": "Workshop: live data",
+              "html": "With the manufacturer's tool, read the fault history and live data: throttle signal, temperatures, battery voltage and Hall states. Check the low-voltage supply and fuses to the controller, and the throttle, brake and stand inputs against the manufacturer's values; there is no universal throttle voltage."
+            },
+            {
+              "title": "Workshop: high-voltage side",
+              "html": "Isolate the HV system and inspect the power and phase connectors, then check the main contactor and pre-charge circuit by the manual's method."
+            },
+            {
+              "title": "Controller or motor?",
+              "html": "Check the Hall sensors and the motor before condemning the controller, and replace it only with the correct part with matching software and settings, followed by a test ride with a climb."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Phase connectors need particular care. A loose, corroded or pushed-back pin heats up, can melt, and causes judder, cut-outs and lost power, and it can look like a Hall sensor fault. After isolation, each pin and socket is inspected for heat marks, pitting, corrosion and loose fit and checked to be fully locked into its housing. Damaged connectors are replaced as a matched pair, crimped with the correct tool, never soldered over or taped. The phase order is restored from the manufacturer's diagram, because there is no universal colour code and the wrong order makes the motor judder, run backwards or overheat (<a href=\"../repair/repairs/ev-phase-connector-check/\">phase connector check</a>)."
+        },
+        {
+          "type": "p",
+          "html": "A Hall signal stuck high or low in every rotor position points to the sensor, its wire or its pin. Wire colours, pinouts, supply voltage and switching sequence differ between motors and controllers, so only the manufacturer's values are used, and the harness is checked end to end before the motor is opened. Some controllers need a learning step after a sensor or motor change (<a href=\"../repair/repairs/ev-hall-sensor-check/\">Hall sensor check</a>)."
+        },
+        {
+          "type": "p",
+          "html": "Missing regeneration is often not a fault at all. A battery at or near 100 % has no room to store energy, a cold battery cannot safely accept charge, and many bikes switch regeneration off in a menu, by riding mode or when any battery, motor or controller fault is logged. A brake switch that does not work stops brake-triggered regeneration, so the brake light is checked from each control (<a href=\"../repair/repairs/ev-regen-check/\">regeneration check</a>)."
+        },
+        {
+          "type": "p",
+          "html": "A repaired controller is not finished until the workshop records the code list and the live data that proved the fault, whether software was updated, and whether the controller or the motor was to blame. The final test ride includes a climb, and the result must be full power, normal temperatures and no stored code. If overheating returns, the cooling and the load are investigated; if it is the battery that cuts out rather than the controller, the cause is BMS protection, covered in chapter 6.4."
+        },
+        {
+          "type": "h3",
           "text": "Parameter programming"
         },
         {
@@ -2433,6 +2498,43 @@ export default {
         },
         {
           "type": "h3",
+          "text": "Storage in practice"
+        },
+        {
+          "type": "p",
+          "html": "Storage applies the ageing rules above. A lithium pack left almost empty for a long time can be damaged and may refuse to charge, and on machines with a 12 V battery that battery can go flat and leave the bike unable to wake up even with a full traction pack. The owner's manual comes first; one maker's advice illustrates the principles."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Item",
+            "Example: Zero Motorcycles advice"
+          ],
+          "rows": [
+            [
+              "Storage place",
+              "10–35 °C, out of direct sun and rain; indoors, or outdoors under a breathable, weather-resistant cover"
+            ],
+            [
+              "Plugged in",
+              "Leave the bike on charge so the BMS manages the pack; it lowers the pack to about 80 % after 30 days"
+            ],
+            [
+              "Not plugged in",
+              "Charge if the state of charge falls below 30 %; turn the key every 30 days to check it"
+            ],
+            [
+              "Before riding again",
+              "Charge for 24 hours so the cells can balance, then do a pre-ride check and a short test ride"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The 12 V battery is kept on a suitable maintenance charger or disconnected as the manual says. Swap-battery riders tell the operator before a long lay-up: Gogoro, for example, asks riders to swap at least once every 30 days. The bike is cleaned and dried without a pressure washer near the motor, controller or battery, and a damaged, swollen or flooded pack is never stored at all."
+        },
+        {
+          "type": "h3",
           "text": "Second life and recycling"
         },
         {
@@ -2931,6 +3033,100 @@ export default {
           "type": "model",
           "file": "charge_port",
           "caption": "A Type 2 / CCS2-style charging inlet with hinged cap."
+        },
+        {
+          "type": "h3",
+          "text": "Diagnosing a charging fault"
+        },
+        {
+          "type": "p",
+          "html": "Charging needs four things to work together: mains power, the charger, the cable and charge port, and the BMS, which must agree to accept charge. A charging complaint is diagnosed in that order, from the cheapest and easiest check to the hardest. The charger and the battery are never opened, and a charger of another voltage or connector type is never tried."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Mains",
+              "html": "Confirm the wall socket works with a lamp or phone charger, or try another socket."
+            },
+            {
+              "title": "Charger lights",
+              "html": "Compare the charger's lights with the owner's manual. Codes differ between makers: Ather, for example, uses blinking green for charging and solid red for a charger fault."
+            },
+            {
+              "title": "Charger and cable",
+              "html": "Unplugged at both ends, read the label: output voltage and connector must match the bike or battery label. Inspect the mains lead, the output cable (especially where it enters the charger and the plug, where it bends most), the plug pins and the case for cuts, kinks, burn marks, cracks, swelling and blocked vents."
+            },
+            {
+              "title": "Port and plug",
+              "html": "Open the port cover, check its seal, and inspect each contact with a torch for dirt, water, corrosion, bent or pushed-back pins and discoloured plastic. Clean dry dirt with a soft brush or a short blow of compressed air, never with metal pushed into the port. A wet port is left open to dry fully before charging."
+            },
+            {
+              "title": "Temperature",
+              "html": "A pack too hot after a ride or too cold after a frosty night may refuse charge. Battery University gives 0–45 °C for typical lithium-ion cells, with no charging below freezing; Ather advises 5–45 °C. The bike's own limits apply."
+            },
+            {
+              "title": "Swap packs",
+              "html": "Check the pack is the right type for the charger or rack and that its contacts and latch are clean (<a href=\"../repair/repairs/ev-swap-contact-check/\">swap contact check</a>)."
+            },
+            {
+              "title": "Substitute",
+              "html": "Try a known-good charger of the same model. If it charges, the charger is faulty; if not, the fault is in the bike or battery, and the error codes are read next."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "If the charger fan runs but charging is slow or does not start, Ather notes that the fault often lies in the communication between charger and vehicle; that, and any BMS fault, is work for the dealer or fleet workshop. A correct charge shows the charging pattern on the charger, a steadily rising state of charge, and a complete indication at full."
+        },
+        {
+          "type": "h3",
+          "text": "When charging stops early"
+        },
+        {
+          "type": "p",
+          "html": "A charge that ends at 80 or 90 %, or stops and restarts, is not always a fault. Many bikes stop below 100 % on purpose, because a charge limit has been set in the app or a storage mode is active; Zero's BMS, for example, lowers the pack to about 80 % when the bike is left plugged in for 30 days. That setting is checked first."
+        },
+        {
+          "type": "p",
+          "html": "If no limit is set, heat is the next suspect. A hot plug or socket means charging stops at once and the contacts are inspected. A pack or charger that is hot, after a long ride, in the sun or with blocked vents, is protected by the BMS or the charger itself, so the pack is allowed to cool and charged in the shade at room temperature. A cold pack charges slowly or not at all, and is brought indoors. Finally, an unstable supply from a generator, a weak solar system or a long extension lead can make the charger stop; a different socket or building shows whether the supply is the cause. A charge that still stops early after all of this points to the BMS or a weak cell group, which is dealer work."
+        },
+        {
+          "type": "h3",
+          "text": "Heat at the plug"
+        },
+        {
+          "type": "p",
+          "html": "After 10 to 15 minutes of charging, the plug, port and charger case should be only warm. Too hot to hold means a poor contact: dirt, a loose or pitted pin, or a socket worn by unplugging under load. Brown or black marks, melted plastic or a burnt smell on the port, plug or charger mean that charger and port are not used again until checked, and a damaged cable is replaced, never taped. Bent pins on a high-power port and any loose or damaged port are dealer work, because the contact must be checked for heat damage."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Symptom",
+            "First checks"
+          ],
+          "rows": [
+            [
+              "Charger dark or showing a fault light",
+              "Mains socket, charger label and light codes, then a known-good charger (<a href=\"../repair/repairs/ev-charger-check/\">charger check</a>)"
+            ],
+            [
+              "Charger normal, battery not charging",
+              "Port and plug, pack temperature, error codes (<a href=\"../repair/repairs/ev-charge-diagnosis/\">charging diagnosis</a>)"
+            ],
+            [
+              "Charging stops before full",
+              "Pack temperature and BMS protection; communication faults go to the dealer"
+            ],
+            [
+              "Plug or socket hot",
+              "Stop charging; inspect the contacts for dirt, pitting and discolouration (<a href=\"../repair/repairs/ev-port-inspect/\">port inspection</a>)"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A weekly look at the charger, its cables and the plug, done every time charging fails as well, finds most problems before they become a fire risk."
         },
         {
           "type": "h3",

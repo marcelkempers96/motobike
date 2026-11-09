@@ -502,6 +502,47 @@ export default {
         },
         {
           "type": "h3",
+          "text": "Job sheet 5.1.1: Setting clutch cable free play"
+        },
+        {
+          "type": "p",
+          "html": "Free play is checked at every service and whenever the clutch feels different. With too little, the clutch never fully grips, so it slips and burns; with too much, it never fully lets go, so the bike creeps, gears are hard to select and neutral is hard to find. A small gap also protects the release bearing."
+        },
+        {
+          "type": "p",
+          "html": "The adjustment is made with the engine off. When the result is tested on the stand with the engine running and a gear selected, the rear wheel and chain turn, so hands, sleeves and cloths stay well clear; the first road test is at walking pace in a quiet place."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Measure",
+              "html": "Engine off, in neutral, pull the lever gently until resistance is felt and measure the movement at the lever tip: <strong>10–15 mm</strong> on the K-Light 125."
+            },
+            {
+              "title": "Check the routing",
+              "html": "Measure again at full left and full right lock. If free play changes, the cable is routed wrongly or trapped, and that is corrected before any adjustment."
+            },
+            {
+              "title": "Adjust at the lever",
+              "html": "Loosen the locknut and turn the barrel adjuster out of the bracket to reduce free play, or into it to increase free play, rechecking after each half turn."
+            },
+            {
+              "title": "Use the lower adjuster",
+              "html": "If the lever adjuster runs out of thread, screw it almost fully in, make the main adjustment at the lower adjuster near the engine or in the cable, and use the lever adjuster only for the final setting. This leaves the rider room to adjust on the road."
+            },
+            {
+              "title": "Lock and test",
+              "html": "Tighten both locknuts with the slot in the lever adjuster turned away from the slot in the lever, so the cable cannot pop out. Pull the lever several times: it must move smoothly and spring back fully; if it sticks, the cable and pivot are lubricated."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Pass criteria:</strong> free play in range and unchanged from lock to lock; with the engine running and the lever pulled, first gear engages without a big clunk and the bike does not try to move; the bike pulls away smoothly as the lever is released; and on the road, in a high gear, opening the throttle raises speed and revs together with no slip (<a href=\"../repair/repairs/clutch-cable-adjust/\">clutch cable adjustment</a>)."
+        },
+        {
+          "type": "h3",
           "text": [
             "The kickstart mechanism"
           ]
@@ -1142,6 +1183,102 @@ export default {
           "html": "Many shifting complaints are clutch complaints. Before splitting the crankcase, confirm the clutch fully releases, the oil is the right grade and level, and the external linkage moves freely."
         },
         {
+          "type": "h3",
+          "text": "Job sheet 5.2.1: Checking the gear lever and shift linkage"
+        },
+        {
+          "type": "p",
+          "html": "The cheapest shifting faults are outside the engine, so the lever and linkage are checked before any cover comes off. The engine is off with the key out and the bike on its centre stand on level ground; fingers stay clear of the chain and sprocket whenever the rear wheel is turned by hand."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/115_shifter_shaft_linkage.jpg",
+          "caption": "Gearshift shaft linkage that turns the shift drum",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Position",
+              "html": "From above and from the side the lever should be straight, with its tip a little below the top of the rider's boot when the foot is on the peg. It must not touch the case, footpeg, frame or chain cover at either end of its travel; mud or stones packed under it shorten the stroke."
+            },
+            {
+              "title": "Clamp and splines",
+              "html": "Hold the lever near the spindle and try to move it on its own. Any movement means a loose clamp bolt or worn splines (<a href=\"../repair/repairs/gear-lever-replace/\">gear lever replacement</a>)."
+            },
+            {
+              "title": "Spindle",
+              "html": "Try to move the spindle in and out and up and down. A little end float is normal on some engines; clear wobble, or oil weeping round the spindle, means a worn bush or seal, which is a workshop job."
+            },
+            {
+              "title": "Linkage",
+              "html": "On a linkage, check each ball joint and rod end for play and each nut for tightness, then clean and grease the pedal pivot. A dry pivot makes the lever stiff and slow to return."
+            },
+            {
+              "title": "Select every gear",
+              "html": "Engine off, move the lever slowly through the gears while turning the rear wheel by hand. Each gear should click in, and the lever should spring back to the centre after every change."
+            },
+            {
+              "title": "Lever or engine?",
+              "html": "If the lever does not return, mark its position, remove it and move the bare spindle with a spanner. If the spindle returns by itself, the fault is in the lever or linkage; if it does not, the return spring or spindle inside the engine is at fault."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The lever goes back on the same spline with its clamp bolt at the manual's torque. <strong>Pass criteria:</strong> lever firm on the spindle and touching nothing, returning to the centre after every change, all gears selectable with the wheel turning, and on a short ride the full stroke available without the boot catching the peg (<a href=\"../repair/repairs/gearshift-check/\">gearshift check</a>)."
+        },
+        {
+          "type": "h3",
+          "text": "Testing the neutral switch"
+        },
+        {
+          "type": "p",
+          "html": "A neutral light that never comes on, or stays on in gear, is usually a switch or wire fault rather than a gearbox fault. It still matters, because the neutral switch also feeds the starting interlock (chapter 4.3). On the K-Light 125 the gear position switch sits on the left crankcase, under the front cover behind the flywheel area. If the switch is below the oil level, the oil is drained before the switch is removed."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Dash first",
+              "html": "Key on. If none of the other dash lights work either, the fault is power to the instruments, not the switch."
+            },
+            {
+              "title": "Meter on the switch",
+              "html": "Key off, unplug the switch wire, set a multimeter to continuity or its lowest resistance range, and put one probe on the switch terminal and the other on clean bare engine metal."
+            },
+            {
+              "title": "Neutral, then first",
+              "html": "In neutral the meter should show continuity; in first gear it should show an open circuit. Turning the rear wheel by hand helps the gears select."
+            },
+            {
+              "title": "Interpret",
+              "html": "Both readings correct: the switch is good, so the wire and connector to the dash and ECU are checked. Open in neutral: clean the terminal and retest, then replace the switch. Continuity in every gear: the switch is shorted inside or the wire has rubbed through to the engine or frame, so the wire is checked before a switch is bought."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A replacement switch is fitted with a new sealing washer or O-ring and the oil is topped up afterwards. The job is complete when the light comes on only in neutral, the start interlock still blocks starting in gear without the clutch pulled, and there is no oil leak round the switch after a short ride (<a href=\"../repair/repairs/neutral-switch-test/\">neutral switch test</a>)."
+        },
+        {
+          "type": "h3",
+          "text": "What the workshop measures inside"
+        },
+        {
+          "type": "p",
+          "html": "When the external checks and the clutch are clear, the next step is the clutch side cover. On the K-Light 125 the shift spindle, its return spring, the stopper arm and its spring and the drum's star plate all come off before the crankcase is split, and a weak or broken spring there is the cheapest cause of jumping out of gear and of a lever that does not return. Idle speed is checked as well, because an idle that is too high (K-Light 125: <strong>1,500 ± 100 rpm</strong>) makes gears clunk and resist."
+        },
+        {
+          "type": "p",
+          "html": "Reaching the drum, forks and shafts of the K-Light 125 means removing the engine and separating its vertically split cases. The forks, drum and fork shaft are then measured against the limits in the table above, every dog and slot is inspected, and the gear splines, teeth and shaft bearings are checked. A worn fork has usually caused the dog wear, so both are replaced together."
+        },
+        {
+          "type": "p",
+          "html": "The K-Light 125 manual says removed bearings must not be reused, so new bearings and seals are fitted wherever they were taken out, and every gear is oiled on assembly and checked for binding. Chunks of metal in the drained oil mean the bike is not ridden again until it has been opened. A good repair report lists each measurement against its limit, returns the old gears and forks, and names the cause (for example a fork bent by forcing a stuck lever), not only the worn part. Clutch free play and lever position are often disturbed during engine work, so they are rechecked before the road test."
+        },
+        {
           "type": "callout",
           "tone": "try",
           "title": "Try it in the Overview",
@@ -1545,6 +1682,35 @@ export default {
         },
         {
           "type": "h3",
+          "text": "Checking the cush drive"
+        },
+        {
+          "type": "p",
+          "html": "The cush drive is a set of rubber blocks between the rear sprocket carrier and the wheel hub. It softens the jolt when the throttle is opened or closed and protects the chain and gearbox. When the rubbers harden, crack or shrink, the rider feels a clunk or snatch from the rear every time the drive changes from pulling to over-run. On the K-Light 125 the sprocket sits on studs in a carrier with rubber dampers in the left side of the hub, held by a large circlip."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Feel the free movement",
+              "html": "Bike on the centre stand, in neutral, engine off. Hold the rear sprocket with a gloved hand and rock the wheel back and forth. A short, springy movement is normal; a clear free gap before the rubbers push back means they are worn. Chain slack is checked first, because a slack chain also clunks."
+            },
+            {
+              "title": "Remove and inspect",
+              "html": "With the rear wheel out, lift out the carrier (on the K-Light 125 the circlip, washer and sprocket come off first, then the studs and the damper). Look for cracked, crumbling, flattened, hard and shiny or oil-soaked rubbers, and for worn or cracked vanes on the carrier and in the hub. The K-Light 125 manual replaces the damper if it is damaged or cracked."
+            },
+            {
+              "title": "Refit",
+              "html": "Fit a whole set of new rubbers, easing them in with soapy water if tight but never with oil or grease. Check the wheel bearings while the wheel is out. Tighten the sprocket nuts, if removed, to <strong>45–50 N·m</strong> on the K-Light 125 in two or three criss-cross passes, then set chain slack and the axle nut torque."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The repair is confirmed when the springy movement at the sprocket is short and firm and, on a test ride, opening and closing the throttle no longer brings a clunk from the rear. The supporting bike must be secure while the rear wheel is out: a machine falling off a stand can crush a foot or a hand (<a href=\"../repair/repairs/cush-drive-check/\">cush drive check</a>)."
+        },
+        {
+          "type": "h3",
           "text": "Belt and shaft"
         },
         {
@@ -1914,6 +2080,53 @@ export default {
         },
         {
           "type": "h3",
+          "text": "Inspecting a frame after a crash"
+        },
+        {
+          "type": "p",
+          "html": "After a fall the obvious damage, a broken lever or a scraped panel, is easy to see. The dangerous damage often is not: a twisted fork, a bent frame or a hairline crack at a weld can make the bike pull or weave, or break later. The inspection starts with the rider and any leaks of fuel, oil, brake fluid or battery acid, and only then moves to the chassis, from what can be seen to what has to be measured."
+        },
+        {
+          "type": "p",
+          "html": "On an electric machine the traction battery is checked first: a pack that is dented, swollen, wet inside, hot or smelling is kept away from and handled as described in chapter 6.6 (<a href=\"../repair/repairs/ev-damaged-pack/\">handling a damaged pack</a>). On any machine, nothing is welded or heated with the fuel tank fitted or near the battery, and frame welding and straightening are specialist jobs."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Look at the frame",
+              "html": "With a torch, examine the steering head, engine mount brackets, swingarm pivot, footpeg and stand brackets, rear subframe and every weld. Cracked or wrinkled paint at a joint can hide a crack beneath it."
+            },
+            {
+              "title": "Bar against wheel",
+              "html": "Stand in front and look down: the handlebar must be square to the wheel. From the front, the fork legs must be parallel and the mudguard centred."
+            },
+            {
+              "title": "Steering lock",
+              "html": "Turn the bars from lock to lock. Movement must be smooth and the lock angle the same each side; unequal lock suggests a bent stem or damaged stops."
+            },
+            {
+              "title": "Wheel alignment",
+              "html": "Run a string line or two straight edges along both tyres at axle height. Both tyres should touch the line in the same way on each side; a difference means bent parts or wrong chain adjuster settings."
+            },
+            {
+              "title": "Wheels, controls and cases",
+              "html": "Spin both wheels to check rim runout and the brake discs, then check levers, pedals, footpegs, the gear lever, throttle snap-back, cable routing, switches, lights, engine cases, exhaust mounts and the swingarm."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The workshop then measures what cannot be judged by eye: frame alignment between steering head, swingarm pivot and engine mounts on a jig or with laser tools; axle bend (K-Light 125 limit <strong>0.2 mm</strong>); rim runout (K-Light 125 limit <strong>2.0 mm</strong>); and suspect welds with dye penetrant. Bent fork tubes, triple clamps, handlebars, levers and pedals are replaced, not straightened. An aluminium frame is usually replaced; a steel frame may go to a frame specialist for straightening."
+        },
+        {
+          "type": "callout",
+          "tone": "safety",
+          "title": "Do not ride it",
+          "html": "A machine that pulls to one side, has unequal steering lock or a cracked frame is not ridden, and heating or hammering a frame, fork or wheel straight is never a home repair. The owner is given a written list of damage and measured values, and the repaired bike must run straight hands-light at low speed and stop straight on its test ride."
+        },
+        {
+          "type": "h3",
           "text": "Rake, offset and trail"
         },
         {
@@ -2149,6 +2362,158 @@ export default {
         {
           "type": "p",
           "html": "<strong>Pass criteria:</strong> no fore-aft free play at the fork legs, bars swing freely and without notches from lock to lock, nuts and clamp bolts at specified torque, and no clunk, weave or wobble on a road test at low speed and over bumps under braking."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 5.4.2: Aligning the front wheel, forks and handlebar"
+        },
+        {
+          "type": "p",
+          "html": "After a small fall or a hard pothole strike, the fork legs can twist in their clamps or the handlebar can turn in its mounts, so the bike pulls to one side or the bar is not straight when the wheel is. This job lets the legs, axle and bar settle back into line. It does not straighten anything bent: each tube is sighted along and the leg heights in the clamps compared first, and a bent tube, yoke or frame is a workshop replacement."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Diagnose",
+              "html": "With the bike on its wheels, stand in front and note which way the wheel is out when the bar is straight."
+            },
+            {
+              "title": "Bar only",
+              "html": "If only the bar has turned in its clamps, loosen the clamp bolts, square the bar to the forks and retighten evenly to the model torque. The K-Light 125 bar is rubber-mounted, so the rubbers are checked for tears."
+            },
+            {
+              "title": "Twisted forks",
+              "html": "Bike on the centre stand with the front wheel on the ground. Slacken the axle pinch bolts (if fitted), then the lower and then the upper fork clamp bolts, a little at a time. Hold the wheel between the knees, square the bar to it and tighten the clamp bolts to the model torque."
+            },
+            {
+              "title": "Settle the legs",
+              "html": "Slacken the axle nut, take the bike off the stand, hold the front brake and push down hard on the bars several times so the legs settle parallel on the axle. Tighten the axle nut (<strong>75–88 N·m</strong> on the K-Light 125), then the pinch bolts."
+            },
+            {
+              "title": "Check the wheels are in line",
+              "html": "Run a string or two straight edges along both sides of the rear tyre to the front tyre: with the front wheel straight, it should sit centrally between them. If not, the rear wheel is checked with the chain adjuster marks."
+            },
+            {
+              "title": "Controls",
+              "html": "Turn the bars lock to lock: cables must not pull and the steering must move freely."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Pass criteria:</strong> wheel and bar straight together, forks moving smoothly when pushed down with the brake on, and the bike rolling straight with the hands resting lightly on the bars on a quiet, flat road. The K-Light 125 manual gives two different values for its lower fork clamp bolts, so the value for the exact model is confirmed before tightening (<a href=\"../repair/repairs/front-end-align/\">front end alignment</a>)."
+        },
+        {
+          "type": "h3",
+          "text": "Swingarm pivot and engine mounts"
+        },
+        {
+          "type": "p",
+          "html": "The rear of the chassis is checked with the same care as the head. The swingarm swings on a pivot shaft through the frame, in plain bushes on most small bikes and in needle roller bearings on some. Worn bushes let the rear wheel move sideways, so the rear wheel steers the bike: it weaves, the chain wears unevenly and the rear clunks."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Wheel bearings first",
+              "html": "Check the rear wheel bearings before the pivot, or the two will be confused."
+            },
+            {
+              "title": "Side play",
+              "html": "With the rear wheel off the ground, pull the rear end of the swingarm (not the wheel) firmly left and right while a helper feels the joint between swingarm and frame on each side. A knock or movement means worn bushes or a loose pivot nut."
+            },
+            {
+              "title": "Pivot nut",
+              "html": "Try the nut with a spanner: a loose nut feels like worn bushes. The K-Light 125 manual lists two different pivot nut torques, so the correct value for the model is confirmed before tightening."
+            },
+            {
+              "title": "Travel, grease and slider",
+              "html": "On a twin-shock bike the lower shock bolts can be removed with the wheel supported and the arm lifted through its travel: it must move smoothly with no tight spots. Grease any pivot nipples until clean grease shows. Heavy wear on one side of the chain slider suggests the arm or wheel is out of line."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "On most motorcycles the engine is bolted into the frame plates (hangers) with long through-bolts, while on scooters the engine swings with the rear wheel on a rubber-bushed pivot. A loose bolt or worn bush shows as a new vibration, a knock over bumps or on and off the throttle, or a chain or exhaust that starts to rub. The K-Light 125 schedule lists engine bolt torque at regular services (<a href=\"../repair/repairs/swingarm-check/\">swingarm check</a>, <a href=\"../repair/repairs/engine-mount-check/\">engine mount check</a>)."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Engine mount (K-Light 125)",
+            "Torque"
+          ],
+          "rows": [
+            [
+              "Front mount",
+              "45–50 N·m"
+            ],
+            [
+              "Upper mount",
+              "22–29 N·m"
+            ],
+            [
+              "Rear mount",
+              "45–50 N·m"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "With the rear wheel lifted, rocking the rear of the bike while watching the engine shows a worn mount bush; on a scooter, rocking the rear wheel up and down and side to side shows wear at the engine pivot. A mount bolt is never removed without first supporting the engine, and never all at once. Checked nuts are marked with a paint line across nut and bracket so that any later movement shows."
+        },
+        {
+          "type": "h3",
+          "text": "Fault finding: handling complaints"
+        },
+        {
+          "type": "p",
+          "html": "A handling complaint is diagnosed from the cheapest check upwards, because most have simple causes. Tyres and pressures come first in almost every row; the table gives the chassis checks that follow, drawing on this chapter and on chapters 5.5 and 5.6."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Symptom",
+            "Likely causes",
+            "First checks"
+          ],
+          "rows": [
+            [
+              "Pulls to one side",
+              "Wheels out of line, twisted forks, bent frame or swingarm, dragging brake",
+              "String-line alignment, fork alignment, brake drag, then frame measurement"
+            ],
+            [
+              "Clunk from the front under braking",
+              "Loose steering head bearings, worn fork bushes, loose fork or caliper fasteners",
+              "Play at the fork legs, fork bushes, fastener torque"
+            ],
+            [
+              "Notchy steering at the centre",
+              "Brinelled races",
+              "Lock-to-lock notch test; replace bearings and races as a set"
+            ],
+            [
+              "Heavy steering, slow weave",
+              "Overtightened head bearings, soft front tyre, cable pulled tight at full lock",
+              "Bars fall freely from the centre, tyre pressure, cable routing"
+            ],
+            [
+              "Wobble or headshake",
+              "Tyre wear or pressure, wheel runout or bearings, loose head bearings, luggage",
+              "The checks listed before fitting a damper"
+            ],
+            [
+              "Weave at speed, vague rear",
+              "Worn swingarm bushes, loose rear axle, worn rear wheel bearings, tired shocks",
+              "Swingarm side play, wheel bearings, shock damping"
+            ],
+            [
+              "New vibration, knock on and off the throttle",
+              "Loose engine mounts or worn mount bushes, worn cush drive",
+              "Mount torque and bushes, cush drive rubbers"
+            ]
+          ]
         },
         {
           "type": "check",
@@ -2665,6 +3030,27 @@ export default {
             {
               "title": "Swingarm and linkage",
               "html": "With the rear wheel lifted, push the wheel sideways for pivot play. Linkage needle bearings and bushes are greased at about 10,000–20,000 km on road bikes and after a few wet rides off-road; a seized linkage makes the rear harsh and wears the shock."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Many commuter shocks adjust spring preload with a stepped collar at the bottom of the spring; the Hero Honda Splendor Plus, for example, has a five-step adjuster, and some shocks use a threaded collar with a locknut instead. A higher step holds the rear up with a passenger or a load, or when it bottoms; a lower step suits a solo rider whose rear sits high and feels harsh. Preload does not make a worn damper work again."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Use the right tool",
+              "html": "Bike on the centre stand, with the weight off the rear wheel if the collar is stiff. Turn the collar one step at a time with the tool-kit C-spanner, never with a screwdriver used as a lever, which slips and cuts hands."
+            },
+            {
+              "title": "Both sides the same",
+              "html": "Twin shocks are always set to exactly the same step, or the same number of turns on a threaded collar with the locknut retightened; different settings make the rear twist and handle badly."
+            },
+            {
+              "title": "Check and record",
+              "html": "Bounce the rear, ride a short distance and write the setting down. With a load on the back, check the headlight is not aimed too high. A shock that still bottoms on the highest step, or bounces, has a tired spring or worn damper (<a href=\"../repair/repairs/rear-preload-adjust/\">rear preload adjustment</a>)."
             }
           ]
         },
@@ -4405,6 +4791,63 @@ export default {
         },
         {
           "type": "h3",
+          "text": "Reading a real schedule"
+        },
+        {
+          "type": "p",
+          "html": "A factory schedule needs careful reading. The full K-Light 125 table also lists engine and emission items (spark plug, ignition timing, idle and exhaust gas, valve clearance, fuel filter and fuel line), and it inspects tyre pressure, battery, control free play, bolt tightness, gearbox oil leaks, the muffler and the lights at every interval. Its last column is labelled every 15,000 km (15 months) and sits oddly after the 12,000 km column, so it is treated with caution and checked with the dealer."
+        },
+        {
+          "type": "p",
+          "html": "Some intervals disagree within the same manual. The EFI chapter gives two different fuel filter intervals (7,000–10,000 km on one page, 7,000–18,000 km on the next) and asks for the throttle body to be cleaned every 10,000 km or one year. Where a manual contradicts itself, the table is followed and the dealer asked. The table only inspects and adjusts the chain; in practice it is cleaned and lubricated far more often, especially in rain and dust."
+        },
+        {
+          "type": "p",
+          "html": "Three wear items are missing from the table altogether: brake fluid replacement, tyre replacement and wheel bearings. They are checked at every service anyway. Brake fluid absorbs water over time, so its interval comes from the reservoir cap or the manual (<a href=\"../repair/repairs/brake-bleed/\">brake fluid replacement</a>). A commercial rider (boda boda or delivery) covers the distances long before the months, so distance governs; a weekend rider is governed by time."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Machine",
+            "Extra items to add to the schedule"
+          ],
+          "rows": [
+            [
+              "Carburettor",
+              "Idle speed and mixture, choke, fuel tap filter"
+            ],
+            [
+              "Two-stroke",
+              "Two-stroke oil tank and pump, exhaust carbon"
+            ],
+            [
+              "Scooter with CVT",
+              "Drive belt and rollers, final drive gear oil"
+            ],
+            [
+              "Liquid-cooled",
+              "Coolant level and replacement"
+            ],
+            [
+              "Drum brakes",
+              "Shoe wear and adjustment"
+            ],
+            [
+              "Spoked wheels",
+              "Spoke tension"
+            ],
+            [
+              "Electric",
+              "No oil, plug, air filter or valve jobs; instead battery state and health, charger and port, error codes, hub motor bearings and the 12 V system, plus every tyre, brake, chain or belt and chassis item"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The work is done in a sensible order: clearances and adjustments first, then the air filter and idle, and fluids last with the engine warm, as the MAVCC tune-up sequence teaches. After every service the date, distance and work done are written down: the record shows what is due next and supports a warranty claim or a sale."
+        },
+        {
+          "type": "h3",
           "text": "Pre-ride check: T-CLOCS"
         },
         {
@@ -4594,6 +5037,164 @@ export default {
           "tone": "try",
           "title": "Try it in the Overview",
           "html": "Open the <a href=\"../overview/?mode=4t&view=diagram\">four-stroke course plate</a> and work through its hotspots from the front tyre to the tail light, using plate F06 (Module 1) for the full list of 30 assemblies from Fuel tank to Tail light and indicators. For each, name the inspection from this chapter that applies, for example Drive chain: slack, wear length, lubrication; Front fork: leaks, oil level, clamp bolt torque."
+        },
+        {
+          "type": "h3",
+          "text": "Checking fasteners"
+        },
+        {
+          "type": "p",
+          "html": "Vibration loosens bolts. A loose axle, handlebar clamp or engine mount can cause a crash, and a loose panel bolt causes rattles and lost parts, which is why the K-Light 125 schedule asks for the tightness of all bolts to be inspected at every service. The check is a measurement, not a habit of tightening harder: over-tightening strips threads in aluminium and can crack castings."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Set the wrench",
+              "html": "Set the torque wrench to the value for that fastener from the model's torque table. A value is never carried over from one fastener to another, even when the bolts look the same size."
+            },
+            {
+              "title": "Turn slowly",
+              "html": "Turn in the tightening direction. If the wrench clicks before the fastener moves, it was tight; if it moves, it was loose, so it is tightened to the value and the finding written down."
+            },
+            {
+              "title": "Mark it",
+              "html": "Draw a paint line across the bolt head and the part. A broken line later shows movement; a nut scraped by its lock washer shows the washer has been working and needs replacing."
+            },
+            {
+              "title": "Find the cause",
+              "html": "A fastener found loose twice has a reason: a missing washer, a stripped thread, a crack or a worn rubber mount."
+            },
+            {
+              "title": "Renew locking parts",
+              "html": "Fit new split pins, and new self-locking nuts, washers, O-rings and locking plates wherever the manual asks for them on reassembly."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Brake caliper and hose fasteners are only touched with a confirmed value, and any work on them is followed by a brake check. Where several bolts hold one part, they are tightened evenly in stages rather than one at a time to full torque (<a href=\"../repair/repairs/fastener-check/\">fastener check</a>)."
+        },
+        {
+          "type": "h3",
+          "text": "Job sheet 5.8.1: Lubricating control cables"
+        },
+        {
+          "type": "p",
+          "html": "Cables are lubricated at the chassis lubrication intervals and whenever a control feels stiff. Brake and throttle cables are safety parts: after any cable work, the brake must stop the wheel and the throttle must snap shut before the bike is ridden. Some modern cables have a plastic lining that the maker says must not be oiled, so the cable type is checked first."
+        },
+        {
+          "type": "photo",
+          "src": "repair-photos/137_bowden_control_cables.jpg",
+          "caption": "Bowden control cables: inner wire in a flexible outer",
+          "credit": "Photo: Dan's Motorcycle Repair Course (dansmc.com), used with permission."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "One at a time",
+              "html": "Work on one cable at a time so the routing does not change. Slacken the lever adjuster fully, line up the slots in the adjuster and the bracket, lift the cable out and unhook the nipple."
+            },
+            {
+              "title": "Inspect",
+              "html": "Look at the inner where it leaves the outer, especially next to the nipple. Broken strands or a kink mean a new cable."
+            },
+            {
+              "title": "Oil",
+              "html": "Clamp a cable luber, or a small plastic bag tied round the end as a funnel, on the top of the outer and feed light cable oil until it comes out at the bottom, working the inner in and out. Oil running out of cracks in the outer means a dry graphite lubricant is used instead, and the cable is replaced soon."
+            },
+            {
+              "title": "Grease the ends",
+              "html": "Grease the nipple and its seat in the lever, the lever pivot bolt, and the lower end at the clutch arm, brake arm, throttle body or choke plunger. A mechanical speedometer cable takes light grease, kept away from the instrument end."
+            },
+            {
+              "title": "Refit and set",
+              "html": "Refit and set free play (clutch 10–15 mm, front brake lever 10–20 mm, rear pedal 20–30 mm on the K-Light 125), then turn the bars full left, full right and centre while working each control: nothing should bind or change free play."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Pass criteria:</strong> each lever moves smoothly and returns fully, free play is in range at every steering position, and the throttle snaps shut at full lock both ways. A cable that is still stiff after oiling has a damaged outer or a tight bend in its route (<a href=\"../repair/repairs/cable-lube/\">cable lubrication</a>)."
+        },
+        {
+          "type": "h3",
+          "text": "Recommissioning after storage"
+        },
+        {
+          "type": "p",
+          "html": "A bike that has stood for months is not simply started. Fuel goes stale (it smells sour or like varnish and may be darker), carburettor jets block with varnish, batteries discharge, tyres lose pressure and animals nest in air boxes and exhausts. The K-Light 125 manual asks for a stored battery to be charged about every three months, and a battery left flat for months may be ruined. Recommissioning follows a fixed order so that nothing is started or ridden before it is safe."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "title": "Look round the bike",
+              "html": "Chewed wires, nests in the air box or exhaust, rust, and puddles of oil or fuel. Blockages are cleared and damaged wiring repaired first."
+            },
+            {
+              "title": "Battery",
+              "html": "Measure and charge it before anything else."
+            },
+            {
+              "title": "Fuel",
+              "html": "Smell it: stale fuel is drained and replaced. On a carburettor bike the float bowl is drained too, and the carburettor cleaned if fresh fuel will not flow or the engine will not idle. On an injected bike the pump should be heard at key ON, for about 3 s on the K-Light 125. A torch shows rust flakes in the tank, which block filters."
+            },
+            {
+              "title": "Oil and plug",
+              "html": "Check the oil level and change old or milky oil. Remove the plug and, with the cap on a spark tester, turn the engine over a few times to spread oil before it fires."
+            },
+            {
+              "title": "Tyres, brakes, chain, cables",
+              "html": "Set pressures cold and look for cracks, check the levers are firm and the fluid is not dark, clean and lubricate the chain and set its slack, and confirm the throttle snaps shut."
+            },
+            {
+              "title": "Start and ride slowly",
+              "html": "Use the choke only on a cold engine that has one, let it idle until it runs evenly, then ride slowly close to the workshop, testing the brakes at low speed first."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Fuel left in a carburettor turns to varnish, and a small amount of fuel can go bad within a couple of weeks, while a full tank lasts about a year. Before a long lay-up, stale fuel is drained and the tank refilled with fresh fuel containing a fuel stabiliser; on recommissioning, the float bowl is checked for varnish and the float for damage."
+        },
+        {
+          "type": "p",
+          "html": "Electric machines follow their own storage routine, covered in chapter 6.4: the traction pack is held at the charge the manual gives and the 12 V battery is kept charged (<a href=\"../repair/repairs/recommission-after-storage/\">recommissioning after storage</a>, <a href=\"../repair/repairs/ev-storage/\">storing an electric motorcycle</a>)."
+        },
+        {
+          "type": "h3",
+          "text": "The road test"
+        },
+        {
+          "type": "p",
+          "html": "Every service, PDI and repair ends with a road test, and most serious workshop injuries happen on test rides. The technician wears a helmet and protective clothing every time, does the pre-ride check first, and never road-tests a bike with weak brakes, a fuel leak or a sticking throttle. A customer's bike is ridden only with permission, on a quiet, legal route, watching the traffic rather than the bike: a road test is not a speed test."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Stage",
+            "What is done"
+          ],
+          "rows": [
+            [
+              "Plan",
+              "Establish exactly what happens and when: cold or hot, at idle, mid-range or full throttle, in which gear, uphill, loaded, in rain or over bumps. Check tyre pressures and that the wheels spin freely, since a dragging brake feels like a weak engine. Note the fuel level, warning lights and odometer."
+            ],
+            [
+              "Ride",
+              "Start cold if the fault is a cold one. Pull away gently, accelerate through the gears at part and then full throttle, hold a steady speed in top, roll off and listen. On a hill, revs rising without road speed mean clutch or CVT slip. Reach full temperature and repeat the step where the fault appeared, then idle hot for a minute."
+            ],
+            [
+              "After",
+              "Write down what happened at each step while it is fresh, check for new leaks, smells and warning lights, and use the notes to choose the next diagnostic step."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "After a repair the same route and conditions are used again: the fault must not return, and there must be no new leaks, noises or warning lights. If the engine cuts out during a test, the rider signals, moves to the side and stops safely before looking at anything (<a href=\"../repair/repairs/road-test/\">road test</a>)."
         },
         {
           "type": "check",
