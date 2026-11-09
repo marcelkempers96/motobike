@@ -17,7 +17,7 @@ async function scroll(p, frame, px, frames) {
 const hold = async (frame, n) => { for (let i = 0; i < n; i++) await frame(); };
 async function tap(p, frame, sel, after = 10) { const e = await p.$(sel); if (e) { await e.scrollIntoViewIfNeeded(); await e.click(); } await hold(frame, after); }
 async function bike(p, mode, name, secs = 5, dx = 330) {
-  await open(p, 'overview/?mode=' + mode, 5000, 3); await center(p, '#ute-moto-stage', 90);
+  await open(p, 'overview/?mode=' + mode, 5000, 3); await center(p, '#ute-moto-stage', 235);
   await recordFrames(p, name, secs, async (f) => { await hold(f, 6); await orbit(p, f, '#ute-moto-stage', Math.round(secs * 30) - 12, dx, -10, [0.2, 0.5]); });
 }
 async function page(p, url, name, secs, px, startSel, wait = 2500) {
@@ -42,7 +42,7 @@ const S = {
     });
   },
   async r09_engine(p) {
-    await open(p, 'engine/', 6000, 2); await center(p, '#view', 60);
+    await open(p, 'engine/', 6000, 2); await center(p, '#view', 235);
     await p.click('[data-ts="0.2"]').catch(() => {}); await p.click('#bKick').catch(() => {}); const { settle } = await stepper(p); await settle(3);
     await recordFrames(p, 'r09_engine', 7, async (f) => {
       await orbit(p, f, '#view', 80, 200, -10, [0.3, 0.5]);
@@ -90,7 +90,6 @@ const S = {
   r23_models: (p) => page(p, 'models/', 'r23_models', 6, 2600),
   r24_invercargill: (p) => page(p, 'articles/invercargill-classic-motorcycle-mecca/', 'r24_invercargill', 7, 4200),
   r25_types: (p) => page(p, 'types/', 'r25_types', 6, 2200),
-  r26_videos: (p) => page(p, 'videos/', 'r26_videos', 6, 2400),
 };
 
 (async () => {
