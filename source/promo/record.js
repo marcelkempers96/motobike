@@ -35,13 +35,14 @@ async function record(page, name, seconds, act) {
   await Promise.race([done, sleep(seconds * 1000 + 4000)]);
   const left = seconds * 1000 - (Date.now() - t0);
   if (left > 0) await sleep(left);
+  const tEnd = Date.now() / 1000;
   await cdp.send('Page.stopScreencast');
   await sleep(300);
   // concat list with real frame durations (the screencast is variable-rate)
   let list = '';
   for (let i = 0; i < frames.length; i++) {
-    const d = (i + 1 < frames.length ? frames[i + 1][1] - frames[i][1] : 1 / 30 / K) * K;
-    list += `file '${frames[i][0]}.jpg'\nduration ${Math.max(0.01, d).toFixed(4)}\n`;
+    const d = (i + 1 < frames.length ? frames[i + 1][1] - frames[i][1] : Math.max(1 / 30 / K, tEnd - frames[i][1])) * K;
+    list += `file '${frames[i][0]}.jpg'\nduration ${Math.max(0.001, d).toFixed(4)}\n`;
   }
   if (frames.length) list += `file '${frames[frames.length - 1][0]}.jpg'\n`;
   fs.writeFileSync(path.join(dir, 'list.txt'), list);
@@ -114,24 +115,31 @@ const SCENES = {
     await p.evaluate(() => document.querySelector('#builder').scrollIntoView({ block: 'start' })); await p.evaluate(() => scrollBy(0, -70));
     await record(p, 'circuit', 5, async () => { await ws(600); await moveClick(p, '#builder button:has-text("Test")', 700); await ws(3200); });
   },
-  // 6. Under the Engine: running, then exploded
+  // 6. Under the Engine: kick start turns every gear, then the engine comes apart
   async engine(p) {
     await p.goto(BASE + 'engine/', { waitUntil: 'networkidle' }); await hideChrome(p); await cursor(p); await ws(6000);
-    const ts = await p.$('[data-ts="0.2"]'); if (ts) await ts.click();
-    const k = await p.$('#bElec'); if (k) { await k.dispatchEvent('pointerdown'); await ws(1500); await k.dispatchEvent('pointerup'); }
+    await p.evaluate(() => { const v = document.getElementById('view'); scrollTo(0, v.getBoundingClientRect().top + scrollY - 70); });
+    await p.click('[data-ts="1"]');
     await record(p, 'engine', 7, async () => {
-      await ws(1500);
-      const s = await p.$('#explode'); if (s) { for (let v = 0; v <= 85; v += 3) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await ws(70); } }
-      await ws(2500);
+      await moveClick(p, '#bKick', 500); await ws(2600);
+      const s = await p.$('#explode');
+      if (s) { for (let v = 0; v <= 90; v += 3) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await ws(60); } }
+      await ws(2000);
     });
   },
-  // 7. Cockpit: engine running, revving, dyno graph drawing
+  // 7. Cockpit: start the engine, open the throttle, the dyno draws the curve
   async cockpit(p) {
     await p.goto(BASE + 'cockpit/', { waitUntil: 'networkidle' }); await hideChrome(p); await ws(5000);
-    await p.keyboard.press('k'); await ws(300); await p.keyboard.down('s'); await ws(1800); await p.keyboard.up('s'); await ws(800);
-    await p.keyboard.down('c'); await p.keyboard.press('ArrowDown'); await ws(300); await p.keyboard.up('c'); await ws(400);
-    await p.keyboard.press('g'); await ws(300);
-    await record(p, 'cockpit', 7, async () => { await p.keyboard.down('t'); await ws(4200); await p.keyboard.up('t'); await ws(2000); });
+    await p.mouse.click(540, 300);
+    await p.keyboard.press('k'); await ws(400); await p.keyboard.down('c'); await ws(300);
+    await p.keyboard.down('s'); await ws(2500); await p.keyboard.up('s'); await ws(1200);
+    await p.keyboard.down('t'); await ws(500); await p.keyboard.up('c'); await ws(1500); await p.keyboard.up('t'); await ws(800);
+    await p.keyboard.press('g'); await ws(400);
+    await record(p, 'cockpit', 7, async () => {
+      await p.keyboard.down('t'); await ws(1600);
+      await smoothScroll(p, await p.evaluate(() => document.querySelector('.mz-ck-dyno').getBoundingClientRect().top + scrollY - 120), 1200);
+      await p.keyboard.press('ArrowUp'); await ws(1800); await p.keyboard.press('ArrowUp'); await ws(1600); await p.keyboard.up('t'); await ws(800);
+    });
   },
   // 8. Repair: diagnose a problem, then the problem page with photos
   async repair(p) {
