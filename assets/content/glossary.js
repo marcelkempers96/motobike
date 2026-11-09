@@ -551,10 +551,6 @@ export default {
     "a throttle-linked diaphragm pump on some carburettors that squirts fuel into the bore when the throttle snaps open, covering the lean stumble caused by fuel lag."
    ],
    [
-    "AGM (VRLA)",
-    "lead-acid battery with electrolyte held in absorbent glass-mat separators and sealed by a pressure valve."
-   ],
-   [
     "Air bleed",
     "a calibrated air passage that emulsifies fuel with air before it reaches a carburettor nozzle, helping hold the mixture steady as airflow rises."
    ],
@@ -571,14 +567,6 @@ export default {
     "fuel strategy that estimates engine load from throttle angle and rpm."
    ],
    [
-    "Alternator",
-    "AC generator driven by the crankshaft; on most motorcycles a permanent-magnet rotor turning around a wound stator."
-   ],
-   [
-    "Ampere-hour (Ah)",
-    "battery capacity, the product of discharge current and the hours it can be sustained (usually at the 10-hour rate)."
-   ],
-   [
     "Atomisation",
     "the break-up of fuel into fine droplets as it leaves a nozzle or injector, before it evaporates (vaporisation)."
    ],
@@ -587,24 +575,8 @@ export default {
     "measuring at a connector from the wire side, beside the seal or with a purpose-made pin, so the circuit keeps working and the insulation is not pierced."
    ],
    [
-    "Breakdown voltage",
-    "voltage at which the gas in a spark gap ionises and conducts."
-   ],
-   [
-    "CAN bus",
-    "two-wire differential network (ISO 11898) linking electronic control units, terminated by 120 Ω at each end."
-   ],
-   [
-    "Capacitor discharge ignition (CDI)",
-    "ignition that discharges a charged capacitor into the coil primary through a thyristor."
-   ],
-   [
     "Closed loop",
     "fuel control corrected continuously by oxygen-sensor feedback."
-   ],
-   [
-    "Cold cranking amps (CCA)",
-    "current a battery delivers at −18 °C for 30 s while staying above 7.2 V."
    ],
    [
     "Constant-velocity (CV) carburettor",
@@ -623,20 +595,12 @@ export default {
     "an ECU strategy that stops injection entirely with the throttle closed above a threshold speed and resumes near idle."
    ],
    [
-    "Dwell",
-    "crank angle or time during which the ignition coil primary carries current."
-   ],
-   [
     "Enricher",
     "a cold-start plunger circuit in a carburettor that draws extra fuel through a starter jet; it works best with the throttle closed."
    ],
    [
     "EVAP canister",
     "activated-charcoal container that stores fuel vapour from the tank for later burning in the engine."
-   ],
-   [
-    "Exciter coil",
-    "a stator winding that charges the capacitor of an AC-CDI ignition to 100 to 400 V without a battery."
    ],
    [
     "Fault code (DTC)",
@@ -655,28 +619,12 @@ export default {
     "a pilot-circuit adjuster on the engine side of the slide; turning it out richens the idle mixture (compare air screw)."
    ],
    [
-    "Fuse",
-    "sacrificial link that opens when current exceeds its rating, protecting the wiring."
-   ],
-   [
-    "Heat range",
-    "rate at which a spark plug insulator transfers heat; determines whether a plug runs hot or cold."
-   ],
-   [
     "Helmholtz resonator",
     "an enclosed volume with a neck, such as an airbox, whose air resonates at one frequency; used to tune intake pressure waves and reduce intake noise."
    ],
    [
     "Idle air control (IAC)",
     "ECU-controlled valve or stepper motor that regulates by-pass air to hold idle speed."
-   ],
-   [
-    "Ignition reserve",
-    "the margin between the voltage an ignition coil can deliver and the voltage the spark plug needs to break down."
-   ],
-   [
-    "Inductive kick",
-    "the high self-induced voltage, typically 200 to 400 V, in a coil primary when its current is suddenly interrupted."
    ],
    [
     "Injector duty cycle",
@@ -687,24 +635,12 @@ export default {
     "time for which the injector is held open in each cycle, in milliseconds."
    ],
    [
-    "Interlock",
-    "switch that prevents starting or running in an unsafe condition (neutral, clutch, side-stand, brake)."
-   ],
-   [
-    "Internal resistance",
-    "the resistance inside a battery that lowers its terminal voltage under load; it rises as a battery ages or sulphates and is seen only by a load test."
-   ],
-   [
     "Jet needle",
     "tapered needle hanging from the carburettor slide that meters fuel from 1/4 to 3/4 throttle."
    ],
    [
     "Lambda (λ)",
     "actual AFR divided by stoichiometric AFR."
-   ],
-   [
-    "LiFePO4",
-    "lithium iron phosphate battery chemistry; four 3.2 V cells make a 12.8 V starter battery."
    ],
    [
     "Light-off temperature",
@@ -735,32 +671,8 @@ export default {
     "exhaust sensor whose output indicates rich or lean mixture relative to λ = 1."
    ],
    [
-    "Parasitic drain",
-    "current drawn from the battery with the ignition off."
-   ],
-   [
-    "Peak-voltage adapter",
-    "a meter accessory that captures the peak of short pulses from pulser, exciter and coil primary circuits, which a normal multimeter cannot register."
-   ],
-   [
     "Pilot jet",
     "small jet supplying fuel at idle and small throttle openings."
-   ],
-   [
-    "Pulser coil",
-    "a pick-up coil facing a tab on the flywheel that tells the ignition unit when to fire."
-   ],
-   [
-    "Reach",
-    "the threaded length of a spark plug; it must match the cylinder head so the plug neither strikes the piston nor leaves exposed threads."
-   ],
-   [
-    "Regulator/rectifier",
-    "unit that converts alternator AC to DC and limits charging voltage."
-   ],
-   [
-    "Resistor cap",
-    "spark plug cap with a built-in suppressor resistor, typically about 5 kΩ."
    ],
    [
     "Secondary air injection",
@@ -771,10 +683,6 @@ export default {
     "long-term adaptive fuel corrections stored by the ECU for each load region, so that closed-loop trim stays near zero as the engine wears."
    ],
    [
-    "Shunt regulator",
-    "regulator that limits voltage by short-circuiting the stator to earth."
-   ],
-   [
     "Slide cutaway",
     "the angled cut on the intake side of a carburettor slide that controls mixture from about 1/8 to 1/4 throttle; a higher cutaway leans it."
    ],
@@ -783,24 +691,8 @@ export default {
     "fuel strategy that calculates air mass from manifold pressure, temperature and rpm."
    ],
    [
-    "Starter clutch",
-    "one-way (sprag or roller) clutch between starter gear and crankshaft."
-   ],
-   [
-    "Starter relay",
-    "solenoid switch carrying starter motor current, operated by the start button through the interlocks."
-   ],
-   [
-    "Stick coil",
-    "an ignition coil mounted directly on the spark plug, one per cylinder, with no HT lead."
-   ],
-   [
     "Stoichiometric",
     "chemically correct mixture with exactly enough oxygen to burn all the fuel."
-   ],
-   [
-    "Sulphation",
-    "the growth of hard lead sulphate crystals in a lead-acid battery left partly discharged, permanently reducing capacity and cranking current."
    ],
    [
     "Synchronisation (balancing)",
@@ -815,24 +707,12 @@ export default {
     "potentiometer reporting throttle opening to the ECU."
    ],
    [
-    "Transistor-controlled ignition (TCI)",
-    "inductive ignition in which a transistor switches the coil primary."
-   ],
-   [
-    "Turns ratio",
-    "ratio of secondary to primary turns in an ignition coil, roughly 100:1."
-   ],
-   [
     "Vacuum-operated fuel tap",
     "a fuel tap with a diaphragm worked by intake depression, so fuel flows only while the engine turns; PRI bypasses it to fill an empty bowl."
    ],
    [
     "Voltage drop",
     "voltage lost across a wire, connection or switch while current flows."
-   ],
-   [
-    "Wasted spark",
-    "ignition arrangement in which one coil fires two plugs together, one cylinder on compression and the other on exhaust."
    ],
    [
     "Wideband oxygen sensor",
@@ -1599,28 +1479,8 @@ export default {
  "m3b": {
   "terms": [
    [
-    "Accelerator pump",
-    "a throttle-linked diaphragm pump on some carburettors that squirts fuel into the bore when the throttle snaps open, covering the lean stumble caused by fuel lag."
-   ],
-   [
     "AGM (VRLA)",
     "lead-acid battery with electrolyte held in absorbent glass-mat separators and sealed by a pressure valve."
-   ],
-   [
-    "Air bleed",
-    "a calibrated air passage that emulsifies fuel with air before it reaches a carburettor nozzle, helping hold the mixture steady as airflow rises."
-   ],
-   [
-    "Air screw",
-    "a pilot-circuit adjuster on the intake side of the slide; turning it out admits more air and leans the idle mixture (compare fuel screw)."
-   ],
-   [
-    "Air-fuel ratio (AFR)",
-    "mass of air divided by mass of fuel in the mixture; 14.7:1 is stoichiometric for petrol."
-   ],
-   [
-    "Alpha-N",
-    "fuel strategy that estimates engine load from throttle angle and rpm."
    ],
    [
     "Alternator",
@@ -1629,10 +1489,6 @@ export default {
    [
     "Ampere-hour (Ah)",
     "battery capacity, the product of discharge current and the hours it can be sustained (usually at the 10-hour rate)."
-   ],
-   [
-    "Atomisation",
-    "the break-up of fuel into fine droplets as it leaves a nozzle or injector, before it evaporates (vaporisation)."
    ],
    [
     "Back-probing",
@@ -1651,40 +1507,16 @@ export default {
     "ignition that discharges a charged capacitor into the coil primary through a thyristor."
    ],
    [
-    "Closed loop",
-    "fuel control corrected continuously by oxygen-sensor feedback."
-   ],
-   [
     "Cold cranking amps (CCA)",
     "current a battery delivers at −18 °C for 30 s while staying above 7.2 V."
-   ],
-   [
-    "Constant-velocity (CV) carburettor",
-    "carburettor whose piston is lifted by venturi depression acting on a diaphragm, with a cable-operated butterfly."
    ],
    [
     "Crankshaft position sensor (CKP)",
     "sensor reading reluctor teeth on the flywheel to give engine speed and crank angle; also called trigger or pulser."
    ],
    [
-    "Dead time",
-    "the delay between an injector being energised and its valve opening fully, typically 0.6 to 1.2 ms and longer at low battery voltage; the ECU adds it to every pulse."
-   ],
-   [
-    "Deceleration fuel cut-off",
-    "an ECU strategy that stops injection entirely with the throttle closed above a threshold speed and resumes near idle."
-   ],
-   [
     "Dwell",
     "crank angle or time during which the ignition coil primary carries current."
-   ],
-   [
-    "Enricher",
-    "a cold-start plunger circuit in a carburettor that draws extra fuel through a starter jet; it works best with the throttle closed."
-   ],
-   [
-    "EVAP canister",
-    "activated-charcoal container that stores fuel vapour from the tank for later burning in the engine."
    ],
    [
     "Exciter coil",
@@ -1695,16 +1527,8 @@ export default {
     "stored diagnostic trouble code identifying a detected fault, e.g. P0122."
    ],
    [
-    "Float level",
-    "height of the carburettor float, which sets the fuel level in the bowl."
-   ],
-   [
     "Freeze frame",
     "engine data (speed, temperature, load) stored by the ECU at the moment a fault code was set."
-   ],
-   [
-    "Fuel screw",
-    "a pilot-circuit adjuster on the engine side of the slide; turning it out richens the idle mixture (compare air screw)."
    ],
    [
     "Fuse",
@@ -1715,28 +1539,12 @@ export default {
     "rate at which a spark plug insulator transfers heat; determines whether a plug runs hot or cold."
    ],
    [
-    "Helmholtz resonator",
-    "an enclosed volume with a neck, such as an airbox, whose air resonates at one frequency; used to tune intake pressure waves and reduce intake noise."
-   ],
-   [
-    "Idle air control (IAC)",
-    "ECU-controlled valve or stepper motor that regulates by-pass air to hold idle speed."
-   ],
-   [
     "Ignition reserve",
     "the margin between the voltage an ignition coil can deliver and the voltage the spark plug needs to break down."
    ],
    [
     "Inductive kick",
     "the high self-induced voltage, typically 200 to 400 V, in a coil primary when its current is suddenly interrupted."
-   ],
-   [
-    "Injector duty cycle",
-    "the fraction of the available time between injections for which an injector is held open; kept below about 80 to 85 % at peak power."
-   ],
-   [
-    "Injector pulse width",
-    "time for which the injector is held open in each cycle, in milliseconds."
    ],
    [
     "Interlock",
@@ -1747,24 +1555,8 @@ export default {
     "the resistance inside a battery that lowers its terminal voltage under load; it rises as a battery ages or sulphates and is seen only by a load test."
    ],
    [
-    "Jet needle",
-    "tapered needle hanging from the carburettor slide that meters fuel from 1/4 to 3/4 throttle."
-   ],
-   [
-    "Lambda (λ)",
-    "actual AFR divided by stoichiometric AFR."
-   ],
-   [
     "LiFePO4",
     "lithium iron phosphate battery chemistry; four 3.2 V cells make a 12.8 V starter battery."
-   ],
-   [
-    "Light-off temperature",
-    "the temperature, about 250 to 300 °C, above which a catalytic converter begins to convert pollutants effectively."
-   ],
-   [
-    "Main jet",
-    "calibrated orifice that limits fuel flow from about 3/4 to full throttle."
    ],
    [
     "MAP sensor",
@@ -1775,16 +1567,8 @@ export default {
     "malfunction indicator lamp, the engine warning lamp lit by the OBD system."
    ],
    [
-    "NTC thermistor",
-    "a temperature sensor whose resistance falls as temperature rises; used for engine and intake air temperature."
-   ],
-   [
     "OBD",
     "on-board diagnostics; stage I monitors circuits, stage II monitors emission-relevant degradation against threshold limits."
-   ],
-   [
-    "Oxygen sensor",
-    "exhaust sensor whose output indicates rich or lean mixture relative to λ = 1."
    ],
    [
     "Parasitic drain",
@@ -1793,10 +1577,6 @@ export default {
    [
     "Peak-voltage adapter",
     "a meter accessory that captures the peak of short pulses from pulser, exciter and coil primary circuits, which a normal multimeter cannot register."
-   ],
-   [
-    "Pilot jet",
-    "small jet supplying fuel at idle and small throttle openings."
    ],
    [
     "Pulser coil",
@@ -1815,24 +1595,8 @@ export default {
     "spark plug cap with a built-in suppressor resistor, typically about 5 kΩ."
    ],
    [
-    "Secondary air injection",
-    "admission of air into the exhaust port to oxidise CO and HC (PAIR)."
-   ],
-   [
-    "Self-learning",
-    "long-term adaptive fuel corrections stored by the ECU for each load region, so that closed-loop trim stays near zero as the engine wears."
-   ],
-   [
     "Shunt regulator",
     "regulator that limits voltage by short-circuiting the stator to earth."
-   ],
-   [
-    "Slide cutaway",
-    "the angled cut on the intake side of a carburettor slide that controls mixture from about 1/8 to 1/4 throttle; a higher cutaway leans it."
-   ],
-   [
-    "Speed-density",
-    "fuel strategy that calculates air mass from manifold pressure, temperature and rpm."
    ],
    [
     "Starter clutch",
@@ -1847,20 +1611,8 @@ export default {
     "an ignition coil mounted directly on the spark plug, one per cylinder, with no HT lead."
    ],
    [
-    "Stoichiometric",
-    "chemically correct mixture with exactly enough oxygen to burn all the fuel."
-   ],
-   [
     "Sulphation",
     "the growth of hard lead sulphate crystals in a lead-acid battery left partly discharged, permanently reducing capacity and cranking current."
-   ],
-   [
-    "Synchronisation (balancing)",
-    "adjusting the throttle linkage of a multi-cylinder engine so that every intake depression agrees, typically within 10 to 20 mmHg."
-   ],
-   [
-    "Three-way catalyst",
-    "catalyst that oxidises CO and HC and reduces NOx simultaneously near λ = 1."
    ],
    [
     "Throttle position sensor (TPS)",
@@ -1875,20 +1627,12 @@ export default {
     "ratio of secondary to primary turns in an ignition coil, roughly 100:1."
    ],
    [
-    "Vacuum-operated fuel tap",
-    "a fuel tap with a diaphragm worked by intake depression, so fuel flows only while the engine turns; PRI bypasses it to fill an empty bowl."
-   ],
-   [
     "Voltage drop",
     "voltage lost across a wire, connection or switch while current flows."
    ],
    [
     "Wasted spark",
     "ignition arrangement in which one coil fires two plugs together, one cylinder on compression and the other on exhaust."
-   ],
-   [
-    "Wideband oxygen sensor",
-    "a five-wire sensor that pumps oxygen ions to hold a measuring cell at lambda 1 and reports the pump current, giving a proportional lambda reading."
    ]
   ],
   "reading": [

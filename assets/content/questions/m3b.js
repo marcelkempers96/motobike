@@ -266,4 +266,44 @@ export default [
     answer: 2,
     explain: "150 +/- 10 ohm is in specification, so the winding is intact. The signal depends on how fast the reluctor flux changes, so a large gap, a damaged tab or low cranking speed gives a peak below the 1.7 V minimum.",
   },
+  // 4.1 Electrical fundamentals and measurement
+  {
+    id: "m3b-01", module: M, chapter: "m3-electrical-basics", kind: "calc",
+    q: "A brake-lamp circuit has a 6.9 ohm bulb in series with a corroded connector of 0.5 ohm, on a 12.4 V supply. Approximately what voltage reaches the bulb?",
+    options: ["12.4 V", "11.6 V", "10.4 V", "6.2 V"],
+    answer: 1,
+    explain: "Series resistances add: 6.9 + 0.5 = 7.4 ohm, so I = 12.4 / 7.4 = 1.68 A. The bulb gets 1.68 x 6.9 = 11.6 V and the connector loses the other 0.84 V.",
+  },
+  {
+    id: "m3b-02", module: M, chapter: "m3-electrical-basics", kind: "diagnosis",
+    q: "A tail lamp does not light. With the switch on and the black probe on the frame, the lamp's feed terminal reads 12.5 V and its earth terminal also reads 12.5 V. What is the fault?",
+    options: [
+      "Blown bulb filament",
+      "Open earth wire or earth connection",
+      "Short circuit to earth",
+      "Blown fuse",
+    ],
+    answer: 1,
+    explain: "Voltage on both sides means the filament is intact and connects the feed through to the earth terminal, but no current flows, so the earth path is open. A blown filament would leave the earth side at 0 V; a blown fuse gives 0 V on both sides.",
+  },
+  // 4.3 Starting systems
+  {
+    id: "m3b-03", module: M, chapter: "m3-starting", kind: "diagnosis",
+    q: "Pressing the start button gives a firm click from the relay, but the starter does not turn. The battery rests at 12.8 V. Which test comes next?",
+    options: [
+      "Replace the starter clutch",
+      "Measure the voltage at the starter terminal and the drop across the relay contacts while pressing start",
+      "Test the clutch and neutral switches",
+      "Fit a larger main fuse",
+    ],
+    answer: 1,
+    explain: "The click proves that the control circuit and interlocks work and the relay coil pulls in. The fault is in the heavy circuit: burnt relay contacts, a poor cable or terminal, or the starter itself. Voltage at the starter terminal and across the relay while cranking locates it.",
+  },
+  {
+    id: "m3b-04", module: M, chapter: "m3-starting", kind: "calc",
+    q: "A starter motor spins at 4200 r/min and drives the crank through a 14:1 reduction. At what speed is the engine cranked?",
+    options: ["30 r/min", "300 r/min", "3000 r/min", "58 800 r/min"],
+    answer: 1,
+    explain: "Crank speed = motor speed / reduction = 4200 / 14 = 300 r/min. The same 14:1 multiplies the motor torque at the crank, less the gear losses.",
+  },
 ];
