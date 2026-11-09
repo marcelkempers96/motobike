@@ -17,7 +17,7 @@ async function scroll(p, frame, px, frames) {
 const hold = async (frame, n) => { for (let i = 0; i < n; i++) await frame(); };
 async function tap(p, frame, sel, after = 10) { const e = await p.$(sel); if (e) { await e.scrollIntoViewIfNeeded(); await e.click(); } await hold(frame, after); }
 async function bike(p, mode, name, secs = 5, dx = 330) {
-  await open(p, 'overview/?mode=' + mode, 5000, 3); await center(p, '#ute-moto-stage', 235);
+  await open(p, 'overview/?mode=' + mode, 5000, 3); await center(p, '#ute-moto-stage', 70);
   await recordFrames(p, name, secs, async (f) => { await hold(f, 6); await orbit(p, f, '#ute-moto-stage', Math.round(secs * 30) - 12, dx, -10, [0.2, 0.5]); });
 }
 async function page(p, url, name, secs, px, startSel, wait = 2500) {
@@ -25,7 +25,27 @@ async function page(p, url, name, secs, px, startSel, wait = 2500) {
   await recordFrames(p, name, secs, async (f) => { await hold(f, 10); await scroll(p, f, px, Math.round(secs * 30) - 20); });
 }
 
+async function tapbike(p, mode, part, name) {
+  await open(p, 'overview/?mode=' + mode, 5000, 3); await center(p, '#ute-moto-stage', 70);
+  await recordFrames(p, name, 7, async (f) => {
+    await orbit(p, f, '#ute-moto-stage', 95, 300, -10, [0.2, 0.5]);                 // turntable
+    await p.click(`.mz-part[data-part="${part}"]`).catch(() => {});
+    for (let i = 0; i < 8; i++) { await f(); await real(300); }
+    await center(p, '#mz-cv3d', 90); await hold(f, 6);
+    const v = await p.$('#mz-cv3d'); if (v) await orbit(p, f, '#mz-cv3d', 50, 160, -10, [0.3, 0.5]);
+    await hold(f, 25);
+  });
+}
 const S = {
+  t01_motocross: (p) => tapbike(p, '2t', 'engine', 't01_motocross'),
+  t02_step_through: (p) => tapbike(p, 'st', 'clutch', 't02_step_through'),
+  t03_boda: (p) => tapbike(p, 'bb', 'chain', 't03_boda'),
+  t04_pioneer: (p) => tapbike(p, 'pi', 'engine', 't04_pioneer'),
+  t05_electric_motor: (p) => tapbike(p, 'elec', 'motor', 't05_electric_motor'),
+  t06_superbike_brake: (p) => tapbike(p, 'sb', 'brake', 't06_superbike_brake'),
+  t07_cruiser_engine: (p) => tapbike(p, 'cu', 'engine', 't07_cruiser_engine'),
+  t08_vintage_carb: (p) => tapbike(p, 'vt', 'carb', 't08_vintage_carb'),
+  t09_scooter_cvt: (p) => tapbike(p, 'sc', 'cvt', 't09_scooter_cvt'),
   r01_classic: (p) => bike(p, '4t', 'r01_classic'),
   r02_superbike: (p) => bike(p, 'sb', 'r02_superbike'),
   r03_vintage: (p) => bike(p, 'vt', 'r03_vintage'),
@@ -42,7 +62,7 @@ const S = {
     });
   },
   async r09_engine(p) {
-    await open(p, 'engine/', 6000, 2); await center(p, '#view', 235);
+    await open(p, 'engine/', 6000, 2); await center(p, '#view', 70);
     await p.click('[data-ts="0.2"]').catch(() => {}); await p.click('#bKick').catch(() => {}); const { settle } = await stepper(p); await settle(3);
     await recordFrames(p, 'r09_engine', 7, async (f) => {
       await orbit(p, f, '#view', 80, 200, -10, [0.3, 0.5]);

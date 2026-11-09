@@ -198,5 +198,77 @@
   "title": "Types of motorcycle",
   "caption": "Standard, cruiser, cafe racer, motocross, boda boda and more: what each is good for and how they are built. Link in bio.",
   "tags": "#motorcycletypes #biketypes #adventurebike #motocross #bodaboda"
+ },
+ {
+  "id": "t01_motocross",
+  "l1": "Two-stroke motocross",
+  "l2": "tap the engine",
+  "title": "Two-stroke, inside",
+  "caption": "A two-stroke motocross bike on the turntable, then into the engine: ports, piston and expansion chamber, all in 3D. Link in bio.",
+  "tags": "#motocross #2stroke #dirtbike #mx #enduro"
+ },
+ {
+  "id": "t02_step_through",
+  "l1": "The step-through",
+  "l2": "how the clutch works",
+  "title": "Step-through, explained",
+  "caption": "The world's best-selling motorcycle layout. Spin it, then tap the clutch to see how it engages. Link in bio.",
+  "tags": "#supercub #stepthrough #commuter #honda #motorcycleclutch"
+ },
+ {
+  "id": "t03_boda",
+  "l1": "Boda boda",
+  "l2": "the chain, up close",
+  "title": "Boda boda",
+  "caption": "The workhorse of East Africa in 3D. Tap the chain and sprockets to see how the drive works and how to look after it. Link in bio.",
+  "tags": "#bodaboda #kenya #uganda #africa #chainmaintenance"
+ },
+ {
+  "id": "t04_pioneer",
+  "l1": "1901 pioneer",
+  "l2": "where it all began",
+  "title": "The first motorcycles",
+  "caption": "A 1901 motor-bicycle: an engine bolted into a bicycle frame. Spin it, then look inside the engine. Link in bio.",
+  "tags": "#motorcyclehistory #vintagemotorcycle #antique #pioneer #history"
+ },
+ {
+  "id": "t05_electric_motor",
+  "l1": "Electric motor",
+  "l2": "see it spin",
+  "title": "Inside the e-motor",
+  "caption": "Tap the motor of an electric motorcycle and watch the rotor turn. Magnets, windings and shaft, all named. Link in bio.",
+  "tags": "#electricmotor #ev #electricmotorcycle #emobility #engineering"
+ },
+ {
+  "id": "t06_superbike_brake",
+  "l1": "Superbike brakes",
+  "l2": "floating disc, 4 pistons",
+  "title": "Superbike brakes",
+  "caption": "A floating disc and a four-piston radial caliper, turning in 3D. Every part named. Link in bio.",
+  "tags": "#motorcyclebrakes #brembo #superbike #brakes #trackday"
+ },
+ {
+  "id": "t07_cruiser_engine",
+  "l1": "Cruiser V-twin",
+  "l2": "the engine, in 3D",
+  "title": "V-twin engine",
+  "caption": "The big air-cooled V-twin of a cruiser, from the outside in. Spin the bike, then open the engine. Link in bio.",
+  "tags": "#vtwin #cruiser #harleydavidson #motorcycleengine #bikerlife"
+ },
+ {
+  "id": "t08_vintage_carb",
+  "l1": "Vintage V-twin",
+  "l2": "the carburettor",
+  "title": "Vintage carburettor",
+  "caption": "Tap the carburettor of a 1910s V-twin and turn it in 3D. How fuel and air were mixed a century ago. Link in bio.",
+  "tags": "#carburetor #vintagemotorcycle #vtwin #classicbikes #restoration"
+ },
+ {
+  "id": "t09_scooter_cvt",
+  "l1": "Scooter CVT",
+  "l2": "twist and go, explained",
+  "title": "How a CVT works",
+  "caption": "Tap the CVT of an automatic scooter: two pulleys and a belt that change ratio as you ride. Link in bio.",
+  "tags": "#cvt #scooter #transmission #howitworks #motorscooter"
  }
 ]
