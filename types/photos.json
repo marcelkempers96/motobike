@@ -1,381 +1,381 @@
 {
-  "pioneer": {
-    "missing": true,
-    "verified": false,
-    "title": "File:1894 Hildebrand and Wolfmüller (1) - The Art of the Motorcycle - Memphis.jpg",
-    "subject": "Hildebrand & Wolfmüller, 1894 (museum exhibit, Memphis)",
-    "file_page": "https://commons.wikimedia.org/wiki/File:1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/0/07/1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg/1280px-1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:ZweiRadMuseumNSU Hildebrand Wolfmueller.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:ZweiRadMuseumNSU_Hildebrand_Wolfmueller.JPG"
-      }
-    ]
-  },
-  "vintage-vtwin": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Harley-Davidson 27J 1927.jpg",
-    "subject": "Harley-Davidson Model J V-twin, 1927",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_27J_1927.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Harley-Davidson_27J_1927.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Harley-Davidson_27J_1927.jpg/1280px-Harley-Davidson_27J_1927.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:1924 Indian V 2, 1240cc, 100kmh.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1924_Indian_V_2%2C_1240cc%2C_100kmh.JPG"
-      },
-      {
-        "title": "File:1926 Harley Davidson (5757327143).jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1926_Harley_Davidson_%285757327143%29.jpg"
-      }
-    ]
-  },
-  "standard": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Triumph Bonneville T120 (1960).jpg",
-    "subject": "Triumph Bonneville T120, 1960",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_T120_%281960%29.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Triumph_Bonneville_T120_%281960%29.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Triumph_Bonneville_T120_%281960%29.jpg/1280px-Triumph_Bonneville_T120_%281960%29.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Yamaha SR400.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Yamaha_SR400.jpg"
-      },
-      {
-        "title": "File:1968 Triumph Bonneville (7971577368).jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1968_Triumph_Bonneville_%287971577368%29.jpg"
-      }
-    ]
-  },
-  "scooter": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Vespa N 125cc 1953 b.jpg",
-    "subject": "Vespa 125 (N), 1953",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Vespa_N_125cc_1953_b.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Vespa_N_125cc_1953_b.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Vespa_N_125cc_1953_b.jpg/1280px-Vespa_N_125cc_1953_b.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:1959 Vespa VBA 150.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1959_Vespa_VBA_150.jpg"
-      }
-    ]
-  },
-  "step-through": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Honda super cub, 1st Gen. 1958, Left side.jpg",
-    "subject": "Honda Super Cub C100, 1st generation 1958, left side",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg/1280px-Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Honda Super Cub C100 (23031013550).jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Super_Cub_C100_%2823031013550%29.jpg"
-      },
-      {
-        "title": "File:Honda SuperCub C100.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Honda_SuperCub_C100.jpg"
-      }
-    ]
-  },
-  "boda-boda": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Boda-Boda-Uganda.jpg",
-    "subject": "Boda boda motorcycle taxi, Uganda",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Boda-Boda-Uganda.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Boda-Boda-Uganda.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Boda-Boda-Uganda.jpg/1280px-Boda-Boda-Uganda.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Boda boda biker and a passenger joining the main road.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Boda_boda_biker_and_a_passenger_joining_the_main_road.jpg"
-      },
-      {
-        "title": "File:Boda Boda.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Boda_Boda.jpg"
-      }
-    ]
-  },
-  "cafe-racer": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Triton, 2006.jpg",
-    "subject": "Triton (Triumph engine, Norton Featherbed frame) cafe racer",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Triton%2C_2006.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Triton%2C_2006.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Triton%2C_2006.jpg/1280px-Triton%2C_2006.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:TRITON.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:TRITON.jpg"
-      }
-    ]
-  },
-  "cruiser": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Harley-Davidson FLST Heritage Softail 1987.jpg",
-    "subject": "Harley-Davidson FLST Heritage Softail, 1987",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_FLST_Heritage_Softail_1987.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Harley-Davidson_FLST_Heritage_Softail_1987.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Harley-Davidson_FLST_Heritage_Softail_1987.jpg/1280px-Harley-Davidson_FLST_Heritage_Softail_1987.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:2008 Harley Davidson FXSTC Softail Custom.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:2008_Harley_Davidson_FXSTC_Softail_Custom.jpg"
-      },
-      {
-        "title": "File:1994 Harley Davidson Softail Heritage (7162786663).jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1994_Harley_Davidson_Softail_Heritage_%287162786663%29.jpg"
-      }
-    ]
-  },
-  "motocross": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Yamaha YZ125 Motorcycle.jpg",
-    "subject": "Yamaha YZ125 two-stroke motocross bike",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Yamaha_YZ125_Motorcycle.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Yamaha_YZ125_Motorcycle.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Yamaha_YZ125_Motorcycle.jpg/1280px-Yamaha_YZ125_Motorcycle.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:1974 Yamaha YZ250 (OW12).JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1974_Yamaha_YZ250_%28OW12%29.JPG"
-      },
-      {
-        "title": "File:1987 Yamaha YZ125M.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:1987_Yamaha_YZ125M.JPG"
-      }
-    ]
-  },
-  "trials": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Bultaco 350 Sherpa T.jpg",
-    "subject": "Bultaco Sherpa T 350",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Bultaco_350_Sherpa_T.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/2/26/Bultaco_350_Sherpa_T.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bultaco_350_Sherpa_T.jpg/1280px-Bultaco_350_Sherpa_T.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Bultaco Sherpa T 125 1978 b.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Bultaco_Sherpa_T_125_1978_b.JPG"
-      },
-      {
-        "title": "File:Montesa Cota 348 Trail 1977.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Montesa_Cota_348_Trail_1977.JPG"
-      }
-    ]
-  },
-  "superbike": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Honda CBR1000RR Fireblade.jpg",
-    "subject": "Honda CBR1000RR Fireblade",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CBR1000RR_Fireblade.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Honda_CBR1000RR_Fireblade.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Honda_CBR1000RR_Fireblade.jpg/1280px-Honda_CBR1000RR_Fireblade.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:2015 Yamaha YZF-R1.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:2015_Yamaha_YZF-R1.JPG"
-      },
-      {
-        "title": "File:2024 Honda CBR1000RR-R Fireblade SP.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:2024_Honda_CBR1000RR-R_Fireblade_SP.jpg"
-      }
-    ]
-  },
-  "superbike-classic": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Honda CB750 (1969) - 15858705015.jpg",
-    "subject": "Honda CB750 Four, 1969",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CB750_%281969%29_-_15858705015.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Honda_CB750_%281969%29_-_15858705015.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Honda_CB750_%281969%29_-_15858705015.jpg/1280px-Honda_CB750_%281969%29_-_15858705015.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Honda CB 750 Four.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CB_750_Four.jpg"
-      },
-      {
-        "title": "File:Honda CB 750 Four (16850424686).jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CB_750_Four_%2816850424686%29.jpg"
-      }
-    ]
-  },
-  "touring": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Honda Gold Wing GL 1800 (SC79 - 2018).jpg",
-    "subject": "Honda Gold Wing GL1800 (SC79), 2018",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg/1280px-Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Honda Gold Wing GL1800 White.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Gold_Wing_GL1800_White.jpg"
-      },
-      {
-        "title": "File:Honda Goldwing V6 GL 1800 SE 2008 (15108431121).jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Goldwing_V6_GL_1800_SE_2008_%2815108431121%29.jpg"
-      }
-    ]
-  },
-  "adventure": {
-    "missing": true,
-    "verified": false,
-    "title": "File:BMW R80GS 1981 B.jpg",
-    "subject": "BMW R80G/S, 1981",
-    "file_page": "https://commons.wikimedia.org/wiki/File:BMW_R80GS_1981_B.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/7/77/BMW_R80GS_1981_B.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/BMW_R80GS_1981_B.jpg/1280px-BMW_R80GS_1981_B.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:BMW R 80 GS.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:BMW_R_80_GS.jpg"
-      },
-      {
-        "title": "File:Bmw-r80-gs.JPG",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Bmw-r80-gs.JPG"
-      }
-    ]
-  },
-  "naked": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Ducati 750 Monster Yellow.jpg",
-    "subject": "Ducati Monster 750",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Ducati_750_Monster_Yellow.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/7/74/Ducati_750_Monster_Yellow.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ducati_750_Monster_Yellow.jpg/1280px-Ducati_750_Monster_Yellow.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Ducati Monster 1200s.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Ducati_Monster_1200s.jpg"
-      },
-      {
-        "title": "File:Ducati 400 Monster.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Ducati_400_Monster.jpg"
-      }
-    ]
-  },
-  "electric-motorcycle": {
-    "missing": true,
-    "verified": false,
-    "title": "File:2014 Zero Motorcycles Zero S.JPG",
-    "subject": "Zero S electric motorcycle, 2014",
-    "file_page": "https://commons.wikimedia.org/wiki/File:2014_Zero_Motorcycles_Zero_S.JPG",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/c/ce/2014_Zero_Motorcycles_Zero_S.JPG",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/2014_Zero_Motorcycles_Zero_S.JPG/1280px-2014_Zero_Motorcycles_Zero_S.JPG",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:ZeroS.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:ZeroS.jpg"
-      },
-      {
-        "title": "File:2011 zero-xu.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:2011_zero-xu.jpg"
-      }
-    ]
-  },
-  "electric-scooter": {
-    "missing": true,
-    "verified": false,
-    "title": "File:Gogoro S2 ABS 20200131.jpg",
-    "subject": "Gogoro S2 ABS electric scooter",
-    "file_page": "https://commons.wikimedia.org/wiki/File:Gogoro_S2_ABS_20200131.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Gogoro_S2_ABS_20200131.jpg",
-    "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Gogoro_S2_ABS_20200131.jpg/1280px-Gogoro_S2_ABS_20200131.jpg",
-    "author": null,
-    "licence": null,
-    "licence_url": null,
-    "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
-    "alternates": [
-      {
-        "title": "File:Gogoro 2 Series Delight.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Gogoro_2_Series_Delight.jpg"
-      },
-      {
-        "title": "File:Gogoro S3.jpg",
-        "file_page": "https://commons.wikimedia.org/wiki/File:Gogoro_S3.jpg"
-      }
-    ]
-  }
+ "pioneer": {
+  "missing": true,
+  "verified": false,
+  "title": "File:1894 Hildebrand and Wolfmüller (1) - The Art of the Motorcycle - Memphis.jpg",
+  "subject": "Hildebrand & Wolfmüller, 1894 (museum exhibit, Memphis)",
+  "file_page": "https://commons.wikimedia.org/wiki/File:1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/0/07/1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg/1280px-1894_Hildebrand_and_Wolfm%C3%BCller_%281%29_-_The_Art_of_the_Motorcycle_-_Memphis.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:ZweiRadMuseumNSU Hildebrand Wolfmueller.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:ZweiRadMuseumNSU_Hildebrand_Wolfmueller.JPG"
+   }
+  ]
+ },
+ "vintage-vtwin": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Harley-Davidson 27J 1927.jpg",
+  "subject": "Harley-Davidson Model J V-twin, 1927",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_27J_1927.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Harley-Davidson_27J_1927.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Harley-Davidson_27J_1927.jpg/1280px-Harley-Davidson_27J_1927.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:1924 Indian V 2, 1240cc, 100kmh.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1924_Indian_V_2%2C_1240cc%2C_100kmh.JPG"
+   },
+   {
+    "title": "File:1926 Harley Davidson (5757327143).jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1926_Harley_Davidson_%285757327143%29.jpg"
+   }
+  ]
+ },
+ "standard": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Triumph Bonneville T120 (1960).jpg",
+  "subject": "Triumph Bonneville T120, 1960",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_T120_%281960%29.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Triumph_Bonneville_T120_%281960%29.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Triumph_Bonneville_T120_%281960%29.jpg/1280px-Triumph_Bonneville_T120_%281960%29.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Yamaha SR400.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Yamaha_SR400.jpg"
+   },
+   {
+    "title": "File:1968 Triumph Bonneville (7971577368).jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1968_Triumph_Bonneville_%287971577368%29.jpg"
+   }
+  ]
+ },
+ "scooter": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Vespa N 125cc 1953 b.jpg",
+  "subject": "Vespa 125 (N), 1953",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Vespa_N_125cc_1953_b.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Vespa_N_125cc_1953_b.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Vespa_N_125cc_1953_b.jpg/1280px-Vespa_N_125cc_1953_b.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:1959 Vespa VBA 150.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1959_Vespa_VBA_150.jpg"
+   }
+  ]
+ },
+ "step-through": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Honda super cub, 1st Gen. 1958, Left side.jpg",
+  "subject": "Honda Super Cub C100, 1st generation 1958, left side",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg/1280px-Honda_super_cub%2C_1st_Gen._1958%2C_Left_side.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Honda Super Cub C100 (23031013550).jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Super_Cub_C100_%2823031013550%29.jpg"
+   },
+   {
+    "title": "File:Honda SuperCub C100.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_SuperCub_C100.jpg"
+   }
+  ]
+ },
+ "boda-boda": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Boda-Boda-Uganda.jpg",
+  "subject": "Boda boda motorcycle taxi, Uganda",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Boda-Boda-Uganda.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Boda-Boda-Uganda.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Boda-Boda-Uganda.jpg/1280px-Boda-Boda-Uganda.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Boda boda biker and a passenger joining the main road.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Boda_boda_biker_and_a_passenger_joining_the_main_road.jpg"
+   },
+   {
+    "title": "File:Boda Boda.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Boda_Boda.jpg"
+   }
+  ]
+ },
+ "cafe-racer": {
+  "missing": true,
+  "verified": false,
+  "title": null,
+  "subject": "Triton (Triumph engine, Norton Featherbed frame) cafe racer",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Triton%2C_2006.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Triton%2C_2006.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Triton%2C_2006.jpg/1280px-Triton%2C_2006.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "WRONG FILE: \"Triton, 2006.jpg\" on Commons is a Mitsubishi Triton pickup, not the Triton motorcycle. Replaced on the site by the Motopedia render (types/media/cafe-racer-render.jpg).",
+  "alternates": [
+   {
+    "title": "File:TRITON.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:TRITON.jpg"
+   }
+  ]
+ },
+ "cruiser": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Harley-Davidson FLST Heritage Softail 1987.jpg",
+  "subject": "Harley-Davidson FLST Heritage Softail, 1987",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_FLST_Heritage_Softail_1987.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Harley-Davidson_FLST_Heritage_Softail_1987.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Harley-Davidson_FLST_Heritage_Softail_1987.jpg/1280px-Harley-Davidson_FLST_Heritage_Softail_1987.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:2008 Harley Davidson FXSTC Softail Custom.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:2008_Harley_Davidson_FXSTC_Softail_Custom.jpg"
+   },
+   {
+    "title": "File:1994 Harley Davidson Softail Heritage (7162786663).jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1994_Harley_Davidson_Softail_Heritage_%287162786663%29.jpg"
+   }
+  ]
+ },
+ "motocross": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Yamaha YZ125 Motorcycle.jpg",
+  "subject": "Yamaha YZ125 two-stroke motocross bike",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Yamaha_YZ125_Motorcycle.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Yamaha_YZ125_Motorcycle.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Yamaha_YZ125_Motorcycle.jpg/1280px-Yamaha_YZ125_Motorcycle.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:1974 Yamaha YZ250 (OW12).JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1974_Yamaha_YZ250_%28OW12%29.JPG"
+   },
+   {
+    "title": "File:1987 Yamaha YZ125M.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:1987_Yamaha_YZ125M.JPG"
+   }
+  ]
+ },
+ "trials": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Bultaco 350 Sherpa T.jpg",
+  "subject": "Bultaco Sherpa T 350",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Bultaco_350_Sherpa_T.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/2/26/Bultaco_350_Sherpa_T.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bultaco_350_Sherpa_T.jpg/1280px-Bultaco_350_Sherpa_T.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Bultaco Sherpa T 125 1978 b.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Bultaco_Sherpa_T_125_1978_b.JPG"
+   },
+   {
+    "title": "File:Montesa Cota 348 Trail 1977.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Montesa_Cota_348_Trail_1977.JPG"
+   }
+  ]
+ },
+ "superbike": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Honda CBR1000RR Fireblade.jpg",
+  "subject": "Honda CBR1000RR Fireblade",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CBR1000RR_Fireblade.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Honda_CBR1000RR_Fireblade.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Honda_CBR1000RR_Fireblade.jpg/1280px-Honda_CBR1000RR_Fireblade.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:2015 Yamaha YZF-R1.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:2015_Yamaha_YZF-R1.JPG"
+   },
+   {
+    "title": "File:2024 Honda CBR1000RR-R Fireblade SP.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:2024_Honda_CBR1000RR-R_Fireblade_SP.jpg"
+   }
+  ]
+ },
+ "superbike-classic": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Honda CB750 (1969) - 15858705015.jpg",
+  "subject": "Honda CB750 Four, 1969",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CB750_%281969%29_-_15858705015.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Honda_CB750_%281969%29_-_15858705015.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Honda_CB750_%281969%29_-_15858705015.jpg/1280px-Honda_CB750_%281969%29_-_15858705015.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Honda CB 750 Four.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CB_750_Four.jpg"
+   },
+   {
+    "title": "File:Honda CB 750 Four (16850424686).jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_CB_750_Four_%2816850424686%29.jpg"
+   }
+  ]
+ },
+ "touring": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Honda Gold Wing GL 1800 (SC79 - 2018).jpg",
+  "subject": "Honda Gold Wing GL1800 (SC79), 2018",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg/1280px-Honda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Honda Gold Wing GL1800 White.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Gold_Wing_GL1800_White.jpg"
+   },
+   {
+    "title": "File:Honda Goldwing V6 GL 1800 SE 2008 (15108431121).jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Honda_Goldwing_V6_GL_1800_SE_2008_%2815108431121%29.jpg"
+   }
+  ]
+ },
+ "adventure": {
+  "missing": true,
+  "verified": false,
+  "title": "File:BMW R80GS 1981 B.jpg",
+  "subject": "BMW R80G/S, 1981",
+  "file_page": "https://commons.wikimedia.org/wiki/File:BMW_R80GS_1981_B.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/7/77/BMW_R80GS_1981_B.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/BMW_R80GS_1981_B.jpg/1280px-BMW_R80GS_1981_B.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:BMW R 80 GS.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:BMW_R_80_GS.jpg"
+   },
+   {
+    "title": "File:Bmw-r80-gs.JPG",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Bmw-r80-gs.JPG"
+   }
+  ]
+ },
+ "naked": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Ducati 750 Monster Yellow.jpg",
+  "subject": "Ducati Monster 750",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Ducati_750_Monster_Yellow.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/7/74/Ducati_750_Monster_Yellow.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ducati_750_Monster_Yellow.jpg/1280px-Ducati_750_Monster_Yellow.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Ducati Monster 1200s.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Ducati_Monster_1200s.jpg"
+   },
+   {
+    "title": "File:Ducati 400 Monster.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Ducati_400_Monster.jpg"
+   }
+  ]
+ },
+ "electric-motorcycle": {
+  "missing": true,
+  "verified": false,
+  "title": "File:2014 Zero Motorcycles Zero S.JPG",
+  "subject": "Zero S electric motorcycle, 2014",
+  "file_page": "https://commons.wikimedia.org/wiki/File:2014_Zero_Motorcycles_Zero_S.JPG",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/c/ce/2014_Zero_Motorcycles_Zero_S.JPG",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/2014_Zero_Motorcycles_Zero_S.JPG/1280px-2014_Zero_Motorcycles_Zero_S.JPG",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:ZeroS.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:ZeroS.jpg"
+   },
+   {
+    "title": "File:2011 zero-xu.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:2011_zero-xu.jpg"
+   }
+  ]
+ },
+ "electric-scooter": {
+  "missing": true,
+  "verified": false,
+  "title": "File:Gogoro S2 ABS 20200131.jpg",
+  "subject": "Gogoro S2 ABS electric scooter",
+  "file_page": "https://commons.wikimedia.org/wiki/File:Gogoro_S2_ABS_20200131.jpg",
+  "original": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Gogoro_S2_ABS_20200131.jpg",
+  "thumb_1280": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Gogoro_S2_ABS_20200131.jpg/1280px-Gogoro_S2_ABS_20200131.jpg",
+  "author": null,
+  "licence": null,
+  "licence_url": null,
+  "notes": "UNVERIFIED: Commons file pages could not be fetched (WebFetch returns url_not_found for every commons.wikimedia.org and en.wikipedia.org page; shell egress proxy returns 403 for commons/upload.wikimedia.org). Title comes from a web search result only; author, licence, date, resolution and composition were NOT checked. original/thumb URLs are computed from the MD5 of the filename (standard Commons layout) and will resolve if the title is exact; the 1280px thumb fails if the original is narrower than 1280px.",
+  "alternates": [
+   {
+    "title": "File:Gogoro 2 Series Delight.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Gogoro_2_Series_Delight.jpg"
+   },
+   {
+    "title": "File:Gogoro S3.jpg",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Gogoro_S3.jpg"
+   }
+  ]
+ }
 }

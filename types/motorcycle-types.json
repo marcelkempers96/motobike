@@ -299,16 +299,18 @@
    "plate_svg": "plates/T05.svg",
    "plate_png": "plates/T05.png",
    "thumb": "thumbs/cafe-racer.jpg",
-   "photo": {
-    "title": "File:Triton, 2006.jpg",
-    "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Triton%2C_2006.jpg?width=1600",
-    "page": "https://commons.wikimedia.org/wiki/File:Triton%2C_2006.jpg",
-    "subject": "Triton (Triumph engine, Norton Featherbed frame) cafe racer",
-    "author": "see file page",
-    "licence": "licence on file page",
-    "licence_url": "https://commons.wikimedia.org/wiki/File:Triton%2C_2006.jpg",
-    "verified": false
-   }
+   "photos": [
+    {
+     "file": "media/cafe-racer-render.jpg",
+     "subject": "Cafe racer, Motopedia 3D render",
+     "author": "Transitions Lab",
+     "licence": "CC BY-SA 4.0",
+     "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "",
+     "verified": true,
+     "title": "Motopedia render"
+    }
+   ]
   },
   {
    "id": "motocross",
