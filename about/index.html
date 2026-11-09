@@ -41,6 +41,7 @@
   .ute-chapter .lead { font-size: 16px; }
 }
 
+.mz-about-video { margin: 0; } .mz-about-video video { display: block; width: 100%; height: auto; aspect-ratio: 1; background: #141414; border: 1px solid var(--line); } .mz-about-video figcaption { margin-top: 10px; font-size: 14px; color: var(--mute); }
 .mz-about-hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 56px; align-items: center; }
 .mz-brand-box { border: 1px solid var(--line); padding: 40px 32px; display: flex; align-items: center; justify-content: center; }
 .mz-lockup { width: 100%; max-width: 420px; height: auto; display: block; }
@@ -94,6 +95,7 @@
   @media (max-width: 860px) { .mz-fundi-grid { grid-template-columns: 1fr; } }
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://motobike-five.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://motobike-five.vercel.app/about/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Motopedia in 60 seconds","description":"A tour of Motopedia, the open motorcycle encyclopedia: 3D bikes, cockpit and dyno, Bike builder, Wiring Lab, the engine, the course and repair guides.","thumbnailUrl":"https://motobike-five.vercel.app/assets/video/motopedia-showreel-poster.jpg","contentUrl":"https://motobike-five.vercel.app/assets/video/motopedia-showreel.mp4","uploadDate":"2026-11-09","duration":"PT59S"}</script>
 </head>
 <body>
 <div class="ute-page">
@@ -108,7 +110,7 @@
       <h1>An open technical course on how motorcycles work</h1>
       <p>Motopedia follows the motorcycle from the first combustion stroke to the battery management system of an electric bike. It explains every system well enough for you to describe it, specify it and repair it, and it is free to use, adapt and share.</p>
     </div>
-    <div class="mz-brand-box"><img class="mz-lockup" src="../assets/brand/motopedia-logo-tagline.webp" alt="Motopedia, the open motorcycle encyclopedia" width="1433" height="424" style="width:100%;height:auto;max-width:360px"></div>
+    <figure class="mz-about-video"><video controls playsinline preload="metadata" poster="../assets/video/motopedia-showreel-poster.jpg" width="720" height="720"><source src="../assets/video/motopedia-showreel.mp4" type="video/mp4">Your browser cannot play this video.</video><figcaption>Motopedia in 60 seconds: the 3D bikes, the cockpit and dyno, the Bike builder, the Wiring Lab, the engine, the course and the repair guides.</figcaption></figure>
   </section>
   <section class="ute-chapter mz-story">
     <div class="ute-chapter-kicker"><span class="ute-chapter-num">★</span><span class="ute-label">Where it came from</span></div>

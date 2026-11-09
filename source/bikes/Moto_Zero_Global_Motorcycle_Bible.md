@@ -1,6 +1,6 @@
 # Moto Zero — Global Motorcycle Bible
 
-**Research edition 1.0 · 4 November 2026 · Prepared for Marcel Kempers / Transitions Lab**
+**Research edition 1.0 · 4 November 2026 · Prepared for Transitions Lab**
 
 500 selected model profiles · 30 makes · 134 live Moto Zero part entries · 185 repair procedures · 274 symptoms indexed
 

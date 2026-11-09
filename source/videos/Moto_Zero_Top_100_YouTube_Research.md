@@ -1,7 +1,7 @@
 # Moto Zero — 100 high-view YouTube videos
 ## Motorcycle repairs, maintenance, modifications and engineering
 
-**Research date: 6 November 2026 · Prepared for Marcel Kempers**
+**Research date: 6 November 2026 · Prepared for Transitions Lab**
 
 A curated research library of **100 videos**, each with **at least 500,000 views verified from its public YouTube watch-page metadata**. The selected set is ranked by the observed view count. There is no upper limit: videos above 10 million views are included.
 

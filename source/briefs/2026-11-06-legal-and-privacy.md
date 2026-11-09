@@ -39,7 +39,7 @@ Link all legal pages to each other at the bottom of each. Do not invent a compan
 number or street address: write "available on request" where an imprint normally lists them.
 
 ## Task 2: remove the founder's name and face
-- Remove every occurrence of the founder's name ("Marcel Kempers", "Marcel" as a person) from
+- Remove every occurrence of the founder's name (full name and first name) from
   visible text, meta tags, JSON-LD and alt texts in the published site (HTML, JS under `assets/`
   except vendored libraries). Replace with "Transitions Lab" or "the team". Exclude `source/`,
   `docs/` and `inbox/` (not published). The email address `marcel@transitionslab.org` is used by

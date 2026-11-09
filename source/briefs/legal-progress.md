@@ -37,7 +37,7 @@ Brief: `source/briefs/2026-11-06-legal-and-privacy.md`.
 - NOT done on purpose: the home page gallery still uses `kenya-crew.jpg`, because the coordinator is
   replacing that section. The file `assets/photos/kenya-crew.jpg` was kept for that reason. Delete it once
   the home section is gone (no other page uses it).
-- Final `grep -rIi "kempers"` over published files (excluding source/, docs/, inbox/, node_modules):
+- Final search for the founder’s surname over published files (excluding source/, docs/, inbox/, node_modules):
   no matches. No "Marcel" in visible text either; only the email address remains.
 
 ## Tests

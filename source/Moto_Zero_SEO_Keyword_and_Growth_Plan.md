@@ -1,6 +1,6 @@
 # Moto Zero — SEO keyword research and traffic growth plan
 
-**Prepared for Marcel Kempers · 5 November 2026**  
+**Prepared for Transitions Lab · 5 November 2026**  
 **Website:** https://motobike-five.vercel.app/  
 **Scope:** Global audience, English-language search first. Audit and recommendations only; no website changes made.
 
