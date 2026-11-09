@@ -92,9 +92,9 @@ const SCENES = {
     await p.dispatchEvent('#bElec', 'pointerdown').catch(() => {}); await settle(2.5); await p.dispatchEvent('#bElec', 'pointerup').catch(() => {});
     await p.click('#bKick').catch(() => {}); await settle(3);
     await recordFrames(p, 'engine', 6, async (frame) => {
-      await orbit(p, frame, '#view', 75, 380, -20, [0.3, 0.5]);
+      await orbit(p, frame, '#view', 75, 260, -10, [0.3, 0.5]); { const b = await (await p.$('#view')).boundingBox(); await p.mouse.move(b.x + b.width / 2, b.y + b.height / 2); }
       const s = await p.$('#explode');
-      for (let v = 0; v <= 90; v += 1.5) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await frame(); }
+      for (let v = 0; v <= 90; v += 1.5) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await p.mouse.wheel(0, 14); await frame(); }
     });
   },
   // the carburettor turned by hand inside course chapter 3.1
