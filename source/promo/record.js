@@ -79,12 +79,9 @@ async function bikeScene(p, mode, name) {
   await p.goto(BASE + 'overview/?mode=' + mode, { waitUntil: 'networkidle' }); await hideChrome(p); await cursor(p); await ws(6000);
   await p.evaluate(() => { const e = document.querySelector('#ute-moto-stage'); scrollTo(0, e.getBoundingClientRect().top + scrollY - 140); });
   await record(p, name, 7, async () => {
-    await moveClick(p, 'button:has-text("Run the bike")', 500); await ws(900);
-    const st = await p.$('#ute-moto-stage'); const b = await st.boundingBox();
-    await glide(p, b.x + b.width * 0.35, b.y + b.height * 0.5, 300);
-    await p.mouse.down(); await glide(p, b.x + b.width * 0.7, b.y + b.height * 0.45, 1800); await p.mouse.up(); await ws(500);
-    await moveClick(p, 'button:text-is("3/4")', 500); await ws(1400);
-    await moveClick(p, 'button:text-is("Front")', 500); await ws(1000);
+    await moveClick(p, 'button:has-text("Run the bike")', 500); await ws(1200);
+    await moveClick(p, '[data-cam="threeq"]', 500); await ws(2000);
+    await moveClick(p, '[data-cam="front"]', 500); await ws(1800);
   });
 }
 const SCENES = {
@@ -211,7 +208,7 @@ const SCENES = {
 (async () => {
   const which = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(SCENES);
   const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--hide-scrollbars', '--autoplay-policy=no-user-gesture-required'] });
-  const SLOW = { carb: 0.2, bikes_sb: 0.12, bikes_vt: 0.12, models: 0.5, overview: 0.1, chain: 0.2, builder: 0.25, engine: 0.25, cockpit: 0.3, wiring: 0.5 };
+  const SLOW = { carb: 0.2, bikes_sb: 0.2, bikes_vt: 0.2, models: 0.5, overview: 0.1, chain: 0.2, builder: 0.25, engine: 0.25, cockpit: 0.3, wiring: 0.5 };
   for (const s of which) {
     K = SLOW[s] || 1;
     const ctx = await b.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
