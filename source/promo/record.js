@@ -75,6 +75,18 @@ async function cursor(p) {   // a visible pointer, since screen captures do not 
     addEventListener('mousedown', () => c.classList.add('dn'), true); addEventListener('mouseup', () => c.classList.remove('dn'), true); });
 }
 
+async function bikeScene(p, mode, name) {
+  await p.goto(BASE + 'overview/?mode=' + mode, { waitUntil: 'networkidle' }); await hideChrome(p); await cursor(p); await ws(6000);
+  await p.evaluate(() => { const e = document.querySelector('#ute-moto-stage'); scrollTo(0, e.getBoundingClientRect().top + scrollY - 140); });
+  await record(p, name, 7, async () => {
+    await moveClick(p, 'button:has-text("Run the bike")', 500); await ws(900);
+    const st = await p.$('#ute-moto-stage'); const b = await st.boundingBox();
+    await glide(p, b.x + b.width * 0.35, b.y + b.height * 0.5, 300);
+    await p.mouse.down(); await glide(p, b.x + b.width * 0.7, b.y + b.height * 0.45, 1800); await p.mouse.up(); await ws(500);
+    await moveClick(p, 'button:text-is("3/4")', 500); await ws(1400);
+    await moveClick(p, 'button:text-is("Front")', 500); await ws(1000);
+  });
+}
 const SCENES = {
   // 1. 3D Overview: the bike turning, then a part is selected
   async overview(p) {
@@ -157,6 +169,21 @@ const SCENES = {
     await p.goto(BASE + 'learn/#m1-physics', { waitUntil: 'networkidle' }); await hideChrome(p); await ws(2500);
     await record(p, 'course', 6, async () => { await ws(500); await smoothScroll(p, await p.evaluate(() => document.querySelector('.mz-eq').getBoundingClientRect().top + scrollY - 140), 1800); await ws(800); await smoothScroll(p, await p.evaluate(() => scrollY + 700), 1600); await ws(800); });
   },
+  // 11-12. More bikes in the 3D Overview: superbike and vintage V-twin, running, orbiting and changing view
+  async bikes_sb(p) { await bikeScene(p, 'sb', 'bikes_sb'); },
+  async bikes_vt(p) { await bikeScene(p, 'vt', 'bikes_vt'); },
+  // 13. Plates on the Downloads page
+  async plates(p) {
+    await p.goto(BASE + 'downloads/#plates', { waitUntil: 'networkidle' }); await hideChrome(p); await ws(1500);
+    const y0 = await p.evaluate(() => (document.querySelector('.mz-plate-card')?.getBoundingClientRect().top || 600) + scrollY - 200);
+    await p.evaluate((y) => scrollTo(0, y), y0);
+    await record(p, 'plates', 6, async () => { await ws(600); await smoothScroll(p, y0 + 1500, 4600); await ws(500); });
+  },
+  // 14. The 3D model library
+  async models(p) {
+    await p.goto(BASE + 'models/', { waitUntil: 'networkidle' }); await hideChrome(p); await cursor(p); await ws(2500);
+    await record(p, 'models', 6, async () => { await ws(500); await smoothScroll(p, 900, 1800); await ws(600); await smoothScroll(p, 2400, 2200); await ws(600); });
+  },
   // 10. Home page: logo, tools and the repair section
   async home(p) {
     await p.goto(BASE, { waitUntil: 'networkidle' }); await hideChrome(p); await ws(1500);
@@ -167,7 +194,7 @@ const SCENES = {
 (async () => {
   const which = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(SCENES);
   const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--hide-scrollbars', '--autoplay-policy=no-user-gesture-required'] });
-  const SLOW = { overview: 0.1, chain: 0.2, builder: 0.25, engine: 0.25, cockpit: 0.3, wiring: 0.5 };
+  const SLOW = { bikes_sb: 0.12, bikes_vt: 0.12, models: 0.5, overview: 0.1, chain: 0.2, builder: 0.25, engine: 0.25, cockpit: 0.3, wiring: 0.5 };
   for (const s of which) {
     K = SLOW[s] || 1;
     const ctx = await b.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
