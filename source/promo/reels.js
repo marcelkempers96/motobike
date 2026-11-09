@@ -36,7 +36,33 @@ async function tapbike(p, mode, part, name) {
     await hold(f, 25);
   });
 }
+const jsClick = (p, sel) => p.evaluate((s) => { const e = document.querySelector(s); if (e) e.click(); }, sel);
+async function eng(p, name, cam, act, { start = true, ts = '0.2', secs = 7 } = {}) {
+  await open(p, 'engine/', 6000, 2); await center(p, '#view', 70);
+  await jsClick(p, `[data-ts="${ts}"]`);
+  if (start) { await jsClick(p, '#bElec'); const { settle } = await stepper(p); await settle(2.5); }
+  if (cam) { await jsClick(p, `[data-cam="${cam}"]`); const { settle } = await stepper(p); await settle(1.5); }
+  await recordFrames(p, name, secs, async (f) => { await act(f); });
+}
+const shiftUp = async (p, f, n, gap) => { for (let i = 0; i < n; i++) { await jsClick(p, '#bUp'); await hold(f, gap); } };
+const E = {
+  e01_valvetrain: (p) => eng(p, 'e01_valvetrain', 'top', async (f) => { await orbit(p, f, '#view', 200, 120, -10, [0.35, 0.5]); }),
+  e02_gearbox: (p) => eng(p, 'e02_gearbox', 'gearbox', async (f) => { await hold(f, 20); await shiftUp(p, f, 5, 36); }),
+  e03_clutch: (p) => eng(p, 'e03_clutch', 'clutch', async (f) => { await jsClick(p, '#bUp'); await hold(f, 50); await p.dispatchEvent('#bClutch', 'pointerdown'); await hold(f, 60); await p.dispatchEvent('#bClutch', 'pointerup'); await hold(f, 60); }),
+  e04_shift_drum: (p) => eng(p, 'e04_shift_drum', 'shift', async (f) => { await hold(f, 15); await shiftUp(p, f, 5, 32); await jsClick(p, '#bDown'); await hold(f, 30); }),
+  e05_generator: (p) => eng(p, 'e05_generator', 'gen', async (f) => { await orbit(p, f, '#view', 200, 140, 0, [0.35, 0.5]); }),
+  e06_starting: (p) => eng(p, 'e06_starting', 'start', async (f) => { await hold(f, 20); await jsClick(p, '#bElec'); await hold(f, 160); }, { start: false }),
+  e07_final_drive: (p) => eng(p, 'e07_final_drive', 'final', async (f) => { await hold(f, 60); await orbit(p, f, '#view', 140, 120, 0, [0.35, 0.5]); }),
+  e08_kick: (p) => eng(p, 'e08_kick', 'start', async (f) => { await hold(f, 15); await jsClick(p, '#bKick'); await hold(f, 180); }, { start: false, ts: '1' }),
+  e09_explode: (p) => eng(p, 'e09_explode', null, async (f) => {
+    const s = await p.$('#explode');
+    for (let v = 0; v <= 100; v += 1) { await s.evaluate((el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); }, v); await p.mouse.wheel(0, 8); await f(); }
+    await orbit(p, f, '#view', 110, 200, -10, [0.3, 0.5]);
+  }),
+  e10_whole: (p) => eng(p, 'e10_whole', null, async (f) => { await orbit(p, f, '#view', 210, 420, -20, [0.2, 0.5]); }),
+};
 const S = {
+  ...E,
   t01_motocross: (p) => tapbike(p, '2t', 'engine', 't01_motocross'),
   t02_step_through: (p) => tapbike(p, 'st', 'clutch', 't02_step_through'),
   t03_boda: (p) => tapbike(p, 'bb', 'chain', 't03_boda'),

@@ -270,5 +270,85 @@
   "title": "How a CVT works",
   "caption": "Tap the CVT of an automatic scooter: two pulleys and a belt that change ratio as you ride. Link in bio.",
   "tags": "#cvt #scooter #transmission #howitworks #motorscooter"
+ },
+ {
+  "id": "e01_valvetrain",
+  "l1": "Under the engine",
+  "l2": "the valvetrain",
+  "title": "Valves at work",
+  "caption": "Cam chain, camshaft, rockers and valves, moving in time with the piston. Slow it down and watch each valve open. Link in bio.",
+  "tags": "#valvetrain #camshaft #fourstroke #engineering #howitworks"
+ },
+ {
+  "id": "e02_gearbox",
+  "l1": "Under the engine",
+  "l2": "shifting 1 to 5",
+  "title": "Inside the gearbox",
+  "caption": "Watch a five-speed motorcycle gearbox shift from first to fifth: dogs, sliding gears and both shafts, live. Link in bio.",
+  "tags": "#gearbox #transmission #motorcycleengine #mechanicalengineering #gears"
+ },
+ {
+  "id": "e03_clutch",
+  "l1": "Under the engine",
+  "l2": "pull the clutch",
+  "title": "How the clutch works",
+  "caption": "Pull the lever: the plates separate and the gearbox stops while the engine keeps turning. Let go and it drives again. Link in bio.",
+  "tags": "#clutch #motorcycleclutch #wetclutch #mechanic #howitworks"
+ },
+ {
+  "id": "e04_shift_drum",
+  "l1": "Under the engine",
+  "l2": "the shift drum",
+  "title": "The shift drum",
+  "caption": "One click of your foot turns the drum, the forks follow its tracks and slide the gears. Seen from inside. Link in bio.",
+  "tags": "#shiftdrum #gearshift #transmission #engineering #motorcycle"
+ },
+ {
+  "id": "e05_generator",
+  "l1": "Under the engine",
+  "l2": "the generator",
+  "title": "Making electricity",
+  "caption": "The flywheel magnets spin round the stator coils to charge the battery and run the lights. Link in bio.",
+  "tags": "#stator #alternator #charging #motorcycleelectrics #autoelectric"
+ },
+ {
+  "id": "e06_starting",
+  "l1": "Under the engine",
+  "l2": "press the starter",
+  "title": "Electric start, step by step",
+  "caption": "Starter motor, reduction gears and one-way clutch spin the crank until the engine fires. Then the clutch freewheels. Link in bio.",
+  "tags": "#starter #electricstart #onewayclutch #motorcycleengine #mechanic"
+ },
+ {
+  "id": "e07_final_drive",
+  "l1": "Under the engine",
+  "l2": "the chain, in gear",
+  "title": "Final drive",
+  "caption": "In gear, the countershaft turns the front sprocket and the chain. In neutral it stands still. Link in bio.",
+  "tags": "#chain #sprocket #finaldrive #motorcyclechain #maintenance"
+ },
+ {
+  "id": "e08_kick",
+  "l1": "Under the engine",
+  "l2": "kick start",
+  "title": "Kick start, real time",
+  "caption": "Kick the lever: a spline slides the kick gear into mesh and spins the crank through the primary drive. Link in bio.",
+  "tags": "#kickstart #classicbike #motorcycleengine #oldschool #mechanic"
+ },
+ {
+  "id": "e09_explode",
+  "l1": "Under the engine",
+  "l2": "take it apart",
+  "title": "Exploded engine",
+  "caption": "Every part of a running single, pulled apart in 3D and labelled. Crank, piston, clutch, gearbox and generator. Link in bio.",
+  "tags": "#explodedview #engineering #3d #motorcycleengine #cad"
+ },
+ {
+  "id": "e10_whole",
+  "l1": "Under the engine",
+  "l2": "every gear moving",
+  "title": "The whole engine",
+  "caption": "A 125 cc four-stroke single running in 3D, every gear and valve moving together. Link in bio.",
+  "tags": "#motorcycleengine #fourstroke #engineering #125cc #mechanicalengineering"
  }
 ]
