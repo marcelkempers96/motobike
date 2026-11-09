@@ -11,7 +11,7 @@ const url = (p) => new URL(p, ROOT).pathname + (p.includes('#') ? '#' + p.split(
    sign-ups directly; while it is empty the form opens an email to the team instead. */
 export const SUBSCRIBE_ENDPOINT = '';
 const SUBSCRIBE_MAILTO = 'marcel@transitionslab.org';
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from './community-config.js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY, ANALYTICS } from './community-config.js';
 import './gate.js';
 import './speech.js';
 import { pickerHTML, wire as wireLang } from './translate.js';
@@ -222,3 +222,9 @@ export function mountSite(root = document) {
 mountSite();
 // Share, tool notes and comments at the end of every page (accounts via Supabase, see docs/supabase.sql)
 if (!document.documentElement.classList.contains('mz-embed') && !/[?&]embed=1/.test(location.search)) import('./community.js').catch(() => {});
+
+/* Cookieless visit counting (Vercel Web Analytics), only when switched on in community-config.js */
+if (ANALYTICS && ANALYTICS.vercelAnalytics && !document.querySelector('script[src*="/_vercel/insights/"]')) {
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  const s = document.createElement('script'); s.defer = true; s.src = '/_vercel/insights/script.js'; document.head.appendChild(s);
+}

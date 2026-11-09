@@ -42,6 +42,12 @@
 .mza-head { display: flex; gap: 16px; align-items: center; margin-bottom: 18px; }
 .mza-av { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: #EEE; flex: none; display: flex; align-items: center; justify-content: center; font: 700 24px var(--sans); color: var(--mute); }
 .mza-role { display: inline-block; font: 700 12px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; background: var(--warm); color: #FFF; margin-left: 6px; vertical-align: middle; }
+.mza-chart { width: 100%; height: auto; display: block; margin: 8px 0; }
+.mza-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; } .mza-legend i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; }
+.mza-embed { position: relative; padding-top: 75%; border: 1px solid var(--line); } .mza-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mza-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.mza-todo { list-style: none; padding: 0; margin: 0; } .mza-todo li { padding: 10px 0; border-bottom: 1px solid var(--line-soft); } .mza-todo span { display: block; margin: 4px 0 0 26px; font-size: 14px; color: var(--mute); }
+.mza-st.is-todo { color: #9E1F17; font-weight: 700; } .mza-st.is-ok, .mza-st.is-fixed { color: #1E6B44; font-weight: 700; }
 .mza-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border: 1px solid var(--line); background: #FFF; margin-bottom: 20px; }
 .mza-stats div { padding: 14px 16px; border-right: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
 .mza-stats span { display: block; font: 700 12px/1.2 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--mute); }
@@ -221,9 +227,46 @@ const VIEWS = {
     const cnt = async (t) => { const r = await sb.from(t).select('*', { count: 'exact', head: true }); return r.count ?? '·'; };
     const [members, comments, subs, brand] = await Promise.all([cnt('profiles'), cnt('comments'), cnt('subscribers').catch(() => '·'), cnt('brand_requests').catch(() => '·')]);
     el.innerHTML = `<div class="mza-stats"><div><span>Members</span><b>${members}</b></div><div><span>Comments</span><b>${comments}</b></div><div><span>Email sign-ups</span><b>${subs}</b></div><div><span>Brand requests</span><b>${brand}</b></div></div>
-      <nav class="mza-tabs" id="adm-tabs"><a href="#admin" data-a="comments" class="is-on">Comments</a><a href="#admin" data-a="inbox">Messages</a><a href="#admin" data-a="subs">Sign-ups</a><a href="#admin" data-a="brand">Brand requests</a><a href="#admin" data-a="content">Members-only content</a></nav><div id="adm"></div>`;
+      <nav class="mza-tabs" id="adm-tabs"><a href="#admin" data-a="analytics" class="is-on">Analytics and SEO</a><a href="#admin" data-a="comments">Comments</a><a href="#admin" data-a="inbox">Messages</a><a href="#admin" data-a="subs">Sign-ups</a><a href="#admin" data-a="brand">Brand requests</a><a href="#admin" data-a="content">Members-only content</a></nav><div id="adm"></div>`;
     const A = el.querySelector('#adm');
     const ADM = {
+      async analytics() {
+        let cfg = {}; try { cfg = (await import('../assets/community-config.js')).ANALYTICS || {}; } catch (e) { /* none */ }
+        // members and comments per week, last 12 weeks, from our own database
+        const since = new Date(Date.now() - 84 * 864e5).toISOString();
+        const [pr, cm, su] = await Promise.all([
+          sb.from('profiles').select('created_at').gte('created_at', since),
+          sb.from('comments').select('created_at').gte('created_at', since),
+          sb.from('subscribers').select('created_at').gte('created_at', since)]);
+        const weeks = Array.from({ length: 12 }, (_, i) => new Date(Date.now() - (11 - i) * 7 * 864e5));
+        const bucket = (rows) => weeks.map((w, i) => (rows || []).filter((r) => { const t = new Date(r.created_at); return t <= w && t > new Date(w - 7 * 864e5); }).length);
+        const series = [['New members', bucket(pr.data), '#141414'], ['Comments', bucket(cm.data), '#E8551E'], ['Email sign-ups', bucket(su.data), '#2E8B57']];
+        const max = Math.max(1, ...series.flatMap((x) => x[1]));
+        const chart = `<svg viewBox="0 0 600 180" class="mza-chart" role="img" aria-label="Activity per week">${series.map(([, v, c], k) => v.map((n, i) => `<rect x="${12 + i * 49 + k * 14}" y="${160 - n / max * 140}" width="12" height="${n / max * 140}" fill="${c}"><title>${n}</title></rect>`).join('')).join('')}${weeks.map((w, i) => `<text x="${12 + i * 49}" y="176" font-size="10" fill="#666">${w.getDate()}/${w.getMonth() + 1}</text>`).join('')}</svg>
+          <p class="mza-legend">${series.map(([t, v, c]) => `<span><i style="background:${c}"></i>${t}: <b>${v.reduce((a, b) => a + b, 0)}</b></span>`).join('')}</p>`;
+        let seo = null; try { seo = await (await fetch('../assets/content/seo-report.json', { cache: 'no-store' })).json(); } catch (e) { /* not built yet */ }
+        const SETUP = [
+          ['gsc', 'Verify the site in Google Search Console', 'search.google.com/search-console: add the domain property motopedia.org, verify with the DNS TXT record at your domain host.'],
+          ['sitemap', 'Submit the sitemap', 'In Search Console: Sitemaps > add sitemap.xml.'],
+          ['domain', 'Switch canonical URLs to www.motopedia.org', 'Ask Claude once the domain works in Vercel: all canonicals, the sitemap and robots.txt move in one go.'],
+          ['vercel', 'Turn on Vercel Web Analytics', 'Vercel > project > Analytics > Enable, then ask Claude to set vercelAnalytics to true.'],
+          ['looker', 'Build the Looker Studio report and paste its embed URL', 'lookerstudio.google.com > Create > Data source: Search Console (Site impression). Add a time series of clicks and impressions and a table of top queries and pages. File > Embed report > copy the URL.'],
+          ['bing', 'Add the site to Bing Webmaster Tools', 'bing.com/webmasters: import from Search Console in one click.'],
+          ['links', 'Get 5 links from partner sites', 'Transitions Lab, training centres and fleet partners linking to motopedia.org help ranking more than any tag.'],
+        ];
+        let done = {}; try { done = JSON.parse(localStorage.getItem('mz-admin-todo') || '{}'); } catch (e) { /* none */ }
+        A.innerHTML = `
+          <div class="mza-card"><h2>Activity on Motopedia</h2><p class="msg">From the site's own database, last 12 weeks.</p>${chart}</div>
+          <div class="mza-card"><h2>Visitors and search</h2>${cfg.lookerStudioUrl
+            ? `<div class="mza-embed"><iframe src="${esc(cfg.lookerStudioUrl)}" title="Search and visitor report" loading="lazy" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div>`
+            : `<p>Visitor graphs and top search keywords appear here once the Looker Studio report is set up (see the to-do list below).</p>`}
+            <p class="mza-links"><a class="ute-linkbtn" href="https://search.google.com/search-console/performance/search-analytics?resource_id=${encodeURIComponent(cfg.searchConsoleProperty || '')}" target="_blank" rel="noopener">Search Console: queries and clicks ↗</a><a class="ute-linkbtn" href="https://vercel.com/dashboard" target="_blank" rel="noopener">Vercel Analytics: visitors ↗</a><a class="ute-linkbtn" href="https://lookerstudio.google.com/" target="_blank" rel="noopener">Looker Studio ↗</a></p></div>
+          <div class="mza-card"><h2>To do</h2><p class="msg">Tick items off as you finish them (saved in this browser).</p>
+            <ul class="mza-todo">${SETUP.map(([k, t, d]) => `<li><label><input type="checkbox" data-todo="${k}" ${done[k] ? 'checked' : ''}> <b>${t}</b></label><span>${d}</span></li>`).join('')}
+            ${seo && seo.todo ? seo.todo.map((t, i) => `<li><label><input type="checkbox" data-todo="seo-${i}" ${done['seo-' + i] ? 'checked' : ''}> <b>${esc(t)}</b></label></li>`).join('') : ''}</ul></div>
+          ${seo ? `<div class="mza-card"><h2>SEO health check</h2><p class="msg">Last run ${esc(seo.date || '')}. ${seo.checks.filter((c) => c.status !== 'todo').length} of ${seo.checks.length} checks pass.</p><table><tr><th>#</th><th>Check</th><th>Status</th><th>Detail</th></tr>${seo.checks.map((c) => `<tr><td>${c.n}</td><td>${esc(c.name)}</td><td class="mza-st is-${esc(c.status)}">${c.status === 'todo' ? 'To do' : 'OK'}</td><td>${esc(c.detail)}${c.owner_action ? `<br><b>You:</b> ${esc(c.owner_action)}` : ''}</td></tr>`).join('')}</table></div>` : ''}`;
+        A.querySelectorAll('[data-todo]').forEach((c) => c.onchange = () => { done[c.dataset.todo] = c.checked; try { localStorage.setItem('mz-admin-todo', JSON.stringify(done)); } catch (e) { /* noop */ } });
+      },
       async comments() {
         const { data } = await sb.from('comments').select('id, page, body, photo_path, created_at, hidden, profiles(display_name)').order('created_at', { ascending: false }).limit(200);
         A.innerHTML = `<table><tr><th>Who</th><th>Page</th><th>Comment</th><th>Date</th><th></th></tr>${(data || []).map((c) => `<tr><td>${esc(c.profiles ? c.profiles.display_name : '')}</td><td><a href="${esc(c.page)}#comments">${esc(c.page)}</a></td><td>${esc(c.body.slice(0, 200))}${c.photo_path ? ` <a href="${photoURL(c.photo_path)}" target="_blank">[photo]</a>` : ''}${c.hidden ? ' <i class="msg">(hidden)</i>' : ''}</td><td>${day(c.created_at)}</td><td>${c.hidden ? '' : `<button type="button" class="is-light" data-hide="${c.id}">Hide</button>`} <button type="button" class="is-light" data-del="${c.id}">Delete</button></td></tr>`).join('')}</table>`;
@@ -267,7 +310,7 @@ const VIEWS = {
       },
     };
     el.querySelectorAll('#adm-tabs [data-a]').forEach((a) => a.onclick = (e) => { e.preventDefault(); el.querySelectorAll('#adm-tabs a').forEach((x) => x.classList.toggle('is-on', x === a)); ADM[a.dataset.a](); });
-    ADM.comments();
+    ADM.analytics();
   },
 };
 function signInView() {
