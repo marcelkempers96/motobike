@@ -184,6 +184,23 @@ const SCENES = {
     await p.goto(BASE + 'models/', { waitUntil: 'networkidle' }); await hideChrome(p); await cursor(p); await ws(2500);
     await record(p, 'models', 6, async () => { await ws(500); await smoothScroll(p, 900, 1800); await ws(600); await smoothScroll(p, 2400, 2200); await ws(600); });
   },
+  // 15. Course: the carburettor in 3D, rotated by hand inside the chapter
+  async carb(p) {
+    await p.goto(BASE + 'learn/#m3-mixture', { waitUntil: 'networkidle' }); await hideChrome(p); await cursor(p); await ws(2500);
+    const fig = await p.$('.mz-learn-model'); await fig.scrollIntoViewIfNeeded();
+    await p.evaluate(() => { const e = document.querySelector('.mz-learn-model'); scrollTo(0, e.getBoundingClientRect().top + scrollY - 160); });
+    await ws(6000);
+    await record(p, 'carb', 4, async () => {
+      const c = await p.$('.mz-learn-model canvas') || fig; const b = await c.boundingBox();
+      await glide(p, b.x + b.width * 0.3, b.y + b.height * 0.5, 300);
+      await p.mouse.down(); await glide(p, b.x + b.width * 0.75, b.y + b.height * 0.4, 1800); await glide(p, b.x + b.width * 0.5, b.y + b.height * 0.6, 1200); await p.mouse.up();
+    });
+  },
+  // 16. Repair parts: the parts index with photos
+  async parts(p) {
+    await p.goto(BASE + 'repair/parts/', { waitUntil: 'networkidle' }); await hideChrome(p); await ws(1500);
+    await record(p, 'parts', 6, async () => { await ws(500); await smoothScroll(p, 700, 1800); await ws(400); await smoothScroll(p, 2200, 2600); await ws(400); });
+  },
   // 10. Home page: logo, tools and the repair section
   async home(p) {
     await p.goto(BASE, { waitUntil: 'networkidle' }); await hideChrome(p); await ws(1500);
@@ -194,7 +211,7 @@ const SCENES = {
 (async () => {
   const which = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(SCENES);
   const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--hide-scrollbars', '--autoplay-policy=no-user-gesture-required'] });
-  const SLOW = { bikes_sb: 0.12, bikes_vt: 0.12, models: 0.5, overview: 0.1, chain: 0.2, builder: 0.25, engine: 0.25, cockpit: 0.3, wiring: 0.5 };
+  const SLOW = { carb: 0.2, bikes_sb: 0.12, bikes_vt: 0.12, models: 0.5, overview: 0.1, chain: 0.2, builder: 0.25, engine: 0.25, cockpit: 0.3, wiring: 0.5 };
   for (const s of which) {
     K = SLOW[s] || 1;
     const ctx = await b.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
