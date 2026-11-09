@@ -19,12 +19,24 @@ export default {
     "the fraction of the fuel's chemical energy that an engine delivers as work at the crankshaft."
    ],
    [
+    "Castle nut",
+    "A slotted nut locked by a split pin passed through a slot and a hole in the shaft, used on axles."
+   ],
+   [
     "CBS (combined braking system)",
     "a system in which one control applies both front and rear brakes in a set proportion."
    ],
    [
+    "Circlip",
+    "A spring-steel ring that sits in a groove to retain a pin, gear or bearing; fitted with its sharp edge away from the thrust load."
+   ],
+   [
     "Clamp load",
     "the tension in a tightened bolt and the equal compressive force it applies to the joint."
+   ],
+   [
+    "Coarse and fine threads",
+    "The standard pitch for a diameter (coarse) and the smaller pitches also made for it (fine). Coarse threads are normally used into castings, fine threads where a bolt takes a nut."
    ],
    [
     "Contact patch",
@@ -35,12 +47,28 @@ export default {
     "a brief steering input opposite to the intended turn, which makes the motorcycle roll into the turn."
    ],
    [
+    "Crankcase pressure test",
+    "A two-stroke test in which the sealed crankcase is pressurised and put under vacuum to find leaking crank seals or joints."
+   ],
+   [
+    "Crosshatch",
+    "The pattern of fine criss-cross scratches left by honing a cylinder, which holds oil while new rings bed in."
+   ],
+   [
+    "Crowfoot adapter",
+    "An open or ring spanner head that fits a torque wrench drive; fitted in line with the handle it lengthens the lever and the wrench setting must be reduced."
+   ],
+   [
     "Cush drive",
     "rubber blocks between the rear sprocket carrier and the wheel hub that absorb drive-line shocks."
    ],
    [
     "CVT (continuously variable transmission)",
     "a transmission using a belt between two variable-diameter pulleys to give a stepless range of ratios."
+   ],
+   [
+    "Degree wheel",
+    "A disc marked in degrees, bolted to the crankshaft to measure the actual opening and closing angles of the valves when setting a camshaft."
    ],
    [
     "Drag area (C_d A)",
@@ -87,8 +115,20 @@ export default {
     "an electric motor built into the wheel hub; simple, but it adds unsprung mass."
    ],
    [
+    "Hy-Vo chain",
+    "Inverted-tooth chain made of stacked toothed plates, used as a cam or primary chain; fitted endless."
+   ],
+   [
+    "Impact driver",
+    "A hand tool struck with a hammer that turns a screw sharply while pressing the bit into its head, used to free seized screws."
+   ],
+   [
     "JIS",
     "the Japanese Industrial Standard cross-head screw recess, marked with a dot and requiring a matching driver."
+   ],
+   [
+    "JIS screw",
+    "Japanese Industrial Standard cross-head screw, used on most Japanese motorcycles; a Phillips bit fits it poorly and cams out."
    ],
    [
     "L-category",
@@ -115,12 +155,20 @@ export default {
     "the empirical constant K in T = K × d × F linking tightening torque to clamp load, about 0.20 dry and 0.15 oiled."
    ],
    [
+    "Oil seal",
+    "A rubber lip seal, held against a shaft by a garter spring, that keeps oil (or two-stroke crankcase pressure) in around a turning shaft."
+   ],
+   [
     "Outside micrometer",
     "a screw-thread measuring instrument that reads external dimensions to 0.01 mm."
    ],
    [
     "Overall ratio",
     "the product of primary reduction, gear ratio and final drive ratio: engine turns per rear-wheel turn."
+   ],
+   [
+    "Oversize piston",
+    "A piston larger than standard, usually in 0.25 mm steps, fitted after the cylinder has been bored to suit it."
    ],
    [
     "Pedelec",
@@ -143,6 +191,10 @@ export default {
     "the strength grade of a metric bolt, such as 8.8 or 10.9."
    ],
    [
+    "Recovery tank",
+    "The coolant reservoir that receives coolant expelled through the pressure cap as it heats and returns it as it cools; its level is checked cold."
+   ],
+   [
     "Regulator/rectifier",
     "the unit that converts alternator AC to DC and limits charging voltage."
    ],
@@ -153,6 +205,10 @@ export default {
    [
     "Rolling resistance",
     "the force opposing motion caused mainly by deformation of the tyre, C_rr × m × g."
+   ],
+   [
+    "Running-in",
+    "The first period of use of a new or rebuilt engine, with varied load and an early oil change, while rings and other new parts bed in."
    ],
    [
     "Runout",
@@ -171,6 +227,10 @@ export default {
     "the worn dimension or value at which a part must be replaced or reconditioned."
    ],
    [
+    "Split pin (cotter pin)",
+    "A soft wire pin with two legs, passed through a castle nut and shaft and bent over to stop the nut turning; always renewed."
+   ],
+   [
     "Standard value",
     "the specified dimension or setting of a new part."
    ],
@@ -183,8 +243,20 @@ export default {
     "the pivoted arm that locates the rear wheel and allows it to move vertically."
    ],
    [
+    "Tab washer",
+    "A washer with a tab bent against a flat of the nut or the part to stop the nut turning; renewed once bent."
+   ],
+   [
+    "Tensile stress area",
+    "The effective cross-section of a threaded bolt used to calculate its stress, taken from thread tables (36.6 mm² for M8 coarse)."
+   ],
+   [
     "Thread insert",
     "a coiled wire insert fitted in an oversize tapped hole to restore a damaged thread to its original size."
+   ],
+   [
+    "Thread pitch",
+    "The distance from one thread crest to the next, in millimetres on metric threads (M8 × 1.25 has 1.25 mm pitch); inch threads give threads per inch instead."
    ],
    [
     "Three-way catalytic converter",
@@ -217,6 +289,14 @@ export default {
    [
     "Waisted bolt",
     "a bolt whose shank is thinner than its thread so that it stretches evenly under high load."
+   ],
+   [
+    "Weep hole",
+    "A small hole in a water pump body; coolant dripping from it shows that the pump seal is failing."
+   ],
+   [
+    "Yield (of a bolt)",
+    "The point at which a bolt stretches permanently; it no longer returns to its length when loosened and must be replaced."
    ]
   ],
   "reading": [
@@ -575,16 +655,36 @@ export default {
     "measuring at a connector from the wire side, beside the seal or with a purpose-made pin, so the circuit keeps working and the insulation is not pierced."
    ],
    [
+    "Choke plate",
+    "a butterfly or guillotine plate upstream of the venturi that restricts air for a cold start, so engine suction draws more fuel."
+   ],
+   [
     "Closed loop",
     "fuel control corrected continuously by oxygen-sensor feedback."
+   ],
+   [
+    "Coasting enricher",
+    "a diaphragm valve on some CV carburettors that briefly closes the pilot air passage on a closed throttle, richening the mixture to reduce backfiring."
    ],
    [
     "Constant-velocity (CV) carburettor",
     "carburettor whose piston is lifted by venturi depression acting on a diaphragm, with a cable-operated butterfly."
    ],
    [
+    "Continuity equation",
+    "for steady flow, area times velocity is constant along a duct, so air speeds up where a carburettor narrows."
+   ],
+   [
     "Crankshaft position sensor (CKP)",
     "sensor reading reluctor teeth on the flywheel to give engine speed and crank angle; also called trigger or pulser."
+   ],
+   [
+    "Crossover tube",
+    "a pipe joining the two halves of a two-piece fuel tank; the tank must be drained before it is removed."
+   ],
+   [
+    "Cutaway",
+    "the bevel on the intake side of a carburettor slide; a larger cutaway leans the 1/8 to 1/4 throttle transition."
    ],
    [
     "Dead time",
@@ -607,16 +707,36 @@ export default {
     "stored diagnostic trouble code identifying a detected fault, e.g. P0122."
    ],
    [
+    "Fill-to-fill test",
+    "measuring fuel consumption by filling the tank to the same level twice and dividing the fuel added by the distance ridden."
+   ],
+   [
     "Float level",
     "height of the carburettor float, which sets the fuel level in the bowl."
+   ],
+   [
+    "Float needle",
+    "the tapered valve, steel or rubber tipped, that the float closes against its seat to hold the float-bowl fuel level; also called the needle and seat or fuel inlet valve."
    ],
    [
     "Freeze frame",
     "engine data (speed, temperature, load) stored by the ECU at the moment a fault code was set."
    ],
    [
+    "Fuel level sender",
+    "a float on an arm moving a wiper along a resistor in the tank, which tells the fuel gauge the level."
+   ],
+   [
     "Fuel screw",
     "a pilot-circuit adjuster on the engine side of the slide; turning it out richens the idle mixture (compare air screw)."
+   ],
+   [
+    "Fuel shot test",
+    "putting a few drops of fresh fuel into the intake of an engine that cranks but will not start; if it fires briefly, the fault is in the fuel path."
+   ],
+   [
+    "Fuel stabiliser",
+    "an additive that slows the oxidation of stored petrol into gum and varnish."
    ],
    [
     "Helmholtz resonator",
@@ -659,6 +779,10 @@ export default {
     "malfunction indicator lamp, the engine warning lamp lit by the OBD system."
    ],
    [
+    "Needle jet",
+    "the jet in the centre of a carburettor into which the jet needle enters and into whose base the main jet screws."
+   ],
+   [
     "NTC thermistor",
     "a temperature sensor whose resistance falls as temperature rises; used for engine and intake air temperature."
    ],
@@ -667,12 +791,28 @@ export default {
     "on-board diagnostics; stage I monitors circuits, stage II monitors emission-relevant degradation against threshold limits."
    ],
    [
+    "Octane rating",
+    "a fuel's resistance to knock, that is to igniting from compression heat or hot spots before the spark."
+   ],
+   [
     "Oxygen sensor",
     "exhaust sensor whose output indicates rich or lean mixture relative to λ = 1."
    ],
    [
     "Pilot jet",
     "small jet supplying fuel at idle and small throttle openings."
+   ],
+   [
+    "Port gasket",
+    "the soft metal ring that seals the exhaust header to the cylinder head; it crushes on tightening and is renewed whenever the header is removed."
+   ],
+   [
+    "Reserve (RES)",
+    "the fuel-tap position that draws through a lower pick-up tube, leaving typically 1 to 3 litres once the main supply runs out."
+   ],
+   [
+    "Rollover valve",
+    "a valve in a sealed tank's vent line that closes if the machine falls over, so fuel cannot run out of the vent."
    ],
    [
     "Secondary air injection",
@@ -687,8 +827,16 @@ export default {
     "the angled cut on the intake side of a carburettor slide that controls mixture from about 1/8 to 1/4 throttle; a higher cutaway leans it."
    ],
    [
+    "Spark arrester",
+    "a perforated tube or baffle in a silencer outlet, mainly on off-road machines, that stops glowing carbon leaving the exhaust."
+   ],
+   [
     "Speed-density",
     "fuel strategy that calculates air mass from manifold pressure, temperature and rpm."
+   ],
+   [
+    "Starter jet",
+    "the small jet, often pressed into the float bowl, that feeds the enricher circuit; when it blocks, the choke has no effect."
    ],
    [
     "Stoichiometric",
@@ -707,8 +855,20 @@ export default {
     "potentiometer reporting throttle opening to the ECU."
    ],
    [
+    "Tickler",
+    "a button on older carburettors that pushes the float down to flood the bowl for a cold start."
+   ],
+   [
     "Vacuum-operated fuel tap",
     "a fuel tap with a diaphragm worked by intake depression, so fuel flows only while the engine turns; PRI bypasses it to fill an empty bowl."
+   ],
+   [
+    "Vapour lock",
+    "fuel boiling in a hose or carburettor near a hot engine, stopping fuel flow until it cools."
+   ],
+   [
+    "Venturi",
+    "the narrowed throat of a carburettor where air speeds up and its pressure falls, drawing fuel from the jets."
    ],
    [
     "Voltage drop",
@@ -767,12 +927,20 @@ export default {
     "indentation of bearing races by balls or rollers under static load or shock."
    ],
    [
+    "Cable luber",
+    "Tool clamped on the end of a control cable outer so that light oil can be forced through the cable from one end."
+   ],
+   [
     "CBS (combined braking system)",
     "a system in which one control applies both front and rear brakes."
    ],
    [
     "Chain elongation",
     "the increase in length of a chain over a measured number of pitches, expressed as a percentage of the new length; a measure of pin and bushing wear."
+   ],
+   [
+    "Charge limit",
+    "Setting in a bike's app or menu, or a storage mode, that stops charging below 100 % on purpose to slow battery ageing."
    ],
    [
     "Clutch basket",
@@ -823,6 +991,10 @@ export default {
     "incomplete release of a clutch, causing creep and hard shifting."
    ],
    [
+    "Dye penetrant test",
+    "Crack test in which a coloured dye is drawn into surface cracks and shown up by a developer; used on suspect frame welds."
+   ],
+   [
     "Fixed caliper",
     "a caliper with opposed pistons on both sides of the disc."
    ],
@@ -833,6 +1005,10 @@ export default {
    [
     "Fork offset",
     "perpendicular distance from the steering axis to the front wheel spindle."
+   ],
+   [
+    "Gear position switch",
+    "Switch on the crankcase, earthed by the shift drum in neutral (and on some machines in each gear), that lights the neutral lamp and feeds the starting interlock."
    ],
    [
     "Gear step",
@@ -891,6 +1067,10 @@ export default {
     "the structured assembly, check, adjustment and road test of a new machine before it is handed to the customer."
    ],
    [
+    "Phase order",
+    "The sequence in which the three motor phase wires connect to the controller; the wrong order makes the motor judder, run backwards or overheat."
+   ],
+   [
     "Plug-patch",
     "a combined plug and inner patch fitted from inside a removed tubeless tyre: the only permanent tubeless puncture repair."
    ],
@@ -929,6 +1109,10 @@ export default {
    [
     "Rake",
     "angle of the steering axis from vertical."
+   ],
+   [
+    "Recommissioning",
+    "Ordered sequence of checks (battery, fuel, oil, tyres, brakes, chain, cables) that returns a stored machine to safe service."
    ],
    [
     "Rider sag",
@@ -1491,12 +1675,24 @@ export default {
     "battery capacity, the product of discharge current and the hours it can be sustained (usually at the 10-hour rate)."
    ],
    [
+    "Armature",
+    "the rotating part of a DC motor, carrying the windings that are fed through the commutator."
+   ],
+   [
+    "Back-EMF",
+    "the voltage generated by a turning motor armature that opposes the supply, so that a starter draws most current when stalled."
+   ],
+   [
     "Back-probing",
     "measuring at a connector from the wire side, beside the seal or with a purpose-made pin, so the circuit keeps working and the insulation is not pierced."
    ],
    [
     "Breakdown voltage",
     "voltage at which the gas in a spark gap ionises and conducts."
+   ],
+   [
+    "Brush",
+    "a spring-loaded carbon block that carries current to the commutator of a starter motor; K-Light 125 service limit 8.5 mm."
    ],
    [
     "CAN bus",
@@ -1511,12 +1707,28 @@ export default {
     "current a battery delivers at −18 °C for 30 s while staying above 7.2 V."
    ],
    [
+    "Commutator",
+    "the ring of insulated copper bars on a DC motor armature through which the brushes feed current to the windings in turn."
+   ],
+   [
+    "Conventional current",
+    "current drawn as flowing from positive, through the load, to negative; the convention used in all wiring diagrams, diode symbols and meter polarities, although electrons move the other way."
+   ],
+   [
     "Crankshaft position sensor (CKP)",
     "sensor reading reluctor teeth on the flywheel to give engine speed and crank angle; also called trigger or pulser."
    ],
    [
+    "Diode",
+    "a semiconductor that conducts in one direction only, with a forward drop of about 0.4–0.7 V for silicon; used in rectifiers, interlock circuits and relay suppression."
+   ],
+   [
     "Dwell",
     "crank angle or time during which the ignition coil primary carries current."
+   ],
+   [
+    "Earth return",
+    "the use of the frame and engine as the return conductor from each load to battery negative, so that most circuits need only one feed wire."
    ],
    [
     "Exciter coil",
@@ -1535,6 +1747,10 @@ export default {
     "sacrificial link that opens when current exceeds its rating, protecting the wiring."
    ],
    [
+    "Half-split method",
+    "fault finding by testing at the middle of the suspect section of a circuit, then at the middle of the faulty half, and so on."
+   ],
+   [
     "Heat range",
     "rate at which a spark plug insulator transfers heat; determines whether a plug runs hot or cold."
    ],
@@ -1547,12 +1763,28 @@ export default {
     "the high self-induced voltage, typically 200 to 400 V, in a coil primary when its current is suddenly interrupted."
    ],
    [
+    "Inertia (Bendix) drive",
+    "a starter drive in which the pinion is thrown along a helical thread into mesh as the motor spins up; rare on motorcycles."
+   ],
+   [
     "Interlock",
     "switch that prevents starting or running in an unsafe condition (neutral, clutch, side-stand, brake)."
    ],
    [
     "Internal resistance",
     "the resistance inside a battery that lowers its terminal voltage under load; it rises as a battery ages or sulphates and is seen only by a load test."
+   ],
+   [
+    "Kickback",
+    "the engine firing early during a kick start and throwing the pedal back up, usually from ignition timing that has moved."
+   ],
+   [
+    "Kirchhoff's current law",
+    "the current flowing into a junction equals the current flowing out; a shared fuse or feed carries the sum of its branches."
+   ],
+   [
+    "Kirchhoff's voltage law",
+    "the voltage drops around any closed loop add up to the supply voltage; the basis of voltage-drop testing."
    ],
    [
     "LiFePO4",
@@ -1571,12 +1803,28 @@ export default {
     "on-board diagnostics; stage I monitors circuits, stage II monitors emission-relevant degradation against threshold limits."
    ],
    [
+    "Ohm's law",
+    "the relation V = I R between the voltage across a component, the current through it and its resistance."
+   ],
+   [
+    "Parallel circuit",
+    "parts connected across the same two supply points so that each receives the full voltage; branch currents add in the shared feed."
+   ],
+   [
     "Parasitic drain",
     "current drawn from the battery with the ignition off."
    ],
    [
     "Peak-voltage adapter",
     "a meter accessory that captures the peak of short pulses from pulser, exciter and coil primary circuits, which a normal multimeter cannot register."
+   ],
+   [
+    "Pre-engaged starter",
+    "a starter whose solenoid both closes the motor contacts and levers the pinion into a ring gear, used on Harley-Davidson and many European machines."
+   ],
+   [
+    "Primary kickstart",
+    "a kickstarter that drives the clutch outer directly, so the engine can be kicked in gear with the clutch pulled."
    ],
    [
     "Pulser coil",
@@ -1591,8 +1839,20 @@ export default {
     "unit that converts alternator AC to DC and limits charging voltage."
    ],
    [
+    "Relay",
+    "an electrically operated switch in which a small coil current closes heavy contacts; automotive relays number the coil terminals 85 and 86 and the contacts 30 and 87."
+   ],
+   [
     "Resistor cap",
     "spark plug cap with a built-in suppressor resistor, typically about 5 kΩ."
+   ],
+   [
+    "Series circuit",
+    "parts connected end to end so that the same current flows through each; resistances add and the supply voltage is shared between them."
+   ],
+   [
+    "Short finder",
+    "a lamp or buzzer fitted in place of a blown fuse that signals while a short to earth is present, limiting the current while sections are unplugged."
    ],
    [
     "Shunt regulator",
@@ -1603,8 +1863,16 @@ export default {
     "one-way (sprag or roller) clutch between starter gear and crankshaft."
    ],
    [
+    "Starter reduction gear",
+    "the idle gears, planetary set or chain that gear the starter motor down to the crankshaft, typically about 14:1 overall."
+   ],
+   [
     "Starter relay",
     "solenoid switch carrying starter motor current, operated by the start button through the interlocks."
+   ],
+   [
+    "Starter-generator",
+    "a single DC machine used as starter motor and charging generator, found on some older two-strokes."
    ],
    [
     "Stick coil",
@@ -1615,8 +1883,20 @@ export default {
     "the growth of hard lead sulphate crystals in a lead-acid battery left partly discharged, permanently reducing capacity and cranking current."
    ],
    [
+    "Switch continuity table",
+    "the grid in a manual showing which wire colours a switch connects in each of its positions."
+   ],
+   [
+    "Test lamp",
+    "a probe with a bulb and an earth lead that shows whether voltage is present and can deliver some current, but not how much voltage; kept off ECU and sensor circuits."
+   ],
+   [
     "Throttle position sensor (TPS)",
     "potentiometer reporting throttle opening to the ECU."
+   ],
+   [
+    "Timing light",
+    "a stroboscopic lamp triggered from the HT lead that freezes the flywheel marks so the ignition timing can be read with the engine running."
    ],
    [
     "Transistor-controlled ignition (TCI)",
@@ -1633,6 +1913,10 @@ export default {
    [
     "Wasted spark",
     "ignition arrangement in which one coil fires two plugs together, one cylinder on compression and the other on exhaust."
+   ],
+   [
+    "Wiggle test",
+    "flexing a harness or connector while watching a meter or lamp to find an intermittent open or short circuit."
    ]
   ],
   "reading": [

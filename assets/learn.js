@@ -17,6 +17,7 @@ const CHAPTER_IMG = {
   'm2-top-end': 'renders/photo/render-valve.jpg', 'm2-bottom-end': 'renders/photo/render-crank.jpg', 'm2-lubrication-cooling': 'illustrations/powertrain/F11.png',
   'm2-diagnosis': 'photos/carburettor-work.jpg',
   'm3-mixture': 'photos/carburettor-fitting.jpg', 'm3-fuel-supply': 'renders/fuel_tank.webp', 'm3-carburettor': 'renders/carb.webp', 'm3-intake-exhaust': 'renders/exhaust_4t.webp', 'm3-fuel-diagnosis': 'repair-photos/060_however_good_take_moisture_water_out.jpg', 'm3-efi': 'renders/throttle_body.webp', 'm3-ignition': 'renders/photo/render-plug.jpg',
+  'm3-electrical-basics': 'repair-photos/086_simplest_wiring_system.jpg', 'm3-starting': 'interactive/wiring/preview/starting-cranking.png',
   'm3-battery-charging': 'renders/battery_12v.webp', 'm3-lighting-wiring': 'interactive/wiring/preview/harness.png', 'm3-diagnosis': 'interactive/wiring/preview/starting-noearth.png',
   'm4-clutch': 'renders/clutch_exploded.webp', 'm4-gearbox': 'illustrations/transmission/F14.png', 'm4-final-drive': 'renders/photo/render-chain.jpg',
   'm4-frame-steering': 'renders/frame_cradle.webp', 'm4-suspension': 'renders/forks_usd.webp', 'm4-wheels-tyres': 'renders/front_wheel_mx.webp',

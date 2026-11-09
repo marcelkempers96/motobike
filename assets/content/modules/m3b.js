@@ -582,7 +582,7 @@ export default {
     },
     {
       "id": "m3-battery-charging",
-      "title": "Battery, charging and starting",
+      "title": "Battery and charging",
       "lead": "The battery is the motorcycle's energy savings account: the alternator pays in, lights and ECU draw out, and the starter makes one huge withdrawal every time you press the button. Know the numbers and you can tell a tired battery from a dead regulator in minutes.",
       "lab": "overview/?mode=4t&part=battery",
       "blocks": [

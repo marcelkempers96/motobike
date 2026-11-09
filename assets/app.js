@@ -86,7 +86,7 @@ function homeIntroHTML() {
         <div class="mz-home-hero-text">
           <span class="ute-label">Open course · free · no login</span>
           <h2 id="home-h">Learn how motorcycles work, and how to work on them</h2>
-          <p>Five modules from the first combustion stroke to the battery management system of an electric bike, with every part in 3D, a cockpit you can ride and a quiz at every level.</p>
+          <p>Six modules from the first combustion stroke to the battery management system of an electric bike, with every part in 3D, a cockpit you can ride and a quiz at every level.</p>
           <div class="ute-btnrow"><a class="ute-btn is-primary" href="learn/">Start the course</a><a class="ute-btn mz-btn-light" href="cockpit/">Ride in the Cockpit</a><a class="ute-btn mz-btn-light" href="quiz/">Take a quiz</a></div>
         </div>
       </div>
