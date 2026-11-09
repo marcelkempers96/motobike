@@ -136,7 +136,7 @@ ARTICLES.append(dict(
     date='2026-11-07',
     title='A century of motorcycles in Invercargill: Classic Motorcycle Mecca',
     h1='A century of motorcycles in Invercargill',
-    desc='A walk through Classic Motorcycle Mecca in Invercargill, New Zealand: from a 1902 motor in a bicycle to the six-cylinder Honda CBX, and the engineering each bike shows.',
+    desc='Classic Motorcycle Mecca in Invercargill, New Zealand: from a 1902 motor in a bicycle to the six-cylinder Honda CBX, and the engineering each bike shows.',
     label='Story',
     lead='At the bottom of New Zealand, in old brick buildings, around three hundred motorcycles tell the whole story of how a motorcycle is built. We walked through them in order, from a 1902 bicycle with an engine to a six-cylinder Honda and a folding electric.',
     summary='From a 1902 motor in a bicycle to the six-cylinder Honda CBX: a walk through the collection, bike by bike.',
