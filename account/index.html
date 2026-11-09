@@ -116,7 +116,9 @@ async function start() {
   ME = session.user;
   if (next && sessionStorage.getItem('mz-next-done') !== next) { sessionStorage.setItem('mz-next-done', next); location.href = next; return; }
   syncProgress();
-  const { data } = await sb.from('profiles').select('display_name, is_admin, avatar_path, bio, country').eq('id', ME.id).maybeSingle();
+  // select * so a missing optional column (avatar_path, bio, country) does not hide admin rights
+  const { data, error: profErr } = await sb.from('profiles').select('*').eq('id', ME.id).maybeSingle();
+  if (profErr) console.warn('profile', profErr.message);
   PROF = data || { display_name: ME.email.split('@')[0] };
   ADMIN = !!(data && data.is_admin);
   setRole(ADMIN ? 'admin' : 'user');
