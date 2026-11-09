@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://motobike-five.vercel.app/sitemap.xml
+Sitemap: https://www.motopedia.org/sitemap.xml

@@ -130,9 +130,9 @@
   {
    "n": 19,
    "name": "Search Console verification",
-   "status": "todo",
-   "detail": "No verification value was given, so nothing was added.",
-   "owner_action": "In Google Search Console add the property, choose \"HTML tag\", and send us the content value to put in index.html as <meta name=\"google-site-verification\" content=\"...\">. Or upload the googleXXXX.html file Google gives you to the site root. Then submit sitemap.xml."
+   "status": "ok",
+   "detail": "Verified in Search Console (domain property motopedia.org).",
+   "owner_action": "Submit sitemap.xml in Search Console."
   },
   {
    "n": 20,
@@ -143,8 +143,7 @@
   }
  ],
  "todo": [
-  "Verify the site in Google Search Console (HTML tag or file) and submit sitemap.xml.",
-  "When www.motopedia.org goes live: change SITE/BASE in the four builders, robots.txt, llms.txt and the hand-made pages, rebuild, and redirect the vercel.app address to it.",
+  "In Search Console: Sitemaps > add sitemap.xml, then URL inspection > request indexing for the home page.",
   "Watch Search Console for spare-part pages reported as not indexed; they are now all open to Google.",
   "Decide whether technical plates may be shown as WebP on pages to save probably 10 MB or more.",
   "Run PageSpeed Insights after deploy and send us the results."

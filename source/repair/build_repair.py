@@ -19,7 +19,7 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC = os.path.join(ROOT, 'source/repair')
 OUT = os.path.join(ROOT, 'repair')
-SITE = 'https://motobike-five.vercel.app'
+SITE = 'https://www.motopedia.org'
 CSSV = '20261106b'
 e = lambda s: html.escape(str(s if s is not None else ''), quote=True)
 

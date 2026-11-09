@@ -4,7 +4,7 @@ from arts7 import ARTICLES
 import arts_stories  # appends the stories to the same ARTICLES list
 
 ROOT = '/home/user/motobike'
-BASE = 'https://motobike-five.vercel.app'
+BASE = 'https://www.motopedia.org'
 DATE = '2026-11-02'      # default publication date; an article may set its own 'date'
 CSSV = '20261107a'      # assets/articles.css
 STYLESV = '20261102b'   # assets/styles.css (bumped by the coordinator; keep in sync)

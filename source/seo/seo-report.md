@@ -52,4 +52,4 @@ Real Core Web Vitals (LCP, CLS, INP) need field data or PageSpeed Insights on th
 
 ## Base URL
 Each builder keeps it in one constant (`SITE` or `BASE`); robots.txt, llms.txt and hand-made pages hold
-`https://motobike-five.vercel.app` too and must be switched together when www.motopedia.org goes live.
+`https://www.motopedia.org` too and must be switched together when www.motopedia.org goes live.

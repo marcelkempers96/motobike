@@ -34,7 +34,7 @@ governing law Netherlands). Add new pages in the same style:
   permission, Wikimedia Commons, YouTube videos embedded; trademarks belong to their owners; how to
   request removal of content, takedown contact).
 Each new page: copy the head/header/footer structure of `privacy/index.html`, canonical URL on
-https://motobike-five.vercel.app/<path>/, `<meta name="robots" content="index, follow">`.
+https://www.motopedia.org/<path>/, `<meta name="robots" content="index, follow">`.
 Link all legal pages to each other at the bottom of each. Do not invent a company registration
 number or street address: write "available on request" where an imprint normally lists them.
 

@@ -18,7 +18,7 @@ from seohelp import img_attrs
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 XLSX = os.path.join(ROOT, 'source/parts/motorcycle-spare-parts-research.xlsx')
 OUT = os.path.join(ROOT, 'parts')
-SITE = 'https://motobike-five.vercel.app'
+SITE = 'https://www.motopedia.org'
 CSSV = '20261106b'
 
 e = lambda s: html.escape(str(s if s is not None else ''), quote=True)

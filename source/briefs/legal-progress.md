@@ -4,7 +4,7 @@ Brief: `source/briefs/2026-11-06-legal-and-privacy.md`.
 
 ## Task 1: legal pages
 - Rewritten: `privacy/`, `cookies/`, `terms/`. New: `community/`, `disclaimer/`, `accessibility/`, `legal/`.
-  All share the head/header/footer of `privacy/index.html`, canonical on motobike-five.vercel.app,
+  All share the head/header/footer of `privacy/index.html`, canonical on www.motopedia.org,
   `robots: index, follow`, and a "Legal pages" link list at the bottom (current page marked).
 - Privacy: controller Transitions Lab (NL); table of data, purpose and GDPR legal basis per feature
   (account, profile, progress, comments/photos, member messages, sign-ups, contact form, brand

@@ -32,6 +32,17 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "motobike-five.vercel.app"
+        }
+      ],
+      "destination": "https://www.motopedia.org/:path*",
+      "permanent": true
+    },
+    {
       "source": "/assets/pdf/moto-zero-module-1-foundations.pdf",
       "destination": "/assets/pdf/motopedia-module-1-foundations.pdf",
       "permanent": true

@@ -7,7 +7,7 @@ H = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.j
 sys.path.insert(0, H)
 import videolib as vl
 from videolib import e
-SITE = 'https://motobike-five.vercel.app'
+SITE = 'https://www.motopedia.org'
 VIDS, MP, BY = vl.load()
 idx = open(os.path.join(ROOT, 'assets/content/repair-index.js'), encoding='utf-8').read()
 D = json.loads(idx[idx.index('{'):idx.rstrip().rstrip(';').rindex('}') + 1])

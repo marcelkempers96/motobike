@@ -11,7 +11,7 @@ from urllib.parse import urlparse, unquote
 from bs4 import BeautifulSoup
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-SITE = 'https://motobike-five.vercel.app'
+SITE = 'https://www.motopedia.org'
 DOWNLOADS = {'types/standalone.html'}   # offline download copy, served with X-Robots-Tag noindex
 SKIP_DIRS = {'source', 'node_modules', '.git', '.vercel', 'promo-clips', 'inbox', 'docs', 'moto-spec'}
 PRIVATE = {'account/', 'progress/'}        # may carry noindex
@@ -45,7 +45,7 @@ def resolve(page, href):
         return None
     u = urlparse(href)
     if u.scheme in ('http', 'https'):
-        if u.netloc not in ('motobike-five.vercel.app', 'www.motopedia.org', 'motopedia.org'):
+        if u.netloc not in ('www.motopedia.org', 'www.motopedia.org', 'motopedia.org'):
             return None
         path = u.path
     elif u.scheme:

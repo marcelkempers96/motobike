@@ -2,7 +2,7 @@
 Polite: one request every DELAY seconds, long back-off on rate limits, resumable (skips cached ids)."""
 import json, os, time, urllib.parse, urllib.request, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.join(HERE, 'wiki')
-UA = 'MotoZeroBot/1.0 (https://motobike-five.vercel.app; marcel@transitionslab.org) education project'
+UA = 'MotoZeroBot/1.0 (https://www.motopedia.org; marcel@transitionslab.org) education project'
 DELAY = float(sys.argv[1]) if len(sys.argv) > 1 else 15
 def get(url):
   req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json'})
