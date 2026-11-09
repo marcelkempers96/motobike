@@ -51,7 +51,7 @@ body=f'''
 
 <h2 id="ratios">Gear ratios and road speed</h2>
 <p>Each gear ratio is the tooth count of the driven gear divided by that of the driving gear. Power passes through three stages in series, the primary drive from crank to clutch, the gearbox and the chain final drive, so the ratios multiply to give the <strong>overall ratio</strong>. Engine speed divided by the overall ratio gives wheel speed, and wheel speed multiplied by the rolling circumference of the rear tyre gives road speed.</p>
-<p>Chapter 4.2 of the course works the method with ratios typical of an air-cooled 125 cc single, since the K-Light manual gives only its 41-tooth rear sprocket: a primary ratio of 3.400, a final drive of 41/14 (2.929), a first gear of 2.750 and a fifth of 0.900. With those figures fifth gear has an overall ratio of 8.96, and at 9,000 rpm the bike would do about 113 km/h. The manual quotes a top speed of 90 km/h, so in practice the engine never reaches its power peak in fifth. That is deliberate on a commuter: a tall top gear lowers cruising revs, noise and fuel use.</p>
+<p>Chapter 5.2 of the course works the method with ratios typical of an air-cooled 125 cc single, since the K-Light manual gives only its 41-tooth rear sprocket: a primary ratio of 3.400, a final drive of 41/14 (2.929), a first gear of 2.750 and a fifth of 0.900. With those figures fifth gear has an overall ratio of 8.96, and at 9,000 rpm the bike would do about 113 km/h. The manual quotes a top speed of 90 km/h, so in practice the engine never reaches its power peak in fifth. That is deliberate on a commuter: a tall top gear lowers cruising revs, noise and fuel use.</p>
 <p>The <a href="{EQ}">equations summary</a> collects the gear, overall ratio and road-speed formulas.</p>
 {try_box(COCKPIT, "renders/instruments_analogue.webp", "Rendered twin analogue instruments with speedometer and rev counter", "Change gear in the Cockpit.", "Ride the four-stroke in the Cockpit, change up through the box and watch the revs drop at each shift and the road speed rise.", "Open the Cockpit")}
 
@@ -70,10 +70,10 @@ body=f'''
 <p>Our guide to <a href="../how-a-motorcycle-clutch-works/">how a motorcycle clutch works</a> covers drag and free play, the most common reasons for a box that is hard to shift.</p>
 
 {deeper([
-  (L+"m4-gearbox", "Chapter 4.2: Gearbox", "the full selector mechanism, worked ratio table and fault chart"),
+  (L+"m4-gearbox", "Chapter 5.2: Gearbox", "the full selector mechanism, worked ratio table and fault chart"),
   (EQ, "Equations summary", "gear ratio, overall ratio, road speed and gear step"),
   (OM("4t", "gearbox"), "The gearbox in the 3D Overview", "where it sits behind the clutch"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (PRB+"jumps-out-of-gear/", "Jumps out of gear", "causes and checks"),
   (PRB+"false-neutral/", "False neutrals", ""),
   (REP+"gearshift-check/", "Gearshift mechanism check", ""),
@@ -81,7 +81,7 @@ body=f'''
   (PRT+"gearbox/", "Gearbox parts", "every gearbox fault and repair in one list"),
  ])}
 ''',
-cta=dict(label='Try it', h='Shift the gearbox yourself', p='Under the Engine lets you step through every gear and watch the drum, forks and dogs move. Then ride the bike in the Cockpit and feel what each ratio does to the revs.', links=[(EN+'gearbox', 'Open the gearbox view', True), (EN+'shift', 'See the shift drum', False), (COCKPIT, 'Open the Cockpit', False), (L+'m4-gearbox', 'Read chapter 4.2', False)]),
+cta=dict(label='Try it', h='Shift the gearbox yourself', p='Under the Engine lets you step through every gear and watch the drum, forks and dogs move. Then ride the bike in the Cockpit and feel what each ratio does to the revs.', links=[(EN+'gearbox', 'Open the gearbox view', True), (EN+'shift', 'See the shift drum', False), (COCKPIT, 'Open the Cockpit', False), (L+'m4-gearbox', 'Read chapter 5.2', False)]),
 faq=[
  ('Why is neutral between first and second on a motorcycle?', 'The shift drum has a half-step between first and second, and the neutral position sits there. It keeps first gear at the end of the pattern where a downward press always finds it, and it is why a hurried shift from first to second can stop in neutral.'),
  ('Why can I not skip gears on a motorcycle?', 'Each press of the pedal turns the shift drum by one step through a ratchet, so the box is sequential. To go from fifth to second you press the pedal three times, passing through fourth and third.'),
@@ -115,7 +115,7 @@ body=f'''
 
 <h2 id="hydraulics">How a hydraulic disc brake multiplies force</h2>
 <p>A disc brake clamps a pair of pads onto a disc that turns with the wheel. The force comes from hydraulics. Pressure in a confined fluid is equal everywhere, so a small piston in the <strong>master cylinder</strong> at the lever creates the same pressure on the much larger pistons in the <strong>caliper</strong>. Force is multiplied in the ratio of their areas, and the lever multiplies it again.</p>
-<p>Chapter 4.7 of the course gives a worked example: an 11 mm master cylinder, a lever ratio of 4:1, a 100 N squeeze and a floating caliper with two 27 mm pistons acting on a 280 mm disc, the size fitted to the K-Light 125. The hydraulic ratio is about 12 and the total ratio from hand to pads about 48:1, giving a clamp force of around 4,800 N and, from the front brake alone, a deceleration of about 0.7 g.</p>
+<p>Chapter 5.7 of the course gives a worked example: an 11 mm master cylinder, a lever ratio of 4:1, a 100 N squeeze and a floating caliper with two 27 mm pistons acting on a 280 mm disc, the size fitted to the K-Light 125. The hydraulic ratio is about 12 and the total ratio from hand to pads about 48:1, giving a clamp force of around 4,800 N and, from the front brake alone, a deceleration of about 0.7 g.</p>
 <p>The price of multiplication is movement. The master cylinder has to push twelve times the volume of fluid that the pads take up, so a larger master cylinder gives a harder, less powerful lever and a smaller one a softer, more powerful lever with more travel. As the pads wear, the caliper pistons simply slide further out through their square-section seals, so a disc brake adjusts itself.</p>
 {try_box(OM("4t", "brake"), "renders/bike_classic_4t__brake.webp", "The front brake highlighted on the rendered classic four-stroke roadster", "Select the brake on a bike.", "Select the front brake in the 3D Overview for the disc, caliper, pads and hose, with notes on what wears and how it is checked.", "Select the front brake")}
 
@@ -140,10 +140,10 @@ body=f'''
 <p>Rules now require these systems on new machines. In the European Union, motorcycles above 125 cc must have ABS, and 125 cc models must have ABS or CBS. India requires ABS above 125 cc and CBS or ABS at or below 125 cc on all new two-wheelers from April 2019. When an ABS warning light stays on, the usual causes are a damaged tone ring, a sensor gap out of specification, a dirty sensor, mismatched tyre sizes or low battery voltage.</p>
 
 {deeper([
-  (L+"m4-brakes", "Chapter 4.7: Brakes", "energy, hydraulics, CBS, ABS and the job sheets"),
+  (L+"m4-brakes", "Chapter 5.7: Brakes", "energy, hydraulics, CBS, ABS and the job sheets"),
   (EQ, "Equations summary", "kinetic energy, disc temperature, line pressure, clamp force and brake torque"),
   (MD+"brake", "3D model: disc brake with radial caliper", "turn it round in the model library"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (REP+"brake-bleed/", "Bleeding a hydraulic brake", ""),
   (REP+"brake-fluid-check/", "Brake fluid check", ""),
   (REP+"cbs-check/", "Combined brake check", ""),
@@ -151,7 +151,7 @@ body=f'''
   (PRB+"abs-light/", "ABS warning light on", ""),
  ])}
 ''',
-cta=dict(label='Try it', h='Look inside the brakes', p='Select the front and rear brakes in the 3D Overview, turn the disc and caliper model round in the library, and then work through the brakes chapter with its worked hydraulic example.', links=[(OM('4t', 'brake'), 'Select the front brake', True), (MD+'brake', 'Open the brake model', False), (L+'m4-brakes', 'Read chapter 4.7', False), (PRT+'brake/', 'Brake faults', False)]),
+cta=dict(label='Try it', h='Look inside the brakes', p='Select the front and rear brakes in the 3D Overview, turn the disc and caliper model round in the library, and then work through the brakes chapter with its worked hydraulic example.', links=[(OM('4t', 'brake'), 'Select the front brake', True), (MD+'brake', 'Open the brake model', False), (L+'m4-brakes', 'Read chapter 5.7', False), (PRT+'brake/', 'Brake faults', False)]),
 faq=[
  ('What is the difference between disc and drum brakes on a motorcycle?', 'A drum brake pushes two shoes outwards against the inside of a drum in the wheel hub; a disc brake clamps pads onto a disc using hydraulic pressure. Discs shed heat better and fade less, while drums are cheap, enclosed and still common on the rear of commuters.'),
  ('What is brake fade?', 'Fade is a loss of braking as the brakes overheat. Pads can pass their working temperature, a drum can expand away from its shoes, and old brake fluid can boil so that the lever goes soft. Fresh fluid and the right pads reduce it.'),
@@ -218,10 +218,10 @@ body=f'''
 <p>Push down hard on the seat and let go: a healthy rear should rise once and settle, not bounce. Look for oil on the shock shaft and fork stanchions, which means a seal has failed, and for a bent shock shaft or worn mounting bushes. Linkage bearings on monoshock bikes need grease every 10,000 to 20,000 km on the road and much more often off-road; a seized linkage makes the rear harsh and wears the shock. Worn steering head bearings also upset the front end, and our article on <a href="../motorcycle-tyre-pressure-and-wear/">tyre pressure and wear</a> explains how pressure changes the way the suspension feels.</p>
 
 {deeper([
-  (L+"m4-suspension", "Chapter 4.5: Suspension", "spring force, damping, fork types and the sag and fork-oil job sheets"),
-  (L+"m4-frame-steering", "Chapter 4.4: Frame and steering geometry", "rake, trail and steering bearings"),
+  (L+"m4-suspension", "Chapter 5.5: Suspension", "spring force, damping, fork types and the sag and fork-oil job sheets"),
+  (L+"m4-frame-steering", "Chapter 5.4: Frame and steering geometry", "rake, trail and steering bearings"),
   (EQ, "Equations summary", "spring force, sag and wheel rate"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (REP+"sag-measure/", "Measuring sag", ""),
   (REP+"fork-oil-level-set/", "Setting fork oil level", ""),
   (REP+"fork-oil-seals/", "Fork oil seal replacement", ""),
@@ -230,7 +230,7 @@ body=f'''
   (PRB+"rear-sagging/", "Rear sags too far", ""),
  ])}
 ''',
-cta=dict(label='Try it', h='See the suspension in 3D', p='Select the forks and rear shocks in the 3D Overview, compare fork and shock types in the model library, and try a different frame and suspension in the Bike builder.', links=[(OM('4t', 'forks'), 'Select the forks', True), (OM('4t', 'rear_shock'), 'Select the rear shocks', False), (BUILD, 'Open the Bike builder', False), (L+'m4-suspension', 'Read chapter 4.5', False)]),
+cta=dict(label='Try it', h='See the suspension in 3D', p='Select the forks and rear shocks in the 3D Overview, compare fork and shock types in the model library, and try a different frame and suspension in the Bike builder.', links=[(OM('4t', 'forks'), 'Select the forks', True), (OM('4t', 'rear_shock'), 'Select the rear shocks', False), (BUILD, 'Open the Bike builder', False), (L+'m4-suspension', 'Read chapter 5.5', False)]),
 faq=[
  ('What is sag on a motorcycle?', 'Sag is how far the suspension compresses from fully extended under load. Static sag is with the bike alone and rider sag is with you on board. A road bike typically runs a rider sag of about a quarter to a third of its travel.'),
  ('Does adding preload make the suspension stiffer?', 'No. Preload changes the load at which the spring starts to compress, so it changes ride height and sag, but the spring rate stays the same. If you cannot reach the right sag with the adjuster, you need a different spring.'),
@@ -310,7 +310,7 @@ body=f'''
 
 {deeper([
   (L+"m3-mixture", "Chapter 3.1: Air, fuel and mixture", "carburettor circuits, jetting order and synchronising"),
-  (L+"m3-efi", "Chapter 3.2: Electronic fuel injection and engine management", "sensors, ECU strategy, emissions and fault codes"),
+  (L+"m3-efi", "Chapter 3.4: Electronic fuel injection and engine management", "sensors, ECU strategy, emissions and fault codes"),
   (EQ, "Equations summary", "air-fuel ratio, lambda, injector pulse width and duty cycle"),
   (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
   (VID+"fuel-systems", "Videos: fuel systems", ""),
@@ -321,7 +321,7 @@ body=f'''
   (PRB+"engine-warning-light/", "Engine warning light on", ""),
  ])}
 ''',
-cta=dict(label='Try it', h='Open both fuel systems in 3D', p='Select the carburettor in the 3D Overview, turn the throttle body round in the model library, and read the two fuel chapters with their worked examples.', links=[(OM('4t', 'carb'), 'Select the carburettor', True), (MD+'throttle_body', 'Open the throttle body', False), (L+'m3-efi', 'Read chapter 3.2', False), (PRT+'injector/', 'Injector faults', False)]),
+cta=dict(label='Try it', h='Open both fuel systems in 3D', p='Select the carburettor in the 3D Overview, turn the throttle body round in the model library, and read the two fuel chapters with their worked examples.', links=[(OM('4t', 'carb'), 'Select the carburettor', True), (MD+'throttle_body', 'Open the throttle body', False), (L+'m3-efi', 'Read chapter 3.4', False), (PRT+'injector/', 'Injector faults', False)]),
 faq=[
  ('Is fuel injection better than a carburettor on a motorcycle?', 'For most road riding, yes: injection starts easily, corrects for altitude and temperature, uses fuel more precisely and works with a catalytic converter to meet emission rules. A carburettor is simpler, needs no electrics to deliver fuel and can be repaired with basic tools.'),
  ('Why do new motorcycles not have carburettors?', 'A carburettor cannot hold the mixture inside the narrow window a three-way catalyst needs, so it cannot meet current emission limits. Injection with an oxygen sensor can, which is why even 125 cc commuters now use it.'),

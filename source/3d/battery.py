@@ -21,7 +21,7 @@ def cell(x, y, z0=0.3, upright=True, lie=False):
     o = join(objs, 'cell'); o.location = (x, y, z0)
     if lie: o.rotation_euler = (math.radians(90), 0, math.radians(30))
     return o
-# module 5 x 4 cells, holders top and bottom, nickel strips on top
+# module 6 x 4 cells, holders top and bottom, nickel strips on top
 nx, ny = 6, 4; P = 2.25
 x0 = -P * (nx - 1) / 2; y0 = -P * (ny - 1) / 2
 for i in range(nx):

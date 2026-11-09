@@ -69,12 +69,12 @@ body=f'''
 <h2 id="other-types">Slipper, assist and centrifugal clutches</h2>
 <p>A <strong>slipper clutch</strong> has ramps between the hub and the pressure plate. When a fast downshift makes the rear wheel drive the engine, the ramps push the pressure plate outwards and let the clutch slip, which stops the rear tyre hopping. An <strong>assist</strong> design uses the same ramps under drive to pull the plates tighter, so softer springs and a lighter lever can be used.</p>
 <p>Step-through motorcycles such as the Honda Super Cub use an automatic <strong>centrifugal clutch</strong>, linked to the gear pedal, so the rider never needs a lever. Twist-and-go scooters have a dry centrifugal shoe clutch on the rear pulley of the CVT that engages as engine speed rises, typically between about 2,800 and 4,000 rpm. Electric motorcycles need no clutch at all, because the motor produces torque from standstill.</p>
-<p>The <a href="../../repair/parts/#clutch">clutch page in the Repair section</a> collects slip, drag and judder with their checks. Chapter 4.1 of the course, <a href="{L}m4-clutch">Primary drive and clutch</a>, includes the full torque calculation and the kickstart mechanism.</p>
+<p>The <a href="../../repair/parts/#clutch">clutch page in the Repair section</a> collects slip, drag and judder with their checks. Chapter 5.1 of the course, <a href="{L}m4-clutch">Primary drive and clutch</a>, includes the full torque calculation and the kickstart mechanism.</p>
 
 {deeper([
-  (L+"m4-clutch", "Chapter 4.1: Primary drive and clutch", "torque capacity, slip, drag and the kickstart"),
+  (L+"m4-clutch", "Chapter 5.1: Primary drive and clutch", "torque capacity, slip, drag and the kickstart"),
   (EQ, "Equations summary", "clutch torque capacity and mean friction radius"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (PRB+"clutch-slip/", "Clutch slips", "checks in order"),
   (REP+"clutch-cable-adjust/", "Clutch cable adjustment", "setting free play at the lever"),
   (REP+"clutch-plate-service/", "Clutch plate service", "measuring plates and springs"),
@@ -82,7 +82,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Try it', h='Feel the clutch in the Cockpit', p='In the Cockpit you pull the clutch, select a gear and find the friction point yourself, with the rev counter showing what the engine does. The Overview shows the clutch stack moving inside the engine.', links=[('../../cockpit/', 'Open the Cockpit', True), (OV+'clutch', 'Explore the clutch', False), (L+'m4-clutch', 'Read chapter 4.1', False), ('../../repair/parts/#clutch', 'Clutch repairs', False)]),
+cta=dict(label='Try it', h='Feel the clutch in the Cockpit', p='In the Cockpit you pull the clutch, select a gear and find the friction point yourself, with the rev counter showing what the engine does. The Overview shows the clutch stack moving inside the engine.', links=[('../../cockpit/', 'Open the Cockpit', True), (OV+'clutch', 'Explore the clutch', False), (L+'m4-clutch', 'Read chapter 5.1', False), ('../../repair/parts/#clutch', 'Clutch repairs', False)]),
 faq=[
  ('Why is a motorcycle clutch called a wet clutch?', 'Because its plates run in the engine oil. The oil cools the plates and smooths engagement, which is why the oil must meet the JASO MA or MA2 friction standard.'),
  ('How do I know if my motorcycle clutch is slipping?', 'The engine revs rise when you open the throttle but the road speed does not follow, most noticeably in a high gear at wide throttle. Check lever free play and oil grade before replacing plates.'),
@@ -164,10 +164,10 @@ body=f'''
   <li>Trace the earth path back to the battery negative or its earth point.</li>
   <li>Choose a test point near the middle of the circuit, so one voltage reading tells you which half the fault is in, and repeat.</li>
 </ol>
-<p>Most faults are mechanical rather than electrical: corroded or loose terminals, pins pushed back out of a connector by careless probing, and wires chafed where the harness passes the steering head. Repairs should use crimped terminals of the right type, or a soldered and heat-shrunk splice. Larger modern machines also link their control units over a two-wire CAN bus, which is tested differently; chapter 3.5 of the course, <a href="{L}m3-lighting-wiring">Lighting, signalling and wiring</a>, covers it, and chapter 3.4, <a href="{L}m3-battery-charging">Battery, charging and starting</a>, gives the full charging and starting tests. For a battery that keeps going flat, our guide to <a href="../motorcycle-battery-keeps-dying/">battery, charging and drain tests</a> takes you through them in order, and the Repair section's <a href="../../repair/parts/#wiring">wiring</a> and <a href="../../repair/parts/#battery">battery</a> pages list common electrical faults.</p>
+<p>Most faults are mechanical rather than electrical: corroded or loose terminals, pins pushed back out of a connector by careless probing, and wires chafed where the harness passes the steering head. Repairs should use crimped terminals of the right type, or a soldered and heat-shrunk splice. Larger modern machines also link their control units over a two-wire CAN bus, which is tested differently; chapter 4.5 of the course, <a href="{L}m3-lighting-wiring">Lighting, signalling and wiring</a>, covers it, and chapter 4.2, <a href="{L}m3-battery-charging">Battery, charging and starting</a>, gives the full charging and starting tests. For a battery that keeps going flat, our guide to <a href="../motorcycle-battery-keeps-dying/">battery, charging and drain tests</a> takes you through them in order, and the Repair section's <a href="../../repair/parts/#wiring">wiring</a> and <a href="../../repair/parts/#battery">battery</a> pages list common electrical faults.</p>
 
 {deeper([
-  (L+"m3-lighting-wiring", "Chapter 3.5: Lighting, signalling and wiring", "colour codes, loads and wire sizes"),
+  (L+"m3-lighting-wiring", "Chapter 4.5: Lighting, signalling and wiring", "colour codes, loads and wire sizes"),
   (EQ, "Equations summary", "Ohm's law, power and wire resistance"),
   (CB+"bad-earth", "Circuit Builder: a corroded earth", "measure the drop that dims a headlight"),
   (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
@@ -177,7 +177,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Try it', h='Build circuits in the Wiring Lab', p='The Wiring Lab lets you follow the harness, the starting circuit, the charging circuit and the ignition circuit on an interactive diagram, and the circuit workbench lets you blow a fuse safely.', links=[('../../wiring/', 'Open the Wiring Lab', True), (OV+'wiring', 'See the harness in 3D', False), (L+'m3-lighting-wiring', 'Read chapter 3.5', False), ('../../repair/parts/#wiring', 'Wiring repairs', False)]),
+cta=dict(label='Try it', h='Build circuits in the Wiring Lab', p='The Wiring Lab lets you follow the harness, the starting circuit, the charging circuit and the ignition circuit on an interactive diagram, and the circuit workbench lets you blow a fuse safely.', links=[('../../wiring/', 'Open the Wiring Lab', True), (OV+'wiring', 'See the harness in 3D', False), (L+'m3-lighting-wiring', 'Read chapter 4.5', False), ('../../repair/parts/#wiring', 'Wiring repairs', False)]),
 faq=[
  ('What voltage should a motorcycle battery read?', 'A rested 12 V flooded lead-acid battery reads about 12.7 V when fully charged and about 12.2 V at half charge; a sealed AGM battery reads about 12.8 to 13.1 V when full. With the engine at about 5,000 rpm the charging voltage is usually 13.5 to 15.0 V.'),
  ('What colour is the earth wire on a motorcycle?', 'Black is the usual earth colour, including on the K-Light 125 diagram. Always confirm with the colour key on the wiring diagram for your model.'),

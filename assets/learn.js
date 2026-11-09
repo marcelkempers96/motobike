@@ -26,7 +26,7 @@ const CHAPTER_IMG = {
 };
 const isPhoto = (p) => p.startsWith('photos/') || p.startsWith('renders/photo/');
 
-const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', 'fuel-ignition': 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'electric-scrambler-render.jpg' };
+const COVER = { foundations: 'honda-air-cooled.jpg', engine: 'triumph-engine.jpg', fuel: 'carburettor-work.jpg', electrics: 'vintage-timing-cover.jpg', 'drivetrain-chassis': 'honda-cb650r-engine.jpg', electric: 'electric-scrambler-render.jpg' };
 
 function renderTOC(active, page) {
   toc.innerHTML = `<span class="ute-label">Course</span>
@@ -42,7 +42,7 @@ function home() {
     <section class="ute-hero">
       <span class="ute-label">Open course · CC BY-SA 4.0</span>
       <h1>How motorcycles work, from the first combustion stroke to the BMS of an electric bike.</h1>
-      <p>Five modules, re-told for the screen: short explanations, live figures you can drive, and a quick check at the end of every chapter. Reference values come from a fuel-injected 125 cc single, the K-Light 125.</p>
+      <p>Six modules, re-told for the screen: short explanations, live figures you can drive, and a quick check at the end of every chapter. Reference values come from a fuel-injected 125 cc single, the K-Light 125.</p>
       <div class="ute-chapter-foot"><a class="ute-linkbtn is-warm" href="#${MODULES[0].id}">Start with Module ${MODULES[0].num} →</a><a class="ute-linkbtn" href="#equations">Equations summary</a><a class="ute-linkbtn" href="${ROOT}overview/">Open the Overview</a><a class="ute-linkbtn" href="${ROOT}quiz/">Quiz</a><a class="ute-linkbtn" href="${ROOT}types/">Motorcycle types</a><a class="ute-linkbtn" href="${ROOT}build/">Bike builder</a><a class="ute-linkbtn" href="${ROOT}kids/">Kids: Build a bike</a></div>
     </section>
     ${(() => {
@@ -67,15 +67,15 @@ function home() {
       <h3>Suggested path</h3>
       <div class="ute-steps">${[
         ['Module 1', 'For everyone. Then explore the bike in the Overview.'],
-        ['Modules 2 and 3', 'For combustion machines, in that order.'],
-        ['Module 4', 'For every machine, combustion or electric.'],
-        ['Module 5', 'After the battery, charging and electrical-diagnosis chapters of Module 3.'],
+        ['Modules 2, 3 and 4', 'For combustion machines, in that order.'],
+        ['Module 5', 'For every machine, combustion or electric.'],
+        ['Module 6', 'After Module 4, Electrical systems.'],
       ].map(([t, h], i) => `<div class="ute-step"><b>${i + 1}</b><div><strong>${t}</strong><p>${h}</p></div></div>`).join('')}</div>
     </section>`;
 }
 
 function glossaryHTML(mod) {
-  const g = GLOSSARY['m' + (MODULES.indexOf(mod) + 1)];
+  const g = GLOSSARY[mod.gkey || 'm' + (MODULES.indexOf(mod) + 1)];
   if (!g) return '';
   return `<article class="ute-chapter mz-chapter" data-chapter="${mod.id}-glossary">
     <div class="ute-chapter-kicker"><span class="ute-chapter-num">${mod.num}</span><span class="ute-label">Reference</span></div>

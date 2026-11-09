@@ -3,7 +3,7 @@
 const fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const katex = require(path.join(ROOT, 'assets/vendor/katex/katex.min.js'));
-const mods = process.argv.slice(2).length ? process.argv.slice(2) : ['m1', 'm2', 'm3', 'm4', 'm5'];
+const mods = process.argv.slice(2).length ? process.argv.slice(2) : ['m1', 'm2', 'm3', 'm3b', 'm4', 'm5'];
 let bad = 0;
 const tex = (t, display, where) => {
   try { katex.renderToString(t, { displayMode: display, throwOnError: true, strict: 'error' }); }

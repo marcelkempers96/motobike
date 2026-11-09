@@ -144,10 +144,10 @@ body=f'''
 <h2 id="spark-test">Testing for a spark</h2>
 <p>If the engine will not start, fit the plug into an insulated spark tester set to about 6 to 8 mm, earth it and crank. A strong blue-violet spark is good; a weak orange spark or none points to the plug, the cap, the coil or the trigger. Our guide to <a href="../motorcycle-will-not-start/">diagnosing a motorcycle that will not start</a> continues from there.</p>
 <div class="mz-art-note"><p>Ignition systems produce up to 35 kV. Never hold a plug or lead with bare hands during a spark test, and use an insulated tester rather than holding a plug against the cylinder head.</p></div>
-<p>The <a href="{RP}spark_plug">spark plug page in the Repair section</a> collects the related faults. Chapter 3.3 of the course, <a href="{L}m3-ignition">Ignition systems</a>, explains coils, CDI and ignition timing, and our <a href="../carburettor-cleaning-basics/">carburettor cleaning guide</a> covers the mixture faults that plugs reveal.</p>
+<p>The <a href="{RP}spark_plug">spark plug page in the Repair section</a> collects the related faults. Chapter 4.4 of the course, <a href="{L}m3-ignition">Ignition systems</a>, explains coils, CDI and ignition timing, and our <a href="../carburettor-cleaning-basics/">carburettor cleaning guide</a> covers the mixture faults that plugs reveal.</p>
 
 {deeper([
-  (L+"m3-ignition", "Chapter 3.3: Ignition systems", "CDI, TCI and timing"),
+  (L+"m3-ignition", "Chapter 4.4: Ignition systems", "CDI, TCI and timing"),
   (L+"m2-diagnosis", "Chapter 2.7: Engine diagnosis and service", "the spark plug reading job sheet"),
   (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
   (REP+"spark-plug-service/", "Spark plug service", ""),
@@ -157,7 +157,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Try it', h='See the spark plug in its engine', p='Select the spark plug in the Overview to see where it sits in the cylinder head, then use the Repair section to follow a misfire or a no-start back to its cause.', links=[(RP+'spark_plug', 'Spark plug repairs', True), (OV+'spark_plug', 'Explore the spark plug', False), (L+'m3-ignition', 'Read chapter 3.3', False)]),
+cta=dict(label='Try it', h='See the spark plug in its engine', p='Select the spark plug in the Overview to see where it sits in the cylinder head, then use the Repair section to follow a misfire or a no-start back to its cause.', links=[(RP+'spark_plug', 'Spark plug repairs', True), (OV+'spark_plug', 'Explore the spark plug', False), (L+'m3-ignition', 'Read chapter 4.4', False)]),
 faq=[
  ('What colour should a motorcycle spark plug be?', 'A light grey or tan insulator with little deposit means normal combustion and the correct heat range. Black soot means rich, wet oil means oil entry, and chalk white means overheating.'),
  ('What should the spark plug gap be on a 125 cc motorcycle?', 'Use the figure for your model. The K-Light 125 specifies 0.7 ± 0.1 mm with a D7RTC plug. Measure with a wire-type gauge.'),
@@ -213,12 +213,12 @@ body=f'''
 <h2 id="wheels">Wheels, balance and bearings</h2>
 <p>While you are at the wheel, spin it and watch the rim. The K-Light manual gives a runout standard within 1.0 mm and a limit of 2.0 mm, measured with a dial gauge. A shake through the handlebar at around 80 to 110 km/h usually means the wheel needs balancing. Lift the wheel and rock it at top and bottom: any play or roughness points to worn wheel bearings, which on the K-Light must not be reused once removed.</p>
 <div class="mz-art-note"><p>Tyres and brakes keep a rider upright more than any other part. If a tyre has a bulge, a deep cut or exposed cords, replace it before riding again.</p></div>
-<p>The Repair section's pages for the <a href="{PRT}front_tyre/">front wheel</a> and <a href="{PRT}rear_tyre/">rear wheel</a> collect wheel and tyre faults with their checks. Our <a href="../how-to-check-motorcycle-brake-pads/">brake pad guide</a> covers the other half of the stopping system, and chapter 4.6 of the course, <a href="{L}m4-wheels-tyres">Wheels and tyres</a>, includes the full tyre-fitting and balancing job sheet.</p>
+<p>The Repair section's pages for the <a href="{PRT}front_tyre/">front wheel</a> and <a href="{PRT}rear_tyre/">rear wheel</a> collect wheel and tyre faults with their checks. Our <a href="../how-to-check-motorcycle-brake-pads/">brake pad guide</a> covers the other half of the stopping system, and chapter 5.6 of the course, <a href="{L}m4-wheels-tyres">Wheels and tyres</a>, includes the full tyre-fitting and balancing job sheet.</p>
 
 {deeper([
-  (L+"m4-wheels-tyres", "Chapter 4.6: Wheels and tyres", "construction, markings and fitting"),
+  (L+"m4-wheels-tyres", "Chapter 5.6: Wheels and tyres", "construction, markings and fitting"),
   (EQ, "Equations summary", "pressure units and rolling circumference"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (REP+"tyre-pressure-check/", "Tyre pressure check", ""),
   (REP+"tyre-inspect/", "Tyre inspection", ""),
   (REP+"tyre-replace/", "Tyre replacement", ""),
@@ -226,7 +226,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Fix it', h='Check the wheels and tyres', p='Select a wheel in the Overview to see the rim, tyre and hub in 3D, then use the Repair section for wheel, tyre and bearing faults part by part.', links=[(RP+'front_wheel', 'Wheel and tyre repairs', True), (OV+'front_wheel', 'Explore the front wheel', False), (L+'m4-wheels-tyres', 'Read chapter 4.6', False)]),
+cta=dict(label='Fix it', h='Check the wheels and tyres', p='Select a wheel in the Overview to see the rim, tyre and hub in 3D, then use the Repair section for wheel, tyre and bearing faults part by part.', links=[(RP+'front_wheel', 'Wheel and tyre repairs', True), (OV+'front_wheel', 'Explore the front wheel', False), (L+'m4-wheels-tyres', 'Read chapter 5.6', False)]),
 faq=[
  ('What should my motorcycle tyre pressure be?', 'Use the figures in your handbook, set cold. The K-Light 125 runs 190 ± 10 kPa (27.5 psi) front and 210 ± 10 kPa (30.5 psi) rear solo; many handbooks give a higher rear pressure with a passenger.'),
  ('What is the minimum tread depth for a motorcycle tyre?', 'In the UK it is 1 mm for machines over 50 cc, which is also the K-Light 125 wear limit. Rules vary by country. Tread wear indicators leave about 0.8 to 1 mm.'),
@@ -282,20 +282,20 @@ body=f'''
 <h2 id="safety">When a pack is unsafe</h2>
 <div class="mz-art-note"><p>A pack that has been dropped, crashed or submerged, or that shows swelling, a sweet solvent smell, hissing, smoke, heat without use or leaking electrolyte must never be charged or refitted. If it can be done safely, move it outdoors to a non-combustible area away from buildings and vehicles, and treat it as hazardous waste for specialist handling.</p></div>
 <p>A damaged lithium-ion cell can go into <strong>thermal runaway</strong>, a self-sustaining reaction that reaches 600 to 900 °C within seconds and releases flammable and toxic gases, and it can spread to neighbouring cells. Never open a traction pack or controller yourself: a nominal 72 V pack reaches 84 V when full, which is above the 60 V DC threshold for high-voltage work, and requires trained technicians with insulated tools. Inspect the charge port and connectors for looseness, burning or corrosion, and stop using a charger whose plug or lead gets hot.</p>
-<p>The Repair section's pages for the <a href="{RP}battery">battery</a>, <a href="{RP}charge_port">charge port</a> and <a href="../../repair/systems/ev-drive/">controller</a> collect electric drive faults and checks. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the full drivetrain, and chapters 5.4 and 5.5 of the course, <a href="{L}m5-batteries">Batteries and the BMS</a> and <a href="{L}m5-charging">Charging, swapping and standards</a>, go into cell chemistry, charging standards and swap networks.</p>
+<p>The Repair section's pages for the <a href="{RP}battery">battery</a>, <a href="{RP}charge_port">charge port</a> and <a href="../../repair/systems/ev-drive/">controller</a> collect electric drive faults and checks. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the full drivetrain, and chapters 6.4 and 6.5 of the course, <a href="{L}m5-batteries">Batteries and the BMS</a> and <a href="{L}m5-charging">Charging, swapping and standards</a>, go into cell chemistry, charging standards and swap networks.</p>
 
 {deeper([
-  (L+"m5-batteries", "Chapter 5.4: Batteries and the BMS", "cells, ageing and state of health"),
-  (L+"m5-charging", "Chapter 5.5: Charging, swapping and standards", ""),
-  (L+"m5-safety", "Chapter 5.6: Safety, diagnosis and service", "high-voltage safety"),
+  (L+"m5-batteries", "Chapter 6.4: Batteries and the BMS", "cells, ageing and state of health"),
+  (L+"m5-charging", "Chapter 6.5: Charging, swapping and standards", ""),
+  (L+"m5-safety", "Chapter 6.6: Safety, diagnosis and service", "high-voltage safety"),
   (EQ, "Equations summary", "pack energy, C-rate and charge time"),
-  (QZ+"electric", "Electric motorcycles quiz", "test yourself on Module 5"),
+  (QZ+"electric", "Electric motorcycles quiz", "test yourself on Module 6"),
   (REP+"ev-charge-diagnosis/", "Charging fault diagnosis", ""),
   (PRB+"ev-charge-stops/", "Charging stops early", ""),
  ])}
 
 ''',
-cta=dict(label='Learn more', h='Take the battery apart in 3D', p='Select the battery, charge port and controller of the electric scrambler in the Overview, then use the Repair section for electric drive faults such as reduced range, a charger that will not start or a pack warning.', links=[(OV+'battery', 'Explore the battery', True), (RP+'battery', 'Battery repairs', False), (L+'m5-batteries', 'Read chapter 5.4', False)]),
+cta=dict(label='Learn more', h='Take the battery apart in 3D', p='Select the battery, charge port and controller of the electric scrambler in the Overview, then use the Repair section for electric drive faults such as reduced range, a charger that will not start or a pack warning.', links=[(OV+'battery', 'Explore the battery', True), (RP+'battery', 'Battery repairs', False), (L+'m5-batteries', 'Read chapter 6.4', False)]),
 faq=[
  ('Should I charge my electric motorcycle to 100 per cent?', 'For daily use, charging to 80 to 90 per cent where the system allows it slows ageing. Charge to full before a long ride, and avoid leaving the pack at 100 per cent for long periods.'),
  ('How should I store an electric motorcycle battery?', 'At 40 to 60 per cent charge in a cool, dry place out of direct sun, checking the charge every few weeks. Never store a pack empty.'),

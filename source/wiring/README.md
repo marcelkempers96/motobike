@@ -1,6 +1,6 @@
 # Motopedia Wiring Lab
 
-Interactive version of the Module 3 wiring plates: WR01 main harness, F23 starting circuit, F21 charging circuit and F22 ignition circuits (AC-CDI and DC-TCI/ECU).
+Interactive version of the Module 4 wiring plates: WR01 main harness, F23 starting circuit, F21 charging circuit and F22 ignition circuits (AC-CDI and DC-TCI/ECU).
 
 ## Files
 

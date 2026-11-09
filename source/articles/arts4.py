@@ -173,11 +173,11 @@ body=f'''
 <h2 id="electric-boda">Electric bodas</h2>
 <p>Electric boda bodas need no oil changes, spark plugs, valve adjustment or air filter. Tyres, brakes, wheel bearings and the chain or belt still need the same daily and weekly checks, and chains wear faster than on a petrol machine because of the motor's instant torque. Check the battery and charge connectors for looseness, burning or corrosion, and never open a traction battery or controller: packs above 60 V DC need trained technicians with insulated tools. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> explains the parts, and our <a href="../electric-motorcycle-battery-care/">battery care guide</a> covers charging and storage.</p>
 <div class="mz-art-note"><p>The rider and passenger depend on the tyres and brakes more than on anything else. If a brake feels soft, a tyre is damaged or the chain is badly worn, fix it before carrying a passenger.</p></div>
-<p>Chapter 4.8 of the course, <a href="{L}m4-maintenance">Periodic maintenance and pre-delivery inspection</a>, gives the full schedule, the T-CLOCS checklist and the chassis tune-up. When a check turns up a fault, the <a href="../../repair/problems/">Repair section</a> lists common problems with their causes, and has pages for the <a href="../../repair/parts/#brake">brakes</a>, <a href="../../repair/parts/#chain">chain</a> and <a href="../../repair/parts/rear_tyre/">rear wheel</a>.</p>
+<p>Chapter 5.8 of the course, <a href="{L}m4-maintenance">Periodic maintenance and pre-delivery inspection</a>, gives the full schedule, the T-CLOCS checklist and the chassis tune-up. When a check turns up a fault, the <a href="../../repair/problems/">Repair section</a> lists common problems with their causes, and has pages for the <a href="../../repair/parts/#brake">brakes</a>, <a href="../../repair/parts/#chain">chain</a> and <a href="../../repair/parts/rear_tyre/">rear wheel</a>.</p>
 
 {deeper([
-  (L+"m4-maintenance", "Chapter 4.8: Periodic maintenance and pre-delivery inspection", "the full service schedule"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (L+"m4-maintenance", "Chapter 5.8: Periodic maintenance and pre-delivery inspection", "the full service schedule"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (REP+"oil-level-check/", "Oil level check", ""),
   (REP+"chain-adjust/", "Chain adjustment", ""),
   (REP+"brake-pad-check/", "Brake pad check", ""),
@@ -186,7 +186,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Learn more', h='Train your eye on the real parts', p='Select the brake, chain or tyres in the Overview to see each part in 3D, then test what you know with the Quiz. Workshops and fleet operators can use the course modules for free under CC BY-SA 4.0.', links=[(OV+'brake', 'Explore the brakes', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-maintenance', 'Read chapter 4.8', False), ('../../repair/problems/', 'Find a fault', False)]),
+cta=dict(label='Learn more', h='Train your eye on the real parts', p='Select the brake, chain or tyres in the Overview to see each part in 3D, then test what you know with the Quiz. Workshops and fleet operators can use the course modules for free under CC BY-SA 4.0.', links=[(OV+'brake', 'Explore the brakes', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-maintenance', 'Read chapter 5.8', False), ('../../repair/problems/', 'Find a fault', False)]),
 faq=[
  ('How often should a boda boda have its oil changed?', 'Follow the manual and shorten the interval for heavy use. The K-Light 125 changes its oil every 3,000 km, which at 120 km a day is less than a month. Use JASO MA or MA2 oil.'),
  ('How often should I oil my motorcycle chain?', 'Every 500 to 800 km and after rain. For a rider covering 120 km a day that means at least once a week.'),

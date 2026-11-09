@@ -72,10 +72,10 @@ body=f'''
 
 <h2 id="electric">Electric motorcycles</h2>
 <p>An electric motorcycle has no spark, fuel or compression, but the same logic applies: confirm the battery's state of charge, then the interlocks (side stand, kill switch and often a brake lever), then look for a fault message from the battery management system or controller. Never open a traction battery or controller; packs above 60 V DC need trained technicians. Our guide to <a href="../how-electric-motorcycles-work/">how electric motorcycles work</a> describes the parts involved.</p>
-<p>For symptom-by-symptom help, the <a href="{R}problems/">Repair section's problem finder</a> lists common faults with their causes, and the parts pages for the <a href="{RP}battery">battery</a>, <a href="{RP}spark_plug">spark plug</a>, <a href="{RP}carb">carburettor</a> and <a href="{RP}wiring">wiring</a> collect the related checks. Chapter 3.6 of the course, <a href="{L}m3-diagnosis">Electrical diagnosis</a>, gives the full ignition and starter job sheets.</p>
+<p>For symptom-by-symptom help, the <a href="{R}problems/">Repair section's problem finder</a> lists common faults with their causes, and the parts pages for the <a href="{RP}battery">battery</a>, <a href="{RP}spark_plug">spark plug</a>, <a href="{RP}carb">carburettor</a> and <a href="{RP}wiring">wiring</a> collect the related checks. Chapter 4.6 of the course, <a href="{L}m3-diagnosis">Electrical diagnosis</a>, gives the full ignition and starter job sheets.</p>
 
 {deeper([
-  (L+"m3-diagnosis", "Chapter 3.6: Electrical diagnosis", "ignition and starter job sheets"),
+  (L+"m3-diagnosis", "Chapter 4.6: Electrical diagnosis", "ignition and starter job sheets"),
   (L+"m2-diagnosis", "Chapter 2.7: Engine diagnosis and service", "compression and leak-down tests"),
   (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
   (PRB+"cranks-no-start/", "Cranks but will not start", ""),
@@ -85,7 +85,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Fix it', h='Find the fault in the Repair section', p='The Repair section groups common motorcycle faults by symptom and by part, with the checks to carry out in order. Use it alongside the Wiring Lab, where you can follow the starting and ignition circuits on an interactive diagram.', links=[(R+'problems/', 'Browse problems', True), ('../../wiring/', 'Open the Wiring Lab', False), (L+'m3-diagnosis', 'Read chapter 3.6', False)]),
+cta=dict(label='Fix it', h='Find the fault in the Repair section', p='The Repair section groups common motorcycle faults by symptom and by part, with the checks to carry out in order. Use it alongside the Wiring Lab, where you can follow the starting and ignition circuits on an interactive diagram.', links=[(R+'problems/', 'Browse problems', True), ('../../wiring/', 'Open the Wiring Lab', False), (L+'m3-diagnosis', 'Read chapter 4.6', False)]),
 faq=[
  ('Why does my motorcycle click but not start?', 'A single click from the relay with no starter movement usually means a flat battery, a loose terminal, burned relay contacts or a worn starter. Check battery voltage first, then measure the voltage drop across the relay and cables while cranking.'),
  ('Why will my motorcycle turn over but not start?', 'The engine is missing spark, fuel or compression. Do a spark test with an insulated tester, look at whether the plug is dry or wet after cranking, and then do a compression test if both spark and fuel are present.'),
@@ -235,10 +235,10 @@ body=f'''
 
 <h2 id="storage">Storage and prevention</h2>
 <p>A stored battery discharges itself. The K-Light manual asks for a charge about every three months in storage; a smart charger with a float stage at about 13.5 to 13.8 V can stay connected. Keep the terminals tight and lightly coated with petroleum jelly, and avoid jump-starting from a running car, which exposes the motorcycle's electronics to voltage spikes.</p>
-<p>The <a href="{RP}battery">battery page in the Repair section</a> collects these tests with the related faults, and the <a href="{RP}wiring">wiring page</a> covers the connectors and earths that cause many charging problems. Our <a href="../motorcycle-wiring-basics/">wiring basics guide</a> explains how to read the circuit, and chapter 3.4 of the course, <a href="{L}m3-battery-charging">Battery, charging and starting</a>, gives the full job sheets.</p>
+<p>The <a href="{RP}battery">battery page in the Repair section</a> collects these tests with the related faults, and the <a href="{RP}wiring">wiring page</a> covers the connectors and earths that cause many charging problems. Our <a href="../motorcycle-wiring-basics/">wiring basics guide</a> explains how to read the circuit, and chapter 4.2 of the course, <a href="{L}m3-battery-charging">Battery, charging and starting</a>, gives the full job sheets.</p>
 
 {deeper([
-  (L+"m3-battery-charging", "Chapter 3.4: Battery, charging and starting", "job sheets for each test"),
+  (L+"m3-battery-charging", "Chapter 4.2: Battery, charging and starting", "job sheets for each test"),
   (EQ, "Equations summary", "charge current, charge time and drain time"),
   (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
   (REP+"battery-test-charge/", "Battery test and charge", ""),
@@ -248,7 +248,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Fix it', h='Trace the charging circuit', p='Follow current from the alternator through the regulator to the battery in the Wiring Lab, then use the Repair section to work through battery and charging faults part by part.', links=[('../../wiring/', 'Open the Wiring Lab', True), (RP+'battery', 'Battery repairs', False), (L+'m3-battery-charging', 'Read chapter 3.4', False)]),
+cta=dict(label='Fix it', h='Trace the charging circuit', p='Follow current from the alternator through the regulator to the battery in the Wiring Lab, then use the Repair section to work through battery and charging faults part by part.', links=[('../../wiring/', 'Open the Wiring Lab', True), (RP+'battery', 'Battery repairs', False), (L+'m3-battery-charging', 'Read chapter 4.2', False)]),
 faq=[
  ('Why does my motorcycle battery die overnight?', 'Usually a parasitic drain: a brake light switch stuck on, an accessory or alarm, or a faulty circuit. Measure the current with the key off; the K-Light 125 allows no more than 1 mA.'),
  ('What voltage should a motorcycle charging system show?', 'Typically 14.0 to 15.0 V across the battery at 5,000 rpm, staying above 13.5 V with the headlight on. The K-Light 125 specification is 14.5 ± 0.5 V.'),
@@ -312,12 +312,12 @@ body=f'''
 <h2 id="drums">Drum brakes</h2>
 <p>Many commuters still have a rear drum brake, and the check is simpler. Apply the brake and look at the <strong>wear indicator</strong> on the brake cam lever: if the pointer is beyond the mark, the shoes or the drum are worn out. With the wheel out, a typical lining limit is 1.5 to 2.0 mm. Wet-clean the brake dust rather than blowing it out, and replace both shoes if they are contaminated with oil or grease.</p>
 <div class="mz-art-note"><p>If a brake feels soft, pulls to one side, or the pads are at the limit, fix it before riding. The front brake does about 70 per cent of the work in a hard stop.</p></div>
-<p>The <a href="{RP}brake">brake page in the Repair section</a> lists common brake faults with their checks, and our <a href="../boda-boda-maintenance-checklist/">maintenance checklist</a> puts the brake check into a daily and weekly routine. Chapter 4.7 of the course, <a href="{L}m4-brakes">Brakes</a>, includes the full pad, bleeding and drum brake job sheets.</p>
+<p>The <a href="{RP}brake">brake page in the Repair section</a> lists common brake faults with their checks, and our <a href="../boda-boda-maintenance-checklist/">maintenance checklist</a> puts the brake check into a daily and weekly routine. Chapter 5.7 of the course, <a href="{L}m4-brakes">Brakes</a>, includes the full pad, bleeding and drum brake job sheets.</p>
 
 {deeper([
-  (L+"m4-brakes", "Chapter 4.7: Brakes", "pads, bleeding and drum brake job sheets"),
+  (L+"m4-brakes", "Chapter 5.7: Brakes", "pads, bleeding and drum brake job sheets"),
   (EQ, "Equations summary", "kinetic energy, line pressure and clamp force"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (REP+"brake-pad-replace/", "Brake pad replacement", ""),
   (REP+"brake-bleed/", "Bleeding a hydraulic brake", ""),
   (PRB+"spongy-brake/", "Spongy brake lever", ""),
@@ -325,7 +325,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Fix it', h='See the brake parts and their faults', p='Select the front brake in the Overview to see the disc, caliper and pads in 3D, then open the brake page in the Repair section for faults such as a spongy lever, drag and squeal.', links=[(RP+'brake', 'Brake repairs', True), (OV+'brake', 'Explore the brakes', False), (L+'m4-brakes', 'Read chapter 4.7', False)]),
+cta=dict(label='Fix it', h='See the brake parts and their faults', p='Select the front brake in the Overview to see the disc, caliper and pads in 3D, then open the brake page in the Repair section for faults such as a spongy lever, drag and squeal.', links=[(RP+'brake', 'Brake repairs', True), (OV+'brake', 'Explore the brakes', False), (L+'m4-brakes', 'Read chapter 5.7', False)]),
 faq=[
  ('How thick should motorcycle brake pads be?', 'It varies by model. On the K-Light 125, new pads have 6.0 mm of friction material and the service limit is 3 mm. Check the handbook for other models.'),
  ('Should I replace both brake pads at the same time?', 'Yes. If either pad in a caliper reaches the limit, replace both pads in that caliper together so they clamp the disc evenly.'),

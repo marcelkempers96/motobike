@@ -152,7 +152,7 @@ The modern scooter came from Japan and Taiwan in the 1980s: a plastic body over 
 
 **Where you see it:** Cities everywhere: commuting, deliveries and learner riders.
 
-**In the course:** Module 4, CVT section.
+**In the course:** Module 5, CVT section.
 
 **What came next.** In 1958 Honda combined the scooter's step-through with big wheels and a frugal four-stroke, and created the best-selling motor vehicle in history.
 
@@ -358,7 +358,7 @@ The **Bultaco Sherpa T** of 1964, developed with Sammy Miller, showed that a lig
 
 **Where you see it:** Observed trials events, farm and forest tracks, and technical riding skills training.
 
-**In the course:** Module 4, chassis.
+**In the course:** Module 5, chassis.
 
 **What came next.** On the road, the 1960s saw riders strip motorcycles in a different way: long forks and low seats.
 
@@ -481,7 +481,7 @@ Touring bikes put comfort first: a fairing that shields rider and passenger, a w
 
 **Where you see it:** Long-distance touring, often two-up, on paved roads.
 
-**In the course:** Module 4, drivetrain.
+**In the course:** Module 5, drivetrain.
 
 **What came next.** In 1980 BMW combined a touring twin with an off-road chassis and created a new class.
 
@@ -521,7 +521,7 @@ The television series **Long Way Round** (2004), in which two actors rode BMW GS
 
 **Where you see it:** Overlanding, rough-road touring and expeditions, and daily riding where roads are poor.
 
-**In the course:** Module 4, chassis.
+**In the course:** Module 5, chassis.
 
 **What came next.** Where roads are poor and jobs are scarce, the small motorcycle became a taxi.
 
@@ -601,7 +601,7 @@ Triumph's **Speed Triple** of 1994 and later the Kawasaki Z and Yamaha MT ranges
 
 **Where you see it:** Urban and country-road riding, and riders moving up from learner bikes.
 
-**In the course:** Module 4, chassis.
+**In the course:** Module 5, chassis.
 
 **What came next.** In the 2010s batteries became light enough to replace the engine altogether.
 

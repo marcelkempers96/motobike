@@ -1,8 +1,8 @@
-/* Motopedia: Module 4 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 5 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "drivetrain-chassis",
-  "num": "4",
+  "num": "5",
   "title": "Drivetrain and chassis",
   "intro": "How engine torque is switched, multiplied and delivered to the rear tyre, and how the frame, steering, suspension, wheels and brakes turn that torque into controlled motion, with the checks and repairs for each.",
   "pdf": "motopedia-module-4-drivetrain-chassis.pdf",
@@ -616,7 +616,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Five or six ratios are normal on road motorcycles. Motocross bikes use five closely spaced ratios, trials bikes six with a very low first gear, and scooters replace the gearbox with a continuously variable transmission (chapter 4.3)."
+          "html": "Five or six ratios are normal on road motorcycles. Motocross bikes use five closely spaced ratios, trials bikes six with a very low first gear, and scooters replace the gearbox with a continuously variable transmission (chapter 5.3)."
         },
         {
           "type": "h3",
@@ -742,7 +742,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "A <strong>neutral switch</strong> in the crankcase is earthed by a contact on the drum in neutral. It lights the green lamp and, on bikes with starter interlocks, lets the starter turn with the clutch engaged (module 3; <a href=\"../repair/repairs/neutral-switch-test/\">neutral switch test</a>). The half-step to neutral also explains why a hurried shift from first to second can stop in neutral."
+          "html": "A <strong>neutral switch</strong> in the crankcase is earthed by a contact on the drum in neutral. It lights the green lamp and, on bikes with starter interlocks, lets the starter turn with the clutch engaged (module 4; <a href=\"../repair/repairs/neutral-switch-test/\">neutral switch test</a>). The half-step to neutral also explains why a hurried shift from first to second can stop in neutral."
         },
         {
           "type": "photo",
@@ -1401,7 +1401,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Final-drive ratio is rear sprocket teeth over front sprocket teeth (equation <em>Gear ratio from tooth counts</em> in chapter 4.2). Small front sprockets wear fastest: each tooth engages more often, the chain bends through a larger angle at each link, and the <strong>polygon effect</strong> (speed pulsing as the chain rises and falls over the flats) grows."
+          "html": "Final-drive ratio is rear sprocket teeth over front sprocket teeth (equation <em>Gear ratio from tooth counts</em> in chapter 5.2). Small front sprockets wear fastest: each tooth engages more often, the chain bends through a larger angle at each link, and the <strong>polygon effect</strong> (speed pulsing as the chain rises and falls over the flats) grows."
         },
         {
           "type": "p",
@@ -1423,7 +1423,7 @@ export default {
         {
           "type": "h3",
           "text": [
-            "Job sheet 4.3.1: Chain and sprocket inspection, adjustment and lubrication"
+            "Job sheet 5.3.1: Chain and sprocket inspection, adjustment and lubrication"
           ]
         },
         {
@@ -1743,7 +1743,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.3.2: CVT belt and roller inspection"
+          "text": "Job sheet 5.3.2: CVT belt and roller inspection"
         },
         {
           "type": "steps",
@@ -2110,7 +2110,7 @@ export default {
         {
           "type": "h3",
           "text": [
-            "Job sheet 4.4.1: Checking and adjusting steering head bearings"
+            "Job sheet 5.4.1: Checking and adjusting steering head bearings"
           ]
         },
         {
@@ -2362,7 +2362,7 @@ export default {
         {
           "type": "h3",
           "text": [
-            "Job sheet 4.5.1: Measuring and setting sag"
+            "Job sheet 5.5.1: Measuring and setting sag"
           ]
         },
         {
@@ -2674,7 +2674,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.5.2: Fork oil change and seal replacement"
+          "text": "Job sheet 5.5.2: Fork oil change and seal replacement"
         },
         {
           "type": "callout",
@@ -3270,7 +3270,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.6.1: Removing and fitting a tubeless tyre and balancing"
+          "text": "Job sheet 5.6.1: Removing and fitting a tubeless tyre and balancing"
         },
         {
           "type": "keys",
@@ -3341,7 +3341,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.6.2: Checking wheel runout and bearings"
+          "text": "Job sheet 5.6.2: Checking wheel runout and bearings"
         },
         {
           "type": "steps",
@@ -4071,7 +4071,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.7.1: Replacing pads and measuring disc thickness and runout"
+          "text": "Job sheet 5.7.1: Replacing pads and measuring disc thickness and runout"
         },
         {
           "type": "steps",
@@ -4108,7 +4108,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.7.2: Bleeding a hydraulic brake"
+          "text": "Job sheet 5.7.2: Bleeding a hydraulic brake"
         },
         {
           "type": "steps",
@@ -4145,7 +4145,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 4.7.3: Drum brake shoe inspection and adjustment"
+          "text": "Job sheet 5.7.3: Drum brake shoe inspection and adjustment"
         },
         {
           "type": "steps",
@@ -4644,5 +4644,6 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  "gkey": "m4"
 };

@@ -62,21 +62,21 @@ body=f'''
 <div class="mz-art-note"><p>Packs above 60 V DC count as high voltage, and a so-called 72 V pack reaches 84 V when full. Work on traction circuits needs safe isolation, insulated tools and training. Orange cables mark the high-voltage circuit on electric motorcycles.</p></div>
 
 <h2 id="maintenance">What still needs maintenance</h2>
-<p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 5 of the course starts with <a href="{L}m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="{L}m5-batteries">batteries and the BMS</a>.</p>
+<p>An electric motorcycle needs no engine oil, spark plugs, valve adjustment, air filter or exhaust work. Brakes, tyres, wheel and motor bearings, the final drive and the connectors still need regular checks. Chains wear faster than on a petrol machine of similar power because of the motor's instant torque, so slack and wear length are checked as described in our <a href="../motorcycle-chain-maintenance/">chain maintenance guide</a>. Module 6 of the course starts with <a href="{L}m5-architecture">the architecture of an electric two-wheeler</a> and continues with <a href="{L}m5-batteries">batteries and the BMS</a>.</p>
 <p>How the pack is charged and stored decides how long it lasts; our guide to <a href="../electric-motorcycle-battery-care/">electric motorcycle battery care</a> sets out the habits that matter. For faults, the Repair section has pages for the <a href="../../repair/parts/#battery">battery</a>, <a href="../../repair/systems/ev-drive/">controller</a>, <a href="../../repair/parts/#motor">motor</a> and <a href="../../repair/parts/#charge_port">charge port</a>.</p>
 
 {deeper([
-  (L+"m5-architecture", "Chapter 5.1: Architecture of an electric two-wheeler", "the energy chain end to end"),
-  (L+"m5-motors", "Chapter 5.2: Electric motors", "hub and mid-drive motors, torque and back-EMF"),
-  (L+"m5-controllers", "Chapter 5.3: Motor controllers and regenerative braking", ""),
+  (L+"m5-architecture", "Chapter 6.1: Architecture of an electric two-wheeler", "the energy chain end to end"),
+  (L+"m5-motors", "Chapter 6.2: Electric motors", "hub and mid-drive motors, torque and back-EMF"),
+  (L+"m5-controllers", "Chapter 6.3: Motor controllers and regenerative braking", ""),
   (EQ, "Equations summary", "pack energy, C-rate and motor torque constant"),
-  (QZ+"electric", "Electric motorcycles quiz", "test yourself on Module 5"),
+  (QZ+"electric", "Electric motorcycles quiz", "test yourself on Module 6"),
   (REP+"ev-motor-diagnosis/", "Electric motor diagnosis", "the repair job sheet"),
   (PRB+"ev-wont-charge/", "Electric bike will not charge", "checks in order"),
  ])}
 
 ''',
-cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/systems/ev-drive/', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 5', False)]),
+cta=dict(label='Try it', h='Take an electric motorcycle apart in 3D', p='The Overview has an electric scrambler with its battery, controller, motor and charge port. Select each part to see what it does, then try an electric drivetrain in the Bike builder.', links=[(OV+'battery', 'Explore the battery', True), ('../../repair/systems/ev-drive/', 'Electric drive repairs', False), ('../../build/', 'Open the Bike builder', False), (L+'m5-architecture', 'Read Module 6', False)]),
 faq=[
  ('Do electric motorcycles have gears?', 'Almost all use a single fixed ratio with no gearbox or clutch. The motor gives full torque from standstill and works across a wide speed range, so gears are not needed.'),
  ('What does a BMS do on an electric motorcycle?', 'It measures every cell group\'s voltage, the temperatures and the current, estimates state of charge, balances the cells and cuts the current if any limit is exceeded. It also tells the controller and charger how much current they may use.'),
@@ -145,12 +145,12 @@ body=f'''
 
 <h2 id="lubricate">Clean and lubricate</h2>
 <p>Clean the chain with a neutral chain cleaner and a soft brush. Do not use steam, petrol or strong solvents on an O-ring chain, because they swell or dissolve the rings. Dry it, then apply chain lubricant to the inside of the lower run where the plates overlap, so that the chain's own movement carries it into the joints, and wipe off the excess. Lubricate when the chain is warm after a ride, every 500 to 800 km, and after riding in rain.</p>
-<p>Chain drive is not the only option. Toothed belts, common on electric motorcycles and some cruisers, need no lubrication, and shaft drives are sealed but heavier. Chapter 4.3 of the course, <a href="{L}m4-final-drive">Final drive and CVT</a>, compares them and includes the full job sheet. The <a href="../../repair/parts/#chain">chain page in the Repair section</a> collects chain and sprocket faults such as noise, jumping and tight spots.</p>
+<p>Chain drive is not the only option. Toothed belts, common on electric motorcycles and some cruisers, need no lubrication, and shaft drives are sealed but heavier. Chapter 5.3 of the course, <a href="{L}m4-final-drive">Final drive and CVT</a>, compares them and includes the full job sheet. The <a href="../../repair/parts/#chain">chain page in the Repair section</a> collects chain and sprocket faults such as noise, jumping and tight spots.</p>
 
 {deeper([
-  (L+"m4-final-drive", "Chapter 4.3: Final drive and CVT", "chain sizes, sprocket ratios and the job sheet"),
+  (L+"m4-final-drive", "Chapter 5.3: Final drive and CVT", "chain sizes, sprocket ratios and the job sheet"),
   (EQ, "Equations summary", "final drive ratio, chain length and elongation"),
-  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 4"),
+  (QZ+"drivetrain-chassis", "Drivetrain and chassis quiz", "test yourself on Module 5"),
   (REP+"chain-wear-check/", "Chain wear check", "measuring elongation"),
   (REP+"chain-adjust/", "Chain adjustment", "setting slack and wheel alignment"),
   (REP+"chain-sprocket-replace/", "Chain and sprocket replacement", ""),
@@ -158,7 +158,7 @@ body=f'''
  ])}
 
 ''',
-cta=dict(label='Try it', h='See the final drive in 3D', p='Select the chain or the rear sprocket in the Overview to see the final drive turning, then check your knowledge with the Module 4 questions in the Quiz.', links=[(OV+'chain', 'Explore the chain', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-final-drive', 'Read chapter 4.3', False), ('../../repair/parts/#chain', 'Chain repairs', False)]),
+cta=dict(label='Try it', h='See the final drive in 3D', p='Select the chain or the rear sprocket in the Overview to see the final drive turning, then check your knowledge with the Module 5 questions in the Quiz.', links=[(OV+'chain', 'Explore the chain', True), ('../../quiz/', 'Take the quiz', False), (L+'m4-final-drive', 'Read chapter 5.3', False), ('../../repair/parts/#chain', 'Chain repairs', False)]),
 faq=[
  ('How much slack should a motorcycle chain have?', 'Use the figure in your owner\'s manual. Many commuter motorcycles, including the K-Light 125, specify 20 to 40 mm of total up-and-down movement at the midpoint of the lower run, measured at the tightest point.'),
  ('How do I know when to replace my chain?', 'Measure the length over 10 or 20 pitches. For a 12.70 mm pitch chain, replace it when 10 pitches measure about 129 mm or 20 pitches about 258 to 259 mm, or at the chain maker\'s limit.'),

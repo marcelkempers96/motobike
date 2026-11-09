@@ -16,7 +16,7 @@ editorial opportunities" and "Suggested first 15").
 - Restorations, custom builds, timelapses, stunts: mostly `case-study` on one or two part pages or a
   course chapter where they clearly show that part, or `skip`. Speed mods with no learning value: `skip`.
 - `note`: one plain line on what the viewer learns, plus a caution where needed. No em or en dashes.
-- Electric motorcycle videos: map to electric parts, problems and module 5 chapters where they fit.
+- Electric motorcycle videos: map to electric parts, problems and module 6 chapters where they fit.
 
 Then append a short section "## Second collection (V101 to V300)" (at most 25 lines) to
 `source/videos/what-the-videos-teach.md`: new topics covered, gaps that remain, pages that most

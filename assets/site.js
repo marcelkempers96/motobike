@@ -23,14 +23,15 @@ if (/[#&](access_token|error_description)=|[?&]code=/.test(location.hash + locat
 }
 export const MAIN = [['overview/', 'Overview']];
 export const NAV = [
-  { key: 'course', title: 'Course', blurb: 'Five modules, quizzes and your progress', items: [
+  { key: 'course', title: 'Course', blurb: 'Six modules, quizzes and your progress', items: [
     ['crash-course/', 'Crash course', 'The whole motorcycle in 15 minutes'],
     ['learn/', 'Course overview', 'How the course works, where to start'],
     ['learn/#foundations', '1 Foundations', 'Anatomy, physics, workshop'],
     ['learn/#engine', '2 The engine', 'Four-stroke and two-stroke'],
-    ['learn/#fuel-ignition', '3 Fuel, ignition, electrics', 'Mixture, EFI, charging'],
-    ['learn/#drivetrain-chassis', '4 Drivetrain and chassis', 'Clutch to brakes'],
-    ['learn/#electric', '5 Electric motorcycles', 'Motors, packs, BMS'],
+    ['learn/#fuel', '3 Fuel, air and exhaust', 'Mixture, carburettors, EFI'],
+    ['learn/#electrics', '4 Electrical systems', 'Ignition, battery, charging, wiring'],
+    ['learn/#drivetrain-chassis', '5 Drivetrain and chassis', 'Clutch to brakes'],
+    ['learn/#electric', '6 Electric motorcycles', 'Motors, packs, BMS'],
     ['learn/#equations', 'Equations summary', 'Every equation, what it means and why'],
     ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
     ['progress/', 'My progress', 'Saved in this browser, or to your account'],

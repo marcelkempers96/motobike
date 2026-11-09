@@ -2849,7 +2849,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Stability comes mainly from <strong>trail</strong>: commuters typically have 25&ndash;28&deg; rake and 90&ndash;110 mm trail (Module 4)."
+          "html": "Stability comes mainly from <strong>trail</strong>: commuters typically have 25&ndash;28&deg; rake and 90&ndash;110 mm trail (Module 5)."
         },
         {
           "type": "figure",
@@ -3494,5 +3494,6 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  "gkey": "m1"
 };

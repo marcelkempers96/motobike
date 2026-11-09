@@ -1,8 +1,8 @@
-/* Motopedia: Module 5 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
+/* Motopedia: Module 6 lessons. Edit freely: block types are p, h3, keys, steps, table, callout,
    figure (interactive), plate (course plate id), model/models (3D GLB), photo (render), check (question id). */
 export default {
   "id": "electric",
-  "num": "5",
+  "num": "6",
   "title": "Electric motorcycles",
   "intro": "How electric two-wheelers turn stored electrochemical energy into traction, and how to inspect, diagnose and service their motors, controllers, batteries and chargers safely.",
   "pdf": "motopedia-module-5-electric.pdf",
@@ -262,7 +262,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Measured consumption of 125-equivalent electric commuters, typically <strong>2–4 kWh/100 km</strong> at the battery terminals, agrees with this estimate. The spread depends on speed, payload and terrain: aerodynamic drag rises with the square of speed, so the same machine may use 2.5 kWh/100 km at 40 km/h and 5 kWh/100 km at 80 km/h. Regenerative braking (Chapter 5.3) also recovers some kinetic energy that the petrol bike turns into brake heat."
+          "html": "Measured consumption of 125-equivalent electric commuters, typically <strong>2–4 kWh/100 km</strong> at the battery terminals, agrees with this estimate. The spread depends on speed, payload and terrain: aerodynamic drag rises with the square of speed, so the same machine may use 2.5 kWh/100 km at 40 km/h and 5 kWh/100 km at 80 km/h. Regenerative braking (Chapter 6.3) also recovers some kinetic energy that the petrol bike turns into brake heat."
         },
         {
           "type": "p",
@@ -970,7 +970,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Road speed follows from the reduction ratio and tyre circumference, as for a petrol bike (Module 4): \\(n_{\\mathrm{wheel}} = n_{\\mathrm{motor}} / i\\) and \\(v = n_{\\mathrm{wheel}}\\, C_{\\mathrm{roll}} \\times 60 / 1000\\) km/h. At 5,000 rpm through a 22/132 belt (\\(i = 6.0\\)) and a 1.93 m tyre circumference: 833 rpm at the wheel, <strong>about 96 km/h</strong>. Wheel torque is multiplied by the ratio: \\(40 \\times 6.0 \\times 0.97 \\approx 233\\ \\mathrm{N\\,m}\\), a tractive force of about 760 N on a 0.307 m rolling radius."
+          "html": "Road speed follows from the reduction ratio and tyre circumference, as for a petrol bike (Module 5): \\(n_{\\mathrm{wheel}} = n_{\\mathrm{motor}} / i\\) and \\(v = n_{\\mathrm{wheel}}\\, C_{\\mathrm{roll}} \\times 60 / 1000\\) km/h. At 5,000 rpm through a 22/132 belt (\\(i = 6.0\\)) and a 1.93 m tyre circumference: 833 rpm at the wheel, <strong>about 96 km/h</strong>. Wheel torque is multiplied by the ratio: \\(40 \\times 6.0 \\times 0.97 \\approx 233\\ \\mathrm{N\\,m}\\), a tractive force of about 760 N on a 0.307 m rolling radius."
         },
         {
           "type": "check",
@@ -1614,7 +1614,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "The energy available is the kinetic energy \\(E_k = \\tfrac12 m v^2\\) (Module 4). Not all of it comes back: rolling resistance and drag absorb some during the stop, the friction brakes take a share in hard stops, and each conversion (tyre, transmission, motor as generator, inverter, battery charge) loses a little."
+          "html": "The energy available is the kinetic energy \\(E_k = \\tfrac12 m v^2\\) (Module 5). Not all of it comes back: rolling resistance and drag absorb some during the stop, the friction brakes take a share in hard stops, and each conversion (tyre, transmission, motor as generator, inverter, battery charge) loses a little."
         },
         {
           "type": "keys",
@@ -2071,7 +2071,7 @@ export default {
           "type": "callout",
           "tone": "safety",
           "title": "A '72 V' pack is high voltage",
-          "html": "Fully charged, a 20S NMC pack reaches <strong>84 V</strong>, above the <strong>60 V DC</strong> threshold of class B (Chapter 5.6), even though it is sold as 72 V."
+          "html": "Fully charged, a 20S NMC pack reaches <strong>84 V</strong>, above the <strong>60 V DC</strong> threshold of class B (Chapter 6.6), even though it is sold as 72 V."
         },
         {
           "type": "check",
@@ -2116,7 +2116,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Under load the terminal voltage sags by \\(\\Delta V = I R_{\\mathrm{pack}}\\) (Module 3) and the pack dissipates \\(I^2 R_{\\mathrm{pack}}\\) as heat. For the 20S10P pack, \\(R_{\\mathrm{pack}} = 0.040\\ \\Omega\\): at 150 A the pack sags by 6 V (72 V to about 66 V) and makes <strong>900 W</strong> of heat inside. A 20-minute climb at 100 A generates \\(100^2 \\times 0.04 \\times 1200 = 480\\ \\mathrm{kJ}\\), a potential rise of over 30 K, which is why sealed air-cooled packs derate on long hot hills. Resistance roughly doubles from 25 °C to 0 °C and rises with age."
+          "html": "Under load the terminal voltage sags by \\(\\Delta V = I R_{\\mathrm{pack}}\\) (Module 4) and the pack dissipates \\(I^2 R_{\\mathrm{pack}}\\) as heat. For the 20S10P pack, \\(R_{\\mathrm{pack}} = 0.040\\ \\Omega\\): at 150 A the pack sags by 6 V (72 V to about 66 V) and makes <strong>900 W</strong> of heat inside. A 20-minute climb at 100 A generates \\(100^2 \\times 0.04 \\times 1200 = 480\\ \\mathrm{kJ}\\), a potential rise of over 30 K, which is why sealed air-cooled packs derate on long hot hills. Resistance roughly doubles from 25 °C to 0 °C and rises with age."
         },
         {
           "type": "eq",
@@ -2246,7 +2246,7 @@ export default {
               "Ah"
             ]
           ],
-          "why": "It decides warranty claims, resale value and when a pack moves to second life. A bench capacity test (Chapter 5.6) gives the measured value.",
+          "why": "It decides warranty claims, resale value and when a pack moves to second life. A bench capacity test (Chapter 6.6) gives the measured value.",
           "example": "A 50 Ah pack that now delivers 42 Ah has \\(\\mathrm{SOH} = 42/50 \\times 100 = 84\\ \\%\\)."
         },
         {
@@ -2320,7 +2320,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "Low-voltage packs (up to about 72 V) usually switch with banks of MOSFETs in the negative path inside the BMS; high-voltage packs use contactors with a pre-charge relay and resistor (Chapter 5.1). The BMS logs cycles, energy throughput, temperature extremes, overcurrent events and faults in non-volatile memory; these logs settle warranty claims and tell a fleet operator which packs to retire."
+          "html": "Low-voltage packs (up to about 72 V) usually switch with banks of MOSFETs in the negative path inside the BMS; high-voltage packs use contactors with a pre-charge relay and resistor (Chapter 6.1). The BMS logs cycles, energy throughput, temperature extremes, overcurrent events and faults in non-volatile memory; these logs settle warranty claims and tell a fleet operator which packs to retire."
         },
         {
           "type": "check",
@@ -2567,7 +2567,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "The set-point voltage is the most important charger parameter. It is the pack-voltage equation with the maximum cell voltage, \\(V_{\\mathrm{set}} = S \\times V_{\\mathrm{cell,max}}\\) (Chapter 5.4). A charger set 0.05 V per cell too high adds only a few percent capacity but ages the pack much faster; one set for the wrong cell count is dangerous. Current tapers in the CV phase because the cells' internal voltage approaches the terminal voltage, leaving less voltage to drive current through their internal resistance."
+          "html": "The set-point voltage is the most important charger parameter. It is the pack-voltage equation with the maximum cell voltage, \\(V_{\\mathrm{set}} = S \\times V_{\\mathrm{cell,max}}\\) (Chapter 6.4). A charger set 0.05 V per cell too high adds only a few percent capacity but ages the pack much faster; one set for the wrong cell count is dangerous. Current tapers in the CV phase because the cells' internal voltage approaches the terminal voltage, leaving less voltage to drive current through their internal resistance."
         },
         {
           "type": "check",
@@ -3132,7 +3132,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 5.6.1: Safe isolation and zero-voltage verification"
+          "text": "Job sheet 6.6.1: Safe isolation and zero-voltage verification"
         },
         {
           "type": "p",
@@ -3351,7 +3351,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 5.6.2: Testing motor phases and Hall sensors"
+          "text": "Job sheet 6.6.2: Testing motor phases and Hall sensors"
         },
         {
           "type": "steps",
@@ -3388,7 +3388,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 5.6.3: Battery pack inspection and cell balance check"
+          "text": "Job sheet 6.6.3: Battery pack inspection and cell balance check"
         },
         {
           "type": "steps",
@@ -3421,7 +3421,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "Job sheet 5.6.4: Controller and throttle fault diagnosis"
+          "text": "Job sheet 6.6.4: Controller and throttle fault diagnosis"
         },
         {
           "type": "steps",
@@ -3580,7 +3580,7 @@ export default {
           "items": [
             {
               "title": "Mass and weight distribution",
-              "html": "A 3.6 kWh pack (about 20 kg) and a motor (10–20 kg) replace an engine and fuel of similar mass, but battery position moves the centre of gravity and the front-rear split, which changes steering (Module 4) and braking."
+              "html": "A 3.6 kWh pack (about 20 kg) and a motor (10–20 kg) replace an engine and fuel of similar mass, but battery position moves the centre of gravity and the front-rear split, which changes steering (Module 5) and braking."
             },
             {
               "title": "Structure",
@@ -3653,5 +3653,6 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  "gkey": "m5"
 };
