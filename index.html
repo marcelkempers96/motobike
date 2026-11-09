@@ -35,6 +35,17 @@
     @media (max-width: 900px) { .hm-tools { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 720px) { .hm-tools { margin-top: 28px; } .hm-tools a { padding: 11px 12px; } .hm-tools b { font-size: 15px; } .hm-tools span { font-size: 12.5px; } }
 
+    .hm-ticker { position: relative; overflow: hidden; margin: 18px 0 0; max-width: 1100px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+    .hm-ticker-track { display: flex; width: max-content; animation: hm-tick 55s linear infinite; }
+    .hm-ticker:hover .hm-ticker-track, .hm-ticker:focus-within .hm-ticker-track { animation-play-state: paused; }
+    .hm-ticker-dup { display: flex; }
+    .hm-ticker a { flex: none; padding: 6px 0; margin-right: 34px; font: 600 14.5px/1.3 var(--sans); color: #E6E6E6; text-decoration: none; white-space: nowrap; }
+    .hm-ticker a::after { content: "→"; margin-left: 6px; opacity: 0; transition: opacity .2s; }
+    .hm-ticker a:hover { color: #FFF; text-decoration: underline; text-decoration-color: var(--warm); text-underline-offset: 4px; }
+    .hm-ticker a:hover::after { opacity: 1; }
+    .hm-ticker a + a::before, .hm-ticker-dup a::before { content: "•"; color: var(--warm); margin-right: 34px; display: inline-block; text-decoration: none; }
+    @keyframes hm-tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .hm-ticker { -webkit-mask-image: none; mask-image: none; } .hm-ticker-track { animation: none; flex-wrap: wrap; width: auto; } .hm-ticker-dup { display: none; } }
     .hm-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 16px 0 0; font: 400 14px/1.4 var(--sans); color: #DDD; }
     .hm-facts span + span::before { content: "·"; margin-right: 18px; color: #999; }
     .hm-look { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 8px; }
@@ -55,7 +66,7 @@
     .hm-ico { width: 40px; height: 40px; display: block; margin-bottom: 8px; }
     .hm-fix-ways a:hover .hm-ico { filter: invert(1); }
     .hm-fix-ways a.is-main .hm-ico { filter: brightness(0) invert(1); }
-    .hm-fix-ways { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+    .hm-fix-ways { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
     .hm-fix-ways a { display: flex; flex-direction: column; gap: 4px; padding: 16px; border: 1.5px solid var(--ink); background: #FFF; color: var(--ink); text-decoration: none; }
     .hm-fix-ways a:hover { background: var(--ink); color: #FFF; }
     .hm-fix-ways a.is-main { background: var(--warm); border-color: var(--warm); color: #FFF; }
@@ -113,6 +124,7 @@
     @media (max-width: 1000px) { .hm-blog { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 520px) { .hm-blog { grid-template-columns: 1fr; } }
     .hm-quote-sec { position: relative; background: #141414 url(assets/photos/home-quote-bg.webp) center / cover no-repeat; isolation: isolate; }
+    .hm-quote-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
     .hm-quote-sec::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,12,.72), rgba(12,12,12,.80)); z-index: -1; }
     .hm-quote-sec .hm-quote { padding: 56px 0; }
     .hm-quote-sec .hm-quote blockquote { color: #FFFFFF; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
@@ -219,7 +231,7 @@
           <a href="repair/diagnose/">Diagnose a problem</a>
         </div>
         <div class="hm-tools" aria-label="What you can do here"><a href="overview/"><img class="hm-tool-ico is-dark" src="assets/icons/on-dark/3d-overview.svg" alt="" width="40" height="40"><b>3D Overview <i aria-hidden="true">→</i></b><span>Tap a part to see how it works</span></a><a href="cockpit/"><img class="hm-tool-ico is-dark" src="assets/icons/on-dark/cockpit.svg" alt="" width="40" height="40"><b>Cockpit <i aria-hidden="true">→</i></b><span>Start it up and ride</span></a><a href="build/"><img class="hm-tool-ico is-dark" src="assets/icons/on-dark/bike-builder.svg" alt="" width="40" height="40"><b>Bike builder <i aria-hidden="true">→</i></b><span>Build a bike, part by part</span></a><a href="wiring/"><img class="hm-tool-ico" src="assets/icons/wiring-lab.svg" alt="" width="40" height="40"><b>Wiring Lab <i aria-hidden="true">→</i></b><span>Follow the wires, find the fault</span></a><a href="learn/"><img class="hm-tool-ico is-dark" src="assets/icons/on-dark/course.svg" alt="" width="40" height="40"><b>Course <i aria-hidden="true">→</i></b><span>Six modules, engine to battery</span></a><a href="engine/"><img class="hm-tool-ico is-dark" src="assets/icons/on-dark/under-the-engine.svg" alt="" width="40" height="40"><b>Under the Engine <i aria-hidden="true">→</i></b><span>Watch the gears and valves move</span></a></div>
-        <p class="hm-facts"><span class="is-key">39 chapters</span><span class="is-key">362 repair guides</span><span>369 models</span><span>223 quiz questions</span></p>
+        <div class="hm-ticker" aria-label="What is on Motopedia"><div class="hm-ticker-track"><a href="learn/">6 modules · 39 chapters</a><a href="repair/repairs/">372 step-by-step repairs</a><a href="repair/problems/">313 problems diagnosed</a><a href="repair/parts/">208 parts explained</a><a href="repair/bikes/">500 bikes covered</a><a href="models/">369 3D models</a><a href="learn/#equations">153 equations explained</a><a href="quiz/">223 quiz questions</a><a href="videos/">250 curated videos</a><a href="downloads/">38 technical plates</a><a href="articles/">22 articles</a><a href="types/">16 motorcycle types</a><a href="learn/#foundations-glossary">408 glossary terms</a><a href="parts/">Spare part prices for 41 bikes</a><span aria-hidden="true" class="hm-ticker-dup"><a tabindex="-1" href="learn/">6 modules · 39 chapters</a><a tabindex="-1" href="repair/repairs/">372 step-by-step repairs</a><a tabindex="-1" href="repair/problems/">313 problems diagnosed</a><a tabindex="-1" href="repair/parts/">208 parts explained</a><a tabindex="-1" href="repair/bikes/">500 bikes covered</a><a tabindex="-1" href="models/">369 3D models</a><a tabindex="-1" href="learn/#equations">153 equations explained</a><a tabindex="-1" href="quiz/">223 quiz questions</a><a tabindex="-1" href="videos/">250 curated videos</a><a tabindex="-1" href="downloads/">38 technical plates</a><a tabindex="-1" href="articles/">22 articles</a><a tabindex="-1" href="types/">16 motorcycle types</a><a tabindex="-1" href="learn/#foundations-glossary">408 glossary terms</a><a tabindex="-1" href="parts/">Spare part prices for 41 bikes</a></span></div></div>
       </div>
     </section>
 
@@ -286,7 +298,6 @@
           <a href="repair/repairs/"><img class="hm-ico" src="assets/icons/by-repair.svg" alt="" width="40" height="40"><b>By repair</b><span>Step-by-step jobs, rider to workshop</span></a>
           <a href="repair/parts/"><img class="hm-ico" src="assets/icons/by-part.svg" alt="" width="40" height="40"><b>By part</b><span>What each part does and how it fails</span></a>
           <a href="repair/bikes/"><img class="hm-ico" src="assets/icons/by-bike.svg" alt="" width="40" height="40"><b>By bike</b><span>500 motorcycles: top repairs and problems</span></a>
-          <a href="parts/"><img class="hm-ico" src="assets/icons/spare-parts.svg" alt="" width="40" height="40"><b>Spare parts</b><span>Prices and shops for 41 popular bikes</span></a>
         </div>
         <div class="hm-fix-hrow"><h3 class="hm-fix-h">Common problems</h3><div class="ru-legend" aria-hidden="true"><span class="is-ok">OK to ride</span><span class="is-care">Ride with care</span><span class="is-stop">Do not ride</span><span class="is-now">Stop now</span></div></div>
         <div class="hm-fix-common"><a class="ru-li is-stop" href="repair/problems/cranks-no-start/" title="Do not ride"><b>Engine turns over but will not start</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-care" href="repair/problems/battery-flat/" title="Ride with care"><b>Battery goes flat after the bike is parked</b><i class="ru-sr">Ride with care</i></a><a class="ru-li is-stop" href="repair/problems/spongy-brake/" title="Do not ride"><b>Brake lever or pedal feels spongy</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-care" href="repair/problems/chain-noise/" title="Ride with care"><b>Chain is noisy, clattering or slapping</b><i class="ru-sr">Ride with care</i></a><a class="ru-li is-now" href="repair/problems/overheating-air/" title="Stop now"><b>Air-cooled engine overheats</b><i class="ru-sr">Stop now</i></a><a class="ru-li is-stop" href="repair/problems/sudden-power-loss/" title="Do not ride"><b>Sudden loss of power while riding</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-stop" href="repair/problems/puncture-tube/" title="Do not ride"><b>Flat tyre on a wheel with an inner tube</b><i class="ru-sr">Do not ride</i></a><a class="ru-li is-care" href="repair/problems/brake-squeal/" title="Ride with care"><b>Brakes squeal</b><i class="ru-sr">Ride with care</i></a></div>
@@ -313,6 +324,7 @@
     </section>
 
     <section class="hm-section hm-quote-sec">
+      <video class="hm-quote-vid" src="assets/video/bikes.mp4" poster="assets/video/bikes-poster.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video>
       <div class="hm-wrap">
         <figure class="hm-quote">
           <blockquote>A motorcycle is a set of simple ideas, built one on top of the other. Learn the ideas, and every fault becomes something you can find.</blockquote>
