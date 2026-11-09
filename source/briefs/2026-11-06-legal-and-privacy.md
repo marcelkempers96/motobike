@@ -59,5 +59,5 @@ new legal links to the footer myself. Commit.
 Playwright (pre-installed), local server http://localhost:8765/ (start
 `python3 -m http.server 8765 --directory /home/user/motobike` only if not running). Load every page
 you changed at 1300 and 390 px, no console errors, no broken links. Run a final
-`grep -rIi "kempers"` over published files (exclude source/, docs/, inbox/, node_modules) and
+a search for the founder’s surname over published files (exclude source/, docs/, inbox/, node_modules) and
 report the result. Notes in `source/briefs/legal-progress.md`. Reply in at most 10 lines.

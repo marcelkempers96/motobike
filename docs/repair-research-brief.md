@@ -1,6 +1,6 @@
 # Research brief: Motopedia Repair section
 
-Copy this whole file into a new agent session that has the `marcelkempers96/motobike` repo checked out.
+Copy this whole file into a new agent session that has the Motopedia repository checked out.
 
 ## 1. Context
 
