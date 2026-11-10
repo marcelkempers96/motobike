@@ -15,7 +15,7 @@ BOLD = '/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf'
 XBOLD = '/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf'
 ORANGE, WHITE = (240, 122, 85), (255, 255, 255)
 LOGO = os.path.join(ROOT, 'assets/brand/motopedia-logo-white.png')
-REELS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'viral.json')))
+REELS = json.load(open(os.environ.get('REELS') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'viral.json')))
 
 
 def wrap(d, text, font, maxw):
@@ -57,10 +57,10 @@ def overlay(seg, title, card_h, path):
     global BG
     if BG is None: BG = background()
     im = BG.copy().convert('RGBA'); d = ImageDraw.Draw(im)
-    logo = Image.open(LOGO).convert('RGBA'); logo = logo.resize((250, round(logo.height * 250 / logo.width)))
-    im.alpha_composite(logo, ((W - logo.width) // 2, 110))
+    logo = Image.open(LOGO).convert('RGBA'); logo = logo.resize((360, round(logo.height * 360 / logo.width)))
+    im.alpha_composite(logo, ((W - logo.width) // 2, 95))
     tf = ImageFont.truetype(XBOLD, seg.get('title_size', 80))
-    if title: text_block(d, title.upper() if seg.get('caps', True) else title, tf, 270, WHITE, maxw=980, gap=1.08)
+    if title: text_block(d, title.upper() if seg.get('caps', True) else title, tf, 290, WHITE, maxw=980, gap=1.08)
     x0, y0 = (W - CARD_W) // 2, CARD_Y
     hole = Image.new('L', (W, H), 255); ImageDraw.Draw(hole).rounded_rectangle((x0, y0, x0 + CARD_W, y0 + card_h), 38, fill=0)
     im.putalpha(hole)

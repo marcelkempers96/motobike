@@ -63,14 +63,14 @@ const C = {
     await rec(p, 'brand', '#mzb-stage canvas', 6, async () => {});
   },
 };
-for (const m of ['4t', '2t', 'sc', 'st', 'bb', 'cr', 'sb', 'cu', 'vt', 'pi', 'elec']) C['b_' + m] = (p) => bike(p, m, m === 'cr' ? 6 : 3, m === 'cr' ? 600 : 330);
+for (const m of ['4t', '2t', 'sc', 'st', 'bb', 'cr', 'sb', 'cu', 'vt', 'pi', 'elec']) C['b_' + m] = (p) => bike(p, m, m === 'cr' ? 6 : m === 'pi' ? 3 : 2.4, m === 'cr' ? 600 : 300);
 for (const [m, id] of [['4t', 'chain'], ['4t', 'spark_plug'], ['4t', 'battery'], ['4t', 'carb'], ['4t', 'clutch'], ['4t', 'rear_shock'], ['sb', 'brake'], ['sc', 'cvt'], ['4t', 'rear_sprocket']]) C[`p_${m}_${id}`] = (p) => part(p, m, id);
 
 (async () => {
   const which = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(C);
   const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--hide-scrollbars'] });
   for (const s of which) {
-    const ctx = await b.newContext({ viewport: { width: 432, height: 768 }, deviceScaleFactor: 2.5, isMobile: true });
+    const ctx = await b.newContext({ viewport: { width: 432, height: 768 }, deviceScaleFactor: +(process.env.DSF || 2.5), isMobile: true });
     await ctx.addInitScript(VCLOCK);
     const p = await ctx.newPage();
     try { await C[s](p); } catch (e) { console.log(s, 'FAILED', e.message.split('\n')[0]); }
