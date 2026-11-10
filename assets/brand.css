@@ -120,3 +120,7 @@
 .mzb-pack button { align-self: flex-start; }
 .mzb-small { font-size: 14px; color: var(--mute); margin-top: 14px; max-width: 980px; }
 @media (max-width: 900px) { .mzb-packs { grid-template-columns: 1fr; } }
+/* backgrounds */
+.mzb-stage.is-studio { background: radial-gradient(ellipse at 50% 35%, #FFFFFF 0%, #E9E7E2 55%, #CFCCC5 100%); }
+.mzb-stage.is-sunset { background: linear-gradient(180deg, #FDE6CF 0%, #F6B98E 55%, #C9764F 100%); }
+.mzb-stage.is-ocean { background: linear-gradient(180deg, #E4F0F6 0%, #9CC3D8 55%, #4D7D99 100%); }

@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261106b">
-  <link rel="stylesheet" href="../assets/brand.css?v=20261106ba">
+  <link rel="stylesheet" href="../assets/brand.css?v=20261110a">
   <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.motopedia.org/"}, {"@type": "ListItem", "position": 2, "name": "Brand a bike", "item": "https://www.motopedia.org/brand/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which files can I use?", "acceptedAnswer": {"@type": "Answer", "text": "PNG, JPG, SVG or WebP, up to 5 MB. A PNG or SVG with a transparent background looks best on the bike. Light logos show up best on dark bodywork, and dark logos on light bodywork."}}, {"@type": "Question", "name": "Does the picture show the real bike?", "acceptedAnswer": {"@type": "Answer", "text": "The bikes are generic, unbranded 3D models of common types. The picture shows where your logo sits and how big it is, not the exact shape of your own bikes."}}, {"@type": "Question", "name": "What happens after I send a request?", "acceptedAnswer": {"@type": "Answer", "text": "We read every request and reply by email, usually within a few working days, with questions about your bikes, the options and a price."}}, {"@type": "Question", "name": "What do you do with my logo and details?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing is uploaded until you press Send request. Then your details, your logo and the picture are stored only to reply to your request. We do not share them or use them for anything else. Ask us any time to delete them. See the privacy page ."}}, {"@type": "Question", "name": "Why do I need an account to download the picture?", "acceptedAnswer": {"@type": "Answer", "text": "Downloads on Motopedia are for account holders. It is free and takes a minute: just your email, no password."}}]}</script>
@@ -37,7 +37,7 @@
 
   <section class="mzb-studio" id="studio" aria-label="Brand a bike">
     <div class="mzb-stage-wrap">
-      <div class="mzb-stage is-light" id="mzb-stage">
+      <div class="mzb-stage is-studio" id="mzb-stage">
         <p class="mzb-tip" id="mzb-tip" hidden>Tap the bike where the logo should go</p>
       </div>
       <div class="mzb-viewbar" role="group" aria-label="Camera">
@@ -46,8 +46,12 @@
         <button type="button" data-view="threeq">3/4</button>
         <button type="button" data-view="front">Front</button>
         <span class="mzb-viewbar-sep"></span>
-        <button type="button" data-bg="light" class="is-on" aria-pressed="true">Light</button>
+        <button type="button" data-bg="studio" class="is-on" aria-pressed="true">Studio</button>
+        <button type="button" data-bg="light" aria-pressed="false">Light</button>
+        <button type="button" data-bg="sunset" aria-pressed="false">Sunset</button>
+        <button type="button" data-bg="ocean" aria-pressed="false">Ocean</button>
         <button type="button" data-bg="dark" aria-pressed="false">Dark</button>
+        <button type="button" id="mzb-turn" class="is-on" aria-pressed="true" title="Turn the bike slowly">Turn</button>
       </div>
       <p class="mzb-hint">Drag to turn the bike, pinch or scroll to zoom.</p>
     </div>
@@ -161,6 +165,6 @@
   <footer data-mz-footer></footer>
 </div>
 <script type="module" src="../assets/site.js"></script>
-<script type="module" src="../assets/brand.js?v=20261106a"></script>
+<script type="module" src="../assets/brand.js?v=20261110a"></script>
 </body>
 </html>

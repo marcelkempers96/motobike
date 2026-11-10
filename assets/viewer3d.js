@@ -90,6 +90,15 @@ export function createViewer(el, opts = {}) {
   const shadow = new THREE.Mesh(new THREE.CircleGeometry(1, 48), new THREE.MeshBasicMaterial({ color: 0x0a0a0a, transparent: true, opacity: 0.035, depthWrite: false }));
   shadow.rotation.x = -Math.PI / 2;
   scene.add(shadow);
+  // Studio look (Brand a bike): soft, even light from a blurred room, no hard lights, no shadow
+  if (opts.studio) {
+    scene.environment = pm.fromScene(new RoomEnvironment(), 0.12).texture;
+    renderer.toneMappingExposure = 1.0;
+    key.intensity = 0.45; fill.intensity = 0.4; rim.intensity = 0.3;
+    scene.children.forEach((c) => { if (c.isHemisphereLight) c.intensity = 0.55; });
+    shadow.visible = false;
+    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  }
 
   let root = null, meshes = [], dirty = true, visible = true, raf = 0, disposed = false;
   let picked = null, hovered = null, category = null, highlightFn = null, wheels = [];

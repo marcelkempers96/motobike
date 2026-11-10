@@ -77,12 +77,43 @@ const solid = (m) => m.visible && m.material && !(m.material.transparent && m.ma
 if (!webglOK()) {
   stage.innerHTML = '<p class="mz3d-status">Your browser cannot show 3D here. Try another browser or device.</p>';
 } else {
-  viewer = createViewer(stage, { base: new URL('models/', import.meta.url).href, view: 'side' });
+  viewer = createViewer(stage, { base: new URL('models/', import.meta.url).href, view: 'side', studio: true, autoRotate: true });
+  viewer.controls.autoRotateSpeed = 0.6;
+  // stop the turntable as soon as someone drags, taps or edits
+  viewer.controls.addEventListener('start', () => setTurn(false));
   decals = new THREE.Group();
   decals.name = 'brand_decals';
   viewer.scene.add(decals);
   setupTap();
   loadBike(state.mode);
+}
+
+/* ---------- Realistic materials: polished metal, clear-coated paint, matt rubber ---------- */
+const MAT_RULES = [
+  [/tyre|tire|seat|saddle|grip|rubber|hose|cable|wire|boot|gaiter|pad\b|foam/, { metalness: 0, roughness: 0.82, clearcoat: 0 }],
+  [/lens|glass|light|lamp|indicator|reflector/, null],
+  [/exhaust|muffler|silencer|pipe|header|rim|spoke|disc|rotor|stanchion|handlebar|bar\b|mirror|chain|sprocket|axle|bolt|nut|spring|shock|caliper|lever|peg|stand|clamp|hub|chrome/, { metalness: 0.9, roughness: 0.26, clearcoat: 0 }],
+  [/engine|cylinder|head|crank|case|cover|carb|gearbox|clutch|motor|fin/, { metalness: 0.75, roughness: 0.38, clearcoat: 0 }],
+  [/tank|body|fairing|fender|mudguard|panel|cowl|side|tail|nose|frame|swingarm|fork|guard|shroud/, { metalness: 0.35, roughness: 0.38, clearcoat: 1, clearcoatRoughness: 0.1 }],
+];
+function realMaterials(root) {
+  root.traverse((m) => {
+    if (!m.isMesh || !m.material || m.userData.mzbReal) return;
+    const old = m.material; const name = (m.name || '').toLowerCase();
+    const rule = MAT_RULES.find(([re]) => re.test(name));
+    if (rule && rule[1] === null) { m.userData.mzbReal = true; return; }
+    let set = rule ? rule[1] : null;
+    if (!set) set = (old.metalness || 0) > 0.5 ? { metalness: 0.85, roughness: 0.3, clearcoat: 0 } : { metalness: 0.2, roughness: 0.5, clearcoat: 0.6, clearcoatRoughness: 0.15 };
+    const mat = new THREE.MeshPhysicalMaterial({ color: old.color ? old.color.clone() : 0xffffff, map: old.map || null, normalMap: old.normalMap || null, transparent: old.transparent, opacity: old.opacity, side: old.side, envMapIntensity: 1.1, ...set });
+    m.userData.origOpacity = old.opacity; m.userData.origTransparent = old.transparent; m.userData.origDepthWrite = old.depthWrite;
+    m.material = mat; m.userData.mzbReal = true; old.dispose();
+  });
+}
+function setTurn(on) {
+  if (!viewer) return;
+  viewer.controls.autoRotate = on;
+  const b = document.getElementById('mzb-turn'); if (b) { b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', String(on)); }
+  viewer.render();
 }
 
 async function loadBike(m) {
@@ -98,6 +129,7 @@ async function loadBike(m) {
   bikesEl.querySelectorAll('button').forEach((b) => { b.disabled = false; });
   if (!root || m !== state.mode) return;
   root.updateMatrixWorld(true);
+  realMaterials(root);
   meshes().forEach((x) => {
     const mat = x.material;
     if (mat && mat.color) x.userData.mzbColor = mat.color.clone();
@@ -324,6 +356,7 @@ function syncPlacing() {
   b.textContent = state.placing ? 'Tap the bike now (cancel)' : 'Tap the bike to place';
   $('mzb-tip').hidden = !state.placing;
   stage.classList.toggle('is-placing', state.placing);
+  if (state.placing) setTurn(false);
 }
 $('mzb-place').addEventListener('click', () => { if (!activeLogo()) return; state.placing = !state.placing; syncPlacing(); });
 
@@ -358,14 +391,15 @@ async function addLogoFile(file) {
     img = await loadImage(url);
   } catch (err) { showFileErr('Could not read that image. Please try another file.'); return; }
   const w0 = img.naturalWidth || 512, h0 = img.naturalHeight || 512;
-  const s = 1024 / Math.max(w0, h0);
+  const s = 2048 / Math.max(w0, h0);
   const cv = document.createElement('canvas');
   cv.width = Math.max(2, Math.round(w0 * s)); cv.height = Math.max(2, Math.round(h0 * s));
-  cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+  { const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high'; g.drawImage(img, 0, 0, cv.width, cv.height); }
   const tex = new THREE.CanvasTexture(cv);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = viewer ? viewer.renderer.capabilities.getMaxAnisotropy() : 1;
-  const material = new THREE.MeshStandardMaterial({ map: tex, transparent: true, alphaTest: 0.03, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4, roughness: 0.42, metalness: 0 });
+  const material = new THREE.MeshStandardMaterial({ map: tex, transparent: true, alphaTest: 0.03, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4, roughness: 0.5, metalness: 0, toneMapped: false });
+  tex.generateMipmaps = true; tex.minFilter = THREE.LinearMipmapLinearFilter;
   const i = state.logos.length;
   const logo = { id: nextId++, name: file.name, file, type, ext: TYPES[type], thumb: url, aspect: cv.width / cv.height, material, spot: defaultSpot(i), custom: null, size: 18, rot: 0, mirror: true, shown: 0 };
   const sp = info && info.spots[logo.spot];
@@ -508,12 +542,13 @@ function setView(v) {
   viewer.controls.update();
   viewer.render();
 }
-document.querySelectorAll('.mzb-viewbar [data-view]').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
+document.querySelectorAll('.mzb-viewbar [data-view]').forEach((b) => b.addEventListener('click', () => { setTurn(false); setView(b.dataset.view); }));
 document.querySelectorAll('.mzb-viewbar [data-bg]').forEach((b) => b.addEventListener('click', () => {
-  const dark = b.dataset.bg === 'dark';
-  stage.classList.toggle('is-dark', dark); stage.classList.toggle('is-light', !dark);
+  stage.classList.remove('is-dark', 'is-light', 'is-studio', 'is-sunset', 'is-ocean');
+  stage.classList.add('is-' + b.dataset.bg);
   document.querySelectorAll('.mzb-viewbar [data-bg]').forEach((x) => { const on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', String(on)); });
 }));
+{ const t = document.getElementById('mzb-turn'); if (t) t.addEventListener('click', () => setTurn(!viewer.controls.autoRotate)); }
 
 /* ---------- Picture ---------- */
 /* Render once at a higher pixel ratio and read the canvas in the same frame. */
@@ -646,7 +681,7 @@ renderList();
 import('./community-config.js').then(({ BRAND_PAYMENT: BP }) => {
   if (!BP) return;
   const box = document.getElementById('mzb-packs'), sel = document.getElementById('mzb-package');
-  const price = (p) => (p.price == null ? 'Price on request' : `${BP.currency} ${Number(p.price).toLocaleString('en-GB')}`);
+  const price = (p) => (p.price == null ? 'Price on request' : (BP.currency === 'USD' ? '$' : BP.currency + ' ') + Number(p.price).toLocaleString('en-GB'));
   if (sel) BP.packages.forEach((p) => { const o = document.createElement('option'); o.textContent = p.name; sel.appendChild(o); });
   if (box) {
     box.innerHTML = BP.packages.map((p) => `<div class="mzb-pack"><b>${p.name}</b><p>${p.what}</p><span class="price">${price(p)}</span><button type="button" class="ute-btn" data-pack="${p.name}">Choose</button></div>`).join('');

@@ -22,7 +22,7 @@ export const ANALYTICS = {
    The bank details are used in the payment email the admin dashboard prepares; they are not
    shown on any page (this file can still be read by anyone who opens it). Prices: leave null for "on request". */
 export const BRAND_PAYMENT = {
-  currency: 'EUR',
+  currency: 'USD',
   // Where sponsors pay: Transitions Lab B.V. (Revolut Business). The admin payment email picks
   // the block that matches the currency of the request.
   accounts: {
@@ -33,8 +33,8 @@ export const BRAND_PAYMENT = {
   holderAddress: 'Stieltjesweg, 2628 CK Delft, Netherlands',
   bank: { holder: 'Transitions Lab B.V.', iban: 'NL55 REVO 8648 3647 87', bic: 'REVONL22', bank: 'Revolut Bank UAB', address: '' },
   packages: [
-    { id: 'single', name: 'One bike, one logo', what: 'Your logo on one Motopedia 3D bike for 12 months, with your name in the sponsor list.', price: null },
-    { id: 'fleet', name: 'Fleet or school', what: 'Your logo and colours on up to three bikes, plus pictures you can use in your own materials.', price: null },
-    { id: 'event', name: 'Event or campaign', what: 'A branded bike for an event, launch or campaign, for the period you need.', price: null },
+    { id: 'single', name: 'One bike, one logo', what: 'Your logo on one Motopedia 3D bike for 12 months, with your name in the sponsor list.', price: 300 },
+    { id: 'fleet', name: 'Fleet or school', what: 'Your logo and colours on up to three bikes for 12 months, plus pictures you can use in your own materials.', price: 1500 },
+    { id: 'event', name: 'Event or campaign', what: 'A branded bike for an event, launch or campaign, for up to 3 months, plus pictures and a short video.', price: 750 },
   ],
 };
