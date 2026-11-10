@@ -19,11 +19,19 @@ export const ANALYTICS = {
 
 /* Brand a bike: how companies pay for their logo on Motopedia bikes.
    Payment is by bank transfer to Transitions Lab after the request is approved.
-   Bank details are NOT shown on the public site; the admin dashboard puts them in the
-   payment email it prepares. Fill them in when known. Prices: leave null for "on request". */
+   The bank details are used in the payment email the admin dashboard prepares; they are not
+   shown on any page (this file can still be read by anyone who opens it). Prices: leave null for "on request". */
 export const BRAND_PAYMENT = {
   currency: 'EUR',
-  bank: { holder: 'Transitions Lab', iban: '', bic: '', bank: '', address: '' },
+  // Where sponsors pay: Transitions Lab B.V. (Revolut Business). The admin payment email picks
+  // the block that matches the currency of the request.
+  accounts: {
+    EUR: { label: 'Euro (SEPA, Europe)', lines: [['Account holder', 'Transitions Lab B.V.'], ['IBAN', 'NL55 REVO 8648 3647 87'], ['BIC', 'REVONL22'], ['Bank', 'Revolut Bank UAB, Barbara Strozzilaan 201, 1083 HN Amsterdam, Netherlands']] },
+    GBP: { label: 'British pounds (UK transfer)', lines: [['Account holder', 'Transitions Lab B.V.'], ['Account number', '97006484'], ['Sort code', '23-01-63']] },
+    USD: { label: 'US dollars (SWIFT, worldwide)', lines: [['Account holder', 'Transitions Lab B.V.'], ['IBAN', 'NL55 REVO 8648 3647 87'], ['BIC / SWIFT', 'REVONL22'], ['Intermediary BIC', 'CHASGB2L'], ['Bank', 'Revolut Bank UAB, Barbara Strozzilaan 201, 1083 HN Amsterdam, Netherlands']] },
+  },
+  holderAddress: 'Stieltjesweg, 2628 CK Delft, Netherlands',
+  bank: { holder: 'Transitions Lab B.V.', iban: 'NL55 REVO 8648 3647 87', bic: 'REVONL22', bank: 'Revolut Bank UAB', address: '' },
   packages: [
     { id: 'single', name: 'One bike, one logo', what: 'Your logo on one Motopedia 3D bike for 12 months, with your name in the sponsor list.', price: null },
     { id: 'fleet', name: 'Fleet or school', what: 'Your logo and colours on up to three bikes, plus pictures you can use in your own materials.', price: null },

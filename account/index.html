@@ -313,16 +313,15 @@ const VIEWS = {
         const waiting = data.filter((r) => r.status === 'quoted');
         const hasCols = data.length === 0 || 'amount' in data[0];
         const bankText = (r) => {
-          const b = BP.bank || {};
-          const lines = [`Dear ${r.name},`, '', `Thank you for your request to brand a Motopedia bike for ${r.company}.`, '',
-            `Package: ${r.package || '(to agree)'}`, `Amount: ${money(r.amount, r.currency) || '(to agree)'}`, '',
-            'Please pay by bank transfer to:', `Account holder: ${b.holder || 'Transitions Lab'}`, `IBAN: ${b.iban || '[IBAN]'}`, `BIC: ${b.bic || '[BIC]'}`, b.bank ? `Bank: ${b.bank}` : '', b.address ? `Address: ${b.address}` : '',
-            `Payment reference: ${ref(r)}`, '', 'Once the payment arrives we confirm by email and put your logo live.', '', 'Kind regards,', 'The Motopedia team, Transitions Lab'];
-          return lines.filter((l, i) => l !== '' || lines[i - 1] !== '').join('\n');
+          const cur = r.currency || BP.currency; const acc = (BP.accounts || {})[cur] || (BP.accounts || {})[BP.currency] || { lines: [] };
+          return [`Dear ${r.name},`, '', `Thank you for your request to sponsor a Motopedia bike for ${r.company}.`, '',
+            `Package: ${r.package || '(as agreed)'}`, `Amount: ${money(r.amount, cur) || '(as agreed)'}`, '',
+            `Please pay by bank transfer (${acc.label || cur}):`, ...acc.lines.map(([k, v]) => `${k}: ${v}`),
+            `Payment reference: ${ref(r)}`, '', 'Please use the reference so we can match your payment. Once it arrives we confirm by email and put your logo live.', '',
+            'Kind regards,', 'The Motopedia team', 'Transitions Lab B.V., ' + (BP.holderAddress || '')].join('\n');
         };
         A.innerHTML = `
           ${hasCols ? '' : '<p class="msg">To track quotes and payments, run <b>docs/supabase-brand-payments.sql</b> once in the Supabase SQL editor.</p>'}
-          ${!(BP.bank && BP.bank.iban) ? '<p class="msg">Bank details are not filled in yet (assets/community-config.js, BRAND_PAYMENT). Payment emails show [IBAN] until then.</p>' : ''}
           <div class="mza-stats"><div><span>New requests</span><b>${data.filter((r) => r.status === 'new').length}</b></div><div><span>Awaiting payment</span><b>${money(sum((r) => r.status === 'quoted')) || '0'}</b><small class="msg">${waiting.length} quote${waiting.length === 1 ? '' : 's'}</small></div><div><span>Paid in ${yr}</span><b>${money(sum((r) => r.paid_at && new Date(r.paid_at).getFullYear() === yr)) || '0'}</b></div><div><span>Logos live</span><b>${data.filter((r) => r.status === 'live').length}</b></div></div>
           ${data.length ? data.map((r) => `<div class="mza-card mza-brand" data-id="${r.id}">
             <div class="mza-brand-head"><div><b>${esc(r.company)}</b> · ${esc(r.name)} · <a href="mailto:${esc(r.email)}">${esc(r.email)}</a> · ${esc(r.country || '')}${r.fleet ? ' · ' + esc(r.fleet) : ''}<br><small class="msg">${day(r.created_at)} · reference ${ref(r)}</small></div>
@@ -331,7 +330,7 @@ const VIEWS = {
             <p>${r.logo_path ? `<a href="${pub(r.logo_path)}" target="_blank" rel="noopener">Logo file</a>` : 'No logo file'} ${r.preview_path ? ` · <a href="${pub(r.preview_path)}" target="_blank" rel="noopener">Preview picture</a>` : ''}</p>
             ${hasCols ? `<div class="mza-brand-row">
               <label>Package<select data-f="package"><option value="">Choose</option>${BP.packages.map((k) => `<option ${k.name === r.package ? 'selected' : ''}>${esc(k.name)}</option>`).join('')}</select></label>
-              <label>Amount (${esc(r.currency || BP.currency)})<input type="number" step="0.01" min="0" data-f="amount" value="${r.amount ?? ''}"></label>
+              <label>Amount<span style="display:flex;gap:4px"><select data-f="currency" style="width:auto">${Object.keys(BP.accounts || { EUR: 1 }).map((c) => `<option ${c === (r.currency || BP.currency) ? 'selected' : ''}>${c}</option>`).join('')}</select><input type="number" step="0.01" min="0" data-f="amount" value="${r.amount ?? ''}"></span></label>
               <label>Live until<input type="date" data-f="live_until" value="${r.live_until || ''}"></label>
               <label>Paid on<input type="date" data-f="paid_at" value="${r.paid_at ? r.paid_at.slice(0, 10) : ''}"></label></div>
               <label class="mza-note">Notes (only you see these)<textarea data-f="admin_note" rows="2">${esc(r.admin_note || '')}</textarea></label>
