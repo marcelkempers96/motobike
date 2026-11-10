@@ -16,3 +16,17 @@ export const ANALYTICS = {
   lookerStudioUrl: '',
   searchConsoleProperty: 'https://www.motopedia.org/',
 };
+
+/* Brand a bike: how companies pay for their logo on Motopedia bikes.
+   Payment is by bank transfer to Transitions Lab after the request is approved.
+   Bank details are NOT shown on the public site; the admin dashboard puts them in the
+   payment email it prepares. Fill them in when known. Prices: leave null for "on request". */
+export const BRAND_PAYMENT = {
+  currency: 'EUR',
+  bank: { holder: 'Transitions Lab', iban: '', bic: '', bank: '', address: '' },
+  packages: [
+    { id: 'single', name: 'One bike, one logo', what: 'Your logo on one Motopedia 3D bike for 12 months, with your name in the sponsor list.', price: null },
+    { id: 'fleet', name: 'Fleet or school', what: 'Your logo and colours on up to three bikes, plus pictures you can use in your own materials.', price: null },
+    { id: 'event', name: 'Event or campaign', what: 'A branded bike for an event, launch or campaign, for the period you need.', price: null },
+  ],
+};

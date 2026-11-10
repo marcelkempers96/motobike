@@ -112,3 +112,11 @@
   .mzb-ask h2, .mzb-faq h2 { font-size: 24px; }
   .mzb-grid { grid-template-columns: 1fr; }
 }
+/* sponsor packages */
+.mzb-packs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 22px; max-width: 980px; }
+.mzb-pack { border: 1.5px solid var(--ink); padding: 18px; display: flex; flex-direction: column; gap: 8px; background: #FFF; }
+.mzb-pack b { font-size: 18px; } .mzb-pack p { margin: 0; font-size: 14.5px; line-height: 1.5; }
+.mzb-pack .price { font: 800 17px/1.2 var(--sans); color: var(--warm); margin-top: auto; padding-top: 6px; }
+.mzb-pack button { align-self: flex-start; }
+.mzb-small { font-size: 14px; color: var(--mute); margin-top: 14px; max-width: 980px; }
+@media (max-width: 900px) { .mzb-packs { grid-template-columns: 1fr; } }

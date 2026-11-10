@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css?v=20261106b">
-  <link rel="stylesheet" href="../assets/brand.css?v=20261106a">
+  <link rel="stylesheet" href="../assets/brand.css?v=20261106ba">
   <script type="importmap">{"imports":{"three":"../assets/vendor/three/build/three.module.js","three/addons/":"../assets/vendor/three/examples/jsm/"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.motopedia.org/"}, {"@type": "ListItem", "position": 2, "name": "Brand a bike", "item": "https://www.motopedia.org/brand/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which files can I use?", "acceptedAnswer": {"@type": "Answer", "text": "PNG, JPG, SVG or WebP, up to 5 MB. A PNG or SVG with a transparent background looks best on the bike. Light logos show up best on dark bodywork, and dark logos on light bodywork."}}, {"@type": "Question", "name": "Does the picture show the real bike?", "acceptedAnswer": {"@type": "Answer", "text": "The bikes are generic, unbranded 3D models of common types. The picture shows where your logo sits and how big it is, not the exact shape of your own bikes."}}, {"@type": "Question", "name": "What happens after I send a request?", "acceptedAnswer": {"@type": "Answer", "text": "We read every request and reply by email, usually within a few working days, with questions about your bikes, the options and a price."}}, {"@type": "Question", "name": "What do you do with my logo and details?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing is uploaded until you press Send request. Then your details, your logo and the picture are stored only to reply to your request. We do not share them or use them for anything else. Ask us any time to delete them. See the privacy page ."}}, {"@type": "Question", "name": "Why do I need an account to download the picture?", "acceptedAnswer": {"@type": "Answer", "text": "Downloads on Motopedia are for account holders. It is free and takes a minute: just your email, no password."}}]}</script>
@@ -101,10 +101,25 @@
     </div>
   </section>
 
+  <section class="ute-chapter mzb-how" id="how-it-works">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">€</span><span class="ute-label">Sponsor a bike</span></div>
+    <h2>Your logo on Motopedia: how it works</h2>
+    <p class="lead">Riders, mechanics and trainees learn on Motopedia's 3D bikes. Companies can sponsor a bike and put their logo on it. The money keeps the course free for everyone.</p>
+    <ol class="mzb-steps">
+      <li><b>Design it</b><span>Try your logo on a bike above and download a picture. Free, no account needed.</span></li>
+      <li><b>Send a request</b><span>Choose a package below and send your logo with a message. Nothing is published yet.</span></li>
+      <li><b>We check and quote</b><span>We review your logo and reply by email with the price, the period and a payment reference.</span></li>
+      <li><b>Pay by bank transfer</b><span>Pay to Transitions Lab, the team behind Motopedia, using the reference. No card payments.</span></li>
+      <li><b>Your logo goes live</b><span>Once the payment arrives we confirm by email and put your logo on the bike for the agreed period.</span></li>
+    </ol>
+    <div class="mzb-packs" id="mzb-packs"></div>
+    <p class="mzb-small">We only accept logos that suit a learning site for all ages: no alcohol, tobacco, gambling or political messages. We can decline any request. Questions first? Send a request with just a message.</p>
+  </section>
+
   <section class="ute-chapter mzb-ask" id="advertise">
     <div class="ute-chapter-kicker"><span class="ute-chapter-num">A</span><span class="ute-label">Advertise with us</span></div>
-    <h2>Brand real bikes with your logo</h2>
-    <p class="lead">Tell us about your company and your bikes. We send your logo and the picture above with the request, and reply by email within a few working days.</p>
+    <h2>Send a request</h2>
+    <p class="lead">Tell us about your company and which package you want. Your logo and the picture above go with the request. We reply by email within a few working days with a quote and payment details.</p>
     <form class="mzb-form" id="mzb-form" novalidate>
       <div class="mzb-grid">
         <label class="mzb-field"><span>Company or group *</span><input name="company" required maxlength="200" autocomplete="organization"></label>
@@ -121,6 +136,7 @@
             <option>Event or sponsorship</option>
           </select>
         </label>
+        <label class="mzb-field"><span>Package</span><select name="package" id="mzb-package"><option value="">Not sure yet</option></select></label>
         <label class="mzb-field mzb-wide"><span>Message</span><textarea name="message" rows="4" maxlength="4000" placeholder="Which bikes, where, and when you need them"></textarea></label>
       </div>
       <p class="mzb-small" id="mzb-attach">No logo added yet. You can still send a request; the picture of the bike is attached.</p>

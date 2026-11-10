@@ -602,7 +602,7 @@ form.addEventListener('submit', async (e) => {
     return;
   }
   const f = form.elements;
-  const data = { company: f.company.value.trim(), name: f.name.value.trim(), email: f.email.value.trim(), country: f.country.value.trim(), fleet: f.fleet.value, message: f.message.value.trim() };
+  const data = { company: f.company.value.trim(), name: f.name.value.trim(), email: f.email.value.trim(), country: f.country.value.trim(), fleet: f.fleet.value, message: ((f.package && f.package.value ? `Package: ${f.package.value}. ` : '') + f.message.value.trim()).trim() };
   const btn = $('mzb-submit');
   btn.disabled = true;
   say('busy', 'Sending your request…');
@@ -641,3 +641,15 @@ form.addEventListener('submit', async (e) => {
 });
 
 renderList();
+
+/* Sponsor packages and prices (from community-config.js); choosing one fills the request form */
+import('./community-config.js').then(({ BRAND_PAYMENT: BP }) => {
+  if (!BP) return;
+  const box = document.getElementById('mzb-packs'), sel = document.getElementById('mzb-package');
+  const price = (p) => (p.price == null ? 'Price on request' : `${BP.currency} ${Number(p.price).toLocaleString('en-GB')}`);
+  if (sel) BP.packages.forEach((p) => { const o = document.createElement('option'); o.textContent = p.name; sel.appendChild(o); });
+  if (box) {
+    box.innerHTML = BP.packages.map((p) => `<div class="mzb-pack"><b>${p.name}</b><p>${p.what}</p><span class="price">${price(p)}</span><button type="button" class="ute-btn" data-pack="${p.name}">Choose</button></div>`).join('');
+    box.querySelectorAll('[data-pack]').forEach((b) => b.addEventListener('click', () => { if (sel) sel.value = b.dataset.pack; document.getElementById('advertise').scrollIntoView({ behavior: 'smooth' }); }));
+  }
+}).catch(() => {});
