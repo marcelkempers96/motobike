@@ -36,7 +36,7 @@ body=f'''
 <p>The starter relay will only operate when the safety switches allow it. The neutral switch permits starting in neutral, the clutch switch permits starting in gear with the lever pulled, and the engine stop switch usually cuts the relay supply as well. On many scooters and on the K-Light 125, the brake lever must also be pulled. Check every switch before reaching for tools.</p>
 <h3 id="relay">Listen for the relay</h3>
 <p>The start button carries only a small current to the relay coil; the relay then switches the heavy current to the starter motor. If there is no click, the fault is on the control side: a switch, the start button, the fuse or the relay coil. If the relay clicks but the starter does not turn, the relay contacts are burned or the starter itself has failed. A voltage-drop test while cranking separates them. On the positive side, from the battery post to the starter terminal, the drop should be 0.5 V or less; across the relay contacts, 0.2 V or less; and on the earth side, 0.3 V or less.</p>
-{fig('illustrations/wiring/F23.png', 2400, 1350, 'Wiring plate of an electric starting circuit showing battery, main fuse, ignition switch, start button, clutch, neutral and side-stand interlocks, starter relay, starter motor and starter clutch', 'The starting circuit. The start button only switches the relay; the relay switches the heavy starter current. Plate F23, Motopedia Module 3.')}
+{fig('illustrations/wiring/F23.png', 2400, 1350, 'Wiring plate of an electric starting circuit showing battery, main fuse, ignition switch, start button, clutch, neutral and side-stand interlocks, starter relay, starter motor and starter clutch', 'The starting circuit. The start button only switches the relay; the relay switches the heavy starter current. Plate F23, Motopedia Module 4.')}
 <p>If the starter spins freely with a whirring noise but the engine does not turn, the one-way starter clutch is slipping. The Motorcycle Mechanic course names this as the commonest starter fault.</p>
 
 {try_box(WL+"ignition", "interactive/wiring/preview/ignition-spark.png", "Wiring Lab ignition tab with pickup, CDI unit, coil and spark plug", "Follow the spark.", "The Ignition tab traces the signal from the crank pickup through the CDI to the coil and plug.", "Open the ignition circuit")}
@@ -77,7 +77,7 @@ body=f'''
 {deeper([
   (L+"m3-diagnosis", "Chapter 4.6: Electrical diagnosis", "ignition and starter job sheets"),
   (L+"m2-diagnosis", "Chapter 2.7: Engine diagnosis and service", "compression and leak-down tests"),
-  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (QZ+"electrics", "Electrical systems quiz", "test yourself on Module 4"),
   (PRB+"cranks-no-start/", "Cranks but will not start", ""),
   (PRB+"starter-clicks/", "Starter clicks but does not turn", ""),
   (REP+"spark-test/", "Spark test", ""),
@@ -218,7 +218,7 @@ body=f'''
   <li><strong>Voltage stays at battery voltage:</strong> no charge is reaching the battery. Suspect the stator, the regulator/rectifier or the wiring between them.</li>
   <li><strong>Voltage rises above 15.0 V:</strong> the regulator is not limiting, or its earth is poor. Overcharging dries out AGM batteries and blows bulbs.</li>
 </ul>
-{fig('illustrations/wiring/F21.png', 2400, 1171, 'Wiring plate of a motorcycle charging circuit with a three-phase permanent-magnet alternator, shunt-type regulator/rectifier, main fuse, battery and electrical load', 'The charging circuit: three-phase alternator, regulator/rectifier, fuse and battery. Plate F21, Motopedia Module 3.')}
+{fig('illustrations/wiring/F21.png', 2400, 1171, 'Wiring plate of a motorcycle charging circuit with a three-phase permanent-magnet alternator, shunt-type regulator/rectifier, main fuse, battery and electrical load', 'The charging circuit: three-phase alternator, regulator/rectifier, fuse and battery. Plate F21, Motopedia Module 4.')}
 <p>To go further, stop the engine and unplug the stator connector. On the K-Light, each pair of the three white stator wires should measure 0.8 ± 0.3 ohms, and there must be no continuity from any white wire to the engine. With the engine running and the connector still unplugged, the AC voltage between each pair should be equal within about 10 per cent, typically 50 to 80 V AC on a small three-phase stator. One low pair confirms a stator fault.</p>
 <p>Most small motorcycles use a <strong>shunt regulator</strong>, which dumps surplus current as heat. Shunt regulators and stators run hot, and a corroded regulator connector overheats and melts, so look for discoloured plugs. On a small single the alternator output is only just larger than the load with the lights on, which is why long periods of idling with the headlight on can drain a healthy battery.</p>
 
@@ -240,7 +240,7 @@ body=f'''
 {deeper([
   (L+"m3-battery-charging", "Chapter 4.2: Battery, charging and starting", "job sheets for each test"),
   (EQ, "Equations summary", "charge current, charge time and drain time"),
-  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (QZ+"electrics", "Electrical systems quiz", "test yourself on Module 4"),
   (REP+"battery-test-charge/", "Battery test and charge", ""),
   (REP+"charging-system-test/", "Charging system test", ""),
   (PRB+"battery-flat/", "Battery goes flat", ""),
@@ -273,7 +273,7 @@ body=f'''
 <h2 id="how-pads-work">How disc brakes wear</h2>
 <p>When you pull the lever, the master cylinder pushes fluid to the caliper, whose pistons clamp the pads against the disc. Friction turns the bike's movement into heat, and both pads and disc slowly wear away. The caliper adjusts itself: as the pads wear, the pistons slide further out through their seals, so the lever feel does not change much. That is why worn pads are easy to miss.</p>
 <p>Most small machines, including the K-Light 125 used as the worked example in the Motopedia course, use a <strong>floating caliper</strong>: pistons on one side only, with the caliper body sliding on greased pins so that the outer pad is pulled onto the disc. Larger bikes often use fixed calipers with pistons on both sides.</p>
-{fig('illustrations/chassis/F19.png', 2400, 1620, 'Technical plate of a hydraulic disc brake with master cylinder, reservoir, brake hose and caliper section with pistons, seals and pads, beside a drum brake with shoes, cam, anchor pin and return springs', 'A hydraulic disc brake and a drum brake side by side. Plate F19, Motopedia Module 4.')}
+{fig('illustrations/chassis/F19.png', 2400, 1620, 'Technical plate of a hydraulic disc brake with master cylinder, reservoir, brake hose and caliper section with pistons, seals and pads, beside a drum brake with shoes, cam, anchor pin and return springs', 'A hydraulic disc brake and a drum brake side by side. Plate F19, Motopedia Module 5.')}
 
 {try_box(OM("4t", "brake"), "renders/brake.webp", "Rendered floating disc gripped by a four-piston radial caliper", "Look into the caliper.", "Select the front brake in the 3D Overview to see the disc, caliper, pads and hose, with notes on each wear point.", "Select the front brake")}
 

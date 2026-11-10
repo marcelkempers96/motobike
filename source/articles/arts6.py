@@ -72,7 +72,7 @@ body=f'''
 {deeper([
   (L+"m3-mixture", "Chapter 3.1: Air, fuel and mixture", "every circuit and the jetting order"),
   (EQ, "Equations summary", "air-fuel ratio and lambda"),
-  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (QZ+"fuel", "Fuel, air and exhaust quiz", "test yourself on Module 3"),
   (REP+"carburettor-clean/", "Carburettor cleaning", "the full job sheet"),
   (REP+"carb-float-check/", "Float height check", ""),
   (PRB+"carb-overflowing/", "Carburettor overflowing", ""),
@@ -136,7 +136,7 @@ body=f'''
 
 <h2 id="caps">Caps, resistors and misfires</h2>
 <p>The spark is a fast current pulse that radiates interference and can upset ECUs and instruments, so a resistor plug, a suppressor cap (typically 5 kΩ) or a resistive lead limits it. Fitting a non-resistor plug and a non-resistor cap to an ECU-controlled engine can cause erratic running. A cap that has cracked or absorbed water lets the spark track to earth, causing a misfire in wet weather.</p>
-{fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Motopedia Module 3.')}
+{fig('illustrations/wiring/F22.png', 2400, 1530, 'Wiring plate of motorcycle ignition circuits showing a capacitor discharge ignition with exciter and pulser coils and an ECU-controlled inductive ignition, each with ignition coil, spark plug and engine stop switch', 'Two ignition systems: capacitor discharge (CDI) and ECU-controlled inductive ignition. Plate F22, Motopedia Module 4.')}
 <p>Two-strokes usually use capacitor discharge ignition (CDI), whose voltage rises so fast that the spark fires before it can leak away across an oily insulator. That suits engines whose plugs foul with oil, but the spark is short, so a two-stroke's plug colour also depends heavily on its oil ratio.</p>
 
 {try_box(WL+"ignition", "interactive/wiring/preview/ignition-spark.png", "Wiring Lab ignition tab with pickup, CDI unit, coil and spark plug", "Follow the spark.", "The Ignition tab of the Wiring Lab traces the trigger signal, the CDI discharge and the coil output to the plug.", "Open the ignition circuit")}
@@ -149,7 +149,7 @@ body=f'''
 {deeper([
   (L+"m3-ignition", "Chapter 4.4: Ignition systems", "CDI, TCI and timing"),
   (L+"m2-diagnosis", "Chapter 2.7: Engine diagnosis and service", "the spark plug reading job sheet"),
-  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (QZ+"electrics", "Electrical systems quiz", "test yourself on Module 4"),
   (REP+"spark-plug-service/", "Spark plug service", ""),
   (REP+"spark-plug-heat-range/", "Choosing the heat range", ""),
   (PRB+"no-spark/", "No spark", ""),
@@ -195,7 +195,7 @@ body=f'''
 <h2 id="tread">Tread depth and wear indicators</h2>
 <p>Look for small raised blocks in the main grooves, marked by a triangle or the letters TWI on the shoulder. These <strong>tread wear indicators</strong> leave about 0.8 to 1 mm of tread when the surface is level with them. The K-Light 125 wear limit is <strong>1 mm</strong>, which is also the legal minimum in the UK for machines over 50 cc; check the rules in your country.</p>
 <p>Wear pattern matters as well as depth. A rear tyre used mostly in a straight line wears flat in the centre, and a <strong>square-worn</strong> tyre makes the bike drop suddenly into corners; replace it before it reaches the legal limit. Also look for cracks, nails, cuts and bulges on the tread and the sidewalls, and note any directional arrow, which must point in the direction of rotation.</p>
-{fig('illustrations/wheels/F20.png', 2400, 1530, 'Technical plate of a motorcycle tyre showing sidewall markings with size 110/70-17 54H, DOT date code and tread wear indicator position, and a section through bead, bead wire, carcass plies, belt, sidewall and tread', 'Tyre sidewall markings and construction. Plate F20, Motopedia Module 4.')}
+{fig('illustrations/wheels/F20.png', 2400, 1530, 'Technical plate of a motorcycle tyre showing sidewall markings with size 110/70-17 54H, DOT date code and tread wear indicator position, and a section through bead, bead wire, carcass plies, belt, sidewall and tread', 'Tyre sidewall markings and construction. Plate F20, Motopedia Module 5.')}
 
 <h2 id="markings">Reading the sidewall</h2>
 <p>A size of <strong>110/70-17 54H</strong> reads: section width 110 mm; aspect ratio 70 per cent, so the sidewall is 77 mm high; a dash for bias construction (R would mean radial, B bias-belted); a 17 inch rim; load index 54; and speed symbol H.</p>
@@ -208,7 +208,7 @@ body=f'''
 <h2 id="punctures">Punctures and repairs</h2>
 <p>A tubeless tyre usually deflates slowly, because the rubber grips the object; a tube can split and deflate suddenly. A proper tubeless repair is a <strong>combined plug-patch</strong> fitted from inside after removing the tyre from the rim. Most tyre makers allow repairs only in the central part of the tread, for injuries no larger than about 6 mm, with no previous repair nearby and no sidewall or shoulder damage, and some do not allow motorcycle tyre repairs at all. An external string plug is a temporary get-you-home measure only, and a tube must never be fitted to cure a leak in a damaged tubeless tyre.</p>
 
-{lfig(MD+"front_wheel_cast", "illustrations/wheels/W01.png", "Technical plate comparing wire-spoked, cast alloy and other motorcycle wheel types", "Motorcycle wheel types compared. Plate W01, Motopedia Module 4.", "Compare the wheels in the model library.")}
+{lfig(MD+"front_wheel_cast", "illustrations/wheels/W01.png", "Technical plate comparing wire-spoked, cast alloy and other motorcycle wheel types", "Motorcycle wheel types compared. Plate W01, Motopedia Module 5.", "Compare the wheels in the model library.")}
 
 <h2 id="wheels">Wheels, balance and bearings</h2>
 <p>While you are at the wheel, spin it and watch the rim. The K-Light manual gives a runout standard within 1.0 mm and a limit of 2.0 mm, measured with a dial gauge. A shake through the handlebar at around 80 to 110 km/h usually means the wheel needs balancing. Lift the wheel and rock it at top and bottom: any play or roughness points to worn wheel bearings, which on the K-Light must not be reused once removed.</p>
@@ -271,7 +271,7 @@ body=f'''
 
 <h2 id="bms">What the BMS does for you</h2>
 <p>The <strong>battery management system</strong> measures the voltage of every series group of cells, the temperatures and the current. It estimates the state of charge shown on the dashboard, sets the maximum charge and discharge currents, and opens the circuit if a cell goes over or under voltage, overheats or sees a short circuit. It also <strong>balances</strong> the cells: near the top of a charge it bleeds a small current from any group that is higher than the rest, typically 30 to 200 mA, so a badly drifted pack can need several long charges to recover. Leaving the charger connected for the full balancing period after a full charge helps.</p>
-{fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Motopedia Module 5.')}
+{fig('illustrations/electrical/F26.png', 2400, 1500, 'Technical plate of an electric motorcycle battery pack: 21700 cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and main connector, with a section through one cell', 'Battery pack construction: cells in series-parallel groups, busbars, BMS with balance leads and thermistors. Plate F26, Motopedia Module 6.')}
 <p>Workshops read the group voltages from the BMS with diagnostic software. On an NMC pack at rest, a spread below 10 to 20 mV between the highest and lowest group is normal; a group that keeps falling within a few days of a balance charge points to a cell with high self-discharge, which balancing cannot cure.</p>
 
 {try_box(MD+"charge_port", "renders/charge_port.webp", "Rendered Type 2 style charging inlet", "See the charge inlet.", "The 3D model library has the charging inlet as its own model, next to the traction battery and controller.", "Open the charge inlet")}

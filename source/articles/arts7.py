@@ -13,7 +13,7 @@ desc='How a sequential motorcycle gearbox works: constant-mesh gears, dogs, the 
 label='Drivetrain',
 lead='A motorcycle gearbox keeps every gear in mesh all the time and locks one pair at a time to its shaft with sliding dogs. A rotating shift drum moves those dogs, one step for each press of the pedal, which is why a motorcycle box is sequential and why neutral sits half a step between first and second.',
 summary='Constant-mesh gears, dogs, shift drum and forks, the neutral half-step, quickshifters and how ratios set road speed.',
-hero=dict(src=A+'illustrations/transmission/F14.png', w=2400, h=1477, alt='Technical plate of a constant-mesh five-speed motorcycle gearbox showing mainshaft and countershaft, fixed, free and sliding gears, dogs and slots, three shift forks and the shift drum', cap='A constant-mesh five-speed gearbox: two shafts, gears that are always in mesh, dogs, forks and the shift drum. Plate F14, Motopedia Module 4.'),
+hero=dict(src=A+'illustrations/transmission/F14.png', w=2400, h=1477, alt='Technical plate of a constant-mesh five-speed motorcycle gearbox showing mainshaft and countershaft, fixed, free and sliding gears, dogs and slots, three shift forks and the shift drum', cap='A constant-mesh five-speed gearbox: two shafts, gears that are always in mesh, dogs, forks and the shift drum. Plate F14, Motopedia Module 5.'),
 thumb=A+'illustrations/transmission/F14.png',
 body=f'''
 <h2 id="why">Why a motorcycle needs a gearbox</h2>
@@ -37,7 +37,7 @@ body=f'''
 <p>Dogs are always replaced in pairs, the sliding gear together with its free partner, because a new gear running against a rounded one soon wears to the same shape.</p>
 
 <h2 id="shift-drum">The shift drum and forks</h2>
-{lfig(EN+"shift", "illustrations/transmission/TR01.png", "Technical plate of a motorcycle gear shift mechanism: shift drum with cam tracks, forks, gearshift shaft, ratchet pawls, star detent, stopper arm and neutral switch", "The gear shift mechanism, from the pedal shaft and ratchet to the drum, forks, star detent and neutral switch. Plate TR01, Motopedia Module 4.", "See the drum turn in Under the Engine.")}
+{lfig(EN+"shift", "illustrations/transmission/TR01.png", "Technical plate of a motorcycle gear shift mechanism: shift drum with cam tracks, forks, gearshift shaft, ratchet pawls, star detent, stopper arm and neutral switch", "The gear shift mechanism, from the pedal shaft and ratchet to the drum, forks, star detent and neutral switch. Plate TR01, Motopedia Module 5.", "See the drum turn in Under the Engine.")}
 <p>The <strong>shift drum</strong> is a cylinder with grooves machined around it. Each <strong>shift fork</strong> has a guide pin that runs in one groove and two prongs that sit in a groove on a sliding gear. As the drum turns, each groove moves its fork, and so its sliding gear, sideways by a set amount at the right moment. The angle of the drum defines the gear.</p>
 <p>The gear pedal is splined to a <strong>gearshift shaft</strong> that runs through the crankcase. Inside, a shift arm with spring-loaded pawls catches pins on the end of the drum, so each stroke of the pedal turns the drum by one step, and a return spring brings the pedal back to centre for the next stroke. This is what makes the box <strong>sequential</strong>: each press can only move one gear up or down.</p>
 <p>Between shifts the drum is held by a <strong>stopper arm</strong>, a spring-loaded roller that sits in the notches of a star-shaped plate on the drum. The notch profile pulls the drum fully into position at the end of each shift, so a half-finished pedal movement either completes or falls back.</p>
@@ -111,7 +111,7 @@ body=f'''
 <h2 id="drums">Drum brakes</h2>
 <p>A <strong>drum brake</strong> has two curved shoes with bonded linings mounted on a backplate. Each shoe pivots on an anchor pin at one end; at the other, a flat cam turned by a cable or rod pushes the shoes apart against the inside of the drum, which is part of the wheel hub, and return springs pull them back when you let go.</p>
 <p>In a <strong>single leading shoe</strong> brake, the leading shoe faces the direction of rotation, so friction drags it harder into the drum. This self-servo effect means that one shoe does roughly two-thirds of the braking. A <strong>twin leading shoe</strong> brake has two cams so that both shoes self-servo, which gives much stronger forward braking; it was fitted to sporting machines until discs replaced it in the 1970s. Drums are enclosed, cheap and resist water and mud, so the rear brake of many commuters and step-throughs is still a drum. Their weakness is heat: the drum expands away from the shoes as it gets hot, and the brake fades.</p>
-{lfig(OM("4t", "brake"), "illustrations/chassis/F19.png", "Technical plate of a hydraulic disc brake system with master cylinder, reservoir, hose and caliper section, beside a leading and trailing shoe drum brake", "A hydraulic disc brake beside a leading and trailing shoe drum brake. Plate F19, Motopedia Module 4.", "Select the front brake in the Overview.")}
+{lfig(OM("4t", "brake"), "illustrations/chassis/F19.png", "Technical plate of a hydraulic disc brake system with master cylinder, reservoir, hose and caliper section, beside a leading and trailing shoe drum brake", "A hydraulic disc brake beside a leading and trailing shoe drum brake. Plate F19, Motopedia Module 5.", "Select the front brake in the Overview.")}
 
 <h2 id="hydraulics">How a hydraulic disc brake multiplies force</h2>
 <p>A disc brake clamps a pair of pads onto a disc that turns with the wheel. The force comes from hydraulics. Pressure in a confined fluid is equal everywhere, so a small piston in the <strong>master cylinder</strong> at the lever creates the same pressure on the much larger pistons in the <strong>caliper</strong>. Force is multiplied in the ratio of their areas, and the lever multiplies it again.</p>
@@ -182,7 +182,7 @@ body=f'''
 <h2 id="springs">Springs and preload</h2>
 <p>The spring holds the bike up and stores the energy of each bump. Its <strong>spring rate</strong> is the force needed to compress it by one millimetre, in N/mm, so the force it gives is the rate multiplied by how far it is compressed.</p>
 <p><strong>Preload</strong> is compression put into the spring before the suspension moves at all, set by a threaded collar, a stepped cam ring on many twin shocks, or a spacer under the fork cap. Preload does <strong>not</strong> make the spring stiffer. It changes the load at which the suspension starts to move, and so the ride height and the sag. A heavier rider or a passenger needs more preload to restore the sag; if the right sag cannot be reached within the adjuster's range, the spring rate itself is wrong. Progressive fork springs have closely wound coils that close up early, so their rate rises with travel.</p>
-{lfig(OM("4t", "forks"), "illustrations/chassis/F18.png", "Technical plate of a cutaway damper-rod fork with spring, damper rod, oil level, bushings and seals, a rear monoshock with rising-rate linkage, a twin shock and sag measurement points", "A damper-rod fork in section, a linkage monoshock, a twin shock and the points used to measure sag. Plate F18, Motopedia Module 4.", "Select the forks in the Overview.")}
+{lfig(OM("4t", "forks"), "illustrations/chassis/F18.png", "Technical plate of a cutaway damper-rod fork with spring, damper rod, oil level, bushings and seals, a rear monoshock with rising-rate linkage, a twin shock and sag measurement points", "A damper-rod fork in section, a linkage monoshock, a twin shock and the points used to measure sag. Plate F18, Motopedia Module 5.", "Select the forks in the Overview.")}
 
 <h2 id="damping">Damping: controlling the spring</h2>
 <p>A spring on its own would let the bike bounce at its natural frequency, about 1 to 2 times a second for the sprung mass. The <strong>damper</strong> stops this by forcing oil through small passages, turning motion into heat. <strong>Compression damping</strong> resists the wheel moving up into a bump; <strong>rebound damping</strong> resists the spring pushing it back down, and is normally the stronger of the two, because the spring has stored energy that must be released in a controlled way.</p>
@@ -312,7 +312,7 @@ body=f'''
   (L+"m3-mixture", "Chapter 3.1: Air, fuel and mixture", "carburettor circuits, jetting order and synchronising"),
   (L+"m3-efi", "Chapter 3.4: Electronic fuel injection and engine management", "sensors, ECU strategy, emissions and fault codes"),
   (EQ, "Equations summary", "air-fuel ratio, lambda, injector pulse width and duty cycle"),
-  (QZ+"fuel-ignition", "Fuel, ignition and electrical quiz", "test yourself on Module 3"),
+  (QZ+"fuel", "Fuel, air and exhaust quiz", "test yourself on Module 3"),
   (VID+"fuel-systems", "Videos: fuel systems", ""),
   (REP+"carb-tune-order/", "Carburettor tuning order", ""),
   (REP+"throttle-body-clean/", "Throttle body cleaning", ""),

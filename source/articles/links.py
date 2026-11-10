@@ -12,7 +12,7 @@ EN = '../../engine/#'                         # Under the Engine: overview, gear
 WL = '../../wiring/#'                         # Wiring Lab tabs: harness, starting, charging, ignition
 CB = '../../wiring/#build='                   # Circuit Builder presets
 MD = '../../models/#'                         # 3D model library
-QZ = '../../quiz/?topic='                     # module ids: foundations, engine, fuel-ignition, drivetrain-chassis, electric
+QZ = '../../quiz/?topic='                     # module ids: foundations, engine, fuel, electrics, drivetrain-chassis, electric
 EQ = '../../learn/#equations'
 BUILD = '../../build/'
 COCKPIT = '../../cockpit/'

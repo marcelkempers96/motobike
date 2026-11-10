@@ -18,7 +18,7 @@ body=f'''
 <p>In practice, a 125-equivalent electric commuter uses about 2 to 4 kWh per 100 km at the battery terminals, depending on speed, load and hills. A 125 cc petrol commuter burning 2.5 litres per 100 km uses about 22 kWh of fuel energy for the same distance.</p>
 <figure>
   <img src="{A}illustrations/electrical/F25.png" alt="Block diagram of an electric motorcycle powertrain: battery pack with BMS, main fuse, pre-charge circuit and contactor, motor controller, motor with position sensor, vehicle control unit, DC-DC converter, charge port, CAN bus, throttle and brake inputs and regenerative path" width="2400" height="1500" loading="lazy">
-  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Motopedia Module 5.</figcaption>
+  <figcaption>The electric powertrain as a block diagram, with the regenerative braking path. Plate F25, Motopedia Module 6.</figcaption>
 </figure>
 
 {try_box(MD+"battery_hv", "renders/battery_hv.webp", "Rendered high-voltage lithium traction battery pack with orange cable and service disconnect", "Turn the pack round.", "The 3D model library has the traction battery, controller, motor and charge inlet as separate models.", "Open the battery model")}
@@ -28,7 +28,7 @@ body=f'''
 <p>The cell chemistry matters. Nickel manganese cobalt (NMC) cells store the most energy for their weight. Lithium iron phosphate (LFP) cells are heavier for the same range but last many more charge cycles, contain no cobalt or nickel and are more stable if damaged, so they are spreading in commuter and battery-swap fleets.</p>
 <figure>
   <img src="{A}illustrations/electrical/F26.png" alt="Technical plate of battery pack construction: cylindrical cells in holders arranged in series-parallel groups, nickel strips and busbars, BMS board with balance leads and thermistors, enclosure and connector, with an inset section through one cell" width="2400" height="1500" loading="lazy">
-  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Motopedia Module 5.</figcaption>
+  <figcaption>Battery pack construction on the 20S10P pattern, with a section through one cylindrical cell. Plate F26, Motopedia Module 6.</figcaption>
 </figure>
 
 <h2 id="bms">The battery management system</h2>
@@ -38,7 +38,7 @@ body=f'''
 <p>The battery supplies direct current, but the motor needs three-phase alternating current whose frequency follows the wheel speed. The <a href="{OV}controller">motor controller</a>, also called the inverter, makes that current with six fast power switches: MOSFETs on low-voltage machines, IGBTs or silicon-carbide devices on high-voltage ones. It reads the throttle, the rotor position and the phase currents, and it regulates the motor's torque. Throttle maps and ride modes are simply different instructions to this unit.</p>
 <p>Before the main contactor connects the battery, a <strong>pre-charge circuit</strong> charges the controller's capacitors gently through a resistor. Without it, closing the contactor onto empty capacitors would cause an inrush of thousands of amps that could weld the contactor tips.</p>
 
-{lfig(OM("elec", "motor"), "illustrations/electrical/F24.png", "Technical plate of a hub BLDC motor and an interior permanent-magnet motor in section", "A hub motor and an interior permanent-magnet motor in section. Plate F24, Motopedia Module 5.", "Select the motor on the electric bike in the Overview.")}
+{lfig(OM("elec", "motor"), "illustrations/electrical/F24.png", "Technical plate of a hub BLDC motor and an interior permanent-magnet motor in section", "A hub motor and an interior permanent-magnet motor in section. Plate F24, Motopedia Module 6.", "Select the motor on the electric bike in the Overview.")}
 
 <h2 id="motor">The motor</h2>
 <p>The traction <a href="{OV}motor">motor</a> is almost always a brushless permanent-magnet machine. The copper windings are on the stationary stator, where they can be cooled, and the magnets are on the rotor. Two layouts dominate.</p>
@@ -103,7 +103,7 @@ body=f'''
 <p>A plain chain is lubricated only by what you spray on it. An <strong>O-ring chain</strong> traps factory grease in each joint behind rubber rings, and an <strong>X-ring</strong> chain uses a ring with four smaller sealing lips to reduce friction. Sealed chains typically last two to three times as long as plain chains on road machines.</p>
 <figure>
   <img src="{A}illustrations/transmission/F15.png" alt="Technical plate of a chain final drive: front and rear sprockets with the chain run, a section through an O-ring chain showing pin, bushing, roller, plates and O-rings, slack measured at the midpoint of the lower run, and a 20-link length measurement" width="2400" height="1632" loading="lazy">
-  <figcaption>Chain final drive: O-ring chain section, slack measurement and 20-link wear length. Plate F15, Motopedia Module 4.</figcaption>
+  <figcaption>Chain final drive: O-ring chain section, slack measurement and 20-link wear length. Plate F15, Motopedia Module 5.</figcaption>
 </figure>
 
 <h2 id="chain-sizes">Chain sizes</h2>
@@ -132,7 +132,7 @@ body=f'''
   <figcaption>A rear sprocket with healthy, symmetrical teeth. Worn teeth become hooked on the driving side. Render: Transitions Lab, CC BY-SA 4.0.</figcaption>
 </figure>
 
-{lfig(EN+"final", "illustrations/transmission/TR02.png", "Technical plate comparing chain, belt and shaft final drives", "Chain, belt and shaft final drives compared. Plate TR02, Motopedia Module 4.", "See the final drive in Under the Engine.")}
+{lfig(EN+"final", "illustrations/transmission/TR02.png", "Technical plate comparing chain, belt and shaft final drives", "Chain, belt and shaft final drives compared. Plate TR02, Motopedia Module 5.", "See the final drive in Under the Engine.")}
 
 <h2 id="adjust">Adjust the chain</h2>
 <ol>

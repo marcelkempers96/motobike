@@ -76,7 +76,7 @@ const ICON = {
 function homeIntroHTML() {
   const cards = [
     ['assets/photos/engine-closeup.jpg', 'The engine', 'How fuel, air and a spark turn into torque: four-stroke, two-stroke and the parts that make them work.', 'learn/#engine'],
-    ['assets/photos/carburettor-work.jpg', 'Fuel, ignition and electrics', 'Carburettors and injection, coils and plugs, charging and wiring, and how to find faults with a meter.', 'learn/#fuel-ignition'],
+    ['assets/photos/carburettor-work.jpg', 'Fuel and electrics', 'Carburettors and injection, then coils and plugs, charging and wiring, and how to find faults with a meter.', 'learn/#fuel'],
     ['assets/photos/workshop-garage.jpg', 'In the workshop', 'Job sheets with tools, reference values and pass criteria, from measuring a piston pin to bleeding a brake.', 'learn/#foundations'],
   ];
   return `
