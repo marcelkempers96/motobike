@@ -142,6 +142,8 @@ async function loadBike(m) {
   renderEditor();
   stage.dataset.bike = m;
   stage.dataset.ready = '1';
+  // first visit: show two trial logos so the bike is branded straight away
+  if (!state.trialDone && !state.logos.length) { state.trialDone = true; addSample(0).then(() => addSample(1)); }
 }
 
 /* Work out the bike's size, which side is left, and where each preset spot is. */
@@ -370,16 +372,32 @@ $('mzb-file').addEventListener('change', async (e) => {
   e.target.value = '';
   if (f) await addLogoFile(f);
 });
-$('mzb-sample').addEventListener('click', async () => {
+/* Trial logos (our own): shown until a visitor adds their own, then removed. */
+const SAMPLES = [
+  { file: 'motopedia.webp', name: 'Motopedia', type: 'image/webp' },
+  { file: 'transitions-lab.png', name: 'Transitions Lab', type: 'image/png' },
+  { file: 'social-innovation-europe.png', name: 'Social Innovation Europe', type: 'image/png' },
+  { file: 'reef-ranger.png', name: 'Reef Ranger', type: 'image/png' },
+];
+async function addSample(i) {
+  const sm = SAMPLES[i];
   try {
-    const res = await fetch(new URL('brand-sample-logo.svg', import.meta.url));
+    const res = await fetch(new URL('brand-samples/' + sm.file, import.meta.url));
     const blob = await res.blob();
-    await addLogoFile(new File([blob], 'sample-logo.svg', { type: 'image/svg+xml' }));
+    if (state.logos.length >= MAX_LOGOS) { const old = state.logos.find((l) => l.sample); if (old) removeLogo(old.id); }
+    await addLogoFile(new File([blob], sm.name + '.' + sm.file.split('.').pop(), { type: sm.type }), true);
   } catch (err) { showFileErr('Could not load the sample logo.'); }
+}
+$('mzb-samples').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-sample]');
+  if (b) addSample(+b.dataset.sample);
 });
+$('mzb-samples').innerHTML = '<span>Try:</span>' + SAMPLES.map((sm, i) => `<button type="button" data-sample="${i}" title="Try the ${esc(sm.name)} logo"><img src="${new URL('brand-samples/' + sm.file, import.meta.url).href}" alt="${esc(sm.name)}"></button>`).join('');
 
-async function addLogoFile(file) {
+async function addLogoFile(file, sample = false) {
   showFileErr('');
+  // A visitor's own logo replaces the trial logos.
+  if (!sample) state.logos.filter((l) => l.sample).forEach((l) => removeLogo(l.id));
   if (state.logos.length >= MAX_LOGOS) { showFileErr('You can add up to 3 logos. Remove one first.'); return; }
   const ext = (file.name.split('.').pop() || '').toLowerCase();
   const type = TYPES[file.type] ? file.type : EXT_TYPE[ext];
@@ -391,17 +409,26 @@ async function addLogoFile(file) {
     img = await loadImage(url);
   } catch (err) { showFileErr('Could not read that image. Please try another file.'); return; }
   const w0 = img.naturalWidth || 512, h0 = img.naturalHeight || 512;
-  const s = 2048 / Math.max(w0, h0);
+  // trial logos are dark artwork: print them as a white sticker so they read on any paint
+  const pad = sample ? Math.round(Math.max(w0, h0) * 0.06) : 0;
+  const s = 2048 / (Math.max(w0, h0) + pad * 2);
   const cv = document.createElement('canvas');
-  cv.width = Math.max(2, Math.round(w0 * s)); cv.height = Math.max(2, Math.round(h0 * s));
-  { const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high'; g.drawImage(img, 0, 0, cv.width, cv.height); }
+  cv.width = Math.max(2, Math.round((w0 + pad * 2) * s)); cv.height = Math.max(2, Math.round((h0 + pad * 2) * s));
+  {
+    const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high';
+    if (sample) {
+      const r = Math.min(cv.width, cv.height) * 0.18;
+      g.fillStyle = '#fbfbf8'; g.beginPath(); g.roundRect(0, 0, cv.width, cv.height, r); g.fill();
+    }
+    g.drawImage(img, pad * s, pad * s, w0 * s, h0 * s);
+  }
   const tex = new THREE.CanvasTexture(cv);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = viewer ? viewer.renderer.capabilities.getMaxAnisotropy() : 1;
   const material = new THREE.MeshStandardMaterial({ map: tex, transparent: true, alphaTest: 0.03, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4, roughness: 0.5, metalness: 0, toneMapped: false });
   tex.generateMipmaps = true; tex.minFilter = THREE.LinearMipmapLinearFilter;
   const i = state.logos.length;
-  const logo = { id: nextId++, name: file.name, file, type, ext: TYPES[type], thumb: url, aspect: cv.width / cv.height, material, spot: defaultSpot(i), custom: null, size: 18, rot: 0, mirror: true, shown: 0 };
+  const logo = { id: nextId++, sample, name: sample ? file.name.replace(/\.\w+$/, '') + ' (trial)' : file.name, file, type, ext: TYPES[type], thumb: url, aspect: cv.width / cv.height, material, spot: defaultSpot(i), custom: null, size: 18, rot: 0, mirror: true, shown: 0 };
   const sp = info && info.spots[logo.spot];
   if (sp) logo.size = sp.size;
   state.logos.push(logo);
@@ -455,9 +482,8 @@ function spotLabel(l) {
 function renderList() {
   listEl.innerHTML = state.logos.map((l) => `<li><button type="button" data-id="${l.id}" aria-pressed="${l.id === state.active}"><img src="${esc(l.thumb)}" alt=""><span>${esc(l.name)}</span><em>${esc(spotLabel(l))}</em></button></li>`).join('');
   const n = state.logos.length;
-  $('mzb-sample').hidden = n >= MAX_LOGOS;
-  $('mzb-file').disabled = n >= MAX_LOGOS;
-  const first = state.logos[0];
+  $('mzb-file').disabled = state.logos.filter((l) => !l.sample).length >= MAX_LOGOS;
+  const first = state.logos.find((l) => !l.sample);
   $('mzb-attach').textContent = !first ? 'No logo added yet. You can still send a request; the picture of the bike is attached.'
     : `Attached: ${first.name}${n > 1 ? ' (the first of your logos)' : ''} and the picture of the bike.`;
 }
@@ -646,7 +672,7 @@ form.addEventListener('submit', async (e) => {
     const id = uuid();
     let shot = snapshot(1.5, 'white');
     if (shot && shot.length * 0.75 > MAX_BYTES * 0.95) shot = snapshot(1, 'white');
-    const logo = state.logos[0] || null;
+    const logo = state.logos.find((l) => !l.sample) || null;
     const logo_path = logo ? `${id}/logo.${logo.ext}` : null;
     const preview_path = shot ? `${id}/preview.png` : null;
     if (logo) await upload(logo_path, logo.file, logo.type);
