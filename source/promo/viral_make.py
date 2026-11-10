@@ -71,7 +71,7 @@ def overlay(seg, title, card_h, path):
         d.text((x0 + 26 + bw / 2, y0 + 81), b, font=bf, fill=WHITE, anchor='mm')
     y = y0 + card_h + 44
     if seg.get('l1'): y = text_block(d, seg['l1'], ImageFont.truetype(XBOLD, seg.get('l1_size', 76)), y, ORANGE + (255,))
-    if seg.get('l2'): text_block(d, seg['l2'], ImageFont.truetype(BOLD, 46), y + 6, WHITE + (255,), maxw=940)
+    if seg.get('l2'): text_block(d, seg['l2'], ImageFont.truetype(BOLD, 46), y + 18, WHITE + (255,), maxw=940)
     im.save(path)
 
 
@@ -88,7 +88,7 @@ def render(reel, tmp):
         png = os.path.join(tmp, f'o{i}.png'); overlay(seg, seg.get('title', reel.get('title', '')), card_h, png)
         mp4 = os.path.join(tmp, f's{i}.mp4'); n = seg['n']
         speed = seg.get('speed', 1)
-        z = seg.get('zoom', 1.3 if seg['src'].startswith('b_') else 1)   # bikes sit small in the canvas: crop in
+        z = seg.get('zoom', 1.3 if seg['src'].startswith('b_') else 1.15 if seg['src'].startswith('p_') else 1)   # bikes sit small in the canvas: crop in
         zw, zh = round(CARD_W * z / 2) * 2, round(full_h * z / 2) * 2
         vf = (f"[0:v]setpts=PTS/{speed},scale={zw}:{zh},crop={CARD_W}:{card_h}:({zw}-{CARD_W})/2:({zh}-{card_h})/2,setsar=1[c];"
               f"color=c=0x16181e:s={W}x{H}:r=30[bg];[bg][c]overlay=({W}-{CARD_W})/2:{CARD_Y}:shortest=1[m];"
