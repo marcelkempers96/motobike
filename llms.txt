@@ -2,6 +2,8 @@
 
 > Motopedia is a free, open motorcycle encyclopedia and course by Transitions Lab: how motorcycles work (petrol and electric), how to diagnose faults, repair them and find spare parts, with interactive 3D tools. Text and figures are CC BY-SA 4.0.
 
+Why it exists: hundreds of millions of people depend on motorcycles, the mechanics who keep them running mostly learn on the job, and electric motorcycles need skills almost nobody has been trained in. Motopedia is free, open training for them: understand how it works, see it in 3D, then find and fix the fault.
+
 Written in plain English for riders, mechanics, trainers and fleet operators. Reference values come from a fuel-injected 125 cc single (the K-Light 125); always check your own bike's manual.
 
 ## Course

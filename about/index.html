@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Motopedia, the open motorcycle course</title>
   <link rel="canonical" href="https://www.motopedia.org/about/">
-  <meta property="og:type" content="website"><meta property="og:site_name" content="Motopedia"><meta property="og:title" content="About Motopedia, the open motorcycle course"><meta property="og:description" content="What Motopedia is, who it is for, what is inside and how to use it. An open educational programme created by Transitions Lab."><meta property="og:url" content="https://www.motopedia.org/about/"><meta property="og:image" content="https://www.motopedia.org/assets/photos/home-ov-all-3q.webp"><meta name="twitter:card" content="summary_large_image">
-  <meta name="description" content="What Motopedia is, who it is for, what is inside and how to use it. An open educational programme created by Transitions Lab.">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Motopedia"><meta property="og:title" content="About Motopedia, the open motorcycle course"><meta property="og:description" content="Why Motopedia exists: free, open training for the mechanics, trainees, riders and fleets who keep motorcycles running, petrol and electric."><meta property="og:url" content="https://www.motopedia.org/about/"><meta property="og:image" content="https://www.motopedia.org/assets/photos/home-ov-all-3q.webp"><meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Why Motopedia exists: free, open training for the mechanics, trainees, riders and fleets who keep motorcycles running, petrol and electric.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#141414"><meta name="apple-mobile-web-app-title" content="Motopedia">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +41,14 @@
   .ute-chapter .lead { font-size: 16px; }
 }
 
+.mz-why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 18px; }
+.mz-why-grid h3 { margin: 0 0 8px; font-size: 19px; } .mz-why-grid p { margin: 0; line-height: 1.6; }
+.mz-why-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.mz-why-steps a { display: block; padding: 18px; border: 1.5px solid var(--ink); text-decoration: none; color: var(--ink); }
+.mz-why-steps a:hover { background: var(--ink); color: #FFF; }
+.mz-why-steps b { display: block; font-size: 19px; margin-bottom: 6px; } .mz-why-steps span { font-size: 15px; line-height: 1.5; }
+.mz-why-note { margin-top: 18px; color: var(--mute); }
+@media (max-width: 800px) { .mz-why-grid, .mz-why-steps { grid-template-columns: 1fr; } }
 .mz-about-video { margin: 0; } .mz-about-video video { display: block; width: 100%; height: auto; aspect-ratio: 1; background: #141414; border: 1px solid var(--line); } .mz-about-video figcaption { margin-top: 10px; font-size: 14px; color: var(--mute); }
 .mz-about-hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 56px; align-items: center; }
 .mz-brand-box { border: 1px solid var(--line); padding: 40px 32px; display: flex; align-items: center; justify-content: center; }
@@ -107,10 +115,26 @@
   <section class="ute-hero mz-about-hero">
     <div>
       <span class="ute-label">About</span>
-      <h1>An open technical course on how motorcycles work</h1>
+      <h1>Free, open training for the people who keep motorcycles running</h1>
       <p>Motopedia follows the motorcycle from the first combustion stroke to the battery management system of an electric bike. It explains every system well enough for you to describe it, specify it and repair it, and it is free to use, adapt and share.</p>
     </div>
     <figure class="mz-about-video"><video controls playsinline preload="metadata" poster="../assets/video/motopedia-showreel-poster.jpg" width="720" height="720"><source src="../assets/video/motopedia-showreel.mp4" type="video/mp4">Your browser cannot play this video.</video><figcaption>Motopedia in 60 seconds: the 3D bikes, the cockpit and dyno, the Bike builder, the Wiring Lab, the engine, the course and the repair guides.</figcaption></figure>
+  </section>
+  <section class="ute-chapter mz-why" id="why">
+    <div class="ute-chapter-kicker"><span class="ute-chapter-num">!</span><span class="ute-label">The problem we are solving</span></div>
+    <h2>Motorcycles move the world. The knowledge to fix them is hard to get.</h2>
+    <div class="mz-why-grid">
+      <div><h3>The problem</h3><p>Hundreds of millions of people depend on a motorcycle every day: taxi riders, delivery fleets, farmers, commuters. The mechanics who keep them running mostly learn on the job. Good technical training is expensive, written for one model, or not in reach at all. And now electric motorcycles are arriving, with high-voltage batteries and electronics that almost nobody has been trained on.</p></div>
+      <div><h3>What we do</h3><p>Motopedia is a free, open encyclopedia and course for the people who keep motorcycles running. It explains how every part works, shows it in 3D, and gives step-by-step guides to find and fix faults, for petrol and electric machines.</p></div>
+      <div><h3>Who it is for</h3><p>Mechanics and fundis, technical trainees and their teachers, fleet operators, riders who want to look after their own bike, and anyone moving from petrol to electric.</p></div>
+    </div>
+    <h3 style="margin-top:28px">Three things, in this order</h3>
+    <div class="mz-why-steps">
+      <a href="../learn/"><b>1. Understand</b><span>A six-module course, from the four-stroke cycle to the battery management system, with quizzes and every equation explained.</span></a>
+      <a href="../overview/"><b>2. See it</b><span>Tap any part of a 3D motorcycle, watch a running engine come apart, ride it in the cockpit, trace its wiring.</span></a>
+      <a href="../repair/diagnose/"><b>3. Fix it</b><span>Diagnose a fault in three taps, follow a step-by-step repair, know if it is safe to ride, and find the part.</span></a>
+    </div>
+    <p class="mz-why-note">Free to use, adapt and share (CC BY-SA 4.0). No account needed to learn; a free account saves your progress and lets you ask questions.</p>
   </section>
   <section class="ute-chapter mz-story">
     <div class="ute-chapter-kicker"><span class="ute-chapter-num">★</span><span class="ute-label">Where it came from</span></div>

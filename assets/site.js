@@ -21,53 +21,54 @@ import { pickerHTML, wire as wireLang } from './translate.js';
 if (/[#&](access_token|error_description)=|[?&]code=/.test(location.hash + location.search) && !/\/account\/$/.test(location.pathname)) {
   location.replace(new URL('account/', ROOT).pathname + location.search + location.hash);
 }
-export const MAIN = [['overview/', 'Overview']];
+export const MAIN = [['overview/', 'Explore in 3D']];
 export const NAV = [
-  { key: 'course', title: 'Course', blurb: 'Six modules, quizzes and your progress', items: [
-    ['crash-course/', 'Crash course', 'The whole motorcycle in 15 minutes'],
-    ['learn/', 'Course overview', 'How the course works, where to start'],
-    ['learn/#foundations', '1 Foundations', 'Anatomy, physics, workshop'],
-    ['learn/#engine', '2 The engine', 'Four-stroke and two-stroke'],
-    ['learn/#fuel', '3 Fuel, air and exhaust', 'Mixture, carburettors, EFI'],
-    ['learn/#electrics', '4 Electrical systems', 'Ignition, battery, charging, wiring'],
-    ['learn/#drivetrain-chassis', '5 Drivetrain and chassis', 'Clutch to brakes'],
-    ['learn/#electric', '6 Electric motorcycles', 'Motors, packs, BMS'],
-    ['learn/#equations', 'Equations summary', 'Every equation, what it means and why'],
-    ['quiz/', 'Quiz', 'Easy, mixed and hard, every module'],
-    ['progress/', 'My progress', 'Saved in this browser, or to your account'],
-    ['account/', 'Account', 'Sign in to comment, add photos, save progress'],
+  { key: 'course', title: 'Learn', blurb: 'A free course, from the first stroke to the battery', items: [
+    ['learn/', 'Start the course', '6 modules, 39 chapters'],
+    ['crash-course/', 'Crash course', 'The motorcycle in 15 minutes'],
+    ['learn/#foundations', '1 · Foundations', 'Anatomy, physics, workshop'],
+    ['learn/#engine', '2 · The engine', 'Four-stroke and two-stroke'],
+    ['learn/#fuel', '3 · Fuel, air and exhaust', 'Carburettors and injection'],
+    ['learn/#electrics', '4 · Electrical systems', 'Battery, charging, ignition'],
+    ['learn/#drivetrain-chassis', '5 · Drivetrain and chassis', 'Clutch to brakes'],
+    ['learn/#electric', '6 · Electric motorcycles', 'Motors, batteries, charging'],
+    ['learn/#equations', 'Equations', 'Every formula, explained'],
+    ['quiz/', 'Quiz', 'Test yourself'],
+    ['progress/', 'My progress', 'Chapters done, quiz scores'],
   ] },
   { key: 'repair', title: 'Repair', blurb: 'Find the fault, fix it, get the part', items: [
-    ['repair/diagnose/', 'Diagnose a problem', 'Three questions to the likely fault'],
-    ['repair/', 'Repair home', 'Search any problem, part or job'],
-    ['repair/problems/', 'By problem', '313 problems, step-by-step checks'],
-    ['repair/repairs/', 'By repair', '372 jobs, rider to workshop'],
-    ['repair/parts/', 'By part', 'What each part does and how it fails'],
-    ['repair/bikes/', 'By bike', '500 motorcycles: specs, top repairs, problems'],
-    ['parts/', 'Spare parts', 'What wears, when, where to buy'],
+    ['repair/diagnose/', 'Diagnose a problem', 'Three questions to the fault'],
+    ['repair/', 'Repair home', 'Search everything'],
+    ['repair/problems/', 'Problems', '313, with safety advice'],
+    ['repair/repairs/', 'Repairs', '372 step-by-step jobs'],
+    ['repair/parts/', 'Parts', '208 parts explained'],
+    ['repair/bikes/', 'By bike', '500 models'],
+    ['parts/', 'Spare parts', 'Prices and shops, 41 bikes'],
   ] },
-  { key: 'tools', title: 'Tools', blurb: 'Interactive tools to explore and build', items: [
-    ['cockpit/', 'Cockpit', 'Ride the bike, start it, run the dyno'],
-    ['engine/', 'Under the Engine', '3D engine: gearbox, clutch, starters, valves'],
-    ['wiring/', 'Wiring Lab', 'Harness, starting, charging and ignition circuits'],
-    ['build/', 'Bike builder', 'Assemble a bike and change its specification'],
-    ['brand/', 'Brand a bike', 'Put your logo on a 3D motorcycle'],
+  { key: 'tools', title: 'Tools', blurb: 'See it, ride it, build it', items: [
+    ['overview/', '3D Overview', 'Tap any part of 11 bikes'],
+    ['engine/', 'Under the Engine', 'A running engine in 3D'],
+    ['cockpit/', 'Cockpit', 'Ride it, read the dyno'],
+    ['wiring/', 'Wiring Lab', 'Circuits and fault finding'],
+    ['build/', 'Bike builder', 'Assemble a bike'],
+    ['brand/', 'Brand a bike', 'Your logo on a 3D bike'],
+    ['kids/', 'Kids: build a bike', 'A game for younger learners'],
   ] },
-  { key: 'library', title: 'Library', blurb: 'Articles, models, illustrations and downloads', items: [
-    ['articles/', 'Articles', 'Guides to engines, chains, wiring and more'],
-    ['videos/', 'Videos', 'The best motorcycle videos, sorted by topic'],
-    ['models/', '3D models', 'All 337 models: 8 bikes and every part'],
-    ['types/', 'Motorcycle types', 'Sixteen kinds of motorcycle, with cutaway plates'],
-    ['history/', 'History', 'How the motorcycle evolved, from 1885 to electric'],
-    ['downloads/#plates', 'Technical illustrations', '50+ labelled plates to download'],
-    ['downloads/', 'Downloads', 'PDF modules, plates, data and offline tools'],
+  { key: 'library', title: 'Library', blurb: 'Read, watch and download', items: [
+    ['articles/', 'Articles', 'Guides and stories'],
+    ['videos/', 'Videos', '250 picked by topic'],
+    ['types/', 'Motorcycle types', '16 kinds, compared'],
+    ['history/', 'History', '1867 to electric'],
+    ['models/', '3D models', '369, free to download'],
+    ['downloads/', 'Downloads', 'Plates, PDFs and data'],
   ] },
-  { key: 'more', title: 'More', blurb: 'Files, sources and the project', items: [
-    ['sources/', 'Sources and credits', 'Bibliography and licences'],
-    ['updates/', 'Updates', 'What changed and when'],
-    ['about/', 'About', 'Why this exists, who made it'],
-    ['contact/', 'Contact', 'Collaborate or ask for a model'],
-    ['kids/', 'Kids: build a bike', 'A simple game for younger learners'],
+  { key: 'more', title: 'About', blurb: 'Why Motopedia exists', items: [
+    ['about/', 'About Motopedia', 'The problem we are solving'],
+    ['work-with-us/', 'Work with us', 'Partners, trainers, mechanics'],
+    ['updates/', 'Updates', 'What is new'],
+    ['sources/', 'Sources and credits', 'Where it comes from'],
+    ['contact/', 'Contact', 'Write to the team'],
+    ['account/', 'Account', 'Sign in or create one'],
   ] },
 ];
 
@@ -104,12 +105,12 @@ function ctaHTML() {
   try { role = localStorage.getItem('mz-role') || ''; if (role && !Object.keys(localStorage).some((k) => /^sb-.*-auth-token$/.test(k))) role = ''; } catch (e) { /* noop */ }
   if (role === 'admin') return `<a class="mz-menu-cta is-admin" href="${url('account/')}#admin">Admin</a>`;
   if (role === 'user') return `<a class="mz-menu-cta" href="${url('account/')}">My account</a>`;
-  return `<a class="mz-menu-cta" href="${url('progress/')}">My progress</a>`;
+  return `<a class="mz-menu-cta" href="${url('account/')}">Sign in</a>`;
 }
 
 export function footerHTML() {
   const G = (k) => NAV.find((g) => g.key === k);
-  const explore = { title: 'Explore', items: [['', 'Home'], ['overview/', 'Overview'], ...G('tools').items, ['repair/', 'Repair']] };
+  const explore = { title: 'Explore', items: [['', 'Home'], ...G('tools').items, ['repair/', 'Repair home']] };
   const col = (g) => `<div><h4>${g.title}</h4><ul>${g.items.map(([h, t]) => `<li><a href="${url(h)}">${t}</a></li>`).join('')}</ul></div>`;
   return `
     <form class="mz-sub" novalidate>
