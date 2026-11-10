@@ -88,7 +88,9 @@ def render(reel, tmp):
         png = os.path.join(tmp, f'o{i}.png'); overlay(seg, seg.get('title', reel.get('title', '')), card_h, png)
         mp4 = os.path.join(tmp, f's{i}.mp4'); n = seg['n']
         speed = seg.get('speed', 1)
-        vf = (f"[0:v]setpts=PTS/{speed},scale={CARD_W}:{full_h},crop={CARD_W}:{card_h},setsar=1[c];"
+        z = seg.get('zoom', 1.3 if seg['src'].startswith('b_') else 1)   # bikes sit small in the canvas: crop in
+        zw, zh = round(CARD_W * z / 2) * 2, round(full_h * z / 2) * 2
+        vf = (f"[0:v]setpts=PTS/{speed},scale={zw}:{zh},crop={CARD_W}:{card_h}:({zw}-{CARD_W})/2:({zh}-{card_h})/2,setsar=1[c];"
               f"color=c=0x16181e:s={W}x{H}:r=30[bg];[bg][c]overlay=({W}-{CARD_W})/2:{CARD_Y}:shortest=1[m];"
               f"[m][1:v]overlay=0:0,format=yuv420p,fps=30[o]")
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', '30', '-start_number', str(seg.get('start', 0)),
