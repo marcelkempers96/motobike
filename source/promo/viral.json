@@ -1,0 +1,589 @@
+[
+ {
+  "id": "v01_which_bike",
+  "title": "Which bike are you?",
+  "segments": [
+   {
+    "src": "b_pi",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "Old soul",
+    "l2": "Pioneer motor-bicycle, 1901"
+   },
+   {
+    "src": "b_sb",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "You live fast",
+    "l2": "1000 cc superbike"
+   },
+   {
+    "src": "b_cu",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "Long roads, no rush",
+    "l2": "V-twin cruiser"
+   },
+   {
+    "src": "b_cr",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "Style first",
+    "l2": "1960s cafe racer"
+   },
+   {
+    "src": "b_2t",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "Loud and muddy",
+    "l2": "Two-stroke motocross"
+   },
+   {
+    "src": "b_sc",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "Smart in the city",
+    "l2": "Automatic scooter"
+   },
+   {
+    "src": "b_bb",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "You carry everyone",
+    "l2": "Boda boda"
+   },
+   {
+    "src": "b_elec",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "Future first",
+    "l2": "Electric motorcycle"
+   },
+   {
+    "src": "b_4t",
+    "start": 20,
+    "n": 48,
+    "title": "Which bike are you?",
+    "l1": "No drama, always starts",
+    "l2": "Classic four-stroke"
+   }
+  ],
+  "caption": "Which one is you? Be honest. 👇 Every bike here is a free 3D model you can spin round and take apart on motopedia.org (link in bio).",
+  "tags": "#whichbikeareyou #motorcycle #bikelife #caferacer #superbike #motocross #scooter #bodaboda #electricmotorcycle"
+ },
+ {
+  "id": "v02_evolution",
+  "title": "120 years of motorcycles",
+  "segments": [
+   {
+    "src": "b_pi",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Pioneer",
+    "l2": "Pedals, a belt and a trembler coil",
+    "badge": "1901"
+   },
+   {
+    "src": "b_vt",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "V-twin",
+    "l2": "Hand gear change, foot clutch",
+    "badge": "1920"
+   },
+   {
+    "src": "b_st",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Step-through",
+    "l2": "The world’s best-selling motor vehicle",
+    "badge": "1958"
+   },
+   {
+    "src": "b_cr",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Cafe racer",
+    "l2": "Stripped down to go fast",
+    "badge": "1965"
+   },
+   {
+    "src": "b_4t",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Classic single",
+    "l2": "Air-cooled, simple, fixable anywhere",
+    "badge": "1975"
+   },
+   {
+    "src": "b_2t",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Two-stroke",
+    "l2": "A power stroke every turn",
+    "badge": "1985"
+   },
+   {
+    "src": "b_sb",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Superbike",
+    "l2": "1000 cc, four cylinders",
+    "badge": "2005"
+   },
+   {
+    "src": "b_elec",
+    "start": 20,
+    "n": 45,
+    "title": "120 years of motorcycles",
+    "l1": "Electric",
+    "l2": "Battery, controller, motor. No gears",
+    "badge": "NOW"
+   }
+  ],
+  "caption": "From pedals and a belt in 1901 to a battery and a motor today. Which era would you ride? Every bike is a free 3D model on motopedia.org (link in bio).",
+  "tags": "#motorcyclehistory #vintagemotorcycle #evolution #caferacer #superbike #electricmotorcycle #classicmotorcycle #motorbike"
+ },
+ {
+  "id": "v03_guess_the_part",
+  "segments": [
+   {
+    "src": "p_4t_carb",
+    "start": 0,
+    "n": 66,
+    "title": "Guess the part",
+    "l1": "?",
+    "l2": "Comment before it shows...",
+    "l1_size": 170
+   },
+   {
+    "src": "p_4t_carb",
+    "start": 66,
+    "n": 50,
+    "title": "Guess the part",
+    "l1": "Carburettor",
+    "l2": "Mixes air and fuel for the engine"
+   },
+   {
+    "src": "p_4t_clutch",
+    "start": 0,
+    "n": 66,
+    "title": "Guess the part",
+    "l1": "?",
+    "l2": "Number 2. Any idea?",
+    "l1_size": 170
+   },
+   {
+    "src": "p_4t_clutch",
+    "start": 66,
+    "n": 50,
+    "title": "Guess the part",
+    "l1": "Clutch",
+    "l2": "Connects the engine to the gearbox"
+   },
+   {
+    "src": "p_sc_cvt",
+    "start": 0,
+    "n": 66,
+    "title": "Guess the part",
+    "l1": "?",
+    "l2": "Last one. This one is hard.",
+    "l1_size": 170
+   },
+   {
+    "src": "p_sc_cvt",
+    "start": 66,
+    "n": 50,
+    "title": "Guess the part",
+    "l1": "CVT",
+    "l2": "The scooter’s automatic gearbox"
+   }
+  ],
+  "caption": "How many did you get? 3 out of 3 = mechanic. Tap any part of any bike on motopedia.org to see what it does (link in bio).",
+  "tags": "#guessthepart #motorcycleparts #mechanic #quiz #carburetor #clutch #cvt #scooter #howitworks",
+  "title": "Guess the part"
+ },
+ {
+  "id": "v04_guess_the_part_2",
+  "segments": [
+   {
+    "src": "p_4t_rear_shock",
+    "start": 0,
+    "n": 66,
+    "title": "Guess the part",
+    "l1": "?",
+    "l2": "Comment before it shows...",
+    "l1_size": 170
+   },
+   {
+    "src": "p_4t_rear_shock",
+    "start": 66,
+    "n": 50,
+    "title": "Guess the part",
+    "l1": "Rear shock absorber",
+    "l2": "A spring plus a damper"
+   },
+   {
+    "src": "p_4t_spark_plug",
+    "start": 0,
+    "n": 66,
+    "title": "Guess the part",
+    "l1": "?",
+    "l2": "Small but the engine dies without it",
+    "l1_size": 170
+   },
+   {
+    "src": "p_4t_spark_plug",
+    "start": 66,
+    "n": 50,
+    "title": "Guess the part",
+    "l1": "Spark plug",
+    "l2": "Lights the fuel, thousands of times a minute"
+   },
+   {
+    "src": "p_4t_rear_sprocket",
+    "start": 0,
+    "n": 66,
+    "title": "Guess the part",
+    "l1": "?",
+    "l2": "Last one...",
+    "l1_size": 170
+   },
+   {
+    "src": "p_4t_rear_sprocket",
+    "start": 66,
+    "n": 50,
+    "title": "Guess the part",
+    "l1": "Rear sprocket",
+    "l2": "Change its teeth to change the gearing"
+   }
+  ],
+  "caption": "Round 2. Score yourself in the comments. Every part has a free page and repair guide on motopedia.org (link in bio).",
+  "tags": "#guessthepart #motorcycleparts #mechanic #quiz #sparkplug #suspension #sprocket #howitworks",
+  "title": "Guess the part"
+ },
+ {
+  "id": "v05_whats_wrong",
+  "segments": [
+   {
+    "src": "p_4t_chain",
+    "start": 0,
+    "n": 66,
+    "title": "What's wrong with this bike?",
+    "l1": "Chain slaps and clunks when you pull away",
+    "l2": "What would you check?"
+   },
+   {
+    "src": "p_4t_chain",
+    "start": 66,
+    "n": 50,
+    "title": "What's wrong with this bike?",
+    "l1": "Loose or worn chain",
+    "l2": "Adjust the slack, check for stretch"
+   },
+   {
+    "src": "p_4t_spark_plug",
+    "start": 0,
+    "n": 66,
+    "title": "What's wrong with this bike?",
+    "l1": "Engine cranks but will not start",
+    "l2": "Fuel, air or spark?"
+   },
+   {
+    "src": "p_4t_spark_plug",
+    "start": 66,
+    "n": 50,
+    "title": "What's wrong with this bike?",
+    "l1": "Check the spark first",
+    "l2": "Pull the plug, earth it, look for a blue spark"
+   },
+   {
+    "src": "p_4t_battery",
+    "start": 0,
+    "n": 66,
+    "title": "What's wrong with this bike?",
+    "l1": "It just clicks when you press start",
+    "l2": "What is it?"
+   },
+   {
+    "src": "p_4t_battery",
+    "start": 66,
+    "n": 50,
+    "title": "What's wrong with this bike?",
+    "l1": "Flat battery or bad earth",
+    "l2": "12.3 V or less at rest: charge it"
+   }
+  ],
+  "caption": "Would you have found it? Motopedia has a free step-by-step fault finder for 370+ problems (link in bio). Always follow your manual and stay safe.",
+  "tags": "#motorcyclerepair #mechanic #diagnosis #troubleshooting #fixit #motorcyclemaintenance #bikerepair #diy",
+  "title": "What's wrong with this bike?"
+ },
+ {
+  "id": "v06_whats_wrong_2",
+  "segments": [
+   {
+    "src": "p_sb_brake",
+    "start": 0,
+    "n": 66,
+    "title": "What's wrong with this bike?",
+    "l1": "Brake lever feels soft and spongy",
+    "l2": "Would you still ride it?"
+   },
+   {
+    "src": "p_sb_brake",
+    "start": 66,
+    "n": 50,
+    "title": "What's wrong with this bike?",
+    "l1": "Air in the brake line",
+    "l2": "Bleed the brakes. Do not ride until fixed."
+   },
+   {
+    "src": "p_4t_clutch",
+    "start": 0,
+    "n": 66,
+    "title": "What's wrong with this bike?",
+    "l1": "Engine revs up but the bike barely speeds up",
+    "l2": "What is slipping?"
+   },
+   {
+    "src": "p_4t_clutch",
+    "start": 66,
+    "n": 50,
+    "title": "What's wrong with this bike?",
+    "l1": "Clutch slipping",
+    "l2": "Check cable free play, then the plates"
+   },
+   {
+    "src": "p_4t_carb",
+    "start": 0,
+    "n": 66,
+    "title": "What's wrong with this bike?",
+    "l1": "Only runs with the choke on",
+    "l2": "Why?"
+   },
+   {
+    "src": "p_4t_carb",
+    "start": 66,
+    "n": 50,
+    "title": "What's wrong with this bike?",
+    "l1": "Blocked pilot jet",
+    "l2": "Clean the carburettor’s idle circuit"
+   }
+  ],
+  "caption": "Three faults every mechanic sees every week. How many did you get? Free repair guides and fault finder on motopedia.org (link in bio).",
+  "tags": "#motorcyclerepair #mechanic #brakes #clutch #carburetor #troubleshooting #bikerepair #motorcyclemaintenance",
+  "title": "What's wrong with this bike?"
+ },
+ {
+  "id": "v07_satisfying_engine",
+  "segments": [
+   {
+    "src": "assemble",
+    "start": 0,
+    "n": 180,
+    "title": "Oddly satisfying",
+    "l1": "An engine, building itself",
+    "l2": "Every part of a 125 cc engine in 3D"
+   }
+  ],
+  "caption": "Every part clicking into place. 🔧 Take this 125 cc engine apart yourself, then watch it run, on motopedia.org (link in bio).",
+  "tags": "#oddlysatisfying #satisfying #engine #explodedview #motorcycleengine #engineering #3d #mechanic",
+  "title": "Oddly satisfying"
+ },
+ {
+  "id": "v08_rate_this_bike",
+  "segments": [
+   {
+    "src": "b_cr",
+    "start": 0,
+    "n": 180,
+    "title": "Rate this bike 1 to 10",
+    "l1": "1960s cafe racer",
+    "l2": "Comment your score"
+   }
+  ],
+  "caption": "Be honest: 1 to 10? 👇 Spin it round, look inside and tap any part on motopedia.org (link in bio).",
+  "tags": "#caferacer #caferacerculture #ratemybike #classicmotorcycle #vintagebike #motorcycle #bikelife",
+  "title": "Rate this bike 1 to 10"
+ },
+ {
+  "id": "v09_this_or_that",
+  "segments": [
+   {
+    "src": "b_2t",
+    "start": 20,
+    "n": 42,
+    "title": "This or that?",
+    "l1": "Motocross",
+    "l2": "Comment A or B",
+    "badge": "A"
+   },
+   {
+    "src": "b_sc",
+    "start": 20,
+    "n": 42,
+    "title": "This or that?",
+    "l1": "Scooter",
+    "l2": "Comment A or B",
+    "badge": "B"
+   },
+   {
+    "src": "b_sb",
+    "start": 20,
+    "n": 42,
+    "title": "This or that?",
+    "l1": "Superbike",
+    "l2": "Comment A or B",
+    "badge": "A"
+   },
+   {
+    "src": "b_cu",
+    "start": 20,
+    "n": 42,
+    "title": "This or that?",
+    "l1": "Cruiser",
+    "l2": "Comment A or B",
+    "badge": "B"
+   },
+   {
+    "src": "b_4t",
+    "start": 20,
+    "n": 42,
+    "title": "This or that?",
+    "l1": "Classic",
+    "l2": "Comment A or B",
+    "badge": "A"
+   },
+   {
+    "src": "b_elec",
+    "start": 20,
+    "n": 42,
+    "title": "This or that?",
+    "l1": "Electric",
+    "l2": "Comment A or B",
+    "badge": "B"
+   }
+  ],
+  "caption": "Three rounds. Comment your picks, like A B A. 👇 All six bikes are free 3D models on motopedia.org (link in bio).",
+  "tags": "#thisorthat #motorcycle #superbike #cruiser #motocross #scooter #electricmotorcycle #bikelife",
+  "title": "This or that?"
+ },
+ {
+  "id": "v10_which_is_oldest",
+  "segments": [
+   {
+    "src": "b_vt",
+    "start": 20,
+    "n": 45,
+    "title": "Which one is the oldest?",
+    "l1": "Number 1",
+    "l2": "Guess before the answer...",
+    "badge": "1"
+   },
+   {
+    "src": "b_4t",
+    "start": 20,
+    "n": 45,
+    "title": "Which one is the oldest?",
+    "l1": "Number 2",
+    "l2": "Guess before the answer...",
+    "badge": "2"
+   },
+   {
+    "src": "b_pi",
+    "start": 20,
+    "n": 45,
+    "title": "Which one is the oldest?",
+    "l1": "Number 3",
+    "l2": "Guess before the answer...",
+    "badge": "3"
+   },
+   {
+    "src": "b_pi",
+    "start": 30,
+    "n": 60,
+    "title": "Which one is the oldest?",
+    "l1": "Number 3: 1901",
+    "l2": "A pioneer motor-bicycle. Pedals included."
+   }
+  ],
+  "caption": "Did you get it? The 1901 pioneer still had pedals to help on hills. See the whole history of the motorcycle on motopedia.org (link in bio).",
+  "tags": "#motorcyclehistory #vintagemotorcycle #antiquemotorcycle #quiz #guess #classicbikes #history",
+  "title": "Which one is the oldest?"
+ },
+ {
+  "id": "v11_your_logo",
+  "segments": [
+   {
+    "src": "brand",
+    "start": 0,
+    "n": 180,
+    "title": "Your logo on a bike",
+    "l1": "Try it free",
+    "l2": "Upload a logo, pick a bike, see it in 3D"
+   }
+  ],
+  "caption": "Delivery company, boda group, school or team? Put your logo on a bike in 3D before you paint anything, and sponsor a Motopedia bike. motopedia.org/brand (link in bio).",
+  "tags": "#branding #fleet #motorcycle #sponsorship #logo #delivery #bodaboda #smallbusiness",
+  "title": "Your logo on a bike"
+ },
+ {
+  "id": "v12_pick_your_commuter",
+  "segments": [
+   {
+    "src": "b_st",
+    "start": 20,
+    "n": 50,
+    "title": "Pick your daily ride",
+    "l1": "Step-through",
+    "l2": "Comment 1, 2, 3 or 4",
+    "badge": "1"
+   },
+   {
+    "src": "b_sc",
+    "start": 20,
+    "n": 50,
+    "title": "Pick your daily ride",
+    "l1": "Scooter",
+    "l2": "Comment 1, 2, 3 or 4",
+    "badge": "2"
+   },
+   {
+    "src": "b_bb",
+    "start": 20,
+    "n": 50,
+    "title": "Pick your daily ride",
+    "l1": "Boda boda",
+    "l2": "Comment 1, 2, 3 or 4",
+    "badge": "3"
+   },
+   {
+    "src": "b_elec",
+    "start": 20,
+    "n": 50,
+    "title": "Pick your daily ride",
+    "l1": "Electric",
+    "l2": "Comment 1, 2, 3 or 4",
+    "badge": "4"
+   }
+  ],
+  "caption": "One bike for every day, for the next 10 years. Which one? 👇 Learn how each one works, free, on motopedia.org (link in bio).",
+  "tags": "#commute #dailyrider #scooter #stepthrough #bodaboda #electricmotorcycle #motorcycle #citylife",
+  "title": "Pick your daily ride"
+ }
+]
