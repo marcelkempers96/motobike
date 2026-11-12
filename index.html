@@ -181,7 +181,7 @@
     .hm-soon .ute-btn { background: #FFF; color: #111; border-color: #FFF; }
 
     .hm-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-    .hm-links a { display: block; padding: 20px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: #FFF; }
+    .hm-links a { display: block; padding: 22px 20px; min-height: 100%; box-sizing: border-box; border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: #FFF; }
     .hm-links a b { display: block; font-size: 18px; margin-bottom: 6px; }
     .hm-links a span { font-size: 14px; color: var(--mute); }
     .hm-links a:hover { border-color: var(--ink); }
@@ -225,7 +225,7 @@
       <video src="assets/video/workshop.mp4" poster="assets/video/workshop-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video>
       <div class="hm-hero-in">
         <h1>Learn how motorcycles work, and how to work on them.</h1>
-        <p class="hm-mission">Free, open training for the people who keep motorcycles running. Understand how every part works, see it in 3D, then find and fix the fault. Petrol and electric.</p>
+        <p class="hm-mission">Free, open training for everyone who keeps motorcycles running. See every part in 3D, then find and fix the fault.</p>
         <div class="hm-quick">
           <a class="is-main" href="overview/">Explore the bike →</a>
           <a href="repair/diagnose/">Diagnose a problem</a>
@@ -239,7 +239,7 @@
       <div class="hm-wrap">
         <span class="hm-label">Start here</span>
         <h2>Four ways into the machine</h2>
-        <p class="hm-lead">Pick one. They all link together.</p>
+        <p class="hm-lead">Pick one. They all connect.</p>
 
         <div class="hm-feature">
           <a class="hm-feature-img is-swap" href="overview/"><img src="assets/photos/home-ov-side.webp" alt="The Overview: classic four-stroke motorcycle in 3D, side view" loading="lazy" width="1300" height="600"><img class="is-alt" src="assets/photos/home-ov-side-xray.webp" alt="The same bike, side view, with a see-through shell and the electrical parts highlighted" loading="lazy" width="1300" height="600"><span class="hm-swap-tag">Solid and see-through</span></a>
@@ -278,7 +278,7 @@
           <div>
             <span class="hm-num">4</span>
             <h3>Under the Engine</h3>
-            <p>A 125 cc engine with its covers off. Start it, pull the clutch and shift through the gears.</p>
+            <p>A 125 cc engine, covers off. Start it and shift through the gears.</p>
             <ul><li>Crank, valvetrain, generator, kick and electric start</li><li>Clutch plates part as you pull the lever</li><li>Watch the shift drum and forks select each gear</li></ul>
             <a class="ute-btn is-primary" href="engine/">Open Under the Engine →</a>
           </div>
@@ -290,7 +290,7 @@
       <div class="hm-wrap">
         <span class="hm-label">Repair</span>
         <h2>What is wrong with your bike?</h2>
-        <p class="hm-lead">313 problems, 372 step-by-step repairs, 208 parts and 500 bikes, for petrol motorcycles, scooters and electric bikes, with workshop photos and videos.</p>
+        <p class="hm-lead">313 problems, 372 repairs and 500 bikes. Petrol, scooter and electric.</p>
         <form class="hm-fix-search" action="repair/" method="get" role="search"><label class="r-sr" for="hm-q">Search repairs</label><input id="hm-q" name="q" type="search" placeholder="Describe it: for example, will not start" autocomplete="off"><button type="submit">Search</button></form>
         <div class="hm-fix-ways">
           <a href="repair/diagnose/" class="is-main"><img class="hm-ico" src="assets/icons/diagnose-a-problem.svg" alt="" width="40" height="40" loading="lazy"><b>Diagnose a problem</b><span>Three questions to the likely fault and the fix</span></a>
@@ -308,7 +308,7 @@
       <div class="hm-wrap">
         <span class="hm-label">The course</span>
         <h2>The course: from how it works to how to fix it</h2>
-        <p class="hm-lead">Six modules, 39 chapters, each with pictures, animations and a quick check.</p>
+        <p class="hm-lead">Six modules, 39 chapters, with animations and a quick check in each.</p>
         <div class="hm-modules">
           <a class="hm-mod" href="learn/#foundations"><img class="is-plate" src="assets/photos/home-mod-anatomy.webp" alt="Anatomy of a motorcycle: the principal parts, labelled" loading="lazy" width="900" height="608"><div><b>1</b><h3>Foundations</h3><p>Anatomy, physics, workshop.</p></div></a>
           <a class="hm-mod" href="learn/#engine"><img src="assets/photos/triumph-engine.jpg" alt="Triumph parallel-twin engine with finned cylinder head" loading="lazy" width="1350" height="1800"><div><b>2</b><h3>The engine</h3><p>Four-stroke and two-stroke.</p></div></a>
@@ -320,7 +320,7 @@
         <div class="hm-learnrow">
           <span><i></i>Interactive figures in every module</span><span><i></i>Working animations with graphs</span><span><i></i>Easy, mixed and hard quizzes</span><span><i></i>Progress saved in your browser</span><span><i></i>Free PDF modules to download</span>
         </div>
-        <p style="margin-top:24px"><a class="ute-btn is-primary" href="learn/">Go to the course →</a> <a class="ute-btn" href="quiz/">Take a quiz</a> <a class="ute-btn" href="history/">Read the history</a> <a class="ute-btn" href="types/">Motorcycle types</a></p>
+        <p style="margin-top:24px"><a class="ute-btn is-primary" href="learn/">Go to the course →</a> <a class="ute-btn" href="quiz/">Take a quiz</a></p>
       </div>
     </section>
 
@@ -341,8 +341,8 @@
             <span class="hm-tag">Coming soon</span><br>
             <span class="hm-label">Electrical components training</span>
             <h2>Electric motorcycle training for mechanics</h2>
-            <p>Practical modules on motors, controllers and battery packs, for the fundis who keep the fleets moving.</p>
-            <p>Until then, try the Wiring Lab.</p>
+            <p>Motors, controllers and battery packs, for the mechanics who keep fleets moving.</p>
+            
             <div class="ute-btnrow"><a class="ute-btn" href="wiring/">Open the Wiring Lab →</a><a class="ute-btn mz-btn-light" href="learn/#electric" style="background:transparent;color:#FFF;border-color:#FFF">Module 6: Electric motorcycles</a><a class="ute-btn mz-btn-light" href="about/#fundi" style="background:transparent;color:#FFF;border-color:#FFF">About the programme</a></div>
           </div>
           <div class="hm-soon-imgs">
@@ -359,7 +359,7 @@
       <div class="hm-wrap">
         <span class="hm-label">Work with us</span>
         <h2>What we are looking for</h2>
-        <p class="hm-lead">Motopedia is open and growing. If one of these is you, get in touch.</p>
+        <p class="hm-lead">Motopedia is open and growing. Is one of these you?</p>
         <div class="hm-look">
           <a class="hm-look" href="work-with-us/#training-centres-and-workshops"><img class="hm-ico" src="assets/icons/training-centres-and-workshops.svg" alt="" width="40" height="40" loading="lazy"><b>Training centres and workshops</b><p>To pilot the course and the repair guides with apprentices and fundis.</p></a>
           <a class="hm-look" href="work-with-us/#fleet-operators"><img class="hm-ico" src="assets/icons/fleet-operators.svg" alt="" width="40" height="40" loading="lazy"><b>Fleet operators</b><p>Boda boda and delivery fleets, petrol or electric, who want their mechanics trained.</p></a>
@@ -389,25 +389,17 @@
         <div class="hm-links">
           <a href="about/"><img class="hm-ico" src="assets/icons/about-moto-zero.svg" alt="" width="40" height="40" loading="lazy"><b>About</b><span>The story behind it</span></a>
           <a href="downloads/"><img class="hm-ico" src="assets/icons/downloads.svg" alt="" width="40" height="40" loading="lazy"><b>Downloads</b><span>PDFs, models, diagrams</span></a>
-          <a href="engine/"><img class="hm-ico" src="assets/icons/under-the-engine.svg" alt="" width="40" height="40" loading="lazy"><b>Under the Engine</b><span>3D engine and gearbox, every part moving</span></a>
           <a href="wiring/#builder"><img class="hm-ico" src="assets/icons/circuit-builder.svg" alt="" width="40" height="40" loading="lazy"><b>Circuit Builder</b><span>Build and measure 12 V circuits</span></a>
-          <a href="brand/"><b>Brand a bike</b><span>Put your logo on a 3D motorcycle</span></a>
+          <a href="brand/"><img class="hm-ico" src="assets/icons/3d-artists.svg" alt="" width="40" height="40" loading="lazy"><b>Brand a bike</b><span>Put your logo on a 3D motorcycle</span></a>
           <a href="types/"><img class="hm-ico" src="assets/icons/motorcycle-types.svg" alt="" width="40" height="40" loading="lazy"><b>Motorcycle types</b><span>Sixteen types, 1885 to today</span></a>
-          <a href="articles/"><img class="hm-ico" src="assets/icons/articles.svg" alt="" width="40" height="40" loading="lazy"><b>Articles</b><span>Guides to engines, chains and wiring</span></a>
           <a href="models/"><img class="hm-ico" src="assets/icons/3d-model-library.svg" alt="" width="40" height="40" loading="lazy"><b>3D model library</b><span>369 models to explore</span></a>
           <a href="videos/"><img class="hm-ico" src="assets/icons/videos.svg" alt="" width="40" height="40" loading="lazy"><b>Videos</b><span>The best motorcycle videos by topic</span></a>
-          <a href="sources/"><img class="hm-ico" src="assets/icons/sources-and-credits.svg" alt="" width="40" height="40" loading="lazy"><b>Sources and credits</b><span>Bibliography and licences</span></a>
-          <a href="progress/"><img class="hm-ico" src="assets/icons/my-progress.svg" alt="" width="40" height="40" loading="lazy"><b>My progress</b><span>In this browser or your account</span></a>
-          <a href="account/"><img class="hm-ico" src="assets/icons/account.svg" alt="" width="40" height="40" loading="lazy"><b>Account</b><span>Comments, photos, downloads</span></a>
-          <a href="updates/"><img class="hm-ico" src="assets/icons/updates.svg" alt="" width="40" height="40" loading="lazy"><b>Updates</b><span>What changed and when</span></a>
-          <a href="contact/"><img class="hm-ico" src="assets/icons/contact.svg" alt="" width="40" height="40" loading="lazy"><b>Contact</b><span>Collaborate or ask</span></a>
           <a href="kids/"><img class="hm-ico" src="assets/icons/kids-build-a-bike.svg" alt="" width="40" height="40" loading="lazy"><b>Kids: build a bike</b><span>For younger learners</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <section data-mz-signup data-title="Get new repair guides, bikes and tools by email"></section>
 
   <footer data-mz-footer></footer>
 </div>

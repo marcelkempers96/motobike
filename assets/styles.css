@@ -1314,3 +1314,21 @@ p:has(> .ute-btn + .ute-btn) { display: flex; flex-wrap: wrap; gap: 10px; align-
 /* SEO pass 2026-11-09: images now carry width/height (to reserve space and avoid layout shift).
    Zero-specificity, so any class rule that sizes an image still wins. */
 :where(img[width][height]) { height: auto; max-width: 100%; }
+
+/* Header, desktop: more air around the logo and the menu (2026-11-12) */
+@media (min-width: 961px) {
+  .ute-top { padding: 0 max(24px, calc((100vw - 1320px) / 2 + 24px)); min-height: 80px; gap: clamp(24px, 3vw, 48px); }
+  .ute-top .ute-brand { padding: 14px 0; }
+  .ute-brand-logo { height: 46px; }
+  .mz-menu { gap: 2px; }
+  .mz-menu-top, .mz-menu-main { height: 80px; padding: 0 clamp(10px, 1vw, 16px); }
+  .mz-menu-panel { border-top-width: 2px; }
+  .mz-menu .mz-lang { margin: 0 0 0 4px; }
+  .mz-lang select { border-color: transparent; padding: 7px 4px; max-width: 110px; color: var(--mute); cursor: pointer; }
+  .mz-lang select:hover, .mz-lang select:focus-visible { border-color: var(--line); color: var(--ink); }
+  .mz-menu-cta { padding: 11px 18px; }
+}
+@media (min-width: 961px) {
+  .mz-footer { padding-left: max(24px, calc((100vw - 1320px) / 2 + 24px)); padding-right: max(24px, calc((100vw - 1320px) / 2 + 24px)); }
+  .mz-foot, .mz-foot-bottom { max-width: none; }
+}

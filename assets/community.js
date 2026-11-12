@@ -10,7 +10,7 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY } from './community-config.js';
 const ROOT = new URL('../', import.meta.url);
 const href = (p) => new URL(p, ROOT).pathname;
 const ON = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
-const SKIP = /^\/(privacy|terms|cookies|account|kids)\//;
+const SKIP = /^\/($|index\.html$|(privacy|terms|cookies|account|kids)\/)/;
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 export function pageKey(path = location.pathname) {
