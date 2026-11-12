@@ -374,7 +374,7 @@ $('mzb-file').addEventListener('change', async (e) => {
 });
 /* Trial logos (our own): shown until a visitor adds their own, then removed. */
 const SAMPLES = [
-  { file: 'motopedia.webp', name: 'Motopedia', type: 'image/webp' },
+  { file: 'motopedia.png', name: 'Motopedia', type: 'image/png' },
   { file: 'transitions-lab.png', name: 'Transitions Lab', type: 'image/png' },
   { file: 'social-innovation-europe.png', name: 'Social Innovation Europe', type: 'image/png' },
   { file: 'reef-ranger.png', name: 'Reef Ranger', type: 'image/png' },
@@ -409,19 +409,10 @@ async function addLogoFile(file, sample = false) {
     img = await loadImage(url);
   } catch (err) { showFileErr('Could not read that image. Please try another file.'); return; }
   const w0 = img.naturalWidth || 512, h0 = img.naturalHeight || 512;
-  // trial logos are dark artwork: print them as a white sticker so they read on any paint
-  const pad = sample ? Math.round(Math.max(w0, h0) * 0.06) : 0;
-  const s = 2048 / (Math.max(w0, h0) + pad * 2);
+  const s = 2048 / Math.max(w0, h0);
   const cv = document.createElement('canvas');
-  cv.width = Math.max(2, Math.round((w0 + pad * 2) * s)); cv.height = Math.max(2, Math.round((h0 + pad * 2) * s));
-  {
-    const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high';
-    if (sample) {
-      const r = Math.min(cv.width, cv.height) * 0.18;
-      g.fillStyle = '#fbfbf8'; g.beginPath(); g.roundRect(0, 0, cv.width, cv.height, r); g.fill();
-    }
-    g.drawImage(img, pad * s, pad * s, w0 * s, h0 * s);
-  }
+  cv.width = Math.max(2, Math.round(w0 * s)); cv.height = Math.max(2, Math.round(h0 * s));
+  { const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high'; g.drawImage(img, 0, 0, cv.width, cv.height); }
   const tex = new THREE.CanvasTexture(cv);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = viewer ? viewer.renderer.capabilities.getMaxAnisotropy() : 1;
